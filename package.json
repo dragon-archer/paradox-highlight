@@ -4,6 +4,7 @@
 	"description": "Syntax highlight for Paradox Script Languages",
 	"version": "0.1.0",
 	"publisher": "dragon-archer",
+	"icon": "icons/paradox.png",
 	"repository": "https://github.com/dragon-archer/paradox-highlight",
 	"engines": {
 		"vscode": "^1.23.0"
@@ -11,17 +12,67 @@
 	"categories": [
 		"Programming Languages"
 	],
+	"keywords": [
+		"paradox",
+		"crusader kings"
+	],
 	"contributes": {
-		"languages": [{
-			"id": "paradox",
-			"aliases": ["Paradox", "paradox"],
-			"extensions": [".txt"],
-			"configuration": "./language-configuration.json"
-		}],
-		"grammars": [{
-			"language": "paradox",
-			"scopeName": "source.paradox",
-			"path": "./syntaxes/paradox.tmLanguage.json"
-		}]
+		"languages": [
+			{
+				"id": "ck3",
+				"aliases": [
+					"Crusader Kings III"
+				],
+				"extensions": [
+					".txt",
+					".gui"
+				],
+				"configuration": "./language-configuration.json",
+				"filenamePatterns": [
+					"**/Crusader Kings III/**/*.txt",
+					"**/Crusader Kings III/**/*.gui",
+					"**/CK3/**/*.txt",
+					"**/CK3/**/*.gui"
+				],
+				"icon": {
+					"light": "./icons/ck3.png",
+					"dark": "./icons/ck3.png"
+				}
+			},
+			{
+				"id": "paradox",
+				"aliases": [
+					"Paradox Script"
+				],
+				"extensions": [
+					".txt",
+					".gui"
+				],
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./icons/paradox.png",
+					"dark": "./icons/paradox.png"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "ck3",
+				"scopeName": "source.paradox",
+				"path": "./syntaxes/paradox.tmLanguage.json"
+			},
+			{
+				"scopeName": "source.ck3",
+				"injectTo": [
+					"source.paradox"
+				],
+				"path": "./syntaxes/ck3.tmLanguage.json"
+			},
+			{
+				"language": "paradox",
+				"scopeName": "source.paradox",
+				"path": "./syntaxes/paradox.tmLanguage.json"
+			}
+		]
 	}
 }
