@@ -58,7 +58,7 @@
 			"patterns": [
 				{
 					"comment": "LHS + operator (>keyword =< something)",
-					"begin": "(?<!@)\\s*(?=\\b\\w+\\b\\s*(<=|>=|!=|<|>|=))",
+					"begin": "(?<!@)\\s*(?=\\b[\\w:]+\\b\\s*(<=|>=|!=|<|>|=))",
 					"end": "\\s*(<=|>=|!=|<|>|=)",
 					"endCaptures": {
 						"1": {
@@ -179,7 +179,7 @@
 				},
 				{
 					"comment": "Any other RHS value, any combination of word characters and dots",
-					"name": "constant.rhs.string.paradox",
+					"name": "constant.other.rhs.paradox",
 					"match": "(\\w|\\.)+"
 				}
 			]
