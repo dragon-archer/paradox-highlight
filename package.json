@@ -1,0 +1,25 @@
+{
+	"name": "paradox-highlight",
+	"displayName": "paradox-highlight",
+	"description": "Syntax highlight for Paradox Script Languages",
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "paradox",
+			"aliases": ["Paradox", "paradox"],
+			"extensions": [".txt"],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "paradox",
+			"scopeName": "source.paradox",
+			"path": "./syntaxes/paradox.tmLanguage.json"
+		}]
+	}
+}

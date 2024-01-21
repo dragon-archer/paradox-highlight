@@ -1,0 +1,209 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Paradox",
+	"scopeName": "source.paradox",
+	"foldingStartMarker": "^\\s*#",
+	"foldingStopMarker": "(?!^[^#])",
+	"patterns": [
+		{
+			"comment": "Namespace at top of events",
+			"include": "#namespace"
+		},
+		{
+			"comment": "This is the main entry-point",
+			"include": "#code"
+		}
+	],
+	"repository": {
+		"namespace": {
+			"patterns": [
+				{
+					"name": "meta.namespace.paradox",
+					"match": "^\\s*((namespace)\\s*[=]\\s*([\\w.]+))",
+					"captures": {
+						"1": {
+							"name": "meta.namespace.identifier.paradox"
+						},
+						"2": {
+							"name": "keyword.other.namespace.paradox"
+						},
+						"3": {
+							"name": "entity.name.type.namespace.paradox"
+						}
+					}
+				}
+			]
+		},
+		"code": {
+			"patterns": [
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#statements"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"comment": "A line starting with # is a comment",
+					"name": "comment.line.number-sign.paradox",
+					"begin": "#",
+					"end": "$\\n?"
+				}
+			]
+		},
+		"statements": {
+			"patterns": [
+				{
+					"comment": "LHS + operator (>keyword =< something)",
+					"begin": "(?<!@)\\s*(?=\\b\\w+\\b\\s*(<=|>=|!=|<|>|=))",
+					"end": "\\s*(<=|>=|!=|<|>|=)",
+					"endCaptures": {
+						"1": {
+							"name": "keyword.operator.comparison.paradox"
+						}
+					},
+					"contentName": "variable.paradox",
+					"patterns": [
+						{
+							"include": "#lhs"
+						}
+					]
+				},
+				{
+					"comment": "RHS (keyword = >something<)",
+					"begin": "(?<=<=|>=|!=|<|>|=)\\s*(?=\\s*[^{\\s])",
+					"end": "\\s+",
+					"contentName": "variable.language.rhs.paradox",
+					"patterns": [
+						{
+							"include": "#rhs"
+						}
+					]
+				},
+				{
+					"comment": "RHS (keyword = >block<)",
+					"begin": "(?<==)\\s*\\s*({)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.section.block.begin.paradox"
+						}
+					},
+					"end": "}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.section.block.end.paradox"
+						}
+					},
+					"contentName": "meta.block.paradox",
+					"patterns": [
+						{
+							"include": "#code"
+						}
+					]
+				},
+				{
+					"comment": "Script variables (@something = constant)",
+					"begin": "(?<=@)(?=\\b\\w+\\b)",
+					"end": "\\s",
+					"contentName": "variable.other.paradox",
+					"patterns": [
+						{
+							"include": "#constants"
+						}
+					]
+				}
+			]
+		},
+		"lhs": {
+			"patterns": [
+				{
+					"comment": "Original relative scope change",
+					"name": "variable.language.scope.multi.paradox",
+					"match": "(?i)\\b(root|from|prev|this)\\b"
+				},
+				{
+					"comment": "LHS boolean operators",
+					"name": "keyword.control.boolean.paradox",
+					"match": "(?i)\\b(or|and|not|nor|nand)\\b"
+				},
+				{
+					"comment": "Other LHS operators",
+					"name": "keyword.control.paradox",
+					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b"
+				},
+				{
+					"name": "variable.language.multi.paradox",
+					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b"
+				},
+				{
+					"name": "variable.name.lhs.paradox",
+					"match": "\\b[\\w.\\-:]+\\b"
+				}
+			]
+		},
+		"rhs": {
+			"patterns": [
+				{
+					"comment": "RHS is either a constant value",
+					"include": "#constants"
+				},
+				{
+					"comment": "Or a generic string",
+					"include": "#strings"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"comment": "A RHS script variable (... = @variable)",
+					"name": "constant.other.paradox",
+					"match": "\\b@\\w+\\b"
+				},
+				{
+					"name": "constant.language.paradox",
+					"match": "\\b(yes|no)\\b"
+				},
+				{
+					"comment": "Dot-seperated date (1000.10.10)",
+					"name": "constant.numeric.date.paradox",
+					"match": "\\d+\\.\\d+\\.\\d+\\b"
+				},
+				{
+					"comment": "A RHS number, either integer or float, positive or negative",
+					"name": "constant.numeric.paradox",
+					"match": "\\b-?(([0-9]+(\\.[0-9]+)?)|(\\.[0-9]+))\\b"
+				},
+				{
+					"comment": "Any other RHS value, any combination of word characters and dots",
+					"name": "constant.rhs.string.paradox",
+					"match": "(\\w|\\.)+"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.paradox",
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.paradox"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.paradox"
+				}
+			},
+			"patterns": [
+				{
+					"name": "constant.character.escape.paradox",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}
