@@ -1,10 +1,12 @@
 {
 	"name": "paradox-highlight",
-	"displayName": "paradox-highlight",
+	"displayName": "Paradox Highlight",
 	"description": "Syntax highlight for Paradox Script Languages",
 	"version": "0.1.0",
+	"publisher": "dragon-archer",
+	"repository": "https://github.com/dragon-archer/paradox-highlight",
 	"engines": {
-		"vscode": "^1.85.0"
+		"vscode": "^1.23.0"
 	},
 	"categories": [
 		"Programming Languages"
