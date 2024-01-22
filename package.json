@@ -2,10 +2,14 @@
 	"name": "paradox-highlight",
 	"displayName": "Paradox Highlight",
 	"description": "Syntax highlight for Paradox Script Languages",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"publisher": "dragon-archer",
 	"icon": "icons/paradox.png",
-	"repository": "https://github.com/dragon-archer/paradox-highlight",
+	"readme": "README.md",
+	"author": {
+		"name": "Dragon Archer"
+	},
+	"license": "MIT",
 	"engines": {
 		"vscode": "^1.23.0"
 	},
@@ -16,6 +20,15 @@
 		"paradox",
 		"crusader kings"
 	],
+	"bugs": {
+		"url": "https://github.com/dragon-archer/paradox-highlight/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dragon-archer/paradox-highlight"
+	},
+	"homepage": "https://github.com/dragon-archer/paradox-highlight",
+	"qna": "https://github.com/dragon-archer/paradox-highlight/issues",
 	"contributes": {
 		"languages": [
 			{
