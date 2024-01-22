@@ -126,12 +126,12 @@
 				},
 				{
 					"comment": "LHS boolean operators",
-					"name": "keyword.control.boolean.paradox",
+					"name": "keyword.control.logical.paradox",
 					"match": "(?i)\\b(or|and|not|nor|nand)\\b"
 				},
 				{
 					"comment": "Other LHS operators",
-					"name": "keyword.control.paradox",
+					"name": "keyword.control.flow.paradox",
 					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b"
 				},
 				{
@@ -160,7 +160,7 @@
 			"patterns": [
 				{
 					"comment": "A RHS script variable (... = @variable)",
-					"name": "constant.other.paradox",
+					"name": "variable.other.constant.predef.paradox",
 					"match": "\\b@\\w+\\b"
 				},
 				{
@@ -179,7 +179,7 @@
 				},
 				{
 					"comment": "Any other RHS value, any combination of word characters and dots",
-					"name": "constant.other.rhs.paradox",
+					"name": "variable.other.constant.paradox",
 					"match": "(\\w|\\.)+"
 				}
 			]
