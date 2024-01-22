@@ -12,6 +12,14 @@ Syntax highlight for Paradox Script Languages
 - Currently only Crusader Kings III is fully supported
 - This extension focuses on new Paradox Games with Jomini engine (namely CK3 and Vic3), so for older games with Clausewitz engine (like EU4, CK2, or HOI4) might have less performance
 
+## Usage
+
+You can install the latest version of the extension via the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight).
+
+Alternatively, open Visual Studio code, press `Ctrl+P` or `Cmd+P` and type `ext install dragon-archer.paradox-highlight`
+
+Also, you may build the extension directly from source code on [GitHub](https://github.com/dragon-archer/paradox-highlight)
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md)
