@@ -7,7 +7,7 @@ Syntax highlight for Paradox Script Languages
 - Automatic check for builtin commands of Paradox Games
 - Colorful syntax highlight
 
-### Note
+**Note:**
 
 - Currently only Crusader Kings III is fully supported
 - This extension focuses on new Paradox Games with Jomini engine (namely CK3 and Vic3), so for older games with Clausewitz engine (like EU4, CK2, or HOI4) might have less performance
@@ -23,6 +23,13 @@ Also, you may build the extension directly from source code on [GitHub](https://
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md)
+
+## TODO
+
+- Improve scope support
+- Support modifier highlight
+- Support prefix scopes
+- Identify illegal usages
 
 ## License
 
