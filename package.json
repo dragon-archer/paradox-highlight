@@ -75,7 +75,7 @@
 				"path": "./syntaxes/paradox.tmLanguage.json"
 			},
 			{
-				"scopeName": "source.ck3",
+				"scopeName": "source.paradox.ck3",
 				"injectTo": [
 					"source.paradox"
 				],
