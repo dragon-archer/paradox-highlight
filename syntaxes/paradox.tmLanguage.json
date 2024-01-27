@@ -16,23 +16,19 @@
 	],
 	"repository": {
 		"namespace": {
-			"patterns": [
-				{
-					"name": "meta.namespace.paradox",
-					"match": "^\\s*((namespace)\\s*[=]\\s*([\\w.]+))",
-					"captures": {
-						"1": {
-							"name": "meta.namespace.identifier.paradox"
-						},
-						"2": {
-							"name": "keyword.other.namespace.paradox"
-						},
-						"3": {
-							"name": "entity.name.type.namespace.paradox"
-						}
-					}
+			"name": "meta.namespace.paradox",
+			"match": "^\\s*((namespace)\\s*[=]\\s*([\\w.]+))",
+			"captures": {
+				"1": {
+					"name": "meta.namespace.identifier.paradox"
+				},
+				"2": {
+					"name": "keyword.other.namespace.paradox"
+				},
+				"3": {
+					"name": "entity.name.type.namespace.paradox"
 				}
-			]
+			}
 		},
 		"code": {
 			"patterns": [
@@ -57,18 +53,34 @@
 		"statements": {
 			"patterns": [
 				{
-					"comment": "LHS + operator (>keyword =< something)",
-					"begin": "(?<!@)\\s*(?=\\b[\\w:]+\\b\\s*(<=|>=|!=|<|>|=))",
-					"end": "\\s*(<=|>=|!=|<|>|=)",
+					"comment": "LHS + =",
+					"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*=)",
+					"end": "\\s*(=)",
 					"endCaptures": {
 						"1": {
-							"name": "keyword.operator.comparison.paradox"
+							"name": "punctuation.equal.paradox"
 						}
 					},
-					"contentName": "variable.paradox",
+					"contentName": "meta.lhs.non-comparable.paradox",
 					"patterns": [
 						{
-							"include": "#lhs"
+							"include": "#non-comparable-lhs"
+						}
+					]
+				},
+				{
+					"comment": "LHS + comparison operator",
+					"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*(<=|>=|!=|<|>))",
+					"end": "\\s*(<=|>=|!=|<|>)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.comparison.paradox"
+						}
+					},
+					"contentName": "meta.lhs.comparable.paradox",
+					"patterns": [
+						{
+							"include": "#comparable-lhs"
 						}
 					]
 				},
@@ -84,7 +96,7 @@
 					]
 				},
 				{
-					"comment": "RHS (keyword = >block<)",
+					"comment": "= block",
 					"begin": "(?<==)\\s*\\s*({)",
 					"beginCaptures": {
 						"1": {
@@ -103,30 +115,91 @@
 							"include": "#code"
 						}
 					]
+				}
+			]
+		},
+		"non-comparable-lhs": {
+			"patterns": [
+				{
+					"include": "#prefix-scopes"
 				},
 				{
-					"comment": "Script variables (@something = constant)",
-					"begin": "(?<=@)(?=\\b\\w+\\b)",
-					"end": "\\s",
-					"contentName": "variable.other.paradox",
+					"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
+					"end": "(?![\\w:|])",
+					"contentName": "meta.id.paradox.non-comparable.non-prefixed",
 					"patterns": [
 						{
-							"include": "#constants"
+							"include": "#non-prefixable-non-comparable-lhs"
+						}
+					]
+				},
+				{
+					"begin": "(?<=\\.)(?=\\b[\\w:|]+\\b)",
+					"end": "(?![\\w:|])",
+					"contentName": "meta.id.paradox.non-comparable.prefixed",
+					"patterns": [
+						{
+							"include": "#prefixable-non-comparable-lhs"
 						}
 					]
 				}
 			]
 		},
-		"lhs": {
+		"comparable-lhs": {
 			"patterns": [
 				{
-					"comment": "Original relative scope change",
-					"name": "variable.language.scope.multi.paradox",
-					"match": "(?i)\\b(root|from|prev|this)\\b"
+					"include": "#prefix-scopes"
+				},
+				{
+					"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
+					"end": "(?![\\w:|])",
+					"contentName": "meta.id.paradox.comparable.non-prefixed",
+					"patterns": [
+						{
+							"include": "#non-prefixable-comparable-lhs"
+						}
+					]
+				},
+				{
+					"begin": "(?<=\\.)(?=\\b[\\w:|]+\\b)",
+					"end": "(?![\\w:|])",
+					"contentName": "meta.id.paradox.comparable.prefixed",
+					"patterns": [
+						{
+							"include": "#prefixable-comparable-lhs"
+						}
+					]
+				}
+			]
+		},
+		"prefix-scopes": {
+			"patterns": [
+				{
+					"begin": "\\b(?=[\\w:|]+\\.)",
+					"end": "\\.",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.dot.paradox"
+						}
+					},
+					"contentName": "meta.scope.paradox",
+					"patterns": [
+						{
+							"include": "#scope"
+						}
+					]
+				}
+			]
+		},
+		"non-prefixable-non-comparable-lhs": {
+			"patterns": [
+				{
+					"comment": "Script constants",
+					"include": "#script_constants"
 				},
 				{
 					"comment": "LHS boolean operators",
-					"name": "keyword.control.logical.paradox",
+					"name": "keyword.operator.logical.paradox",
 					"match": "(?i)\\b(or|and|not|nor|nand)\\b"
 				},
 				{
@@ -139,8 +212,54 @@
 					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b"
 				},
 				{
-					"name": "variable.name.lhs.paradox",
-					"match": "\\b[\\w.\\-:]+\\b"
+					"include": "#prefixable-non-comparable-lhs"
+				},
+				{
+					"include": "#non-prefixable-comparable-lhs"
+				}
+			]
+		},
+		"prefixable-non-comparable-lhs": {
+			"patterns": [
+				{
+					"include": "#scope"
+				},
+				{
+					"include": "#prefixable-comparable-lhs"
+				}
+			]
+		},
+		"non-prefixable-comparable-lhs": {
+			"patterns": [
+				{
+					"include": "#prefixable-comparable-lhs"
+				}
+			]
+		},
+		"prefixable-comparable-lhs": {
+			"patterns": [
+				{
+					"include": "#generic-lhs"
+				}
+			]
+		},
+		"scope": {
+			"patterns": [
+				{
+					"comment": "Original relative scope change",
+					"name": "variable.language.scope.paradox",
+					"match": "(?i)\\b(root|from|prev|this)\\b"
+				},
+				{
+					"include": "#generic-lhs"
+				}
+			]
+		},
+		"generic-lhs": {
+			"patterns": [
+				{
+					"name": "variable.other.lhs.paradox",
+					"match": "\\b[\\w:|]+\\b"
 				}
 			]
 		},
@@ -156,13 +275,13 @@
 				}
 			]
 		},
+		"script_constants": {
+			"comment": "A predef script variable (@variable)",
+			"name": "variable.other.predef.paradox",
+			"match": "\\b@\\w+\\b"
+		},
 		"constants": {
 			"patterns": [
-				{
-					"comment": "A RHS script variable (... = @variable)",
-					"name": "variable.other.constant.predef.paradox",
-					"match": "\\b@\\w+\\b"
-				},
 				{
 					"name": "constant.language.paradox",
 					"match": "\\b(yes|no)\\b"
