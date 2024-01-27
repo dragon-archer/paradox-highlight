@@ -20,16 +20,13 @@ Alternatively, open Visual Studio code, press `Ctrl+P` or `Cmd+P` and type `ext 
 
 Also, you may build the extension directly from source code on [GitHub](https://github.com/dragon-archer/paradox-highlight)
 
-## Changelog
+## Change Log
 
 See [CHANGELOG.md](CHANGELOG.md)
 
 ## TODO
 
-- Improve scope support
-- Support modifier highlight
-- Support prefix scopes
-- Identify illegal usages
+See [TODO.md](TODO.md)
 
 ## License
 
