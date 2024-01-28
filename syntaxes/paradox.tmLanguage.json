@@ -1,5 +1,5 @@
 {
-	"version": "https://github.com/dragon-archer/paradox-highlight/blob/master/syntaxes/paradox.tmLanguage.json"
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/master/syntaxes/paradox.tmLanguage.json",
 	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
 	"name": "Paradox Script Language",
 	"scopeName": "source.paradox",
@@ -28,7 +28,7 @@
 		"comment": {
 			"comment": "A line starting with # is a comment",
 			"begin": "#",
-			"end": "$\\n?"
+			"end": "$\\n?",
 			"name": "comment.line.number-sign.paradox"
 		},
 		"comparable-lhs": {
@@ -133,7 +133,10 @@
 			"begin": "(?=\\b[\\w:|]+\\b)",
 			"end": "(?![\\w:|])",
 			"contentName": "meta.id.paradox.comparable.prefixed",
-			"patterns": [ { "include": "#generic-lhs" } ]
+			"patterns": [
+				{ "include": "#scope" },
+				{ "include": "#generic-lhs" }
+			]
 		},
 		"prefixable-non-comparable-lhs": {
 			"begin": "(?=\\b[\\w:|]+\\b)",
@@ -157,7 +160,7 @@
 		"scope": {
 			"comment": "Original relative scope change",
 			"match": "(?i)\\b(root|from|prev|this)\\b",
-			"name": "variable.language.scope.paradox"
+			"name": "support.type.scope.paradox"
 		},
 		"script_constants": {
 			"comment": "A predef script variable (@variable)",
