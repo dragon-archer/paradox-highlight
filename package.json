@@ -71,14 +71,7 @@
 		"grammars": [
 			{
 				"language": "ck3",
-				"scopeName": "source.paradox",
-				"path": "./syntaxes/paradox.tmLanguage.json"
-			},
-			{
 				"scopeName": "source.paradox.ck3",
-				"injectTo": [
-					"source.paradox"
-				],
 				"path": "./syntaxes/ck3.tmLanguage.json"
 			},
 			{
