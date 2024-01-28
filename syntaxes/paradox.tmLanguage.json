@@ -1,326 +1,187 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Paradox",
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/master/syntaxes/paradox.tmLanguage.json"
+	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
+	"name": "Paradox Script Language",
 	"scopeName": "source.paradox",
-	"foldingStartMarker": "^\\s*#",
-	"foldingStopMarker": "(?!^[^#])",
+	"uuid": "24081801-bdcf-11ee-0000-44e517e8033d",
 	"patterns": [
-		{
-			"comment": "Namespace at top of events",
-			"include": "#namespace"
-		},
-		{
-			"comment": "This is the main entry-point",
-			"include": "#code"
-		}
+		{ "include": "#namespace" },
+		{ "include": "#code" }
 	],
 	"repository": {
-		"namespace": {
-			"name": "meta.namespace.paradox",
-			"match": "^\\s*((namespace)\\s*[=]\\s*([\\w.]+))",
-			"captures": {
-				"1": {
-					"name": "meta.namespace.identifier.paradox"
-				},
-				"2": {
-					"name": "keyword.other.namespace.paradox"
-				},
-				"3": {
-					"name": "entity.name.type.namespace.paradox"
-				}
-			}
+		"block": {
+			"comment": "= block",
+			"begin": "(?<==)\\s*({)",
+			"beginCaptures": { "1": { "name": "punctuation.section.block.begin.paradox" } },
+			"end": "}",
+			"endCaptures": { "0": { "name": "punctuation.section.block.end.paradox" } },
+			"contentName": "meta.block.paradox",
+			"patterns": [ { "include": "#code" } ]
 		},
 		"code": {
+			"comment": "This is the main entry-point",
 			"patterns": [
-				{
-					"include": "#comment"
-				},
-				{
-					"include": "#statements"
-				}
+				{ "include": "#comment" },
+				{ "include": "#statements" }
 			]
 		},
 		"comment": {
-			"patterns": [
-				{
-					"comment": "A line starting with # is a comment",
-					"name": "comment.line.number-sign.paradox",
-					"begin": "#",
-					"end": "$\\n?"
-				}
-			]
-		},
-		"statements": {
-			"patterns": [
-				{
-					"comment": "LHS + =",
-					"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*=)",
-					"end": "\\s*(=)",
-					"endCaptures": {
-						"1": {
-							"name": "punctuation.equal.paradox"
-						}
-					},
-					"contentName": "meta.lhs.non-comparable.paradox",
-					"patterns": [
-						{
-							"include": "#non-comparable-lhs"
-						}
-					]
-				},
-				{
-					"comment": "LHS + comparison operator",
-					"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*(<=|>=|!=|<|>))",
-					"end": "\\s*(<=|>=|!=|<|>)",
-					"endCaptures": {
-						"1": {
-							"name": "punctuation.comparison.paradox"
-						}
-					},
-					"contentName": "meta.lhs.comparable.paradox",
-					"patterns": [
-						{
-							"include": "#comparable-lhs"
-						}
-					]
-				},
-				{
-					"comment": "RHS (keyword = >something<)",
-					"begin": "(?<=<=|>=|!=|<|>|=)\\s*(?=\\s*[^{\\s])",
-					"end": "\\s+",
-					"contentName": "variable.language.rhs.paradox",
-					"patterns": [
-						{
-							"include": "#rhs"
-						}
-					]
-				},
-				{
-					"comment": "= block",
-					"begin": "(?<==)\\s*\\s*({)",
-					"beginCaptures": {
-						"1": {
-							"name": "punctuation.section.block.begin.paradox"
-						}
-					},
-					"end": "}",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.section.block.end.paradox"
-						}
-					},
-					"contentName": "meta.block.paradox",
-					"patterns": [
-						{
-							"include": "#code"
-						}
-					]
-				}
-			]
-		},
-		"non-comparable-lhs": {
-			"patterns": [
-				{
-					"include": "#prefix-scopes"
-				},
-				{
-					"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
-					"end": "(?![\\w:|])",
-					"contentName": "meta.id.paradox.non-comparable.non-prefixed",
-					"patterns": [
-						{
-							"include": "#non-prefixable-non-comparable-lhs"
-						}
-					]
-				},
-				{
-					"begin": "(?<=\\.)(?=\\b[\\w:|]+\\b)",
-					"end": "(?![\\w:|])",
-					"contentName": "meta.id.paradox.non-comparable.prefixed",
-					"patterns": [
-						{
-							"include": "#prefixable-non-comparable-lhs"
-						}
-					]
-				}
-			]
+			"comment": "A line starting with # is a comment",
+			"begin": "#",
+			"end": "$\\n?"
+			"name": "comment.line.number-sign.paradox"
 		},
 		"comparable-lhs": {
+			"comment": "LHS + comparison operator",
+			"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*(<=|>=|!=|<|>))",
+			"end": "\\s*(<=|>=|!=|<|>)",
+			"endCaptures": { "1": { "name": "punctuation.comparison.paradox" } },
+			"contentName": "meta.lhs.comparable.paradox",
 			"patterns": [
-				{
-					"include": "#prefix-scopes"
-				},
-				{
-					"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
-					"end": "(?![\\w:|])",
-					"contentName": "meta.id.paradox.comparable.non-prefixed",
-					"patterns": [
-						{
-							"include": "#non-prefixable-comparable-lhs"
-						}
-					]
-				},
-				{
-					"begin": "(?<=\\.)(?=\\b[\\w:|]+\\b)",
-					"end": "(?![\\w:|])",
-					"contentName": "meta.id.paradox.comparable.prefixed",
-					"patterns": [
-						{
-							"include": "#prefixable-comparable-lhs"
-						}
-					]
-				}
+				{ "include": "#prefix-scopes" },
+				{ "include": "#non-prefixable-comparable-lhs" },
+				{ "include": "#prefixable-comparable-lhs" }
 			]
-		},
-		"prefix-scopes": {
-			"patterns": [
-				{
-					"begin": "\\b(?=[\\w:|]+\\.)",
-					"end": "\\.",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.dot.paradox"
-						}
-					},
-					"contentName": "meta.scope.paradox",
-					"patterns": [
-						{
-							"include": "#scope"
-						}
-					]
-				}
-			]
-		},
-		"non-prefixable-non-comparable-lhs": {
-			"patterns": [
-				{
-					"comment": "Script constants",
-					"include": "#script_constants"
-				},
-				{
-					"comment": "LHS boolean operators",
-					"name": "keyword.operator.logical.paradox",
-					"match": "(?i)\\b(or|and|not|nor|nand)\\b"
-				},
-				{
-					"comment": "Other LHS operators",
-					"name": "keyword.control.flow.paradox",
-					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b"
-				},
-				{
-					"name": "variable.language.multi.paradox",
-					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b"
-				},
-				{
-					"include": "#prefixable-non-comparable-lhs"
-				},
-				{
-					"include": "#non-prefixable-comparable-lhs"
-				}
-			]
-		},
-		"prefixable-non-comparable-lhs": {
-			"patterns": [
-				{
-					"include": "#scope"
-				},
-				{
-					"include": "#prefixable-comparable-lhs"
-				}
-			]
-		},
-		"non-prefixable-comparable-lhs": {
-			"patterns": [
-				{
-					"include": "#prefixable-comparable-lhs"
-				}
-			]
-		},
-		"prefixable-comparable-lhs": {
-			"patterns": [
-				{
-					"include": "#generic-lhs"
-				}
-			]
-		},
-		"scope": {
-			"patterns": [
-				{
-					"comment": "Original relative scope change",
-					"name": "variable.language.scope.paradox",
-					"match": "(?i)\\b(root|from|prev|this)\\b"
-				},
-				{
-					"include": "#generic-lhs"
-				}
-			]
-		},
-		"generic-lhs": {
-			"patterns": [
-				{
-					"name": "variable.other.lhs.paradox",
-					"match": "\\b[\\w:|]+\\b"
-				}
-			]
-		},
-		"rhs": {
-			"patterns": [
-				{
-					"comment": "RHS is either a constant value",
-					"include": "#constants"
-				},
-				{
-					"comment": "Or a generic string",
-					"include": "#strings"
-				}
-			]
-		},
-		"script_constants": {
-			"comment": "A predef script variable (@variable)",
-			"name": "variable.other.predef.paradox",
-			"match": "\\b@\\w+\\b"
 		},
 		"constants": {
 			"patterns": [
 				{
-					"name": "constant.language.paradox",
-					"match": "\\b(yes|no)\\b"
+					"match": "\\b(yes|no)\\b",
+					"name": "constant.language.paradox"
 				},
 				{
 					"comment": "Dot-seperated date (1000.10.10)",
-					"name": "constant.numeric.date.paradox",
-					"match": "\\d+\\.\\d+\\.\\d+\\b"
+					"match": "\\d+\\.\\d+\\.\\d+\\b",
+					"name": "constant.numeric.date.paradox"
 				},
 				{
 					"comment": "A RHS number, either integer or float, positive or negative",
-					"name": "constant.numeric.paradox",
-					"match": "\\b-?(([0-9]+(\\.[0-9]+)?)|(\\.[0-9]+))\\b"
+					"match": "\\b-?(([0-9]+(\\.[0-9]+)?)|(\\.[0-9]+))\\b",
+					"name": "constant.numeric.paradox"
 				},
 				{
 					"comment": "Any other RHS value, any combination of word characters and dots",
-					"name": "variable.other.constant.paradox",
-					"match": "(\\w|\\.)+"
+					"match": "(\\w|\\.)+",
+					"name": "variable.other.constant.paradox"
 				}
 			]
 		},
-		"strings": {
-			"name": "string.quoted.double.paradox",
-			"begin": "\"",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.paradox"
-				}
-			},
-			"end": "\"",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.paradox"
-				}
-			},
+		"generic-lhs": {
+			"match": "\\b[\\w:|]+\\b",
+			"name": "variable.other.lhs.paradox"
+		},
+		"namespace": {
+			"comment": "Namespace at top of events",
+			"match": "^\\s*((namespace)\\s*[=]\\s*([\\w.]+))",
+			"name": "meta.namespace.paradox",
+			"captures": {
+				"1": { "name": "meta.namespace.identifier.paradox" },
+				"2": { "name": "keyword.other.namespace.paradox" },
+				"3": { "name": "entity.name.type.namespace.paradox" }
+			}
+		},
+		"non-comparable-lhs": {
+			"comment": "LHS + =",
+			"begin": "\\s*(?=\\b[\\w:.|/]+\\b\\s*=)",
+			"end": "\\s*(=)",
+			"endCaptures": { "1": { "name": "punctuation.equal.paradox" } },
+			"contentName": "meta.lhs.non-comparable.paradox",
+			"patterns": [
+				{ "include": "#prefix-scopes" },
+				{ "include": "#non-prefixable-non-comparable-lhs" },
+				{ "include": "#prefixable-non-comparable-lhs" }
+			]
+		},
+		"non-prefixable-comparable-lhs": {
+			"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
+			"end": "(?![\\w:|])",
+			"contentName": "meta.id.paradox.comparable.non-prefixed",
+			"patterns": [ { "include": "#prefixable-comparable-lhs" } ]
+		},
+		"non-prefixable-non-comparable-lhs": {
+			"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
+			"end": "(?![\\w:|])",
+			"contentName": "meta.id.paradox.non-comparable.non-prefixed",
 			"patterns": [
 				{
-					"name": "constant.character.escape.paradox",
-					"match": "\\\\."
+					"comment": "LHS boolean operators",
+					"match": "(?i)\\b(or|and|not|nor|nand)\\b",
+					"name": "keyword.operator.logical.paradox"
+				},
+				{
+					"comment": "Other LHS operators",
+					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b",
+					"name": "keyword.control.flow.paradox"
+				},
+				{
+					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b",
+					"name": "variable.language.multi.paradox"
+				},
+				{ "include": "#script_constants" },
+				{ "include": "#prefixable-non-comparable-lhs" },
+				{ "include": "#non-prefixable-comparable-lhs" }
+			]
+		},
+		"prefix-scopes": {
+			"begin": "\\b(?=[\\w:|]+\\.)",
+			"end": "\\.",
+			"endCaptures": { "0": { "name": "punctuation.dot.paradox" } },
+			"contentName": "meta.scope.paradox",
+			"patterns": [ { "include": "#scope" } ]
+		},
+		"prefixable-comparable-lhs": {
+			"begin": "(?=\\b[\\w:|]+\\b)",
+			"end": "(?![\\w:|])",
+			"contentName": "meta.id.paradox.comparable.prefixed",
+			"patterns": [ { "include": "#generic-lhs" } ]
+		},
+		"prefixable-non-comparable-lhs": {
+			"begin": "(?=\\b[\\w:|]+\\b)",
+			"end": "(?![\\w:|])",
+			"contentName": "meta.id.paradox.non-comparable.prefixed",
+			"patterns": [
+				{ "include": "#scope" },
+				{ "include": "#prefixable-comparable-lhs" }
+			]
+		},
+		"rhs": {
+			"comment": "RHS (keyword = >something<)",
+			"begin": "(?<=<=|>=|!=|<|>|=)\\s*(?=\\s*[^{\\s])",
+			"end": "\\s+",
+			"contentName": "variable.language.rhs.paradox",
+			"patterns": [
+				{ "include": "#constants" },
+				{ "include": "#strings" }
+			]
+		},
+		"scope": {
+			"comment": "Original relative scope change",
+			"match": "(?i)\\b(root|from|prev|this)\\b",
+			"name": "variable.language.scope.paradox"
+		},
+		"script_constants": {
+			"comment": "A predef script variable (@variable)",
+			"match": "\\b@\\w+\\b",
+			"name": "variable.other.predef.paradox"
+		},
+		"statements": {
+			"patterns": [
+				{ "include": "#non-comparable-lhs" },
+				{ "include": "#comparable-lhs" },
+				{ "include": "#rhs" },
+				{ "include": "#block" }
+			]
+		},
+		"strings": {
+			"begin": "\"",
+			"beginCaptures": { "0": { "name": "punctuation.definition.string.begin.paradox" } },
+			"end": "\"",
+			"endCaptures": { "0": { "name": "punctuation.definition.string.end.paradox" } },
+			"name": "string.quoted.double.paradox",
+			"patterns": [
+				{
+					"match": "\\\\.",
+					"name": "constant.character.escape.paradox"
 				}
 			]
 		}
