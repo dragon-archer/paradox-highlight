@@ -33,7 +33,7 @@
 		},
 		"comparable-lhs": {
 			"comment": "LHS + comparison operator",
-			"begin": "\\s*(?=\\b[\\w:.|]+\\b\\s*(<=|>=|!=|<|>))",
+			"begin": "\\s*(?=[\\w:.|$]+\\s*(?:<=|>=|!=|<|>))",
 			"end": "\\s*(<=|>=|!=|<|>)",
 			"endCaptures": { "1": { "name": "punctuation.comparison.paradox" } },
 			"contentName": "meta.lhs.comparable.paradox",
@@ -47,7 +47,7 @@
 			"patterns": [
 				{
 					"match": "\\b(yes|no)\\b",
-					"name": "constant.language.paradox"
+					"name": "markup.bold constant.language.paradox"
 				},
 				{
 					"comment": "Dot-seperated date (1000.10.10)",
@@ -67,8 +67,21 @@
 			]
 		},
 		"generic-lhs": {
-			"match": "\\b[\\w:|]+\\b",
-			"name": "variable.other.lhs.paradox"
+			"patterns": [
+				{ "include": "#macro" },
+				{
+					"match": "\\b[\\w:|]+\\b",
+					"name": "variable.other.lhs.paradox"
+				}
+			]
+		},
+		"macro": {
+			"match": "(\\$)[\\w:|]+(\\$)",
+			"name": "markup.italic variable.parameter.macro.paradox",
+			"captures": {
+				"1": { "name": "punctuation.definition.macro.begin.paradox" },
+				"2": { "name": "punctuation.definition.macro.end.paradox" }
+			}
 		},
 		"namespace": {
 			"comment": "Namespace at top of events",
@@ -82,7 +95,7 @@
 		},
 		"non-comparable-lhs": {
 			"comment": "LHS + =",
-			"begin": "\\s*(?=\\b[\\w:.|/]+\\b\\s*(?:\\?=|=))",
+			"begin": "\\s*(?=[\\w:.|$]+\\s*(?:\\?=|=))",
 			"end": "\\s*(\\?=|=)",
 			"endCaptures": { "1": { "name": "punctuation.equal.paradox" } },
 			"contentName": "meta.lhs.non-comparable.paradox",
@@ -93,29 +106,29 @@
 			]
 		},
 		"non-prefixable-comparable-lhs": {
-			"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
-			"end": "(?![\\w:|])",
+			"begin": "(?<!\\.)(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
 			"contentName": "meta.id.paradox.comparable.non-prefixed",
 			"patterns": [ { "include": "#prefixable-comparable-lhs" } ]
 		},
 		"non-prefixable-non-comparable-lhs": {
-			"begin": "(?<!\\.)(?=\\b[\\w:|]+\\b)",
-			"end": "(?![\\w:|])",
+			"begin": "(?<!\\.)(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
 			"contentName": "meta.id.paradox.non-comparable.non-prefixed",
 			"patterns": [
 				{
 					"comment": "LHS boolean operators",
 					"match": "(?i)\\b(or|and|not|nor|nand)\\b",
-					"name": "keyword.operator.logical.paradox"
+					"name": "markup.bold keyword.operator.logical.paradox"
 				},
 				{
 					"comment": "Other LHS operators",
 					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b",
-					"name": "keyword.control.flow.paradox"
+					"name": "markup.bold keyword.control.flow.paradox"
 				},
 				{
 					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b",
-					"name": "variable.language.multi.paradox"
+					"name": "markup.bold variable.language.multi.paradox"
 				},
 				{ "include": "#script_constants" },
 				{ "include": "#prefixable-non-comparable-lhs" },
@@ -123,15 +136,18 @@
 			]
 		},
 		"prefix-scopes": {
-			"begin": "\\b(?=[\\w:|]+\\.)",
+			"begin": "(?=[\\w:|$]+\\.)",
 			"end": "\\.",
 			"endCaptures": { "0": { "name": "punctuation.dot.paradox" } },
 			"contentName": "meta.scope.paradox",
-			"patterns": [ { "include": "#scope" } ]
+			"patterns": [
+				{ "include": "#scope" },
+				{ "include": "#generic-lhs" }
+			]
 		},
 		"prefixable-comparable-lhs": {
-			"begin": "(?=\\b[\\w:|]+\\b)",
-			"end": "(?![\\w:|])",
+			"begin": "(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
 			"contentName": "meta.id.paradox.comparable.prefixed",
 			"patterns": [
 				{ "include": "#scope" },
@@ -139,8 +155,8 @@
 			]
 		},
 		"prefixable-non-comparable-lhs": {
-			"begin": "(?=\\b[\\w:|]+\\b)",
-			"end": "(?![\\w:|])",
+			"begin": "(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
 			"contentName": "meta.id.paradox.non-comparable.prefixed",
 			"patterns": [
 				{ "include": "#scope" },
@@ -160,7 +176,7 @@
 		"scope": {
 			"comment": "Original relative scope change",
 			"match": "(?i)\\b(root|from|prev|this)\\b",
-			"name": "support.type.scope.paradox"
+			"name": "markup.bold support.type.scope.paradox"
 		},
 		"script_constants": {
 			"comment": "A predef script variable (@variable)",
