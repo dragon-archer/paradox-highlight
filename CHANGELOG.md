@@ -1,5 +1,16 @@
 # Paradox Highlight Changelog
 
+## Unreleased
+
+### New Features
+
+- Support `?=` operator
+- Support macro parameters (quoted in `$` pairs)
+
+### Bug Fix
+
+- Fix UUID
+
 ## Version 0.3.0: 2024-01-28
 
 ### New Features

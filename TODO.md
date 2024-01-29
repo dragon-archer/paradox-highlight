@@ -10,3 +10,5 @@
 - Support `scripted_trigger` and similar grammars
 - Support percentage numbers
 - Support more detailed `LHS` recognition
+- Add intro images in `README.md`
+- Fix negative number support
