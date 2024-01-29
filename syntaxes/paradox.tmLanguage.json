@@ -82,8 +82,8 @@
 		},
 		"non-comparable-lhs": {
 			"comment": "LHS + =",
-			"begin": "\\s*(?=\\b[\\w:.|/]+\\b\\s*=)",
-			"end": "\\s*(=)",
+			"begin": "\\s*(?=\\b[\\w:.|/]+\\b\\s*(?:\\?=|=))",
+			"end": "\\s*(\\?=|=)",
 			"endCaptures": { "1": { "name": "punctuation.equal.paradox" } },
 			"contentName": "meta.lhs.non-comparable.paradox",
 			"patterns": [
