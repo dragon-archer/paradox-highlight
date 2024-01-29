@@ -3,7 +3,7 @@
 	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
 	"name": "Crusader Kings III",
 	"scopeName": "source.paradox.ck3",
-	"uuid": "24081801-bdcf-11ee-0001-44e517e8033d",
+	"uuid": "24081801-bdcf-11ee-8001-44e517e8033d",
 	"injections": {
 		"L:meta.id.paradox.comparable.prefixed": {
 			"patterns": [
