@@ -22,7 +22,8 @@
 			"comment": "This is the main entry-point",
 			"patterns": [
 				{ "include": "#comment" },
-				{ "include": "#statements" }
+				{ "include": "#statement" },
+				{ "include": "#rhs-item" }
 			]
 		},
 		"comment": {
@@ -43,36 +44,30 @@
 				{ "include": "#prefixable-comparable-lhs" }
 			]
 		},
-		"constants": {
+		"comparable-rhs": {
+			"begin": "(?<=<=|>=|!=|<|>)\\s*(?=[^{\\s])",
+			"end": "\\s+",
+			"contentName": "meta.id.paradox.rhs.comparable",
 			"patterns": [
-				{
-					"match": "\\b(yes|no)\\b",
-					"name": "markup.bold constant.language.paradox"
-				},
-				{
-					"comment": "Dot-seperated date (1000.10.10)",
-					"match": "\\d+\\.\\d+\\.\\d+\\b",
-					"name": "constant.numeric.date.paradox"
-				},
-				{
-					"comment": "A RHS number, either integer or float, positive or negative",
-					"match": "\\b-?(([0-9]+(\\.[0-9]+)?)|(\\.[0-9]+))\\b",
-					"name": "constant.numeric.paradox"
-				},
-				{
-					"comment": "Any other RHS value, any combination of word characters and dots",
-					"match": "(\\w|\\.)+",
-					"name": "variable.other.constant.paradox"
-				}
+				{ "include": "#numeric" },
+				{ "include": "#prefix-scopes" },
+				{ "include": "#non-prefixable-comparable-rhs" },
+				{ "include": "#prefixable-comparable-rhs" }
 			]
 		},
-		"generic-lhs": {
+		"identifier": {
 			"patterns": [
 				{ "include": "#macro" },
 				{
 					"match": "\\b[\\w:|]+\\b",
-					"name": "variable.other.lhs.paradox"
+					"name": "variable.other.identifier.paradox"
 				}
+			]
+		},
+		"lhs": {
+			"patterns": [
+				{ "include": "#non-comparable-lhs" },
+				{ "include": "#comparable-lhs" }
 			]
 		},
 		"macro": {
@@ -105,11 +100,32 @@
 				{ "include": "#prefixable-non-comparable-lhs" }
 			]
 		},
+		"non-comparable-rhs": {
+			"begin": "(?<=\\?=|=)\\s*(?=[^{\\s])",
+			"end": "\\s+",
+			"contentName": "meta.id.paradox.rhs.non-comparable",
+			"patterns": [
+				{ "include": "#numeric" },
+				{ "include": "#prefix-scopes" },
+				{ "include": "#non-prefixable-non-comparable-rhs" },
+				{ "include": "#prefixable-non-comparable-rhs" }
+			]
+		},
 		"non-prefixable-comparable-lhs": {
 			"begin": "(?<!\\.)(?=[\\w:|$]+)",
 			"end": "(?![\\w:|$])",
 			"contentName": "meta.id.paradox.comparable.non-prefixed",
 			"patterns": [ { "include": "#prefixable-comparable-lhs" } ]
+		},
+		"non-prefixable-comparable-rhs": {
+			"begin": "(?<!\\.)(?=[\\w:|$@]+)",
+			"end": "(?![\\w:|$@])",
+			"contentName": "meta.id.paradox.rhs.comparable.non-prefixed",
+			"patterns": [
+				{ "include": "#script_constants" },
+				{ "include": "#numeric" },
+				{ "include": "#prefixable-comparable-rhs" }
+			]
 		},
 		"non-prefixable-non-comparable-lhs": {
 			"begin": "(?<!\\.)(?=[\\w:|$]+)",
@@ -135,6 +151,34 @@
 				{ "include": "#non-prefixable-comparable-lhs" }
 			]
 		},
+		"non-prefixable-non-comparable-rhs": {
+			"begin": "(?<!\\.)(?=[\\w:|$\"@]+)",
+			"end": "(?![\\w:|$\"@])",
+			"contentName": "meta.id.paradox.rhs.non-comparable.non-prefixed",
+			"patterns": [
+				{
+					"match": "\\b(yes|no)\\b",
+					"name": "markup.bold constant.language.paradox"
+				},
+				{ "include": "#strings" },
+				{ "include": "#prefixable-non-comparable-rhs" },
+				{ "include": "#non-prefixable-comparable-rhs" }
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"comment": "Dot-seperated date (1000.10.10)",
+					"match": "\\b\\d+\\.\\d+\\.\\d+\\b",
+					"name": "constant.numeric.date.paradox"
+				},
+				{
+					"comment": "A RHS number, either integer or float, positive or negative",
+					"match": "-?(?:(?:[0-9]+(?:\\.[0-9]+)?%?)|(?:\\.[0-9]+))",
+					"name": "constant.numeric.paradox"
+				}
+			]
+		},
 		"prefix-scopes": {
 			"begin": "(?=[\\w:|$]+\\.)",
 			"end": "\\.",
@@ -142,7 +186,7 @@
 			"contentName": "meta.scope.paradox",
 			"patterns": [
 				{ "include": "#scope" },
-				{ "include": "#generic-lhs" }
+				{ "include": "#identifier" }
 			]
 		},
 		"prefixable-comparable-lhs": {
@@ -151,7 +195,16 @@
 			"contentName": "meta.id.paradox.comparable.prefixed",
 			"patterns": [
 				{ "include": "#scope" },
-				{ "include": "#generic-lhs" }
+				{ "include": "#identifier" }
+			]
+		},
+		"prefixable-comparable-rhs": {
+			"begin": "(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
+			"contentName": "meta.id.paradox.rhs.comparable.prefixed",
+			"patterns": [
+				{ "include": "#scope" },
+				{ "include": "#identifier" }
 			]
 		},
 		"prefixable-non-comparable-lhs": {
@@ -163,14 +216,27 @@
 				{ "include": "#prefixable-comparable-lhs" }
 			]
 		},
-		"rhs": {
-			"comment": "RHS (keyword = >something<)",
-			"begin": "(?<=<=|>=|!=|<|>|=)\\s*(?=\\s*[^{\\s])",
-			"end": "\\s+",
-			"contentName": "variable.language.rhs.paradox",
+		"prefixable-non-comparable-rhs": {
+			"begin": "(?=[\\w:|$]+)",
+			"end": "(?![\\w:|$])",
+			"contentName": "meta.id.paradox.rhs.non-comparable.prefixed",
 			"patterns": [
-				{ "include": "#constants" },
-				{ "include": "#strings" }
+				{ "include": "#scope" },
+				{ "include": "#prefixable-comparable-rhs" }
+			]
+		},
+		"rhs": {
+			"patterns": [
+				{ "include": "#block" },
+				{ "include": "#comparable-rhs" },
+				{ "include": "#non-comparable-rhs" }
+			]
+		},
+		"rhs-item": {
+			"patterns": [
+				{ "include": "#numeric" },
+				{ "include": "#strings" },
+				{ "include": "#identifier" }
 			]
 		},
 		"scope": {
@@ -180,15 +246,13 @@
 		},
 		"script_constants": {
 			"comment": "A predef script variable (@variable)",
-			"match": "\\b@\\w+\\b",
+			"match": "(?<!\\w)@\\w+",
 			"name": "variable.other.predef.paradox"
 		},
-		"statements": {
+		"statement": {
 			"patterns": [
-				{ "include": "#non-comparable-lhs" },
-				{ "include": "#comparable-lhs" },
-				{ "include": "#rhs" },
-				{ "include": "#block" }
+				{ "include": "#lhs" },
+				{ "include": "#rhs" }
 			]
 		},
 		"strings": {
