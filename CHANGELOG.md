@@ -6,10 +6,18 @@
 
 - Support `?=` operator
 - Support macro parameters (quoted in `$` pairs)
+- Support array
+- Support percentage numbers
+- Support more detailed `LHS` recognition
 
-### Bug Fix
+### Enhancement
+
+- Improve highlight for `RHS`
+
+### Bug Fixes
 
 - Fix UUID
+- Fix negative number support
 
 ## Version 0.3.0: 2024-01-28
 
