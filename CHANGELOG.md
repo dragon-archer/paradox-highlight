@@ -1,6 +1,6 @@
 # Paradox Highlight Changelog
 
-## Unreleased
+## Version 0.4.0: 2024-01-30
 
 ### New Features
 
