@@ -38,14 +38,17 @@
 				],
 				"extensions": [
 					".txt",
-					".gui"
+					".gui",
+					".info"
 				],
 				"configuration": "./language-configuration.json",
 				"filenamePatterns": [
 					"**/Crusader Kings III/**/*.txt",
 					"**/Crusader Kings III/**/*.gui",
+					"**/Crusader Kings III/**/*.info",
 					"**/CK3/**/*.txt",
-					"**/CK3/**/*.gui"
+					"**/CK3/**/*.gui",
+					"**/CK3/**/*.info"
 				],
 				"icon": {
 					"light": "./icons/ck3.png",
@@ -59,7 +62,8 @@
 				],
 				"extensions": [
 					".txt",
-					".gui"
+					".gui",
+					".info"
 				],
 				"configuration": "./language-configuration.json",
 				"icon": {
