@@ -36,6 +36,7 @@ accolade_owner
 accolade_successor
 activity_host
 activity_location
+activity_owner
 activity_type
 army_commander
 army_owner

@@ -1,6 +1,7 @@
 abort_travel_plan
 accept_activity_invite
 accept_activity_invite_without_travel
+accept_invitation_for_character
 activate_accolade
 activate_holy_site
 activate_struggle_catalyst
@@ -398,6 +399,7 @@ every_owned_story
 every_parent
 every_parent_culture
 every_parent_culture_or_above
+every_participant
 every_past_holder
 every_past_holder_reversed
 every_patroned_holy_order
@@ -510,6 +512,7 @@ imprison
 invalidate_activity
 invalidate_diarch_if_needed
 invest_gold
+invite_character_to_activity
 invite_to_activity
 join_era
 join_faction
