@@ -1,5 +1,15 @@
 # Paradox Highlight Changelog
 
+## Unreleased
+
+### New Features
+
+- Highlight common properties
+
+### Bug Fix
+
+- Add missing builtin types
+
 ## Version 0.4.0: 2024-01-30
 
 ### New Features
