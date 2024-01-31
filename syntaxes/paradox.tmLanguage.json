@@ -90,7 +90,7 @@
 		},
 		"non-comparable-lhs": {
 			"comment": "LHS + =",
-			"begin": "\\s*(?=[\\w:.|$]+\\s*(?:\\?=|=))",
+			"begin": "\\s*(?=[\\w:.|$@]+\\s*(?:\\?=|=))",
 			"end": "\\s*(\\?=|=)",
 			"endCaptures": { "1": { "name": "punctuation.equal.paradox" } },
 			"contentName": "meta.lhs.non-comparable.paradox",
@@ -128,8 +128,8 @@
 			]
 		},
 		"non-prefixable-non-comparable-lhs": {
-			"begin": "(?<!\\.)(?=[\\w:|$]+)",
-			"end": "(?![\\w:|$])",
+			"begin": "(?<!\\.)(?=[\\w:|$@]+)",
+			"end": "(?![\\w:|$@])",
 			"contentName": "meta.id.paradox.non-comparable.non-prefixed",
 			"patterns": [
 				{
@@ -139,7 +139,7 @@
 				},
 				{
 					"comment": "Other LHS operators",
-					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch)\\b",
+					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch|alternative_limit)\\b",
 					"name": "markup.bold keyword.control.flow.paradox"
 				},
 				{
@@ -247,7 +247,7 @@
 		"script_constants": {
 			"comment": "A predef script variable (@variable)",
 			"match": "(?<!\\w)@\\w+",
-			"name": "variable.other.predef.paradox"
+			"name": "variable.language.predef.paradox"
 		},
 		"statement": {
 			"patterns": [
