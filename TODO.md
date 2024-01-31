@@ -8,6 +8,5 @@
 - Add intro images in `README.md`
 - Support highlight inside strings
 - Seperate around bar (`|`)
-- Allow LHS numbers
 - Fix adjacent comment
 - Support colors

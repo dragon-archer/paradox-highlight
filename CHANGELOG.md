@@ -5,6 +5,7 @@
 ### New Features
 
 - Highlight common properties
+- Allow LHS numbers
 
 ### Bug Fix
 
