@@ -133,6 +133,11 @@
 			"contentName": "meta.id.paradox.non-comparable.non-prefixed",
 			"patterns": [
 				{
+					"comment": "Numbers",
+					"match": "\\b\\d+\\b",
+					"name": "constant.numeric.paradox"
+				},
+				{
 					"comment": "LHS boolean operators",
 					"match": "(?i)\\b(or|and|not|nor|nand)\\b",
 					"name": "markup.bold keyword.operator.logical.paradox"
@@ -174,7 +179,7 @@
 				},
 				{
 					"comment": "A RHS number, either integer or float, positive or negative",
-					"match": "-?(?:(?:[0-9]+(?:\\.[0-9]+)?%?)|(?:\\.[0-9]+))",
+					"match": "-?(?:(?:\\d+(?:\\.\\d+)?%?)|(?:\\.\\d+))",
 					"name": "constant.numeric.paradox"
 				}
 			]
