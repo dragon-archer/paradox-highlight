@@ -1,5 +1,7 @@
 @accolade_type
 @activity_type
+@ai
+@all
 @aptitude
 @array_define
 @character
@@ -21,6 +23,7 @@
 @house
 @local_var
 @memory_participant
+@player
 @province
 @religion
 @scope
