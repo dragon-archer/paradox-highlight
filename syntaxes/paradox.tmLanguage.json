@@ -49,11 +49,17 @@
 			"end": "\\s+",
 			"contentName": "meta.id.paradox.rhs.comparable",
 			"patterns": [
+				{ "include": "#date " },
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-comparable-rhs" },
 				{ "include": "#prefixable-comparable-rhs" }
 			]
+		},
+		"date": {
+			"comment": "Dot-seperated date (1000.10.10)",
+			"match": "\\b\\d+\\.\\d+\\.\\d+\\b",
+			"name": "constant.numeric.date.paradox"
 		},
 		"identifier": {
 			"patterns": [
@@ -95,6 +101,7 @@
 			"endCaptures": { "1": { "name": "punctuation.equal.paradox" } },
 			"contentName": "meta.lhs.non-comparable.paradox",
 			"patterns": [
+				{ "include": "#date" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-non-comparable-lhs" },
 				{ "include": "#prefixable-non-comparable-lhs" }
@@ -105,6 +112,7 @@
 			"end": "\\s+",
 			"contentName": "meta.id.paradox.rhs.non-comparable",
 			"patterns": [
+				{ "include": "#date " },
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-non-comparable-rhs" },
@@ -123,7 +131,6 @@
 			"contentName": "meta.id.paradox.rhs.comparable.non-prefixed",
 			"patterns": [
 				{ "include": "#script_constants" },
-				{ "include": "#numeric" },
 				{ "include": "#prefixable-comparable-rhs" }
 			]
 		},
@@ -171,18 +178,9 @@
 			]
 		},
 		"numeric": {
-			"patterns": [
-				{
-					"comment": "Dot-seperated date (1000.10.10)",
-					"match": "\\b\\d+\\.\\d+\\.\\d+\\b",
-					"name": "constant.numeric.date.paradox"
-				},
-				{
-					"comment": "A RHS number, either integer or float, positive or negative",
-					"match": "-?(?:(?:\\d+(?:\\.\\d+)?%?)|(?:\\.\\d+))",
-					"name": "constant.numeric.paradox"
-				}
-			]
+			"comment": "A RHS number, either integer or float, positive or negative",
+			"match": "-?(?:(?:\\d+(?:\\.\\d+)?%?)|(?:\\.\\d+))",
+			"name": "constant.numeric.paradox"
 		},
 		"prefix-scopes": {
 			"begin": "(?=[\\w:|$]+\\.)",
