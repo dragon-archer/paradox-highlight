@@ -66,6 +66,10 @@
 			"patterns": [
 				{ "include": "#macro" },
 				{
+					"match": "\\b(block|blockoverride|scripted_trigger|scripted_effect|template|type|types)\\b",
+					"name": "storage.type.paradox"
+				},
+				{
 					"match": "\\b[\\w:|]+\\b",
 					"name": "variable.other.identifier.paradox"
 				}
