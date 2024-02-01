@@ -172,6 +172,12 @@
 					"match": "\\b(yes|no)\\b",
 					"name": "markup.bold constant.language.paradox"
 				},
+				{
+					"begin": "\\|(?=\\w+)",
+					"beginCaptures": { "0": { "name": "punctuation.definition.bar.paradox" } },
+					"end": "(?<=\\w)\\b",
+					"patterns": [ { "include": "$self" } ]
+				},
 				{ "include": "#strings" },
 				{ "include": "#prefixable-non-comparable-rhs" },
 				{ "include": "#non-prefixable-comparable-rhs" }
