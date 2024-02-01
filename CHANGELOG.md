@@ -1,6 +1,25 @@
 # Paradox Highlight Changelog
 
-## Version 0.5.0: 2024-01-31
+## Version 0.6.0 Detail Improvemnts, 2024-02-01
+
+### New Features
+
+- Support colors
+- Support LHS date
+- Seperate around bar (`|`)
+- Support `scripted_trigger` and similar grammars
+
+### Enhancement
+
+- Support more parameters
+
+### Bug Fixes
+
+- Fix conflict between `event_target` and `parameter_lhs`
+- Fix adjacent comment
+- Fix version links
+
+## Version 0.5.0 Property Highlight, 2024-01-31
 
 ### New Features
 
@@ -11,7 +30,7 @@
 
 - Add missing builtin types
 
-## Version 0.4.0: 2024-01-30
+## Version 0.4.0 RHS Improvements, 2024-01-30
 
 ### New Features
 
@@ -30,7 +49,7 @@
 - Fix UUID
 - Fix negative number support
 
-## Version 0.3.0: 2024-01-28
+## Version 0.3.0 Scope Improvements, 2024-01-28
 
 ### New Features
 
@@ -47,7 +66,7 @@
 
 - Seperate `paradox` and `ck3` [microsoft/vscode-textmate#225](https://github.com/microsoft/vscode-textmate/issues/225)
 
-## Version 0.2.0: 2024-01-22
+## Version 0.2.0 for Crusader Kings III, 2024-01-22
 
 ### New Features
 
@@ -55,7 +74,7 @@
 - Support syntax for `event_target`
 - Add docs for Paradox builtin commands
 
-## Version 0.1.0: 2024-01-21
+## Version 0.1.0 Intial Release, 2024-01-21
 
 ### New Features
 
