@@ -53,7 +53,8 @@
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-comparable-rhs" },
-				{ "include": "#prefixable-comparable-rhs" }
+				{ "include": "#prefixable-comparable-rhs" },
+				{ "include": "#comment" }
 			]
 		},
 		"date": {
@@ -116,7 +117,8 @@
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-non-comparable-rhs" },
-				{ "include": "#prefixable-non-comparable-rhs" }
+				{ "include": "#prefixable-non-comparable-rhs" },
+				{ "include": "#comment" }
 			]
 		},
 		"non-prefixable-comparable-lhs": {
