@@ -1,5 +1,5 @@
 {
-	"version": "https://github.com/dragon-archer/paradox-highlight/blob/master/syntaxes/paradox.tmLanguage.json",
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/main/syntaxes/paradox.tmLanguage.json",
 	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
 	"name": "Paradox Script Language",
 	"scopeName": "source.paradox",

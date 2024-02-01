@@ -1,5 +1,5 @@
 {
-	"version": "https://github.com/dragon-archer/paradox-highlight/blob/master/syntaxes/ck3.tmLanguage.json",
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/main/syntaxes/ck3.tmLanguage.json",
 	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
 	"name": "Crusader Kings III",
 	"scopeName": "source.paradox.ck3",
