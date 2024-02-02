@@ -1,5 +1,13 @@
 # Paradox Highlight Changelog
 
+## Version 1.0.0 All-round Highlight, 2024-02-02
+
+### New Features
+
+- Support highlight inside strings
+- Add intro images in `README.md`
+- Develop corresponding theme
+
 ## Version 0.6.0 Detail Improvemnts, 2024-02-01
 
 ### New Features
