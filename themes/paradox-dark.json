@@ -12,7 +12,10 @@
 			}
 		},
 		{
-			"scope": "variable.language.multi.paradox",
+			"scope": [
+				"variable.language.multi.paradox",
+				"support.constant.parameter.rhs.paradox"
+			],
 			"settings": {
 				"foreground": "#f0d612"
 			}
@@ -45,12 +48,6 @@
 			"scope": "support.constant.parameter.lhs.paradox",
 			"settings": {
 				"foreground": "#b9692f"
-			}
-		},
-		{
-			"scope": "support.constant.parameter.rhs.paradox",
-			"settings": {
-				"foreground": "#f0d612"
 			}
 		},
 		{
