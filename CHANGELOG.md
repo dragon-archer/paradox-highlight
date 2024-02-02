@@ -8,7 +8,7 @@
 - Add intro images in `README.md`
 - Develop corresponding theme
 
-## Version 0.6.0 Detail Improvemnts, 2024-02-01
+## Version 0.6.0 Detail Improvements, 2024-02-01
 
 ### New Features
 
