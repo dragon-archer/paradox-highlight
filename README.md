@@ -2,10 +2,26 @@
 
 Syntax highlight for Paradox Script Languages
 
+## Examples
+
+### Highlight for events
+
+![Event Highligh](docs/images/screenshot-event.png)
+
+### Highlight for GUI files
+
+![GUI Highligh](docs/images/screenshot-gui.png)
+
+### Highlight for localizations
+
+![Localization Highligh](docs/images/screenshot-localization.png)
+
 ## Features
 
 - Automatic check for builtin commands of Paradox Games
 - Colorful syntax highlight
+- All Paradox file types(.txt, .info, .gui, and .yml) are supported
+- Distinguish among `trigger`, `effect`, `modifier`, `property` and more on.
 
 **Note:**
 
