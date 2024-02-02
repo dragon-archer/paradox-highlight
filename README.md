@@ -21,7 +21,8 @@ Syntax highlight for Paradox Script Languages
 - Automatic check for builtin commands of Paradox Games
 - Colorful syntax highlight
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
-- Distinguish among `trigger`, `effect`, `modifier`, `property` and more on.
+- Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
+- Corresponding theme based on `Default Dark Modern` to improve preference
 
 **Note:**
 
