@@ -14,7 +14,8 @@
 		"vscode": "^1.23.0"
 	},
 	"categories": [
-		"Programming Languages"
+		"Programming Languages",
+		"Themes"
 	],
 	"keywords": [
 		"paradox",
@@ -90,6 +91,14 @@
 					"source.yaml"
 				],
 				"path": "./syntaxes/localization.tmLanguage.json"
+			}
+		],
+		"themes": [
+			{
+				"id": "Paradox Dark",
+				"label": "Paradox Dark (Paradox Highlight)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/paradox-dark.json"
 			}
 		]
 	}

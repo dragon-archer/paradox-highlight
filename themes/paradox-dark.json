@@ -1,0 +1,66 @@
+{
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/main/themes/paradox-dark.json",
+	"$schema": "vscode://schemas/color-theme",
+	"name": "Paradox Dark",
+	"uuid": "24081801-bdcf-11ee-8003-44e517e8033d",
+	"include": "./dark_modern.json",
+	"tokenColors": [
+		{
+			"scope": "constant.language.paradox",
+			"settings": {
+				"foreground": "#e6d36c"
+			}
+		},
+		{
+			"scope": "variable.language.multi.paradox",
+			"settings": {
+				"foreground": "#f0d612"
+			}
+		},
+		{
+			"scope": "support.function.trigger.paradox",
+			"settings": {
+				"foreground": "#569cd6"
+			}
+		},
+		{
+			"scope": "variable.parameter.event_target.paradox",
+			"settings": {
+				"foreground": "#e4c5fe"
+			}
+		},
+		{
+			"scope": "variable.parameter.macro.paradox",
+			"settings": {
+				"foreground": "#ff80ff"
+			}
+		},
+		{
+			"scope": "keyword.operator.logical.paradox",
+			"settings": {
+				"foreground": "#c586c0"
+			}
+		},
+		{
+			"scope": "support.constant.parameter.lhs.paradox",
+			"settings": {
+				"foreground": "#b9692f"
+			}
+		},
+		{
+			"scope": "support.constant.parameter.rhs.paradox",
+			"settings": {
+				"foreground": "#f0d612"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition.storage.modifier.begin.paradox",
+				"punctuation.definition.data_types"
+			],
+			"settings": {
+				"foreground": "#c30f93"
+			}
+		}
+	]
+}
