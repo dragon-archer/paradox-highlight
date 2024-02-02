@@ -75,7 +75,7 @@
 			"name": "markup.bold support.constant.parameter.lhs.paradox.ck3"
 		},
 		"parameters-lhs-comparable": {
-			"match": "\\b(value)\\b",
+			"match": "\\b(value|count|percent|amount)\\b",
 			"name": "markup.bold support.constant.parameter.lhs.paradox.ck3"
 		},
 		"parameters-rhs": {
