@@ -82,6 +82,14 @@
 				"language": "paradox",
 				"scopeName": "source.paradox",
 				"path": "./syntaxes/paradox.tmLanguage.json"
+			},
+			{
+				"scopeName": "source.paradox.loc",
+				"injectTo": [
+					"source.paradox",
+					"source.yaml"
+				],
+				"path": "./syntaxes/localization.tmLanguage.json"
 			}
 		]
 	}

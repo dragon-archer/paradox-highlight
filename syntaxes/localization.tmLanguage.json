@@ -1,0 +1,116 @@
+{
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/main/syntaxes/localization.tmLanguage.json",
+	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
+	"name": "Paradox Localization",
+	"scopeName": "source.paradox.loc",
+	"uuid": "24081801-bdcf-11ee-8002-44e517e8033d",
+	"injectionSelector": "L:string.quoted.double.paradox, L:string.quoted.double.yaml",
+	"patterns": [
+		{ "include": "#quote" },
+		{ "include": "#data_type" },
+		{ "include": "#format" },
+		{ "include": "#icon" }
+	],
+	"repository": {
+		"argument": {
+			"match": "(\\|)[\\w=]+",
+			"name": "markup.bold storage.modifier.paradox.loc",
+			"captures": { "1": { "name": "punctuation.definition.storage.modifier.begin.paradox.loc" } }
+		},
+		"concept": {
+			"match": "(?<=\\[)[a-z_]+(?=(?:\\|E)?\\])",
+			"name": "markup.italic support.variable.concept.paradox.loc"
+		},
+		"data_type": {
+			"begin": "\\[",
+			"beginCaptures": { "0": { "name": "punctuation.definition.data_types.begin.paradox.loc" } },
+			"end": "\\]",
+			"endCaptures": { "0": { "name": "punctuation.definition.data_types.end.paradox.loc" } },
+			"patterns": [
+				{ "include": "#concept" },
+				{ "include": "#function-with-para" },
+				{ "include": "#function-without-para" },
+				{ "include": "#argument" }
+			]
+		},
+		"format": {
+			"begin": "(#)[\\w;:{}.]+",
+			"beginCaptures": {
+				"0": { "name": "variable.language.format.paradox.loc" },
+				"1": { "name": "punctuation.definition.format.begin.paradox.loc" }
+			},
+			"end": "(?:#!)|(?=\")",
+			"endCaptures": { "0": { "name": "variable.language.format.paradox.loc punctuation.definition.format.end.paradox.loc" } },
+			"name": "markup.bold",
+			"patterns": [ { "include": "source.paradox.loc" } ]
+		},
+		"function-without-para": {
+			"match": "([A-Z]\\w*)(\\.)?",
+			"name": "mata.function.without-para.paradox.loc",
+			"captures": {
+				"1": { "name": "markup.bold support.function.paradox.loc" },
+				"2": { "name": "markup.bold punctuation.seperator.dot-access.paradox.loc" }
+			}
+		},
+		"function-with-para": {
+			"begin": "[A-Z]\\w*(?=\\()",
+			"beginCaptures": { "0": { "name": "markup.bold support.function.paradox.loc" } },
+			"end": "(?<=\\))",
+			"applyEndPatternLast": true,
+			"name": "meta.function.with-para.paradox.loc",
+			"patterns": [ { "include": "#parameters" } ]
+		},
+		"icon": {
+			"match": "(@)\\w+(!)",
+			"name": "markup.italic entity.name.tag.icon.paradox.loc",
+			"captures": {
+				"1": { "name": "punctuation.definition.icon.begin.paradox.loc" },
+				"2": { "name": "punctuation.definition.icon.end.paradox.loc" }
+			}
+		},
+		"parameters": {
+			"begin": "\\(",
+			"beginCaptures": { "0": { "name": "markup.bold punctuation.definition.parameters.begin.paradox.loc" } },
+			"end": "\\)",
+			"applyEndPatternLast": true,
+			"endCaptures": { "0": { "name": "markup.bold punctuation.definition.parameters.end.paradox.loc" } },
+			"contentName": "meta.parameters.paradox.loc",
+			"patterns": [
+				{ "include": "#string" },
+				{ "include": "#function-with-para" },
+				{ "include": "#function-without-para" }
+			]
+		},
+		"quote": {
+			"match": "(\\$)([\\w|=]+)(\\$)",
+			"name": "markup.italic variable.other.paradox.loc",
+			"captures": {
+				"1": { "name": "punctuation.definition.variable.begin.paradox.loc" },
+				"2": { "patterns": [ { "include": "#argument" } ] },
+				"3": { "name": "punctuation.definition.variable.end.paradox.loc" }
+			}
+		},
+		"string": {
+			"begin": "'",
+			"beginCaptures": { "0": { "name": "punctuation.definition.string.begin.paradox.loc" } },
+			"end": "'",
+			"endCaptures": { "0": { "name": "punctuation.definition.string.end.paradox.loc" } },
+			"name": "markup.italic string.quoted.single.paradox.loc",
+			"patterns": [
+				{
+					"match": "\\\\.",
+					"name": "constant.character.escape.paradox.loc"
+				},
+				{ "include": "#type_conversion" }
+			]
+		},
+		"type_conversion": {
+			"match": "(\\()(\\w+)(\\))",
+			"captures": {
+				"1": { "name": "punctuation.definition.type.begin.paradox.loc" },
+				"2": { "name": "support.type.paradox.loc" },
+				"3": { "name": "punctuation.definition.type.end.paradox.loc" }
+			}
+		}
+	}
+}
