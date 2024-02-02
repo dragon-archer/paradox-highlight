@@ -180,7 +180,7 @@
 				},
 				{
 					"begin": "\\|(?=\\w+)",
-					"beginCaptures": { "0": { "name": "punctuation.definition.bar.paradox" } },
+					"beginCaptures": { "0": { "name": "markup.bold punctuation.definition.bar.paradox" } },
 					"end": "(?<=\\w)\\b",
 					"patterns": [ { "include": "$self" } ]
 				},
@@ -278,7 +278,7 @@
 			"name": "string.quoted.double.paradox",
 			"patterns": [
 				{
-					"match": "\\\\.",
+					"match": "\\\\[n\"]",
 					"name": "constant.character.escape.paradox"
 				}
 			]
