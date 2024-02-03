@@ -112,6 +112,7 @@ auto_accept
 auto_fill
 auto_selection_weight
 autoresize
+autoresizescrollarea
 average
 background
 banish_reason
@@ -144,6 +145,7 @@ button_ignore
 button_primary
 button_tertiary
 button_text
+button_trigger
 buy_cost
 cadet_dynasty_names
 calls
@@ -311,6 +313,8 @@ custom_other_loc
 damage
 datacontext
 datamodel
+datamodel_reuse_widgets
+datamodel_wrap
 days
 de_jure_drift_disabled
 debug_only
@@ -379,6 +383,7 @@ doctrine
 doctrine_background_icon
 doctrine_character_modifier
 doctrine_selection_pair
+down
 downframe
 downhoverframe
 downpressedframe
@@ -462,6 +467,7 @@ fixed_range
 fixedgridbox
 flag
 flags
+flipdirection
 floor
 flowcontainer
 focus_id
@@ -498,6 +504,7 @@ girl
 global
 global_neg
 global_past
+glow_radius
 good
 government
 governments
@@ -607,6 +614,7 @@ intermediary_breakdown_maybe
 intermediary_breakdown_no
 intermediary_breakdown_yes
 intermediary_notification_text
+intersectionmask
 invalid_for_government
 invite_rule_order
 involved_character_modifier
@@ -721,11 +729,13 @@ max_size
 max_sub_regiments
 max_width
 maxcharacters
+maxhorizontalslots
 maximum_age
 maximum_progress_chance
 maximum_secrecy
 maximum_success_chance
 maximumsize
+maxverticalslots
 men_at_arms
 men_can_have_consorts
 men_can_have_multiple_spouses
@@ -965,6 +975,7 @@ pre_auto_accept
 preferred_religions
 prefix
 prestige_opinion_override
+primary_building
 primary_cultures
 primary_heir_minimum_share
 primary_heritages
@@ -1041,9 +1052,11 @@ revoke_cost
 revoke_title_reason
 right_icon
 right_portrait
+rotate_uv
 rotation
 round
 royal_court
+ruler_child
 ruler_designer_cost
 ruler_share_min_opinion_from_lessee
 ruler_uses_title_name
@@ -1103,6 +1116,7 @@ should_use_extra_icon
 show_as_unavailable
 show_disabled
 show_effects_in_notification
+show_in_conclusion
 show_special_title
 shown_in_encyclopedia
 shown_in_ruler_designer
@@ -1157,6 +1171,7 @@ suggestion_type
 supply_limit_mult_for_others
 swing
 sync_inheritance_with
+tags
 target
 target_de_jure_regions_above
 target_filter
