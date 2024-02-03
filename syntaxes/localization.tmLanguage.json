@@ -28,6 +28,7 @@
 			"endCaptures": { "0": { "name": "punctuation.definition.data_types.end.paradox.loc" } },
 			"patterns": [
 				{ "include": "#concept" },
+				{ "include": "#scope" },
 				{ "include": "#function-with-para" },
 				{ "include": "#function-without-para" },
 				{ "include": "#argument" }
@@ -53,7 +54,7 @@
 			}
 		},
 		"function-with-para": {
-			"begin": "[A-Z]\\w*(?=\\()",
+			"begin": "(?:(?:(?<=\\[)[A-Z])|(?:(?<!\\[)\\w))\\w*(?=\\()",
 			"beginCaptures": { "0": { "name": "markup.bold support.function.paradox.loc" } },
 			"end": "(?<=\\))",
 			"applyEndPatternLast": true,
@@ -77,6 +78,7 @@
 			"contentName": "meta.parameters.paradox.loc",
 			"patterns": [
 				{ "include": "#string" },
+				{ "include": "#scope" },
 				{ "include": "#function-with-para" },
 				{ "include": "#function-without-para" }
 			]
@@ -89,6 +91,10 @@
 				"2": { "patterns": [ { "include": "#argument" } ] },
 				"3": { "name": "punctuation.definition.variable.end.paradox.loc" }
 			}
+		},
+		"scope": {
+			"match": "(?<!\\.)\\b(?!Get)\\w+\\b(?!\\()",
+			"name": "markup.italic support.variable.scope.paradox.loc"
 		},
 		"string": {
 			"begin": "'",
