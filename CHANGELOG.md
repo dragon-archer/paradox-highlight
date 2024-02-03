@@ -1,5 +1,12 @@
 # Paradox Highlight Changelog
 
+## Version 1.0.1, 2024-02-03
+
+### Enhancements
+
+- Support more parameters
+- Improve localization highlight
+
 ## Version 1.0.0 All-round Highlight, 2024-02-02
 
 ### New Features
