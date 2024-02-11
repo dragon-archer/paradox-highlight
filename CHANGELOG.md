@@ -1,5 +1,16 @@
 # Paradox Highlight Changelog
 
+## Version 1.0.2, 2024-02-11
+
+### Enhancements
+
+- Support more parameters
+- Support more keywords
+
+### Bug Fix
+
+- Fix wrong highlight for `scope`, `event_target`, and `rhs_parameter`
+
 ## Version 1.0.1, 2024-02-03
 
 ### Enhancements
