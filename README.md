@@ -1,5 +1,8 @@
 # Paradox Highlight
 
+[![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
+[![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
+
 Syntax highlight for Paradox Script Languages
 
 ## Examples
