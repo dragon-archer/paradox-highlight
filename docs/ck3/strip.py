@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 import os
 
-IN_DIR = "./ck3/original"
-OUT_DIR = "./ck3/stripped"
+BASE_DIR = os.path.dirname(__file__)
+IN_DIR = os.path.join(BASE_DIR, "original/")
+OUT_DIR = os.path.join(BASE_DIR, "stripped/")
 SPECIAL_SET = {
 	"yes", "no", # RHS constants
 	"root", "from", "this", "prev", # Special scopes
