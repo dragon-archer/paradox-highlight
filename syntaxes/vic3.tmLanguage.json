@@ -1,0 +1,96 @@
+{
+	"version": "https://github.com/dragon-archer/paradox-highlight/blob/main/syntaxes/vic3.tmLanguage.json",
+	"$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
+	"name": "Victoria 3",
+	"scopeName": "source.paradox.vic3",
+	"uuid": "24081801-bdcf-11ee-8003-44e517e8033d",
+	"injections": {
+		"L:meta.id.paradox.comparable.prefixed": {
+			"patterns": [
+				{ "include": "#triggers" },
+				{ "include": "#effects" },
+				{ "include": "#modifiers" },
+				{ "include": "#event_targets" },
+				{ "include": "#scopes" }
+			]
+		},
+		"L:meta.id.paradox.rhs.comparable.prefixed": {
+			"patterns": [
+				{ "include": "#triggers" },
+				{ "include": "#event_targets" },
+				{ "include": "#scopes" }
+			]
+		},
+		"L:meta.id.paradox.non-comparable.non-prefixed": {
+			"patterns": [
+				{ "include": "#parameters-lhs"}
+			]
+		},
+		"L:meta.id.paradox.comparable.non-prefixed": {
+			"patterns": [
+				{ "include": "#parameters-lhs-comparable"}
+			]
+		},
+		"L:meta.id.paradox.rhs.non-comparable.non-prefixed": {
+			"patterns": [
+				{ "include": "#parameters-rhs" }
+			]
+		},
+		"L:meta.scope.paradox": {
+			"patterns": [
+				{ "include": "#event_targets" },
+				{ "include": "#scopes" }
+			]
+		}
+	},
+	"patterns": [
+		{ "include": "source.paradox" }
+	],
+	"repository": {
+		"effects": {
+			"comment": "Effects",
+			"match": "\\b(?:TODO)\\b",
+			"name": "markup.bold support.function.effect.paradox.vic3"
+		},
+		"event_targets": {
+			"comment": "Event targets",
+			"match": "\\b(TODO)(:)([\\w$]+)",
+			"name": "markup.bold",
+			"captures": {
+				"1": { "name": "support.type.scope.event_target.paradox.vic3" },
+				"2": { "name": "support.type.scope.event_target.paradox.vic3 punctuation.definition.event_target.paradox.vic3" },
+				"3": {
+					"name": "variable.parameter.event_target.paradox.vic3",
+					"patterns": [ { "include": "source.paradox#macro" } ]
+				}
+			}
+		},
+		"modifiers": {
+			"comment": "Modifiers",
+			"match": "\\b(?:TODO)\\b",
+			"name": "markup.bold support.type.modifer.paradox.vic3"
+		},
+		"parameters-lhs": {
+			"match": "\\b(TODO)\\b(?=[^:])",
+			"name": "markup.bold support.constant.parameter.lhs.paradox.vic3"
+		},
+		"parameters-lhs-comparable": {
+			"match": "\\b(value|count|percent|amount|level)\\b",
+			"name": "markup.bold support.constant.parameter.lhs.paradox.vic3"
+		},
+		"parameters-rhs": {
+			"match": "\\b(TODO)\\b(?!:)",
+			"name": "markup.bold support.constant.parameter.rhs.paradox.vic3"
+		},
+		"scopes": {
+			"comment": "Normal scopes",
+			"match": "(?<!:)\\b(?:TODO)\\b",
+			"name": "markup.bold support.type.scope.paradox.vic3"
+		},
+		"triggers": {
+			"comment": "Triggers",
+			"match": "\\b(?:TODO)\\b",
+			"name": "markup.bold support.function.trigger.paradox.vic3"
+		}
+	}
+}

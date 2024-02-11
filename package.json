@@ -57,6 +57,30 @@
 				}
 			},
 			{
+				"id": "vic3",
+				"aliases": [
+					"Victoria 3"
+				],
+				"extensions": [
+					".txt",
+					".gui",
+					".info"
+				],
+				"configuration": "./language-configuration.json",
+				"filenamePatterns": [
+					"**/Victoria 3/**/*.txt",
+					"**/Victoria 3/**/*.gui",
+					"**/Victoria 3I/**/*.info",
+					"**/VIC/**/*.txt",
+					"**/VIC/**/*.gui",
+					"**/VIC/**/*.info"
+				],
+				"icon": {
+					"light": "./icons/vic3.png",
+					"dark": "./icons/vic3.png"
+				}
+			},
+			{
 				"id": "paradox",
 				"aliases": [
 					"Paradox Script"
@@ -78,6 +102,11 @@
 				"language": "ck3",
 				"scopeName": "source.paradox.ck3",
 				"path": "./syntaxes/ck3.tmLanguage.json"
+			},
+			{
+				"language": "vic3",
+				"scopeName": "source.paradox.vic3",
+				"path": "./syntaxes/vic3.tmLanguage.json"
 			},
 			{
 				"language": "paradox",
