@@ -2,10 +2,12 @@ accept_text
 accolade_categories
 accolade_parameters
 active_out_of_context
+activity_modifier
 activity_special_type_progression
 activity_window_widgets
 actual_size
 add
+add_claim_on_loss
 add_commander_trait
 add_matrilineal_spouse
 add_same_sex_spouse
@@ -210,6 +212,7 @@ chain
 chance
 chance_of_no_event
 chance_to_happen
+change
 characer_dynasty_modifier
 character
 character_allow_create
@@ -349,6 +352,7 @@ delay
 delay_days
 delay_months
 delay_years
+delayed
 delete_on_destroy
 delete_on_gain_same_tier
 demand
@@ -368,6 +372,7 @@ disables_combat_leadership
 disallow_random_traits
 disallowed_modifiers
 discontent_progress
+discover_innovation
 display
 display_mode
 divide
@@ -455,6 +460,7 @@ female_spouses
 fervor_per_holy_site
 fights_in_main_phase
 filename
+fill_from_pool
 filter_mouse
 finish_gamestate_tutorial
 first
@@ -467,6 +473,7 @@ fixed_range
 fixedgridbox
 flag
 flags
+flavor
 flipdirection
 floor
 flowcontainer
@@ -501,6 +508,7 @@ genetic_constraint_men
 genetic_constraint_women
 gfxtype
 girl
+give_council_position
 global
 global_neg
 global_past
@@ -617,6 +625,7 @@ intermediary_notification_text
 intersectionmask
 invalid_for_government
 invite_rule_order
+involved_character
 involved_character_modifier
 involved_county_modifier
 involved_doctrine_character_modifier
@@ -709,6 +718,7 @@ margin_left
 margin_right
 margin_top
 margin_widget
+martial_custom
 martial_tradition
 mask
 masterwork
@@ -836,6 +846,7 @@ on_end
 on_enter_active_state
 on_enter_locale
 on_enter_passive_state
+on_enter_phase
 on_enter_travel_state
 on_expire
 on_expose
@@ -849,6 +860,7 @@ on_host_death
 on_intermediary_accept
 on_intermediary_decline
 on_invalidated
+on_invalidated_desc
 on_join
 on_lose_position
 on_monthly
@@ -883,6 +895,7 @@ on_vassal_removed
 on_victory
 on_victory_desc
 on_visit
+on_weekly_pulse
 on_white_peace
 on_white_peace_desc
 onclick
@@ -918,6 +931,7 @@ parameters
 parent
 parent_inheritance_sex
 parentanchor
+parents
 participants
 pass_cost
 pat_grf_name_chance
@@ -932,6 +946,7 @@ pattern
 pause_factor
 pause_game
 pause_on_receive
+percent
 perform_religious_reformation
 perpetual
 phase_list
@@ -1025,6 +1040,7 @@ relation
 relation_aliases
 religious
 remove_default_outfit
+remove_existing_councillor
 renown
 repeat_sound_effect
 replace_with
@@ -1111,6 +1127,7 @@ should_create_alert
 should_invalidate
 should_normalize
 should_show_for_title
+should_show_war_goal_subview
 should_start_with
 should_use_extra_icon
 show_as_unavailable
@@ -1172,6 +1189,7 @@ supply_limit_mult_for_others
 swing
 sync_inheritance_with
 tags
+take_baronies
 target
 target_de_jure_regions_above
 target_filter
@@ -1293,6 +1311,7 @@ valid_target_court
 valid_to_start
 valid_to_start_display_regardless
 value
+variable
 vassal_contract
 vassal_contracts
 vassal_modifier

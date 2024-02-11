@@ -25,6 +25,7 @@ buttongfx
 center
 centercrop
 character
+character_event
 checkbutton
 checkbuttongfx
 children
@@ -35,6 +36,7 @@ commander
 common
 company
 confirmation
+conquest
 container
 corneredstretched
 Corneredstretched
