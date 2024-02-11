@@ -1,5 +1,18 @@
 # Paradox Highlight Changelog
 
+## Version 1.1.0 for Victoria 3, 2024-02-11
+
+### New Features
+
+- Add syntax for `Victoria 3`
+- Add docs for `Victoria 3`
+- Colorful badges on README
+
+### Enhancements
+
+- Improve the robustness of scripts
+- Make parameter highlight a base part of all syntaxes
+
 ## Version 1.0.2, 2024-02-11
 
 ### Enhancements

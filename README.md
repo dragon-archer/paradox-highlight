@@ -3,7 +3,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
 [![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
 
-Syntax highlight for Paradox Script Languages
+Syntax highlight for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
 
 ## Examples
 
@@ -26,11 +26,8 @@ Syntax highlight for Paradox Script Languages
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
 - Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
 - Corresponding theme based on `Default Dark Modern` to improve preference
-
-**Note:**
-
-- Currently only Crusader Kings III is fully supported
-- This extension focuses on new Paradox Games with Jomini engine (namely CK3 and Vic3), so for older games with Clausewitz engine (like EU4, CK2, or HOI4) might have less performance
+- Full support for `Crusader Kings III` and `Victoria 3`
+- Basic support for older Paradox Games with Clausewitz engine (e.g. `Europa Universalis IV`, `Crusader Kings II`, and `Heart of Iron IV`)
 
 ## Usage
 

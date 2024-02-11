@@ -2,4 +2,6 @@
 
 - Identify illegal usages
 - Distinguish builtin `scope` and `function`
-- Support other Paradox Games
+- Improve performance
+- Reduce file size
+- Support Paradox flavored yaml files
