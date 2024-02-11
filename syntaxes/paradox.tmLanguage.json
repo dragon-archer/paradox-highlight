@@ -157,7 +157,7 @@
 				},
 				{
 					"comment": "Other LHS operators",
-					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch|alternative_limit)\\b",
+					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch|alternative_limit|continue)\\b",
 					"name": "markup.bold keyword.control.flow.paradox"
 				},
 				{
