@@ -70,7 +70,7 @@
 				"filenamePatterns": [
 					"**/Victoria 3/**/*.txt",
 					"**/Victoria 3/**/*.gui",
-					"**/Victoria 3I/**/*.info",
+					"**/Victoria 3/**/*.info",
 					"**/VIC/**/*.txt",
 					"**/VIC/**/*.gui",
 					"**/VIC/**/*.info"
