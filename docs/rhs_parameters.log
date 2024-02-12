@@ -16,6 +16,8 @@ all
 alphamultiply
 always_off
 any
+approve
+army
 artifact
 background
 bad
@@ -42,8 +44,10 @@ corneredstretched
 Corneredstretched
 Corneredtiled
 councillors
+country_event
 courtiers
 de_jure_claim
+disapprove
 display
 diverge_culture
 domain
@@ -58,9 +62,12 @@ elegance_of_the_empire
 equal
 ethos
 expanding
+export
+fail
 faith
 famed
 family
+feed
 female
 female_only
 female_preference
@@ -72,6 +79,7 @@ friends_and_foes
 frontend
 game_button
 game_entity_view
+general
 good
 guests
 hbox
@@ -95,9 +103,12 @@ icon
 icongfx
 illegitimate
 illustrious
+import
+incorporated
 inherit
 inherit_faction
 inheritance
+invalid
 invalidate
 jomini_entitygfx
 knight
@@ -122,6 +133,7 @@ middle
 minor
 mirror
 multiply
+navy
 negative
 neighbor_land
 neighbor_land_or_water
@@ -136,6 +148,7 @@ partition
 pdxmesh
 peer_vassals
 positive
+preferred
 primary_war_enemies
 prisoners
 progressbar
@@ -168,11 +181,14 @@ secondary_recipient_domain_titles
 secondary_recipient_domain_titles_including_leases
 secret
 self
+shrinking
 single_heir
 slide
 special
 spouses
 strong
+strongly_approve
+strongly_disapprove
 sub_realm_characters
 task_progress_infinite
 task_progress_percentage
@@ -192,8 +208,10 @@ top
 torso
 tours_and_tournaments
 transfer
+treaty_port
 tree
 tutorial
+unincorporated
 updownframedbuttongfx
 vassals
 vbox
