@@ -1,5 +1,16 @@
 # Paradox Highlight Changelog
 
+## Version 1.1.1, 2024-02-12
+
+### Enhancement
+
+- Add more `Victoria 3` parameters
+
+### Bug Fixes
+
+- Fix highlight after `|`
+- Fix typo in `package.json`
+
 ## Version 1.1.0 for Victoria 3, 2024-02-11
 
 ### New Features
