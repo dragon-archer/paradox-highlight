@@ -1,5 +1,12 @@
 # Paradox Highlight Changelog
 
+## Version 1.1.2, 2024-02-13
+
+### Enhancements
+
+- Add more `Victoria 3` parameters
+- Improve folding support
+
 ## Version 1.1.1, 2024-02-12
 
 ### Enhancement
