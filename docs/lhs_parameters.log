@@ -29,6 +29,7 @@ agent_join_chance
 agent_join_threshold
 agent_leave_threshold
 agent_success_chance
+agitator_weight
 ai
 ai_accept
 ai_accept_negotiation
@@ -247,6 +248,7 @@ categories
 category
 category_cooldown
 category_cooldown_against_recipient
+cede_state_trigger
 ceiling
 center_portrait
 chain
@@ -300,6 +302,8 @@ combat_unit
 combat_unit_image
 combat_width
 combine_into_one
+commander_leader_chance
+commander_weight
 common
 common_interaction
 common_parameters
@@ -331,7 +335,9 @@ councillor_modifier
 count
 counters
 counties
+country_modifiers
 country_trigger
+country_type
 county_allow_create
 county_allow_join
 county_can_switch_to_other_faction
@@ -419,6 +425,7 @@ delete_on_destroy
 delete_on_gain_same_tier
 demand
 density_curve
+dependent_wage
 desc
 description
 destroy_if_invalid_heir
@@ -537,8 +544,11 @@ farm
 father_name_chance
 features
 female
+female_agitator_chance
+female_commander_chance
 female_names
 female_only
+female_politician_chance
 female_spouses
 fervor_per_holy_site
 fights_in_main_phase
@@ -650,6 +660,7 @@ highlight_own_realm
 highlight_portrait
 highlight_widget
 highlightchecked
+highlighted_option
 highlighted_reason
 hired_stack_size
 historical
@@ -745,6 +756,7 @@ involved_parameters
 involvement
 involvement_prerequisite_percentage
 is_admiral
+is_agitator
 is_allowed_claim_title
 is_available_on_create
 is_bad
@@ -764,6 +776,7 @@ is_grand_activity
 is_graphical_background
 is_great_holy_war
 is_highlighted
+is_initiator
 is_jungle
 is_location_valid
 is_pagan
@@ -794,6 +807,7 @@ landless_attacker_needs_armies
 language
 last_name
 latest_usage_date
+law
 layer
 layers
 layoutpolicy_horizontal
@@ -821,6 +835,7 @@ limit_max
 limit_min
 limited_to_frontier_colonization
 list
+literacy_target
 local
 localization
 localization_key
@@ -915,6 +930,7 @@ modifiers
 modifiers_while_active
 modify_texture
 modulo
+monarch_weight
 monthly_change
 monthly_leave_chance_x10
 monthly_on_action
@@ -947,6 +963,7 @@ next
 next_building
 no_automatic_claims
 noble
+noble_chance
 non_aggression_pact
 non_interference
 normal
@@ -982,6 +999,7 @@ on_cancelled
 on_change_from
 on_change_phase
 on_change_to
+on_character_ig_membership
 on_complete
 on_court_position_invalidated
 on_court_position_received
@@ -996,6 +1014,7 @@ on_decline
 on_decline_summary
 on_defeat
 on_defeat_desc
+on_disable
 on_discover
 on_enable
 on_enact
@@ -1062,6 +1081,7 @@ on_war_end
 on_weekly_pulse
 on_white_peace
 on_white_peace_desc
+on_yearly_pulse
 onclick
 onreturnpressed
 onrightclick
@@ -1075,7 +1095,9 @@ optional_features
 options
 options_heading
 order
+order_by
 order_of_succession
+origin
 orphan
 other_effects
 out_type
@@ -1132,20 +1154,29 @@ piety_from_long_peace
 piety_icon_group
 placement
 player_can_join
+plotpoints
 points
+political_engagement_base
+political_engagement_literacy_factor
+political_engagement_mult
 political_strength
 pool_character_config
 poor
+pop_potential
 pop_support
 pop_type
+pop_weight
 populate_actor_list
 populate_recipient_list
 popup
+popup_name
 popup_on_receive
 port
+portrait_age
 portrait_animation
 portrait_extremity_shift
 portrait_info
+portrait_is_female
 portrait_modifier_overrides
 portrait_override
 portrait_pose
@@ -1204,6 +1235,8 @@ public_knowledge
 pulse_actions
 pursuit
 qualification_score
+qualifications
+qualifications_growth_desc
 random_creation
 random_creation_weight
 random_events
@@ -1338,11 +1371,13 @@ should_show_war_goal_subview
 should_start_with
 should_use_extra_icon
 show_as_unavailable
+show_confirmation_box
 show_disabled
 show_effect_in_tooltip
 show_effects_in_notification
 show_in_conclusion
 show_in_list
+show_requirements
 show_special_title
 shown_in_encyclopedia
 shown_in_ruler_designer
@@ -1381,6 +1416,7 @@ start_automatically
 start_date
 start_murders
 start_phase
+start_quality_of_life
 start_sound
 starts_enabled
 state
@@ -1405,6 +1441,7 @@ suggestion_type
 supply_limit_mult_for_others
 swing
 sync_inheritance_with
+tag
 tags
 take_baronies
 target
@@ -1425,6 +1462,7 @@ tax
 tax_contribution_postfix
 tax_factor
 tax_slot_vassal_limit
+technology
 template
 terrain_bonus
 terrain_manipulator
@@ -1443,6 +1481,7 @@ third_neg
 third_past
 third_perspective_description
 ticking_war_score_targets_entire_realm
+tier
 tier_resistance
 tile_size
 time_perk
@@ -1499,6 +1538,7 @@ ugliness_portrait_extremity_shift
 ui_predicted_cost
 ui_skin
 unclamped_contribution_label
+unemployment
 uninvolved_county_modifier
 uninvolved_parameters
 unique
@@ -1571,6 +1611,7 @@ visible
 visible_at_creation
 visuals
 voice
+wage_weight
 war_effects
 war_goal
 war_name

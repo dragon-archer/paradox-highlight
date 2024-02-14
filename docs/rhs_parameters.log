@@ -10,7 +10,10 @@ activity_host
 actor_de_jure_titles
 actor_domain_titles
 actor_domain_titles_including_leases
+admiral
 advanced_activities
+agitator
+agitators
 alert
 all
 alphamultiply
@@ -147,6 +150,7 @@ overlay
 partition
 pdxmesh
 peer_vassals
+politician
 positive
 preferred
 primary_war_enemies
@@ -162,6 +166,7 @@ recipient_de_jure_titles
 recipient_domain_titles
 recipient_domain_titles_including_leases
 regular
+revolution
 rgb
 right
 royal_court
