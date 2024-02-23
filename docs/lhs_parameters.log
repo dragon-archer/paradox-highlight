@@ -74,6 +74,7 @@ ai_vassal_desire
 ai_weight
 ai_will_do
 ai_will_select_province
+alert_group
 alert_icon
 alias
 align
@@ -314,6 +315,7 @@ combat_unit
 combat_unit_image
 combat_width
 combine_into_one
+command_modifier
 commander_leader_chance
 commander_weight
 common
@@ -348,6 +350,7 @@ councillor_modifier
 count
 counters
 counties
+country_modifier
 country_modifiers
 country_trigger
 country_type
@@ -493,6 +496,7 @@ duration
 dyn
 dynamic_country_definition
 dynamic_country_name
+dynamic_texture_postfix
 dynasty_house
 dynasty_named_realms
 dynasty_names
@@ -664,6 +668,7 @@ gui_transition
 gui_window
 hair
 happened
+has_dynamic_texture
 has_junior_participant
 has_max_level
 has_valid_target
@@ -705,6 +710,7 @@ hostility_others
 hostility_same_family
 hostility_same_religion
 house_unity
+how_tutorial
 hq_region
 hybrid
 icon
@@ -758,6 +764,7 @@ institution
 integer_range
 intents
 interest_group_leader_usage
+interest_group_modifier
 interest_group_trigger
 interface
 interface_effect
@@ -1137,6 +1144,8 @@ onclick
 onreturnpressed
 onrightclick
 ontextchanged
+open_panel
+open_popup
 opinion_modifier
 opinion_target
 opposite_opinion
@@ -1386,6 +1395,7 @@ scissor
 scope
 score
 screen
+script_context
 scripted_animation
 scripted_button
 scrollarea
@@ -1430,6 +1440,7 @@ should_notify_third_parties
 should_show_for_title
 should_show_war_goal_subview
 should_start_with
+should_update_on_player_command
 should_use_extra_icon
 show_as_unavailable
 show_confirmation_box
@@ -1578,10 +1589,12 @@ traded_quantity
 traditions
 trait
 trait_exclusive_if_realm_contains
+trait_generation
 trait_rewards
 traits
 transfer_behavior
 transfer_of_power
+transferable
 transition
 transition_state_duration
 translate
@@ -1701,6 +1714,7 @@ wheelstep
 when_taken
 white_peace_possible
 who
+why_tutorial
 widget
 widget_gold_breakdown_tooltip
 widget_name

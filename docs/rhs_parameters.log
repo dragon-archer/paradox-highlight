@@ -18,6 +18,7 @@ alert
 all
 alphamultiply
 always_off
+angry_important_action
 any
 approve
 army
@@ -40,6 +41,7 @@ combat_side
 commander
 common
 company
+condition
 confirmation
 conquest
 container
@@ -50,6 +52,7 @@ councillors
 country_event
 courtiers
 de_jure_claim
+default
 disapprove
 display
 diverge_culture
@@ -107,6 +110,7 @@ icongfx
 illegitimate
 illustrious
 import
+important_action
 incorporated
 inherit
 inherit_faction
@@ -150,10 +154,28 @@ overlay
 partition
 pdxmesh
 peer_vassals
+personality
+player_building
+player_commander
+player_country
+player_diplomatic_action
+player_diplomatic_pact
+player_diplomatic_play
+player_diplomatic_relations
+player_interest_group
+player_invaded_state
+player_involved_market
+player_market_goods
+player_military_formation
+player_national_market
+player_naval_invasion
+player_state
+player_trade_route
 politician
 poor
 positive
 preferred
+primary_culture
 primary_war_enemies
 prisoners
 progressbar
@@ -161,6 +183,7 @@ progressbargfx
 progresspiegfx
 province
 radiobutton
+random
 realm
 realm_characters
 recipient_de_jure_titles
@@ -191,6 +214,7 @@ secret
 self
 shrinking
 single_heir
+skill
 slide
 special
 spouses
