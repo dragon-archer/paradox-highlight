@@ -11,6 +11,7 @@
 				{ "include": "#effects" },
 				{ "include": "#modifiers" },
 				{ "include": "#event_targets" },
+				{ "include": "#function_event_targets" },
 				{ "include": "#scopes" }
 			]
 		},
@@ -18,12 +19,21 @@
 			"patterns": [
 				{ "include": "#triggers" },
 				{ "include": "#event_targets" },
+				{ "include": "#function_event_targets" },
 				{ "include": "#scopes" }
 			]
 		},
 		"L:meta.scope.paradox": {
 			"patterns": [
 				{ "include": "#event_targets" },
+				{ "include": "#function_event_targets" },
+				{ "include": "#scopes" }
+			]
+		},
+		"L:string.quoted.double.paradox": {
+			"patterns": [
+				{ "include": "#event_targets" },
+				{ "include": "#function_event_targets" },
 				{ "include": "#scopes" }
 			]
 		}
@@ -39,7 +49,7 @@
 		},
 		"event_targets": {
 			"comment": "Event targets",
-			"match": "\\b(active_law|ai_army_comparison|ai_gdp_comparison|ai_ideological_opinion|ai_navy_comparison|ai_state_value|ai_subject_value|ai_treaty_port_value|array_define|average_defense|average_offense|b|bt|c|cd|company|company_type|cu|decree_cost|define|diplomatic_pact_other_country|flag|g|get_ruler_for|global_var|i|ideology|ig|ig_trait|ig_type|infamy_threshold|institution|je|law_type|local_var|mg|mobilization_option|modifier|nf|num_alliances_and_defensive_pacts_with_allies|num_alliances_and_defensive_pacts_with_rivals|num_defending_battalions|num_enemy_units|num_mutual_trade_route_levels_with_country|num_pending_events|num_shared_rivals|num_total_battalions|p|pop_type|py|rank_value|region_state|rel|relations|relations_threshold|s|scope|sg|sr|tension|tension_threshold|unit_type|var|active_diplomatic_play)(:)([\\w$]+)",
+			"match": "\\b(active_law|array_define|average_defense|average_offense|b|bt|c|cd|company|company_type|cu|decree_cost|flag|g|get_ruler_for|global_var|i|ideology|ig|ig_trait|ig_type|infamy_threshold|institution|je|law_type|local_var|mg|mobilization_option|modifier|nf|p|pop_type|py|rank_value|region_state|rel|relations|relations_threshold|s|scope|sg|sr|tension|tension_threshold|unit_type|var)(:)([\\w$]+)",
 			"name": "markup.bold",
 			"captures": {
 				"1": { "name": "support.type.scope.event_target.paradox.vic3" },
@@ -48,6 +58,20 @@
 					"name": "variable.parameter.event_target.paradox.vic3",
 					"patterns": [ { "include": "source.paradox#macro" } ]
 				}
+			}
+		},
+		"function_event_targets": {
+			"comment": "Function-like event targets",
+			"match": "\\b(ai_army_comparison|ai_gdp_comparison|ai_ideological_opinion|ai_navy_comparison|ai_state_value|ai_subject_value|ai_treaty_port_value|diplomatic_pact_other_country|num_alliances_and_defensive_pacts_with_allies|num_alliances_and_defensive_pacts_with_rivals|num_defending_battalions|num_enemy_units|num_mutual_trade_route_levels_with_country|num_pending_events|num_shared_rivals|num_total_battalions)(\\()([\\w$]+)(\\))",
+			"name": "markup.bold",
+			"captures": {
+				"1": { "name": "support.type.scope.event_target.paradox.vic3" },
+				"2": { "name": "punctuation.definition.event_target.paren.begin.paradox.vic3" },
+				"3": {
+					"name": "variable.parameter.event_target.paradox.vic3",
+					"patterns": [ { "include": "source.paradox#scope" } ]
+				},
+				"4": { "name": "punctuation.definition.event_target.paren.end.paradox.vic3" }
 			}
 		},
 		"modifiers": {
