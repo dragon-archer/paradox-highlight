@@ -39,7 +39,7 @@
 		},
 		"event_targets": {
 			"comment": "Event targets",
-			"match": "\\b(accolade_type|activity_type|ai|all|aptitude|array_define|character|council_task|court_position|cp|culture|culture_pillar|culture_tradition|decision|define|doctrine|dynasty|faith|flag|global_var|government_type|holding_type|house|local_var|memory_participant|player|province|religion|scope|special_guest|struggle|title|trait|var|vassal_contract|acclaimed_knight)(:)([\\w$]+)",
+			"match": "\\b(accolade_type|activity_type|ai|all|aptitude|array_define|character|council_task|court_position|cp|culture|culture_pillar|culture_tradition|decision|doctrine|dynasty|faith|flag|global_var|government_type|holding_type|house|local_var|memory_participant|player|province|religion|scope|special_guest|struggle|title|trait|var|vassal_contract|acclaimed_knight)(:)([\\w$]+)",
 			"name": "markup.bold",
 			"captures": {
 				"1": { "name": "support.type.scope.event_target.paradox.ck3" },
