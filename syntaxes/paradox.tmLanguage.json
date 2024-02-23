@@ -193,7 +193,7 @@
 		},
 		"numeric": {
 			"comment": "A RHS number, either integer or float, positive or negative",
-			"match": "-?(?:(?:\\d+(?:\\.\\d+)?%?)|(?:\\.\\d+))",
+			"match": "\\b-?(?:(?:\\d+(?:\\.\\d+)?%?)|(?:\\.\\d+))\\b",
 			"name": "constant.numeric.paradox"
 		},
 		"parameters-lhs": {
