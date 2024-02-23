@@ -132,10 +132,22 @@
 			"patterns": [ { "include": "#prefixable-comparable-lhs" } ]
 		},
 		"non-prefixable-comparable-rhs": {
-			"begin": "(?<!\\.)(?=[\\w:|$@]+)",
-			"end": "(?![\\w:|$@])",
+			"begin": "(?<!\\.)(?=[\\w:|$\"@]+)",
+			"end": "(?![\\w:|$\"@])",
 			"contentName": "meta.id.paradox.rhs.comparable.non-prefixed",
 			"patterns": [
+				{
+					"match": "\\b(define)(:)(\\w+)(?:(\\|)(\\w+))*",
+					"name": "markup.bold",
+					"captures": {
+						"1": { "name": "support.type.scope.event_target.paradox.vic3" },
+						"2": { "name": "support.type.scope.event_target.paradox.vic3 punctuation.definition.event_target.paradox.vic3" },
+						"3": { "name": "variable.parameter.event_target.paradox.vic3" },
+						"4": { "name": "support.type.scope.event_target.paradox.vic3 punctuation.definition.event_target.paradox.vic3" },
+						"5": { "name": "variable.parameter.event_target.paradox.vic3" }
+					}
+				},
+				{ "include": "#strings" },
 				{ "include": "#script_constants" },
 				{ "include": "#prefixable-comparable-rhs" }
 			]
@@ -186,9 +198,8 @@
 					"end": "(?<=\\w)\\b",
 					"patterns": [ { "include": "#non-prefixable-non-comparable-rhs" } ]
 				},
-				{ "include": "#strings" },
-				{ "include": "#prefixable-non-comparable-rhs" },
-				{ "include": "#non-prefixable-comparable-rhs" }
+				{ "include": "#non-prefixable-comparable-rhs" },
+				{ "include": "#prefixable-non-comparable-rhs" }
 			]
 		},
 		"numeric": {
@@ -206,6 +217,10 @@
 		},
 		"parameters-rhs": {
 			"match": "\\b(_hide|_mouse_press|_mouse_release|_show|accolades|action|activity|activity_guests|activity_host|actor_de_jure_titles|actor_domain_titles|actor_domain_titles_including_leases|admiral|advanced_activities|agitator|agitators|alert|all|alphamultiply|always_off|any|approve|army|artifact|background|bad|bottom|button_group|buttongfx|center|centercrop|character|character_event|checkbutton|checkbuttongfx|children|coatofarmsbuttongfx|combat|combat_side|commander|common|company|confirmation|conquest|container|corneredstretched|Corneredstretched|Corneredtiled|councillors|country_event|courtiers|de_jure_claim|disapprove|display|diverge_culture|domain|drag_drop_icon|duchy_capital|dynasty|dynasty_house|editbox|editboxgfx|election|elegance_of_the_empire|equal|ethos|expanding|export|fail|faith|famed|family|feed|female|female_only|female_preference|fixedgridbox|flowcontainer|framedbuttongfx|framedprogressbargfx|friends_and_foes|frontend|game_button|game_entity_view|general|good|guests|hbox|hcenter|head|head_of_faith|heritage|holder|holder_close_family|holder_close_or_extended_family|holder_direct_vassals|holder_dynasty|holder_spouses|holy_sites|hooked_characters|horizontal|hsv|hsv360|hybridize_culture|icon|icongfx|illegitimate|illustrious|import|incorporated|inherit|inherit_faction|inheritance|invalid|invalidate|jomini_entitygfx|knight|known_secrets|landed_title|language|left|legacy_of_persia|legitimate|liege|list|lower_center_portrait|lower_left_portrait|lower_right_portrait|major|male|male_only|male_preference|martial_custom|masterwork|middle|minor|mirror|multiply|navy|negative|neighbor_land|neighbor_land_or_water|neighbor_water|neighboring_rulers|neutral|nobaseline|none|oldest|overlay|partition|pdxmesh|peer_vassals|politician|poor|positive|preferred|primary_war_enemies|prisoners|progressbar|progressbargfx|progresspiegfx|province|radiobutton|realm|realm_characters|recipient_de_jure_titles|recipient_domain_titles|recipient_domain_titles_including_leases|regular|revolution|rgb|rich|right|royal_court|ruler|rural|same_faith|same_family|same_religion|scheme|scheme_targets|scripted_relations|scrollbar|secondary_actor_de_jure_titles|secondary_actor_domain_titles|secondary_actor_domain_titles_including_leases|secondary_recipient_de_jure_titles|secondary_recipient_domain_titles|secondary_recipient_domain_titles_including_leases|secret|self|shrinking|single_heir|slide|special|spouses|strong|strongly_approve|strongly_disapprove|sub_realm_characters|task_progress_infinite|task_progress_percentage|task_progress_value|textbox|textboxgfx|the_fate_of_iberia|the_northern_lords|theocratic|title_and_vassal_change|title_claim|title_claimants|title_dejure_vassals|toast|togglepushbuttongfx|top|torso|tours_and_tournaments|transfer|treaty_port|tree|tutorial|unincorporated|updownframedbuttongfx|urban|vassals|vbox|vcenter|vertical|videogfx|war_allies|war_enemies|wards_and_wardens|wheel|widget|window|windowgfx|windows_layer|youngest)\\b(?!:)",
+			"name": "markup.bold support.constant.parameter.rhs.paradox.ck3"
+		},
+		"parameters-rhs-comparable": {
+			"match": "\\b(strongly_approve|approve|neutral|disapporve|strongly_disapprove)\\b",
 			"name": "markup.bold support.constant.parameter.rhs.paradox.ck3"
 		},
 		"prefix-scopes": {
@@ -234,6 +249,7 @@
 			"contentName": "meta.id.paradox.rhs.comparable.prefixed",
 			"patterns": [
 				{ "include": "#scope" },
+				{ "include": "#parameters-rhs-comparable" },
 				{ "include": "#identifier" }
 			]
 		},
@@ -295,7 +311,9 @@
 				{
 					"match": "\\\\[n\"]",
 					"name": "constant.character.escape.paradox"
-				}
+				},
+				{ "include": "#prefix-scopes" },
+				{ "include": "#scope" }
 			]
 		}
 	}
