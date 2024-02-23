@@ -1,5 +1,22 @@
 # Paradox Highlight Changelog
 
+## Version 1.2.0, 2024-02-23
+
+### New Features
+
+- Allow comparable rhs
+- Allow highlight inside strings
+
+### Enhancements
+
+- Add more `Victoria 3` parameters
+- Allow numbers to start an identifier
+- Add one more multi-scope effect `save_temporary_value_as`
+
+### Bug Fix
+
+- Fix bar in `event_target`
+
 ## Version 1.1.2, 2024-02-13
 
 ### Enhancements
