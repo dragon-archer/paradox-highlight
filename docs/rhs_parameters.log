@@ -151,6 +151,7 @@ partition
 pdxmesh
 peer_vassals
 politician
+poor
 positive
 preferred
 primary_war_enemies
@@ -168,9 +169,11 @@ recipient_domain_titles_including_leases
 regular
 revolution
 rgb
+rich
 right
 royal_court
 ruler
+rural
 same_faith
 same_family
 same_religion
@@ -218,6 +221,7 @@ tree
 tutorial
 unincorporated
 updownframedbuttongfx
+urban
 vassals
 vbox
 vcenter

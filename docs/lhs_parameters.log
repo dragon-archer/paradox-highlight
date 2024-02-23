@@ -1,3 +1,4 @@
+accept_break_score
 accept_effect
 accept_score
 accept_text
@@ -8,6 +9,8 @@ active_out_of_context
 activity_modifier
 activity_special_type_progression
 activity_window_widgets
+actor_can_break
+actor_requires_approval_to_break
 actual_size
 add
 add_claim_on_loss
@@ -111,6 +114,7 @@ area
 arrange_marriage
 artifact
 artifact_rewards
+ask_to_end_string
 asset
 atlas
 attacker_allies_inherit
@@ -155,7 +159,10 @@ blockoverride
 body_part
 both_parent_has_trait_inherit_chance
 boy
+break_effect
+break_string
 breaks_if_subject_not_protected
+build_from_investment_pool
 build_province_list
 building_gfx
 building_group
@@ -223,15 +230,19 @@ can_reassign
 can_recruit
 can_reforge
 can_revolution_inherit
+can_select
 can_select_as_first_state
 can_select_as_second_state
+can_select_to_break
 can_send
 can_send_despite_rejection
 can_sponsor
 can_start_own_diplomatic_plays
 can_start_showing_failures_only
+can_target_with_transfer_wargoal
 can_title_have
 can_use_obligations
+can_use_slaves
 canal
 cancel_scheme_when_traveling
 cancel_scheme_when_traveling_target
@@ -273,6 +284,7 @@ check_create_action
 check_create_suggestion
 check_defender_inheritance_validity
 check_missing
+check_range_bounds
 checkbutton
 checked
 child_inheritance_sex
@@ -306,6 +318,7 @@ commander_leader_chance
 commander_weight
 common
 common_interaction
+common_last_names
 common_parameters
 compare_modifier
 compatibility
@@ -338,6 +351,7 @@ counties
 country_modifiers
 country_trigger
 country_type
+counts_for_tech_spread
 county_allow_create
 county_allow_join
 county_can_switch_to_other_faction
@@ -361,6 +375,7 @@ courtier_management
 create_cadet_branches
 create_primary_tier_titles
 created
+created_by_trade_routes
 cultural_acceptance_rule
 cultural_names
 culture_character_modifier
@@ -378,6 +393,7 @@ custom_employee_modifier_description
 custom_employer_modifier_description
 custom_faith_icons
 custom_other_loc
+daily_effect
 damage
 datacontext
 datamodel
@@ -426,6 +442,7 @@ delete_on_gain_same_tier
 demand
 density_curve
 dependent_wage
+depletable_resource
 desc
 description
 destroy_if_invalid_heir
@@ -445,6 +462,7 @@ disallowed_modifiers
 disallowing_laws
 discontent_progress
 discover_innovation
+discoverable_resource
 display
 display_mode
 divide
@@ -473,6 +491,7 @@ duchy_capital_county_culture_modifier
 duchy_capital_county_modifier
 duration
 dyn
+dynamic_country_definition
 dynamic_country_name
 dynasty_house
 dynasty_named_realms
@@ -546,9 +565,11 @@ features
 female
 female_agitator_chance
 female_commander_chance
+female_common_first_names
 female_names
 female_only
 female_politician_chance
+female_ruler
 female_spouses
 fervor_per_holy_site
 fights_in_main_phase
@@ -583,6 +604,7 @@ fontsize
 fontsize_min
 force_notification
 force_pause_game
+forced_duration
 format
 format_override
 formation_modifier
@@ -611,6 +633,7 @@ give_council_position
 gives_prestige_to_overlord
 global
 global_neg
+global_not
 global_past
 glow_radius
 goal_add_value
@@ -641,6 +664,7 @@ gui_transition
 gui_window
 hair
 happened
+has_junior_participant
 has_max_level
 has_valid_target
 has_valid_target_showing_failures_only
@@ -654,6 +678,7 @@ heritages
 hidden
 hide_info
 hierarchy
+high
 high_maintenance_cost
 higher_autonomy_subject_type_alternatives
 highlight_own_realm
@@ -684,6 +709,7 @@ hq_region
 hybrid
 icon
 icon_small
+iconsize
 id
 ideologies
 ig_leader
@@ -708,6 +734,8 @@ in_type
 in_visuals
 inc_button
 incapacitating
+income_transfer
+income_transfer_based_on_recipient
 increased_dynasty_prestige_birth_mult
 increased_dynasty_prestige_long_reign_mult
 increased_dynasty_prestige_marriage_mult
@@ -755,6 +783,7 @@ involved_doctrine_character_modifier
 involved_parameters
 involvement
 involvement_prerequisite_percentage
+is_about_to_auto_break
 is_admiral
 is_agitator
 is_allowed_claim_title
@@ -762,9 +791,12 @@ is_available_on_create
 is_bad
 is_bad_for
 is_basic_order_type
+is_breaking_hostile
 is_character_valid
+is_colonization_rights
 is_county_valid
 is_criminal
+is_customs_union
 is_dangerous
 is_decaying
 is_default
@@ -776,9 +808,12 @@ is_grand_activity
 is_graphical_background
 is_great_holy_war
 is_highlighted
+is_hostile
+is_humiliation
 is_initiator
 is_jungle
 is_location_valid
+is_main_tag_only
 is_pagan
 is_playable
 is_predefined
@@ -791,7 +826,9 @@ is_shown_when_inactive
 is_shunned
 is_single_location
 is_sponsor_valid
+is_target_breaking_hostile
 is_travel_related
+is_two_sided_pact
 is_valid
 is_valid_showing_failures_only
 is_valid_tax_collector
@@ -844,7 +881,9 @@ locator
 log_loc_errors
 loop
 loopinterval
+low
 low_maintenance_cost
+low_pop_method
 lower_autonomy_subject_type_alternatives
 lower_center_portrait
 lower_left_portrait
@@ -854,8 +893,10 @@ maa_upgrade
 macro
 major
 male
+male_common_first_names
 male_names
 male_only
+male_ruler
 mandate
 manpower_max
 map_object
@@ -883,6 +924,7 @@ max_density
 max_garrison
 max_guests
 max_hiring_rate
+max_influence_spending_fraction
 max_route_deviation_mult
 max_size
 max_sub_regiments
@@ -895,6 +937,7 @@ maximum_secrecy
 maximum_success_chance
 maximumsize
 maxverticalslots
+medium
 men_at_arms
 men_can_have_consorts
 men_can_have_multiple_spouses
@@ -932,6 +975,7 @@ modify_texture
 modulo
 monarch_weight
 monthly_change
+monthly_effect
 monthly_leave_chance_x10
 monthly_on_action
 months
@@ -964,8 +1008,10 @@ next_building
 no_automatic_claims
 noble
 noble_chance
+noble_last_names
 non_aggression_pact
 non_interference
+none_not
 normal
 notification_text
 notification_type
@@ -981,10 +1027,13 @@ object
 objectives
 obligation_levels
 obsession_chance
+obsessions
 occupation_participation_mult
+offset
 on_accept
 on_action
 on_actions
+on_activate
 on_activate_while_mobilized
 on_active_state_pulse
 on_agent_join
@@ -1033,6 +1082,7 @@ on_finish_task_county
 on_finish_task_court
 on_fired_from_position
 on_get_position
+on_government_type_change
 on_host_death
 on_intermediary_accept
 on_intermediary_decline
@@ -1051,6 +1101,7 @@ on_participant_death
 on_pass
 on_passive_state_pulse
 on_phase_active
+on_post_government_type_change
 on_primary_attacker_death
 on_primary_defender_death
 on_ready
@@ -1113,17 +1164,20 @@ override_icon
 override_sound
 override_transition
 oversound
+owe_favor_chance
 owe_obligation_chance
 owned_provinces
 owner_attracted
 owner_modifier
 owner_modifier_description
+pact
 pagan_roots
 page
 papermap_textures_file
 parameter
 parameters
 parent
+parent_group
 parent_inheritance_sex
 parentanchor
 parents
@@ -1219,7 +1273,9 @@ progressbar
 progressiveness
 prompt
 proportionality_limit
+propose_break_score
 propose_score
+propose_string
 prosperity_modifier
 province
 province_culture_modifier
@@ -1250,6 +1306,8 @@ raw_text
 raw_tooltip
 reason
 recipient
+recipient_gets_income_transfer
+recipient_pays_maintenance
 recipient_recieve_cooldown
 recommended
 redirect
@@ -1259,6 +1317,8 @@ region
 regions
 relation
 relation_aliases
+relations_improvement_max
+relations_progress_per_day
 religious
 religious_acceptance_rule
 remove_default_outfit
@@ -1359,6 +1419,7 @@ sexuality
 shaderfile
 short_effect_desc
 shortcut
+should_auto_break
 should_auto_expand
 should_be_pinned_by_default
 should_check_for_interface_availability
@@ -1377,6 +1438,7 @@ show_effect_in_tooltip
 show_effects_in_notification
 show_in_conclusion
 show_in_list
+show_in_outliner
 show_requirements
 show_special_title
 shown_in_encyclopedia
@@ -1431,6 +1493,8 @@ strong
 struggle_type
 style
 subject
+subject_relation
+subject_type
 subservient_to_overlord
 subsidized
 subsistence_building
@@ -1439,6 +1503,7 @@ succession
 suffix
 suggestion_type
 supply_limit_mult_for_others
+sway_maneuvers_cost
 swing
 sync_inheritance_with
 tag
@@ -1446,8 +1511,10 @@ tags
 take_baronies
 target
 target_can_add_war_goals
+target_can_break
 target_de_jure_regions_above
 target_filter
+target_requires_approval_to_break
 target_state
 target_title_tier
 target_titles
@@ -1478,6 +1545,7 @@ textures
 theme
 third
 third_neg
+third_not
 third_past
 third_perspective_description
 ticking_war_score_targets_entire_realm
@@ -1513,6 +1581,7 @@ trait_exclusive_if_realm_contains
 trait_rewards
 traits
 transfer_behavior
+transfer_of_power
 transition
 transition_state_duration
 translate
@@ -1563,10 +1632,12 @@ upkeep_modifier
 upkeep_modifier_unscaled
 uppressedframe
 urbanization
+use_culture_states
 use_de_jure_wargoal_only
 use_decisions
 use_diplomatic_range
 use_equipped_artifact_in_slot
+use_favor_chance
 use_for_flavored_companies
 use_for_release_country
 use_for_scheme_power
@@ -1575,6 +1646,7 @@ use_goals
 use_lifestyle
 use_obligation_chance
 use_overlord_map_color
+use_overlord_prefix
 use_overlord_ruler
 use_scripted_guis
 use_secrecy
@@ -1603,6 +1675,8 @@ vassal_contract
 vassal_contracts
 vassal_modifier
 vbox
+very_high
+very_low
 video
 video_mask
 view
@@ -1617,7 +1691,9 @@ war_goal
 war_name
 war_name_base
 wargoal_province
+wargoal_weights
 warmonger
+weekly_effect
 weeks
 weight
 weight_multiplier
@@ -1631,6 +1707,7 @@ widget_name
 widgetanchor
 widgets
 width
+will_break
 window
 window_characters
 window_file
