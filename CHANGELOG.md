@@ -1,5 +1,17 @@
 # Paradox Highlight Changelog
 
+## Version 1.2.1, 2024-03-02
+
+## Enhancements
+
+- Make scopes prior than parameters
+
+### Bug Fixes
+
+- Fix `save_temporary_value_as`
+- Fix highlight inside string
+- Fix folding
+
 ## Version 1.2.0, 2024-02-23
 
 ### New Features
