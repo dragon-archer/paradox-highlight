@@ -32,6 +32,8 @@ agent_join_chance
 agent_join_threshold
 agent_leave_threshold
 agent_success_chance
+agitator_modifier
+agitator_usage
 agitator_weight
 ai
 ai_accept
@@ -63,6 +65,7 @@ ai_quality
 ai_recipients
 ai_score
 ai_score_mult
+ai_selection
 ai_set_target
 ai_target_quick_trigger
 ai_target_score
@@ -165,6 +168,7 @@ break_string
 breaks_if_subject_not_protected
 build_from_investment_pool
 build_province_list
+buildable
 building_gfx
 building_group
 building_modifiers
@@ -230,6 +234,7 @@ can_propose_with_states
 can_reassign
 can_recruit
 can_reforge
+can_research
 can_revolution_inherit
 can_select
 can_select_as_first_state
@@ -251,6 +256,7 @@ cancellation_trigger
 candidate_score
 candidates
 capital
+capital_province
 capped_by_resources
 capped_resources
 cash_reserves_max
@@ -379,6 +385,8 @@ create_cadet_branches
 create_primary_tier_titles
 created
 created_by_trade_routes
+created_material
+created_terrain
 cultural_acceptance_rule
 cultural_names
 culture_character_modifier
@@ -404,6 +412,7 @@ datamodel_reuse_widgets
 datamodel_wrap
 days
 de_jure_drift_disabled
+debug_color
 debug_only
 dec_button
 decal
@@ -416,7 +425,9 @@ default_format
 default_group
 default_lesson_step_delay
 default_option
+default_rank
 default_start_date
+default_subject_type
 default_task
 default_type
 default_value
@@ -450,6 +461,7 @@ desc
 description
 destroy_if_invalid_heir
 destroy_on_succession
+devastation_mask_strength
 diarch_interaction
 diarch_modifier
 difficulty
@@ -537,6 +549,7 @@ entity_constructed
 entity_not_constructed
 entity_under_construction
 entries
+entry
 environment
 era
 ethnicities
@@ -669,8 +682,12 @@ gui_window
 hair
 happened
 has_dynamic_texture
+has_economy
+has_events
 has_junior_participant
 has_max_level
+has_military
+has_politics
 has_valid_target
 has_valid_target_showing_failures_only
 hbox
@@ -761,6 +778,7 @@ insert
 instance
 instant_switch
 institution
+institution_modifier
 integer_range
 intents
 interest_group_leader_usage
@@ -800,6 +818,7 @@ is_bad_for
 is_basic_order_type
 is_breaking_hostile
 is_character_valid
+is_colonizable
 is_colonization_rights
 is_county_valid
 is_criminal
@@ -809,11 +828,13 @@ is_decaying
 is_default
 is_desert
 is_enabled
+is_exclusive
 is_general
 is_good_for
 is_grand_activity
 is_graphical_background
 is_great_holy_war
+is_hidden_when_unavailable
 is_highlighted
 is_hostile
 is_humiliation
@@ -821,10 +842,12 @@ is_initiator
 is_jungle
 is_location_valid
 is_main_tag_only
+is_named_from_capital
 is_pagan
 is_playable
 is_predefined
 is_prefix
+is_repeatable
 is_riverside
 is_secret
 is_shown
@@ -836,6 +859,7 @@ is_sponsor_valid
 is_target_breaking_hostile
 is_travel_related
 is_two_sided_pact
+is_unrecognized
 is_valid
 is_valid_showing_failures_only
 is_valid_tax_collector
@@ -845,6 +869,7 @@ join_overlord_wars
 key
 knight_army_modifier
 knight_modifier
+label
 land_usage
 landless
 landless_attacker_needs_armies
@@ -906,7 +931,9 @@ male_only
 male_ruler
 mandate
 manpower_max
+map_color
 map_object
+mapmode
 margin
 margin_bottom
 margin_left
@@ -919,6 +946,7 @@ mask
 masterwork
 mat_grf_name_chance
 mat_grm_name_chance
+materials
 max
 max_ai_diplo_distance_to_title
 max_approval
@@ -932,6 +960,7 @@ max_garrison
 max_guests
 max_hiring_rate
 max_influence_spending_fraction
+max_manpower
 max_route_deviation_mult
 max_size
 max_sub_regiments
@@ -957,6 +986,7 @@ min_approval
 min_contribution_label
 min_hiring_rate
 min_levies
+min_raise_to_hire
 min_tax
 min_value
 min_width
@@ -1194,6 +1224,7 @@ participants
 pass_cost
 pat_grf_name_chance
 pat_grm_name_chance
+path
 patronym_prefix_female
 patronym_prefix_female_vowel
 patronym_prefix_male
@@ -1204,6 +1235,7 @@ pattern
 pause_factor
 pause_game
 pause_on_receive
+pays_taxes
 pdxmesh
 percent
 perform_religious_reformation
@@ -1223,6 +1255,7 @@ political_engagement_base
 political_engagement_literacy_factor
 political_engagement_mult
 political_strength
+pollution_mask_strength
 pool_character_config
 poor
 pop_potential
@@ -1263,6 +1296,7 @@ pre_answer_yes_breakdown_key
 pre_answer_yes_key
 pre_auto_accept
 preferred_religions
+preferred_terrain
 prefix
 prestige_factor
 prestige_opinion_override
@@ -1276,6 +1310,7 @@ priority
 prison
 production_method
 production_method_groups
+production_methods
 progress
 progress_chance
 progressbar
@@ -1334,6 +1369,7 @@ remove_default_outfit
 remove_existing_councillor
 renown
 repeat_sound_effect
+replace
 replace_with
 replacement_modifiers
 replaces_company
@@ -1367,9 +1403,11 @@ revoke_cost
 revoke_title_reason
 right_icon
 right_portrait
+risk
 rotate_uv
 rotation
 round
+round_to
 royal_court
 ruler_child
 ruler_designer_cost
@@ -1450,6 +1488,7 @@ show_effects_in_notification
 show_in_conclusion
 show_in_list
 show_in_outliner
+show_interaction_text_on_click
 show_requirements
 show_special_title
 shown_in_encyclopedia
@@ -1504,6 +1543,7 @@ strong
 struggle_type
 style
 subject
+subject_canton
 subject_relation
 subject_type
 subservient_to_overlord
@@ -1517,6 +1557,7 @@ supply_limit_mult_for_others
 sway_maneuvers_cost
 swing
 sync_inheritance_with
+taboos
 tag
 tags
 take_baronies
@@ -1544,6 +1585,7 @@ technology
 template
 terrain_bonus
 terrain_manipulator
+terrain_mask
 terrible
 text
 text_selectable
@@ -1572,6 +1614,7 @@ title_division
 title_grant_target
 title_text
 titles
+toggle_map_object_layers
 tooltip
 tooltip_enabled
 tooltip_horizontalbehavior
@@ -1666,6 +1709,7 @@ use_secrecy
 uses_agents
 uses_opinion_of_liege
 uses_plural_naming
+uses_prestige
 uses_resistance
 using
 valid
