@@ -224,7 +224,7 @@
 			"name": "markup.bold support.constant.parameter.rhs.paradox.ck3"
 		},
 		"prefix-scopes": {
-			"begin": "(?=[\\w:|$]+\\.)",
+			"begin": "(?<!/)\\b(?=[\\w:|$]+\\.)",
 			"end": "\\.",
 			"endCaptures": { "0": { "name": "punctuation.dot.paradox" } },
 			"contentName": "meta.scope.paradox",
