@@ -173,7 +173,7 @@
 					"name": "markup.bold keyword.control.flow.paradox"
 				},
 				{
-					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as)\\b",
+					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as|save_temporary_value_as)\\b",
 					"name": "markup.bold variable.language.multi.paradox"
 				},
 				{ "include": "#parameters-lhs" },
