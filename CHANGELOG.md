@@ -2,7 +2,7 @@
 
 ## Version 1.2.1, 2024-03-02
 
-## Enhancements
+### Enhancements
 
 - Make scopes prior than parameters
 
