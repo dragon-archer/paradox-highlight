@@ -26,6 +26,9 @@
 				{ "include": "#event_targets" },
 				{ "include": "#scopes" }
 			]
+		},
+		"L:meta.id.paradox.rhs.non-comparable.non-prefixed, L:meta.id.paradox.non-comparable.non-prefixed": {
+			"patterns": [ { "include": "#scopes" } ]
 		}
 	},
 	"patterns": [
