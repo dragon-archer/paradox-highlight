@@ -10,6 +10,7 @@ activity_host
 actor_de_jure_titles
 actor_domain_titles
 actor_domain_titles_including_leases
+add
 admiral
 advanced_activities
 agitator
@@ -35,6 +36,7 @@ character_event
 checkbutton
 checkbuttongfx
 children
+city
 coatofarmsbuttongfx
 combat
 combat_side
@@ -138,6 +140,7 @@ male_preference
 martial_custom
 masterwork
 middle
+mine
 minor
 mirror
 most_productive
@@ -176,6 +179,7 @@ player_state
 player_trade_route
 politician
 poor
+port
 positive
 preferred
 primary_culture
@@ -262,4 +266,5 @@ widget
 window
 windowgfx
 windows_layer
+wood
 youngest

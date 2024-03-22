@@ -2,6 +2,7 @@ accept_break_score
 accept_effect
 accept_score
 accept_text
+accessory
 accolade_categories
 accolade_parameters
 activate_production_methods
@@ -132,6 +133,7 @@ attacker_ticking_warscore_delay
 attacker_wargoal_percentage
 attackers
 attainable
+attitude
 attracted_to_owner
 audio_parameter
 auto_accept
@@ -140,6 +142,7 @@ auto_place_buildings
 auto_selection_weight
 autoresize
 autoresizescrollarea
+available_for_interest_group
 average
 background
 banish_reason
@@ -189,6 +192,7 @@ buy_cost
 cadet_dynasty_names
 calls
 camera
+can_always_hire
 can_be_activity_guest
 can_be_auto_selected
 can_be_blocked
@@ -202,6 +206,7 @@ can_be_picked_title
 can_be_turned_off
 can_be_used_in_sway_offers
 can_benefit
+can_build_conscript
 can_build_government
 can_build_private
 can_change_once
@@ -216,6 +221,7 @@ can_county_create
 can_county_join
 can_create
 can_create_on_partition
+can_deactivate
 can_destroy
 can_enact
 can_equip
@@ -307,6 +313,7 @@ clothing_gfx
 coa
 coa_designer_blank
 coa_gfx
+coa_with_overlord_canton
 coat_of_arms
 coat_of_arms_template_lists
 collective_noun
@@ -329,6 +336,7 @@ common_interaction
 common_last_names
 common_parameters
 compare_modifier
+comparison_law
 compatibility
 complete
 completed
@@ -336,6 +344,7 @@ conditions
 config
 confirm_text
 construction_time
+consumption_mult
 consumption_tax_cost
 container
 content_source
@@ -488,6 +497,7 @@ dlc_fallback_pillar
 dlc_feature
 dlc_tradition
 dna
+dna_modifiers
 dockable_button
 doctrine
 doctrine_background_icon
@@ -521,6 +531,7 @@ editbox
 editor_textbox
 editor_textinput
 education
+education_access
 effect
 effect_desc
 effect_group
@@ -537,6 +548,7 @@ enables_inbred
 end
 end_date
 end_interaction
+endangle
 ending_decisions
 enemy_ally_province
 enemy_capital_province
@@ -598,6 +610,7 @@ fired_pops_become_radical
 first
 first_name
 first_neg
+first_not
 first_past
 first_state_trigger
 first_valid
@@ -607,6 +620,7 @@ fixed_price
 fixed_range
 fixedgridbox
 flag
+flag_definition
 flags
 flavor
 flavored_company
@@ -639,6 +653,7 @@ garrison_reinforcement_factor
 gender
 gender_female_chance
 gender_law
+gene
 genes
 genetic
 genetic_constraint_all
@@ -710,6 +725,7 @@ highlightchecked
 highlighted_option
 highlighted_reason
 hired_stack_size
+hiring_rate
 historical
 history_id
 history_loc_override
@@ -743,6 +759,7 @@ ignore_soft_block
 ignore_stateregion_max_level
 ignore_titularity_for_title_weighting
 ignoreinvisible
+ignores_employment_proportionality
 ignores_pending_interaction_block
 ignores_productivity_when_hiring
 illustration
@@ -765,6 +782,7 @@ increased_dynasty_prestige_marriage_mult
 index
 indicator_position_angle
 indicator_position_angle_for_enemy
+infamy_affects_maintenance
 infrastructure_usage_per_level
 inherit
 inherit_chance
@@ -842,6 +860,7 @@ is_initiator
 is_jungle
 is_location_valid
 is_main_tag_only
+is_military
 is_named_from_capital
 is_pagan
 is_playable
@@ -855,6 +874,7 @@ is_shown_character
 is_shown_when_inactive
 is_shunned
 is_single_location
+is_slave
 is_sponsor_valid
 is_target_breaking_hostile
 is_travel_related
@@ -866,6 +886,8 @@ is_valid_tax_collector
 is_vassal_valid
 item
 join_overlord_wars
+join_weight
+junior_accept_score
 key
 knight_army_modifier
 knight_modifier
@@ -964,6 +986,7 @@ max_manpower
 max_route_deviation_mult
 max_size
 max_sub_regiments
+max_supply_share
 max_width
 maxcharacters
 maxhorizontalslots
@@ -987,6 +1010,7 @@ min_contribution_label
 min_hiring_rate
 min_levies
 min_raise_to_hire
+min_supply_share
 min_tax
 min_value
 min_width
@@ -1035,6 +1059,7 @@ name_lists
 names
 natural
 natural_death_trigger
+naval
 naval_entity
 naval_exit_id
 needed_experience
@@ -1050,6 +1075,7 @@ non_aggression_pact
 non_interference
 none_not
 normal
+notification
 notification_text
 notification_type
 noun
@@ -1344,6 +1370,7 @@ random_on_actions
 random_traits
 random_traits_list
 random_valid
+range
 rank
 ranks
 raw_text
@@ -1354,6 +1381,7 @@ recipient_gets_income_transfer
 recipient_pays_maintenance
 recipient_recieve_cooldown
 recommended
+recruits_combat_unit
 redirect
 reference
 regiments_prestige_as_gold
@@ -1362,6 +1390,7 @@ regions
 relation
 relation_aliases
 relations_improvement_max
+relations_improvement_min
 relations_progress_per_day
 religious
 religious_acceptance_rule
@@ -1379,6 +1408,7 @@ required_county_holdings
 required_features
 required_input_goods
 required_months_in_court
+required_num_states
 required_states_fraction
 required_techs_for_colonization
 requires_approval
@@ -1393,14 +1423,17 @@ reserved_female_names
 reserved_male_names
 reserves
 reset
+residence_points_per_level
 resistance_per_skill_point
 resizable
 resizeparent
 rest
 restart_on_finish
 restrictparent_min
+reverse_pact
 revoke_cost
 revoke_title_reason
+revolution_state_weight
 right_icon
 right_portrait
 risk
@@ -1530,6 +1563,7 @@ start_murders
 start_phase
 start_quality_of_life
 start_sound
+startangle
 starts_enabled
 state
 state_modifiers
@@ -1549,6 +1583,7 @@ subject_type
 subservient_to_overlord
 subsidized
 subsistence_building
+subsistence_income
 subtract
 succession
 suffix
@@ -1582,6 +1617,7 @@ tax_contribution_postfix
 tax_factor
 tax_slot_vassal_limit
 technology
+technology_cost
 template
 terrain_bonus
 terrain_manipulator
@@ -1664,6 +1700,7 @@ ui_predicted_cost
 ui_skin
 unclamped_contribution_label
 unemployment
+unemployment_wealth
 uninvolved_county_modifier
 uninvolved_parameters
 unique
@@ -1716,6 +1753,7 @@ valid
 valid_agent
 valid_character
 valid_county
+valid_for_country
 valid_holdings
 valid_overlord_country_types
 valid_overlord_ranks
@@ -1766,6 +1804,7 @@ widgetanchor
 widgets
 width
 will_break
+will_propose
 window
 window_characters
 window_file
@@ -1776,6 +1815,7 @@ women_can_have_consorts
 women_can_have_multiple_spouses
 wood
 workforce_scaled
+working_adult_ratio
 xp_per_level
 year
 years
