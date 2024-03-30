@@ -10,6 +10,8 @@ add_civil_war_progress
 add_claim
 add_commander_rank
 add_company
+add_cultural_community
+add_cultural_community_in_state
 add_cultural_obsession
 add_culture_standard_of_living_modifier
 add_declared_interest
@@ -419,6 +421,7 @@ teleport_to_front
 transfer_character
 transfer_to_formation
 trigger_event
+try_form_government_with
 unset_available_for_autonomous_investment
 update_party_support
 validate_subsidies

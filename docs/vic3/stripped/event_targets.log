@@ -40,7 +40,6 @@
 @num_alliances_and_defensive_pacts_with_allies
 @num_alliances_and_defensive_pacts_with_rivals
 @num_defending_battalions
-@num_enemy_units
 @num_mutual_trade_route_levels_with_country
 @num_pending_events
 @num_shared_rivals
@@ -52,6 +51,7 @@
 @region_state
 @rel
 @relations
+@relations_change_rate
 @relations_threshold
 @s
 @scope
@@ -93,6 +93,7 @@ country
 country_definition
 credit
 culture
+current_hq
 currently_active_law_in_group
 currently_enacting_law
 defender_side
@@ -115,6 +116,7 @@ government_size
 heir
 highest_ranked_commander
 home_country
+home_hq
 ideology
 importer
 income
@@ -136,6 +138,7 @@ manpower
 market
 market_capital
 mass_migration_culture
+migration_pull
 mobilization
 momentum
 morale
@@ -153,7 +156,6 @@ num_alliances
 num_battalions
 num_characters
 num_colony_projects
-num_commanded_units
 num_commanderless_units
 num_commanders
 num_convoys_available
@@ -184,7 +186,6 @@ num_trade_routes
 num_treaty_ports
 num_unincorporated_states
 num_units
-num_units_not_in_battle
 num_units_share
 offense
 opposing_commander
@@ -210,7 +211,6 @@ second_country
 slaves_role
 state
 state_region
-supply
 target
 target_market
 technology_being_researched

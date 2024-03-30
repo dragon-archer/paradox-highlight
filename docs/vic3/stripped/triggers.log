@@ -72,13 +72,10 @@ approaching_bureaucracy_shortage
 arable_land
 arable_land_country
 army_mobilization_option_fraction
-army_reserves
 authority
 available_jobs
 average_country_infrastructure
 average_incorporated_country_infrastructure
-battalion_manpower
-battle_side_pm_usage
 building_has_goods_shortage
 bureaucracy
 calc_true_if
@@ -105,7 +102,6 @@ character_supports_political_movement
 check_area
 civil_war_progress
 commander_is_available
-commander_pm_usage
 commander_rank
 construction_queue_duration
 construction_queue_government_duration
@@ -125,12 +121,12 @@ country_has_primary_culture
 country_has_state_religion
 country_navy_unit_type_fraction
 country_or_subject_owns_entire_state_region
-country_pm_usage
 country_rank
 country_tier
 country_turmoil
 culture_accepted
-culture_can_have_mass_migration_to
+culture_can_have_mass_migration_to_country
+culture_has_community_in_state
 culture_is_discriminated_in
 culture_percent_country
 culture_percent_state
@@ -141,7 +137,6 @@ day_value
 daynight_value
 debug_log_details
 devastation
-diplomatic_play_pm_usage
 earnings
 election_momentum
 empty_agitator_slots
@@ -157,11 +152,9 @@ escalation
 exists
 expanding_institution
 experience_level
-flotilla_manpower
 formation_army_unit_type_fraction
 formation_navy_unit_type_fraction
 free_arable_land
-front_side_pm_usage
 game_date
 global_country_ranking
 global_population
@@ -191,6 +184,7 @@ has_consumption_tax
 has_converting_pops
 has_convoys_being_sunk
 has_cosmetic_dlc
+has_cultural_community
 has_cultural_obsession
 has_culture
 has_culture_graphics
@@ -401,7 +395,6 @@ is_primary_culture_of
 is_production_method_active
 is_progressing
 is_province_land
-is_repairing
 is_researching_technology
 is_researching_technology_category
 is_revolutionary
@@ -434,7 +427,6 @@ is_taxing_goods
 is_trade_route_active
 is_trade_route_productive
 is_tradeable
-is_traveling
 is_treaty_port
 is_tutorial_active
 is_tutorial_lesson_active
@@ -480,12 +472,12 @@ month
 most_powerful_strata
 most_prominent_revolting_interest_group
 naval_power_projection
-navy_reserves
 night_value
 num_casualties
 num_country_casualties
 num_country_dead
 num_country_wounded
+num_cultural_communities
 num_dead
 num_declared_interests
 num_mobilized_units_in_theater
@@ -548,6 +540,7 @@ state_has_building_group_levels
 state_has_building_levels
 state_has_building_type_levels
 state_has_goods_shortage
+state_is_eligible_as_mass_migration_target
 state_population
 state_unemployment_rate
 strata
@@ -558,7 +551,6 @@ tax_capacity
 tax_capacity_usage
 tax_level
 tax_level_value
-total_manpower
 total_population
 total_population_including_subjects
 total_population_including_subjects_share
