@@ -1,5 +1,12 @@
 # Paradox Highlight Changelog
 
+## Version 1.3.0, 2024-03-30
+
+### Enhancements
+
+- Update `Victoria 3` to version 1.6.2 (Blackcurrant)
+- Add more `Victoria 3` parameters
+
 ## Version 1.2.2, 2024-03-22
 
 ### Enhancements
