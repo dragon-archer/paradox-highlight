@@ -446,10 +446,6 @@ scope:country = {
 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
-## army_reserves
-Compare the amount of Army ReservesTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
 ## assert_if
 Conditionally cause an assert during run time  
 assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string  
@@ -478,17 +474,6 @@ average_country_infrastructure = 3Traits: <, <=, =, !=, >, >=
 Check average infrastructure in incorporated states owned by the scope country  
 average_incorporated_country_infrastructure = 3Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
-
-## battalion_manpower
-Compares the current total manpower of a country's Battalions  
-battalion_manpower > 15000Traits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
-## battle_side_pm_usage
-Checks how the ratio of Combat Units on the scoped Battle, on the target country's side, with the specified Production Method compares to the value  
-battle_side_pm_usage = { target = X production_method = Y value <comparator> Z}  
-where X = country scope and Y = production method key and Z = value to compare toTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: battle  
 
 ## building_has_goods_shortage
 Check if building has a shortage of any of its inputs  
@@ -627,12 +612,6 @@ Check if a commander is not busy
 commander_is_available = boolTraits: yes/no   
 **Supported Scopes**: character  
 
-## commander_pm_usage
-Checks how the ratio of Combat Units on the scoped Commander, on the target country's side, with the specified Production Method compares to the value  
-commander_pm_usage = { target = X production_method = Y value <comparator> Z}  
-where X = country scope and Y = production method key and Z = value to compare toTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: character  
-
 ## commander_rank
 Compares the commanders rank  
 commander_rank > 2Traits: <, <=, =, !=, >, >=  
@@ -741,12 +720,6 @@ Checks whether the scoped country or any of its subjects owns the entire specifi
 country_or_subject_owns_entire_state_region = key  
 **Supported Scopes**: country  
 
-## country_pm_usage
-Checks how the ratio of Combat Units (of the same type) on the scoped Country with the specified Production Method compares to the value  
-country_pm_usage = { target = X production_method = Y value <comparator> Z}  
-where X = country scope and Y = production method key and Z = value to compare toTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
 ## country_rank
 Compares a Country's Power Ranking  
 country_rank < rank_value:major_powerTraits: <, <=, =, !=, >, >=  
@@ -767,11 +740,16 @@ Checks if pop's culture is accepted
 culture_accepted = boolTraits: yes/no   
 **Supported Scopes**: pop  
 
-## culture_can_have_mass_migration_to
+## culture_can_have_mass_migration_to_country
 Checks if the scoped culture can have mass migration to target country  
-can_have_mass_migration_to = c:countryTraits: country scope  
+can_have_mass_migration_to_country = c:countryTraits: country scope  
 **Supported Scopes**: culture  
 **Supported Targets**: country  
+
+## culture_has_community_in_state
+Checks if the scoped culture has a cultural community in a state.  
+culture_has_community_in_state = <state>  
+**Supported Scopes**: culture  
 
 ## culture_is_discriminated_in
 Checks if a culture is discriminated against within the scope country  
@@ -855,12 +833,6 @@ Compares the devastation of a given state
 devastation > 5Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
 
-## diplomatic_play_pm_usage
-Checks how the ratio of Combat Units (of the same type) on the scoped Diplomatic Play, on the target country's side, with the specified Production Method compares to the value  
-diplomatic_play_pm_usage = { target = X production_method = Y value <comparator> Z}  
-where X = country scope and Y = production method key and Z = value to compare toTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: diplomatic_play  
-
 ## earnings
 Compare a building's current annual earnings per employee  
 earnings >= 10Traits: <, <=, =, !=, >, >=  
@@ -931,11 +903,6 @@ Compares the character experience level
 experience_level > 1Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: character  
 
-## flotilla_manpower
-Compares the current total manpower of a country's Flotillas  
-flotilla_manpower > 1000Traits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
 ## formation_army_unit_type_fraction
 Checks that a formation has a certain percentage of a specific army unit type  
 scope:example_formation = {  
@@ -960,12 +927,6 @@ scope:example_formation = {
 Check free arable land in state  
 free_arable_land > 0Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
-
-## front_side_pm_usage
-Checks how the ratio of Combat Units on the scoped Front, on the target country's side, with the specified Production Method compares to the value  
-front_side_pm_usage = { target = X production_method = Y value <comparator> Z}  
-where X = country scope and Y = production method key and Z = value to compare toTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: front  
 
 ## game_date
 Compare to current game date  
@@ -1112,6 +1073,11 @@ Check if the country has convoys being sunk through convoy raidingTraits: yes/no
 ## has_cosmetic_dlc
 Does the client have this cosmetic DLCAn interface trigger, can only be used in specific places  
 **Supported Scopes**: none/all  
+
+## has_cultural_community
+Checks if a culture has a cultural community in the scoped state.  
+has_cultural_community = <culture>  
+**Supported Scopes**: state  
 
 ## has_cultural_obsession
 Checks if a culture has a certain goods as obsession  
@@ -1688,7 +1654,7 @@ investment_pool_net_income > 1000Traits: <, <=, =, !=, >, >=
 ## is_active
 Checks if a naval invasion is currently active (started or ongoing)  
 is_active = boolTraits: yes/no   
-**Supported Scopes**: color  
+**Supported Scopes**: naval_invasion  
 
 ## is_adjacent_to_country
 Checks if country in scope is adjacent to a target country  
@@ -2097,7 +2063,7 @@ is_monarch = boolTraits: yes/no
 ## is_naval_invasion_stalled_due_to_orders
 Checks if a naval invasion is stalled due to wrong admiral orders  
 is_naval_invasion_stalled = boolTraits: yes/no   
-**Supported Scopes**: color  
+**Supported Scopes**: naval_invasion  
 
 ## is_objective_completed
 Is the objective completed for the country in scope?  
@@ -2176,11 +2142,6 @@ is_progressing = yes/noTraits: yes/no
 ## is_province_land
 Check if the province is on landTraits: yes/no   
 **Supported Scopes**: province  
-
-## is_repairing
-Checks if an Admiral is unavailable and repairing after loosing a naval battle  
-is_repairing = boolTraits: yes/no   
-**Supported Scopes**: character  
 
 ## is_researching_technology
 Check if the country is actively researching a tech  
@@ -2351,11 +2312,6 @@ is_trade_route_productive = yes/noTraits: yes/no
 Check if a goods or market goods is tradeable  
 is_tradeable = yes/noTraits: yes/no   
 **Supported Scopes**: goods, market_goods  
-
-## is_traveling
-Checks if the commander is traveling  
-is_traveling = boolTraits: yes/no   
-**Supported Scopes**: character  
 
 ## is_treaty_port
 Checks if the scoped state is a treaty port  
@@ -2597,10 +2553,6 @@ Compares a Country's naval_power_projection
  scope:example_country = { naval_power_projection < root.naval_power_projectionTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
-## navy_reserves
-Compare the amount of Navy ReservesTraits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
 ## night_value
 Night valueTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: none/all  
@@ -2632,6 +2584,11 @@ num_country_dead = { target = country value < 5000 }Traits: <, <=, =, !=, >, >=
 Checks the number of wounded for the target country in the scoped war  
 num_country_wounded = { target = country value < 5000 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: war  
+
+## num_cultural_communities
+Check cultural communities in state  
+num_cultural_communities > 5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: state  
 
 ## num_dead
 Checks the number of total dead in the scoped war  
@@ -2989,6 +2946,11 @@ Check if state has a shortage on any of its building inputs
 state_has_goods_shortage = yes/noTraits: yes/no   
 **Supported Scopes**: state  
 
+## state_is_eligible_as_mass_migration_target
+Check if state can receive a mass migration at all.  
+any_state = { limit = { state_is_eligible_as_mass_migration_target = yes } }Traits: yes/no   
+**Supported Scopes**: state  
+
 ## state_population
 Checks the total population of the scoped state  
 state_population <= 250000Traits: <, <=, =, !=, >, >=  
@@ -3047,11 +3009,6 @@ tax_level = <level>Traits: <, <=, =, !=, >, >=
 ## tax_level_value
 Compares the overall tax level integer value of scoped country  
 income_tax_level_value = <level>Traits: <, <=, =, !=, >, >=  
-**Supported Scopes**: country  
-
-## total_manpower
-Compares the current total manpower of a country's combat units  
-total_manpower > 25000Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
 ## total_population

@@ -62,6 +62,18 @@ add_company = company_type:key
 **Supported Scopes**: country  
 **Supported Targets**: company_type  
 
+## add_cultural_community
+Adds a cultural community for the target culture in the scoped state.  
+ scope:some_state = { add_cultural_community = cu:zulu }  
+**Supported Scopes**: state  
+**Supported Targets**: culture  
+
+## add_cultural_community_in_state
+Adds a cultural community for the scoped culture in the target state.  
+ cu:zulu = { add_cultural_community_in_state = scope:some_state }  
+**Supported Scopes**: culture  
+**Supported Targets**: state  
+
 ## add_cultural_obsession
 Adds a new obsession to the culture in scope  
 add_cultural_obsession = X  
@@ -3102,6 +3114,15 @@ trigger_event = X
 trigger_event = { id = X days/weeks/months/years = Y }  
 Where X is an event ID and Y is an integer to delay the event by  
 **Supported Scopes**: none/all  
+
+## try_form_government_with
+ Tries to form a new govt with provided IGs, If not possible with legitimacy provided will try and add as many IGs into the govt as possible  
+ try_form_government_with = {  
+	value = 30  
+	interest_group_type = ig_armed_forces  
+	interest_group_type = ig_devout  
+	 interest_group_type = ig_landowners}  
+**Supported Scopes**: country  
 
 ## unset_available_for_autonomous_investment
 Sets a building type as unavailable for autonomous investment in the current scoped State  
