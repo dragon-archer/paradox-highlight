@@ -19,6 +19,7 @@ alert
 all
 alphamultiply
 always_off
+angry
 angry_important_action
 any
 approve
@@ -63,6 +64,7 @@ drag_drop_icon
 duchy_capital
 dynasty
 dynasty_house
+economy
 editbox
 editboxgfx
 election
@@ -91,11 +93,13 @@ game_entity_view
 general
 good
 guests
+happy
 hbox
 hcenter
 head
 head_of_faith
 heritage
+high
 holder
 holder_close_family
 holder_close_or_extended_family
@@ -107,6 +111,7 @@ hooked_characters
 horizontal
 hsv
 hsv360
+human_rights
 hybridize_culture
 icon
 icongfx
@@ -130,15 +135,18 @@ legacy_of_persia
 legitimate
 liege
 list
+low
 lower_center_portrait
 lower_left_portrait
 lower_right_portrait
+loyal
 major
 male
 male_only
 male_preference
 martial_custom
 masterwork
+medium
 middle
 mine
 minor
@@ -153,6 +161,7 @@ neighbor_land_or_water
 neighbor_water
 neighboring_rulers
 neutral
+new_leader_on_reform_government
 nobaseline
 none
 oldest
@@ -181,6 +190,7 @@ politician
 poor
 port
 positive
+power_structure
 preferred
 primary_culture
 primary_war_enemies
@@ -250,6 +260,7 @@ transfer
 treaty_port
 tree
 tutorial
+unhappy
 unincorporated
 updownframedbuttongfx
 urban
@@ -257,7 +268,12 @@ vassals
 vbox
 vcenter
 vertical
+very_high
+very_low
 videogfx
+wants_export
+wants_high_supply
+wants_to_have
 war_allies
 war_enemies
 wards_and_wardens

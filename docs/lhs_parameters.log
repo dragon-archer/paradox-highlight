@@ -1,3 +1,4 @@
+
 accept_break_score
 accept_effect
 accept_score
@@ -25,14 +26,17 @@ additional_involvement_trigger
 addrow
 adjacency
 adjective
+admiral_modifier
 adult
 affected_by_development
+affected_by_regime_change
 after
 after_creation
 agent_join_chance
 agent_join_threshold
 agent_leave_threshold
 agent_success_chance
+aggression
 agitator_modifier
 agitator_usage
 agitator_weight
@@ -122,6 +126,7 @@ artifact_rewards
 ask_to_end_string
 asset
 atlas
+attacker
 attacker_allies_inherit
 attacker_capital_gives_war_score
 attacker_combat_effects
@@ -145,11 +150,14 @@ autoresizescrollarea
 available_for_interest_group
 average
 background
+background_texture
+backing_down_always_ends_play
 banish_reason
 barbershop_data
 barony_valid
 base
 base_employer_modifier
+base_enactment_days
 base_secrecy
 base_success_chance
 base_xp_gain
@@ -164,6 +172,7 @@ blend_range
 blocked_by_diplomatic_status
 blockoverride
 body_part
+boolean
 both_parent_has_trait_inherit_chance
 boy
 break_effect
@@ -174,6 +183,7 @@ build_province_list
 buildable
 building_gfx
 building_group
+building_group_weights
 building_modifiers
 building_type
 building_types
@@ -280,6 +290,7 @@ chance
 chance_of_no_event
 chance_to_happen
 change
+change_allowed_trigger
 characer_dynasty_modifier
 character
 character_allow_create
@@ -441,6 +452,7 @@ default_task
 default_type
 default_value
 defend_wargoal_province
+defender
 defender_allies_inherit
 defender_capital_gives_war_score
 defender_combat_effects
@@ -476,6 +488,8 @@ diarch_modifier
 difficulty
 diffuse
 diplomatic_action
+diplomatic_play_boldness
+diplomatic_play_neutrality
 direction
 disable_non_aggression_pacts
 disableframe
@@ -545,6 +559,7 @@ enable_air_connection
 enable_switch_sides
 enabled
 enables_inbred
+enactment_approval_mult
 end
 end_date
 end_interaction
@@ -633,6 +648,7 @@ font
 fontcolor
 fontsize
 fontsize_min
+fonttintcolor
 force_notification
 force_pause_game
 forced_duration
@@ -654,6 +670,7 @@ gender
 gender_female_chance
 gender_law
 gene
+general_modifier
 genes
 genetic
 genetic_constraint_all
@@ -721,6 +738,7 @@ higher_autonomy_subject_type_alternatives
 highlight_own_realm
 highlight_portrait
 highlight_widget
+highlight_widget_dynamic_loc
 highlightchecked
 highlighted_option
 highlighted_reason
@@ -750,6 +768,7 @@ icon
 icon_small
 iconsize
 id
+ideological_opinion_effect_mult
 ideologies
 ig_leader
 ignore_effect
@@ -860,6 +879,7 @@ is_initiator
 is_jungle
 is_location_valid
 is_main_tag_only
+is_major_formation
 is_military
 is_named_from_capital
 is_pagan
@@ -876,7 +896,9 @@ is_shunned
 is_single_location
 is_slave
 is_sponsor_valid
+is_subsistence
 is_target_breaking_hostile
+is_trade_agreement
 is_travel_related
 is_two_sided_pact
 is_unrecognized
@@ -884,6 +906,7 @@ is_valid
 is_valid_showing_failures_only
 is_valid_tax_collector
 is_vassal_valid
+is_visible
 item
 join_overlord_wars
 join_weight
@@ -899,6 +922,7 @@ language
 last_name
 latest_usage_date
 law
+law_group_category
 layer
 layers
 layoutpolicy_horizontal
@@ -906,6 +930,7 @@ layoutpolicy_vertical
 leader_leaves
 leader_weight
 leaders_allowed_to_leave
+leadership_play
 lease_liege
 left_icon
 left_portrait
@@ -1197,6 +1222,8 @@ on_white_peace
 on_white_peace_desc
 on_yearly_pulse
 onclick
+onmousehierarchyenter
+onmousehierarchyleave
 onreturnpressed
 onrightclick
 ontextchanged
@@ -1238,6 +1265,7 @@ owner_modifier_description
 pact
 pagan_roots
 page
+panel_name
 papermap_textures_file
 parameter
 parameters
@@ -1340,6 +1368,7 @@ production_methods
 progress
 progress_chance
 progressbar
+progressive_movement_chance
 progressiveness
 prompt
 proportionality_limit
@@ -1372,6 +1401,7 @@ random_traits_list
 random_valid
 range
 rank
+rank_value
 ranks
 raw_text
 raw_tooltip
@@ -1380,6 +1410,7 @@ recipient
 recipient_gets_income_transfer
 recipient_pays_maintenance
 recipient_recieve_cooldown
+recklessness
 recommended
 recruits_combat_unit
 redirect
@@ -1387,6 +1418,7 @@ reference
 regiments_prestige_as_gold
 region
 regions
+regressive_movement_chance
 relation
 relation_aliases
 relations_improvement_max
@@ -1483,6 +1515,7 @@ second_state_trigger
 secondary_scopes_optional
 secret
 secret_goal
+secret_goal_scores
 selectable_in_lens
 selection_count
 selection_tooltip
@@ -1551,6 +1584,8 @@ special_interaction
 special_selection
 specular
 spriteborder
+spriteborder_bottom
+spriteborder_right
 spriteType
 spymaster_power_per_skill_point
 spymaster_resistance_per_skill_point
@@ -1592,6 +1627,7 @@ supply_limit_mult_for_others
 sway_maneuvers_cost
 swing
 sync_inheritance_with
+tab_name
 taboos
 tag
 tags
@@ -1698,9 +1734,12 @@ type_icon
 ugliness_portrait_extremity_shift
 ui_predicted_cost
 ui_skin
+unacceptable_infamy_level
 unclamped_contribution_label
+undesirable_infamy_level
 unemployment
 unemployment_wealth
+unification_play
 uninvolved_county_modifier
 uninvolved_parameters
 unique
@@ -1718,6 +1757,7 @@ unlocking_technologies
 unreformed
 unscaled
 update_effect
+update_loyalties
 upframe
 upgrades
 uphoverframe
@@ -1772,6 +1812,7 @@ vassal_modifier
 vbox
 very_high
 very_low
+victory
 video
 video_mask
 view
@@ -1785,9 +1826,11 @@ war_effects
 war_goal
 war_name
 war_name_base
+wargoal_maneuvers_fraction
 wargoal_province
 wargoal_weights
 warmonger
+wealth_distribution
 weekly_effect
 weeks
 weight
