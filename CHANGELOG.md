@@ -1,5 +1,11 @@
 # Paradox Highlight Changelog
 
+## Version 1.3.1, 2024-03-30
+
+### Bugfix
+
+- Fix empty capture
+
 ## Version 1.3.0, 2024-03-30
 
 ### Enhancements
