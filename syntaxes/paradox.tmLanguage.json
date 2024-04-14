@@ -49,7 +49,7 @@
 			"end": "\\s+",
 			"contentName": "meta.id.paradox.rhs.comparable",
 			"patterns": [
-				{ "include": "#date " },
+				{ "include": "#date" },
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-comparable-rhs" },
@@ -117,7 +117,7 @@
 			"end": "\\s+",
 			"contentName": "meta.id.paradox.rhs.non-comparable",
 			"patterns": [
-				{ "include": "#date " },
+				{ "include": "#date" },
 				{ "include": "#numeric" },
 				{ "include": "#prefix-scopes" },
 				{ "include": "#non-prefixable-non-comparable-rhs" },
