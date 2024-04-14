@@ -1,5 +1,15 @@
 # Paradox Highlight Changelog
 
+## Version 1.3.2, 2024-04-14
+
+### Bugfix
+
+- Fix date highlight
+
+### Enhancements
+
+- Add more `Victoria 3` parameters
+
 ## Version 1.3.1, 2024-03-30
 
 ### Bugfix
