@@ -8,3 +8,5 @@
 - Make some workable but illegal code legal
 - Add more pre-defined constant support
 - Improve namespace support
+- Allow LHS constants
+- Improve highlight for `#tooltippable;tooltip:xxx`
