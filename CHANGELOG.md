@@ -1,12 +1,19 @@
 # Paradox Highlight Changelog
 
+## Version 1.3.3, 2024-05-25
+
+### Enhancements
+
+- Improve localization argument highlight
+- Add more `Victoria 3` parameters
+
 ## Version 1.3.2, 2024-04-14
 
 ### Bugfix
 
 - Fix date highlight
 
-### Enhancements
+### Enhancement
 
 - Add more `Victoria 3` parameters
 
@@ -25,13 +32,13 @@
 
 ## Version 1.2.2, 2024-03-22
 
-### Enhancements
+### Enhancement
 
 - Add more `Victoria 3` parameters
 
 ## Version 1.2.1, 2024-03-02
 
-### Enhancements
+### Enhancement
 
 - Make scopes prior than parameters
 

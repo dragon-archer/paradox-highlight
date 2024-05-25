@@ -2,7 +2,7 @@
 	"name": "paradox-highlight",
 	"displayName": "Paradox Highlight",
 	"description": "Syntax highlight for Paradox Script Languages",
-	"version": "1.3.2",
+	"version": "1.3.3",
 	"publisher": "dragon-archer",
 	"icon": "icons/paradox.png",
 	"readme": "README.md",
