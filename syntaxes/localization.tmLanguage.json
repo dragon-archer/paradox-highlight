@@ -13,7 +13,7 @@
 	],
 	"repository": {
 		"argument": {
-			"match": "(\\|)[\\w=]+",
+			"match": "(\\|)[\\w=%+-]+",
 			"name": "markup.bold storage.modifier.paradox.loc",
 			"captures": { "1": { "name": "punctuation.definition.storage.modifier.begin.paradox.loc" } }
 		},
