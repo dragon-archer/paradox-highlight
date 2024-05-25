@@ -1,4 +1,6 @@
 _hide
+_mouse_enter
+_mouse_leave
 _mouse_press
 _mouse_release
 _show
@@ -26,6 +28,7 @@ any
 approve
 army
 artifact
+as_needed
 background
 bad
 belligerent
@@ -242,6 +245,10 @@ secondary_recipient_domain_titles
 secondary_recipient_domain_titles_including_leases
 secret
 self
+show_above
+show_above_default
+show_below
+show_below_default
 shrinking
 single_heir
 skill

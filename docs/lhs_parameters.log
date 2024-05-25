@@ -330,6 +330,7 @@ coa
 coa_designer_blank
 coa_gfx
 coa_with_overlord_canton
+coastal
 coat_of_arms
 coat_of_arms_template_lists
 collective_noun
@@ -490,6 +491,7 @@ demand
 density_curve
 dependent_wage
 depletable_resource
+depleted_type
 desc
 description
 desired_tax_level
@@ -515,6 +517,7 @@ disallowing_laws
 discontent_progress
 discover_innovation
 discoverable_resource
+discovered_amount
 display
 display_mode
 divide
@@ -806,6 +809,7 @@ illustrious
 image
 immediate
 immortal
+impassable
 imprisonment_by_attacker_give_war_score
 imprisonment_by_defender_give_war_score
 imprisonment_reason
@@ -1150,6 +1154,7 @@ number_of_picks
 number_of_spouses
 obedient
 object
+objective_subgoal
 objectives
 obligation_levels
 obligation_value
@@ -1404,6 +1409,7 @@ primary_demand
 primary_heir_minimum_share
 primary_heritages
 primary_holding
+prime_land
 prioritized_mood
 priority
 prison
@@ -1507,6 +1513,7 @@ residence_points_per_level
 resistance_per_skill_point
 resizable
 resizeparent
+resource
 rest
 restart_on_finish
 restrictparent_min
@@ -1558,6 +1565,7 @@ scrollbar_vertical
 scrollbaralign_horizontal
 scrollbaralign_vertical
 scrollbarpolicy_horizontal
+scrollbarpolicy_vertical
 scrollwidget
 search_for_courtier
 second_perspective_description
@@ -1701,6 +1709,9 @@ target_titles
 target_top_liege_if_outside_realm
 target_type
 targeted_titles
+tariff_modifier_export_priority
+tariff_modifier_import_priority
+tariff_modifier_no_priority
 task_current_value
 task_max_value
 task_progress
@@ -1708,6 +1719,11 @@ task_type
 tax
 tax_contribution_postfix
 tax_factor
+tax_modifier_high
+tax_modifier_low
+tax_modifier_medium
+tax_modifier_very_high
+tax_modifier_very_low
 tax_slot_vassal_limit
 technology
 technology_cost
@@ -1798,6 +1814,7 @@ ui_skin
 unacceptable_infamy_level
 unclamped_contribution_label
 undesirable_infamy_level
+undiscovered_amount
 unemployment
 unemployment_wealth
 unification_play
