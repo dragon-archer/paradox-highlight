@@ -1,5 +1,11 @@
 # Paradox Highlight Changelog
 
+## Version 1.3.4, 2024-05-26
+
+### Bugfix
+
+- Fix localization quote highlight
+
 ## Version 1.3.3, 2024-05-25
 
 ### Enhancements
