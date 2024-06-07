@@ -1,3 +1,46 @@
+function getBaseIndent(line) {
+    const leadingWhitespace = line.match(/^(\s*)/);
+    const baseIndent = leadingWhitespace ? leadingWhitespace[0].length : 0;
+    return baseIndent;
+}
+
+function formatCK3(text, baseIndent) {
+    const lines = text.split('\n');
+    const formattedLines = [];
+    const indentSize = 4;  // Number of spaces for each indent level
+    let indentLevel = 0;
+    let increaseIndentNextLine = false;
+
+    lines.forEach((line, index) => {
+        const trimmedLine = line.trim();
+
+        // Adjust indent level based on the structure
+        if (increaseIndentNextLine) {
+            indentLevel++;
+            increaseIndentNextLine = false;
+        }
+        if (trimmedLine.endsWith('{')) {
+            increaseIndentNextLine = true;
+        }
+        
+        // For lines that are just closing curly brackets, reduce indent level first
+        if (trimmedLine === '}') {
+            indentLevel = Math.max(indentLevel - 1, 0);
+        }
+
+        // Calculate the correct indentation for each line
+        let currentIndent = '';
+        if (index === 0) {
+            // Handle the first line separately to avoid modifying its indentation
+            formattedLines.push(trimmedLine);
+        } else {
+            currentIndent = ' '.repeat(baseIndent + (indentLevel * indentSize));
+            formattedLines.push(currentIndent + trimmedLine);
+        }
+    });
+
+    return formattedLines.join('\n');
+}
 const vscode = require('vscode');
 
 /**
@@ -19,7 +62,8 @@ function activate(context) {
             document.positionAt(document.getText().length)
         );
 
-        let formatted = formatCK3(document.getText());
+        let baseIndent = getBaseIndent(document.lineAt(range.start.line).text);
+        let formatted = formatCK3(document.getText(), baseIndent);
         editor.edit(editBuilder => {
             editBuilder.replace(range, formatted);
         });
@@ -30,8 +74,22 @@ function activate(context) {
     // Register the document formatting provider
     vscode.languages.registerDocumentFormattingEditProvider('ck3', {
         provideDocumentFormattingEdits(document) {
-            const formatted = formatCK3(document.getText());
-            return [vscode.TextEdit.replace(fullDocumentRange(document), formatted)];
+            console.log("Document formatting triggered");
+            const fullRange = fullDocumentRange(document);
+            const baseIndent = getBaseIndent(document.lineAt(fullRange.start.line).text);
+            const formatted = formatCK3(document.getText(), baseIndent);
+            return [vscode.TextEdit.replace(fullRange, formatted)];
+        }
+    });
+
+    // Register the document range formatting provider
+    vscode.languages.registerDocumentRangeFormattingEditProvider('ck3', {
+        provideDocumentRangeFormattingEdits(document, range) {
+            console.log("Range formatting triggered");
+            const text = document.getText(range);
+            const baseIndent = getBaseIndent(document.lineAt(range.start.line).text);
+            const formatted = formatCK3(text, baseIndent);
+            return [vscode.TextEdit.replace(range, formatted)];
         }
     });
 
@@ -39,33 +97,6 @@ function activate(context) {
         const start = new vscode.Position(0, 0);
         const end = new vscode.Position(document.lineCount - 1, document.lineAt(document.lineCount - 1).text.length);
         return new vscode.Range(start, end);
-    }
-
-    function formatCK3(text) {
-        const lines = text.split('\n');
-        const formattedLines = [];
-        let indentLevel = 0;
-        const indentSize = 4;  // Number of spaces for each indent level
-
-        lines.forEach(line => {
-            const trimmedLine = line.trim();
-
-            // Decrease indent level for closing braces
-            if (trimmedLine.startsWith('}')) {
-                indentLevel--;
-            }
-
-            // Add the formatted line with appropriate indentation
-            const indent = ' '.repeat(Math.max(0, indentLevel * indentSize));
-            formattedLines.push(indent + trimmedLine);
-
-            // Increase indent level for opening braces
-            if (trimmedLine.endsWith('{')) {
-                indentLevel++;
-            }
-        });
-
-        return formattedLines.join('\n');
     }
 }
 
@@ -75,3 +106,4 @@ module.exports = {
     activate,
     deactivate
 };
+
