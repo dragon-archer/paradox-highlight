@@ -1,134 +1,152 @@
 {
-	"name": "paradox-highlight",
-	"displayName": "Paradox Highlight",
-	"description": "Syntax highlight for Paradox Script Languages",
-	"version": "1.3.4",
-	"publisher": "dragon-archer",
-	"icon": "icons/paradox.png",
-	"readme": "README.md",
-	"author": {
-		"name": "Dragon Archer"
-	},
-	"license": "MIT",
-	"engines": {
-		"vscode": "^1.23.0"
-	},
-	"categories": [
-		"Programming Languages",
-		"Themes"
-	],
-	"keywords": [
-		"paradox",
-		"crusader kings"
-	],
-	"bugs": {
-		"url": "https://github.com/dragon-archer/paradox-highlight/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dragon-archer/paradox-highlight.git"
-	},
-	"homepage": "https://github.com/dragon-archer/paradox-highlight",
-	"qna": "https://github.com/dragon-archer/paradox-highlight/issues",
-	"contributes": {
-		"languages": [
-			{
-				"id": "ck3",
-				"aliases": [
-					"Crusader Kings III"
-				],
-				"extensions": [
-					".txt",
-					".gui",
-					".info"
-				],
-				"configuration": "./language-configuration.json",
-				"filenamePatterns": [
-					"**/Crusader Kings III/**/*.txt",
-					"**/Crusader Kings III/**/*.gui",
-					"**/Crusader Kings III/**/*.info",
-					"**/CK3/**/*.txt",
-					"**/CK3/**/*.gui",
-					"**/CK3/**/*.info"
-				],
-				"icon": {
-					"light": "./icons/ck3.png",
-					"dark": "./icons/ck3.png"
-				}
-			},
-			{
-				"id": "vic3",
-				"aliases": [
-					"Victoria 3"
-				],
-				"extensions": [
-					".txt",
-					".gui",
-					".info"
-				],
-				"configuration": "./language-configuration.json",
-				"filenamePatterns": [
-					"**/Victoria 3/**/*.txt",
-					"**/Victoria 3/**/*.gui",
-					"**/Victoria 3/**/*.info",
-					"**/VIC/**/*.txt",
-					"**/VIC/**/*.gui",
-					"**/VIC/**/*.info"
-				],
-				"icon": {
-					"light": "./icons/vic3.png",
-					"dark": "./icons/vic3.png"
-				}
-			},
-			{
-				"id": "paradox",
-				"aliases": [
-					"Paradox Script"
-				],
-				"extensions": [
-					".txt",
-					".gui",
-					".info"
-				],
-				"configuration": "./language-configuration.json",
-				"icon": {
-					"light": "./icons/paradox.png",
-					"dark": "./icons/paradox.png"
-				}
-			}
-		],
-		"grammars": [
-			{
-				"language": "ck3",
-				"scopeName": "source.paradox.ck3",
-				"path": "./syntaxes/ck3.tmLanguage.json"
-			},
-			{
-				"language": "vic3",
-				"scopeName": "source.paradox.vic3",
-				"path": "./syntaxes/vic3.tmLanguage.json"
-			},
-			{
-				"language": "paradox",
-				"scopeName": "source.paradox",
-				"path": "./syntaxes/paradox.tmLanguage.json"
-			},
-			{
-				"scopeName": "source.paradox.loc",
-				"injectTo": [
-					"source.paradox",
-					"source.yaml"
-				],
-				"path": "./syntaxes/localization.tmLanguage.json"
-			}
-		],
-		"themes": [
-			{
-				"id": "Paradox Dark",
-				"label": "Paradox Dark (Paradox Highlight)",
-				"uiTheme": "vs-dark",
-				"path": "./themes/paradox-dark.json"
-			}
-		]
-	}
+    "name": "paradox-highlight",
+    "displayName": "Paradox Highlight",
+    "description": "Syntax highlight for Paradox Script Languages",
+    "version": "1.3.4",
+    "publisher": "dragon-archer",
+    "icon": "icons/paradox.png",
+    "readme": "README.md",
+    "author": {
+        "name": "Dragon Archer"
+    },
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Themes"
+    ],
+    "keywords": [
+        "paradox",
+        "crusader kings"
+    ],
+    "bugs": {
+        "url": "https://github.com/dragon-archer/paradox-highlight/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dragon-archer/paradox-highlight.git"
+    },
+    "homepage": "https://github.com/dragon-archer/paradox-highlight",
+    "qna": "https://github.com/dragon-archer/paradox-highlight/issues",
+    "contributes": {
+        "languages": [
+            {
+                "id": "ck3",
+                "aliases": [
+                    "Crusader Kings III"
+                ],
+                "extensions": [
+                    ".txt",
+                    ".gui",
+                    ".info"
+                ],
+                "configuration": "./language-configuration.json",
+                "filenamePatterns": [
+                    "**/Crusader Kings III/**/*.txt",
+                    "**/Crusader Kings III/**/*.gui",
+                    "**/Crusader Kings III/**/*.info",
+                    "**/CK3/**/*.txt",
+                    "**/CK3/**/*.gui",
+                    "**/CK3/**/*.info"
+                ],
+                "icon": {
+                    "light": "./icons/ck3.png",
+                    "dark": "./icons/ck3.png"
+                }
+            },
+            {
+                "id": "vic3",
+                "aliases": [
+                    "Victoria 3"
+                ],
+                "extensions": [
+                    ".txt",
+                    ".gui",
+                    ".info"
+                ],
+                "configuration": "./language-configuration.json",
+                "filenamePatterns": [
+                    "**/Victoria 3/**/*.txt",
+                    "**/Victoria 3/**/*.gui",
+                    "**/Victoria 3/**/*.info",
+                    "**/VIC/**/*.txt",
+                    "**/VIC/**/*.gui",
+                    "**/VIC/**/*.info"
+                ],
+                "icon": {
+                    "light": "./icons/vic3.png",
+                    "dark": "./icons/vic3.png"
+                }
+            },
+            {
+                "id": "paradox",
+                "aliases": [
+                    "Paradox Script"
+                ],
+                "extensions": [
+                    ".txt",
+                    ".gui",
+                    ".info"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/paradox.png",
+                    "dark": "./icons/paradox.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ck3",
+                "scopeName": "source.paradox.ck3",
+                "path": "./syntaxes/ck3.tmLanguage.json"
+            },
+            {
+                "language": "vic3",
+                "scopeName": "source.paradox.vic3",
+                "path": "./syntaxes/vic3.tmLanguage.json"
+            },
+            {
+                "language": "paradox",
+                "scopeName": "source.paradox",
+                "path": "./syntaxes/paradox.tmLanguage.json"
+            },
+            {
+                "scopeName": "source.paradox.loc",
+                "injectTo": [
+                    "source.paradox",
+                    "source.yaml"
+                ],
+                "path": "./syntaxes/localization.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "id": "Paradox Dark",
+                "label": "Paradox Dark (Paradox Highlight)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/paradox-dark.json"
+            }
+        ],
+        "configurationDefaults": {
+            "[ck3]": {
+                "editor.tabSize": 4,
+                "editor.insertSpaces": true,
+                "editor.autoIndent": "full"
+            }
+        },
+        "commands": [
+            {
+                "command": "ck3-formatter.format",
+                "title": "Format CK3 Document"
+            }
+        ]
+    },
+    "activationEvents": [
+        "onLanguage:ck3",
+        "onCommand:ck3-formatter.format"
+    ],
+    "main": "./src/extension.js"
 }
