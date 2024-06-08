@@ -22,8 +22,9 @@ function formatPdx(text, baseIndent) {
 			indentLevel++;
 			increaseIndentNextLine = false;
 		}
-		// Opening curly bracket with optional comment
-		if (trimmedLine.match(/\{\s*(#.*)?$/)) {
+		// Opening curly bracket with optional comment except those inside comments
+		// TODO: Escape '#' inside strings
+		if (trimmedLine.match(/^[^#]*\{\s*(#.*)?$/)) {
 			increaseIndentNextLine = true;
 		}
 
@@ -35,7 +36,7 @@ function formatPdx(text, baseIndent) {
 
 		// Calculate the correct indentation for each line
 		let currentIndent = '';
-		if (index === 0) {
+		if (index === 0 || trimmedLine === '') {
 			// Handle the first line separately to avoid modifying its indentation
 			formattedLines.push(trimmedLine);
 		} else {
