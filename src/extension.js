@@ -57,10 +57,8 @@ function formatPdx(text, baseIndent) {
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	console.log('Congratulations, your extension "paradox-highlight" is now active!');
-
 	// Register the format command
-	let disposable = vscode.commands.registerCommand('ck3-formatter.format', function () {
+	let disposable = vscode.commands.registerCommand('paradox-highlight.format', function () {
 		let editor = vscode.window.activeTextEditor;
 		if (!editor) {
 			return;
@@ -83,7 +81,6 @@ function activate(context) {
 
 	let documentFormatter = {
 		provideDocumentFormattingEdits(document) {
-			console.log("Document formatting triggered");
 			const fullRange = fullDocumentRange(document);
 			const baseIndent = getBaseIndent(document.lineAt(fullRange.start.line).text);
 			const formatted = formatPdx(document.getText(), baseIndent);
@@ -93,7 +90,6 @@ function activate(context) {
 
 	let rangeFormatter = {
 		provideDocumentRangeFormattingEdits(document, range) {
-			console.log("Range formatting triggered");
 			const text = document.getText(range);
 			const baseIndent = getBaseIndent(document.lineAt(range.start.line).text);
 			const formatted = formatPdx(text, baseIndent);
