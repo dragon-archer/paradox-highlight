@@ -129,6 +129,19 @@
 				"uiTheme": "vs-dark",
 				"path": "./themes/paradox-dark.json"
 			}
+		],
+		"commands": [
+			{
+				"command": "paradox-highlight.format",
+				"title": "Format Paradox Scripts"
+			}
 		]
-	}
+	},
+	"activationEvents": [
+		"onCommand:paradox-highlight.format",
+		"onLanguage:ck3",
+		"onLanguage:vic3",
+		"onLanguage:paradox"
+	],
+	"main": "./src/extension.js"
 }
