@@ -1,3 +1,5 @@
+const vscode = require('vscode');
+
 function getBaseIndent(line) {
 	const leadingWhitespace = line.match(/^(\s*)/);
 	const baseIndent = leadingWhitespace ? leadingWhitespace[0].length : 0;
@@ -7,7 +9,8 @@ function getBaseIndent(line) {
 function formatPdx(text, baseIndent) {
 	const lines = text.split('\n');
 	const formattedLines = [];
-	const indentSize = 4;  // Number of spaces for each indent level
+	const indentSize = vscode.workspace.getConfiguration('editor').get('tabSize');
+	const insertSpaces = vscode.workspace.getConfiguration('editor').get('insertSpaces');
 	let indentLevel = 0;
 	let increaseIndentNextLine = false;
 
@@ -19,12 +22,14 @@ function formatPdx(text, baseIndent) {
 			indentLevel++;
 			increaseIndentNextLine = false;
 		}
-		if (trimmedLine.endsWith('{')) {
+		// Opening curly bracket with optional comment
+		if (trimmedLine.match(/\{\s*(#.*)?$/)) {
 			increaseIndentNextLine = true;
 		}
 
-		// For lines that are just closing curly brackets, reduce indent level first
-		if (trimmedLine === '}') {
+		// Closing curly bracket with optional comment
+		// TODO: Check for paired curly brackets instead of forcing to start with '}'
+		if (trimmedLine.match(/^\}\s*(#.*)?/)) {
 			indentLevel = Math.max(indentLevel - 1, 0);
 		}
 
@@ -34,14 +39,18 @@ function formatPdx(text, baseIndent) {
 			// Handle the first line separately to avoid modifying its indentation
 			formattedLines.push(trimmedLine);
 		} else {
-			currentIndent = ' '.repeat(baseIndent + (indentLevel * indentSize));
+			if (insertSpaces) {
+				currentIndent = ' '.repeat(baseIndent + (indentLevel * indentSize));
+			}
+			else {
+				currentIndent = '\t'.repeat(baseIndent + indentLevel);
+			}
 			formattedLines.push(currentIndent + trimmedLine);
 		}
 	});
 
 	return formattedLines.join('\n');
 }
-const vscode = require('vscode');
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -108,10 +117,9 @@ function activate(context) {
 	}
 }
 
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
 	activate,
 	deactivate
 };
-
