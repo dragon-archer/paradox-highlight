@@ -319,6 +319,7 @@ checked
 child_inheritance_sex
 city
 city_gfx_interactions
+city_lights_color_index
 city_type
 claim_inheritance_blocker
 clear_collision_mesh_area
@@ -514,6 +515,7 @@ disabling_technologies
 disallow_random_traits
 disallowed_modifiers
 disallowing_laws
+disallowing_religions
 discontent_progress
 discover_innovation
 discoverable_resource
@@ -1482,6 +1484,7 @@ religious_acceptance_rule
 remove_default_outfit
 remove_existing_councillor
 renown
+reorder_on_mouse
 repeat_sound_effect
 replace
 replace_with
@@ -1665,6 +1668,7 @@ state_modifiers
 state_selection
 state_type
 state_value
+stateregion_max_level
 states
 status_desc
 steam_id
@@ -1741,12 +1745,14 @@ texture_override
 textured_emblem
 textures
 theme
+theme_provider
 third
 third_neg
 third_not
 third_past
 third_perspective_description
 threshold
+throughput_scaled
 ticking_war_score_targets_entire_realm
 tier
 tier_resistance
@@ -1831,6 +1837,7 @@ unlock_maa
 unlocking_global_technologies
 unlocking_laws
 unlocking_production_methods
+unlocking_religions
 unlocking_technologies
 unreformed
 unscaled

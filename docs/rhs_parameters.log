@@ -64,6 +64,7 @@ country_event
 courtiers
 de_jure_claim
 default
+development
 disapprove
 disinterested
 display
@@ -175,6 +176,7 @@ neighbor_land_or_water
 neighbor_water
 neighboring_rulers
 neutral
+never
 new_leader_on_reform_government
 nobaseline
 none
