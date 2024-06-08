@@ -1,5 +1,15 @@
 # Paradox Highlight Changelog
 
+## Version 1.4.0, 2024-06-08
+
+### New Feature
+
+- Add a formatter for Paradox Scripts
+
+### Enhancement
+
+- Add more `Victoria 3` parameters
+
 ## Version 1.3.4, 2024-05-26
 
 ### Bugfix

@@ -3,7 +3,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
 [![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
 
-Syntax highlight for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
+Syntax highlight & formatter for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
 
 ## Examples
 
@@ -23,6 +23,7 @@ Syntax highlight for Paradox Script Languages including `Crusader Kings III` and
 
 - Automatic check for builtin commands of Paradox Games
 - Colorful syntax highlight
+- Quick formatting Paradox Scripts
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
 - Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
 - Corresponding theme based on `Default Dark Modern` to improve preference
