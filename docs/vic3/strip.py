@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import re
 
 BASE_DIR = os.path.dirname(__file__)
 IN_DIR = os.path.join(BASE_DIR, "original/")
@@ -30,8 +31,8 @@ for filename in os.listdir(IN_DIR):
 				lines.append(line.split("## ")[1])
 	elif fin.endswith("modifiers.log"):
 		for line in text.split("\n"):
-			if line.startswith("Tag:"):
-				lines.append(line.split(": ")[1].split(", ")[0])
+			if re.match(r'^[a-zA-z_]+:$', line):
+				lines.append(line.split(":")[0])
 	elif fin.endswith("event_targets.log"):
 		for item in text.split("###"): # Group by seperator
 			if item.find("Wild") != -1:
