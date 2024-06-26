@@ -12,6 +12,7 @@
 @b
 @bt
 @c
+@catalyst_type
 @cd
 @company
 @company_type
@@ -24,6 +25,7 @@
 @get_ruler_for
 @global_var
 @i
+@identity
 @ideology
 @ig
 @ig_trait
@@ -32,6 +34,14 @@
 @institution
 @je
 @law_type
+@lobby_foreign_anti_clout
+@lobby_foreign_pro_clout
+@lobby_in_government_foreign_anti_clout
+@lobby_in_government_foreign_pro_clout
+@lobby_join_weight
+@lobby_type
+@lobby_war_opposition
+@lobby_war_support
 @local_var
 @mg
 @mobilization_option
@@ -45,7 +55,10 @@
 @num_shared_rivals
 @num_total_battalions
 @p
+@play_type
 @pop_type
+@principle
+@principle_group
 @py
 @rank_value
 @region_state
@@ -61,7 +74,6 @@
 @tension_threshold
 @unit_type
 @var
-active_diplomatic_play
 actor_market
 army_size
 army_size_including_conscripts
@@ -117,8 +129,11 @@ heir
 highest_ranked_commander
 home_country
 home_hq
+identity
 ideology
 importer
+imposed_law
+imposer_of_law
 income
 infamy
 initiator
@@ -139,6 +154,8 @@ market
 market_capital
 mass_migration_culture
 migration_pull
+military_expenses
+military_expenses_share
 mobilization
 momentum
 morale
@@ -169,6 +186,7 @@ num_import_trade_routes
 num_income_transfer_pacts
 num_incorporated_states
 num_interests
+num_mandates
 num_mobilized_battalions
 num_natural_interests
 num_obligations_earned
@@ -200,6 +218,9 @@ political_movement
 pop_weight_modifier_scale
 popularity
 population_below_expected_sol
+power_bloc
+power_bloc_leader
+power_struggle_contender
 prosperity
 province
 region

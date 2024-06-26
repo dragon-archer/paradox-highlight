@@ -47,6 +47,12 @@ Traits: yes/no
 all inside trigger must be true  
 **Supported Scopes**: none/all  
 
+## any_active_law
+Iterate through all active laws in a country  
+any_active_law = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: country  
+**Supported Targets**: law  
+
 ## any_active_party
 Iterate through all active political parties in a country  
 any_active_party = { <count=num/all> / <percent=fixed_point> <triggers> }  
@@ -108,11 +114,23 @@ any_country = { <count=num/all> / <percent=fixed_point> <triggers> }
 **Supported Scopes**: none/all  
 **Supported Targets**: country  
 
+## any_diplomatic_catalyst
+Iterate through all diplomatic catalysts in the recent memory of a country  
+any_diplomatic_catalyst = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: country  
+**Supported Targets**: diplomatic_catalyst  
+
 ## any_diplomatic_play
 Iterate through all diplomatic plays globally  
 any_diplomatic_play = { <count=num/all> / <percent=fixed_point> <triggers> }  
 **Supported Scopes**: none/all  
 **Supported Targets**: diplomatic_play  
+
+## any_diplomatically_relevant_country
+Iterate through all diplomatically relevant countries of a country scope  
+any_diplomatically_relevant_country = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## any_enemy_in_diplo_play
 Iterate through all enemies of scope country in all diplomatic plays (includes wars)  
@@ -163,6 +181,12 @@ any_law = { <count=num/all> / <percent=fixed_point> <triggers> }
 **Supported Scopes**: country  
 **Supported Targets**: law  
 
+## any_lobby_member
+Iterate through all interest group members of a lobby  
+any_lobby_member = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## any_market
 Iterate through all markets globally  
 any_market = { <count=num/all> / <percent=fixed_point> <triggers> }  
@@ -206,6 +230,12 @@ any_participant = { <count=num/all> / <percent=fixed_point> <triggers> }
 **Supported Scopes**: diplomatic_pact  
 **Supported Targets**: country  
 
+## any_political_lobby
+Iterate through all political lobbies in a country or interest group  
+any_political_lobby = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: country, interest_group  
+**Supported Targets**: political_lobby  
+
 ## any_political_movement
 Iterate through all political movements in a country  
 any_political_movement = { <count=num/all> / <percent=fixed_point> <triggers> }  
@@ -217,6 +247,18 @@ Iterate through all potential political parties in a country
 any_potential_party = { <count=num/all> / <percent=fixed_point> <triggers> }  
 **Supported Scopes**: country  
 **Supported Targets**: party  
+
+## any_power_bloc
+Iterate through all power blocs  
+any_power_bloc = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: none/all  
+**Supported Targets**: power_bloc  
+
+## any_power_bloc_member
+Iterate through all members of the scoped power bloc including the leader  
+any_power_bloc_member = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: country  
 
 ## any_preferred_law
 Iterate through all active and possible laws in an interest group's country, ordered by how much they prefer that law  
@@ -237,8 +279,14 @@ any_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 **Supported Targets**: state  
 
 ## any_rival_country
-Any country that is rival to the country in a scope  
+Any country that is being rivaled by the country in a scope  
 any_rival_country = { <count=num/all> / <percent=fixed_point> <triggers> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## any_rivaling_country
+Any country that is rivaling the country in a scope  
+any_rivaling_country = { <count=num/all> / <percent=fixed_point> <triggers> }  
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -422,6 +470,10 @@ any_valid_mass_migration_culture = { <count=num/all> / <percent=fixed_point> <tr
 **Supported Scopes**: country  
 **Supported Targets**: culture  
 
+## appeasement
+Compares the appeasement of a political lobby.Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: political_lobby  
+
 ## approaching_bureaucracy_shortage
 Check if Institutions in the country will incur a Bureaucracy shortage eventuallyTraits: yes/no   
 **Supported Scopes**: country  
@@ -494,6 +546,12 @@ Checks if the building of a particular type in scoped state is able to active th
 can_activate_production_method = { building_type = <key> production_method = <key> }  
 **Supported Scopes**: state  
 
+## can_add_wargoal_against
+Checks if scope country can add any wargoal against target country in an active diplomatic play  
+can_add_wargoal_against = <scope>Traits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## can_afford_diplomatic_action
 Checks if the country in scope can afford the Influence for the specified diplomatic action (pact or ongoing)  
 can_afford_diplomatic_action = { target = X type = Y }  
@@ -510,6 +568,23 @@ can_agitate = <scope/c:TAG>Traits: country scope
 Checks if a law could be enacted by its country, considering its current situation  
 can_be_enacted = yesTraits: yes/no   
 **Supported Scopes**: law  
+
+## can_break_diplomatic_pact
+Checks if there is a diplomatic pact of the specified type with target country that can be broken by scope country  
+can_break_diplomatic_pact = { target = <country scope> type = <action type key> first_state = <state scope, optional> second_state = <state scope, optional>  
+  
+**Supported Scopes**: country  
+
+## can_create_diplomatic_pact
+Checks if a diplomatic pact is valid to create with another country  
+can_create_diplomatic_pact = { target = <country scope> type = <action type key> first_state = <state scope, optional> second_state = <state scope, optional>  
+  
+**Supported Scopes**: country  
+
+## can_decrease_autonomy
+Check if a subject country is able to become a less autonomous subject type  
+can_increase_autonomy = yesTraits: yes/no   
+**Supported Scopes**: country  
 
 ## can_establish_any_export_route
 Check if a country can establish any export routes  
@@ -556,6 +631,32 @@ can_have_political_movement = law_type:law_landed_votingTraits: law_type scope
 Check if the country is able to have subjects of it sownTraits: yes/no   
 **Supported Scopes**: country  
 
+## can_increase_autonomy
+Check if a subject country is able to become a more autonomous subject type  
+can_increase_autonomy = yesTraits: yes/no   
+**Supported Scopes**: country  
+
+## can_invite_any_country
+Checks whether is possible to invite any country to the scoped Power Bloc.  
+can_invite_any_country = yes/noTraits: yes/no   
+**Supported Scopes**: power_bloc  
+
+## can_leave_power_bloc
+Checks if the country in scope can leave its current Power Bloc (returns false if country is not in a Power Bloc)  
+can_leave_power_bloc = yesTraits: yes/no   
+**Supported Scopes**: country  
+
+## can_lobbies_target
+Checks if target country is a valid target for lobbies in the scoped country  
+can_lobbies_target = <target country scope>Traits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## can_own_autonomy_be_decreased
+Check if scoped country can have it's autonomy decreased  
+can_own_autonomy_be_decreased = yes/noTraits: yes/no   
+**Supported Scopes**: country  
+
 ## can_queue_building_levels
 Checks if the building's owner could queue the provided number of additional levels without hitting a level or resource potential cap  
 can_queue_building_levels = number  
@@ -564,6 +665,12 @@ can_queue_building_levels = number
 ## can_research
 True if a country can research an technology  
 can_research = technology  
+**Supported Scopes**: country  
+
+## can_send_diplomatic_action
+Checks if a diplomatic action is valid to send by scope country to target country  
+can_send_diplomatic_action = { target = <country scope> type = <action type key> first_state = <state scope, optional> second_state = <state scope, optional>  
+  
 **Supported Scopes**: country  
 
 ## can_start_tutorial_lesson
@@ -575,6 +682,11 @@ can_start_tutorial_lesson = reactive_advice_successionAn interface trigger, can 
 Checks if scoped country can take on a certain amount of scaled debt from another country  
 can_take_on_scaled_debt = { who = X value = Y }  
 Where X = country and Y = decimal value  
+**Supported Scopes**: country  
+
+## can_trigger_event
+Check if country can trigger the specified event  
+can_trigger_event = key  
 **Supported Scopes**: country  
 
 ## cash_reserves_available
@@ -705,6 +817,11 @@ country_has_accepted_religion = <religion>Traits: religion scope
 **Supported Scopes**: country  
 **Supported Targets**: religion  
 
+## country_innovation
+Checks the amount of weekly innovation a country produces  
+country_innovation <= 200Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## country_navy_unit_type_fraction
 Checks that a country has a certain percentage of a specific navy unit type  
 scope:example_formation = {  
@@ -719,6 +836,11 @@ scope:example_formation = {
 Checks whether the scoped country or any of its subjects owns the entire specified state region  
 country_or_subject_owns_entire_state_region = key  
 **Supported Scopes**: country  
+
+## country_ownership_fraction
+Compares the fraction of this building's levels that are owned by a country  
+ country_ownership_fraction > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: building  
 
 ## country_rank
 Compares a Country's Power Ranking  
@@ -782,6 +904,16 @@ Checks the culture's progress percentage towards secession in a country. 0 if no
 culture_secession_progress = { target = scope:example_country value > 0.5 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: culture  
 
+## current_cohesion_number
+Compare the current Cohesion as a numeric value  
+current_cohesion_number > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## current_cohesion_percentage
+Compare the current Cohesion as a percentage of the maximum of a Power Bloc in scope  
+current_cohesion_percentage > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
 ## current_manpower
 Compares the current manpower of a battle side  
 manpower > 10000Traits: <, <=, =, !=, >, >=  
@@ -833,10 +965,20 @@ Compares the devastation of a given state
 devastation > 5Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
 
+## discriminates_religion
+Checks if the scoped country discriminates the given religion (key)  
+discriminates_religion = <religion key/scope>  
+**Supported Scopes**: country  
+
 ## earnings
 Compare a building's current annual earnings per employee  
 earnings >= 10Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: building  
+
+## economic_dependence
+Compares the degree of dependence the country in scope has to the target country  
+economic_dependence = { target = scope:other_country value > 2.2 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
 
 ## election_momentum
 Compare election momentum of the scoped party against a value  
@@ -855,6 +997,16 @@ enacting_any_law = boolTraits: yes/no
 
 ## enactment_chance
 Compares the current enactment chance in scope country (including values from enactment modifier)Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## enactment_chance_for_law
+Compares the enactment chance in scope country for given law (including values from enactment modifier)  
+enactment_chance_for_law = { target = scope:my_lawtype value > 0.2 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## enactment_chance_for_law_without_enactment_modifier
+Compares the enactment chance in scope country for given law but excludes values from enactment modifier  
+enactment_chance_for_law_without_enactment_modifier = { target = scope:my_lawtype value > 0.2 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
 ## enactment_chance_without_enactment_modifier
@@ -878,10 +1030,6 @@ enemy_contested_wargoals = { target = scope:war value > 0.4 }Traits: <, <=, =, !
 Determines the (weighted) enemy occupation score of a country  
 enemy_occupation > 0.2Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
-
-## error_check
-Checks an error in code that specifically uses the CErrorTable::CheckTrigger path, in general avoid this and just use normal script  
-**Supported Scopes**: none/all  
 
 ## escalation
 Checks whether escalation has passed a certain threshold  
@@ -923,15 +1071,40 @@ scope:example_formation = {
 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: military_formation  
 
+## fraction_of_levels_owned_by_country
+Compares the fraction of total levels of a building a country owns  
+ fraction_of_levels_owned_by_country = {  
+ target = c:GBR  
+ value  > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: building  
+
 ## free_arable_land
 Check free arable land in state  
 free_arable_land > 0Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
 
+## free_principle_slots
+Compare a power bloc's free principle slot count  
+power_bloc =  
+{  
+		free_principle_slots >= 2  
+}Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
 ## game_date
 Compare to current game date  
 current_game_date = 1837.1.1Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: none/all  
+
+## gdp_ownership_ratio
+Compares the ratio of GDP the specified country owns in the scoped country  
+gdp_ownership_ratio = { target = scope:owner_country value > 0.1 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## gdp_per_capita_ranking
+Compares a Country's GDP per Capita Ranking (position)  
+gdp_per_capita_ranking > 42Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
 
 ## global_country_ranking
 Compares a Country's Power Ranking (position)  
@@ -958,6 +1131,11 @@ gold_reserves > 500Traits: <, <=, =, !=, >, >=
 ## gold_reserves_limit
 Compares the country's gold reserves limit  
 gold_reserves > gold_reserves_limitTraits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## goods_production_rank
+Compare to a country's production leaderboard rank of a good  
+leading_producer_of = { target = g:coal value < 10 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
 ## government_legitimacy
@@ -1027,7 +1205,7 @@ has_building = building
 **Supported Scopes**: country, market, state, state_region  
 
 ## has_claim
-Checks if country in scope has a claim on state/state region  
+Checks if country in scope has a claim on state/state region/country  
 has_claim = <scope>  
 **Supported Scopes**: country  
 
@@ -1102,6 +1280,11 @@ Checks if the country has decreasing interest levelsTraits: yes/no
 Checks if scope state has a particular type of decree  
 has_decree = <key>  
 **Supported Scopes**: state  
+
+## has_deployed_units
+Check if a building supports any units which have been deployed outside of home HQ  
+has_deployed_units = yes/noTraits: yes/no   
+**Supported Scopes**: building  
 
 ## has_diplomatic_pact
 Checks if two countries have an active diplomatic pact of type  
@@ -1213,6 +1396,12 @@ Checks if scoped culture has a homeland in target state or state region
 has_homeland = state/state region  
 **Supported Scopes**: culture  
 
+## has_identity
+Checks if the scoped power bloc has certain central identity  
+has_identity = identity:keyTraits: power_bloc_identity scope  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: power_bloc_identity  
+
 ## has_ideology
 Check if scoped object has ideology  
 **Supported Scopes**: character, interest_group  
@@ -1251,6 +1440,11 @@ has_label = label_key
 Checks if a country has a certain Law activeTraits: law_type scope  
 **Supported Scopes**: country  
 **Supported Targets**: law_type  
+
+## has_law_imposition_rights
+Checks if the scoped country has the necessary permits to demand another country enacts a certain law  
+has_law_imposition_rights = { target_country = scope:target_country type = law_type:law_serfdom }  
+**Supported Scopes**: country  
 
 ## has_local_variable
 Checks whether the current scope has the specified variable set  
@@ -1302,7 +1496,7 @@ has_mobilizing_unit = boolTraits: yes/no
 Check if a supported scope has a certain timed modifier  
 Supported scopes: Country, Character, State, Building, InterestGroup, PoliticalMovement, Institution, Front  
 has_modifier = <key>  
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, state  
+**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
 
 ## has_no_priority_tariffs
 Checks if scoped country has Unprioritized tariffs for a good  
@@ -1360,7 +1554,7 @@ has_pop_culture = culture
 
 ## has_pop_religion
 Checks if pop has specific religion  
-has_religion = religion  
+has_pop_religion = religion  
 **Supported Scopes**: pop  
 
 ## has_port
@@ -1382,6 +1576,23 @@ has_potential_resource = bg_rubber_plantations
 Check if the target country could ever be able to form a nation  
 has_potential_to_form_country = <tag>  
 **Supported Scopes**: country  
+
+## has_power_struggle
+Checks if scope Power Bloc has a power struggle  
+has_power_struggle = yes/noTraits: yes/no   
+**Supported Scopes**: country  
+
+## has_principle
+Checks if the scoped power bloc has certain principle  
+has_principle = principle:keyTraits: power_bloc_principle scope  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: power_bloc_principle  
+
+## has_principle_group
+Checks if the scoped power bloc has a principle in the specified group  
+has_principle_group = principle_group:keyTraits: power_bloc_principle_group scope  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: power_bloc_principle_group  
 
 ## has_reached_end_date
 True if the end date (NDefines::NGame::END_DATE) has been reached  
@@ -1591,6 +1802,11 @@ Check if the country is in election campaign period
 in_election_campaign = <yes/no>Traits: yes/no   
 **Supported Scopes**: country  
 
+## income_transfer
+Compares the base income transfer of the diplomatic pact  
+income_transfer > 0.05Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: diplomatic_pact  
+
 ## incorporation_progress
 Check incorporation progress in state  
 incorporation_progress > 0.25Traits: <, <=, =, !=, >, >=  
@@ -1753,6 +1969,12 @@ Check if state borders a (non-impassable) sea region
 is_coastal = yes/noTraits: yes/no   
 **Supported Scopes**: state  
 
+## is_considered_adjacent_due_to_wargoals
+Checks if the scoped country is considered adjacent to the target country by virtue of the scoped country having wargoals that are adjacent to the target country in a committed diplomatic play  
+is_considered_adjacent_due_to_wargoals = <target country scope>Traits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## is_construction_paused
 Check if construction in a state is paused.Traits: yes/no   
 **Supported Scopes**: country  
@@ -1784,6 +2006,11 @@ is_defender_in_battle = boolTraits: yes/no
 Checks diplomatic pact is of a certain action type  
 is_diplomatic_action_type = diplomatic action type  
 **Supported Scopes**: diplomatic_pact  
+
+## is_diplomatic_catalyst_type
+Checks diplomatic catalyst is of a certain catalyst type  
+is_diplomatic_catalyst_type = diplomatic catalyst type  
+**Supported Scopes**: diplomatic_catalyst  
 
 ## is_diplomatic_pact_in_danger
 Checks if diplomatic pact is in danger of breaking  
@@ -1841,7 +2068,7 @@ is_diplomatic_play_participant = boolTraits: yes/no
 
 ## is_direct_subject_of
 Checks if country in scope is a direct subject (not subject-of-subject) of event target  
-is_subject_of = countryTraits: country scope  
+is_direct_subject_of = countryTraits: country scope  
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -1873,6 +2100,12 @@ is_fleet = boolTraits: yes/no
 ## is_forced_pact
 Check if a diplomatic pact has a forced duration due to reasons such as a sway or obligationTraits: yes/no   
 **Supported Scopes**: diplomatic_pact  
+
+## is_forced_to_join_plays
+Checks if the scoped country is forced to join the target country's Diplomatic Plays  
+is_forced_to_join_plays = c:countryTraits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## is_fully_mobilized
 Checks if the Military Formation is fully mobilized  
@@ -1941,6 +2174,12 @@ is_in_battle = boolTraits: yes/no
 Check if the country is part of a customs unionTraits: yes/no   
 **Supported Scopes**: country  
 
+## is_in_customs_union_with
+Check if the country is in a customs union with scoped country  
+is_in_customs_union_with = c:FRATraits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## is_in_exile_pool
 Checks whether the scoped character is in the exile pool  
 is_in_exile_pool = yes/noTraits: yes/no   
@@ -1955,10 +2194,21 @@ is_in_government = boolTraits: yes/no
 Checks if a target in in a list  
 **Supported Scopes**: none/all  
 
+## is_in_power_bloc
+Checks if the country is in a Power Bloc  
+is_in_power_bloc = yes/noTraits: yes/no   
+**Supported Scopes**: country  
+
 ## is_in_revolt
 Check if a state has any chance to split off into a revolutionary or seceding country  
 is_in_revolt = yes/no.Traits: yes/no   
 **Supported Scopes**: state  
+
+## is_in_same_power_bloc
+Checks if the scoped country is in the same power bloc as the target scoped country  
+is_in_same_power_bloc = c:GBRTraits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## is_in_void
 Check if character is in the void  
@@ -1974,6 +2224,12 @@ is_in_war_together = countryTraits: country scope
 ## is_incorporated
 Check if state is incorporated = boolTraits: yes/no   
 **Supported Scopes**: state  
+
+## is_indirect_subject_of
+Checks if country in scope is an indirect subject (subject-of-subject) of event target  
+is_indirect_subject_of = countryTraits: country scope  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## is_insurrectionary
 True if IG scope is contributing to a brewing revolution  
@@ -2044,6 +2300,17 @@ Mass migration target is state.
 any_state = { limit = { owner = ROOT is_mass_migration_target = yes } }Traits: yes/no   
 **Supported Scopes**: state  
 
+## is_member_of_any_lobby
+Checks if interest group is member of any lobby  
+is_member_of_any_lobby = yesTraits: yes/no   
+**Supported Scopes**: interest_group  
+
+## is_member_of_lobby
+Checks if interest group is member of a certain lobby type  
+is_member_of_lobby = lobby_type:pro_country_lobbyTraits: political_lobby_type scope  
+**Supported Scopes**: interest_group  
+**Supported Targets**: political_lobby_type  
+
 ## is_member_of_party
 Checks if Interest Group is a member of target party  
 is_member_of_party = <party>Traits: party scope  
@@ -2102,6 +2369,11 @@ True if country scope is a player
 is_player = boolTraits: yes/no   
 **Supported Scopes**: country  
 
+## is_political_lobby_type
+Checks political lobby is of a certain lobby type  
+is_political_lobby_type = political lobby type  
+**Supported Scopes**: political_lobby  
+
 ## is_political_movement_type
 Check if a political movement is a particular type  
 is_political_movement_type = movement_to_enact  
@@ -2117,6 +2389,11 @@ is_pop_type = poptype
 Checks if the specified popup panel is open  
 is_popup_open = popupAn interface trigger, can only be used in specific places  
 **Supported Scopes**: none/all  
+
+## is_power_bloc_leader
+Checks if the country is a leader of a Power Bloc  
+is_power_bloc_leader = yes/noTraits: yes/no   
+**Supported Scopes**: country  
 
 ## is_powerful
 True if IG scope is influential  
@@ -2387,10 +2664,20 @@ Check if country is warleader in warTraits: country scope
 Compare number of Isolated StatesTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
+## journal_entry_age
+Return the age of the journal entry (since activation) in days  
+journal_entry_age > 720Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: journalentry  
+
 ## law_approved_by
 Checks whether the scoped law is approved by an interest group  
 law_approved_by = ig_rural_folk  
 **Supported Scopes**: law  
+
+## law_progressiveness_difference
+Compares the progressiveness of the scoped law type to the target law type, higher value means greater difference  
+law_progressiveness_difference( scope:target_law ) > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: law_type  
 
 ## law_stance
 Compares the stance of the scoped character or interest group about the specified law  
@@ -2407,6 +2694,31 @@ Check if any other country is part of this country's customs union
 leads_customs_union = boolTraits: yes/no   
 **Supported Scopes**: country  
 
+## levels_owned_by_country
+Compares how many levels a country owns in a building  
+ levels_owned_by_country = {  
+ target = c:GBR  
+ value  >= 1Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: building  
+
+## leverage_advantage
+Checks that the leverage advantage between power bloc and target country meets condition  
+power_bloc =  
+{  
+		leverage = { target = c:BEL value > 0 }  
+}Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## liberty_desire
+Compare trigger for the Liberty Desire value in a scoped country.  
+liberty_desire > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## liberty_desire_weekly_progress
+Compare trigger for the weekly Liberty Desire progress value in a scoped country.  
+liberty_desire_weekly_progress > 0Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## list_size
 Checks the size of a list  
 list_size = { name = X value >= Y }  
@@ -2418,6 +2730,17 @@ Where Y is a script valueTraits: <, <=, =, !=, >, >=
 Checks if a pop, state or country has a certain amount of literacy  
 literacy = valueTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country, pop, state  
+
+## lobby_clout
+Compare to total clout of scoped lobby's interest groups  
+lobby_clout >= 0.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: political_lobby  
+
+## lobby_formation_reason
+Check scope diplomatic catalyst or political lobby scope for lobby formation reason  
+lobby_formation_reason = diplomacy  
+  
+**Supported Scopes**: diplomatic_catalyst, political_lobby  
 
 ## local_variable_list_size
 Checks the size of a variable list  
@@ -2510,6 +2833,25 @@ Check if market has a shortage on any of its building inputs
 market_has_goods_shortage = yes/noTraits: yes/no   
 **Supported Scopes**: market  
 
+## market_number_goods_shortages
+Check how many shortages a market has on any of its building inputs  
+market_number_goods_shortages >= 2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: market  
+
+## market_number_goods_shortages_with
+Check how many shortages a market has on any of its building inputs, plus the ones from the target country  
+"market_number_goods_shortages_with(scope:target) >= 2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: market  
+
+## market_number_goods_shortages_without
+Check how many shortages a market has on any of its building inputs, subtracting the ones from the target country  
+"market_number_goods_shortages_without(scope:target) >= 2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: market  
+
+## max_law_enactment_setbacks
+Compares to the max number of law enactment setbacks a country can suffer before the law failsTraits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## max_num_declared_interests
 Compares the maximum number of declared interests of scoped country  
 max_num_declared_interests = <value>Traits: <, <=, =, !=, >, >=  
@@ -2548,10 +2890,31 @@ most_prominent_revolting_interest_group = ig_landowners
 a negated AND trigger  
 **Supported Scopes**: none/all  
 
+## nationalization_cost
+Compares the total cost of nationalizing all buildings in scope country owned by the government or pops of target country  
+nationalization_cost = { target = scope:other_country value > 100000 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## naval_power_projection
 Compares a Country's naval_power_projection   
  scope:example_country = { naval_power_projection < root.naval_power_projectionTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
+
+## neighbors_any_power_bloc
+Checks if the scoped country neighbors any power bloc. Note: the scoped country is not considered to be neighboring the power bloc it belongs to (if any)  
+neighbors_any_power_bloc = yes/noTraits: yes/no   
+**Supported Scopes**: country  
+
+## neighbors_member_of_same_power_bloc
+Checks if the scoped country neighbors any other country belonging to the same power bloc  
+neighbors_member_of_same_power_bloc = yes/noTraits: yes/no   
+**Supported Scopes**: country  
+
+## neighbors_power_bloc
+Checks if the scoped country neighbors the target power bloc. Note: the scoped country is not considered to be neighboring the power bloc it belongs to (if any)  
+neighbors_power_bloc = c:PRU.power_blocTraits: power_bloc scope  
+**Supported Scopes**: country  
+**Supported Targets**: power_bloc  
 
 ## night_value
 Night valueTraits: <, <=, =, !=, >, >=  
@@ -2600,15 +2963,40 @@ Compares the number of declared interests of scoped country
 num_declared_interests = <value>Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
+## num_investments_of_type
+Checks the number of buildings levels of a given type the scoped country has outside their own country.  
+ num_investments_of_type = { type = building_oil_rig value > 5 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## num_mobilized_units_in_theater
 Determines the number of mobilized units belonging to the scoped theater's owner or their allies, in fronts intersecting the scoped theater  
 num_mobilized_units_in_theater > 25Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: theater  
 
+## num_political_lobbies
+Compare to number of political lobbies in scoped country or interest group  
+num_political_lobbies > 0Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country, interest_group  
+
+## num_power_bloc_members
+Compare the number of members in a power bloc against a value  
+num_power_bloc_members >= 2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## num_power_bloc_states
+Compare the number of states in a power bloc against a value  
+num_power_bloc_states >= 2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
 ## num_provinces_in_theater
 Determines the number provinces in the scoped theater  
 num_provinces_in_theater > 10Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: theater  
+
+## num_subjects
+Compares the number of subjects of scoped country  
+num_subjects = <value>Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
 
 ## num_taxed_goods
 Compares the number of consumption taxed goods of scoped country  
@@ -2639,6 +3027,11 @@ Compares the Organization of the Military Formation in scope
 organization <= define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MINTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: military_formation  
 
+## overlord_can_decrease_subject_autonomy
+Check if an overlord can decrease a subject autonomy  
+overlord_can_decrease_subject_autonomy = boolTraits: yes/no   
+**Supported Scopes**: country  
+
 ## owes_obligation_to
 Checks if country in scope owes a obligation to event target  
 owes_obligation_to = countryTraits: country scope  
@@ -2655,6 +3048,16 @@ Does country own the treaty port in assigned state region
 owns_treaty_port_in = key  
 **Supported Scopes**: country  
 
+## play_participant_has_war_goal_of_type_against
+Checks if scope country holds a wargoal of a specific type targeting a specific country in any diplomatic play  
+play_participant_has_war_goal_of_type_against = { type = <wargoaltype key>, target = <country scope> }  
+**Supported Scopes**: country  
+
+## play_side_has_war_goal_of_type_against
+Checks if any country on the same side as scope country in any diplomatic play holds a wargoal of a specific type targeting a specificcountry  
+play_side_has_war_goal_of_type_against = { type = <wargoal type key>, target = <country scope> }  
+**Supported Scopes**: country  
+
 ## political_movement_radicalism
 Compare radicalism of political movement  
 political_movement_radicalism > 50Traits: <, <=, =, !=, >, >=  
@@ -2664,6 +3067,11 @@ political_movement_radicalism > 50Traits: <, <=, =, !=, >, >=
 Compare support of political movement  
 political_movement_support > 50Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: political_movement  
+
+## politically_involved_ratio
+Compares the percentage of politically involved population in a country  
+politically_involved_ratio > 0.25Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
 
 ## pollution_amount
 Compare state region pollutionTraits: <, <=, =, !=, >, >=  
@@ -2728,6 +3136,176 @@ scope:example_state = {
 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
 
+## potential_diplomatic_play_power_ratio
+Check the expected power ratio between scope country side and target country side in a potential diplomatic play  
+Attempts to predict which sides involved participants will take (if any) so doesn't just check 'starting strengths'  
+potential_diplomatic_play_power_ratio = { type = dp_open_market target = c:BEL state = c:BEL.capital value > 1.0 }  
+state and type are optional, will default to dp_open_market on target capitalTraits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_rank
+Compare a power bloc's rank  
+power_bloc =  
+{  
+		power_bloc_rank <= 2  
+}Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_share_gdp
+Compare the share of GDP of the country in scope against all its Power Bloc current members, returns -1 if not in a Power Bloc  
+power_bloc_share_gdp > 0.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_gdp_with
+Compare the share of GDP of the country in scope against all its Power Bloc members plus an additional country, returns -1 if not in a Power Bloc  
+"power_bloc_share_gdp_with(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_gdp_without
+Compare the share of GDP of the country in scope against all its Power Bloc members minus one of the members, returns -1 if not in a Power Bloc  
+"power_bloc_share_gdp_without(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_power_projection
+Compare the share of Power Projection of the country in scope against all its Power Bloc members, returns -1 if not in a Power Bloc  
+power_bloc_share_power_projection > 0.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_power_projection_with
+Compare the share of Power Projection of the country in scope against all its Power Bloc members plus an additional country, returns -1 if not in a Power Bloc  
+"power_bloc_share_power_projection_with(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_power_projection_without
+Compare the share of Power Projection of the country in scope against all its Power Bloc members minus one of the members, returns -1 if not in a Power Bloc  
+"power_bloc_share_power_projection_without(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_prestige
+Compare the share of Prestige of the country in scope against all its Power Bloc members, returns -1 if not in a Power Bloc  
+power_bloc_share_prestige > 0.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_prestige_with
+Compare the share of Prestige of the country in scope against all its Power Bloc members plus an additional country, returns -1 if not in a Power Bloc  
+"power_bloc_share_prestige_with(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_share_prestige_without
+Compare the share of Prestige of the country in scope against all its Power Bloc members minus one of the members, returns -1 if not in a Power Bloc  
+"power_bloc_share_prestige_without(scope:country) > 0.2"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## power_bloc_total_leading_goods_producers
+Compare how many members are among the leading producers for all goods worldwide weighted by their position in the ranking.The top producer is weighted by MIN_SPOT_PRESTIGE_AWARD and then each subsequent position is weighted by one less until.By default this means 1st counts as 3, 2nd as 2 and 3rd as 1. Any other positions as 0.  
+power_bloc_total_leading_goods_producers > 15Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_total_leading_goods_producers_with
+Compare how many members are among the leading producers for all goods worldwide weighted by their position in the ranking, plus one additional country not currently in the power bloc.The top producer is weighted by MIN_SPOT_PRESTIGE_AWARD and then each subsequent position is weighted by one less until.By default this means 1st counts as 3, 2nd as 2 and 3rd as 1. Any other positions as 0.  
+"power_bloc_total_leading_goods_producers_with(scope:target) > 15"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_total_leading_goods_producers_without
+Compare how many members are among the leading producers for all goods worldwide weighted by their position in the ranking, minus one country that is currently in the power bloc.The top producer is weighted by MIN_SPOT_PRESTIGE_AWARD and then each subsequent position is weighted by one less until.By default this means 1st counts as 3, 2nd as 2 and 3rd as 1. Any other positions as 0.  
+"power_bloc_total_leading_goods_producers_without(scope:target) > 15"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_economic_dependence
+If used in a power bloc scope, compare the member with the lowest economic dependence on the leader.  
+power_bloc_worst_economic_dependence > 2.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_economic_dependence_with
+If used in a power bloc scope, compare the member with the lowest economic dependence on the leader.  
+power_bloc_worst_economic_dependence > 2.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_economic_dependence_without
+If used in a power bloc scope, compare the member with the lowest economic dependence on the leader.  
+power_bloc_worst_economic_dependence > 2.2Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_infamy
+If used in a power bloc scope, compare the Infamy value of the member country with the worst (highest) Infamy  
+power_bloc_worst_infamy > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_infamy_with
+If used in a power bloc scope, compare the Infamy value of the member country with the worst (highest) Infamy  
+power_bloc_worst_infamy > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_infamy_without
+If used in a power bloc scope, compare the Infamy value of the member country with the worst (highest) Infamy  
+power_bloc_worst_infamy > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_relations
+If used in a power bloc scope, compare the Relations value to the power bloc leader for the member country with the worst (lowest) Relations  
+power_bloc_worst_leader_relations > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_relations_with
+If used in a power bloc scope, compare the Relations value to the power bloc leader for the member country with the worst (lowest) Relations  
+power_bloc_worst_leader_relations > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_relations_without
+If used in a power bloc scope, compare the Relations value to the power bloc leader for the member country with the worst (lowest) Relations  
+power_bloc_worst_leader_relations > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_religion_population_fraction
+If used in a power bloc scope, compare the lowest population fraction in a member country that follows the leader's religion.  
+power_bloc_worst_leader_religion_population_fraction > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_religion_population_fraction_with
+If used in a power bloc scope, compare the lowest population fraction in a member country that follows the leader's religion.  
+power_bloc_worst_leader_religion_population_fraction > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_leader_religion_population_fraction_without
+If used in a power bloc scope, compare the lowest population fraction in a member country that follows the leader's religion.  
+power_bloc_worst_leader_religion_population_fraction > 10Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_liberty_desire
+If used in a power bloc scope, compare the Liberty Desire value of the member country with the worst (highest) Liberty Desire  
+power_bloc_worst_liberty_desire > 75Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_liberty_desire_with
+If used in a power bloc scope, compare the Liberty Desire value of the member country with the worst (highest) Liberty Desire  
+power_bloc_worst_liberty_desire > 75Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_liberty_desire_without
+If used in a power bloc scope, compare the Liberty Desire value of the member country with the worst (highest) Liberty Desire  
+power_bloc_worst_liberty_desire > 75Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_progressiveness_difference_government_type
+If used in a power bloc scope, compare the total Progressiveness value difference for the member country with the worst (highest) difference in progressiveness between their Governance Principles and Distribution of Power Laws compared to the power bloc leader  
+power_bloc_worst_progressiveness_compatibility_government_type > 100Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_progressiveness_difference_government_type_with
+If used in a power bloc scope, compare the total Progressiveness value difference for the member country with the worst (highest) difference in progressiveness between their Governance Principles and Distribution of Power Laws compared to the power bloc leader  
+power_bloc_worst_progressiveness_compatibility_government_type > 100Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## power_bloc_worst_progressiveness_difference_government_type_without
+If used in a power bloc scope, compare the total Progressiveness value difference for the member country with the worst (highest) difference in progressiveness between their Governance Principles and Distribution of Power Laws compared to the power bloc leader  
+power_bloc_worst_progressiveness_compatibility_government_type > 100Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## predicted_cohesion_percentage_with
+Predicts the cohesion of a Power Bloc (as a fraction of 1) if it included target country as a member  
+predicted_cohesion_percentage_with, = { target = scope:other_country value > 0.9 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
 ## prefers_law
 Checks if the scoped interest group prefers the specified law to the comparison law  
 **Supported Scopes**: interest_group  
@@ -2735,6 +3313,11 @@ Checks if the scoped interest group prefers the specified law to the comparison 
 ## prestige
 Compare prestigeTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
+
+## private_ownership_fraction
+Compares the fraction of this building's levels that are privately owned  
+ private_ownership_fraction > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: building  
 
 ## produced_authority
 Compares the produced authority of the scoped countryTraits: <, <=, =, !=, >, >=  
@@ -2747,6 +3330,11 @@ Compares the produced bureaucracy of the scoped countryTraits: <, <=, =, !=, >, 
 ## produced_influence
 Compares the produced influence of the scoped countryTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
+
+## progressiveness
+Compare the progressiveness of the law type in scope  
+law_type:law_isolationism.progressiveness > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: law_type  
 
 ## quality_of_life
 Compares the quality of life of the given pop  
@@ -2820,6 +3408,16 @@ Compare value to a country's gold reserves relative to reserves limit
 scaled_gold_reserves = valueTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
+## scripted_bar_progress
+Determines the progress of a scripted progress bar  
+scripted_bar_progress = { name = progress_bar_tag value > 0.4 }Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: journalentry  
+
+## self_ownership_fraction
+Compares the fraction of this building's levels that are owned by the building itself  
+ self_ownership_fraction > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: building  
+
 ## shares_heritage_and_other_trait_with_any_primary_culture
 Checks if culture shares any trait marked as 'heritage' and other 'non-heritage' trait with any of a country's primary cultures  
 shares_heritage_and_other_trait_with_any_primary_culture = <country>Traits: country scope  
@@ -2875,6 +3473,11 @@ expanding_institution = <scope/key>
 Determines the fraction of battles the target country has lost in the target war, weighted by manpower size of all battles in the war  
 size_weighted_lost_battles_fraction = { target = scope:war value > 0.3 }  
 add = "size_weighted_lost_battles_fraction(scope:war)"Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## sol_ranking
+Compares a Country's Standard of Living Ranking (position)  
+sol_ranking > 42Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
 ## standard_of_living
@@ -2966,6 +3569,11 @@ Checks the strata of the scoped pop
 strata >= rich/middle/poorTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: pop  
 
+## subject_can_increase_autonomy
+Check if a subject can increase its autonomy  
+subject_can_increase_autonomy = boolTraits: yes/no   
+**Supported Scopes**: country  
+
 ## supply_network_strength
 Compares the country's supply network strength (can exceed 1)  
 supply_network_strength > 1.1Traits: <, <=, =, !=, >, >=  
@@ -2984,6 +3592,16 @@ switch = {
 ## taking_loans
 Check if the country is currently running a weekly deficit and taking loans to compensateTraits: yes/no   
 **Supported Scopes**: country  
+
+## target_cohesion_number
+Compare the target Cohesion as a numeric value  
+target_cohesion_number > 50Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
+## target_cohesion_percentage
+Compare the target Cohesion as a percentage of the maximum of a Power Bloc in scope  
+target_cohesion_percentage > 0.5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
 
 ## target_is
 Checks who the target of a diplomatic play is  
@@ -3011,6 +3629,26 @@ Compares the overall tax level integer value of scoped country
 income_tax_level_value = <level>Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
+## tenure_in_current_power_bloc_days
+Compare the number of days the country in scope has been a member of their current Power Bloc  
+tenure_in_current_power_bloc_days > 720Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## tenure_in_current_power_bloc_months
+Compare the number of (whole) months the country in scope has been a member of their current Power Bloc  
+tenure_in_current_power_bloc_months > 20Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## tenure_in_current_power_bloc_weeks
+Compare the number of (whole) weeks the country in scope has been a member of their current Power Bloc  
+tenure_in_current_power_bloc_weeks > 12Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
+## tenure_in_current_power_bloc_years
+Compare the number of (whole) years the country in scope has been a member of their current Power Bloc  
+tenure_in_current_power_bloc_years > 5Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## total_population
 Compares the total population of a given country  
 total_population > 100000Traits: <, <=, =, !=, >, >=  
@@ -3034,6 +3672,13 @@ total_population_share > 0.02Traits: <, <=, =, !=, >, >=
 ## total_urbanization
 Compares the total urbanization of a given state/ntotal_urbanization > 5Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
+
+## total_used_principle_levels
+Compare a power bloc's total number of active principle levels  
+power_bloc =  
+{  
+	total_used_principle_levels >= 10}Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
 
 ## trade_route_needs_convoys_to_grow
 Checks if the scoped trade route needs more convoys to be able to grow  
@@ -3065,6 +3710,14 @@ Compares the turmoil in a given state, i.e. the fraction of Radicals
 turmoil > 0.2Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: state  
 
+## used_principle_slots
+Compare a power bloc's used principle slot count  
+power_bloc =  
+{  
+		used_principle_slots >= 2  
+}Traits: <, <=, =, !=, >, >=  
+**Supported Scopes**: power_bloc  
+
 ## variable_list_size
 Checks the size of a variable list  
 variable_list_size = { name = X target >= Y }  
@@ -3076,6 +3729,16 @@ Where Y is a script value or number
 True if the war has a proposed peace deal  
 war_has_active_peace_deal = boolTraits: yes/no   
 **Supported Scopes**: war  
+
+## war_participant_has_war_goal_of_type_against
+Checks if scope country holds a wargoal of a specific type targeting a specific country in any war  
+war_participant_has_war_goal_of_type_against = { type = <wargoal type key>,target = <country scope> }  
+**Supported Scopes**: country  
+
+## war_side_has_war_goal_of_type_against
+Checks if any country on the same side as scope country in any war holds a wargoal of a specific type targeting a specific country  
+war_side_has_war_goal_of_type_against = { type =<wargoal type key>, target = <country scope> }  
+**Supported Scopes**: country  
 
 ## was_exiled
 Checks whether the scoped character was exiled  
@@ -3106,6 +3769,12 @@ weekly_profit >= 20.0Traits: <, <=, =, !=, >, >=
 Returns true if the sum of weights of fulfilled sub-triggers amount to the specified sum  
 weighted_calc_true_if = { amount = 10 5 = { <trigger> } 15 = { <trigger> } 7 = { <trigger> } }  
 **Supported Scopes**: none/all  
+
+## would_accept_diplomatic_action
+Checks if a country would accept a diplomatic action proposed by another country  
+would_accept_diplomatic_action = { actor = <country scope> type = <action type key> first_state = <state scope, optional> second_state = <state scope, optional>, modify_acceptance = <script value, optional> }  
+if set, modify_acceptance will be added to their acceptance score, to allow for checking if they would accept with an obligation, etc  
+**Supported Scopes**: country  
 
 ## year
 Compares the current year of the game  

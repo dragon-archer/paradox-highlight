@@ -52,6 +52,16 @@ add_claim = scope/country
 **Supported Scopes**: state_region  
 **Supported Targets**: country  
 
+## add_cohesion_number
+Adds a specific amount of Cohesion to the Power Bloc in scope  
+add_cohesion_number = 100 [adds 100 points to Cohesion]  
+**Supported Scopes**: power_bloc  
+
+## add_cohesion_percent
+Adds a percentage-based amount of Cohesion to the Power Bloc in scope  
+add_cohesion_percent = -0.2 [reduces Cohesion by 20% of its maximum value]  
+**Supported Scopes**: power_bloc  
+
 ## add_commander_rank
 Promotes/demotes a character a given amount of military ranks  
 **Supported Scopes**: character  
@@ -107,7 +117,7 @@ Changes the current law enactment phase in scope country by an added amount. The
 **Supported Scopes**: country  
 
 ## add_enactment_setback
-Changes the current law enactment setback count in scope country by an added amount. The result will be clamped between 0 and NPolitics::LAW_ENACTMENT_MAX_SETBACKS. The law enactment will fail if the resulting value equals NPolitics::LAW_ENACTMENT_MAX_SETBACKS.  
+Changes the current law enactment setback count in scope country by an added amount. The result will be clamped between 0 and country_law_max_setbacks_add The law enactment will fail if the resulting value equals country_law_max_setbacks_add  
 **Supported Scopes**: country  
 
 ## add_era_researched
@@ -164,6 +174,23 @@ Adds x% progress to the current checkpoint of the law being passed (range is [0,
 add_law_progress = 0.1 / -0.1  
 **Supported Scopes**: country  
 
+## add_leverage
+Adds the specified amount of leverage for the Power Bloc in scope on the country specified  
+If the value is positive, also reduces the amount of Leverage of all other Blocs proportionally to match  
+add_leverage = { target = country_scope value = script_value }  
+**Supported Scopes**: power_bloc  
+
+## add_liberty_desire
+Adds Liberty Desire to a Subject Country. Does nothing if the scoped country is not a subject in a Diplomatic Pact.  
+add_liberty_desire = -5  
+**Supported Scopes**: country  
+
+## add_lobby_member
+Adds an interest group as a member of scope political lobby  
+add_lobby_member = scope:interest_group  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## add_loyalists
 Adds loyalists to pops in scope country, all parameters except value are optional,  
 if interest_group is specified pops gain loyalists based on their ig membership,  
@@ -194,7 +221,7 @@ add_radicals_in_state = {
 
 ## add_modifier
 Adds a timed modifier effect to object in scope  
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, state  
+**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
 
 ## add_momentum
 Adds momentum to a Party during a campaign perioddd_momentum = value  
@@ -227,6 +254,19 @@ add_primary_culture = X
 Where X is a culture scope  
 **Supported Scopes**: country  
 **Supported Targets**: culture  
+
+## add_principle
+Adds principle to powerbloc  
+power_bloc =  
+{  
+add_principle = test_principle_group_A_1  
+}  
+**Supported Scopes**: power_bloc  
+
+## add_progress
+Adds progress to a journal entry progressbar  
+add_progress = {value = -5name = example_progress_bar_name}  
+**Supported Scopes**: journalentry  
 
 ## add_radicals
 Adds radicals to pops in scope country, all parameters except value are optional,  
@@ -393,6 +433,19 @@ Stops enacting the country's currently enacting law
 cancel_enactment = yes  
 **Supported Scopes**: country  
 
+## cancel_imposition
+Cancels imposition of the law (not law type) in scope  
+scope:country.imposed_law = { cancel_imposition = yes }  
+**Supported Scopes**: none/all  
+
+## change_appeasement
+Change appeasement of scope political lobby  
+change_appeasement = {  
+	amount = 1  
+	factor = trade_agreement_formed  
+}  
+**Supported Scopes**: political_lobby  
+
 ## change_character_culture
 Changes the culture of the scoped character  
 change_character_culture = cu:colombian  
@@ -458,7 +511,7 @@ change_relations = {
 **Supported Scopes**: country  
 
 ## change_subject_type
-Will change the subject type of the country that is the current scope.  
+Changes the subject type of the country in scope while retaining the current Liberty Desire value.  
 change_subject_type = subject_type_dominion  
 **Supported Scopes**: country  
 
@@ -554,16 +607,35 @@ copy_laws = scope
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## create_bidirectional_truce
+Create a bidirectional truce between two countries  
+create_bidirectional_truce = {  
+	tcountry = country scope/tag  
+	months = integer  
+}  
+**Supported Scopes**: country  
+
 ## create_building
 Creates a building in the scoped state. Supported values are:  
 	building = <building>  
 	activate_production_methods = { <production_methods> }  
 	subsidized = yes/no  
 	reserves = [0..1] (percentage of cash reserves the building should be created with)  
-	level = arable_land/integer  
+	add_ownership = { (mutually exclusive with level)  
+		country = { (give ownership levels to a specific country)  
+			country = s:GBR (country script target)  
+			levels = 5  
+		}  
+		country = { (give ownership levels to a specific building)  
+			type = building_financial_district (building type that will get ownership levels, should be self or other ownership type)  
+			region = STATE_SINAI (region where owning building is placed)  
+			country = s:GBR (country script target for a region)  
+			levels = 3  
+		}  
+	}  
+	level = arable_land/integer(mutually exclusive with add_ownership)  
   
 If level is "arable_land", the building will be of the necessary level to exhaust all available arable land in the state.  
-If level is "urbanization", the building will be of the necessary level to exhaust all available urbanzation in the state.  
 If level is an integer, the building will be of that level  
   
 Please note: this effect works a little differently if there already is a building of the specified type in the state. If that happens:  
@@ -605,6 +677,14 @@ create_country = {
 	on_created = effect	# optional effect that will be run with the newly created country in scope  
 }  
 **Supported Scopes**: none/all  
+
+## create_diplomatic_catalyst
+Creates a new diplomatic catalyst  
+create_diplomatic_catalyst = {  
+	type = catalyst_relations_level_increased  
+	arget = <country scope>  
+}  
+**Supported Scopes**: country  
 
 ## create_diplomatic_pact
 Create a diplomatic pact between two countries, with scope country as initiator  
@@ -689,9 +769,31 @@ create_military_formation = {
 }  
 **Supported Scopes**: country  
 
+## create_political_lobby
+Creates a new political lobby  
+create_political_lobby = {  
+	type = lobby_pro_country  
+	arget = <country scope>  
+	add_interest_group = <ig scope 1>  
+	add_interest_group = <ig scope 2>  
+	add_interest_group = <ig scope 3>  
+}  
+**Supported Scopes**: country  
+
 ## create_pop
 Creates a pop in the scoped state  
 **Supported Scopes**: state  
+
+## create_power_bloc
+Creates a power bloc with the scoped object as leader  
+create_power_bloc = {  
+	name = loc_key  
+	map_color = { R G B } or hsv{ H S V }	founding_date = yyyy.mm.dd, optional  
+	identity = power bloc identity key  
+	principle = power bloc principle key, can be repeated  
+	member = country scope, can be repeated  
+}  
+**Supported Scopes**: country  
 
 ## create_state
 creates a state in a state region  
@@ -708,9 +810,9 @@ trade_route = {
 }  
 **Supported Scopes**: country  
 
-## create_truce
-Create a truce betweeen two countries  
-create_truce = {  
+## create_unidirectional_truce
+Create a unidirectional truce for one country towards another  
+create_unidirectional_truce = {  
 	tcountry = country scope/tag  
 	months = integer  
 }  
@@ -773,6 +875,11 @@ debug_log_scopes = yes # log full scope info
 debug_log_scopes = no  # log only current scope  
 **Supported Scopes**: none/all  
 
+## decrease_autonomy
+Change a country's subject type to a less autonomus one  
+decrease_autonomy = yes  
+**Supported Scopes**: country  
+
 ## deploy_to_front
 Deploys the scope formation to the target front  
 deploy_to_front = p:xFAFAFA.front  
@@ -783,6 +890,11 @@ deploy_to_front = p:xFAFAFA.front
 Removes all interest groups from the party, causing it to disband  
 disband_party = yes  
 **Supported Scopes**: party  
+
+## disband_political_lobby
+Disband scoped political lobby  
+disband_political_lobby = yes  
+**Supported Scopes**: political_lobby  
 
 ## disinherit_character
 Strips the scoped character of their heir status in whichever countries apply.  
@@ -807,12 +919,17 @@ end_play = bool
 **Supported Scopes**: diplomatic_play  
 
 ## end_truce
-Ends a truce betweeen two countries  
-end_truce = {  
-	tcountry = country scope/tag  
-	months = integer  
+Ends any truce betweeen two countries  
+end_truce = country_scope  
 }  
 **Supported Scopes**: country  
+**Supported Targets**: country  
+
+## every_active_law
+Iterate through all active laws in a country  
+every_active_law = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: law  
 
 ## every_active_party
 Iterate through all active political parties in a country  
@@ -875,11 +992,23 @@ every_country = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none/all  
 **Supported Targets**: country  
 
+## every_diplomatic_catalyst
+Iterate through all diplomatic catalysts in the recent memory of a country  
+every_diplomatic_catalyst = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: diplomatic_catalyst  
+
 ## every_diplomatic_play
 Iterate through all diplomatic plays globally  
 every_diplomatic_play = { limit = { <triggers> } <effects> }  
 **Supported Scopes**: none/all  
 **Supported Targets**: diplomatic_play  
+
+## every_diplomatically_relevant_country
+Iterate through all diplomatically relevant countries of a country scope  
+every_diplomatically_relevant_country = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## every_enemy_in_diplo_play
 Iterate through all enemies of scope country in all diplomatic plays (includes wars)  
@@ -926,6 +1055,12 @@ every_law = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: law  
 
+## every_lobby_member
+Iterate through all interest group members of a lobby  
+every_lobby_member = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## every_market
 Iterate through all markets globally  
 every_market = { limit = { <triggers> } <effects> }  
@@ -969,6 +1104,12 @@ every_participant = { limit = { <triggers> } <effects> }
 **Supported Scopes**: diplomatic_pact  
 **Supported Targets**: country  
 
+## every_political_lobby
+Iterate through all political lobbies in a country or interest group  
+every_political_lobby = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: country, interest_group  
+**Supported Targets**: political_lobby  
+
 ## every_political_movement
 Iterate through all political movements in a country  
 every_political_movement = { limit = { <triggers> } <effects> }  
@@ -980,6 +1121,18 @@ Iterate through all potential political parties in a country
 every_potential_party = { limit = { <triggers> } <effects> }  
 **Supported Scopes**: country  
 **Supported Targets**: party  
+
+## every_power_bloc
+Iterate through all power blocs  
+every_power_bloc = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: none/all  
+**Supported Targets**: power_bloc  
+
+## every_power_bloc_member
+Iterate through all members of the scoped power bloc including the leader  
+every_power_bloc_member = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: country  
 
 ## every_preferred_law
 Iterate through all active and possible laws in an interest group's country, ordered by how much they prefer that law  
@@ -1000,8 +1153,14 @@ every_province = { limit = { <triggers> } <effects> }
 **Supported Targets**: state  
 
 ## every_rival_country
-Any country that is rival to the country in a scope  
+Any country that is being rivaled by the country in a scope  
 every_rival_country = { limit = { <triggers> } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## every_rivaling_country
+Any country that is rivaling the country in a scope  
+every_rivaling_country = { limit = { <triggers> } <effects> }  
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -1220,10 +1379,26 @@ Executes enclosed effects if limit criteria are met
 if = { limit = { <triggers> } <effects> }  
 **Supported Scopes**: none/all  
 
+## increase_autonomy
+Change a country's subject type to a more autonomus one  
+increase_autonomy = yes  
+**Supported Scopes**: country  
+
+## join_power_bloc
+Scoped country joins the power bloc of the target scoped country  
+join_power_bloc = c:USA  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## join_revolution
 Adds interest group to ongoing revolution  
 join_revolution = yes/no  
 **Supported Scopes**: interest_group  
+
+## join_war
+Makes target join a scoped war in a specific side.  
+join_war = { target = scope:target_country side = root }  
+**Supported Scopes**: war  
 
 ## kill_character
 Kill a character  
@@ -1312,6 +1487,19 @@ NOTE: VERY IMPORTANT! This effect _may_ change the pop type of the moved pop. Th
 2.if the current pop type is a slave type and the target state does not allow slavery, the new pop type will be the default one  
 **Supported Scopes**: pop  
 **Supported Targets**: state  
+
+## ordered_active_law
+Iterate through all active laws in a country  
+ordered_active_law = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: law  
 
 ## ordered_active_party
 Iterate through all active political parties in a country  
@@ -1444,6 +1632,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: none/all  
 **Supported Targets**: country  
 
+## ordered_diplomatic_catalyst
+Iterate through all diplomatic catalysts in the recent memory of a country  
+ordered_diplomatic_catalyst = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: diplomatic_catalyst  
+
 ## ordered_diplomatic_play
 Iterate through all diplomatic plays globally  
 ordered_diplomatic_play = {  
@@ -1456,6 +1657,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }  
 **Supported Scopes**: none/all  
 **Supported Targets**: diplomatic_play  
+
+## ordered_diplomatically_relevant_country
+Iterate through all diplomatically relevant countries of a country scope  
+ordered_diplomatically_relevant_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## ordered_enemy_in_diplo_play
 Iterate through all enemies of scope country in all diplomatic plays (includes wars)  
@@ -1558,6 +1772,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country  
 **Supported Targets**: law  
 
+## ordered_lobby_member
+Iterate through all interest group members of a lobby  
+ordered_lobby_member = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## ordered_market
 Iterate through all markets globally  
 ordered_market = {  
@@ -1650,6 +1877,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: diplomatic_pact  
 **Supported Targets**: country  
 
+## ordered_political_lobby
+Iterate through all political lobbies in a country or interest group  
+ordered_political_lobby = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: country, interest_group  
+**Supported Targets**: political_lobby  
+
 ## ordered_political_movement
 Iterate through all political movements in a country  
 ordered_political_movement = {  
@@ -1675,6 +1915,32 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }  
 **Supported Scopes**: country  
 **Supported Targets**: party  
+
+## ordered_power_bloc
+Iterate through all power blocs  
+ordered_power_bloc = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: none/all  
+**Supported Targets**: power_bloc  
+
+## ordered_power_bloc_member
+Iterate through all members of the scoped power bloc including the leader  
+ordered_power_bloc_member = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: country  
 
 ## ordered_preferred_law
 Iterate through all active and possible laws in an interest group's country, ordered by how much they prefer that law  
@@ -1716,8 +1982,21 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Targets**: state  
 
 ## ordered_rival_country
-Any country that is rival to the country in a scope  
+Any country that is being rivaled by the country in a scope  
 ordered_rival_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## ordered_rivaling_country
+Any country that is rivaling the country in a scope  
+ordered_rivaling_country = {  
 limit = { <triggers> }  
 order_by = script_value  
 position = int  
@@ -2146,6 +2425,12 @@ random = {
 }  
 **Supported Scopes**: none/all  
 
+## random_active_law
+Iterate through all active laws in a country  
+random_active_law = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: law  
+
 ## random_active_party
 Iterate through all active political parties in a country  
 random_active_party = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
@@ -2207,11 +2492,23 @@ random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects>
 **Supported Scopes**: none/all  
 **Supported Targets**: country  
 
+## random_diplomatic_catalyst
+Iterate through all diplomatic catalysts in the recent memory of a country  
+random_diplomatic_catalyst = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: diplomatic_catalyst  
+
 ## random_diplomatic_play
 Iterate through all diplomatic plays globally  
 random_diplomatic_play = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
 **Supported Scopes**: none/all  
 **Supported Targets**: diplomatic_play  
+
+## random_diplomatically_relevant_country
+Iterate through all diplomatically relevant countries of a country scope  
+random_diplomatically_relevant_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
 
 ## random_enemy_in_diplo_play
 Iterate through all enemies of scope country in all diplomatic plays (includes wars)  
@@ -2265,6 +2562,12 @@ Selects one effect from the list and fires it. The effects are weighted by numbe
 The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH constructs)  
 **Supported Scopes**: none/all  
 
+## random_lobby_member
+Iterate through all interest group members of a lobby  
+random_lobby_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## random_log_scopes
 Log the current scope to the random log when this effect executes.  
 Only use temprorarily for debugging purposes as it can introduce localized strings into the random log.  
@@ -2315,6 +2618,12 @@ random_participant = { limit = { <triggers> } (optional) weight = { mtth } <effe
 **Supported Scopes**: diplomatic_pact  
 **Supported Targets**: country  
 
+## random_political_lobby
+Iterate through all political lobbies in a country or interest group  
+random_political_lobby = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: country, interest_group  
+**Supported Targets**: political_lobby  
+
 ## random_political_movement
 Iterate through all political movements in a country  
 random_political_movement = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
@@ -2326,6 +2635,18 @@ Iterate through all potential political parties in a country
 random_potential_party = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
 **Supported Scopes**: country  
 **Supported Targets**: party  
+
+## random_power_bloc
+Iterate through all power blocs  
+random_power_bloc = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: none/all  
+**Supported Targets**: power_bloc  
+
+## random_power_bloc_member
+Iterate through all members of the scoped power bloc including the leader  
+random_power_bloc_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: power_bloc  
+**Supported Targets**: country  
 
 ## random_preferred_law
 Iterate through all active and possible laws in an interest group's country, ordered by how much they prefer that law  
@@ -2346,8 +2667,14 @@ random_province = { limit = { <triggers> } (optional) weight = { mtth } <effects
 **Supported Targets**: state  
 
 ## random_rival_country
-Any country that is rival to the country in a scope  
+Any country that is being rivaled by the country in a scope  
 random_rival_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
+## random_rivaling_country
+Any country that is rivaling the country in a scope  
+random_rivaling_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }  
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
@@ -2535,6 +2862,12 @@ random_valid_mass_migration_culture = { limit = { <triggers> } (optional) weight
 Recalculates and updates a country's pop IG memberships = bool  
 **Supported Scopes**: country  
 
+## regime_change
+Executes a regime change by the scope country in the target country.  
+regime_change = scope:upstart_country  
+**Supported Scopes**: country  
+**Supported Targets**: country  
+
 ## remove_active_objective_subgoal
 Removes an active objective subgoal  
 remove_active_objective_subgoal = <key>  
@@ -2645,6 +2978,12 @@ Where X is the name of the variable
 Where Y is an event target  
 **Supported Scopes**: none/all  
 
+## remove_lobby_member
+Removes an interest group as a member of scope political lobby  
+remove_lobby_member = scope:interest_group  
+**Supported Scopes**: political_lobby  
+**Supported Targets**: interest_group  
+
 ## remove_local_variable
 Removes a variable  
 remove_variable = variable_name  
@@ -2652,7 +2991,7 @@ remove_variable = variable_name
 
 ## remove_modifier
 Removes a timed modifier effect to object in scope  
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, state  
+**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
 
 ## remove_primary_culture
 Removes a culture from the primary cultures of a country  
@@ -2660,6 +2999,14 @@ remove_primary_culture = X
 Where X is a culture scope  
 **Supported Scopes**: country  
 **Supported Targets**: culture  
+
+## remove_principle
+Removes principle from powerbloc  
+power_bloc =  
+{  
+remove_principle = test_principle_group_A_1  
+}  
+**Supported Scopes**: power_bloc  
 
 ## remove_ruling_interest_group
 Removes interest group in scope from government  
@@ -2760,6 +3107,11 @@ set_available_for_autonomous_investment = building type scope
 **Supported Scopes**: state  
 **Supported Targets**: building_type  
 
+## set_bar_progress
+Sets progress for a journal entry scripted progressbar  
+set_bar_progress = {value = -5name = example_progress_bar_name}  
+**Supported Scopes**: journalentry  
+
 ## set_capital
 Set capital state in a country scope  
 set_capital = X  
@@ -2800,7 +3152,8 @@ Set devastation to a state region
 **Supported Scopes**: state_region  
 
 ## set_diplomats_expelled
-Set diplomats expelled = bool  
+Expels diplomats from target country in scoped country  
+set_diplomats_expelled = scope:target_country  
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
