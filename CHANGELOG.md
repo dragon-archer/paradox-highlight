@@ -1,5 +1,12 @@
 # Paradox Highlight Changelog
 
+## Version 1.5.0, 2024-06-26
+
+### Enhancements
+
+- Update `Victoria 3` to version 1.7.0 (Kahwah)
+- Improve auto language detection
+
 ## Version 1.4.0, 2024-06-08
 
 ### New Feature
