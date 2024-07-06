@@ -3,7 +3,9 @@
 [![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
 [![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
 
-Syntax highlight & formatter for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
+中文版简介请看[这里](README.zh.md)
+
+**Syntax highlight** & **formatter** for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
 
 ## Examples
 
