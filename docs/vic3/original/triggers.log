@@ -498,6 +498,11 @@ scope:country = {
 }Traits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 
+## army_power_projection
+Compare to a country's total army power projection  
+ scope:example_country = { army_power_projection < root.army_power_projectionTraits: <, <=, =, !=, >, >=  
+**Supported Scopes**: country  
+
 ## assert_if
 Conditionally cause an assert during run time  
 assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string  
@@ -2284,6 +2289,12 @@ True if IG scope is marginal
 is_marginal = boolTraits: yes/no   
 **Supported Scopes**: interest_group  
 
+## is_market_reachable_for_trade
+Check if the scope country can reach the specified market scope for purposes of trade  
+is_market_reachable_for_trade = scope:my_market_scopeTraits: market scope  
+**Supported Scopes**: country  
+**Supported Targets**: market  
+
 ## is_mass_migration_origin
 Checks if the scoped country is the origin of mass migration  
 is_mass_migration_origin = yesTraits: yes/no   
@@ -2896,7 +2907,7 @@ nationalization_cost = { target = scope:other_country value > 100000 }Traits: <,
 **Supported Scopes**: country  
 
 ## naval_power_projection
-Compares a Country's naval_power_projection   
+Compare to a country's total navy power projection  
  scope:example_country = { naval_power_projection < root.naval_power_projectionTraits: <, <=, =, !=, >, >=  
 **Supported Scopes**: country  
 

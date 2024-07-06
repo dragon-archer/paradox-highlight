@@ -81,6 +81,7 @@ approaching_bureaucracy_shortage
 arable_land
 arable_land_country
 army_mobilization_option_fraction
+army_power_projection
 authority
 available_jobs
 average_country_infrastructure
@@ -419,6 +420,7 @@ is_lens_open
 is_local_player
 is_losing_power_rank
 is_marginal
+is_market_reachable_for_trade
 is_mass_migration_origin
 is_mass_migration_origin_of_culture
 is_mass_migration_target

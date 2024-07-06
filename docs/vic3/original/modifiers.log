@@ -522,10 +522,6 @@ country_leverage_resistance_mult:
   Mask: country
   Name: 影响抗性
   Description: 提高或降低国家保持的影响，使任何国家集团邀请其加入的难度变大
-country_leverage_resistance_per_population_add:
-  Mask: country
-  Name: 来自人口规模的影响抗性
-  Description: 提高或降低国家从每1.00M居住于此的个体中获得的影响抗性
 country_liberty_desire_add:
   Mask: country
   Name: 每周独立倾向
@@ -942,25 +938,9 @@ power_bloc_income_transfer_to_leader_factor:
   Mask: power_bloc
   Name: 给国家集团领袖的收入转移
   Description: concept_power_bloc_memembers转移给国家集团领袖的税收百分比
-power_bloc_invite_acceptance_great_power_add:
+power_bloc_invite_acceptance_add:
   Mask: power_bloc
-  Name: 列强的国家集团邀请接受概率
-  Description: 对国家集团邀请的接受概率的增益或惩罚
-power_bloc_invite_acceptance_major_power_add:
-  Mask: power_bloc
-  Name: 主要政权的国家集团邀请接受概率
-  Description: 对国家集团邀请的接受概率的增益或惩罚
-power_bloc_invite_acceptance_minor_power_add:
-  Mask: power_bloc
-  Name: 次要政权的国家集团邀请接受概率
-  Description: 对国家集团邀请的接受概率的增益或惩罚
-power_bloc_invite_acceptance_unrecognized_major_power_add:
-  Mask: power_bloc
-  Name: 未受认可的主要政权的国家集团邀请接受概率
-  Description: 对国家集团邀请的接受概率的增益或惩罚
-power_bloc_invite_acceptance_unrecognized_regional_power_add:
-  Mask: power_bloc
-  Name: 未受认可的区域政权的国家集团邀请接受概率
+  Name: 国家集团邀请接受概率
   Description: 对国家集团邀请的接受概率的增益或惩罚
 power_bloc_leader_can_add_wargoal_bool:
   Mask: power_bloc
@@ -986,30 +966,6 @@ power_bloc_mandate_progress_mult:
   Mask: power_bloc
   Name: 每周授权进度
   Description: 提高或降低国家集团的每周授权进度。
-power_bloc_mandate_progress_per_great_power_member_add:
-  Mask: power_bloc
-  Name: 授权进度/列强
-  Description: 决定一个国家集团每有一个列强国际地位的成员获得多少授权进度
-power_bloc_mandate_progress_per_great_power_member_mult:
-  Mask: power_bloc
-  Name: 授权进度/列强
-  Description: 决定一个国家集团每有一个列强国际地位的成员获得多少授权进度
-power_bloc_mandate_progress_per_major_power_member_add:
-  Mask: power_bloc
-  Name: 授权进度/主要政权
-  Description: 决定一个国家集团每有一个主要政权国际地位的成员获得多少授权进度
-power_bloc_mandate_progress_per_major_power_member_mult:
-  Mask: power_bloc
-  Name: 授权进度/主要政权
-  Description: 决定一个国家集团每有一个主要政权国际地位的成员获得多少授权进度
-power_bloc_mandate_progress_per_minor_power_member_add:
-  Mask: power_bloc
-  Name: 授权进度/次要政权
-  Description: 决定一个国家集团每有一个次要政权国际地位的成员获得多少授权进度
-power_bloc_mandate_progress_per_minor_power_member_mult:
-  Mask: power_bloc
-  Name: 授权进度/次要政权
-  Description: 决定一个国家集团每有一个次要政权国际地位的成员获得多少授权进度
 power_bloc_religion_trade_route_competitiveness_mult:
   Mask: power_bloc
   Name: 虔信者贸易路线竞争力
@@ -1298,6 +1254,10 @@ state_welfare_payments_add:
   Mask: state
   Name: 福利金
   Description: 人群从国家获得的福利金占正常工资的比例
+state_welfare_payments_mult:
+  Mask: state
+  Name: 福利金乘数
+  Description: 地区内福利金总额会乘以该数值
 state_working_adult_ratio_add:
   Mask: state
   Name: 劳动力比例
@@ -2060,6 +2020,10 @@ building_group_bg_plantations_unincorporated_throughput_add:
   Mask: building
   Name: 未整合地区的种植园吞吐量
   Description: 对未整合地区种植园吞吐量的增益或惩罚
+building_group_bg_ranching_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的牧场建筑等级下限
+  Description: 工人所有的牧场建筑最低数值。
 building_group_bg_ranching_farmers_mortality_mult:
   Mask: building
   Name: 牧场的farmers!农民死亡率
@@ -2348,14 +2312,26 @@ country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool:
   Mask: country
   Name: 对集团成员强制施行相同的教会与国家法律
   Description: 允许对其他集团成员强制施行与自己相同的教会与国家法律
+country_can_impose_same_lawgroup_colonization_in_power_bloc_bool:
+  Mask: country
+  Name: 对集团成员强制施行相同的殖民机构法律
+  Description: 允许对其他集团成员强制施行与自己相同的殖民机构法律
 country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool:
   Mask: country
   Name: 对集团成员强制施行相同的权力分配法律
   Description: 允许对其他集团成员强制施行与自己相同的权力分配法律
+country_can_impose_same_lawgroup_education_system_in_power_bloc_bool:
+  Mask: country
+  Name: 对集团成员强制施行相同的教育体制法律
+  Description: 允许对其他集团成员强制施行与自己相同的教育体制法律
 country_can_impose_same_lawgroup_governance_principles_in_power_bloc_bool:
   Mask: country
   Name: 对集团成员强制施行相同的治理原则法律
   Description: 允许对其他集团成员强制施行与自己相同的治理原则法律
+country_can_impose_same_lawgroup_policing_in_power_bloc_bool:
+  Mask: country
+  Name: 对集团成员强制施行相同的警察机构法律
+  Description: 允许对其他集团成员强制施行与自己相同的警察机构法律
 country_capitalists_pol_str_mult:
   Mask: country
   Name: capitalists!资本家政治力量
@@ -2376,6 +2352,18 @@ country_clerks_voting_power_add:
   Mask: country
   Name: clerks!职员选票产生的政治力量
   Description: 对选举时clerks!职员选票提供的政治力量的提高或降低
+country_disallow_law_no_colonial_affairs_bool:
+  Mask: country
+  Name: 禁止无殖民事务
+  Description: 禁止施行无殖民事务
+country_disallow_law_no_police_bool:
+  Mask: country
+  Name: 禁止无警察
+  Description: 禁止施行无警察
+country_disallow_law_no_schools_bool:
+  Mask: country
+  Name: 禁止无学校
+  Description: 禁止施行无学校
 country_enactment_success_chance_law_public_schools_add:
   Mask: country
   Name: 公立学校的立法成功概率
@@ -2420,6 +2408,10 @@ country_institution_cost_institution_police_mult:
   Mask: country
   Name: 执法机构bur!行政力花费
   Description: 执法机构投入所需的bur!行政力花费的增加或减少
+country_institution_cost_institution_schools_mult:
+  Mask: country
+  Name: 教育bur!行政力花费
+  Description: country_institution_cost_institution_schools_mult_desc
 country_institution_health_system_max_investment_add:
   Mask: country
   Name: 最大卫生系统机构投入等级
@@ -2448,6 +2440,10 @@ country_institution_size_change_speed_institution_police_mult:
   Mask: country
   Name: 执法机构规模变更速度
   Description: 你变更执法机构规模的速度有多快
+country_institution_size_change_speed_institution_schools_mult:
+  Mask: country
+  Name: 教育机构规模变更速度
+  Description: 你变更教育规模的速度有多快
 country_institution_social_security_max_investment_add:
   Mask: country
   Name: 最大社会保障机构投入等级
@@ -3104,6 +3100,82 @@ interest_group_ig_trade_unions_pop_attraction_mult:
   Mask: interest_group
   Name: 无政治阵营（）人群吸引力
   Description: 对无政治阵营（）利益集团吸引人群支持的能力的增益或惩罚
+power_bloc_invite_acceptance_great_power_add:
+  Mask: power_bloc
+  Name: 列强的国家集团邀请接受概率
+  Description: 对国家集团邀请的接受概率的增益或惩罚
+power_bloc_invite_acceptance_major_power_add:
+  Mask: power_bloc
+  Name: 主要政权的国家集团邀请接受概率
+  Description: 对国家集团邀请的接受概率的增益或惩罚
+power_bloc_invite_acceptance_minor_power_add:
+  Mask: power_bloc
+  Name: 次要政权的国家集团邀请接受概率
+  Description: 对国家集团邀请的接受概率的增益或惩罚
+power_bloc_invite_acceptance_unrecognized_major_power_add:
+  Mask: power_bloc
+  Name: 未受认可的主要政权的国家集团邀请接受概率
+  Description: 对国家集团邀请的接受概率的增益或惩罚
+power_bloc_invite_acceptance_unrecognized_regional_power_add:
+  Mask: power_bloc
+  Name: 未受认可的区域政权的国家集团邀请接受概率
+  Description: 对国家集团邀请的接受概率的增益或惩罚
+power_bloc_mandate_progress_per_great_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/列强
+  Description: 决定一个国家集团每有一个列强国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_great_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/列强
+  Description: 决定一个国家集团每有一个列强国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_insignificant_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/弱小政权
+  Description: 决定一个国家集团每有一个弱小政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_insignificant_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/弱小政权
+  Description: 决定一个国家集团每有一个弱小政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_major_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/主要政权
+  Description: 决定一个国家集团每有一个主要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_major_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/主要政权
+  Description: 决定一个国家集团每有一个主要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_minor_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/次要政权
+  Description: 决定一个国家集团每有一个次要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_minor_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/次要政权
+  Description: 决定一个国家集团每有一个次要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_major_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/未受认可的主要政权
+  Description: 决定一个国家集团每有一个未受认可的主要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_major_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/未受认可的主要政权
+  Description: 决定一个国家集团每有一个未受认可的主要政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/未受认可国家
+  Description: 决定一个国家集团每有一个未受认可国家国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/未受认可国家
+  Description: 决定一个国家集团每有一个未受认可国家国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_regional_power_member_add:
+  Mask: power_bloc
+  Name: 授权进度/未受认可的区域政权
+  Description: 决定一个国家集团每有一个未受认可的区域政权国际地位的成员获得多少授权进度
+power_bloc_mandate_progress_per_unrecognized_regional_power_member_mult:
+  Mask: power_bloc
+  Name: 授权进度/未受认可的区域政权
+  Description: 决定一个国家集团每有一个未受认可的区域政权国际地位的成员获得多少授权进度
 state_aborigine_standard_of_living_add:
   Mask: state
   Name: 澳洲土著人[concept_sol]修正
@@ -3843,10 +3915,6 @@ state_mande_standard_of_living_add:
 state_manipuri_standard_of_living_add:
   Mask: state
   Name: 曼尼普尔人[concept_sol]修正
-  Description: 对特定文化[concept_sol]的增益或惩罚
-state_manul_standard_of_living_add:
-  Mask: state
-  Name: 马努尔人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_maori_standard_of_living_add:
   Mask: state
@@ -11834,6 +11902,16 @@ goods_output_transportation_mult:
   Mask: goods
 goods_output_wood_mult:
   Mask: goods
+power_bloc_invite_acceptance_decentralized_power_add:
+  Mask: power_bloc
+power_bloc_invite_acceptance_insignificant_power_add:
+  Mask: power_bloc
+power_bloc_invite_acceptance_unrecognized_power_add:
+  Mask: power_bloc
+power_bloc_mandate_progress_per_decentralized_power_member_add:
+  Mask: power_bloc
+power_bloc_mandate_progress_per_decentralized_power_member_mult:
+  Mask: power_bloc
 state_academics_dependent_wage_mult:
   Mask: state
 state_academics_internal_migration_disallowed_bool:

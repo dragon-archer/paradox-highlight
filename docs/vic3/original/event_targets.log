@@ -1297,11 +1297,6 @@ Scope from an object to its type
 Input Scopes: building, company, diplomatic_play, diplomatic_catalyst, political_lobby, institution, interest_group, law
 Output Scopes: building_type, company_type, diplomatic_play_type, institution_type, interest_group_type, law_type
 
-### imposer_of_law
-Scope from a country to the country currrently imposing a law on them
-Input Scopes: country, law
-Output Scopes: country
-
 ### player_owed_obligation_days_left
 Scope to number of days left on an obligation in diplomatic relations scope (example: obligation_days_left >= 2)
 Input Scopes: diplomatic_relations
@@ -1316,6 +1311,11 @@ Output Scopes: value
 Scope to tension value in diplomatic relations scope (example: scope_tension >= 2)
 Input Scopes: diplomatic_relations
 Output Scopes: value
+
+### imposer_of_law
+Scope from a country to the country currrently imposing a law on them
+Input Scopes: country, law
+Output Scopes: country
 
 ### country
 If used in a military formation scope, scope to the country the formation belongs to.
