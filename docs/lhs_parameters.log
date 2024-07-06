@@ -1,3 +1,4 @@
+abs
 accept_break_score
 accept_effect
 accept_score
@@ -18,7 +19,9 @@ add
 add_claim_on_loss
 add_commander_trait
 add_infamy_for_starting_initiator_wargoals
+add_interest_group
 add_matrilineal_spouse
+add_ownership
 add_same_sex_spouse
 add_spouse
 addcolumn
@@ -43,16 +46,19 @@ agitator_weight
 ai
 ai_accept
 ai_accept_negotiation
+ai_acceptance_max
 ai_can_target_all_titles
 ai_chance
 ai_check_frequency
 ai_check_interval
+ai_country_goal_recalculation
 ai_county_target
 ai_create_score
 ai_demand_chance
 ai_enact_weight_modifier
 ai_frequency
 ai_goal
+ai_impose_chance
 ai_intermediary_accept
 ai_intermediary_maybe
 ai_join_score
@@ -61,6 +67,7 @@ ai_max
 ai_max_reply_days
 ai_maybe
 ai_min_reply_days
+ai_nationalization_desire
 ai_only_against_liege
 ai_only_against_neighbors
 ai_potential
@@ -75,6 +82,7 @@ ai_set_target
 ai_target_quick_trigger
 ai_target_score
 ai_targets
+ai_unification_support_score
 ai_usage
 ai_value
 ai_value_modifier
@@ -91,6 +99,7 @@ all_color_list
 all_county_modifier
 allow
 allow_change_country_flag
+allow_discriminated
 allow_hostages
 allow_negotiated_peace
 allow_outside
@@ -105,6 +114,7 @@ alpha
 alpha_curve
 always_follows_primary_heir
 always_possible
+always_self_owning
 always_use_patronym
 alwaystransparent
 ambience
@@ -116,6 +126,8 @@ answer_acknowledge_key
 answer_block_key
 answer_reject_key
 anti_interest_groups
+appeasement_factors_anti
+appeasement_factors_pro
 apply_modifier
 aptitude_level_breakpoints
 aptitude_score
@@ -147,6 +159,8 @@ auto_break_effect
 auto_fill
 auto_place_buildings
 auto_selection_weight
+auto_support_type
+autonomy_level
 autoresize
 autoresizescrollarea
 available_for_interest_group
@@ -241,6 +255,7 @@ can_equip
 can_fire
 can_get_government
 can_have
+can_impose
 can_invalidate_interaction
 can_keep
 can_leave
@@ -275,12 +290,14 @@ cancel_scheme_when_traveling_target
 cancellation_trigger
 candidate_score
 candidates
+cannot_switch_owner
 capital
 capital_province
 capped_by_resources
 capped_resources
 cash_reserves_max
 catalyst
+catalyst_effect_cooldown
 catalysts
 categories
 category
@@ -334,6 +351,7 @@ coa_with_overlord_canton
 coastal
 coat_of_arms
 coat_of_arms_template_lists
+cohesion
 collective_noun
 colonial_interest_ratio
 color
@@ -364,6 +382,7 @@ completed
 conditions
 config
 confirm_text
+confirmation_sound
 conscript_battalion_ratio
 construction_time
 consumption_mult
@@ -548,6 +567,7 @@ duchy_capital_building
 duchy_capital_county_culture_modifier
 duchy_capital_county_modifier
 duration
+duration_to_show
 dyn
 dynamic_country_definition
 dynamic_country_name
@@ -601,12 +621,14 @@ environment
 era
 ethnicities
 ethos
+evaluation_chance
 even_if_dead
 event
 event_image
 events
 excellent
 execute_reason
+exempt_from_service
 expand
 expandable
 experience
@@ -648,6 +670,7 @@ first_name
 first_neg
 first_not
 first_past
+first_state_list
 first_state_trigger
 first_valid
 first_valid_on_action
@@ -673,10 +696,12 @@ fonttintcolor
 force_notification
 force_pause_game
 forced_duration
+foreign_investment_ai_factor
 format
 format_override
 formation_modifier
 fortification
+founding_date
 frame
 framesize
 freeze_scheme_when_traveling
@@ -686,6 +711,7 @@ full_occupation_by_defender_gives_victory
 full_progres
 future_phases
 game_button
+game_data
 garrison_reinforcement_factor
 gender
 gender_female_chance
@@ -721,6 +747,7 @@ group
 group_equivelence
 group_inheritance
 grouping
+groups
 growing
 guest_can_arrive
 guest_description
@@ -821,6 +848,8 @@ inc_button
 incapacitating
 income_transfer
 income_transfer_based_on_recipient
+income_transfer_based_on_second_country
+income_transfer_to_pops
 increased_dynasty_prestige_birth_mult
 increased_dynasty_prestige_long_reign_mult
 increased_dynasty_prestige_marriage_mult
@@ -881,6 +910,7 @@ is_admiral
 is_agitator
 is_alliance
 is_allowed_claim_title
+is_always_usable
 is_available_on_create
 is_bad
 is_bad_for
@@ -898,6 +928,7 @@ is_default
 is_desert
 is_enabled
 is_exclusive
+is_foreign_investment_rights
 is_general
 is_good_for
 is_grand_activity
@@ -909,6 +940,7 @@ is_hostile
 is_humiliation
 is_initiator
 is_jungle
+is_loading_tip
 is_location_valid
 is_main_tag_only
 is_major_formation
@@ -919,6 +951,7 @@ is_playable
 is_predefined
 is_prefix
 is_repeatable
+is_rivalry
 is_riverside
 is_secret
 is_shown
@@ -957,11 +990,13 @@ last_name
 latest_usage_date
 law
 law_group_category
+law_type
 layer
 layers
 layoutpolicy_horizontal
 layoutpolicy_vertical
 leader_leaves
+leader_modifier
 leader_weight
 leaders_allowed_to_leave
 leadership_play
@@ -973,6 +1008,7 @@ lens
 level
 level_perk
 level_scaled
+levels
 levels_per_mesh
 levies
 levies_contribution_postfix
@@ -1002,6 +1038,7 @@ lower_autonomy_subject_type_alternatives
 lower_center_portrait
 lower_left_portrait
 lower_right_portrait
+lower_strata_pops
 loyalties_gain
 loyalty_score
 maa_upgrade
@@ -1014,6 +1051,7 @@ male_names
 male_only
 male_ruler
 mandate
+mandate_progress
 manpower_max
 manual_break_effect
 map_color
@@ -1025,6 +1063,7 @@ margin_left
 margin_right
 margin_top
 margin_widget
+market_owner
 martial_custom
 martial_tradition
 mask
@@ -1063,12 +1102,16 @@ maximum_success_chance
 maximumsize
 maxverticalslots
 medium
+member
+member_modifier
 men_at_arms
 men_can_have_consorts
 men_can_have_multiple_spouses
 mercenary_fallback
 mercenary_names
 meshes
+message
+middle_strata_pops
 military_type
 min
 min_approval
@@ -1142,6 +1185,7 @@ noble_chance
 noble_last_names
 non_aggression_pact
 non_interference
+non_leader_modifier
 none_not
 normal
 notification
@@ -1210,6 +1254,7 @@ on_enter_travel_state
 on_expire
 on_expose
 on_fail
+on_failed
 on_finish
 on_finish_task
 on_finish_task_county
@@ -1309,9 +1354,12 @@ owned_provinces
 owner_attracted
 owner_modifier
 owner_modifier_description
+ownership_type
+owns_other_buildings
 pact
 pagan_roots
 page
+paid_private_wage
 panel_name
 papermap_textures_file
 parameter
@@ -1356,6 +1404,7 @@ points
 political_engagement_base
 political_engagement_literacy_factor
 political_engagement_mult
+political_lobby_creation
 political_strength
 pollution_mask_strength
 pool_character_config
@@ -1387,6 +1436,7 @@ possible_political_movements
 potential
 potential_county
 potential_target_court
+power_bloc_modifier
 power_level
 power_per_agent_skill_point
 power_per_skill_point
@@ -1408,10 +1458,12 @@ prestige_relative_threshold
 primary_building
 primary_cultures
 primary_demand
+primary_for_identity
 primary_heir_minimum_share
 primary_heritages
 primary_holding
 prime_land
+principle
 prioritized_mood
 priority
 prison
@@ -1468,6 +1520,7 @@ recipient_recieve_cooldown
 recklessness
 recommended
 recruits_combat_unit
+recruits_combat_units
 redirect
 reference
 regiments_prestige_as_gold
@@ -1488,6 +1541,7 @@ reorder_on_mouse
 repeat_sound_effect
 replace
 replace_with
+replacement_if_valid
 replacement_modifiers
 replaces_company
 reply_item_key
@@ -1571,12 +1625,18 @@ scrollbarpolicy_horizontal
 scrollbarpolicy_vertical
 scrollwidget
 search_for_courtier
+second_country_gets_income_transfer
+second_foreign_anti_country_lobby_member_modifier
+second_foreign_pro_country_lobby_member_modifier
+second_modifier
 second_perspective_description
+second_state_list
 second_state_trigger
 secondary_scopes_optional
 secret
 secret_goal
 secret_goal_scores
+selectable
 selectable_in_lens
 selection_count
 selection_tooltip
@@ -1621,6 +1681,7 @@ show_requirements
 show_special_title
 shown_in_encyclopedia
 shown_in_ruler_designer
+side
 siege_participation_mult
 siege_tier
 siege_value
@@ -1670,6 +1731,7 @@ state_type
 state_value
 stateregion_max_level
 states
+statue
 status_desc
 steam_id
 step
@@ -1692,6 +1754,7 @@ succession
 suffix
 suggestion_type
 supply_limit_mult_for_others
+swap_type_on_failed
 sway_maneuvers_cost
 swing
 sync_inheritance_with
@@ -1835,7 +1898,9 @@ unlock_decision
 unlock_law
 unlock_maa
 unlocking_global_technologies
+unlocking_identity
 unlocking_laws
+unlocking_principles
 unlocking_production_methods
 unlocking_religions
 unlocking_technologies
@@ -1848,6 +1913,7 @@ upgrades
 uphoverframe
 upkeep_modifier
 upkeep_modifier_unscaled
+upper_strata_pops
 uppressedframe
 urbanization
 use_culture_states
@@ -1872,6 +1938,7 @@ uses_agents
 uses_opinion_of_liege
 uses_plural_naming
 uses_prestige
+uses_random_approval
 uses_resistance
 using
 valid
@@ -1887,6 +1954,7 @@ valid_position
 valid_sex
 valid_subject_country_types
 valid_subject_ranks
+valid_sway_wargoals_against_overlord
 valid_target_court
 valid_to_start
 valid_to_start_display_regardless
@@ -1941,6 +2009,10 @@ widgets
 width
 will_break
 will_propose
+will_propose_even_if_not_accepted
+will_propose_with_states
+will_select_as_first_state
+will_select_as_second_state
 window
 window_characters
 window_file

@@ -93,6 +93,8 @@ feed
 female
 female_only
 female_preference
+first_country_and_subjects
+first_required
 fixedgridbox
 flowcontainer
 framedbuttongfx
@@ -232,6 +234,7 @@ right
 royal_court
 ruler
 rural
+same_as_puppet
 same_faith
 same_family
 same_religion
