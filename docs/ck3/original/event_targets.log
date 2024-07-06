@@ -8,6 +8,12 @@ Output Scopes: character
 
 --------------------
 
+dynasty_founder - Get the founder of the scoped dynasty
+Input Scopes: dynasty
+Output Scopes: character
+
+--------------------
+
 activity_host - Get host character of the scoped activity
 Input Scopes: activity
 Output Scopes: character
@@ -60,6 +66,12 @@ Output Scopes: character
 vassal_contract_type - Get the type of a given activity
 Input Scopes: vassal_contract_obligation_level
 Output Scopes: vassal_contract
+
+--------------------
+
+epidemic_trait - Gets the trait that this epidemic will spread
+Input Scopes: epidemic_type
+Output Scopes: trait
 
 --------------------
 
@@ -228,6 +240,18 @@ Output Scopes: war
 ghw_war_declarer - Get declarer of scoped great holy war
 Input Scopes: ghw
 Output Scopes: character
+
+--------------------
+
+epidemic_type - Get the type of this epidemic
+Input Scopes: epidemic
+Output Scopes: epidemic_type
+
+--------------------
+
+outbreak_province - Get the province this epidemic outbreak started in
+Input Scopes: epidemic
+Output Scopes: province
 
 --------------------
 
@@ -416,6 +440,13 @@ Output Scopes: dynasty
 
 --------------------
 
+epidemic_type - Get the epidemic_type with the specified key
+Requires Data: yes
+Global Link: yes
+Output Scopes: epidemic_type
+
+--------------------
+
 event_id - Global link to event scope of the given event id
 Global Link: yes
 Output Scopes: flag
@@ -433,6 +464,13 @@ flag - Flag literals eg: flag:the_boss
 Requires Data: yes
 Global Link: yes
 Output Scopes: flag
+
+--------------------
+
+geographical_region - Get the geographical_region with the specified key
+Requires Data: yes
+Global Link: yes
+Output Scopes: geographical_region
 
 --------------------
 
@@ -459,6 +497,13 @@ Output Scopes: holding_type
 house - Link to house scope of the given house string
 Requires Data: yes
 Output Scopes: dynasty_house
+
+--------------------
+
+legend_type - Get the legend_type with the specified key
+Requires Data: yes
+Global Link: yes
+Output Scopes: legend_type
 
 --------------------
 
@@ -646,6 +691,36 @@ Output Scopes: accolade_type
 secondary_type - Get the secondary Accolade Type of given Accolade
 Input Scopes: accolade
 Output Scopes: accolade_type
+
+--------------------
+
+current_or_last_legend_owner - Get the current or last owner of this legend
+Input Scopes: legend
+Output Scopes: character
+
+--------------------
+
+legend_owner - Get the owner of this legend
+Input Scopes: legend
+Output Scopes: character
+
+--------------------
+
+legend_property - Get the scope of the property with the given name on the scoped legend
+Requires Data: yes
+Input Scopes: legend
+
+--------------------
+
+legend_protagonist - Get the protagonist character of this legend
+Input Scopes: legend
+Output Scopes: character
+
+--------------------
+
+legend_type - Get the type of this legend
+Input Scopes: legend
+Output Scopes: legend_type
 
 --------------------
 
@@ -961,6 +1036,12 @@ Output Scopes: character
 primary_title - Get primary title of scoped character
 Input Scopes: character
 Output Scopes: landed_title
+
+--------------------
+
+promoted_legend - Get the promoted legend of this character
+Input Scopes: character
+Output Scopes: legend
 
 --------------------
 
@@ -1460,3 +1541,12 @@ num_vassal_slots
 old_capital
 dynasty
 house
+has_slot_with_obligation
+firing
+epidemic
+epidemic_type
+legend
+num_legends
+creator
+protagonist
+can_afford_current_level

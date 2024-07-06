@@ -42,6 +42,7 @@ any_artifact_house_claimant
 any_attending_character
 any_barony
 any_character_artifact
+any_character_epidemic
 any_character_in_location
 any_character_struggle
 any_character_to_title_neighboring_and_across_water_county
@@ -62,6 +63,7 @@ any_claimed_artifact
 any_close_family_member
 any_close_or_extended_family_member
 any_combat_side
+any_completed_legend
 any_concubine
 any_connected_county
 any_consort
@@ -103,6 +105,8 @@ any_election_title
 any_elector
 any_empire
 any_entourage_character
+any_epidemic
+any_epidemic_type
 any_equipped_character_artifact
 any_extended_family_member
 any_faction_county_member
@@ -119,6 +123,7 @@ any_former_concubinist
 any_former_spouse
 any_future_path_location
 any_general_councillor
+any_geographical_region
 any_government_type
 any_guest_subset
 any_guest_subset_current_phase
@@ -141,6 +146,7 @@ any_in_global_list
 any_in_list
 any_in_local_list
 any_independent_ruler
+any_infected_province
 any_inspiration
 any_inspired_character
 any_interloper_ruler
@@ -155,6 +161,9 @@ any_knight
 any_known_secret
 any_learning_councillor
 any_leased_title
+any_legend
+any_legend_promoter
+any_legend_type
 any_liege_or_above
 any_living_character
 any_martial_councillor
@@ -176,7 +185,6 @@ any_owned_story
 any_parent
 any_parent_culture
 any_parent_culture_or_above
-any_participant
 any_past_holder
 any_past_holder_reversed
 any_patroned_holy_order
@@ -186,6 +194,7 @@ any_pinning_character
 any_played_character
 any_player
 any_player_heir
+any_player_legend_library
 any_pledged_attacker
 any_pledged_defender
 any_pool_character
@@ -196,8 +205,11 @@ any_pretender_title
 any_primary_war_enemy
 any_prisoner
 any_province
+any_province_epidemic
+any_province_legend
 any_prowess_councillor
 any_raid_target
+any_realm_border_county
 any_realm_county
 any_realm_de_jure_duchy
 any_realm_de_jure_empire
@@ -220,6 +232,7 @@ any_special_guest
 any_sponsored_inspiration
 any_spouse
 any_spouse_candidate
+any_spread_province
 any_stewardship_councillor
 any_sub_realm_barony
 any_sub_realm_county
@@ -246,6 +259,7 @@ any_title_to_title_neighboring_county
 any_title_to_title_neighboring_duchy
 any_title_to_title_neighboring_empire
 any_title_to_title_neighboring_kingdom
+any_top_realm_border_county
 any_tradition
 any_trait
 any_trait_in_category
@@ -298,6 +312,7 @@ can_be_employed_as
 can_be_exposed_by
 can_be_leased_out
 can_be_parent_of
+can_become_owner_of_legend
 can_benefit_from_artifact
 can_cancel
 can_create_faction
@@ -324,6 +339,8 @@ can_start_tutorial_lesson
 can_title_create_faction
 can_title_join_faction
 category
+ce1_heroic_track_perks
+ce1_legitimacy_legacy_track_perks
 character_has_commander_trait_scope_does_not
 character_is_land_realm_neighbor
 character_is_realm_neighbor
@@ -336,8 +353,6 @@ controls_holy_site
 controls_holy_site_with_flag
 council_task_monthly_progress
 county_control
-county_control_rate
-county_control_rate_modifier
 county_holder_opinion
 county_opinion
 county_opinion_target
@@ -373,8 +388,13 @@ days_of_continuous_war
 days_since_creation
 days_since_death
 days_since_joined_court
+days_since_legend_completion
+days_since_legend_start_date
 days_since_max_war_score
+days_since_outbreak_start
+days_since_province_infection
 days_since_sponsorship
+days_since_vassal_contract_liege_dynasty_reign_start
 days_travelled
 days_until_ghw_launch
 de_jure_drift_progress
@@ -418,6 +438,7 @@ employs_court_position
 employs_tax_collector
 ep1_culture_legacy_track_perks
 ep2_activities_legacy_track_perks
+epidemic_resistance
 erudition_legacy_track_perks
 estimated_faith_strength
 exists
@@ -517,6 +538,8 @@ has_cultural_tradition
 has_culture
 has_current_phase
 has_de_jure_claim_on
+has_dead_character_flag
+has_dead_character_variable
 has_diarchy_active_parameter
 has_diarchy_parameter
 has_diarchy_type
@@ -568,6 +591,15 @@ has_inactive_trait
 has_innovation
 has_innovation_flag
 has_inspiration_type
+has_legend_chapter
+has_legend_chronicle
+has_legend_county_modifier
+has_legend_county_modifier_duration_remaining
+has_legend_owner_modifier
+has_legend_owner_modifier_duration_remaining
+has_legend_province_modifier
+has_legend_province_modifier_duration_remaining
+has_legitimacy_flag
 has_lifestyle
 has_local_player_open_court_event
 has_local_player_seen_unopened_court_event
@@ -593,6 +625,7 @@ has_pending_court_events
 has_pending_interaction_of_type
 has_perk
 has_personal_artifact_claim
+has_personal_legend_seed
 has_phase
 has_phase_future
 has_phase_past
@@ -716,7 +749,9 @@ has_trait_with_flag
 has_trait_xp
 has_travel_option
 has_travel_plan_modifier
+has_travel_plan_modifier_duration_remaining
 has_travel_point_of_interest
+has_triggered_legend_seed
 has_truce
 has_unit_gfx
 has_usable_hook
@@ -887,6 +922,7 @@ is_landless_type_title
 is_leader_in_war
 is_leading_faction_type
 is_leased_out
+is_legend_completed
 is_liege_or_above_of
 is_local_player
 is_lowborn
@@ -922,6 +958,7 @@ is_primary_heir_of
 is_raid_army
 is_raided
 is_required_special_guest
+is_rightful_liege_of
 is_river_province
 is_riverside_county
 is_riverside_province
@@ -976,7 +1013,7 @@ is_visibly_fertile
 is_war_leader
 is_war_overview_tab_open
 is_white_peace_possible
-is_widget_open
+is_widgetid_open
 join_faction_chance
 join_scheme_chance
 kin_legacy_track_perks
@@ -991,6 +1028,11 @@ learning_lifestyle_perk_points
 learning_lifestyle_perks
 learning_lifestyle_unlockable_perks
 learning_lifestyle_xp
+legend_completion_date
+legend_quality
+legend_start_date
+legitimacy
+legitimacy_level
 levies_to_liege
 list_size
 local_player_knows_this_secret
@@ -1013,6 +1055,7 @@ max_number_maa_soldiers_of_base_type
 max_number_maa_soldiers_of_type
 max_number_of_concubines
 max_number_of_knights
+meets_legitimacy_expectation_of
 memory_age_years
 memory_creation_date
 memory_end_date
@@ -1027,6 +1070,11 @@ monthly_character_income_short_term
 monthly_character_income_war_chest
 monthly_character_men_at_arms_expense_gold
 monthly_character_men_at_arms_expense_prestige
+monthly_county_control_change
+monthly_county_control_decline
+monthly_county_control_decline_factor
+monthly_county_control_growth
+monthly_county_control_growth_factor
 monthly_income
 months_as_ruler
 months_until_max_discontent
@@ -1040,6 +1088,7 @@ num_artifact_kills
 num_buildings
 num_character_followers
 num_county_followers
+num_county_holdings
 num_discovered_innovations
 num_discovered_innovations_in_era
 num_enemies_killed
@@ -1082,9 +1131,11 @@ num_of_relation_wedding_very_good_fertility
 num_of_relation_wet_nurse
 num_options
 num_past_phases
+num_personal_legend_seeds
 num_phases
 num_sinful_traits
 num_total_troops
+num_triggered_legend_seeds
 num_virtuous_traits
 number_maa_regiments_of_base_type
 number_maa_regiments_of_type
@@ -1113,6 +1164,8 @@ number_of_traits_in_common
 number_of_virtue_traits_in_common
 obligation_level_score
 opinion
+outbreak_intensity
+outbreak_start_date
 owns_a_story
 owns_story_of_type
 patrilinear_betrothal
@@ -1135,6 +1188,8 @@ pregnancy_days
 prestige
 prestige_level
 primary_tier
+province_infection_date
+province_infection_rate
 prowess
 prowess_diff
 prowess_for_portrait
@@ -1227,6 +1282,7 @@ total_army_pursuit
 total_army_screen
 total_army_siege_value
 total_army_toughness
+total_infected_provinces
 trait_compatibility
 trait_is_sin
 trait_is_virtue
@@ -1245,6 +1301,7 @@ variable_list_size
 vassal_contract_has_flag
 vassal_contract_has_modifiable_obligations
 vassal_contract_is_blocked_from_modification
+vassal_contract_liege_dynasty_reign_start_date
 vassal_contract_obligation_level
 vassal_contract_obligation_level_can_be_decreased
 vassal_contract_obligation_level_can_be_increased
@@ -1263,6 +1320,7 @@ was_activity_completed
 was_activity_invalidated
 was_called
 was_hostage_child
+was_preferred_heir
 weighted_calc_true_if
 year_of_birth
 yearly_character_balance

@@ -7,6 +7,7 @@ active_accolades
 adamites_opinion
 additional_fort_level
 adoptionist_opinion
+adult_health
 advaitism_opinion
 advantage
 advantage_against_coreligionists
@@ -32,6 +33,7 @@ akom_religion_opinion
 alan_opinion
 alawite_opinion
 alevi_opinion
+ancient_egyptian_opinion
 andalusian_opinion
 anglo_saxon_opinion
 aragonese_opinion
@@ -172,6 +174,7 @@ character_travel_safety_mult
 character_travel_speed
 character_travel_speed_mult
 child_except_player_heir_opinion
+child_health
 child_opinion
 christianity_religion_opinion
 church_holding_build_gold_cost
@@ -318,6 +321,8 @@ desert_supply_limit
 desert_supply_limit_mult
 desert_tax_mult
 desert_travel_danger
+development_decline
+development_decline_factor
 development_growth
 development_growth_factor
 different_culture_opinion
@@ -376,6 +381,7 @@ dynasty_opinion
 east_bantu_opinion
 edo_opinion
 egyptian_opinion
+elderly_health
 elephant_cavalry_damage_add
 elephant_cavalry_damage_mult
 elephant_cavalry_maintenance_mult
@@ -402,6 +408,8 @@ enemy_hostile_scheme_success_chance_add
 enemy_personal_scheme_success_chance_add
 enemy_terrain_advantage
 english_opinion
+epidemic_resistance
+epidemic_travel_danger
 estonian_opinion
 ethiopian_opinion
 ewe_opinion
@@ -514,6 +522,7 @@ glory_hound_same_faith_opinion
 glory_hound_tax_contribution_add
 glory_hound_tax_contribution_mult
 gond_opinion
+gothic_opinion
 greek_opinion
 guan_opinion
 guanches_opinion
@@ -559,6 +568,7 @@ heavy_infantry_siege_value_add
 heavy_infantry_siege_value_mult
 heavy_infantry_toughness_add
 heavy_infantry_toughness_mult
+hebrew_opinion
 hellenic_pagan_opinion
 hellenism_religion_opinion
 hills_advantage
@@ -606,6 +616,7 @@ hostile_scheme_power_mult
 hostile_scheme_resistance_add
 hostile_scheme_resistance_mult
 hungarian_opinion
+hunnic_opinion
 ibadi_opinion
 iconoclast_opinion
 igbo_opinion
@@ -703,6 +714,9 @@ learning_per_stress_level
 learning_scheme_power
 learning_scheme_resistance
 led_by_owner_extra_advantage_add
+legitimacy_baseline_add
+legitimacy_gain_mult
+legitimacy_loss_mult
 levantine_opinion
 levy_attack
 levy_maintenance
@@ -767,6 +781,7 @@ maa_siege_value_add
 maa_siege_value_mult
 maa_toughness_add
 maa_toughness_mult
+macedonian_opinion
 maghrebi_opinion
 magyar_pagan_opinion
 magyar_religion_opinion
@@ -851,12 +866,18 @@ minority_tax_contribution_mult
 mogyer_opinion
 mon_opinion
 mongol_opinion
-monthly_county_control_change_add
-monthly_county_control_change_add_even_if_baron
-monthly_county_control_change_at_war_add
-monthly_county_control_change_at_war_mult
-monthly_county_control_change_factor
-monthly_county_control_change_factor_even_if_baron
+monthly_county_control_decline_add
+monthly_county_control_decline_add_even_if_baron
+monthly_county_control_decline_at_war_add
+monthly_county_control_decline_at_war_factor
+monthly_county_control_decline_factor
+monthly_county_control_decline_factor_even_if_baron
+monthly_county_control_growth_add
+monthly_county_control_growth_add_even_if_baron
+monthly_county_control_growth_at_war_add
+monthly_county_control_growth_at_war_factor
+monthly_county_control_growth_factor
+monthly_county_control_growth_factor_even_if_baron
 monthly_court_grandeur_change_add
 monthly_court_grandeur_change_mult
 monthly_diplomacy_lifestyle_xp_gain_mult
@@ -869,6 +890,7 @@ monthly_income_per_stress_level_add
 monthly_income_per_stress_level_mult
 monthly_intrigue_lifestyle_xp_gain_mult
 monthly_learning_lifestyle_xp_gain_mult
+monthly_legitimacy_add
 monthly_lifestyle_xp_gain_mult
 monthly_martial_lifestyle_xp_gain_mult
 monthly_piety
@@ -880,6 +902,8 @@ monthly_piety_gain_per_happy_powerful_vassal_add
 monthly_piety_gain_per_happy_powerful_vassal_mult
 monthly_piety_gain_per_knight_add
 monthly_piety_gain_per_knight_mult
+monthly_piety_gain_per_legitimacy_level_add
+monthly_piety_gain_per_legitimacy_level_mult
 monthly_prestige
 monthly_prestige_from_buildings_mult
 monthly_prestige_gain_mult
@@ -889,6 +913,8 @@ monthly_prestige_gain_per_happy_powerful_vassal_add
 monthly_prestige_gain_per_happy_powerful_vassal_mult
 monthly_prestige_gain_per_knight_add
 monthly_prestige_gain_per_knight_mult
+monthly_prestige_gain_per_legitimacy_level_add
+monthly_prestige_gain_per_legitimacy_level_mult
 monthly_stewardship_lifestyle_xp_gain_mult
 monthly_tyranny
 monthly_war_income_add
@@ -991,6 +1017,8 @@ overthrow_regent_scheme_power_mult
 overthrow_regent_scheme_resistance_add
 overthrow_regent_scheme_resistance_mult
 owned_hostile_scheme_success_chance_add
+owned_legend_spread_add
+owned_legend_spread_mult
 owned_personal_scheme_success_chance_add
 owned_scheme_secrecy_add
 pagan_opinion
@@ -1124,6 +1152,9 @@ sao_opinion
 sardinian_opinion
 saura_opinion
 saxon_opinion
+scarred_xp_degradation_mult
+scarred_xp_gain_mult
+scarred_xp_loss_mult
 scheme_discovery_chance_mult
 scheme_power
 scheme_power_against_activity_recurrer_add
@@ -1505,6 +1536,9 @@ trait_track_lifestyle_reveler_xp_loss_mult
 trait_track_pilgrim_xp_degradation_mult
 trait_track_pilgrim_xp_gain_mult
 trait_track_pilgrim_xp_loss_mult
+trait_track_scarred_xp_degradation_mult
+trait_track_scarred_xp_gain_mult
+trait_track_scarred_xp_loss_mult
 trait_track_travel_xp_degradation_mult
 trait_track_travel_xp_gain_mult
 trait_track_travel_xp_loss_mult
@@ -1532,6 +1566,7 @@ tribal_holding_holding_build_gold_cost
 tribal_holding_holding_build_piety_cost
 tribal_holding_holding_build_prestige_cost
 tribal_holding_holding_build_speed
+trojan_opinion
 tsangpa_opinion
 turkish_opinion
 tuyuhun_opinion

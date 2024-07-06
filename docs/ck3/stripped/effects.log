@@ -1,7 +1,6 @@
 abort_travel_plan
 accept_activity_invite
 accept_activity_invite_without_travel
-accept_invitation_for_character
 activate_accolade
 activate_holy_site
 activate_struggle_catalyst
@@ -18,6 +17,7 @@ add_companion
 add_county_modifier
 add_courtier
 add_culture_tradition
+add_dead_character_flag
 add_defender
 add_destination_progress
 add_diplomacy_lifestyle_perk_points
@@ -51,6 +51,11 @@ add_knows_of_killer
 add_learning_lifestyle_perk_points
 add_learning_lifestyle_xp
 add_learning_skill
+add_legend_county_modifier
+add_legend_owner_modifier
+add_legend_province_modifier
+add_legend_spread
+add_legitimacy
 add_long_term_gold
 add_loot
 add_martial_lifestyle_perk_points
@@ -171,6 +176,7 @@ clear_claimant
 clear_culture_traditions
 clear_forced_vote
 clear_global_variable_list
+clear_legend_chapter
 clear_local_variable_list
 clear_saved_scope
 clear_title_laws
@@ -204,11 +210,14 @@ create_divergent_culture
 create_divergent_culture_with_side_effects
 create_divergent_culture_with_side_effects_excluding_cost
 create_dynamic_title
+create_epidemic_outbreak
 create_faction
 create_holy_order
 create_hybrid_culture
 create_hybrid_culture_with_side_effects
 create_inspiration
+create_legend
+create_legend_seed
 create_story
 create_title_and_vassal_change
 custom_description_no_bullet
@@ -266,6 +275,7 @@ every_artifact_house_claimant
 every_attending_character
 every_barony
 every_character_artifact
+every_character_epidemic
 every_character_in_location
 every_character_struggle
 every_character_to_title_neighboring_and_across_water_county
@@ -286,6 +296,7 @@ every_claimed_artifact
 every_close_family_member
 every_close_or_extended_family_member
 every_combat_side
+every_completed_legend
 every_concubine
 every_connected_county
 every_consort
@@ -327,6 +338,8 @@ every_election_title
 every_elector
 every_empire
 every_entourage_character
+every_epidemic
+every_epidemic_type
 every_equipped_character_artifact
 every_extended_family_member
 every_faction_county_member
@@ -342,6 +355,7 @@ every_former_concubinist
 every_former_spouse
 every_future_path_location
 every_general_councillor
+every_geographical_region
 every_government_type
 every_guest_subset
 every_guest_subset_current_phase
@@ -364,6 +378,7 @@ every_in_global_list
 every_in_list
 every_in_local_list
 every_independent_ruler
+every_infected_province
 every_inspiration
 every_inspired_character
 every_interloper_ruler
@@ -378,6 +393,9 @@ every_knight
 every_known_secret
 every_learning_councillor
 every_leased_title
+every_legend
+every_legend_promoter
+every_legend_type
 every_liege_or_above
 every_living_character
 every_martial_councillor
@@ -399,7 +417,6 @@ every_owned_story
 every_parent
 every_parent_culture
 every_parent_culture_or_above
-every_participant
 every_past_holder
 every_past_holder_reversed
 every_patroned_holy_order
@@ -409,6 +426,7 @@ every_pinning_character
 every_played_character
 every_player
 every_player_heir
+every_player_legend_library
 every_pledged_attacker
 every_pledged_defender
 every_pool_character
@@ -419,8 +437,11 @@ every_pretender_title
 every_primary_war_enemy
 every_prisoner
 every_province
+every_province_epidemic
+every_province_legend
 every_prowess_councillor
 every_raid_target
+every_realm_border_county
 every_realm_county
 every_realm_de_jure_duchy
 every_realm_de_jure_empire
@@ -443,6 +464,7 @@ every_special_guest
 every_sponsored_inspiration
 every_spouse
 every_spouse_candidate
+every_spread_province
 every_stewardship_councillor
 every_sub_realm_barony
 every_sub_realm_county
@@ -469,6 +491,7 @@ every_title_to_title_neighboring_county
 every_title_to_title_neighboring_duchy
 every_title_to_title_neighboring_empire
 every_title_to_title_neighboring_kingdom
+every_top_realm_border_county
 every_tradition
 every_trait
 every_trait_in_category
@@ -509,10 +532,10 @@ give_nickname
 hidden_effect
 hidden_effect_new_object
 imprison
+infect_with_epidemic
 invalidate_activity
 invalidate_diarch_if_needed
 invest_gold
-invite_character_to_activity
 invite_to_activity
 join_era
 join_faction
@@ -566,6 +589,7 @@ ordered_artifact_house_claimant
 ordered_attending_character
 ordered_barony
 ordered_character_artifact
+ordered_character_epidemic
 ordered_character_in_location
 ordered_character_struggle
 ordered_character_to_title_neighboring_and_across_water_county
@@ -586,6 +610,7 @@ ordered_claimed_artifact
 ordered_close_family_member
 ordered_close_or_extended_family_member
 ordered_combat_side
+ordered_completed_legend
 ordered_concubine
 ordered_connected_county
 ordered_consort
@@ -627,6 +652,8 @@ ordered_election_title
 ordered_elector
 ordered_empire
 ordered_entourage_character
+ordered_epidemic
+ordered_epidemic_type
 ordered_equipped_character_artifact
 ordered_extended_family_member
 ordered_faction_county_member
@@ -642,6 +669,7 @@ ordered_former_concubinist
 ordered_former_spouse
 ordered_future_path_location
 ordered_general_councillor
+ordered_geographical_region
 ordered_government_type
 ordered_guest_subset
 ordered_guest_subset_current_phase
@@ -664,6 +692,7 @@ ordered_in_global_list
 ordered_in_list
 ordered_in_local_list
 ordered_independent_ruler
+ordered_infected_province
 ordered_inspiration
 ordered_inspired_character
 ordered_interloper_ruler
@@ -678,6 +707,9 @@ ordered_knight
 ordered_known_secret
 ordered_learning_councillor
 ordered_leased_title
+ordered_legend
+ordered_legend_promoter
+ordered_legend_type
 ordered_liege_or_above
 ordered_living_character
 ordered_martial_councillor
@@ -708,6 +740,7 @@ ordered_pinning_character
 ordered_played_character
 ordered_player
 ordered_player_heir
+ordered_player_legend_library
 ordered_pledged_attacker
 ordered_pledged_defender
 ordered_pool_character
@@ -718,8 +751,11 @@ ordered_pretender_title
 ordered_primary_war_enemy
 ordered_prisoner
 ordered_province
+ordered_province_epidemic
+ordered_province_legend
 ordered_prowess_councillor
 ordered_raid_target
+ordered_realm_border_county
 ordered_realm_county
 ordered_realm_de_jure_duchy
 ordered_realm_de_jure_empire
@@ -742,6 +778,7 @@ ordered_special_guest
 ordered_sponsored_inspiration
 ordered_spouse
 ordered_spouse_candidate
+ordered_spread_province
 ordered_stewardship_councillor
 ordered_sub_realm_barony
 ordered_sub_realm_county
@@ -768,6 +805,7 @@ ordered_title_to_title_neighboring_county
 ordered_title_to_title_neighboring_duchy
 ordered_title_to_title_neighboring_empire
 ordered_title_to_title_neighboring_kingdom
+ordered_top_realm_border_county
 ordered_tradition
 ordered_trait
 ordered_trait_in_category
@@ -825,6 +863,7 @@ random_artifact_house_claimant
 random_attending_character
 random_barony
 random_character_artifact
+random_character_epidemic
 random_character_in_location
 random_character_struggle
 random_character_to_title_neighboring_and_across_water_county
@@ -845,6 +884,7 @@ random_claimed_artifact
 random_close_family_member
 random_close_or_extended_family_member
 random_combat_side
+random_completed_legend
 random_concubine
 random_connected_county
 random_consort
@@ -886,6 +926,8 @@ random_election_title
 random_elector
 random_empire
 random_entourage_character
+random_epidemic
+random_epidemic_type
 random_equipped_character_artifact
 random_extended_family_member
 random_faction_county_member
@@ -901,6 +943,7 @@ random_former_concubinist
 random_former_spouse
 random_future_path_location
 random_general_councillor
+random_geographical_region
 random_government_type
 random_guest_subset
 random_guest_subset_current_phase
@@ -923,6 +966,7 @@ random_in_global_list
 random_in_list
 random_in_local_list
 random_independent_ruler
+random_infected_province
 random_inspiration
 random_inspired_character
 random_interloper_ruler
@@ -937,6 +981,9 @@ random_knight
 random_known_secret
 random_learning_councillor
 random_leased_title
+random_legend
+random_legend_promoter
+random_legend_type
 random_liege_or_above
 random_list
 random_living_character
@@ -969,6 +1016,7 @@ random_pinning_character
 random_played_character
 random_player
 random_player_heir
+random_player_legend_library
 random_pledged_attacker
 random_pledged_defender
 random_pool_character
@@ -979,8 +1027,11 @@ random_pretender_title
 random_primary_war_enemy
 random_prisoner
 random_province
+random_province_epidemic
+random_province_legend
 random_prowess_councillor
 random_raid_target
+random_realm_border_county
 random_realm_county
 random_realm_de_jure_duchy
 random_realm_de_jure_empire
@@ -1003,6 +1054,7 @@ random_special_guest
 random_sponsored_inspiration
 random_spouse
 random_spouse_candidate
+random_spread_province
 random_stewardship_councillor
 random_sub_realm_barony
 random_sub_realm_county
@@ -1029,6 +1081,7 @@ random_title_to_title_neighboring_county
 random_title_to_title_neighboring_duchy
 random_title_to_title_neighboring_empire
 random_title_to_title_neighboring_kingdom
+random_top_realm_border_county
 random_tradition
 random_trait
 random_trait_in_category
@@ -1059,6 +1112,9 @@ remove_all_county_modifier_instances
 remove_all_dynasty_modifier_instances
 remove_all_house_modifier_instances
 remove_all_house_unity_modifier_instances
+remove_all_legend_county_modifier_instances
+remove_all_legend_owner_modifier_instances
+remove_all_legend_province_modifier_instances
 remove_all_province_modifier_instances
 remove_all_travel_plan_modifier_instances
 remove_artifact_feature_group
@@ -1091,6 +1147,10 @@ remove_house_unity_modifier
 remove_innovation
 remove_interaction_cooldown
 remove_interaction_cooldown_against
+remove_legend_county_modifier
+remove_legend_owner_modifier
+remove_legend_province_modifier
+remove_legend_spread
 remove_list_global_variable
 remove_list_local_variable
 remove_list_variable
@@ -1183,6 +1243,10 @@ scriptedtests_recalculate_character_modifier
 scriptedtests_recalculate_succession
 send_interface_message
 send_interface_toast
+send_long_tutorial_finished_telemetry
+send_long_tutorial_started_telemetry
+send_short_tutorial_finished_telemetry
+send_short_tutorial_started_telemetry
 set_absolute_country_control
 set_activity_host
 set_age
@@ -1221,6 +1285,7 @@ set_culture_pillar
 set_culture_same_as
 set_current_court_grandeur
 set_de_jure_liege_title
+set_dead_character_variable
 set_death_reason
 set_default_education
 set_definitive_form
@@ -1236,6 +1301,7 @@ set_diarchy_swing
 set_diarchy_type
 set_dynasty_name
 set_employer
+set_epidemic_outbreak_intensity
 set_ethos_from
 set_faith_as_involved
 set_faith_as_uninvolved
@@ -1260,6 +1326,9 @@ set_knight_status
 set_known_bastard_on_pregnancy
 set_landless_title
 set_language_from
+set_legend_chapter
+set_legend_property
+set_legend_quality
 set_local_variable
 set_location
 set_location_to_default
@@ -1270,12 +1339,14 @@ set_name_list
 set_no_automatic_claims
 set_num_pregnancy_children
 set_override_designated_winner
+set_owned_legend
 set_owner
 set_player_character
 set_pregnancy_assumed_father
 set_pregnancy_gender
 set_primary_spouse
 set_primary_title_to
+set_promoted_legend
 set_real_father
 set_real_mother
 set_realm_capital
@@ -1342,6 +1413,8 @@ start_struggle
 start_travel_plan
 start_tutorial_lesson
 start_war
+stats_log
+stop_promoting_legend
 store_localized_text_in_death
 stress_impact
 take_hostage

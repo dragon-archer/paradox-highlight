@@ -30,7 +30,7 @@ for filename in os.listdir(IN_DIR):
 				line = line.split(" -")[0]
 				if line.find(" ") == -1: # Discard some rare cases
 					lines.append(line)
-	elif fin.endswith("modifiers.log") or fin.endswith("modifiers_all.log"):
+	elif fin.endswith("modifiers_all.log"):
 		for line in text.split("\n"):
 			if line.startswith("Tag:"): # Only select tag
 				lines.append(line.split(": ")[1])

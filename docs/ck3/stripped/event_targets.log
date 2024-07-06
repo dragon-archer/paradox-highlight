@@ -1,7 +1,5 @@
 @accolade_type
 @activity_type
-@ai
-@all
 @aptitude
 @array_define
 @character
@@ -15,15 +13,18 @@
 @define
 @doctrine
 @dynasty
+@epidemic_type
 @faith
 @flag
+@geographical_region
 @global_var
 @government_type
 @holding_type
 @house
+@legend_property
+@legend_type
 @local_var
 @memory_participant
-@player
 @province
 @religion
 @scope
@@ -39,7 +40,6 @@ accolade_owner
 accolade_successor
 activity_host
 activity_location
-activity_owner
 activity_type
 army_commander
 army_owner
@@ -74,6 +74,7 @@ culture
 culture_head
 current_heir
 current_location
+current_or_last_legend_owner
 current_travel_plan
 de_facto_liege
 de_jure_liege
@@ -88,9 +89,12 @@ dummy_female
 dummy_male
 dynast
 dynasty
+dynasty_founder
 empire
 employer
 enemy_side
+epidemic_trait
+epidemic_type
 event_id
 faction_leader
 faction_target
@@ -131,6 +135,9 @@ knight_army
 last_house_head
 last_played_character
 leader
+legend_owner
+legend_protagonist
+legend_type
 lessee
 lessee_title
 liege
@@ -142,6 +149,7 @@ mercenary_company_leader
 mother
 next_destination_province
 next_location
+outbreak_province
 player_heir
 pregnancy_assumed_father
 pregnancy_real_father
@@ -156,6 +164,7 @@ primary_partner
 primary_spouse
 primary_title
 primary_type
+promoted_legend
 province_owner
 real_father
 real_mother

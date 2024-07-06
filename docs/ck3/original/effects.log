@@ -105,8 +105,8 @@ add_to_guest_subset - add_to_guest_subset = {
 	target = scope:character
 	phase = <phase_key> # Optional
 }
-Adds the target character to the designated subset. Will add to all phases
-and ongoing subsets if phase is not specified. If a phase is specified, they
+Adds the target character to the designated subset. Will add to all phases 
+and ongoing subsets if phase is not specified. If a phase is specified, they 
 will be added to all phases of that type.
 Supported Scopes: activity
 
@@ -161,7 +161,7 @@ every_guest_subset - any/every/random_guest_subset = {
 }
 Iterates through characteres within the specified subset for past, current and
 future phases. If phase is specified it will only iterate through characters
-subsets of that particular phase type.
+subsets of that particular phase type. 
 every_guest_subset = { limit = { <triggers> } <effects> }
 Supported Scopes: activity
 Supported Targets: character
@@ -270,7 +270,7 @@ ordered_guest_subset - any/every/random_guest_subset = {
 }
 Iterates through characteres within the specified subset for past, current and
 future phases. If phase is specified it will only iterate through characters
-subsets of that particular phase type.
+subsets of that particular phase type. 
 ordered_guest_subset = {
 limit = { <triggers> }
 order_by = script_value
@@ -385,7 +385,7 @@ random_guest_subset - any/every/random_guest_subset = {
 }
 Iterates through characteres within the specified subset for past, current and
 future phases. If phase is specified it will only iterate through characters
-subsets of that particular phase type.
+subsets of that particular phase type. 
 random_guest_subset = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: activity
 Supported Targets: character
@@ -431,8 +431,8 @@ remove_from_guest_subset - add_to_guest_subset = {
 	target = scope:character
 	phase = <phase_key> # Optional
 }
-Removes the target character from the designated subset. Will remove from all
-upcoming and ongoing subsets if phase is not specified. If a phase is specified,
+Removes the target character from the designated subset. Will remove from all 
+upcoming and ongoing subsets if phase is not specified. If a phase is specified, 
 they will be removed from all phases of that type.
 Supported Scopes: activity
 
@@ -1193,7 +1193,7 @@ Supported Targets: character
 --------------------
 
 add_destination_progress - Add X days towards the progress of the travel plan to the next destination. If the next destination is reached, excess progress is discarded.
-'on_travel_plan_movement' on_action will not be triggered for any of the provinces. 'on_travel_plan_arrival' will be triggered.
+'on_travel_plan_movement' on_action will not be triggered for any of the provinces. 'on_travel_plan_arrival' will be triggered. 
 add_destination_progress = {
 	days/weeks/months/years = X
 }
@@ -1892,6 +1892,41 @@ Supported Targets: character
 
 --------------------
 
+every_infected_province - Gets all provinces infected by the scoped epidemic
+every_infected_province = { limit = { <triggers> } <effects> }
+Supported Scopes: epidemic
+Supported Targets: province
+
+--------------------
+
+ordered_infected_province - Gets all provinces infected by the scoped epidemic
+ordered_infected_province = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: epidemic
+Supported Targets: province
+
+--------------------
+
+random_infected_province - Gets all provinces infected by the scoped epidemic
+random_infected_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: epidemic
+Supported Targets: province
+
+--------------------
+
+set_epidemic_outbreak_intensity - Sets the epidemic outbreak intensity to the new value.
+set_epidemic_outbreak_intensity = major
+minor, major, apocalyptic
+Supported Scopes: epidemic
+
+--------------------
+
 generate_coa - Generates a coat of arms for the scoped landed title, dynasty or house
 generate_coa = yes
 Supported Scopes: landed_title, dynasty, dynasty_house
@@ -2124,9 +2159,9 @@ generate_history = bool - automatically generate a new history entry if none has
 quality = script value - new quality, used in AI scoring
 wealth = script value - new wealth, used in AI scoring
 creator = character scope - set a custom creator of the artifact ( default is the owner )
-visuals_source = scope containing landed title, dynasty or house - set a source of coat of arms graphics for the artifact
+visuals_source = scope containing landed title, dynasty or house - set a source of coat of arms graphics for the artifact 
 (only few artifact models actually make use of it. Most notable - banners)
-
+ 
 Supported Scopes: artifact
 
 --------------------
@@ -2284,10 +2319,11 @@ Supported Scopes: none
 
 --------------------
 
-add_to_global_variable_list - Adds the event target to a variable list
-add_to_variable_list = { name = X target = Y }
+add_to_global_variable_list - Adds the event target to a variable list for the given duration
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }
 Where X is the name of the variable
 Where Y is an event target
+An optional days where Z is the number of days or script value
 Supported Scopes: none
 
 --------------------
@@ -2298,10 +2334,11 @@ Supported Scopes: none
 
 --------------------
 
-add_to_local_variable_list - Adds the event target to a variable list
-add_to_variable_list = { name = X target = Y }
+add_to_local_variable_list - Adds the event target to a variable list for the given duration
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }
 Where X is the name of the variable
 Where Y is an event target
+An optional days where Z is the number of days or script value
 Supported Scopes: none
 
 --------------------
@@ -2312,10 +2349,11 @@ Supported Scopes: none
 
 --------------------
 
-add_to_variable_list - Adds the event target to a variable list
-add_to_variable_list = { name = X target = Y }
+add_to_variable_list - Adds the event target to a variable list for the given duration
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }
 Where X is the name of the variable
 Where Y is an event target
+An optional days where Z is the number of days or script value
 Supported Scopes: none
 
 --------------------
@@ -2475,28 +2513,28 @@ create_character - Creates a character
 
 save_event_target_as = flag - save the character as an event target
 save_temporary_event_target_as = flag - save the character as a temporary event target
-name =
-age =
+name = 
+age = 
 gender = male/female/character scope
 gender_female_chance = script_value - Range (0..100)
 opposite_gender = character scope
 trait = add this trait
-random_traits_list = { count = { 1 5 } traitID = { some triggers } traitID = { some triggers } } - A number of traits specified by count (1 if not specified) will be picked from the traits that have their triggers met. Scopes are the same as where create_character is used. More than one grouping like this can be defined
+random_traits_list = { count = { 1 5 } traitID = { some triggers } traitID = { some triggers } } - A number of traits specified by count (1 if not specified) will be picked from the traits that have their triggers met. Scopes are the same as where create_character is used. More than one grouping like this can be defined 
 random_traits = yes/no
-health =
-fertility =
-mother =
-father =
+health = 
+fertility = 
+mother = 
+father = 
 real_father = (should only be set if the real father is not the same as father=)
 employer = will end up in this court, will become a pool character unless specified or father/mother is landed
 location = pool province; mutually exclusive with employer
-template_character =
+template_character = 
 faith, culture and dynasty are set from 1. template_character 2. father 3. mother 4. employer (not employer for dynasty) unless specified directly
 faith = faith tag OR a faith scope
-random_faith = { catholic = { some triggers } cathar = { some triggers }. Random one where the triggers are met will be picked. Scopes are the same as where create_character is used
+random_faith = { catholic = { some triggers } cathar = { some triggers }. Random one where the triggers are met will be picked. Scopes are the same as where create_character is used 
 random_faith_in_religion = religion tag OR a faith scope (there's no religion scope)
 culture = culture name OR a culture scope
-random_culture = { norse = { some triggers } norwegian = { some triggers }. Random one where the triggers are met will be picked. Scopes are the same as where create_character is used
+random_culture = { norse = { some triggers } norwegian = { some triggers }. Random one where the triggers are met will be picked. Scopes are the same as where create_character is used 
 random_culture_in_group = culture group name OR a culture scope (there's no group scope)
 dynasty_house = dynasty house name OR a dynasty house scope
 dynasty = generate/inherit/none - What to do if dynasty_house is not specified. generate by default.
@@ -2672,7 +2710,8 @@ Supported Scopes: none
 
 --------------------
 
-every_accolade_type -
+every_accolade_type - Iterate through every accolade_type in the database
+every_accolade_type = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -2685,7 +2724,8 @@ Supported Targets: activity
 
 --------------------
 
-every_activity_type - [2024-01-22 11:08:28.710] [Clausewitz Debug] [debug] [pdx_gui_assetfactory.cpp:675] [LoadAssetsGUI] Loading "gui/preload/fonts.gui"
+every_activity_type - Iterate through every activity_type in the database
+every_activity_type = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -2712,6 +2752,13 @@ Supported Targets: character
 
 --------------------
 
+every_completed_legend - Gets all legends in the world that have been completed
+every_completed_legend = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
 every_county - Iterate through all counties in the game
 every_county = { limit = { <triggers> } <effects> }
 Supported Scopes: none
@@ -2733,25 +2780,29 @@ Supported Targets: culture
 
 --------------------
 
-every_culture_pillar -
+every_culture_pillar - Iterate through every culture_pillar in the database
+every_culture_pillar = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-every_culture_tradition -
+every_culture_tradition - Iterate through every culture_tradition in the database
+every_culture_tradition = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-every_decision -
+every_decision - Iterate through every decision in the database
+every_decision = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-every_doctrine -  ùJˆ
+every_doctrine - Iterate through every doctrine in the database
+every_doctrine = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -2771,13 +2822,36 @@ Supported Targets: landed_title
 
 --------------------
 
-every_government_type -
+every_epidemic - Gets all epidemics in the world
+every_epidemic = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: epidemic
+
+--------------------
+
+every_epidemic_type - Iterate through every epidemic_type in the database
+every_epidemic_type = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: epidemic_type
+
+--------------------
+
+every_geographical_region - Iterate through every geographical_region in the database
+every_geographical_region = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: geographical_region
+
+--------------------
+
+every_government_type - Iterate through every government_type in the database
+every_government_type = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: government_type
 
 --------------------
 
-every_holding_type -
+every_holding_type - Iterate through every holding_type in the database
+every_holding_type = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: holding_type
 
@@ -2826,6 +2900,20 @@ every_kingdom - Iterate through all kingdoms in the game
 every_kingdom = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: landed_title
+
+--------------------
+
+every_legend - Gets all legends in the world that have not been completed
+every_legend = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
+every_legend_type - Iterate through every legend_type in the database
+every_legend_type = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: legend_type
 
 --------------------
 
@@ -2892,7 +2980,8 @@ Supported Targets: province
 
 --------------------
 
-every_trait - »ãJˆ
+every_trait - Iterate through every trait in the database
+every_trait = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: trait
 
@@ -2906,7 +2995,8 @@ Supported Targets: trait
 
 --------------------
 
-every_vassal_contract -
+every_vassal_contract - Iterate through every vassal_contract in the database
+every_vassal_contract = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -2977,17 +3067,15 @@ Supported Scopes: none
 
 --------------------
 
-ordered_accolade_type - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
-{
-	VS_OUTPUT_FULLSCREEN VertexOut;
-	VertexOut.position = float4( Input.position, 0.0, 1.0 );
-
-	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
-	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
-
-	return VertexOut;
-}
-
+ordered_accolade_type - Iterate through every accolade_type in the database
+ordered_accolade_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -3007,17 +3095,15 @@ Supported Targets: activity
 
 --------------------
 
-ordered_activity_type - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
-{
-	VS_OUTPUT_FULLSCREEN VertexOut;
-	VertexOut.position = float4( Input.position, 0.0, 1.0 );
-
-	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
-	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
-
-	return VertexOut;
-}
-
+ordered_activity_type - Iterate through every activity_type in the database
+ordered_activity_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -3065,6 +3151,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_completed_legend - Gets all legends in the world that have been completed
+ordered_completed_legend = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
 ordered_county - Iterate through all counties in the game
 ordered_county = {
 limit = { <triggers> }
@@ -3107,35 +3207,57 @@ Supported Targets: culture
 
 --------------------
 
-ordered_culture_pillar - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
-{
-	VS_OUTPUT_FULLSCREEN VertexOut;
-	VertexOut.position = float4( Input.position, 0.0, 1.0 );
-
-	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
-	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
-
-	return VertexOut;
-}
-
+ordered_culture_pillar - Iterate through every culture_pillar in the database
+ordered_culture_pillar = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-ordered_culture_tradition -
+ordered_culture_tradition - Iterate through every culture_tradition in the database
+ordered_culture_tradition = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-ordered_decision - PixelShader
+ordered_decision - Iterate through every decision in the database
+ordered_decision = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-ordered_doctrine -
+ordered_doctrine - Iterate through every doctrine in the database
+ordered_doctrine = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -3169,13 +3291,71 @@ Supported Targets: landed_title
 
 --------------------
 
-ordered_government_type - BlendState
+ordered_epidemic - Gets all epidemics in the world
+ordered_epidemic = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: epidemic
+
+--------------------
+
+ordered_epidemic_type - Iterate through every epidemic_type in the database
+ordered_epidemic_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: epidemic_type
+
+--------------------
+
+ordered_geographical_region - Iterate through every geographical_region in the database
+ordered_geographical_region = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: geographical_region
+
+--------------------
+
+ordered_government_type - Iterate through every government_type in the database
+ordered_government_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: government_type
 
 --------------------
 
-ordered_holding_type -
+ordered_holding_type - Iterate through every holding_type in the database
+ordered_holding_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: holding_type
 
@@ -3273,6 +3453,34 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: none
 Supported Targets: landed_title
+
+--------------------
+
+ordered_legend - Gets all legends in the world that have not been completed
+ordered_legend = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
+ordered_legend_type - Iterate through every legend_type in the database
+ordered_legend_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: legend_type
 
 --------------------
 
@@ -3402,7 +3610,15 @@ Supported Targets: province
 
 --------------------
 
-ordered_trait -
+ordered_trait - Iterate through every trait in the database
+ordered_trait = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: trait
 
@@ -3423,17 +3639,15 @@ Supported Targets: trait
 
 --------------------
 
-ordered_vassal_contract - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
-{
-	VS_OUTPUT_FULLSCREEN VertexOut;
-	VertexOut.position = float4( Input.position, 0.0, 1.0 );
-
-	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
-	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
-
-	return VertexOut;
-}
-
+ordered_vassal_contract - Iterate through every vassal_contract in the database
+ordered_vassal_contract = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -3459,7 +3673,8 @@ Supported Scopes: none
 
 --------------------
 
-random_accolade_type - –]¯
+random_accolade_type - Iterate through every accolade_type in the database
+random_accolade_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -3472,7 +3687,8 @@ Supported Targets: activity
 
 --------------------
 
-random_activity_type -
+random_activity_type - Iterate through every activity_type in the database
+random_activity_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -3499,6 +3715,13 @@ Supported Targets: character
 
 --------------------
 
+random_completed_legend - Gets all legends in the world that have been completed
+random_completed_legend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
 random_county - Iterate through all counties in the game
 random_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
@@ -3520,25 +3743,29 @@ Supported Targets: culture
 
 --------------------
 
-random_culture_pillar -
+random_culture_pillar - Iterate through every culture_pillar in the database
+random_culture_pillar = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-random_culture_tradition -
+random_culture_tradition - Iterate through every culture_tradition in the database
+random_culture_tradition = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-random_decision -
+random_decision - Iterate through every decision in the database
+random_decision = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-random_doctrine -
+random_doctrine - Iterate through every doctrine in the database
+random_doctrine = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -3558,13 +3785,36 @@ Supported Targets: landed_title
 
 --------------------
 
-random_government_type -
+random_epidemic - Gets all epidemics in the world
+random_epidemic = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: epidemic
+
+--------------------
+
+random_epidemic_type - Iterate through every epidemic_type in the database
+random_epidemic_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: epidemic_type
+
+--------------------
+
+random_geographical_region - Iterate through every geographical_region in the database
+random_geographical_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: geographical_region
+
+--------------------
+
+random_government_type - Iterate through every government_type in the database
+random_government_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: government_type
 
 --------------------
 
-random_holding_type -
+random_holding_type - Iterate through every holding_type in the database
+random_holding_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: holding_type
 
@@ -3613,6 +3863,20 @@ random_kingdom - Iterate through all kingdoms in the game
 random_kingdom = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: landed_title
+
+--------------------
+
+random_legend - Gets all legends in the world that have not been completed
+random_legend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: legend
+
+--------------------
+
+random_legend_type - Iterate through every legend_type in the database
+random_legend_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: legend_type
 
 --------------------
 
@@ -3692,7 +3956,8 @@ Supported Targets: province
 
 --------------------
 
-random_trait -
+random_trait - Iterate through every trait in the database
+random_trait = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: trait
 
@@ -3706,7 +3971,8 @@ Supported Targets: trait
 
 --------------------
 
-random_vassal_contract -
+random_vassal_contract - Iterate through every vassal_contract in the database
+random_vassal_contract = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -3836,7 +4102,7 @@ Supported Scopes: none
 --------------------
 
 save_temporary_opinion_value_as - Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the in the same effect
-save_temporary_opinion_value_as = { name = <string> target = x
+save_temporary_opinion_value_as = { name = <string> target = x 
 Supported Scopes: none
 
 --------------------
@@ -3849,6 +4115,26 @@ Supported Scopes: none
 
 save_temporary_scope_value_as - Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect
 save_temporary_scope_value_as = { name = <string> value = x }
+Supported Scopes: none
+
+--------------------
+
+send_long_tutorial_finished_telemetry - Sends a tutorial_finished telemetry event with LongVersion = true
+Supported Scopes: none
+
+--------------------
+
+send_long_tutorial_started_telemetry - Sends a tutorial_started telemetry event with LongVersion = true
+Supported Scopes: none
+
+--------------------
+
+send_short_tutorial_finished_telemetry - Sends a tutorial_finished telemetry event with LongVersion = false
+Supported Scopes: none
+
+--------------------
+
+send_short_tutorial_started_telemetry - Sends a tutorial_started telemetry event with LongVersion = false
 Supported Scopes: none
 
 --------------------
@@ -3915,18 +4201,18 @@ Supported Scopes: none
 
 --------------------
 
-setup_claim_cb -  = { attacker = scope:attacker
- defender = scope:defender
- claimant = scope:claimant
-  change = scope:change victory = yes/no
+setup_claim_cb -  = { attacker = scope:attacker 
+ defender = scope:defender 
+ claimant = scope:claimant 
+  change = scope:change victory = yes/no 
  take_occupied = yes/no } , this effect will add a scope:cb_prestige_factor with a value based on what's being taken
 civil_war = yes # Will vassalize people based on their capital location rather than being fully contained. Won't steal land from people not vassalized
 Supported Scopes: none
 
 --------------------
 
-setup_de_jure_cb -  = { attacker = scope:attacker
-defender = scope:defender
+setup_de_jure_cb -  = { attacker = scope:attacker 
+defender = scope:defender 
 change = scope:change
 victory = yes/no
 title = some title - Optional; will make it target a specific dejure title rather than *everything* that is dejure the attacker's
@@ -3935,9 +4221,9 @@ Supported Scopes: none
 
 --------------------
 
-setup_invasion_cb -  = { attacker = scope:attacker
- defender = scope:defender
-  change = scope:change victory = yes/no
+setup_invasion_cb -  = { attacker = scope:attacker 
+ defender = scope:defender 
+  change = scope:change victory = yes/no 
  take_occupied = yes/no } , this effect will add a scope:cb_prestige_factor with a value based on what's being taken
 Supported Scopes: none
 
@@ -3958,6 +4244,13 @@ Supported Scopes: none
 
 --------------------
 
+stats_log - Log key value pairs to a given category via the elastic logging statistics
+stats_log = { category = string <string> = <loc_key> }
+The loc keys will have ROOT, SCOPE, THIS, and PREV available
+Supported Scopes: none
+
+--------------------
+
 switch - Switch on a trigger for the evaluation of another trigger with an optional fallback trigger.
 switch = {
 	trigger = simple_assign_trigger
@@ -3974,7 +4267,7 @@ trigger_event = {
     id = <event ID>                               # or:
     on_action = <on_action name>                  # or:
     saved_event_id = <event target with event ID> # example: scope:my_flag_name
-
+    
     # optionally, the event can be delayed via one of those choices:    days/months/years = <num>
     days/months/years = { <num> <num> }           # pick a value randomly from the range
     trigger_on_next_date = "<year>.<month>.<day>" # trigger on a specific date in the future
@@ -3998,7 +4291,7 @@ try_create_suggestion - Tries to create an suggestuib notification. Will keep th
 suggestion_type = suggestion_type_key - the suggestion action object key to create. Must be defined.
 actor = character_actor - optional, can be used by the suggestion effect
 recipient = character_actor - optional, can be used by the suggestion effect
-secondary_actor = character_secontary_actor - optional, can be used by the suggestion effect
+secondary_actor = character_secondary_actor - optional, can be used by the suggestion effect
 secondary_recipient = character_secondary_recipient - optional, can be used by the suggestion effect
 landed_title = landed_title - optional, can be used by the suggestion effect
 Supported Scopes: none
@@ -4015,6 +4308,13 @@ Supported Scopes: none
 
 add_building - Add building to the province<province> = { add_building = <building_name> }
 Supported Scopes: province
+
+--------------------
+
+add_legend_spread - Adds the target legend as spread to the scoped province.
+add_legend_spread = legend
+Supported Scopes: province
+Supported Targets: legend
 
 --------------------
 
@@ -4059,6 +4359,16 @@ Supported Scopes: province
 
 --------------------
 
+create_epidemic_outbreak - Creates a new epidemic in the scoped province.
+create_epidemic_outbreak = {
+	type = smallpox
+	intensity = major
+	save_scope_as = new_epidemic # optional
+}
+Supported Scopes: province
+
+--------------------
+
 every_army_in_location - Iterate through all armies currently located in the scoped province
 every_army_in_location = { limit = { <triggers> } <effects> }
 Supported Scopes: province
@@ -4077,6 +4387,20 @@ every_neighboring_province - Iterate through all neighboring provinces of a prov
 every_neighboring_province = { limit = { <triggers> } <effects> }
 Supported Scopes: province
 Supported Targets: province
+
+--------------------
+
+every_province_epidemic - Gets epidemics affecting the scoped province
+every_province_epidemic = { limit = { <triggers> } <effects> }
+Supported Scopes: province
+Supported Targets: epidemic
+
+--------------------
+
+every_province_legend - Gets legends affecting the scoped province
+every_province_legend = { limit = { <triggers> } <effects> }
+Supported Scopes: province
+Supported Targets: legend
 
 --------------------
 
@@ -4127,6 +4451,34 @@ Supported Targets: province
 
 --------------------
 
+ordered_province_epidemic - Gets epidemics affecting the scoped province
+ordered_province_epidemic = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: province
+Supported Targets: epidemic
+
+--------------------
+
+ordered_province_legend - Gets legends affecting the scoped province
+ordered_province_legend = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: province
+Supported Targets: legend
+
+--------------------
+
 random_army_in_location - Iterate through all armies currently located in the scoped province
 random_army_in_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: province
@@ -4145,6 +4497,20 @@ random_neighboring_province - Iterate through all neighboring provinces of a pro
 random_neighboring_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: province
 Supported Targets: province
+
+--------------------
+
+random_province_epidemic - Gets epidemics affecting the scoped province
+random_province_epidemic = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: province
+Supported Targets: epidemic
+
+--------------------
+
+random_province_legend - Gets legends affecting the scoped province
+random_province_legend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: province
+Supported Targets: legend
 
 --------------------
 
@@ -4171,6 +4537,13 @@ Supported Scopes: province
 
 remove_holding - Removes the holding in scoped province, cannot remove capital holdings
 Supported Scopes: province
+
+--------------------
+
+remove_legend_spread - Removes the target legend as spread to the scoped province.
+remove_legend_spread = legend
+Supported Scopes: province
+Supported Targets: legend
 
 --------------------
 
@@ -4366,6 +4739,147 @@ Supported Scopes: accolade
 
 --------------------
 
+add_legend_county_modifier - Add a modifier to a legend whose effects should be applied to the county
+add_legend_county_modifier = name
+add_legend_county_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
+Supported Scopes: legend
+
+--------------------
+
+add_legend_owner_modifier - Add a modifier to a legend whose effects should be applied to the owner
+add_legend_owner_modifier = name
+add_legend_owner_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
+Supported Scopes: legend
+
+--------------------
+
+add_legend_province_modifier - Add a modifier to a legend whose effects should be applied to the provinces
+add_legend_province_modifier = name
+add_legend_province_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
+Supported Scopes: legend
+
+--------------------
+
+clear_legend_chapter - Clears the localization key for the named chapter of the scoped legend.
+clear_legend_chapter = opening
+Supported Scopes: legend
+
+--------------------
+
+every_legend_promoter - Gets all promoters of the scoped legend
+every_legend_promoter = { limit = { <triggers> } <effects> }
+Supported Scopes: legend
+Supported Targets: character
+
+--------------------
+
+every_spread_province - Gets all provinces the scoped legend has spread into
+every_spread_province = { limit = { <triggers> } <effects> }
+Supported Scopes: legend
+Supported Targets: province
+
+--------------------
+
+ordered_legend_promoter - Gets all promoters of the scoped legend
+ordered_legend_promoter = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: legend
+Supported Targets: character
+
+--------------------
+
+ordered_spread_province - Gets all provinces the scoped legend has spread into
+ordered_spread_province = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: legend
+Supported Targets: province
+
+--------------------
+
+random_legend_promoter - Gets all promoters of the scoped legend
+random_legend_promoter = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: legend
+Supported Targets: character
+
+--------------------
+
+random_spread_province - Gets all provinces the scoped legend has spread into
+random_spread_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: legend
+Supported Targets: province
+
+--------------------
+
+remove_all_legend_county_modifier_instances - Remove all instances of a modifier from affecting the counties in a legend
+remove_all_legend_county_modifier_instances = name
+Supported Scopes: legend
+
+--------------------
+
+remove_all_legend_owner_modifier_instances - Remove all instances of a modifier from affecting the owner of a legend
+remove_all_legend_owner_modifier_instances = name
+Supported Scopes: legend
+
+--------------------
+
+remove_all_legend_province_modifier_instances - Remove all instances of a modifier from affecting the provinces in a legend
+remove_all_legend_province_modifier_instances = name
+Supported Scopes: legend
+
+--------------------
+
+remove_legend_county_modifier - Remove a modifier from affecting the counties in a legend
+remove_legend_county_modifier = name
+Supported Scopes: legend
+
+--------------------
+
+remove_legend_owner_modifier - Remove a modifier from affecting the owner of a legend
+remove_legend_owner_modifier = name
+Supported Scopes: legend
+
+--------------------
+
+remove_legend_province_modifier - Remove a modifier from affecting the provinces in a legend
+remove_legend_province_modifier = name
+Supported Scopes: legend
+
+--------------------
+
+set_legend_chapter - Sets the localization key for the named chapter of the scoped legend to the new value.
+set_legend_chapter = { name = opening localization_key = <loc_key> }
+Supported Scopes: legend
+
+--------------------
+
+set_legend_property - Sets the object at the named property of the scoped legend to the new value.
+set_legend_property = { name = animal_type target = var:hunt_type }
+Supported Scopes: legend
+
+--------------------
+
+set_legend_quality - Sets the legend quality to the new value.
+set_legend_quality = famed
+famed, illustrious, mythical
+Supported Scopes: legend
+
+--------------------
+
 add_scheme_modifier - adds the specified scheme modifier, add_scheme_modifier = { type = X days = Y } (days are optional, the modifier will expire in Y days if specified)
 Supported Scopes: scheme
 
@@ -4490,6 +5004,15 @@ Supported Targets: character
 
 --------------------
 
+add_dead_character_flag - add_dead_character_flag = {
+	flag = <name> - name of the flag
+	years/weeks/days = { <min_number> <max_number> } - years/weeks/days this flag is supposed to last
+}
+Adds a flag to a dead character. A duration is required.
+Supported Scopes: character
+
+--------------------
+
 add_diplomacy_lifestyle_perk_points - Adds lifestyle per points to the given character
 Supported Scopes: character
 
@@ -4554,6 +5077,11 @@ Supported Scopes: character
 --------------------
 
 add_learning_lifestyle_xp - Adds lifestyle XP to the given character
+Supported Scopes: character
+
+--------------------
+
+add_legitimacy - Add or remove legitimacy to the scoped living playable character
 Supported Scopes: character
 
 --------------------
@@ -5036,7 +5564,7 @@ generate_history = bool - automatically generate a new history entry if none has
 quality = script value - new quality, used in AI scoring
 wealth = script value - new wealth, used in AI scoring
 creator = character scope - set a custom creator of the artifact ( default is the owner )
-visuals_source = scope containing landed title, dynasty or house - set a source of coat of arms graphics for the artifact
+visuals_source = scope containing landed title, dynasty or house - set a source of coat of arms graphics for the artifact 
 (only few artifact models actually make use of it. Most notable - banners)
  save_scope_as = new artifact - an optional way to get a reference to the newly created artifact
 title_history = title - history entries of the given title will be added to the artifact history
@@ -5057,7 +5585,7 @@ Supported Scopes: character
 
 --------------------
 
-create_divergent_culture - Creates a new divergent culture from the scope character's culture. The new culture will keep all pillars and traditions of the parent culture ó it is up to the user to add or remove pillars and traditions as appropriate.The new divergent culture is saved as scope:new_culture.
+create_divergent_culture - Creates a new divergent culture from the scope character's culture. The new culture will keep all pillars and traditions of the parent culture ó it is up to the user to add or remove pillars and traditions as appropriate.The new divergent culture is saved as scope:new_culture. 
 create_divergent_culture = yes
 Supported Scopes: character
 
@@ -5080,7 +5608,7 @@ Supported Scopes: character
 
 --------------------
 
-create_hybrid_culture - Creates a new hybrid culture from the scope character's culture and the RHS culture. The new culture will have a random mix of pillars and traditions from both, like when the AI hybridizes. The new hybrid culture is saved as scope:new_culture.
+create_hybrid_culture - Creates a new hybrid culture from the scope character's culture and the RHS culture. The new culture will have a random mix of pillars and traditions from both, like when the AI hybridizes. The new hybrid culture is saved as scope:new_culture. 
 create_hybrid_culture = culture:anglo-saxon
 Supported Scopes: character
 Supported Targets: culture
@@ -5098,6 +5626,40 @@ create_inspiration - create_inspiration = inspiration_type
 Creates an inspiration of a given type owned by scoped character, new inspiration is saved as scope:new_inspiration
 create_inspiration = { type = inspiration_type gold = script_value }
 As above but overrides the base cost compared to the one defined in the type
+Supported Scopes: character
+
+--------------------
+
+create_legend - Creates a new legend owned by the scoped character.
+create_legend = {
+	type = heroic
+	quality = famed
+	chronicle = chronicle_type
+	properties = {
+		<key> = scope
+		<key> = scope
+		# Where each <key> must match to the property of that chronicle type
+		# and the resulting scope object must be of the type of that property	
+	}
+	protagonist = character # optional, defaults to scoped character
+	save_scope_as = new_legend # optional
+}
+Supported Scopes: character
+
+--------------------
+
+create_legend_seed - Creates a new legend ssed owned by the scoped character.
+create_legend_seed = {
+	type = heroic
+	quality = famed
+	chronicle = chronicle_type
+	properties = {
+		<key> = scope
+		<key> = scope
+		# Where each <key> must match to the property of that chronicle type
+		# and the resulting scope object must be of the type of that property	
+	}
+}
 Supported Scopes: character
 
 --------------------
@@ -5220,7 +5782,14 @@ Supported Targets: artifact
 
 --------------------
 
-every_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper }
+every_character_epidemic - Gets epidemics affecting the scoped character
+every_character_epidemic = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: epidemic
+
+--------------------
+
+every_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
 every_character_struggle = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: struggle
@@ -5690,6 +6259,13 @@ Supported Targets: character
 
 --------------------
 
+every_player_legend_library - Get all legends in a player character library.
+every_player_legend_library = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: legend
+
+--------------------
+
 every_pool_guest - Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege)
 every_pool_guest = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -5743,6 +6319,13 @@ every_raid_target - Iterate through anyone the character is hostile to due to ha
 every_raid_target = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+every_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring realm.
+every_realm_border_county = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -5934,6 +6517,13 @@ Supported Targets: tax_slot
 
 --------------------
 
+every_top_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring top realm.
+every_top_realm_border_county = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 every_traveling_family_member - Iterate though all characters that should travel with the scoped one (when moving between courts for instance); includes the scoped character
 every_traveling_family_member = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -6071,6 +6661,13 @@ Supported Scopes: character
 
 --------------------
 
+infect_with_epidemic - Infect the scoped character with the target epidemic.
+infect_with_epidemic = epidemic
+Supported Scopes: character
+Supported Targets: epidemic
+
+--------------------
+
 invalidate_diarch_if_needed - Immediately check if diarch should be invalidated
 If needed, current scoped diarch is removed and replaced
 with the next one from the line of succession
@@ -6149,7 +6746,7 @@ Supported Targets: character
 
 --------------------
 
-make_pregnant - makes a character pregnant
+make_pregnant - makes a character pregnant 
  father= 'the real father'
  number_of_children= X
  known_bastard=yes/no
@@ -6157,7 +6754,7 @@ Supported Scopes: character
 
 --------------------
 
-make_pregnant_no_checks - makes a character pregnant. Doesn't error on things like celibacy
+make_pregnant_no_checks - makes a character pregnant. Doesn't error on things like celibacy 
  father= 'the real father'
  number_of_children= X
  known_bastard=yes/no
@@ -6358,7 +6955,21 @@ Supported Targets: artifact
 
 --------------------
 
-ordered_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper }
+ordered_character_epidemic - Gets epidemics affecting the scoped character
+ordered_character_epidemic = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: epidemic
+
+--------------------
+
+ordered_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
 ordered_character_struggle = {
 limit = { <triggers> }
 order_by = script_value
@@ -7297,6 +7908,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_player_legend_library - Get all legends in a player character library.
+ordered_player_legend_library = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: legend
+
+--------------------
+
 ordered_pool_guest - Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege)
 ordered_pool_guest = {
 limit = { <triggers> }
@@ -7406,6 +8031,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+ordered_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring realm.
+ordered_realm_border_county = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -7779,6 +8418,20 @@ Supported Targets: tax_slot
 
 --------------------
 
+ordered_top_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring top realm.
+ordered_top_realm_border_county = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 ordered_traveling_family_member - Iterate though all characters that should travel with the scoped one (when moving between courts for instance); includes the scoped character
 ordered_traveling_family_member = {
 limit = { <triggers> }
@@ -8032,7 +8685,14 @@ Supported Targets: artifact
 
 --------------------
 
-random_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper }
+random_character_epidemic - Gets epidemics affecting the scoped character
+random_character_epidemic = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: epidemic
+
+--------------------
+
+random_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
 random_character_struggle = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: struggle
@@ -8502,6 +9162,13 @@ Supported Targets: character
 
 --------------------
 
+random_player_legend_library - Get all legends in a player character library.
+random_player_legend_library = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: legend
+
+--------------------
+
 random_pool_guest - Iterate through all guests visiting the court from the pool (in contrast to foreign_court_guest they don't have a liege)
 random_pool_guest = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -8555,6 +9222,13 @@ random_raid_target - Iterate through anyone the character is hostile to due to h
 random_raid_target = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+random_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring realm.
+random_realm_border_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -8743,6 +9417,13 @@ random_tax_slot - Iterates through all Tax Slots the scoped character has
 random_tax_slot = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: tax_slot
+
+--------------------
+
+random_top_realm_border_county - Iterate through all counties that are on the edge of your realm bordering a different neighboring top realm.
+random_top_realm_border_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -9222,7 +9903,7 @@ send_interface_message = {
 	tooltip = LOCALIZATION # optional, otherwise takes it from the message type
 	left_icon = scope:recipient # optional, character, artifact, or title
 	right_icon = scope:the_title # optional, character, artifact, or title
-
+		
 	# optional effects...
 	add_dread = 5
 	scope:someone = { add_gold = 5 }
@@ -9241,7 +9922,7 @@ send_interface_toast = {
 	tooltip = LOCALIZATION # optional, otherwise takes it from the message type
 	left_icon = scope:recipient # optional, character, artifact, or title
 	right_icon = scope:the_title # optional, character, artifact, or title
-
+		
 	# optional effects...
 	add_dread = 5
 	scope:someone = { add_gold = 5 }
@@ -9332,6 +10013,16 @@ Supported Targets: character
 
 set_current_court_grandeur - Sets the current court grandeur of a character with a royal court, clamped between NRoyalCourt::COURT_GRANDEUR_MIN and NRoyalCourt::COURT_GRANDEUR_MAX.
 Does not apply a grace period, and removes any existing one.
+Supported Scopes: character
+
+--------------------
+
+set_dead_character_variable - set_dead_character_variable = {
+	name = <name> - name of the variable
+	value = <value> - any event target, bool, value, script value or flag
+	years/weeks/days = { <min_number> <max_number> } - years/weeks/days this flag is supposed to last
+}
+Adds a variable to a dead character. A duration is required.
 Supported Scopes: character
 
 --------------------
@@ -9452,6 +10143,13 @@ Supported Scopes: character
 
 --------------------
 
+set_owned_legend - Sets the owner of the target legend to the scoped character.
+set_owned_legend = legend
+Supported Scopes: character
+Supported Targets: legend
+
+--------------------
+
 set_player_character - The scope character's player will now play as the target character. Scope must be player-controlled. Target cannot be player-controlled. Example:set_player_character = scope:title_recipient
 Supported Scopes: character
 Supported Targets: character
@@ -9478,13 +10176,20 @@ Supported Targets: landed_title
 
 --------------------
 
-set_real_father - Changes the real father of the scoped character
+set_promoted_legend - Adds the scoped character as a promoter of the target legend.
+set_promoted_legend = legend
+Supported Scopes: character
+Supported Targets: legend
+
+--------------------
+
+set_real_father - Changes the real father of the scoped character 
 Supported Scopes: character
 Supported Targets: character
 
 --------------------
 
-set_real_mother - Changes the real mother of the scoped character
+set_real_mother - Changes the real mother of the scoped character 
 Supported Scopes: character
 Supported Targets: character
 
@@ -9718,7 +10423,7 @@ Supported Scopes: character
 --------------------
 
 start_travel_plan - Start a travel plan. Saving this as a scope will not work for player characters if they have to use the planner.
-start_travel_plan = {
+start_travel_plan = { 
    destination = PROVINCE (repeatable)
    travel_leader = CHARACTER (optional)
    companion = CHARACTER (optional & repeatable)
@@ -9738,6 +10443,12 @@ Supported Scopes: character
 
 start_war - starts a war  = { casus_belli/cb = X target = Y claimant = Z target_title = W1 target_title = W2 ... } where X is a casus belli type, Y is the target character, Z i the (optional) claimant, W1, W2.... are targeted titles.
 If there are no title targets, the effect will pick one of possible title targets.
+Supported Scopes: character
+
+--------------------
+
+stop_promoting_legend - Remove the scoped character as the owner/promoter of their current promoted legend if they have one.
+stop_promoting_legend = yes
 Supported Scopes: character
 
 --------------------
@@ -10914,7 +11625,7 @@ Supported Scopes: faction
 faction_start_war - The scope faction starts the war agains their target.
 faction_start_war = {
     title = [optional]
-}
+} 
 Supported Scopes: faction
 
 --------------------
