@@ -44,7 +44,7 @@
 				],
 				"configuration": "./language-configuration.json",
 				"filenamePatterns": [
-					"**/{Crusader Kings III,CK3}/**/*.{txt,gui,info}"
+					"**/{Crusader Kings III,CK,CK3,1158310}/**/*.{txt,gui,info}"
 				],
 				"icon": {
 					"light": "./icons/ck3.png",
@@ -63,7 +63,7 @@
 				],
 				"configuration": "./language-configuration.json",
 				"filenamePatterns": [
-					"**/{Victoria 3,VIC,VIC3}/**/*.{txt,gui,info}"
+					"**/{Victoria 3,VIC,VIC3,529340}/**/*.{txt,gui,info}"
 				],
 				"icon": {
 					"light": "./icons/vic3.png",
