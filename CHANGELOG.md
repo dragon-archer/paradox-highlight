@@ -1,5 +1,18 @@
 # Paradox Highlight Changelog
 
+## Version 1.6.0, 2024-07-06
+
+### Enhancements
+
+- Update `Crusader Kings III` to version 1.12.5 (Scythe)
+- Update `Victoria 3` to version 1.7.3 (Kahwah)
+- Improve auto language detection using Steam ID
+- Add more `Victoria 3` parameters
+
+### New Feature
+
+- Add Chinese version of README
+
 ## Version 1.5.0, 2024-06-26
 
 ### Enhancements
