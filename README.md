@@ -2,6 +2,8 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
 [![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/dragon-archer.paradox-highlight)](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/dragon-archer.paradox-highlight)](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight)
 
 中文版简介请看[这里](README.zh.md)
 
