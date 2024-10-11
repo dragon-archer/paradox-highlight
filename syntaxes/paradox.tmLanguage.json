@@ -311,9 +311,7 @@
 				{
 					"match": "\\\\[n\"]",
 					"name": "constant.character.escape.paradox"
-				},
-				{ "include": "#prefix-scopes" },
-				{ "include": "#scope" }
+				}
 			]
 		}
 	}
