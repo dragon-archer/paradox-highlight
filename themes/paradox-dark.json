@@ -58,6 +58,14 @@
 			"settings": {
 				"foreground": "#c30f93"
 			}
+		},
+		{
+			"scope": [
+				"support.type.modifier",
+			],
+			"settings": {
+				"foreground": "#bb77cb"
+			}
 		}
 	]
 }
