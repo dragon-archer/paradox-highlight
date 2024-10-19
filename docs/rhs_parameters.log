@@ -13,6 +13,8 @@ actor_de_jure_titles
 actor_domain_titles
 actor_domain_titles_including_leases
 add
+adm
+ADM
 admiral
 advanced_activities
 agitator
@@ -44,6 +46,7 @@ checkbutton
 checkbuttongfx
 children
 city
+coastal
 coatofarmsbuttongfx
 combat
 combat_side
@@ -65,6 +68,8 @@ courtiers
 de_jure_claim
 default
 development
+dip
+DIP
 disapprove
 disinterested
 display
@@ -137,6 +142,7 @@ incorporated
 inherit
 inherit_faction
 inheritance
+inland
 invalid
 invalidate
 jomini_entitygfx
@@ -162,6 +168,8 @@ martial_custom
 masterwork
 medium
 middle
+mil
+MIL
 mine
 minor
 mirror
