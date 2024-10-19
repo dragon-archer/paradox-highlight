@@ -11,7 +11,7 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"vscode": "^1.23.0"
+		"vscode": "^1.75.0"
 	},
 	"categories": [
 		"Programming Languages",
@@ -49,6 +49,24 @@
 				"icon": {
 					"light": "./icons/ck3.png",
 					"dark": "./icons/ck3.png"
+				}
+			},
+			{
+				"id": "eu4",
+				"aliases": [
+					"Europa Universalis IV"
+				],
+				"extensions": [
+					".txt",
+					".gui"
+				],
+				"configuration": "./language-configuration.json",
+				"filenamePatterns": [
+					"**/{Europa Universalis IV,EU,EU4,236850}/**/*.{txt,gui}"
+				],
+				"icon": {
+					"light": "./icons/eu4.png",
+					"dark": "./icons/eu4.png"
 				}
 			},
 			{
@@ -94,6 +112,11 @@
 				"path": "./syntaxes/ck3.tmLanguage.json"
 			},
 			{
+				"language": "eu4",
+				"scopeName": "source.paradox.eu4",
+				"path": "./syntaxes/eu4.tmLanguage.json"
+			},
+			{
 				"language": "vic3",
 				"scopeName": "source.paradox.vic3",
 				"path": "./syntaxes/vic3.tmLanguage.json"
@@ -127,11 +150,5 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"onCommand:paradox-highlight.format",
-		"onLanguage:ck3",
-		"onLanguage:vic3",
-		"onLanguage:paradox"
-	],
 	"main": "./src/extension.js"
 }
