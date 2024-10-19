@@ -1,9 +1,23 @@
-# Paradox Highlight P社文件语法高亮插件
+<h1 align="center">P社脚本高亮插件</h1>
 
-[![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
-[![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
+<p align="center">
+	<a href="https://github.com/dragon-archer/paradox-highlight/releases/latest">
+		<img src="https://img.shields.io/github/v/release/dragon-archer/paradox-highlight" alt="GitHub Release">
+	</a>
+	<a href="https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE">
+		<img src="https://img.shields.io/github/license/dragon-archer/paradox-highlight" alt="GitHub License">
+	</a>
+	<a href="https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight">
+		<img src="https://img.shields.io/visual-studio-marketplace/i/dragon-archer.paradox-highlight" alt="Visual Studio Marketplace Installs">
+	</a>
+	<a href="https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight">
+		<img src="https://img.shields.io/visual-studio-marketplace/d/dragon-archer.paradox-highlight" alt="Visual Studio Marketplace Downloads">
+	</a>
+</p>
 
-本插件为P社脚本语言提供**语法高亮**和**格式化**功能，主要聚焦`十字军之王3`和`维多利亚3`两款游戏
+<p align="center"><a href="README.md">English</a> | 中文</p>
+
+本插件为P社脚本语言提供**语法高亮**和**格式化**功能，主要聚焦`十字军之王3`，`维多利亚3`和`欧陆风云4`三款游戏
 
 ## 示例
 
@@ -27,8 +41,8 @@
 - 支持各类P社文件类型（.txt，.info，.gui和.yml）
 - 自动区分`触发器`，`效果`，`修正`，`属性`等不同类型
 - 基于`现代深色`二次开发的定制化主题
-- 完整支持`十字军之王3`和`维多利亚3`两款游戏的最新版
-- 对其它基于`克劳塞维茨`引擎开发的老款P社游戏代码提供基础支持（如`欧陆风云4`，`十字军之王2`和`钢铁雄心4`）
+- 完整支持`十字军之王3`，`维多利亚3`和`欧陆风云4`三款游戏的最新版
+- 对其它基于`克劳塞维茨`引擎开发的老款P社游戏代码提供基础支持（如`十字军之王2`和`钢铁雄心4`）
 
 ## 使用方式
 

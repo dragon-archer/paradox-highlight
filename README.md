@@ -1,13 +1,23 @@
-# Paradox Highlight
+<h1 align="center">Paradox Highlight</h1>
 
-[![GitHub Release](https://img.shields.io/github/v/release/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/releases/latest)
-[![GitHub License](https://img.shields.io/github/license/dragon-archer/paradox-highlight)](https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/dragon-archer.paradox-highlight)](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/dragon-archer.paradox-highlight)](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight)
+<p align="center">
+	<a href="https://github.com/dragon-archer/paradox-highlight/releases/latest">
+		<img src="https://img.shields.io/github/v/release/dragon-archer/paradox-highlight" alt="GitHub Release">
+	</a>
+	<a href="https://github.com/dragon-archer/paradox-highlight/blob/main/LICENSE">
+		<img src="https://img.shields.io/github/license/dragon-archer/paradox-highlight" alt="GitHub License">
+	</a>
+	<a href="https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight">
+		<img src="https://img.shields.io/visual-studio-marketplace/i/dragon-archer.paradox-highlight" alt="Visual Studio Marketplace Installs">
+	</a>
+	<a href="https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight">
+		<img src="https://img.shields.io/visual-studio-marketplace/d/dragon-archer.paradox-highlight" alt="Visual Studio Marketplace Downloads">
+	</a>
+</p>
 
-中文版简介请看[这里](README.zh.md)
+<p align="center">English | <a href="README.zh.md">中文</a></p>
 
-**Syntax highlight** & **formatter** for Paradox Script Languages including `Crusader Kings III` and `Victoria 3`
+**Syntax highlight** & **formatter** for Paradox Script Languages including `Crusader Kings III`, `Victoria 3`, and `Europa Universalis IV`
 
 ## Examples
 
@@ -31,8 +41,8 @@
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
 - Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
 - Corresponding theme based on `Default Dark Modern` to improve preference
-- Full support for `Crusader Kings III` and `Victoria 3`
-- Basic support for older Paradox Games with Clausewitz engine (e.g. `Europa Universalis IV`, `Crusader Kings II`, and `Heart of Iron IV`)
+- Full support for `Crusader Kings III`, `Victoria 3` and `Europa Universalis IV`
+- Basic support for older Paradox Games with `Clausewitz` engine (e.g. `Crusader Kings II` and `Heart of Iron IV`)
 
 ## Usage
 

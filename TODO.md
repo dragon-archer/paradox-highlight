@@ -10,3 +10,4 @@
 - Improve namespace support
 - Allow LHS constants
 - Improve highlight for `#tooltippable;tooltip:xxx`
+- Add more EU4 effects and triggers
