@@ -1,5 +1,17 @@
 # Paradox Highlight Changelog
 
+## Version 1.7.0, 2024-10-19
+
+### Enhancements
+
+- Update `Crusader Kings III` to version 1.13.1.2 (Basileus)
+- Update `Victoria 3` to version 1.7.6 (Kahwah)
+- Add more `Europa Universalis IV` and `Victoria 3` parameters
+
+### New Feature
+
+- Add support for `Europa Universalis IV`
+
 ## Version 1.6.0, 2024-07-06
 
 ### Enhancements
