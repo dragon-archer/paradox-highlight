@@ -1,54 +1,33 @@
 Printing Modifier Definitions:
-Tag: greek_opinion
+Tag: heavy_infantry_max_size_add
 Use areas: character
-
-Tag: stationed_elephant_cavalry_toughness_add
-Use areas: province
 
 Tag: dynasty_opinion
 Use areas: character
 
-Tag: sethianism_opinion
+Tag: max_laamp_base_0001_contract_scheme_schemes_add
 Use areas: character
-
-Tag: stationed_pikemen_siege_value_mult
-Use areas: province
 
 Tag: legitimacy_loss_mult
 Use areas: character
 
-Tag: latgalian_opinion
+Tag: steppe_max_combat_roll
 Use areas: character
 
-Tag: church_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_lifestyle_mystic_xp_gain_mult
+Tag: laamp_base_1011_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: scheme_power_against_wedding_very_good_fertility_mult
+Tag: courtly_levy_contribution_add
 Use areas: character
 
-Tag: stationed_archers_pursuit_mult
+Tag: shangqing_opinion
+Use areas: character
+
+Tag: stationed_heavy_cavalry_toughness_add
 Use areas: province
 
-Tag: coastal_sea_levy_size
-Use areas: character， province，以及 county
-
-Tag: holy_order_government_tax_contribution_mult
+Tag: zurvanism_opinion
 Use areas: character
-
-Tag: afar_opinion
-Use areas: character
-
-Tag: city_holding_holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_falconer_xp_degradation_mult
-Use areas: character
-
-Tag: floodplains_construction_gold_cost
-Use areas: character， province，以及 county
 
 Tag: ai_boldness
 Use areas: character
@@ -56,106 +35,139 @@ Use areas: character
 Tag: ai_compassion
 Use areas: character
 
-Tag: scheme_power_against_wedding_very_bad_fertility_add
+Tag: lifestyle_hunter_xp_loss_mult
 Use areas: character
 
 Tag: same_faith_opinion
 Use areas: character
 
-Tag: courtly_ai_energy
+Tag: the_wake_xp_degradation_mult
 Use areas: character
 
-Tag: learn_language_scheme_power_add
+Tag: mercenary_government_tax_contribution_add
 Use areas: character
 
-Tag: farmlands_tax_mult
-Use areas: character， province，以及 county
+Tag: somali_opinion
+Use areas: character
 
-Tag: stationed_archer_cavalry_siege_value_mult
+Tag: waaqism_pagan_opinion
+Use areas: character
+
+Tag: scheme_phase_duration_against_lover_add
+Use areas: character
+
+Tag: glory_hound_ai_honor
+Use areas: character
+
+Tag: theocracy_government_tax_contribution_mult
+Use areas: character
+
+Tag: slander_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: afridunism_opinion
+Use areas: character
+
+Tag: stationed_heavy_infantry_toughness_mult
 Use areas: province
 
-Tag: drylands_min_combat_roll
+Tag: depose_scheme_phase_duration_add
 Use areas: character
 
-Tag: ancient_egyptian_opinion
+Tag: akan_opinion
 Use areas: character
 
-Tag: ismaili_opinion
+Tag: jurchen_opinion
 Use areas: character
 
-Tag: stationed_archers_toughness_add
-Use areas: province
+Tag: laamp_base_1001_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
 
-Tag: hills_max_combat_roll
+Tag: oasis_cancel_negative_supply
+Use areas: character
+
+Tag: parochial_opinion
 Use areas: character
 
 Tag: diplomatic_range_mult
 Use areas: character
 
-Tag: dutch_opinion
+Tag: heavy_infantry_recruitment_cost_mult
 Use areas: character
 
-Tag: ibadi_opinion
+Tag: zealot_opinion
+Use areas: character
+
+Tag: west_african_orisha_religion_opinion
 Use areas: character
 
 Tag: monthly_prestige_gain_per_legitimacy_level_add
 Use areas: character
 
-Tag: world_persian_empire_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: malinke_opinion
+Tag: camel_cavalry_toughness_mult
 Use areas: character
 
-Tag: pilgrim_xp_gain_mult
-Use areas: character
-
-Tag: heavy_cavalry_recruitment_cost_mult
-Use areas: character
+Tag: coastal_sea_development_growth_factor
+Use areas: character, province, and county
 
 Tag: owned_hostile_scheme_success_chance_add
 Use areas: character
 
 Tag: build_piety_cost
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: floodplains_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: anglo_saxon_opinion
+Tag: siege_weapon_pursuit_add
 Use areas: character
 
-Tag: jungle_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: drylands_supply_limit
-Use areas: character， province，以及 county
-
-Tag: parochial_ai_honor
+Tag: camel_cavalry_recruitment_cost_mult
 Use areas: character
 
-Tag: barons_and_minor_landholders_different_faith_opinion
+Tag: scarred_xp_loss_mult
 Use areas: character
 
-Tag: stationed_heavy_cavalry_pursuit_add
-Use areas: province
+Tag: sami_opinion
+Use areas: character
 
-Tag: stationed_heavy_cavalry_toughness_add
-Use areas: province
+Tag: forest_min_combat_roll
+Use areas: character
 
-Tag: oasis_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: provisions_gain_mult
+Use areas: character  and terrain
 
-Tag: parochial_tax_contribution_add
+Tag: max_abduct_schemes_add
+Use areas: character
+
+Tag: overthrow_regent_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: max_laamp_base_4021_contract_scheme_schemes_add
+Use areas: character
+
+Tag: hunnic_opinion
+Use areas: character
+
+Tag: laamp_base_4011_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: forest_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: owned_political_scheme_success_chance_growth_add
+Use areas: character
+
+Tag: landless_adventurer_government_tax_contribution_mult
 Use areas: character
 
 Tag: happy_powerful_vassal_tax_contribution_add
 Use areas: character
 
-Tag: personal_scheme_power_add
+Tag: personal_scheme_phase_duration_add
 Use areas: character
 
-Tag: kushitism_religion_opinion
+Tag: archer_cavalry_toughness_mult
+Use areas: character
+
+Tag: georgian_opinion
 Use areas: character
 
 Tag: intrigue_per_stress_level
@@ -164,76 +176,82 @@ Use areas: character
 Tag: stationed_maa_screen_add
 Use areas: province
 
-Tag: basque_opinion
-Use areas: character
+Tag: stationed_pikemen_toughness_mult
+Use areas: province
 
 Tag: ignore_different_faith_opinion
 Use areas: character
 
-Tag: stationed_siege_weapon_siege_value_mult
+Tag: plains_min_combat_roll
+Use areas: character
+
+Tag: kannada_opinion
+Use areas: character
+
+Tag: laamp_base_6011_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: zealot_ai_vengefulness
+Use areas: character
+
+Tag: hills_min_combat_roll
+Use areas: character
+
+Tag: archers_toughness_mult
+Use areas: character
+
+Tag: maturidi_opinion
+Use areas: character
+
+Tag: norse_pagan_opinion
+Use areas: character
+
+Tag: barons_and_minor_landholders_ai_zeal
+Use areas: character
+
+Tag: knight_effectiveness_per_martial
+Use areas: character
+
+Tag: hills_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: plains_travel_danger
+Use areas: character, province, and county
+
+Tag: forest_max_combat_roll
+Use areas: character
+
+Tag: owned_personal_scheme_success_chance_max_add
+Use areas: character
+
+Tag: taiga_min_combat_roll
+Use areas: character
+
+Tag: stationed_siege_weapon_pursuit_mult
 Use areas: province
 
-Tag: drylands_travel_danger
-Use areas: character， province，以及 county
-
-Tag: trait_track_travel_xp_loss_mult
+Tag: max_protect_minority_vassal_contract_diplomacy_scheme_schemes_add
 Use areas: character
 
-Tag: malabarism_opinion
+Tag: quranist_opinion
 Use areas: character
 
-Tag: skirmishers_maintenance_mult
+Tag: owned_personal_scheme_success_chance_growth_add
 Use areas: character
 
-Tag: random_advantage
+Tag: light_cavalry_screen_mult
 Use areas: character
 
-Tag: punjabi_opinion
-Use areas: character
+Tag: forest_provisions_use_mult
+Use areas: character, province, and county
 
-Tag: tourney_participant_xp_gain_mult
-Use areas: character
-
-Tag: desert_mountains_supply_limit
-Use areas: character， province，以及 county
-
-Tag: personal_scheme_resistance_mult
-Use areas: character
-
-Tag: minority_levy_contribution_mult
-Use areas: character
-
-Tag: camel_cavalry_damage_mult
-Use areas: character
-
-Tag: forest_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: republic_government_opinion
-Use areas: character
-
-Tag: lombard_opinion
-Use areas: character
-
-Tag: zealot_levy_contribution_add
-Use areas: character
-
-Tag: scheme_power_against_nemesis_add
-Use areas: character
-
-Tag: befriend_scheme_resistance_add
-Use areas: character
-
-Tag: meshefaresism_opinion
-Use areas: character
-
-Tag: clan_government_vassal_opinion
+Tag: hellenic_pagan_opinion
 Use areas: character
 
 Tag: mercenary_hire_cost_add
 Use areas: character
 
-Tag: scheme_power_against_soulmate_add
+Tag: sea_cancel_negative_supply
 Use areas: character
 
 Tag: fellow_vassal_opinion
@@ -242,29 +260,41 @@ Use areas: character
 Tag: independent_primary_defender_advantage_add
 Use areas: character
 
-Tag: slavic_pagan_opinion
+Tag: protect_minority_vassal_contract_martial_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: courting_scheme_resistance_mult
+Tag: barons_and_minor_landholders_same_culture_opinion
 Use areas: character
 
-Tag: camel_cavalry_pursuit_mult
-Use areas: character
-
-Tag: desert_mountains_advantage
+Tag: bosnian_opinion
 Use areas: character
 
 Tag: army_damage_mult
 Use areas: character
 
-Tag: sea_attrition_mult
+Tag: learning_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: enemy_personal_scheme_phase_duration_add
+Use areas: character
+
+Tag: trait_track_charioteer_green_xp_degradation_mult
+Use areas: character
+
+Tag: mountains_cancel_negative_supply
+Use areas: character
+
+Tag: irish_opinion
 Use areas: character
 
 Tag: opinion_of_female_rulers
 Use areas: character
 
-Tag: coastal_sea_supply_limit
-Use areas: character， province，以及 county
+Tag: courtly_same_culture_opinion
+Use areas: character
+
+Tag: kushitism_religion_opinion
+Use areas: character
 
 Tag: revolting_siege_morale_loss_mult
 Use areas: character
@@ -272,140 +302,119 @@ Use areas: character
 Tag: revolting_siege_morale_loss_add
 Use areas: character
 
-Tag: stationed_pikemen_toughness_add
+Tag: provisions_use_mult
+Use areas: character, province, and county
+
+Tag: coastal_sea_max_combat_roll
+Use areas: character
+
+Tag: hills_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: generate_claim_scheme_phase_duration_add
+Use areas: character
+
+Tag: desert_tax_mult
+Use areas: character, province, and county
+
+Tag: courtly_ai_energy
+Use areas: character
+
+Tag: daylamite_opinion
+Use areas: character
+
+Tag: city_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_falconer_xp_gain_mult
+Use areas: character
+
+Tag: oriya_opinion
+Use areas: character
+
+Tag: trait_track_charioteer_red_xp_degradation_mult
+Use areas: character
+
+Tag: sephardi_opinion
+Use areas: character
+
+Tag: skirmishers_recruitment_cost_mult
+Use areas: character
+
+Tag: laamp_base_0041_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_heavy_cavalry_damage_mult
 Use areas: province
 
-Tag: farmlands_advantage
+Tag: uriankhai_opinion
 Use areas: character
 
-Tag: overthrow_regent_scheme_power_add
+Tag: west_african_pagan_opinion
 Use areas: character
 
-Tag: baranis_opinion
+Tag: clan_government_opinion
 Use areas: character
 
-Tag: taiga_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: elephant_cavalry_toughness_mult
+Tag: max_learn_language_schemes_add
 Use areas: character
 
-Tag: nestorian_opinion
+Tag: kirati_opinion
 Use areas: character
 
-Tag: tribal_holding_holding_build_speed
-Use areas: character， province，以及 county
+Tag: floodplains_tax_mult
+Use areas: character, province, and county
 
-Tag: taiga_travel_danger
-Use areas: character， province，以及 county
-
-Tag: tribal_government_tax_contribution_add
+Tag: glory_hound_ai_rationality
 Use areas: character
 
-Tag: scheme_power_against_intrigue_student_add
+Tag: courting_scheme_phase_duration_add
 Use areas: character
 
-Tag: lifestyle_hunter_xp_gain_mult
+Tag: hungarian_opinion
 Use areas: character
 
-Tag: bon_opinion
-Use areas: character
-
-Tag: steppe_advantage
-Use areas: character
-
-Tag: kipchak_opinion
-Use areas: character
-
-Tag: archers_maintenance_mult
-Use areas: character
-
-Tag: beja_opinion
-Use areas: character
-
-Tag: trait_track_lifestyle_blademaster_xp_degradation_mult
-Use areas: character
-
-Tag: castle_holding_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_soldier_friend_add
-Use areas: character
-
-Tag: scheme_power_against_crush_mult
-Use areas: character
-
-Tag: legitimacy_baseline_add
-Use areas: character
-
-Tag: elephant_cavalry_pursuit_mult
-Use areas: character
-
-Tag: floodplains_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: farmlands_travel_danger
-Use areas: character， province，以及 county
-
-Tag: floodplains_max_combat_roll
-Use areas: character
-
-Tag: holy_order_government_levy_contribution_mult
-Use areas: character
-
-Tag: elope_scheme_power_mult
-Use areas: character
-
-Tag: archer_cavalry_pursuit_add
+Tag: max_seduce_schemes_add
 Use areas: character
 
 Tag: vassal_tax_contribution_mult
 Use areas: character
 
-Tag: archers_pursuit_mult
+Tag: laamp_base_0031_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: norse_pagan_opinion
+Tag: tengri_pagan_opinion
 Use areas: character
 
-Tag: stationed_heavy_infantry_pursuit_mult
+Tag: enemy_contract_scheme_success_chance_max_add
+Use areas: character
+
+Tag: stationed_camel_cavalry_damage_add
 Use areas: province
 
-Tag: cumbrian_opinion
+Tag: fabricate_hook_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: cainitism_opinion
-Use areas: character
-
-Tag: old_saxon_opinion
-Use areas: character
-
-Tag: heavy_infantry_recruitment_cost_mult
-Use areas: character
-
-Tag: bolghar_opinion
+Tag: skirmishers_pursuit_add
 Use areas: character
 
 Tag: hard_casualty_modifier
-Use areas: character 以及 terrain
-
-Tag: world_innovation_elephants_development_growth_factor
-Use areas: character， province，以及 county
+Use areas: character  and terrain
 
 Tag: monthly_county_control_growth_factor_even_if_baron
 Use areas: character
 
-Tag: georgian_opinion
+Tag: heavy_infantry_siege_value_add
 Use areas: character
 
-Tag: lifestyle_physician_xp_loss_mult
-Use areas: character
-
-Tag: pikemen_siege_value_add
+Tag: serer_opinion
 Use areas: character
 
 Tag: naval_movement_speed_mult
 Use areas: character
+
+Tag: oasis_tax_mult
+Use areas: character, province, and county
 
 Tag: monthly_prestige_gain_per_dread_mult
 Use areas: character
@@ -413,79 +422,79 @@ Use areas: character
 Tag: intimidated_vassal_levy_contribution_add
 Use areas: character
 
-Tag: stationed_archer_cavalry_pursuit_add
-Use areas: province
+Tag: provisions_loss_mult
+Use areas: character  and terrain
 
-Tag: mountains_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_same_faith_opinion
+Tag: zealot_ai_rationality
 Use areas: character
 
-Tag: hostile_scheme_resistance_add
+Tag: holy_order_government_levy_contribution_add
 Use areas: character
+
+Tag: jungle_tax_mult
+Use areas: character, province, and county
+
+Tag: coastal_sea_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: floodplains_levy_size
+Use areas: character, province, and county
 
 Tag: advantage
-Use areas: character
-
-Tag: glory_hound_tax_contribution_mult
-Use areas: character
-
-Tag: baltic_pagan_opinion
-Use areas: character
-
-Tag: courtly_ai_boldness
 Use areas: character
 
 Tag: dynasty_house_opinion
 Use areas: character
 
-Tag: stationed_heavy_cavalry_damage_mult
-Use areas: province
+Tag: tribal_government_tax_contribution_mult
+Use areas: character
+
+Tag: max_laamp_base_4011_contract_scheme_schemes_add
+Use areas: character
 
 Tag: prowess
 Use areas: character
 
-Tag: light_cavalry_screen_add
+Tag: laamp_base_2031_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: portuguese_opinion
+Tag: estonian_opinion
 Use areas: character
+
+Tag: stationed_pikemen_screen_add
+Use areas: province
 
 Tag: learning_per_stress_level
 Use areas: character
 
-Tag: daju_opinion
+Tag: pikemen_damage_mult
 Use areas: character
 
-Tag: drylands_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: mountains_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_same_culture_opinion
+Tag: welsh_opinion
 Use areas: character
 
-Tag: ashari_opinion
+Tag: zealot_ai_compassion
 Use areas: character
 
-Tag: tourney_participant_xp_loss_mult
+Tag: elephant_cavalry_pursuit_add
 Use areas: character
 
-Tag: siege_weapon_max_size_add
+Tag: stewardship_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: scheme_phase_duration_against_wedding_very_good_fertility_add
 Use areas: character
 
 Tag: stationed_maa_damage_add
 Use areas: province
 
-Tag: ghulat_opinion
+Tag: pikemen_siege_value_mult
 Use areas: character
 
-Tag: nubian_opinion
+Tag: trait_track_poacher_xp_gain_mult
 Use areas: character
 
-Tag: zayidi_opinion
+Tag: finnish_pagan_opinion
 Use areas: character
 
 Tag: monthly_income_mult
@@ -494,8 +503,14 @@ Use areas: character
 Tag: maa_toughness_add
 Use areas: character
 
-Tag: oasis_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: srikula_shaktism_opinion
+Use areas: character
+
+Tag: stationed_siege_weapon_siege_value_add
+Use areas: province
+
+Tag: prowess_per_influence_level
+Use areas: character
 
 Tag: domain_tax_different_faith_mult
 Use areas: character
@@ -509,52 +524,67 @@ Use areas: character
 Tag: monthly_prestige_gain_per_knight_mult
 Use areas: character
 
-Tag: mountains_levy_size
-Use areas: character， province，以及 county
+Tag: coastal_sea_provisions_use_mult
+Use areas: character, province, and county
 
-Tag: desert_levy_size
-Use areas: character， province，以及 county
-
-Tag: forest_max_combat_roll
+Tag: minority_opinion
 Use areas: character
 
-Tag: stationed_siege_weapon_siege_value_add
-Use areas: province
-
-Tag: desert_mountains_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: kochinim_opinion
+Tag: max_befriend_schemes_add
 Use areas: character
 
-Tag: zealot_same_culture_opinion
+Tag: plains_advantage
+Use areas: character
+
+Tag: mandeaism_opinion
+Use areas: character
+
+Tag: coastal_sea_levy_size
+Use areas: character, province, and county
+
+Tag: laamp_base_5051_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: taiga_development_growth_factor
+Use areas: character, province, and county
+
+Tag: barons_and_minor_landholders_levy_contribution_mult
+Use areas: character
+
+Tag: light_cavalry_damage_add
+Use areas: character
+
+Tag: sethianism_opinion
 Use areas: character
 
 Tag: development_decline_factor
-Use areas: character， province，以及 county
+Use areas: character, province, and county
+
+Tag: forest_development_growth
+Use areas: character, province, and county
 
 Tag: opinion_of_same_faith
 Use areas: character
 
-Tag: sea_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: stationed_archer_cavalry_siege_value_mult
+Use areas: province
 
-Tag: rrmeaism_opinion
+Tag: knight_effectiveness_per_intrigue
 Use areas: character
 
-Tag: intrigue_lifestyle_xp_gain_mult
+Tag: macedonian_opinion
 Use areas: character
 
-Tag: magyar_religion_opinion
-Use areas: character
-
-Tag: feudal_government_vassal_opinion
+Tag: archer_cavalry_siege_value_mult
 Use areas: character
 
 Tag: close_relative_opinion
 Use areas: character
 
-Tag: befriend_scheme_resistance_mult
+Tag: suebi_opinion
+Use areas: character
+
+Tag: rf_abrahamic_opinion
 Use areas: character
 
 Tag: monthly_prestige
@@ -563,49 +593,40 @@ Use areas: character
 Tag: courtier_and_guest_opinion
 Use areas: character
 
-Tag: forest_cancel_negative_supply
+Tag: archer_cavalry_pursuit_mult
 Use areas: character
 
-Tag: clan_government_tax_contribution_add
+Tag: mountains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: tribal_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: sea_max_combat_roll
 Use areas: character
 
-Tag: courting_scheme_power_add
+Tag: volhynian_opinion
 Use areas: character
 
-Tag: wetlands_advantage
+Tag: mountains_advantage
 Use areas: character
 
-Tag: coastal_sea_advantage
-Use areas: character
-
-Tag: akan_opinion
-Use areas: character
+Tag: drylands_tax_mult
+Use areas: character, province, and county
 
 Tag: diplomacy_scheme_resistance
 Use areas: character
 
-Tag: minority_same_faith_opinion
+Tag: baloch_opinion
 Use areas: character
 
-Tag: stationed_skirmishers_siege_value_mult
-Use areas: province
-
-Tag: mercenary_government_tax_contribution_add
+Tag: subsume_province_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: sorko_opinion
-Use areas: character
-
-Tag: tribal_government_opinion
+Tag: heavy_cavalry_pursuit_add
 Use areas: character
 
 Tag: negate_diplomacy_penalty_add
-Use areas: character
-
-Tag: maghrebi_opinion
-Use areas: character
-
-Tag: trait_track_lifestyle_blademaster_xp_loss_mult
 Use areas: character
 
 Tag: raid_speed
@@ -614,131 +635,137 @@ Use areas: character
 Tag: levy_screen
 Use areas: character
 
-Tag: west_african_roog_religion_opinion
+Tag: heavy_cavalry_damage_add
 Use areas: character
 
-Tag: qiang_opinion
+Tag: svetambara_opinion
 Use areas: character
 
 Tag: accolade_glory_gain_mult
 Use areas: character
 
-Tag: zoroastrianism_religion_opinion
+Tag: stationed_heavy_cavalry_siege_value_add
+Use areas: province
+
+Tag: lifestyle_blademaster_xp_gain_mult
 Use areas: character
 
-Tag: bodpa_opinion
+Tag: drylands_travel_danger
+Use areas: character, province, and county
+
+Tag: zhengyi_opinion
 Use areas: character
 
-Tag: scheme_power_against_oaf_mult
-Use areas: character
-
-Tag: taiga_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: guan_opinion
-Use areas: character
-
-Tag: urartuism_opinion
-Use areas: character
-
-Tag: scheme_power_against_mentor_add
-Use areas: character
+Tag: castle_holding_holding_build_speed
+Use areas: character, province, and county
 
 Tag: knight_effectiveness_per_tyranny
 Use areas: character
 
-Tag: danish_opinion
+Tag: heavy_cavalry_siege_value_add
 Use areas: character
 
-Tag: clan_government_tax_contribution_mult
+Tag: steppe_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: serbian_opinion
 Use areas: character
 
-Tag: elephant_cavalry_siege_value_add
+Tag: republic_government_vassal_opinion
+Use areas: character
+
+Tag: max_raid_estate_schemes_add
+Use areas: character
+
+Tag: clan_tax_slot_add
+Use areas: character
+
+Tag: magyar_pagan_opinion
 Use areas: character
 
 Tag: character_travel_speed
 Use areas: character
 
-Tag: elope_scheme_power_add
-Use areas: character
+Tag: city_holding_build_speed
+Use areas: character, province, and county
+
+Tag: steppe_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: floodplains_development_growth_factor
+Use areas: character, province, and county
 
 Tag: levy_reinforcement_rate
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: hausa_opinion
+Tag: lhomon_opinion
 Use areas: character
 
-Tag: stationed_pikemen_pursuit_add
-Use areas: province
-
-Tag: church_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: assyrian_opinion
+Tag: heavy_infantry_damage_mult
 Use areas: character
 
-Tag: trait_track_lifestyle_physician_xp_loss_mult
+Tag: quanzhen_opinion
 Use areas: character
 
-Tag: holy_order_government_tax_contribution_add
+Tag: heavy_infantry_siege_value_mult
 Use areas: character
 
 Tag: max_combat_roll
 Use areas: character
 
-Tag: lollard_opinion
+Tag: courtly_ai_zeal
 Use areas: character
 
-Tag: city_holding_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: farmlands_max_combat_roll
+Tag: radhanite_opinion
 Use areas: character
 
-Tag: elope_scheme_resistance_add
-Use areas: character
-
-Tag: cathar_opinion
-Use areas: character
-
-Tag: hills_cancel_negative_supply
-Use areas: character
-
-Tag: armenian_opinion
-Use areas: character
-
-Tag: scheme_power_against_antiquarian_mult
-Use areas: character
-
-Tag: trait_track_hunter_xp_degradation_mult
-Use areas: character
-
-Tag: different_faith_county_opinion_mult_even_if_baron
-Use areas: character
-
-Tag: steppe_max_combat_roll
-Use areas: character
-
-Tag: heavy_infantry_pursuit_mult
-Use areas: character
-
-Tag: drylands_advantage
-Use areas: character
-
-Tag: glory_hound_ai_boldness
+Tag: glory_hound_ai_zeal
 Use areas: character
 
 Tag: akom_religion_opinion
 Use areas: character
 
-Tag: severian_opinion
+Tag: owned_contract_scheme_success_chance_add
 Use areas: character
 
-Tag: light_cavalry_toughness_mult
+Tag: oasis_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: qiang_opinion
 Use areas: character
 
-Tag: drylands_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: different_faith_county_opinion_mult_even_if_baron
+Use areas: character
+
+Tag: lifestyle_mystic_xp_degradation_mult
+Use areas: character
+
+Tag: oasis_development_growth_factor
+Use areas: character, province, and county
+
+Tag: langobard_opinion
+Use areas: character
+
+Tag: theocracy_government_tax_contribution_add
+Use areas: character
+
+Tag: max_depose_schemes_add
+Use areas: character
+
+Tag: mel_opinion
+Use areas: character
+
+Tag: latgalian_opinion
+Use areas: character
+
+Tag: pikemen_pursuit_add
+Use areas: character
+
+Tag: floodplains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: laamp_base_2021_contract_scheme_scheme_phase_duration_add
+Use areas: character
 
 Tag: monthly_piety_gain_per_happy_powerful_vassal_mult
 Use areas: character
@@ -746,70 +773,85 @@ Use areas: character
 Tag: monthly_prestige_gain_per_legitimacy_level_mult
 Use areas: character
 
-Tag: imami_opinion
+Tag: floodplains_travel_danger
+Use areas: character, province, and county
+
+Tag: elephant_cavalry_toughness_mult
 Use areas: character
 
-Tag: islam_religion_opinion
+Tag: parochial_same_culture_opinion
 Use areas: character
 
-Tag: hills_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: max_seduce_schemes_add
+Tag: trait_track_lifestyle_reveler_xp_gain_mult
 Use areas: character
 
-Tag: trait_track_bow_xp_loss_mult
+Tag: scheme_phase_duration_against_activity_recurrer_add
 Use areas: character
 
-Tag: trait_track_pilgrim_xp_degradation_mult
-Use areas: character
-
-Tag: oasis_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: trait_track_scarred_xp_gain_mult
+Tag: manichean_opinion
 Use areas: character
 
 Tag: inbreeding_chance
 Use areas: character
 
 Tag: build_prestige_cost
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: stationed_light_cavalry_screen_mult
+Tag: scheme_phase_duration_against_potential_rival_add
+Use areas: character
+
+Tag: stationed_siege_weapon_toughness_mult
 Use areas: province
 
-Tag: stationed_siege_weapon_pursuit_mult
-Use areas: province
+Tag: ancient_egyptian_opinion
+Use areas: character
 
-Tag: mountains_advantage
+Tag: zealot_same_faith_opinion
 Use areas: character
 
 Tag: cultural_acceptance_gain_mult
 Use areas: culture
 
-Tag: czech_opinion
+Tag: stationed_camel_cavalry_toughness_mult
+Use areas: province
+
+Tag: waldensian_opinion
 Use areas: character
+
+Tag: coastal_sea_supply_limit
+Use areas: character, province, and county
 
 Tag: prestige_level_impact_mult
 Use areas: character
 
+Tag: scheme_phase_duration_against_antiquarian_add
+Use areas: character
+
+Tag: farmlands_max_combat_roll
+Use areas: character
+
 Tag: building_slot_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: parochial_ai_compassion
+Tag: laamp_base_4041_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: skirmishers_max_size_mult
+Tag: cainitism_opinion
 Use areas: character
 
-Tag: jungle_tax_mult
-Use areas: character， province，以及 county
+Tag: landless_adventurer_government_tax_contribution_add
+Use areas: character
+
+Tag: greek_opinion
+Use areas: character
 
 Tag: hostage_renown_mult
 Use areas: character
 
-Tag: kashmiri_opinion
+Tag: farmlands_attrition_mult
+Use areas: character
+
+Tag: archers_maintenance_mult
 Use areas: character
 
 Tag: stationed_maa_toughness_mult
@@ -818,200 +860,200 @@ Use areas: province
 Tag: monthly_tyranny
 Use areas: character
 
-Tag: siberian_pagan_opinion
+Tag: messalian_opinion
 Use areas: character
 
-Tag: rajput_opinion
+Tag: archer_cavalry_max_size_add
 Use areas: character
 
-Tag: baloch_opinion
+Tag: monthly_lifestyle_xp_gain_add
 Use areas: character
+
+Tag: archers_pursuit_add
+Use areas: character
+
+Tag: stationed_archers_pursuit_add
+Use areas: province
 
 Tag: winter_advantage
-Use areas: character
-
-Tag: abduct_scheme_resistance_mult
-Use areas: character
-
-Tag: martial_lifestyle_xp_gain_mult
-Use areas: character
-
-Tag: rabbinism_opinion
-Use areas: character
-
-Tag: jungle_max_combat_roll
-Use areas: character
-
-Tag: nepali_opinion
-Use areas: character
-
-Tag: desert_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: plains_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: hostile_scheme_resistance_mult
-Use areas: character
-
-Tag: minority_ai_zeal
-Use areas: character
-
-Tag: minority_same_culture_opinion
-Use areas: character
-
-Tag: camel_cavalry_max_size_add
-Use areas: character
-
-Tag: claim_throne_scheme_resistance_add
-Use areas: character
-
-Tag: different_faith_liege_opinion
-Use areas: character
-
-Tag: forest_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: khitan_opinion
-Use areas: character
-
-Tag: clan_government_opinion
-Use areas: character
-
-Tag: courting_scheme_power_mult
-Use areas: character
-
-Tag: west_african_orisha_pagan_opinion
-Use areas: character
-
-Tag: army_toughness_mult
-Use areas: character
-
-Tag: feudal_government_levy_contribution_mult
-Use areas: character
-
-Tag: tocharian_opinion
-Use areas: character
-
-Tag: khurmazta_opinion
-Use areas: character
-
-Tag: naiman_opinion
-Use areas: character
-
-Tag: castle_holding_holding_build_speed
-Use areas: character， province，以及 county
-
-Tag: zurvanism_opinion
-Use areas: character
-
-Tag: scheme_power_against_student_add
-Use areas: character
-
-Tag: taiga_levy_size
-Use areas: character， province，以及 county
-
-Tag: taoism_religion_opinion
-Use areas: character
-
-Tag: desert_mountains_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_victim_mult
-Use areas: character
-
-Tag: claim_throne_scheme_resistance_mult
-Use areas: character
-
-Tag: hungarian_opinion
-Use areas: character
-
-Tag: stationed_camel_cavalry_pursuit_mult
-Use areas: province
-
-Tag: travel_speed_mult
-Use areas: travel_plan
-
-Tag: archers_toughness_mult
-Use areas: character
-
-Tag: theocracy_government_tax_contribution_mult
-Use areas: character
-
-Tag: tani_religion_opinion
-Use areas: character
-
-Tag: holy_order_government_opinion_same_faith
-Use areas: character
-
-Tag: overthrow_regent_scheme_resistance_mult
-Use areas: character
-
-Tag: city_holding_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_lifestyle_mystic_xp_degradation_mult
-Use areas: character
-
-Tag: scheme_power_against_wedding_very_bad_fertility_mult
-Use areas: character
-
-Tag: direct_vassal_opinion
-Use areas: character
-
-Tag: trait_track_hunter_xp_loss_mult
-Use areas: character
-
-Tag: monthly_county_control_decline_at_war_factor
-Use areas: character， province，以及 county
-
-Tag: stationed_archers_screen_mult
-Use areas: province
-
-Tag: castle_holding_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: conversos_opinion
-Use areas: character
-
-Tag: coastal_sea_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: guanches_opinion
-Use areas: character
-
-Tag: levy_siege
-Use areas: character
-
-Tag: steppe_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: legitimacy_gain_mult
-Use areas: character
-
-Tag: croatian_opinion
-Use areas: character
-
-Tag: cowed_vassal_tax_contribution_mult
 Use areas: character
 
 Tag: stationed_elephant_cavalry_screen_add
 Use areas: province
 
-Tag: courtly_tax_contribution_mult
+Tag: stationed_archers_damage_add
+Use areas: province
+
+Tag: sea_supply_limit
+Use areas: character, province, and county
+
+Tag: minority_ai_compassion
 Use areas: character
 
-Tag: courtly_same_culture_opinion
+Tag: stationed_elephant_cavalry_pursuit_add
+Use areas: province
+
+Tag: stationed_siege_weapon_pursuit_add
+Use areas: province
+
+Tag: charioteer_blue_xp_degradation_mult
+Use areas: character
+
+Tag: bengali_opinion
+Use areas: character
+
+Tag: castle_holding_build_speed
+Use areas: character, province, and county
+
+Tag: different_faith_liege_opinion
+Use areas: character
+
+Tag: befriend_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_light_cavalry_screen_add
+Use areas: province
+
+Tag: sindhi_opinion
+Use areas: character
+
+Tag: owned_hostile_scheme_success_chance_max_add
+Use areas: character
+
+Tag: tribal_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_travel_xp_degradation_mult
+Use areas: character
+
+Tag: frankish_opinion
+Use areas: character
+
+Tag: army_toughness_mult
 Use areas: character
 
 Tag: light_cavalry_max_size_add
 Use areas: character
 
+Tag: stationed_light_cavalry_pursuit_add
+Use areas: province
+
+Tag: scheme_success_chance_max
+Use areas: scheme
+
+Tag: barons_and_minor_landholders_ai_greed
+Use areas: character
+
+Tag: castle_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: stationed_light_cavalry_damage_add
+Use areas: province
+
+Tag: desert_development_growth_factor
+Use areas: character, province, and county
+
+Tag: pagan_opinion
+Use areas: character
+
+Tag: laamp_prison_break_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: taiga_travel_danger
+Use areas: character, province, and county
+
+Tag: steppe_development_growth_factor
+Use areas: character, province, and county
+
+Tag: desert_max_combat_roll
+Use areas: character
+
+Tag: travel_speed_mult
+Use areas: travel_plan
+
+Tag: trait_track_lifestyle_mystic_xp_degradation_mult
+Use areas: character
+
+Tag: laamp_base_0021_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: castle_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: melieism_opinion
+Use areas: character
+
+Tag: steppe_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: trait_track_lifestyle_blademaster_xp_loss_mult
+Use areas: character
+
+Tag: city_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: trait_track_charioteer_red_xp_loss_mult
+Use areas: character
+
+Tag: sicilian_opinion
+Use areas: character
+
+Tag: direct_vassal_opinion
+Use areas: character
+
+Tag: samaritan_opinion
+Use areas: character
+
+Tag: monthly_county_control_decline_at_war_factor
+Use areas: character, province, and county
+
+Tag: max_laamp_base_1041_contract_scheme_schemes_add
+Use areas: character
+
+Tag: levy_siege
+Use areas: character
+
+Tag: tajik_opinion
+Use areas: character
+
+Tag: legitimacy_gain_mult
+Use areas: character
+
+Tag: stationed_heavy_cavalry_pursuit_add
+Use areas: province
+
+Tag: norse_opinion
+Use areas: character
+
+Tag: cowed_vassal_tax_contribution_mult
+Use areas: character
+
+Tag: murder_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: tribal_government_opinion_same_faith
+Use areas: character
+
+Tag: max_laamp_base_2001_contract_scheme_schemes_add
+Use areas: character
+
+Tag: oasis_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: floodplains_max_combat_roll
+Use areas: character
+
+Tag: desert_mountains_development_growth_factor
+Use areas: character, province, and county
+
 Tag: monthly_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: stationed_archer_cavalry_damage_mult
-Use areas: province
+Tag: theocracy_government_levy_contribution_mult
+Use areas: character
+
+Tag: max_seize_realm_schemes_add
+Use areas: character
 
 Tag: intimidated_vassal_tax_contribution_add
 Use areas: character
@@ -1019,85 +1061,76 @@ Use areas: character
 Tag: tyranny_loss_mult
 Use areas: character
 
-Tag: saura_opinion
+Tag: floodplains_advantage
 Use areas: character
 
-Tag: steppe_supply_limit
-Use areas: character， province，以及 county
-
-Tag: slovien_opinion
+Tag: trait_track_lifestyle_physician_xp_loss_mult
 Use areas: character
 
-Tag: scarred_xp_gain_mult
+Tag: enemy_contract_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_light_cavalry_siege_value_add
+Tag: max_convert_to_witchcraft_schemes_add
+Use areas: character
+
+Tag: stationed_camel_cavalry_screen_add
 Use areas: province
 
-Tag: floodplains_levy_size
-Use areas: character， province，以及 county
-
-Tag: irish_opinion
+Tag: max_laamp_base_3021_contract_scheme_schemes_add
 Use areas: character
 
-Tag: fabricate_hook_scheme_power_mult
+Tag: stationed_pikemen_damage_add
+Use areas: province
+
+Tag: scheme_phase_duration_against_best_friend_add
 Use areas: character
 
-Tag: dualism_religion_opinion
-Use areas: character
+Tag: stationed_skirmishers_siege_value_mult
+Use areas: province
 
-Tag: khanty_opinion
-Use areas: character
-
-Tag: han_opinion
-Use areas: character
+Tag: stationed_heavy_infantry_damage_mult
+Use areas: province
 
 Tag: levy_reinforcement_rate_same_faith_even_if_baron
 Use areas: character
 
-Tag: world_persian_empire_development_growth
-Use areas: character， province，以及 county
-
-Tag: max_murder_schemes_add
+Tag: scheme_phase_duration_against_oaf_add
 Use areas: character
 
-Tag: polish_opinion
+Tag: igbo_opinion
 Use areas: character
 
-Tag: floodplains_advantage
-Use areas: character
-
-Tag: scheme_power_against_wet_nurse_add
-Use areas: character
-
-Tag: siege_weapon_maintenance_mult
-Use areas: character
-
-Tag: stationed_archer_cavalry_toughness_mult
+Tag: stationed_camel_cavalry_pursuit_add
 Use areas: province
+
+Tag: ari_opinion
+Use areas: character
+
+Tag: cathar_opinion
+Use areas: character
+
+Tag: seize_realm_enemy_scheme_phase_duration_add
+Use areas: character
 
 Tag: monthly_prestige_gain_per_dread_add
 Use areas: character
 
-Tag: seduce_scheme_power_add
+Tag: scheme_phase_duration_against_event_recurrer_add
 Use areas: character
 
 Tag: prowess_per_piety_level
 Use areas: character
 
-Tag: hostile_scheme_power_add
+Tag: hostile_scheme_phase_duration_add
 Use areas: character
 
-Tag: jungle_cancel_negative_supply
+Tag: parochial_ai_zeal
 Use areas: character
 
-Tag: pikemen_max_size_mult
+Tag: tribal_government_tax_contribution_add
 Use areas: character
 
-Tag: hills_travel_danger
-Use areas: character， province，以及 county
-
-Tag: pikemen_toughness_mult
+Tag: breton_opinion
 Use areas: character
 
 Tag: intrigue
@@ -1106,95 +1139,89 @@ Use areas: character
 Tag: cultural_head_acceptance_gain_mult
 Use areas: character
 
-Tag: heavy_cavalry_screen_add
+Tag: oasis_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: zaghawa_opinion
+Use areas: character
+
+Tag: max_laamp_base_4001_contract_scheme_schemes_add
 Use areas: character
 
 Tag: monthly_prestige_gain_per_happy_powerful_vassal_add
 Use areas: character
 
-Tag: glory_hound_ai_greed
+Tag: administrative_government_levy_contribution_add
 Use areas: character
 
-Tag: welayta_opinion
+Tag: donyipoloism_opinion
 Use areas: character
 
-Tag: karaism_opinion
+Tag: pikemen_damage_add
+Use areas: character
+
+Tag: conversos_opinion
 Use areas: character
 
 Tag: hostage_income_mult
 Use areas: character
 
-Tag: stewardship_lifestyle_xp_gain_mult
+Tag: minority_tax_contribution_add
 Use areas: character
 
-Tag: desert_min_combat_roll
+Tag: stationed_archers_damage_mult
+Use areas: province
+
+Tag: pikemen_pursuit_mult
 Use areas: character
 
-Tag: judaism_religion_opinion
+Tag: gallowsbait_xp_loss_mult
 Use areas: character
 
-Tag: brahui_opinion
-Use areas: character
-
-Tag: siege_weapon_pursuit_mult
-Use areas: character
-
-Tag: volhynian_opinion
-Use areas: character
-
-Tag: trait_track_wit_xp_loss_mult
-Use areas: character
-
-Tag: svetambara_opinion
-Use areas: character
-
-Tag: jungle_travel_danger
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_ai_boldness
-Use areas: character
-
-Tag: trait_track_horse_xp_gain_mult
+Tag: political_scheme_phase_duration_add
 Use areas: character
 
 Tag: stress_gain_mult
 Use areas: character
 
-Tag: stationed_heavy_cavalry_screen_add
-Use areas: province
+Tag: laamp_base_4021_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: elephant_cavalry_pursuit_mult
+Use areas: character
 
 Tag: monthly_prestige_gain_per_knight_add
 Use areas: character
 
-Tag: steal_back_artifact_scheme_power_add
+Tag: monthly_stewardship_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: clan_tax_slot_add
+Tag: plains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: jungle_travel_danger
+Use areas: character, province, and county
+
+Tag: siege_weapon_recruitment_cost_mult
 Use areas: character
-
-Tag: forest_supply_limit
-Use areas: character， province，以及 county
-
-Tag: stationed_skirmishers_screen_mult
-Use areas: province
 
 Tag: no_prowess_loss_from_age
 Use areas: character
 
-Tag: zealot_ai_honor
+Tag: intrigue_lifestyle_xp_gain_add
 Use areas: character
 
-Tag: plains_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: parochial_ai_sociability
+Tag: beja_opinion
 Use areas: character
 
-Tag: west_african_orisha_religion_opinion
+Tag: trait_track_wit_xp_gain_mult
 Use areas: character
 
-Tag: desert_mountains_holding_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: nubian_opinion
+Use areas: character
+
+Tag: barons_and_minor_landholders_ai_rationality
+Use areas: character
 
 Tag: army_siege_value_mult
 Use areas: character
@@ -1202,82 +1229,85 @@ Use areas: character
 Tag: cultural_head_fascination_add
 Use areas: character
 
-Tag: sea_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: plains_supply_limit_mult
+Use areas: character, province, and county
 
-Tag: qiangic_religion_opinion
+Tag: domicile_build_speed
 Use areas: character
 
-Tag: camel_cavalry_screen_mult
+Tag: max_protect_minority_vassal_contract_intrigue_scheme_schemes_add
 Use areas: character
 
-Tag: scheme_power_against_lover_mult
+Tag: hills_levy_size
+Use areas: character, province, and county
+
+Tag: lifestyle_traveler_xp_loss_mult
 Use areas: character
 
 Tag: player_heir_opinion
 Use areas: character
 
-Tag: forest_attrition_mult
-Use areas: character
-
-Tag: bavlim_opinion
-Use areas: character
-
-Tag: monthly_learning_lifestyle_xp_gain_mult
-Use areas: character
-
-Tag: lifestyle_traveler_xp_degradation_mult
+Tag: light_cavalry_damage_mult
 Use areas: character
 
 Tag: monthly_piety_from_buildings_mult
 Use areas: character
 
-Tag: republic_government_vassal_opinion
+Tag: rabbinism_opinion
+Use areas: character
+
+Tag: hills_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: desert_cancel_negative_supply
+Use areas: character
+
+Tag: archer_cavalry_screen_add
+Use areas: character
+
+Tag: max_prepare_fire_dromons_scheme_schemes_add
+Use areas: character
+
+Tag: sea_tax_mult
+Use areas: character, province, and county
+
+Tag: imami_opinion
+Use areas: character
+
+Tag: persian_opinion
 Use areas: character
 
 Tag: intrigue_scheme_resistance
 Use areas: character
 
-Tag: claim_throne_scheme_power_add
+Tag: rf_pagan_opinion
 Use areas: character
 
-Tag: learning_scheme_power
+Tag: taiga_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: learning_scheme_phase_duration
 Use areas: character
 
-Tag: pikemen_pursuit_add
+Tag: desert_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: merkabah_opinion
 Use areas: character
 
-Tag: minority_ai_vengefulness
+Tag: trait_track_charioteer_green_xp_gain_mult
 Use areas: character
 
-Tag: sea_development_growth
-Use areas: character， province，以及 county
-
-Tag: minority_ai_compassion
+Tag: alevi_opinion
 Use areas: character
 
-Tag: ari_opinion
-Use areas: character
+Tag: church_holding_build_prestige_cost
+Use areas: character, province, and county
 
-Tag: castle_holding_holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: zhangzhung_opinion
-Use areas: character
-
-Tag: same_culture_holy_order_hire_cost_mult
-Use areas: character
-
-Tag: stationed_camel_cavalry_screen_mult
+Tag: stationed_heavy_cavalry_siege_value_mult
 Use areas: province
 
-Tag: republic_government_levy_contribution_add
-Use areas: character
-
-Tag: scheme_power_against_oaf_add
-Use areas: character
-
-Tag: lifestyle_reveler_xp_loss_mult
+Tag: same_culture_holy_order_hire_cost_mult
 Use areas: character
 
 Tag: negate_learning_penalty_add
@@ -1286,106 +1316,94 @@ Use areas: character
 Tag: levy_attack
 Use areas: character
 
-Tag: buddhism_religion_opinion
+Tag: max_claim_throne_schemes_add
 Use areas: character
 
-Tag: wetlands_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: archers_toughness_add
+Tag: laamp_base_0021_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: pecheneg_opinion
+Tag: skirmishers_damage_mult
 Use areas: character
 
-Tag: wetlands_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: lifestyle_mystic_xp_gain_mult
+Use areas: character
 
 Tag: monthly_county_control_decline_factor_even_if_baron
 Use areas: character
 
-Tag: castle_holding_build_speed
-Use areas: character， province，以及 county
+Tag: drylands_provisions_use_mult
+Use areas: character, province, and county
 
-Tag: bedouin_opinion
+Tag: kashmiri_opinion
 Use areas: character
 
-Tag: convert_to_witchcraft_scheme_resistance_add
-Use areas: character
-
-Tag: scheme_power_against_victim_add
-Use areas: character
-
-Tag: trait_track_lifestyle_reveler_xp_gain_mult
-Use areas: character
+Tag: tribal_holding_build_gold_cost
+Use areas: character, province, and county
 
 Tag: stress_loss_per_piety_level
 Use areas: character
 
-Tag: farmlands_supply_limit_mult
-Use areas: character， province，以及 county
+Tag: glory_hound_levy_contribution_mult
+Use areas: character
 
-Tag: heavy_infantry_toughness_mult
+Tag: republic_government_opinion
 Use areas: character
 
 Tag: opinion_of_same_culture
 Use areas: character
 
-Tag: elephant_cavalry_screen_mult
+Tag: learn_language_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: elephant_cavalry_max_size_mult
+Tag: desert_advantage
 Use areas: character
 
-Tag: steppe_levy_size
-Use areas: character， province，以及 county
+Tag: qiangic_religion_opinion
+Use areas: character
 
-Tag: tribal_government_levy_contribution_mult
+Tag: laamp_help_find_secrets_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: feudal_government_tax_contribution_add
 Use areas: character
 
 Tag: character_travel_safety_mult
 Use areas: character
 
-Tag: kanuri_opinion
+Tag: heavy_infantry_damage_add
 Use areas: character
 
-Tag: world_innovation_camels_development_growth
-Use areas: character， province，以及 county
+Tag: desert_levy_size
+Use areas: character, province, and county
 
-Tag: hellenic_pagan_opinion
+Tag: swedish_opinion
 Use areas: character
 
-Tag: uyghur_opinion
+Tag: lifestyle_hunter_xp_degradation_mult
 Use areas: character
 
-Tag: stationed_heavy_infantry_screen_mult
+Tag: stationed_skirmishers_toughness_add
 Use areas: province
 
-Tag: swabian_opinion
+Tag: heavy_infantry_screen_add
 Use areas: character
 
-Tag: stationed_elephant_cavalry_damage_add
-Use areas: province
+Tag: floodplains_development_growth
+Use areas: character, province, and county
 
-Tag: trait_track_lifestyle_physician_xp_degradation_mult
+Tag: scheme_phase_duration_against_bully_add
 Use areas: character
 
-Tag: insular_celtic_opinion
+Tag: max_laamp_base_2011_contract_scheme_schemes_add
 Use areas: character
 
-Tag: light_cavalry_siege_value_mult
+Tag: camel_cavalry_toughness_add
 Use areas: character
 
-Tag: scheme_power_against_nursed_child_add
+Tag: basque_pagan_opinion
 Use areas: character
 
-Tag: muroma_opinion
-Use areas: character
-
-Tag: lifestyle_mystic_xp_loss_mult
-Use areas: character
-
-Tag: scheme_power
+Tag: scheme_phase_duration
 Use areas: scheme
 
 Tag: owned_scheme_secrecy_add
@@ -1394,25 +1412,43 @@ Use areas: character
 Tag: domain_tax_different_faith_mult_even_if_baron
 Use areas: character
 
-Tag: siege_weapon_damage_mult
+Tag: parochial_ai_vengefulness
 Use areas: character
 
-Tag: archer_cavalry_maintenance_mult
+Tag: steal_back_artifact_scheme_phase_duration_add
 Use areas: character
 
-Tag: heavy_infantry_pursuit_add
+Tag: drylands_max_combat_roll
 Use areas: character
 
-Tag: archer_cavalry_screen_add
+Tag: maghrebi_opinion
+Use areas: character
+
+Tag: khitan_opinion
+Use areas: character
+
+Tag: seduce_enemy_scheme_phase_duration_add
 Use areas: character
 
 Tag: men_at_arms_maintenance
 Use areas: character
 
-Tag: murder_scheme_power_add
+Tag: martial_lifestyle_xp_gain_add
 Use areas: character
 
-Tag: courtly_ai_vengefulness
+Tag: scheme_phase_duration_against_soldier_friend_add
+Use areas: character
+
+Tag: clan_government_levy_contribution_add
+Use areas: character
+
+Tag: coptic_opinion
+Use areas: character
+
+Tag: trait_track_scarred_xp_loss_mult
+Use areas: character
+
+Tag: nestorian_opinion
 Use areas: character
 
 Tag: defender_advantage
@@ -1424,229 +1460,289 @@ Use areas: character
 Tag: prowess_per_prestige_level
 Use areas: character
 
-Tag: pikemen_toughness_add
+Tag: baltic_pagan_opinion
 Use areas: character
 
-Tag: diplomacy_lifestyle_xp_gain_mult
+Tag: zealot_levy_contribution_mult
 Use areas: character
 
-Tag: yapaniya_opinion
-Use areas: character
-
-Tag: srikula_shaktism_opinion
-Use areas: character
-
-Tag: oasis_supply_limit
-Use areas: character， province，以及 county
-
-Tag: gujarati_opinion
+Tag: archers_toughness_add
 Use areas: character
 
 Tag: maa_screen_mult
 Use areas: character
 
-Tag: scarred_xp_loss_mult
+Tag: urartuism_opinion
 Use areas: character
 
-Tag: heavy_cavalry_siege_value_mult
+Tag: farmlands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: diplomacy_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: defender_holding_advantage
-Use areas: character， province，以及 county
-
-Tag: jungle_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_ai_greed
-Use areas: character
-
-Tag: parochial_levy_contribution_mult
-Use areas: character
-
-Tag: steal_back_artifact_scheme_power_mult
-Use areas: character
-
-Tag: north_african_acham_pagan_opinion
-Use areas: character
-
-Tag: dread_per_tyranny_mult
-Use areas: character
-
-Tag: italian_opinion
-Use areas: character
-
-Tag: sea_cancel_negative_supply
-Use areas: character
-
-Tag: forest_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: mundhum_religion_opinion
-Use areas: character
-
-Tag: general_opinion
-Use areas: character
-
-Tag: skirmishers_screen_mult
-Use areas: character
-
-Tag: desert_supply_limit
-Use areas: character， province，以及 county
-
-Tag: oasis_advantage
-Use areas: character
-
-Tag: monthly_prestige_from_buildings_mult
-Use areas: character
-
-Tag: prowess_scheme_resistance
-Use areas: character
-
-Tag: kerait_opinion
-Use areas: character
-
-Tag: zealot_ai_zeal
-Use areas: character
-
-Tag: feudal_government_levy_contribution_add
-Use areas: character
-
-Tag: negate_prowess_penalty_add
-Use areas: character
-
-Tag: tribal_government_opinion_same_faith
-Use areas: character
-
-Tag: swedish_opinion
-Use areas: character
-
-Tag: claim_throne_scheme_power_mult
-Use areas: character
-
-Tag: tribal_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_lifestyle_reveler_xp_loss_mult
-Use areas: character
-
-Tag: waaqism_pagan_opinion
-Use areas: character
-
-Tag: scheme_power_against_soldier_friend_mult
-Use areas: character
-
-Tag: taiga_attrition_mult
-Use areas: character
-
-Tag: army_pursuit_mult
+Tag: enemy_political_scheme_phase_duration_add
 Use areas: character
 
 Tag: elephant_cavalry_screen_add
 Use areas: character
 
-Tag: coastal_sea_development_growth
-Use areas: character， province，以及 county
-
-Tag: farmlands_cancel_negative_supply
-Use areas: character
-
-Tag: stationed_camel_cavalry_screen_add
+Tag: stationed_siege_weapon_toughness_add
 Use areas: province
 
-Tag: theocracy_government_tax_contribution_add
+Tag: plains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: monthly_piety_gain_per_court_position_add
 Use areas: character
 
-Tag: convert_to_witchcraft_scheme_resistance_mult
+Tag: insular_celtic_opinion
 Use areas: character
 
-Tag: farmlands_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: elephant_cavalry_toughness_add
+Use areas: character
 
-Tag: burmese_opinion
+Tag: forest_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: defender_holding_advantage
+Use areas: character, province, and county
+
+Tag: domicile_monthly_prestige_mult
+Use areas: character
+
+Tag: elope_scheme_phase_duration_add
+Use areas: character
+
+Tag: jungle_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: enemy_political_scheme_success_chance_add
+Use areas: character
+
+Tag: tamil_opinion
+Use areas: character
+
+Tag: dread_per_tyranny_mult
+Use areas: character
+
+Tag: stationed_archer_cavalry_damage_mult
+Use areas: province
+
+Tag: light_cavalry_toughness_add
+Use areas: character
+
+Tag: learning_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: plains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: sao_opinion
+Use areas: character
+
+Tag: stewardship_per_influence_level
+Use areas: character
+
+Tag: hills_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: sea_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: general_opinion
+Use areas: character
+
+Tag: laamp_base_6001_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: minority_ai_vengefulness
+Use areas: character
+
+Tag: hills_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: monthly_prestige_from_buildings_mult
+Use areas: character
+
+Tag: wetlands_max_combat_roll
+Use areas: character
+
+Tag: hills_travel_danger
+Use areas: character, province, and county
+
+Tag: rajput_opinion
+Use areas: character
+
+Tag: forest_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: enemy_hostile_scheme_phase_duration_add
+Use areas: character
+
+Tag: sea_development_growth_factor
+Use areas: character, province, and county
+
+Tag: charioteer_blue_xp_loss_mult
+Use areas: character
+
+Tag: enemy_personal_scheme_success_chance_max_add
+Use areas: character
+
+Tag: prowess_scheme_resistance
+Use areas: character
+
+Tag: stationed_light_cavalry_pursuit_mult
+Use areas: province
+
+Tag: yapaniya_opinion
+Use areas: character
+
+Tag: negate_prowess_penalty_add
+Use areas: character
+
+Tag: heavy_cavalry_max_size_add
+Use areas: character
+
+Tag: drylands_supply_limit
+Use areas: character, province, and county
+
+Tag: sea_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: alawite_opinion
+Use areas: character
+
+Tag: city_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: army_pursuit_mult
+Use areas: character
+
+Tag: learn_language_scheme_phase_duration_add
+Use areas: character
+
+Tag: asturleonese_opinion
+Use areas: character
+
+Tag: mountains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: courtly_ai_rationality
+Use areas: character
+
+Tag: steppe_min_combat_roll
+Use areas: character
+
+Tag: feudal_government_opinion_same_faith
+Use areas: character
+
+Tag: lifestyle_physician_xp_gain_mult
+Use areas: character
+
+Tag: mountains_levy_size
+Use areas: character, province, and county
+
+Tag: mountains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: tribal_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: glory_hound_different_faith_opinion
+Use areas: character
+
+Tag: the_wake_xp_gain_mult
+Use areas: character
+
+Tag: buryat_opinion
 Use areas: character
 
 Tag: elderly_health
+Use areas: character
+
+Tag: desert_min_combat_roll
+Use areas: character
+
+Tag: trait_track_hunter_xp_degradation_mult
 Use areas: character
 
 Tag: monthly_county_control_decline_add_even_if_baron
 Use areas: character
 
 Tag: counter_resistance
-Use areas: character 以及 terrain
+Use areas: character  and terrain
 
-Tag: trait_track_lifestyle_mystic_xp_loss_mult
-Use areas: character
-
-Tag: world_steppe_development_growth
-Use areas: character， province，以及 county
-
-Tag: cornish_opinion
-Use areas: character
-
-Tag: mercenary_government_tax_contribution_mult
+Tag: governor_xp_degradation_mult
 Use areas: character
 
 Tag: independent_ruler_opinion
 Use areas: character
 
-Tag: city_holding_build_speed
-Use areas: character， province，以及 county
-
-Tag: bosnian_opinion
+Tag: alan_opinion
 Use areas: character
 
-Tag: christianity_religion_opinion
+Tag: stationed_heavy_cavalry_pursuit_mult
+Use areas: province
+
+Tag: stationed_skirmishers_screen_mult
+Use areas: province
+
+Tag: max_contract_schemes_add
 Use areas: character
 
-Tag: ongud_opinion
+Tag: bolghar_opinion
 Use areas: character
 
-Tag: steppe_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_activity_recurrer_add
+Tag: oasis_attrition_mult
 Use areas: character
 
-Tag: tsangpa_opinion
+Tag: skirmishers_max_size_mult
 Use areas: character
 
 Tag: strife_opinion_gain_mult
 Use areas: character
 
-Tag: stationed_heavy_infantry_siege_value_mult
-Use areas: province
+Tag: foster_legitimacy_scheme_scheme_phase_duration_add
+Use areas: character
 
 Tag: monthly_dynasty_prestige
+Use areas: character
+
+Tag: gayomarthianism_opinion
 Use areas: character
 
 Tag: opinion_of_parents
 Use areas: character
 
-Tag: learn_language_scheme_power_mult
+Tag: scheme_phase_duration_against_soulmate_add
 Use areas: character
 
-Tag: courtly_ai_sociability
+Tag: drylands_attrition_mult
 Use areas: character
 
-Tag: stationed_elephant_cavalry_toughness_mult
-Use areas: province
-
-Tag: hills_development_growth
-Use areas: character， province，以及 county
-
-Tag: baltic_religion_opinion
+Tag: scarred_xp_gain_mult
 Use areas: character
 
-Tag: stationed_archers_toughness_mult
-Use areas: province
+Tag: theocracy_government_levy_contribution_add
+Use areas: character
 
-Tag: siege_weapon_toughness_mult
+Tag: republic_government_opinion_same_faith
+Use areas: character
+
+Tag: parochial_same_faith_opinion
+Use areas: character
+
+Tag: egyptian_opinion
+Use areas: character
+
+Tag: khurramism_opinion
 Use areas: character
 
 Tag: tyranny_gain_mult
 Use areas: character
 
-Tag: pikemen_siege_value_mult
+Tag: intrigue_per_piety_level
 Use areas: character
 
 Tag: levy_reinforcement_rate_different_faith_even_if_baron
@@ -1655,52 +1751,46 @@ Use areas: character
 Tag: different_faith_opinion
 Use areas: character
 
-Tag: intrigue_per_piety_level
+Tag: pikemen_siege_value_add
 Use areas: character
 
-Tag: ethiopian_opinion
+Tag: vepsian_opinion
 Use areas: character
 
-Tag: alawite_opinion
+Tag: west_african_bori_religion_opinion
 Use areas: character
 
-Tag: meshchera_opinion
+Tag: camel_cavalry_damage_add
 Use areas: character
 
-Tag: world_steppe_development_growth_factor
-Use areas: character， province，以及 county
+Tag: stationed_pikemen_damage_mult
+Use areas: province
 
-Tag: vaishnavism_opinion
-Use areas: character
-
-Tag: gaelic_opinion
-Use areas: character
-
-Tag: pilgrim_xp_loss_mult
+Tag: scheme_phase_duration_against_potential_lover_add
 Use areas: character
 
 Tag: monthly_county_control_growth_at_war_factor
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: tamil_opinion
-Use areas: character
-
-Tag: oasis_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_activity_recurrer_mult
-Use areas: character
-
-Tag: mordvin_opinion
-Use areas: character
-
-Tag: stationed_siege_weapon_screen_mult
+Tag: stationed_heavy_infantry_siege_value_add
 Use areas: province
+
+Tag: danish_opinion
+Use areas: character
+
+Tag: camel_cavalry_siege_value_add
+Use areas: character
+
+Tag: plains_cancel_negative_supply
+Use areas: character
+
+Tag: jungle_construction_piety_cost
+Use areas: character, province, and county
 
 Tag: maa_damage_mult
 Use areas: character
 
-Tag: siege_weapon_screen_mult
+Tag: armenian_opinion
 Use areas: character
 
 Tag: cowed_vassal_levy_contribution_add
@@ -1709,38 +1799,59 @@ Use areas: character
 Tag: coastal_advantage
 Use areas: character
 
-Tag: parochial_ai_greed
+Tag: siege_weapon_siege_value_mult
 Use areas: character
 
-Tag: parochial_levy_contribution_add
+Tag: scheme_phase_duration_against_crush_add
+Use areas: character
+
+Tag: jungle_development_growth
+Use areas: character, province, and county
+
+Tag: jungle_attrition_mult
+Use areas: character
+
+Tag: forest_advantage
+Use areas: character
+
+Tag: trait_track_poacher_xp_loss_mult
+Use areas: character
+
+Tag: administrative_government_tax_contribution_mult
 Use areas: character
 
 Tag: mercenary_count_mult
 Use areas: culture
 
-Tag: stationed_light_cavalry_pursuit_add
-Use areas: province
-
-Tag: hostile_scheme_power_mult
+Tag: max_laamp_base_3011_contract_scheme_schemes_add
 Use areas: character
 
-Tag: kushitism_pagan_opinion
+Tag: jungle_min_combat_roll
 Use areas: character
 
-Tag: mountains_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_ai_rationality
+Tag: plains_max_combat_roll
 Use areas: character
 
-Tag: plains_advantage
+Tag: zealot_tax_contribution_mult
 Use areas: character
 
-Tag: lifestyle_traveler_xp_gain_mult
+Tag: pilgrim_xp_gain_mult
 Use areas: character
 
-Tag: oasis_tax_mult
-Use areas: character， province，以及 county
+Tag: monthly_martial_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: hills_max_combat_roll
+Use areas: character
+
+Tag: trait_track_bow_xp_degradation_mult
+Use areas: character
+
+Tag: intrigue_per_influence_level
+Use areas: character
+
+Tag: sea_construction_gold_cost
+Use areas: character, province, and county
 
 Tag: child_health
 Use areas: character
@@ -1748,163 +1859,226 @@ Use areas: character
 Tag: powerful_vassal_opinion
 Use areas: character
 
-Tag: desert_development_growth_factor
-Use areas: character， province，以及 county
+Tag: sea_development_growth
+Use areas: character, province, and county
 
-Tag: plains_max_combat_roll
+Tag: advaitism_opinion
 Use areas: character
 
-Tag: minority_tax_contribution_add
+Tag: knight_effectiveness_per_learning
+Use areas: character
+
+Tag: hills_advantage
+Use areas: character
+
+Tag: trait_track_thief_xp_degradation_mult
+Use areas: character
+
+Tag: minority_levy_contribution_mult
+Use areas: character
+
+Tag: siege_weapon_maintenance_mult
+Use areas: character
+
+Tag: monthly_prestige_gain_per_court_position_add
+Use areas: character
+
+Tag: siege_weapon_screen_add
+Use areas: character
+
+Tag: welayta_opinion
+Use areas: character
+
+Tag: farmlands_travel_danger
+Use areas: character, province, and county
+
+Tag: forest_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: ismaili_opinion
 Use areas: character
 
 Tag: prisoner_opinion
 Use areas: character
 
-Tag: west_african_religion_opinion
+Tag: forest_supply_limit
+Use areas: character, province, and county
+
+Tag: trait_track_horse_xp_degradation_mult
 Use areas: character
 
-Tag: plains_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: sea_travel_danger
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_lover_add
+Tag: monthly_intrigue_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: taiga_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: sea_advantage
+Use areas: character
 
-Tag: taiga_supply_limit
-Use areas: character， province，以及 county
+Tag: trait_track_charioteer_blue_xp_degradation_mult
+Use areas: character
+
+Tag: archer_cavalry_screen_mult
+Use areas: character
 
 Tag: supply_limit
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: befriend_scheme_power_mult
+Tag: gaelic_opinion
 Use areas: character
 
-Tag: stationed_camel_cavalry_toughness_mult
-Use areas: province
+Tag: world_innovation_camels_development_growth_factor
+Use areas: character, province, and county
+
+Tag: max_laamp_prison_break_scheme_schemes_add
+Use areas: character
+
+Tag: kushitism_pagan_opinion
+Use areas: character
 
 Tag: ai_war_cooldown
 Use areas: character
 
-Tag: tribal_government_tax_contribution_mult
+Tag: tourney_participant_xp_degradation_mult
 Use areas: character
 
-Tag: sea_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: overthrow_regent_scheme_power_mult
-Use areas: character
-
-Tag: stationed_pikemen_toughness_mult
+Tag: stationed_archer_cavalry_toughness_mult
 Use areas: province
+
+Tag: mountains_max_combat_roll
+Use areas: character
+
+Tag: sufri_opinion
+Use areas: character
+
+Tag: city_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: bulgarian_opinion
+Use areas: character
+
+Tag: wetlands_travel_danger
+Use areas: character, province, and county
+
+Tag: generate_claim_enemy_scheme_phase_duration_add
+Use areas: character
 
 Tag: holding_build_gold_cost
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: coastal_sea_cancel_negative_supply
+Tag: mountains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_lifestyle_blademaster_xp_gain_mult
 Use areas: character
 
-Tag: messalian_opinion
+Tag: afghan_opinion
 Use areas: character
 
-Tag: levantine_opinion
+Tag: protect_minority_vassal_contract_learning_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_camel_cavalry_toughness_add
-Use areas: province
-
-Tag: karelian_opinion
+Tag: lifestyle_physician_xp_degradation_mult
 Use areas: character
 
-Tag: trait_track_falconer_xp_gain_mult
+Tag: laamp_base_0041_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: archers_recruitment_cost_mult
-Use areas: character
-
-Tag: serer_opinion
-Use areas: character
-
-Tag: prussian_opinion
-Use areas: character
-
-Tag: archer_cavalry_siege_value_add
+Tag: heavy_cavalry_maintenance_mult
 Use areas: character
 
 Tag: levy_toughness
 Use areas: character
 
-Tag: scheme_power_against_intrigue_mentor_mult
+Tag: desert_mountains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: trait_track_falconer_xp_loss_mult
 Use areas: character
 
-Tag: songhai_opinion
+Tag: heavy_cavalry_screen_add
+Use areas: character
+
+Tag: floodplains_attrition_mult
 Use areas: character
 
 Tag: happy_powerful_vassal_tax_contribution_mult
 Use areas: character
 
-Tag: steppe_cancel_negative_supply
+Tag: trait_track_governor_xp_gain_mult
 Use areas: character
 
-Tag: courtly_levy_contribution_mult
+Tag: theocracy_government_opinion_same_faith
 Use areas: character
 
-Tag: stationed_archers_pursuit_add
-Use areas: province
+Tag: merya_opinion
+Use areas: character
 
-Tag: stationed_heavy_infantry_screen_add
-Use areas: province
+Tag: max_laamp_base_1011_contract_scheme_schemes_add
+Use areas: character
+
+Tag: steppe_tax_mult
+Use areas: character, province, and county
+
+Tag: republic_government_levy_contribution_add
+Use areas: character
+
+Tag: english_opinion
+Use areas: character
+
+Tag: akom_pagan_opinion
+Use areas: character
 
 Tag: ai_zeal
 Use areas: character
 
-Tag: learn_language_scheme_resistance_add
+Tag: lifestyle_physician_xp_loss_mult
 Use areas: character
 
-Tag: finno_ugric_religion_opinion
+Tag: scheme_phase_duration_against_guardian_add
 Use areas: character
 
-Tag: steppe_tax_mult
-Use areas: character， province，以及 county
+Tag: steppe_supply_limit
+Use areas: character, province, and county
 
-Tag: welsh_opinion
+Tag: mazdakism_opinion
 Use areas: character
 
-Tag: archer_cavalry_damage_mult
+Tag: convert_to_witchcraft_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: bavarian_opinion
+Tag: promote_scheme_phase_duration_add
 Use areas: character
 
-Tag: scheme_power_against_wet_nurse_mult
+Tag: heavy_infantry_screen_mult
 Use areas: character
 
 Tag: monthly_county_control_growth_add_even_if_baron
 Use areas: character
 
-Tag: floodplains_holding_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: max_damage_legitimacy_scheme_schemes_add
+Use areas: character
 
-Tag: stationed_light_cavalry_damage_add
-Use areas: province
+Tag: laamp_base_2041_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
 
-Tag: farmlands_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: glory_hound_different_culture_opinion
+Use areas: character
 
 Tag: monthly_dread
 Use areas: character
 
-Tag: church_holding_holding_build_speed
-Use areas: character， province，以及 county
-
-Tag: nupe_opinion
+Tag: wolof_opinion
 Use areas: character
 
-Tag: mountains_min_combat_roll
+Tag: heavy_infantry_toughness_mult
+Use areas: character
+
+Tag: naiman_opinion
+Use areas: character
+
+Tag: oasis_levy_size
+Use areas: character, province, and county
+
+Tag: zealot_different_faith_opinion
 Use areas: character
 
 Tag: monthly_piety_gain_per_dread_mult
@@ -1913,40 +2087,58 @@ Use areas: character
 Tag: dread_gain_mult
 Use areas: character
 
-Tag: scheme_power_against_wedding_very_good_fertility_add
+Tag: mercenary_government_tax_contribution_mult
 Use areas: character
 
-Tag: siege_weapon_toughness_add
+Tag: steal_back_artifact_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_archer_cavalry_pursuit_mult
-Use areas: province
+Tag: desert_mountains_tax_mult
+Use areas: character, province, and county
 
-Tag: stationed_heavy_infantry_toughness_mult
-Use areas: province
+Tag: khurmazta_opinion
+Use areas: character
 
-Tag: parochial_tax_contribution_mult
+Tag: jungle_max_combat_roll
+Use areas: character
+
+Tag: oasis_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: scheme_phase_duration_against_court_physician_add
+Use areas: character
+
+Tag: clan_government_tax_contribution_mult
 Use areas: character
 
 Tag: martial
 Use areas: character
 
-Tag: courtly_ai_zeal
+Tag: oasis_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: jungle_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_trickster_xp_loss_mult
 Use areas: character
 
-Tag: basque_religion_opinion
+Tag: trait_track_scarred_xp_gain_mult
 Use areas: character
 
 Tag: maa_siege_value_add
 Use areas: character
 
-Tag: murder_scheme_resistance_mult
+Tag: scheme_phase_duration_against_potential_friend_add
 Use areas: character
 
-Tag: stationed_archer_cavalry_siege_value_add
-Use areas: province
+Tag: slander_scheme_phase_duration_add
+Use areas: character
 
-Tag: sufri_opinion
+Tag: jungle_development_growth_factor
+Use areas: character, province, and county
+
+Tag: elephant_cavalry_screen_mult
 Use areas: character
 
 Tag: learning_per_prestige_level
@@ -1958,95 +2150,137 @@ Use areas: character
 Tag: maa_damage_add
 Use areas: character
 
-Tag: hills_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: siege_weapon_max_size_mult
+Tag: parochial_ai_rationality
 Use areas: character
 
-Tag: jungle_min_combat_roll
+Tag: yemeni_opinion
 Use areas: character
+
+Tag: diplomacy_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: stationed_elephant_cavalry_toughness_mult
+Use areas: province
 
 Tag: scheme_success_chance
 Use areas: scheme
 
-Tag: plains_development_growth
-Use areas: character， province，以及 county
-
-Tag: trait_track_pilgrim_xp_gain_mult
+Tag: learning_per_influence_level
 Use areas: character
 
-Tag: stationed_heavy_cavalry_damage_add
-Use areas: province
+Tag: plains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: trait_track_bandit_xp_gain_mult
+Use areas: character
+
+Tag: burmese_opinion
+Use areas: character
+
+Tag: monthly_prestige_gain_per_court_position_mult
+Use areas: character
 
 Tag: stationed_maa_siege_value_mult
 Use areas: province
 
+Tag: hills_development_growth
+Use areas: character, province, and county
+
 Tag: martial_per_stress_level
 Use areas: character
 
-Tag: plains_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: seduce_scheme_power_mult
+Tag: farmlands_advantage
 Use areas: character
 
-Tag: zealot_different_culture_opinion
+Tag: scheme_phase_duration_against_wet_nurse_add
 Use areas: character
+
+Tag: stationed_siege_weapon_damage_mult
+Use areas: province
 
 Tag: stationed_maa_damage_mult
 Use areas: province
 
-Tag: skirmishers_pursuit_add
+Tag: siege_weapon_damage_mult
+Use areas: character
+
+Tag: trait_track_wit_xp_loss_mult
+Use areas: character
+
+Tag: saura_opinion
 Use areas: character
 
 Tag: opinion_of_different_faith_liege
 Use areas: character
 
-Tag: zealot_opinion
+Tag: enemy_political_scheme_success_chance_growth_add
 Use areas: character
 
 Tag: owned_legend_spread_mult
 Use areas: character
 
-Tag: jungle_development_growth
-Use areas: character， province，以及 county
+Tag: found_despotate_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_archer_cavalry_screen_add
+Use areas: province
 
 Tag: active_accolades
 Use areas: character
 
-Tag: tengri_pagan_opinion
+Tag: knight_effectiveness_per_diplomacy
 Use areas: character
 
-Tag: forest_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: mogyer_opinion
+Tag: light_cavalry_recruitment_cost_mult
 Use areas: character
 
 Tag: dread_per_tyranny_add
 Use areas: character
 
-Tag: persian_opinion
+Tag: stationed_archers_toughness_add
+Use areas: province
+
+Tag: plains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: priscillianism_opinion
 Use areas: character
 
 Tag: title_creation_cost_mult
 Use areas: character
 
-Tag: melieism_opinion
-Use areas: character
-
 Tag: monthly_prestige_gain_mult
 Use areas: character
 
-Tag: trait_track_travel_xp_degradation_mult
+Tag: world_persian_empire_development_growth
+Use areas: character, province, and county
+
+Tag: stationed_archer_cavalry_pursuit_add
+Use areas: province
+
+Tag: enemy_hostile_scheme_success_chance_max_add
+Use areas: character
+
+Tag: coastal_sea_advantage
 Use areas: character
 
 Tag: monthly_piety
 Use areas: character
 
-Tag: skirmishers_screen_add
+Tag: trait_track_horse_xp_gain_mult
 Use areas: character
+
+Tag: laamp_base_6001_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: muwalladi_opinion
+Use areas: character
+
+Tag: wetlands_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: wetlands_development_growth
+Use areas: character, province, and county
 
 Tag: siege_phase_time
 Use areas: character
@@ -2054,196 +2288,265 @@ Use areas: character
 Tag: opinion_of_different_faith
 Use areas: character
 
-Tag: taiga_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
 Tag: faith_creation_piety_cost_mult
 Use areas: character
 
-Tag: sea_supply_limit
-Use areas: character， province，以及 county
-
-Tag: sea_advantage
-Use areas: character
-
-Tag: feudal_government_opinion
+Tag: monthly_learning_lifestyle_xp_gain_add
 Use areas: character
 
 Tag: martial_scheme_resistance
 Use areas: character
 
-Tag: prowess_scheme_power
+Tag: hills_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: prowess_scheme_phase_duration
 Use areas: character
 
-Tag: camel_cavalry_pursuit_add
+Tag: world_innovation_elephants_development_growth
+Use areas: character, province, and county
+
+Tag: max_protect_minority_vassal_contract_martial_scheme_schemes_add
+Use areas: character
+
+Tag: wetlands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: charioteer_blue_xp_gain_mult
 Use areas: character
 
 Tag: vassal_limit
 Use areas: character
 
-Tag: minority_different_faith_opinion
+Tag: charioteer_green_xp_degradation_mult
 Use areas: character
 
-Tag: tribal_government_vassal_opinion
+Tag: city_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: sea_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: light_cavalry_pursuit_add
 Use areas: character
 
-Tag: tribal_holding_build_speed
-Use areas: character， province，以及 county
+Tag: coastal_sea_development_growth
+Use areas: character, province, and county
 
-Tag: coastal_sea_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: overthrow_regent_scheme_resistance_add
-Use areas: character
-
-Tag: basque_pagan_opinion
-Use areas: character
-
-Tag: finnish_opinion
-Use areas: character
-
-Tag: theocracy_government_opinion
-Use areas: character
-
-Tag: cisalpine_opinion
-Use areas: character
-
-Tag: kitebacilweism_opinion
+Tag: occitan_opinion
 Use areas: character
 
 Tag: supply_duration
 Use areas: character
 
-Tag: wetlands_development_growth_factor
-Use areas: character， province，以及 county
-
 Tag: uncontrolled_province_advantage
 Use areas: character
 
-Tag: afridunism_opinion
+Tag: trait_track_governor_xp_loss_mult
 Use areas: character
 
-Tag: pikemen_maintenance_mult
+Tag: trait_track_lifestyle_blademaster_xp_degradation_mult
 Use areas: character
 
-Tag: holy_order_government_opinion
+Tag: feudal_government_vassal_opinion
 Use areas: character
 
-Tag: elephant_cavalry_siege_value_mult
+Tag: teach_governor_enemy_scheme_phase_duration_add
 Use areas: character
+
+Tag: glory_hound_opinion
+Use areas: character
+
+Tag: desert_mountains_development_growth
+Use areas: character, province, and county
+
+Tag: mountains_supply_limit
+Use areas: character, province, and county
 
 Tag: character_travel_safety
 Use areas: character
 
-Tag: stationed_archers_damage_mult
-Use areas: province
+Tag: steppe_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: laamp_base_1001_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: trait_track_lifestyle_physician_xp_degradation_mult
+Use areas: character
 
 Tag: health
 Use areas: character
 
+Tag: meshchera_opinion
+Use areas: character
+
 Tag: monthly_county_control_decline_factor
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: wetlands_levy_size
-Use areas: character， province，以及 county
+Tag: steppe_holding_construction_piety_cost
+Use areas: character, province, and county
 
-Tag: farmlands_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: elephant_cavalry_pursuit_add
+Tag: floodplains_cancel_negative_supply
 Use areas: character
 
-Tag: elephant_cavalry_toughness_add
+Tag: trait_track_the_wake_xp_degradation_mult
 Use areas: character
 
-Tag: iconoclast_opinion
+Tag: claim_throne_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: light_cavalry_damage_mult
+Tag: glory_hound_tax_contribution_add
 Use areas: character
 
-Tag: fabricate_hook_scheme_resistance_mult
+Tag: cisalpine_opinion
+Use areas: character
+
+Tag: contract_scheme_phase_duration_add
+Use areas: character
+
+Tag: church_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: kipchak_opinion
+Use areas: character
+
+Tag: steppe_levy_size
+Use areas: character, province, and county
+
+Tag: laamp_base_2011_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: soninke_opinion
+Use areas: character
+
+Tag: scheme_phase_duration_against_rival_add
 Use areas: character
 
 Tag: ai_amenity_spending
 Use areas: character
 
-Tag: church_holding_build_speed
-Use areas: character， province，以及 county
-
-Tag: lifestyle_blademaster_xp_degradation_mult
+Tag: lifestyle_mystic_xp_loss_mult
 Use areas: character
 
-Tag: scheme_power_against_potential_friend_add
+Tag: oasis_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: parochial_levy_contribution_add
 Use areas: character
 
-Tag: hills_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: bedouin_opinion
+Use areas: character
+
+Tag: mogyer_opinion
+Use areas: character
 
 Tag: monthly_dynasty_prestige_mult
 Use areas: character
 
-Tag: heavy_infantry_siege_value_add
+Tag: tribal_government_levy_contribution_mult
 Use areas: character
 
-Tag: archer_cavalry_damage_add
+Tag: expand_power_base_scheme_phase_duration_add
 Use areas: character
 
-Tag: akom_pagan_opinion
+Tag: max_promote_schemes_add
 Use areas: character
 
-Tag: light_cavalry_pursuit_add
+Tag: desert_mountains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: laamp_base_2021_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: glory_hound_ai_zeal
+Tag: oasis_travel_danger
+Use areas: character, province, and county
+
+Tag: parochial_ai_compassion
 Use areas: character
 
-Tag: courtly_ai_honor
+Tag: basque_religion_opinion
 Use areas: character
 
-Tag: courtly_ai_greed
+Tag: west_african_roog_pagan_opinion
 Use areas: character
 
-Tag: andalusian_opinion
+Tag: pilgrim_xp_degradation_mult
 Use areas: character
 
-Tag: siege_weapon_siege_value_add
+Tag: tribal_government_opinion
 Use areas: character
 
-Tag: stationed_archer_cavalry_screen_mult
+Tag: desert_mountains_levy_size
+Use areas: character, province, and county
+
+Tag: stationed_pikemen_toughness_add
 Use areas: province
 
-Tag: stewardship_per_piety_level
+Tag: floodplains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: max_slander_schemes_add
+Use areas: character
+
+Tag: meshefaresism_opinion
 Use areas: character
 
 Tag: monthly_piety_gain_per_legitimacy_level_add
 Use areas: character
 
-Tag: floodplains_min_combat_roll
+Tag: max_courting_schemes_add
 Use areas: character
 
-Tag: stationed_heavy_infantry_siege_value_add
+Tag: anglo_saxon_opinion
+Use areas: character
+
+Tag: stewardship_per_piety_level
+Use areas: character
+
+Tag: max_foster_legitimacy_scheme_schemes_add
+Use areas: character
+
+Tag: elephant_cavalry_damage_add
+Use areas: character
+
+Tag: camel_cavalry_siege_value_mult
+Use areas: character
+
+Tag: stationed_pikemen_siege_value_add
 Use areas: province
 
-Tag: smartism_opinion
+Tag: scheme_phase_duration_against_nemesis_add
 Use areas: character
 
-Tag: merya_opinion
+Tag: yoruba_opinion
 Use areas: character
 
-Tag: oasis_development_growth
-Use areas: character， province，以及 county
-
-Tag: galician_opinion
+Tag: trait_track_thief_xp_gain_mult
 Use areas: character
 
-Tag: trait_track_scarred_xp_loss_mult
+Tag: elephant_cavalry_siege_value_add
+Use areas: character
+
+Tag: catholic_opinion
+Use areas: character
+
+Tag: monthly_stewardship_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: siege_weapon_siege_value_add
+Use areas: character
+
+Tag: swabian_opinion
+Use areas: character
+
+Tag: monthly_influence_mult
 Use areas: character
 
 Tag: stewardship_per_prestige_level
 Use areas: character
 
-Tag: max_steal_back_artifact_schemes_add
+Tag: scheme_phase_duration_against_potential_hook_add
 Use areas: character
 
 Tag: martial_per_prestige_level
@@ -2252,38 +2555,56 @@ Use areas: character
 Tag: hostage_prestige_mult
 Use areas: character
 
-Tag: jungle_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: abduct_enemy_scheme_phase_duration_add
+Use areas: character
 
-Tag: zealot_different_faith_opinion
+Tag: pictish_opinion
 Use areas: character
 
 Tag: pursue_efficiency
-Use areas: character 以及 terrain
+Use areas: character  and terrain
 
-Tag: mountains_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: trait_track_foot_xp_degradation_mult
+Use areas: character
+
+Tag: coastal_sea_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: zealot_ai_energy
+Use areas: character
 
 Tag: life_expectancy
 Use areas: character
 
-Tag: malvi_opinion
+Tag: archers_pursuit_mult
 Use areas: character
 
-Tag: glory_hound_ai_sociability
+Tag: sea_attrition_mult
 Use areas: character
 
-Tag: heavy_cavalry_pursuit_add
+Tag: landless_adventurer_government_levy_contribution_mult
 Use areas: character
 
-Tag: desert_cancel_negative_supply
+Tag: domicile_travel_speed
 Use areas: character
 
-Tag: seduce_scheme_resistance_add
+Tag: laamp_base_3041_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: desert_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: forest_cancel_negative_supply
+Use areas: character
+
+Tag: minority_same_culture_opinion
+Use areas: character
+
+Tag: scheme_phase_duration_against_nursed_child_add
+Use areas: character
+
+Tag: trait_track_trickster_xp_degradation_mult
+Use areas: character
+
+Tag: minority_ai_boldness
+Use areas: character
 
 Tag: movement_speed_land_raiding
 Use areas: character
@@ -2291,145 +2612,226 @@ Use areas: character
 Tag: domain_tax_same_faith_mult
 Use areas: character
 
-Tag: hindustani_opinion
+Tag: archers_damage_mult
 Use areas: character
 
-Tag: sogdian_opinion
+Tag: domicile_monthly_gold_add
 Use areas: character
 
-Tag: stationed_siege_weapon_toughness_mult
+Tag: stationed_archers_siege_value_mult
 Use areas: province
 
 Tag: monthly_piety_gain_mult
 Use areas: character
 
-Tag: kabarism_opinion
+Tag: trait_track_bow_xp_loss_mult
 Use areas: character
 
-Tag: sea_min_combat_roll
+Tag: monthly_learning_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: tourney_participant_xp_degradation_mult
+Tag: ashari_opinion
 Use areas: character
+
+Tag: taiga_cancel_negative_supply
+Use areas: character
+
+Tag: sea_supply_limit_mult
+Use areas: character, province, and county
 
 Tag: knight_effectiveness_mult
 Use areas: character
 
-Tag: skirmishers_damage_add
+Tag: archer_cavalry_damage_mult
+Use areas: character
+
+Tag: laamp_base_5031_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: men_at_arms_title_cap
 Use areas: character
 
 Tag: dread_decay_add
 Use areas: character
 
-Tag: sea_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: french_opinion
+Use areas: character
 
-Tag: minority_different_culture_opinion
+Tag: world_persian_empire_development_growth_factor
+Use areas: character, province, and county
+
+Tag: taiga_tax_mult
+Use areas: character, province, and county
+
+Tag: finno_ugric_religion_opinion
 Use areas: character
 
 Tag: development_decline
-Use areas: character， province，以及 county
+Use areas: character, province, and county
+
+Tag: lifestyle_traveler_xp_degradation_mult
+Use areas: character
+
+Tag: stationed_siege_weapon_screen_mult
+Use areas: province
 
 Tag: eligible_child_except_player_heir_opinion
 Use areas: character
 
-Tag: desert_mountains_attrition_mult
+Tag: sea_travel_danger
+Use areas: character, province, and county
+
+Tag: wetlands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: trojan_opinion
 Use areas: character
 
-Tag: plains_levy_size
-Use areas: character， province，以及 county
-
-Tag: sea_levy_size
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_friend_add
+Tag: barons_and_minor_landholders_same_faith_opinion
 Use areas: character
 
-Tag: zhengyi_opinion
+Tag: ingratiate_family_scheme_phase_duration_add
 Use areas: character
 
-Tag: elephant_cavalry_damage_add
+Tag: trait_track_horse_xp_loss_mult
+Use areas: character
+
+Tag: portuguese_opinion
+Use areas: character
+
+Tag: sea_min_combat_roll
+Use areas: character
+
+Tag: trait_track_lifestyle_reveler_xp_degradation_mult
+Use areas: character
+
+Tag: charioteer_white_xp_degradation_mult
+Use areas: character
+
+Tag: nepali_opinion
 Use areas: character
 
 Tag: ai_war_chance
 Use areas: character
 
+Tag: lifestyle_traveler_xp_gain_mult
+Use areas: character
+
+Tag: desert_construction_piety_cost
+Use areas: character, province, and county
+
 Tag: religious_head_opinion
+Use areas: character
+
+Tag: feudal_government_tax_contribution_mult
 Use areas: character
 
 Tag: advantage_against_coreligionists
 Use areas: character
 
+Tag: trait_track_lifestyle_mystic_xp_gain_mult
+Use areas: character
+
 Tag: holding_build_speed
-Use areas: character， province，以及 county
+Use areas: character, province, and county
+
+Tag: castle_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: wetlands_cancel_negative_supply
+Use areas: character
 
 Tag: monthly_legitimacy_add
 Use areas: character
+
+Tag: steppe_development_growth
+Use areas: character, province, and county
 
 Tag: travel_safety
 Use areas: travel_plan
 
 Tag: tax_mult
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: wetlands_tax_mult
-Use areas: character， province，以及 county
-
-Tag: holy_order_government_levy_contribution_add
+Tag: claim_throne_scheme_phase_duration_add
 Use areas: character
 
-Tag: max_courting_schemes_add
+Tag: tribal_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: steppe_cancel_negative_supply
 Use areas: character
 
-Tag: khazar_opinion
+Tag: mountains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: lifestyle_reveler_xp_degradation_mult
 Use areas: character
 
-Tag: lifestyle_mystic_xp_gain_mult
+Tag: skirmishers_toughness_mult
 Use areas: character
 
-Tag: city_holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: elephant_cavalry_damage_mult
+Tag: siberian_religion_opinion
 Use areas: character
+
+Tag: church_holding_holding_build_piety_cost
+Use areas: character, province, and county
 
 Tag: county_opinion_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: orthodox_opinion
+Tag: trait_track_lifestyle_physician_xp_gain_mult
 Use areas: character
 
-Tag: pulaar_opinion
+Tag: heavy_cavalry_screen_mult
 Use areas: character
 
-Tag: scheme_power_against_court_physician_add
+Tag: trait_track_the_wake_xp_gain_mult
 Use areas: character
 
-Tag: archer_cavalry_max_size_mult
+Tag: west_african_roog_religion_opinion
 Use areas: character
 
 Tag: ai_greed
 Use areas: character
 
-Tag: coastal_sea_travel_danger
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_potential_rival_mult
+Tag: courtly_levy_contribution_mult
 Use areas: character
 
-Tag: stationed_heavy_infantry_damage_mult
-Use areas: province
-
-Tag: courtly_different_culture_opinion
+Tag: lifestyle_blademaster_xp_degradation_mult
 Use areas: character
 
-Tag: fabricate_hook_scheme_power_add
+Tag: glory_hound_ai_compassion
+Use areas: character
+
+Tag: theocracy_government_vassal_opinion
+Use areas: character
+
+Tag: oasis_advantage
+Use areas: character
+
+Tag: scheme_phase_duration_against_friend_add
+Use areas: character
+
+Tag: mordvin_opinion
+Use areas: character
+
+Tag: trait_track_governor_xp_degradation_mult
+Use areas: character
+
+Tag: slavic_pagan_opinion
 Use areas: character
 
 Tag: ignore_negative_opinion_of_culture
 Use areas: character
 
-Tag: light_cavalry_max_size_mult
+Tag: laamp_base_2001_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: west_african_religion_opinion
+Use areas: character
+
+Tag: republic_government_tax_contribution_mult
 Use areas: character
 
 Tag: twin_opinion
@@ -2438,7 +2840,7 @@ Use areas: character
 Tag: min_combat_roll
 Use areas: character
 
-Tag: frisian_opinion
+Tag: heavy_infantry_maintenance_mult
 Use areas: character
 
 Tag: intimidated_vassal_tax_contribution_mult
@@ -2447,313 +2849,364 @@ Use areas: character
 Tag: attacker_advantage
 Use areas: character
 
-Tag: steppe_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: pikemen_damage_mult
+Tag: convert_to_witchcraft_scheme_phase_duration_add
 Use areas: character
 
-Tag: samoyed_opinion
+Tag: camel_cavalry_max_size_add
 Use areas: character
 
-Tag: saxon_opinion
+Tag: tangut_opinion
+Use areas: character
+
+Tag: heavy_infantry_pursuit_add
 Use areas: character
 
 Tag: artifact_decay_reduction_mult
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: trait_track_scarred_xp_degradation_mult
-Use areas: character
-
-Tag: hebrew_opinion
-Use areas: character
-
-Tag: stationed_elephant_cavalry_siege_value_add
+Tag: stationed_heavy_infantry_pursuit_add
 Use areas: province
+
+Tag: floodplains_supply_limit
+Use areas: character, province, and county
 
 Tag: county_opinion_add_even_if_baron
 Use areas: character
 
-Tag: church_holding_build_prestige_cost
-Use areas: character， province，以及 county
+Tag: stationed_skirmishers_screen_add
+Use areas: province
 
-Tag: manichean_opinion
+Tag: lamaism_opinion
 Use areas: character
 
-Tag: shatuo_opinion
-Use areas: character
-
-Tag: heavy_cavalry_damage_add
+Tag: max_laamp_base_3031_contract_scheme_schemes_add
 Use areas: character
 
 Tag: men_at_arms_recruitment_cost
 Use areas: character
 
-Tag: scheme_power_against_wedding_good_fertility_mult
+Tag: parochial_tax_contribution_add
 Use areas: character
 
-Tag: hills_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: siege_weapon_recruitment_cost_mult
+Tag: jungle_cancel_negative_supply
 Use areas: character
 
 Tag: diplomacy_per_piety_level
 Use areas: character
 
 Tag: fort_level
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: stationed_heavy_infantry_toughness_add
-Use areas: province
+Tag: levantine_opinion
+Use areas: character
+
+Tag: landless_adventurer_government_levy_contribution_add
+Use areas: character
 
 Tag: domain_limit
 Use areas: character
 
-Tag: parochial_ai_energy
+Tag: afar_opinion
 Use areas: character
 
-Tag: parochial_same_faith_opinion
+Tag: scheme_phase_duration_against_mentor_add
 Use areas: character
 
 Tag: maa_pursuit_mult
 Use areas: character
 
-Tag: stationed_siege_weapon_pursuit_add
-Use areas: province
+Tag: oasis_supply_limit
+Use areas: character, province, and county
 
-Tag: stationed_siege_weapon_toughness_add
-Use areas: province
+Tag: scheme_phase_duration_against_wedding_bad_fertility_add
+Use areas: character
+
+Tag: sway_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: valentinianism_opinion
+Use areas: character
 
 Tag: monthly_war_income_mult
 Use areas: character
 
-Tag: oasis_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: gond_opinion
+Tag: pikemen_max_size_mult
 Use areas: character
 
-Tag: haymanot_opinion
+Tag: domicile_monthly_piety_mult
 Use areas: character
 
-Tag: drylands_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: mountains_attrition_mult
+Tag: overthrow_regent_scheme_phase_duration_add
 Use areas: character
 
-Tag: norman_opinion
+Tag: parochial_ai_sociability
+Use areas: character
+
+Tag: pikemen_maintenance_mult
 Use areas: character
 
 Tag: culture_tradition_max_add
 Use areas: culture
 
-Tag: maturidi_opinion
+Tag: domicile_external_slots_capacity_add
 Use areas: character
 
-Tag: trait_track_horse_xp_loss_mult
+Tag: gothic_opinion
 Use areas: character
 
-Tag: igbo_opinion
+Tag: gallowsbait_xp_gain_mult
 Use areas: character
 
-Tag: castilian_opinion
+Tag: farmlands_tax_mult
+Use areas: character, province, and county
+
+Tag: elephant_cavalry_max_size_add
 Use areas: character
 
-Tag: trait_track_bow_xp_gain_mult
+Tag: stationed_pikemen_pursuit_add
+Use areas: province
+
+Tag: enemy_political_scheme_success_chance_max_add
 Use areas: character
+
+Tag: plains_provisions_use_mult
+Use areas: character, province, and county
 
 Tag: supply_capacity_add
 Use areas: character
 
+Tag: forest_tax_mult
+Use areas: character, province, and county
+
+Tag: farmlands_supply_limit
+Use areas: character, province, and county
+
+Tag: stationed_elephant_cavalry_damage_add
+Use areas: province
+
 Tag: stationed_maa_toughness_add
 Use areas: province
 
-Tag: plains_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: dualism_religion_opinion
+Use areas: character
 
-Tag: minority_opinion
+Tag: siege_weapon_damage_add
+Use areas: character
+
+Tag: intrigue_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: taiga_advantage
 Use areas: character
 
 Tag: garrison_size
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: max_abduct_schemes_add
+Tag: frisian_opinion
 Use areas: character
 
-Tag: west_african_bidu_pagan_opinion
+Tag: owned_hostile_scheme_success_chance_growth_add
 Use areas: character
 
-Tag: scheme_power_against_friend_mult
+Tag: sea_levy_size
+Use areas: character, province, and county
+
+Tag: max_ingratiate_family_schemes_add
 Use areas: character
 
-Tag: sway_scheme_resistance_mult
-Use areas: character
+Tag: stationed_archer_cavalry_pursuit_mult
+Use areas: province
 
-Tag: afghan_opinion
+Tag: stationed_archers_screen_mult
+Use areas: province
+
+Tag: hinduism_religion_opinion
 Use areas: character
 
 Tag: led_by_owner_extra_advantage_add
 Use areas: character
 
-Tag: plains_cancel_negative_supply
+Tag: knight_effectiveness_per_prowess
 Use areas: character
 
-Tag: forest_travel_danger
-Use areas: character， province，以及 county
+Tag: hafizi_opinion
+Use areas: character
 
-Tag: daylamite_opinion
+Tag: stationed_archers_pursuit_mult
+Use areas: province
+
+Tag: coastal_sea_cancel_negative_supply
 Use areas: character
 
 Tag: controlled_province_advantage
 Use areas: character
 
-Tag: desert_mountains_min_combat_roll
+Tag: tourney_participant_xp_loss_mult
 Use areas: character
 
-Tag: pikemen_pursuit_mult
+Tag: barons_and_minor_landholders_different_culture_opinion
+Use areas: character
+
+Tag: masmudi_opinion
+Use areas: character
+
+Tag: malvi_opinion
+Use areas: character
+
+Tag: taiga_supply_limit
+Use areas: character, province, and county
+
+Tag: hills_tax_mult
+Use areas: character, province, and county
+
+Tag: desert_attrition_mult
 Use areas: character
 
 Tag: max_loot_mult
 Use areas: character
 
 Tag: holding_build_piety_cost
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: stationed_camel_cavalry_siege_value_add
-Use areas: province
+Tag: taiga_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: steppe_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: charioteer_red_xp_loss_mult
+Use areas: character
 
 Tag: scheme_discovery_chance_mult
 Use areas: character
 
-Tag: taiga_cancel_negative_supply
+Tag: stationed_heavy_cavalry_screen_add
+Use areas: province
+
+Tag: visigothic_opinion
 Use areas: character
 
-Tag: lamaism_opinion
-Use areas: character
+Tag: castle_holding_holding_build_prestige_cost
+Use areas: character, province, and county
 
-Tag: serbian_opinion
-Use areas: character
+Tag: stationed_light_cavalry_siege_value_mult
+Use areas: province
 
-Tag: republic_government_levy_contribution_mult
-Use areas: character
-
-Tag: sea_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: max_convert_to_witchcraft_schemes_add
-Use areas: character
-
-Tag: norse_opinion
-Use areas: character
-
-Tag: lifestyle_blademaster_xp_gain_mult
+Tag: sumpa_opinion
 Use areas: character
 
 Tag: negate_fertility_penalty_add
 Use areas: character
 
-Tag: scheme_power_against_crush_add
-Use areas: character
-
-Tag: theravada_opinion
-Use areas: character
-
-Tag: theocracy_government_levy_contribution_mult
-Use areas: character
-
-Tag: taiga_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: castle_holding_build_piety_cost
+Use areas: character, province, and county
 
 Tag: supply_loss_winter
 Use areas: province
 
-Tag: gayomarthianism_opinion
-Use areas: character
-
-Tag: mercenary_government_levy_contribution_mult
-Use areas: character
-
-Tag: stationed_elephant_cavalry_pursuit_add
-Use areas: province
-
-Tag: scheme_power_against_guardian_mult
-Use areas: character
-
-Tag: coastal_sea_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: wetlands_development_growth
-Use areas: character， province，以及 county
-
-Tag: archers_screen_add
-Use areas: character
-
-Tag: stationed_heavy_infantry_damage_add
-Use areas: province
-
-Tag: heavy_infantry_maintenance_mult
-Use areas: character
-
-Tag: mandeaism_opinion
-Use areas: character
-
-Tag: world_innovation_elephants_development_growth
-Use areas: character， province，以及 county
-
-Tag: stationed_elephant_cavalry_damage_mult
-Use areas: province
-
-Tag: steppe_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: estonian_opinion
-Use areas: character
-
-Tag: scheme_power_against_nursed_child_mult
-Use areas: character
-
-Tag: lifestyle_physician_xp_gain_mult
-Use areas: character
-
-Tag: donyipoloism_opinion
-Use areas: character
-
-Tag: lhomon_opinion
-Use areas: character
-
-Tag: levy_reinforcement_rate_even_if_baron
-Use areas: character
-
-Tag: church_holding_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: lifestyle_mystic_xp_degradation_mult
-Use areas: character
-
-Tag: knight_limit
-Use areas: character
-
-Tag: scheme_power_against_potential_hook_add
+Tag: teach_governor_scheme_phase_duration_add
 Use areas: character
 
 Tag: bashkir_opinion
 Use areas: character
 
-Tag: glory_hound_different_faith_opinion
+Tag: max_murder_schemes_add
 Use areas: character
 
-Tag: murder_scheme_power_mult
+Tag: lifestyle_reveler_xp_gain_mult
 Use areas: character
 
-Tag: stationed_light_cavalry_toughness_mult
-Use areas: province
+Tag: church_holding_holding_build_prestige_cost
+Use areas: character, province, and county
 
-Tag: stationed_light_cavalry_siege_value_mult
-Use areas: province
+Tag: courtly_same_faith_opinion
+Use areas: character
 
-Tag: courtly_ai_compassion
+Tag: slavic_religion_opinion
+Use areas: character
+
+Tag: paganism_religion_opinion
+Use areas: character
+
+Tag: republic_government_tax_contribution_add
+Use areas: character
+
+Tag: laamp_base_0031_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: sardinian_opinion
+Use areas: character
+
+Tag: feudal_government_levy_contribution_mult
+Use areas: character
+
+Tag: italian_opinion
+Use areas: character
+
+Tag: fabricate_hook_scheme_phase_duration_add
+Use areas: character
+
+Tag: trait_track_the_wake_xp_loss_mult
+Use areas: character
+
+Tag: glory_hound_ai_energy
+Use areas: character
+
+Tag: desert_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: siberian_pagan_opinion
+Use areas: character
+
+Tag: bon_religion_opinion
+Use areas: character
+
+Tag: skirmishers_siege_value_mult
+Use areas: character
+
+Tag: levy_reinforcement_rate_even_if_baron
+Use areas: character
+
+Tag: gur_opinion
+Use areas: character
+
+Tag: knight_limit
+Use areas: character
+
+Tag: finnish_opinion
+Use areas: character
+
+Tag: tribal_government_levy_contribution_add
+Use areas: character
+
+Tag: skirmishers_pursuit_mult
+Use areas: character
+
+Tag: scheme_phase_duration_against_intrigue_mentor_add
+Use areas: character
+
+Tag: drylands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: laamp_base_3001_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: vajrayana_opinion
+Use areas: character
+
+Tag: owned_contract_scheme_success_chance_max_add
+Use areas: character
+
+Tag: laamp_base_3021_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: scheme_phase_duration_against_wedding_very_bad_fertility_add
+Use areas: character
+
+Tag: jungle_advantage
+Use areas: character
+
+Tag: pilgrim_xp_loss_mult
 Use areas: character
 
 Tag: monthly_prestige_gain_per_happy_powerful_vassal_mult
@@ -2762,362 +3215,416 @@ Use areas: character
 Tag: monthly_piety_gain_per_dread_add
 Use areas: character
 
-Tag: stationed_siege_weapon_damage_mult
-Use areas: province
-
-Tag: kannada_opinion
+Tag: sway_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_archer_cavalry_toughness_add
-Use areas: province
+Tag: pikemen_max_size_add
+Use areas: character
+
+Tag: seize_realm_scheme_phase_duration_add
+Use areas: character
+
+Tag: east_bantu_opinion
+Use areas: character
+
+Tag: scheme_phase_duration_against_ward_add
+Use areas: character
 
 Tag: monthly_piety_gain_per_legitimacy_level_mult
 Use areas: character
 
-Tag: learn_language_scheme_resistance_mult
+Tag: slovien_opinion
 Use areas: character
 
-Tag: jainism_religion_opinion
+Tag: elephant_cavalry_siege_value_mult
 Use areas: character
 
-Tag: kalikula_shaktism_opinion
+Tag: saxon_opinion
 Use areas: character
 
-Tag: english_opinion
+Tag: camel_cavalry_maintenance_mult
 Use areas: character
 
-Tag: russian_opinion
+Tag: pikemen_toughness_add
 Use areas: character
 
-Tag: mountains_tax_mult
-Use areas: character， province，以及 county
-
-Tag: monthly_diplomacy_lifestyle_xp_gain_mult
+Tag: scheme_phase_duration_against_wedding_good_fertility_add
 Use areas: character
 
-Tag: marka_opinion
+Tag: zealot_ai_sociability
+Use areas: character
+
+Tag: trait_track_bandit_xp_loss_mult
 Use areas: character
 
 Tag: scarred_xp_degradation_mult
 Use areas: character
 
-Tag: oasis_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: farmlands_holding_construction_piety_cost
+Use areas: character, province, and county
 
-Tag: drylands_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: germanic_religion_opinion
+Use areas: character
+
+Tag: camel_cavalry_screen_add
+Use areas: character
+
+Tag: guanches_opinion
+Use areas: character
+
+Tag: siege_weapon_screen_mult
+Use areas: character
 
 Tag: diplomacy_per_prestige_level
+Use areas: character
+
+Tag: farmlands_levy_size
+Use areas: character, province, and county
+
+Tag: jungle_supply_limit
+Use areas: character, province, and county
+
+Tag: bosnian_church_opinion
+Use areas: character
+
+Tag: siege_weapon_toughness_mult
 Use areas: character
 
 Tag: genetic_trait_strengthen_chance
 Use areas: character
 
-Tag: khwarezmian_opinion
-Use areas: character
-
-Tag: parochial_ai_boldness
-Use areas: character
-
 Tag: counter_efficiency
-Use areas: character 以及 terrain
+Use areas: character  and terrain
 
 Tag: hostile_county_attrition_raiding
 Use areas: character
 
-Tag: parochial_ai_zeal
+Tag: jungle_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: plains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: martial_per_influence_level
 Use areas: character
 
-Tag: jungle_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: stationed_heavy_cavalry_siege_value_mult
-Use areas: province
-
-Tag: oasis_levy_size
-Use areas: character， province，以及 county
-
-Tag: paganism_religion_opinion
+Tag: abduct_scheme_phase_duration_add
 Use areas: character
 
-Tag: forest_advantage
+Tag: trait_track_marauder_xp_loss_mult
 Use areas: character
 
-Tag: barons_and_minor_landholders_ai_zeal
+Tag: tani_religion_opinion
 Use areas: character
 
-Tag: kiratism_opinion
+Tag: laamp_base_4031_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: desert_mountains_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: archer_cavalry_maintenance_mult
+Use areas: character
 
-Tag: sea_holding_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: provisions_capacity_mult
+Use areas: character  and terrain
 
-Tag: monthly_stewardship_lifestyle_xp_gain_mult
+Tag: barons_and_minor_landholders_ai_boldness
 Use areas: character
 
 Tag: trait_track_danger_xp_loss_mult
 Use areas: character
 
-Tag: owned_legend_spread_add
+Tag: basque_opinion
 Use areas: character
 
-Tag: trait_track_wit_xp_gain_mult
+Tag: owned_legend_spread_add
 Use areas: character
 
 Tag: dread_baseline_add
 Use areas: character
 
-Tag: taiga_max_combat_roll
+Tag: max_laamp_base_6011_contract_scheme_schemes_add
 Use areas: character
 
-Tag: wetlands_cancel_negative_supply
+Tag: farmlands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: hills_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: ethiopian_opinion
 Use areas: character
 
-Tag: buryat_opinion
+Tag: hills_development_growth_factor
+Use areas: character, province, and county
+
+Tag: enemy_scheme_secrecy_add
 Use areas: character
 
-Tag: zealot_ai_vengefulness
-Use areas: character
+Tag: taiga_provisions_use_mult
+Use areas: character, province, and county
 
-Tag: zealot_ai_energy
-Use areas: character
+Tag: stationed_light_cavalry_toughness_add
+Use areas: province
 
 Tag: eligible_child_opinion
-Use areas: character
-
-Tag: clan_government_opinion_same_faith
 Use areas: character
 
 Tag: same_culture_holy_order_hire_cost_add
 Use areas: character
 
-Tag: befriend_scheme_power_add
+Tag: world_innovation_camels_development_growth
+Use areas: character, province, and county
+
+Tag: trait_track_travel_xp_gain_mult
 Use areas: character
 
-Tag: stationed_skirmishers_damage_add
-Use areas: province
+Tag: taiga_supply_limit_mult
+Use areas: character, province, and county
 
-Tag: castle_holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: tangut_opinion
+Tag: max_laamp_base_6021_contract_scheme_schemes_add
 Use areas: character
 
-Tag: west_african_roog_pagan_opinion
+Tag: heavy_cavalry_siege_value_mult
 Use areas: character
 
-Tag: coastal_sea_min_combat_roll
+Tag: sea_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_pursuit_mult
 Use areas: character
 
-Tag: plains_travel_danger
-Use areas: character， province，以及 county
-
-Tag: west_african_bori_pagan_opinion
-Use areas: character
-
-Tag: gaw_opinion
-Use areas: character
-
-Tag: scheme_power_against_ward_mult
+Tag: trait_track_lifestyle_reveler_xp_loss_mult
 Use areas: character
 
 Tag: monthly_income
-Use areas: character 以及 province
+Use areas: character  and province
 
-Tag: camel_cavalry_maintenance_mult
+Tag: tsangpa_opinion
 Use areas: character
 
-Tag: republic_government_opinion_same_faith
+Tag: charioteer_white_xp_loss_mult
 Use areas: character
 
-Tag: soninke_opinion
+Tag: protect_minority_vassal_contract_intrigue_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: archers_max_size_mult
+Tag: prepare_fire_dromons_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: heavy_cavalry_damage_mult
+Use areas: character
+
+Tag: north_african_acham_pagan_opinion
+Use areas: character
+
+Tag: azariqa_opinion
+Use areas: character
+
+Tag: laamp_base_0001_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: ashkenazi_opinion
 Use areas: character
 
 Tag: negative_random_genetic_chance
 Use areas: character
 
+Tag: judaism_religion_opinion
+Use areas: character
+
 Tag: travel_danger
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: elope_scheme_resistance_mult
+Tag: trait_track_hunter_xp_loss_mult
 Use areas: character
 
-Tag: wetlands_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: kimek_opinion
+Tag: challenge_status_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: city_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: sedism_opinion
+Tag: skirmishers_maintenance_mult
 Use areas: character
 
-Tag: farmlands_development_growth
-Use areas: character， province，以及 county
-
-Tag: sao_opinion
+Tag: tengrism_religion_opinion
 Use areas: character
 
-Tag: sami_opinion
+Tag: courtly_ai_vengefulness
 Use areas: character
 
-Tag: elephant_cavalry_max_size_add
+Tag: marathi_opinion
 Use areas: character
 
-Tag: scheme_power_against_potential_lover_mult
+Tag: heavy_infantry_toughness_add
 Use areas: character
 
-Tag: paulician_opinion
+Tag: laamp_help_find_secrets_scheme_scheme_phase_duration_add
 Use areas: character
 
 Tag: different_culture_opinion
 Use areas: character
 
-Tag: catholic_opinion
-Use areas: character
-
-Tag: avar_opinion
-Use areas: character
-
-Tag: tribal_holding_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: lifestyle_reveler_xp_degradation_mult
-Use areas: character
-
-Tag: scheme_power_against_potential_rival_add
-Use areas: character
-
-Tag: lifestyle_reveler_xp_gain_mult
-Use areas: character
-
-Tag: opinion_of_liege
-Use areas: character
-
-Tag: archers_siege_value_mult
-Use areas: character
-
-Tag: cuman_opinion
-Use areas: character
-
-Tag: steppe_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: holy_order_government_vassal_opinion
-Use areas: character
-
-Tag: light_cavalry_siege_value_add
-Use areas: character
-
-Tag: floodplains_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: dread_loss_mult
-Use areas: character
-
-Tag: pikemen_damage_add
-Use areas: character
-
-Tag: hills_supply_limit
-Use areas: character， province，以及 county
-
-Tag: murder_scheme_resistance_add
-Use areas: character
-
-Tag: advaitism_opinion
-Use areas: character
-
-Tag: scottish_opinion
-Use areas: character
-
-Tag: short_reign_duration_mult
-Use areas: character
-
-Tag: ilmenian_opinion
-Use areas: character
-
-Tag: alevi_opinion
-Use areas: character
-
-Tag: floodplains_development_growth
-Use areas: character， province，以及 county
-
-Tag: alan_opinion
-Use areas: character
-
-Tag: archer_cavalry_recruitment_cost_mult
-Use areas: character
-
-Tag: enemy_terrain_advantage
-Use areas: character
-
-Tag: build_speed
-Use areas: character， province，以及 county
-
-Tag: domain_tax_same_faith_mult_even_if_baron
-Use areas: character
-
-Tag: hinduism_religion_opinion
-Use areas: character
-
-Tag: hellenism_religion_opinion
-Use areas: character
-
-Tag: drylands_attrition_mult
-Use areas: character
-
-Tag: scheme_secrecy
-Use areas: scheme
-
-Tag: vassal_levy_contribution_add
-Use areas: character
-
-Tag: owned_personal_scheme_success_chance_add
-Use areas: character
-
-Tag: light_cavalry_maintenance_mult
-Use areas: character
-
-Tag: hills_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: drylands_tax_mult
-Use areas: character， province，以及 county
-
-Tag: stationed_maa_pursuit_add
-Use areas: province
-
-Tag: glory_hound_same_culture_opinion
-Use areas: character
-
-Tag: councillor_opinion
-Use areas: character
-
-Tag: maa_screen_add
-Use areas: character
-
-Tag: oasis_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: suebi_opinion
+Tag: skirmishers_screen_add
 Use areas: character
 
 Tag: yumaism_opinion
 Use areas: character
 
-Tag: barons_and_minor_landholders_different_culture_opinion
+Tag: vlach_opinion
 Use areas: character
 
-Tag: heavy_cavalry_max_size_add
+Tag: yazidi_religion_opinion
 Use areas: character
+
+Tag: opinion_of_liege
+Use areas: character
+
+Tag: laamp_base_0011_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: skirmishers_toughness_add
+Use areas: character
+
+Tag: oasis_min_combat_roll
+Use areas: character
+
+Tag: marka_opinion
+Use areas: character
+
+Tag: mercenary_government_vassal_opinion
+Use areas: character
+
+Tag: avar_opinion
+Use areas: character
+
+Tag: violet_poet_xp_gain_mult
+Use areas: character
+
+Tag: laamp_base_2001_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: floodplains_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: damage_legitimacy_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: chuvash_opinion
+Use areas: character
+
+Tag: dread_loss_mult
+Use areas: character
+
+Tag: parochial_ai_greed
+Use areas: character
+
+Tag: pulaar_opinion
+Use areas: character
+
+Tag: scheme_phase_duration_against_intrigue_student_add
+Use areas: character
+
+Tag: stationed_camel_cavalry_damage_mult
+Use areas: province
+
+Tag: short_reign_duration_mult
+Use areas: character
+
+Tag: pikemen_toughness_mult
+Use areas: character
+
+Tag: scheme_phase_duration_against_victim_add
+Use areas: character
+
+Tag: courting_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: heavy_infantry_max_size_mult
+Use areas: character
+
+Tag: enemy_terrain_advantage
+Use areas: character
+
+Tag: domain_tax_same_faith_mult_even_if_baron
+Use areas: character
+
+Tag: build_speed
+Use areas: character, province, and county
+
+Tag: scheme_secrecy
+Use areas: scheme
+
+Tag: lithuanian_opinion
+Use areas: character
+
+Tag: kerait_opinion
+Use areas: character
+
+Tag: vassal_levy_contribution_add
+Use areas: character
+
+Tag: trait_track_pilgrim_xp_degradation_mult
+Use areas: character
+
+Tag: owned_personal_scheme_success_chance_add
+Use areas: character
+
+Tag: zealot_ai_greed
+Use areas: character
+
+Tag: baranis_opinion
+Use areas: character
+
+Tag: max_laamp_base_2041_contract_scheme_schemes_add
+Use areas: character
+
+Tag: parochial_different_culture_opinion
+Use areas: character
+
+Tag: farmlands_cancel_negative_supply
+Use areas: character
+
+Tag: oasis_max_combat_roll
+Use areas: character
+
+Tag: holy_order_government_tax_contribution_add
+Use areas: character
+
+Tag: lollard_opinion
+Use areas: character
+
+Tag: stationed_maa_pursuit_add
+Use areas: province
+
+Tag: jungle_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: councillor_opinion
+Use areas: character
+
+Tag: jungle_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: maa_screen_add
+Use areas: character
+
+Tag: hellenism_religion_opinion
+Use areas: character
+
+Tag: plains_development_growth
+Use areas: character, province, and county
+
+Tag: found_despotate_scheme_phase_duration_add
+Use areas: character
+
+Tag: archers_max_size_mult
+Use areas: character
+
+Tag: laamp_base_3021_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: jungle_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: stationed_elephant_cavalry_pursuit_mult
+Use areas: province
 
 Tag: monthly_piety_gain_per_knight_add
 Use areas: character
@@ -3125,82 +3632,97 @@ Use areas: character
 Tag: prowess_per_stress_level
 Use areas: character
 
-Tag: monthly_intrigue_lifestyle_xp_gain_mult
+Tag: adoptionist_opinion
 Use areas: character
 
-Tag: abduct_scheme_power_add
+Tag: trait_track_wit_xp_degradation_mult
 Use areas: character
 
-Tag: lifestyle_traveler_xp_loss_mult
+Tag: stationed_elephant_cavalry_damage_mult
+Use areas: province
+
+Tag: archer_cavalry_max_size_mult
 Use areas: character
 
-Tag: steal_back_artifact_scheme_resistance_mult
-Use areas: character
-
-Tag: azariqa_opinion
+Tag: shaivism_opinion
 Use areas: character
 
 Tag: levy_reinforcement_rate_friendly_territory
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
 Tag: long_reign_bonus_mult
 Use areas: character
 
-Tag: plains_supply_limit
-Use areas: character， province，以及 county
-
-Tag: trait_track_foot_xp_gain_mult
+Tag: stewardship_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: stationed_heavy_cavalry_siege_value_add
+Tag: dispute_border_scheme_phase_duration_add
+Use areas: character
+
+Tag: laamp_base_4031_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: elope_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_elephant_cavalry_screen_mult
 Use areas: province
 
-Tag: minority_tax_contribution_mult
+Tag: trait_track_marauder_xp_degradation_mult
 Use areas: character
 
-Tag: sea_max_combat_roll
+Tag: severian_opinion
 Use areas: character
+
+Tag: farmlands_development_growth_factor
+Use areas: character, province, and county
+
+Tag: hebrew_opinion
+Use areas: character
+
+Tag: hills_supply_limit
+Use areas: character, province, and county
 
 Tag: levy_size
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: desert_tax_mult
-Use areas: character， province，以及 county
-
-Tag: mongol_opinion
+Tag: enemy_personal_scheme_success_chance_growth_add
 Use areas: character
 
-Tag: west_african_pagan_opinion
+Tag: minority_ai_sociability
 Use areas: character
 
-Tag: jungle_supply_limit
-Use areas: character， province，以及 county
+Tag: islam_religion_opinion
+Use areas: character
+
+Tag: farmlands_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: stationed_light_cavalry_damage_mult
+Use areas: province
+
+Tag: sea_construction_prestige_cost
+Use areas: character, province, and county
 
 Tag: ignore_negative_culture_opinion
 Use areas: character
 
-Tag: tajik_opinion
-Use areas: character
+Tag: stationed_archers_screen_add
+Use areas: province
 
 Tag: cultural_head_fascination_mult
 Use areas: character
 
-Tag: forest_levy_size
-Use areas: character， province，以及 county
+Tag: stationed_light_cavalry_screen_mult
+Use areas: province
 
-Tag: tuyuhun_opinion
+Tag: trait_track_charioteer_blue_xp_gain_mult
 Use areas: character
 
-Tag: scheme_power_against_nemesis_mult
+Tag: archer_cavalry_pursuit_add
 Use areas: character
 
-Tag: abduct_scheme_power_mult
-Use areas: character
-
-Tag: quanzhen_opinion
-Use areas: character
-
-Tag: scheme_power_against_soulmate_mult
+Tag: punjabi_opinion
 Use areas: character
 
 Tag: child_opinion
@@ -3209,313 +3731,328 @@ Use areas: character
 Tag: defender_winter_advantage
 Use areas: province
 
-Tag: ashkenazi_opinion
+Tag: light_cavalry_max_size_mult
 Use areas: character
 
-Tag: wetlands_min_combat_roll
+Tag: max_laamp_base_6031_contract_scheme_schemes_add
 Use areas: character
 
-Tag: theocracy_government_levy_contribution_add
-Use areas: character
-
-Tag: stationed_skirmishers_toughness_mult
+Tag: stationed_archer_cavalry_siege_value_add
 Use areas: province
 
-Tag: holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: oasis_min_combat_roll
+Tag: tourney_participant_xp_gain_mult
 Use areas: character
+
+Tag: wetlands_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: magyar_religion_opinion
+Use areas: character
+
+Tag: nizari_opinion
+Use areas: character
+
+Tag: holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: wetlands_levy_size
+Use areas: character, province, and county
 
 Tag: learning_scheme_resistance
 Use areas: character
 
-Tag: wetlands_travel_danger
-Use areas: character， province，以及 county
-
-Tag: egyptian_opinion
+Tag: catalan_opinion
 Use areas: character
 
-Tag: elephant_cavalry_recruitment_cost_mult
+Tag: trait_track_violet_poet_xp_gain_mult
 Use areas: character
 
-Tag: wetlands_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: bogomilist_opinion
+Tag: kiratism_opinion
 Use areas: character
 
-Tag: coastal_sea_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: coastal_sea_tax_mult
-Use areas: character， province，以及 county
-
-Tag: kru_opinion
+Tag: cuman_opinion
 Use areas: character
+
+Tag: courtly_tax_contribution_mult
+Use areas: character
+
+Tag: drylands_levy_size
+Use areas: character, province, and county
 
 Tag: same_culture_mercenary_hire_cost_add
 Use areas: character
 
-Tag: tribal_holding_holding_build_prestige_cost
-Use areas: character， province，以及 county
+Tag: city_holding_holding_build_prestige_cost
+Use areas: character, province, and county
 
-Tag: zaghawa_opinion
+Tag: kirghiz_opinion
 Use areas: character
 
-Tag: trait_track_falconer_xp_loss_mult
+Tag: trait_track_charioteer_white_xp_degradation_mult
 Use areas: character
 
-Tag: mahayana_opinion
+Tag: digambara_opinion
 Use areas: character
 
-Tag: scheme_power_against_potential_friend_mult
+Tag: kabarism_opinion
 Use areas: character
 
-Tag: archer_cavalry_siege_value_mult
-Use areas: character
+Tag: drylands_supply_limit_mult
+Use areas: character, province, and county
 
-Tag: scheme_power_against_guardian_add
-Use areas: character
-
-Tag: trait_track_lifestyle_reveler_xp_degradation_mult
-Use areas: character
+Tag: desert_provisions_use_mult
+Use areas: character, province, and county
 
 Tag: levy_pursuit
 Use areas: character
 
-Tag: wetlands_max_combat_roll
-Use areas: character
-
-Tag: bulgarian_opinion
-Use areas: character
-
-Tag: stationed_pikemen_screen_add
+Tag: stationed_heavy_cavalry_screen_mult
 Use areas: province
 
-Tag: coastal_sea_holding_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: courtly_opinion
+Use areas: character
 
-Tag: heavy_infantry_max_size_mult
+Tag: max_expand_power_base_schemes_add
+Use areas: character
+
+Tag: mongol_opinion
 Use areas: character
 
 Tag: ai_energy
 Use areas: character
 
-Tag: fabricate_hook_scheme_resistance_add
+Tag: desert_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: desert_mountains_supply_limit
+Use areas: character, province, and county
+
+Tag: feudal_government_levy_contribution_add
 Use areas: character
 
-Tag: archer_cavalry_toughness_add
+Tag: enemy_contract_scheme_success_chance_add
 Use areas: character
 
-Tag: finnish_pagan_opinion
+Tag: karluk_opinion
 Use areas: character
 
-Tag: farmlands_min_combat_roll
+Tag: scheme_phase_duration_against_grudge_add
 Use areas: character
 
-Tag: steppe_development_growth_factor
-Use areas: character， province，以及 county
+Tag: promote_enemy_scheme_phase_duration_add
+Use areas: character
 
-Tag: hills_attrition_mult
+Tag: drylands_cancel_negative_supply
+Use areas: character
+
+Tag: steppe_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: courtly_ai_boldness
+Use areas: character
+
+Tag: glory_hound_ai_boldness
+Use areas: character
+
+Tag: malinke_opinion
+Use areas: character
+
+Tag: violet_poet_xp_degradation_mult
 Use areas: character
 
 Tag: embarkation_cost_mult
 Use areas: character
 
-Tag: church_holding_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: mozarabic_church_opinion
+Tag: kru_opinion
 Use areas: character
 
-Tag: heavy_infantry_siege_value_mult
+Tag: lombard_opinion
 Use areas: character
 
-Tag: pikemen_max_size_add
+Tag: expand_power_base_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: carantanian_opinion
+Tag: foster_legitimacy_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: lifestyle_hunter_xp_loss_mult
+Tag: stationed_camel_cavalry_screen_mult
+Use areas: province
+
+Tag: pommeranian_opinion
 Use areas: character
 
-Tag: komi_opinion
+Tag: stationed_skirmishers_siege_value_add
+Use areas: province
+
+Tag: glory_hound_ai_vengefulness
 Use areas: character
 
-Tag: scheme_power_against_wedding_good_fertility_add
+Tag: zunism_religion_opinion
 Use areas: character
 
-Tag: hills_advantage
-Use areas: character
-
-Tag: floodplains_cancel_negative_supply
-Use areas: character
-
-Tag: heavy_infantry_screen_add
+Tag: holy_order_government_opinion
 Use areas: character
 
 Tag: diplomacy
 Use areas: character
 
-Tag: parochial_same_culture_opinion
-Use areas: character
+Tag: desert_mountains_provisions_use_mult
+Use areas: character, province, and county
 
 Tag: stewardship
 Use areas: character
 
-Tag: oasis_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: aragonese_opinion
+Tag: karelian_opinion
 Use areas: character
 
-Tag: siege_weapon_screen_add
+Tag: polabian_opinion
+Use areas: character
+
+Tag: trait_track_trickster_xp_gain_mult
+Use areas: character
+
+Tag: max_elope_schemes_add
+Use areas: character
+
+Tag: drylands_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: oasis_development_growth
+Use areas: character, province, and county
+
+Tag: archers_max_size_add
 Use areas: character
 
 Tag: intrigue_per_prestige_level
 Use areas: character
 
-Tag: barons_and_minor_landholders_tax_contribution_mult
-Use areas: character
-
-Tag: samaritan_opinion
+Tag: orthodox_opinion
 Use areas: character
 
 Tag: piety_level_impact_mult
 Use areas: character
 
-Tag: hafizi_opinion
+Tag: bogomilist_opinion
 Use areas: character
 
-Tag: mutazila_opinion
+Tag: camel_cavalry_screen_mult
 Use areas: character
 
-Tag: mel_opinion
+Tag: laamp_base_4021_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: monthly_martial_lifestyle_xp_gain_mult
-Use areas: character
-
-Tag: trait_track_foot_xp_loss_mult
-Use areas: character
-
-Tag: stationed_heavy_cavalry_pursuit_mult
+Tag: stationed_elephant_cavalry_siege_value_add
 Use areas: province
 
 Tag: movement_speed
 Use areas: character
 
-Tag: pommeranian_opinion
-Use areas: character
-
-Tag: pilgrim_xp_degradation_mult
-Use areas: character
-
-Tag: frankish_opinion
-Use areas: character
-
-Tag: barons_and_minor_landholders_opinion
-Use areas: character
-
-Tag: stationed_siege_weapon_screen_add
+Tag: stationed_camel_cavalry_toughness_add
 Use areas: province
 
-Tag: zealot_tax_contribution_add
+Tag: mon_opinion
 Use areas: character
 
-Tag: desert_attrition_mult
+Tag: pikemen_screen_add
 Use areas: character
 
-Tag: zealot_same_faith_opinion
+Tag: gond_opinion
 Use areas: character
 
-Tag: kurdish_opinion
+Tag: domicile_monthly_gold_mult
 Use areas: character
 
-Tag: tengrism_religion_opinion
+Tag: siege_weapon_toughness_add
+Use areas: character
+
+Tag: plains_attrition_mult
+Use areas: character
+
+Tag: vaishnavism_opinion
+Use areas: character
+
+Tag: minority_different_faith_opinion
+Use areas: character
+
+Tag: franconian_opinion
+Use areas: character
+
+Tag: ingratiate_family_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_archers_toughness_mult
+Use areas: province
+
+Tag: sea_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: influence_level_impact_mult
+Use areas: character
+
+Tag: trait_track_foot_xp_loss_mult
 Use areas: character
 
 Tag: dread_decay_mult
 Use areas: character
 
-Tag: shangqing_opinion
+Tag: minority_ai_rationality
 Use areas: character
 
-Tag: desert_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: sinhala_opinion
+Tag: sedism_opinion
 Use areas: character
 
-Tag: camel_cavalry_siege_value_add
+Tag: archers_recruitment_cost_mult
 Use areas: character
 
-Tag: desert_mountains_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: plains_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_danger_xp_gain_mult
+Tag: barons_and_minor_landholders_ai_energy
 Use areas: character
 
-Tag: marathi_opinion
+Tag: archers_screen_mult
 Use areas: character
 
-Tag: forest_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: coastal_sea_min_combat_roll
+Use areas: character
+
+Tag: taiga_construction_piety_cost
+Use areas: character, province, and county
 
 Tag: guest_opinion
+Use areas: character
+
+Tag: karaism_opinion
+Use areas: character
+
+Tag: archer_cavalry_recruitment_cost_mult
 Use areas: character
 
 Tag: ai_amenity_target_baseline
 Use areas: character
 
-Tag: abduct_scheme_resistance_add
+Tag: taiga_development_growth
+Use areas: character, province, and county
+
+Tag: wetlands_supply_limit
+Use areas: character, province, and county
+
+Tag: tribal_holding_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: max_protect_minority_vassal_contract_learning_scheme_schemes_add
 Use areas: character
 
-Tag: minority_ai_rationality
-Use areas: character
-
-Tag: wetlands_attrition_mult
-Use areas: character
-
-Tag: minority_levy_contribution_add
-Use areas: character
-
-Tag: courting_scheme_resistance_add
-Use areas: character
-
-Tag: stationed_camel_cavalry_damage_add
-Use areas: province
-
-Tag: taiga_min_combat_roll
-Use areas: character
-
-Tag: old_bon_opinion
+Tag: steppe_attrition_mult
 Use areas: character
 
 Tag: same_culture_mercenary_hire_cost_mult
 Use areas: character
 
-Tag: bon_religion_opinion
+Tag: barons_and_minor_landholders_ai_honor
 Use areas: character
 
-Tag: desert_mountains_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: sea_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: tribal_holding_build_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: zunism_religion_opinion
+Tag: castilian_opinion
 Use areas: character
 
-Tag: scheme_power_against_ward_add
+Tag: mundhum_religion_opinion
 Use areas: character
 
 Tag: army_screen_mult
@@ -3527,528 +4064,579 @@ Use areas: scheme
 Tag: knight_effectiveness_per_dread
 Use areas: character
 
+Tag: courtly_ai_honor
+Use areas: character
+
 Tag: opinion_of_different_culture
 Use areas: character
 
-Tag: oirat_opinion
+Tag: stationed_light_cavalry_toughness_mult
+Use areas: province
+
+Tag: assamese_opinion
 Use areas: character
 
-Tag: scheme_power_against_best_friend_mult
+Tag: trait_track_violet_poet_xp_loss_mult
 Use areas: character
 
-Tag: mazdakism_opinion
+Tag: mountains_development_growth
+Use areas: character, province, and county
+
+Tag: desert_supply_limit
+Use areas: character, province, and county
+
+Tag: roman_opinion
 Use areas: character
 
-Tag: mercenary_government_opinion
+Tag: heavy_cavalry_toughness_add
 Use areas: character
-
-Tag: elephant_cavalry_maintenance_mult
-Use areas: character
-
-Tag: tribal_government_levy_contribution_add
-Use areas: character
-
-Tag: pikemen_recruitment_cost_mult
-Use areas: character
-
-Tag: scheme_power_against_student_mult
-Use areas: character
-
-Tag: bozo_opinion
-Use areas: character
-
-Tag: taiga_tax_mult
-Use areas: character， province，以及 county
 
 Tag: tax_slot_add
 Use areas: character
 
+Tag: desert_mountains_attrition_mult
+Use areas: character
+
+Tag: wetlands_supply_limit_mult
+Use areas: character, province, and county
+
 Tag: travel_companion_opinion
+Use areas: character
+
+Tag: kurdish_opinion
 Use areas: character
 
 Tag: travel_safety_mult
 Use areas: travel_plan
 
-Tag: steppe_development_growth
-Use areas: character， province，以及 county
-
-Tag: heavy_infantry_toughness_add
+Tag: trait_track_hunter_xp_gain_mult
 Use areas: character
 
-Tag: valentinianism_opinion
+Tag: skirmishers_screen_mult
 Use areas: character
 
-Tag: church_holding_holding_build_prestige_cost
-Use areas: character， province，以及 county
+Tag: steppe_construction_piety_cost
+Use areas: character, province, and county
 
-Tag: karluk_opinion
+Tag: governor_xp_gain_mult
 Use areas: character
 
-Tag: bosnian_church_opinion
+Tag: stationed_skirmishers_toughness_mult
+Use areas: province
+
+Tag: ai_honor
 Use areas: character
 
-Tag: scheme_power_against_potential_hook_mult
+Tag: bobo_opinion
 Use areas: character
 
-Tag: lifestyle_physician_xp_degradation_mult
+Tag: seduce_scheme_phase_duration_add
+Use areas: character
+
+Tag: max_laamp_base_1001_contract_scheme_schemes_add
+Use areas: character
+
+Tag: mercenary_government_opinion
+Use areas: character
+
+Tag: mazdayasna_opinion
+Use areas: character
+
+Tag: courtly_ai_compassion
+Use areas: character
+
+Tag: desert_mountains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: knight_errant_xp_degradation_mult
+Use areas: character
+
+Tag: happy_powerful_vassal_levy_contribution_mult
 Use areas: character
 
 Tag: yughur_opinion
 Use areas: character
 
-Tag: ai_honor
+Tag: max_laamp_base_2031_contract_scheme_schemes_add
 Use areas: character
 
-Tag: vepsian_opinion
+Tag: gaw_opinion
 Use areas: character
 
-Tag: trait_track_hunter_xp_gain_mult
+Tag: waaqism_religion_opinion
 Use areas: character
 
-Tag: archer_cavalry_pursuit_mult
+Tag: desert_mountains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: zealot_tax_contribution_add
 Use areas: character
 
-Tag: stationed_archers_damage_add
-Use areas: province
-
-Tag: farmlands_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: happy_powerful_vassal_levy_contribution_mult
+Tag: pikemen_recruitment_cost_mult
 Use areas: character
 
-Tag: max_elope_schemes_add
-Use areas: character
-
-Tag: courtly_ai_rationality
-Use areas: character
-
-Tag: light_cavalry_pursuit_mult
-Use areas: character
-
-Tag: courtly_levy_contribution_add
-Use areas: character
-
-Tag: mountains_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: muwalladi_opinion
-Use areas: character
-
-Tag: occitan_opinion
-Use areas: character
-
-Tag: qarmatian_opinion
+Tag: armenian_apostolic_opinion
 Use areas: character
 
 Tag: retreat_losses
-Use areas: character 以及 terrain
+Use areas: character  and terrain
+
+Tag: oirat_opinion
+Use areas: character
 
 Tag: build_gold_cost
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: gothic_opinion
+Tag: stationed_heavy_infantry_toughness_add
+Use areas: province
+
+Tag: pikemen_screen_mult
 Use areas: character
 
-Tag: druze_opinion
+Tag: kitebacilweism_opinion
 Use areas: character
 
-Tag: rf_pagan_opinion
+Tag: elephant_cavalry_recruitment_cost_mult
 Use areas: character
 
-Tag: krishnaism_opinion
+Tag: laamp_base_4001_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: french_opinion
+Tag: zealot_ai_honor
 Use areas: character
 
-Tag: drylands_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: heavy_cavalry_maintenance_mult
+Tag: mozarabic_church_opinion
 Use areas: character
 
-Tag: mountains_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: light_cavalry_screen_mult
+Tag: laamp_base_2031_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
 Tag: max_hostile_schemes_add
 Use areas: character
 
-Tag: barons_and_minor_landholders_levy_contribution_add
+Tag: forest_attrition_mult
 Use areas: character
 
-Tag: hills_levy_size
-Use areas: character， province，以及 county
+Tag: parochial_ai_boldness
+Use areas: character
 
 Tag: monthly_income_per_stress_level_add
 Use areas: character
 
-Tag: floodplains_travel_danger
-Use areas: character， province，以及 county
+Tag: domicile_monthly_prestige_add
+Use areas: character
 
-Tag: drylands_development_growth
-Use areas: character， province，以及 county
+Tag: monthly_influence
+Use areas: character
 
-Tag: siege_weapon_siege_value_mult
+Tag: monthly_diplomacy_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: czech_opinion
 Use areas: character
 
 Tag: maa_toughness_mult
 Use areas: character
 
-Tag: desert_advantage
+Tag: siege_weapon_max_size_mult
 Use areas: character
 
-Tag: plains_attrition_mult
+Tag: administrative_government_opinion
 Use areas: character
 
-Tag: parochial_opinion
+Tag: minority_different_culture_opinion
 Use areas: character
 
-Tag: seduce_scheme_resistance_mult
+Tag: max_found_despotate_schemes_add
 Use areas: character
 
-Tag: heavy_cavalry_pursuit_mult
+Tag: german_opinion
 Use areas: character
 
-Tag: jungle_attrition_mult
+Tag: scheme_phase_duration_against_favorite_child_add
 Use areas: character
 
-Tag: magyar_pagan_opinion
+Tag: domicile_monthly_influence_mult
 Use areas: character
 
-Tag: jungle_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: trait_track_travel_xp_gain_mult
+Tag: laamp_base_3041_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: merkabah_opinion
+Tag: domicile_build_gold_cost
 Use areas: character
+
+Tag: cumbrian_opinion
+Use areas: character
+
+Tag: enemy_hostile_scheme_success_chance_growth_add
+Use areas: character
+
+Tag: stationed_archer_cavalry_damage_add
+Use areas: province
 
 Tag: stationed_maa_siege_value_add
 Use areas: province
 
-Tag: desert_mountains_max_combat_roll
+Tag: barons_and_minor_landholders_tax_contribution_add
 Use areas: character
 
-Tag: bengali_opinion
+Tag: telugu_opinion
 Use areas: character
 
-Tag: trait_track_wit_xp_degradation_mult
+Tag: archers_siege_value_add
 Use areas: character
 
 Tag: faith_creation_piety_cost_add
 Use areas: character
 
-Tag: barons_and_minor_landholders_ai_compassion
+Tag: trait_track_bow_xp_gain_mult
 Use areas: character
 
-Tag: skirmishers_damage_mult
+Tag: laamp_base_5031_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: sea_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: zealot_ai_sociability
+Tag: farmlands_min_combat_roll
 Use areas: character
 
-Tag: zealot_tax_contribution_mult
+Tag: taiga_max_combat_roll
+Use areas: character
+
+Tag: plains_levy_size
+Use areas: character, province, and county
+
+Tag: taiga_attrition_mult
+Use areas: character
+
+Tag: taiga_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: jainism_religion_opinion
 Use areas: character
 
 Tag: ai_sociability
 Use areas: character
 
-Tag: skirmishers_pursuit_mult
+Tag: max_laamp_base_6001_contract_scheme_schemes_add
 Use areas: character
 
-Tag: yazidi_opinion
+Tag: malabarism_opinion
 Use areas: character
 
 Tag: title_creation_cost
 Use areas: character
 
-Tag: castle_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: convert_to_witchcraft_scheme_power_mult
+Tag: men_at_arms_title_limit
 Use areas: character
 
-Tag: slavic_religion_opinion
+Tag: tribal_holding_build_speed
+Use areas: character, province, and county
+
+Tag: mutazila_opinion
 Use areas: character
 
-Tag: scheme_power_against_bully_mult
+Tag: brahui_opinion
 Use areas: character
 
-Tag: norwegian_opinion
+Tag: heavy_cavalry_max_size_mult
 Use areas: character
 
-Tag: sephardi_opinion
+Tag: tribal_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: light_cavalry_siege_value_add
 Use areas: character
 
-Tag: taiga_development_growth
-Use areas: character， province，以及 county
-
-Tag: feudal_government_tax_contribution_add
+Tag: trait_track_danger_xp_degradation_mult
 Use areas: character
 
-Tag: camel_cavalry_damage_add
+Tag: mountains_attrition_mult
+Use areas: character
+
+Tag: wetlands_advantage
 Use areas: character
 
 Tag: travel_speed
 Use areas: travel_plan
 
+Tag: khwarezmian_opinion
+Use areas: character
+
 Tag: religious_vassal_opinion
 Use areas: character
 
-Tag: pictish_opinion
+Tag: laktan_opinion
+Use areas: character
+
+Tag: trait_track_knight_errant_xp_loss_mult
+Use areas: character
+
+Tag: wetlands_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: wetlands_attrition_mult
+Use areas: character
+
+Tag: north_african_religion_opinion
 Use areas: character
 
 Tag: vassal_tax_mult
 Use areas: character
 
-Tag: stationed_pikemen_damage_mult
-Use areas: province
-
-Tag: taiga_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: tribal_holding_holding_build_piety_cost
-Use areas: character， province，以及 county
-
-Tag: waldensian_opinion
+Tag: max_generate_claim_schemes_add
 Use areas: character
 
-Tag: turkish_opinion
+Tag: skirmishers_damage_add
 Use areas: character
 
-Tag: mon_opinion
+Tag: komi_opinion
 Use areas: character
 
-Tag: tribal_holding_build_piety_cost
-Use areas: character， province，以及 county
+Tag: wetlands_tax_mult
+Use areas: character, province, and county
 
-Tag: coptic_opinion
+Tag: bodpa_opinion
 Use areas: character
 
-Tag: scheme_power_against_wedding_bad_fertility_add
+Tag: charioteer_red_xp_gain_mult
 Use areas: character
 
-Tag: kirati_opinion
+Tag: glory_hound_levy_contribution_add
+Use areas: character
+
+Tag: skirmishers_siege_value_add
 Use areas: character
 
 Tag: same_culture_opinion
 Use areas: character
 
-Tag: steppe_travel_danger
-Use areas: character， province，以及 county
-
-Tag: scheme_power_against_intrigue_mentor_add
+Tag: khazar_opinion
 Use areas: character
 
-Tag: heavy_infantry_max_size_add
+Tag: max_laamp_base_0021_contract_scheme_schemes_add
 Use areas: character
 
-Tag: archers_damage_mult
-Use areas: character
+Tag: church_holding_holding_build_gold_cost
+Use areas: character, province, and county
 
-Tag: stationed_pikemen_pursuit_mult
-Use areas: province
+Tag: floodplains_holding_construction_prestige_cost
+Use areas: character, province, and county
 
 Tag: monthly_county_control_decline_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: wetlands_supply_limit
-Use areas: character， province，以及 county
-
-Tag: farmlands_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: floodplains_supply_limit
-Use areas: character， province，以及 county
-
-Tag: franconian_opinion
+Tag: owned_contract_scheme_success_chance_growth_add
 Use areas: character
 
-Tag: archers_pursuit_add
+Tag: glory_hound_same_faith_opinion
 Use areas: character
 
-Tag: farmlands_levy_size
-Use areas: character， province，以及 county
-
-Tag: germanic_religion_opinion
+Tag: heavy_infantry_pursuit_mult
 Use areas: character
 
-Tag: hills_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: telugu_opinion
+Tag: theocracy_government_opinion
 Use areas: character
 
-Tag: stationed_elephant_cavalry_siege_value_mult
+Tag: sorko_opinion
+Use areas: character
+
+Tag: max_laamp_base_0031_contract_scheme_schemes_add
+Use areas: character
+
+Tag: desert_mountains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: glory_hound_ai_greed
+Use areas: character
+
+Tag: parochial_different_faith_opinion
+Use areas: character
+
+Tag: scottish_opinion
+Use areas: character
+
+Tag: stationed_heavy_infantry_siege_value_mult
 Use areas: province
 
-Tag: priscillianism_opinion
+Tag: the_wake_xp_loss_mult
 Use areas: character
 
-Tag: gur_opinion
+Tag: west_african_bori_pagan_opinion
+Use areas: character
+
+Tag: camel_cavalry_pursuit_mult
 Use areas: character
 
 Tag: enemy_hard_casualty_modifier
-Use areas: character 以及 terrain
+Use areas: character  and terrain
 
-Tag: heavy_cavalry_damage_mult
+Tag: monthly_diplomacy_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: scheme_power_against_wedding_bad_fertility_mult
+Tag: laamp_base_3031_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: oasis_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: khanty_opinion
 Use areas: character
 
 Tag: cowed_vassal_tax_contribution_add
 Use areas: character
 
-Tag: yoruba_opinion
+Tag: stationed_camel_cavalry_siege_value_add
+Use areas: province
+
+Tag: max_laamp_base_2021_contract_scheme_schemes_add
 Use areas: character
 
-Tag: light_cavalry_toughness_add
+Tag: camel_cavalry_damage_mult
 Use areas: character
 
-Tag: floodplains_attrition_mult
+Tag: laamp_base_2011_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: mari_opinion
+Tag: mercenary_government_levy_contribution_mult
 Use areas: character
 
-Tag: light_cavalry_damage_add
+Tag: mercenary_government_opinion_same_faith
 Use areas: character
 
-Tag: drylands_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: parochial_different_faith_opinion
+Tag: landless_adventurer_government_opinion
 Use areas: character
 
-Tag: barons_and_minor_landholders_ai_energy
+Tag: polish_opinion
 Use areas: character
 
-Tag: glory_hound_tax_contribution_add
+Tag: trait_track_bandit_xp_degradation_mult
 Use areas: character
 
 Tag: hostage_piety_mult
 Use areas: character
 
-Tag: drylands_max_combat_roll
+Tag: drylands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: paulician_opinion
 Use areas: character
 
-Tag: hills_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: masmudi_opinion
+Tag: depose_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: oriya_opinion
+Tag: parochial_ai_honor
 Use areas: character
 
-Tag: trait_track_horse_xp_degradation_mult
+Tag: administrative_government_tax_contribution_add
+Use areas: character
+
+Tag: monthly_martial_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: mahayana_opinion
+Use areas: character
+
+Tag: hausa_opinion
+Use areas: character
+
+Tag: butr_opinion
+Use areas: character
+
+Tag: archers_siege_value_mult
 Use areas: character
 
 Tag: prowess_no_portrait
-Extra info: 不会影响肖像。注意，使用负值时会得到一些奇怪的结果
+Extra info: 不会影响肖像。注意,使用负值时会得到一些奇怪的结果
 Use areas: character
 
-Tag: skirmishers_toughness_add
+Tag: max_laamp_base_5051_contract_scheme_schemes_add
 Use areas: character
 
-Tag: mountains_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: nizari_opinion
+Tag: zealot_levy_contribution_add
 Use areas: character
 
-Tag: desert_development_growth
-Use areas: character， province，以及 county
-
-Tag: asturleonese_opinion
+Tag: scheme_phase_duration_against_old_flame_add
 Use areas: character
 
-Tag: sway_scheme_resistance_add
+Tag: minority_levy_contribution_add
+Use areas: character
+
+Tag: stationed_pikemen_siege_value_mult
+Use areas: province
+
+Tag: forest_levy_size
+Use areas: character, province, and county
+
+Tag: farmlands_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: owned_political_scheme_success_chance_max_add
 Use areas: character
 
 Tag: adult_health
 Use areas: character
 
-Tag: jungle_advantage
-Use areas: character
-
-Tag: drylands_levy_size
-Use areas: character， province，以及 county
-
-Tag: personal_scheme_power_mult
-Use areas: character
-
 Tag: stewardship_per_stress_level
 Use areas: character
 
-Tag: zealot_ai_compassion
-Use areas: character
+Tag: coastal_sea_travel_danger
+Use areas: character, province, and county
 
-Tag: forest_min_combat_roll
+Tag: forest_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: trait_track_travel_xp_loss_mult
 Use areas: character
 
 Tag: levy_reinforcement_rate_different_faith
 Use areas: character
 
-Tag: desert_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_ai_sociability
+Tag: minority_ai_honor
 Use areas: character
 
-Tag: max_befriend_schemes_add
-Use areas: character
+Tag: forest_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: world_innovation_elephants_development_growth_factor
+Use areas: character, province, and county
 
 Tag: happy_powerful_vassal_levy_contribution_add
 Use areas: character
 
-Tag: roman_opinion
+Tag: light_cavalry_toughness_mult
 Use areas: character
 
-Tag: west_african_bori_religion_opinion
+Tag: world_steppe_development_growth
+Use areas: character, province, and county
+
+Tag: laamp_base_5051_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
-Tag: skirmishers_toughness_mult
+Tag: trait_track_foot_xp_gain_mult
 Use areas: character
 
-Tag: forest_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: camel_cavalry_max_size_mult
+Tag: smartism_opinion
 Use areas: character
 
-Tag: desert_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: oasis_cancel_negative_supply
+Tag: minority_ai_zeal
 Use areas: character
 
 Tag: clergy_opinion
 Use areas: character
 
-Tag: plains_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: republic_government_tax_contribution_add
+Tag: ilmenian_opinion
 Use areas: character
 
-Tag: coastal_sea_attrition_mult
+Tag: prepare_fire_dromons_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: theocracy_government_opinion_same_faith
+Tag: mountains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: laamp_base_6031_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_skirmishers_pursuit_mult
-Use areas: province
+Tag: hills_attrition_mult
+Use areas: character
 
 Tag: courtier_opinion
 Use areas: character
@@ -4056,281 +4644,347 @@ Use areas: character
 Tag: holy_order_hire_cost_mult
 Use areas: character
 
-Tag: diplomacy_scheme_power
+Tag: diplomacy_scheme_phase_duration
 Use areas: character
 
-Tag: desert_mountains_supply_limit_mult
-Use areas: character， province，以及 county
+Tag: taiga_levy_size
+Use areas: character, province, and county
 
-Tag: stewardship_scheme_power
+Tag: barons_and_minor_landholders_ai_vengefulness
 Use areas: character
 
-Tag: taiga_advantage
+Tag: andalusian_opinion
 Use areas: character
 
-Tag: stationed_camel_cavalry_siege_value_mult
-Use areas: province
-
-Tag: wetlands_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: armenian_apostolic_opinion
+Tag: stewardship_scheme_phase_duration
 Use areas: character
 
-Tag: stationed_skirmishers_siege_value_add
-Use areas: province
+Tag: max_laamp_help_find_secrets_scheme_schemes_add
+Use areas: character
 
-Tag: oasis_max_combat_roll
+Tag: challenge_status_scheme_phase_duration_add
+Use areas: character
+
+Tag: drylands_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: wetlands_min_combat_roll
+Use areas: character
+
+Tag: qarmatian_opinion
 Use areas: character
 
 Tag: negate_intrigue_penalty_add
 Use areas: character
 
+Tag: sinhala_opinion
+Use areas: character
+
 Tag: negate_health_penalty_add
 Use areas: character
 
-Tag: lifestyle_blademaster_xp_loss_mult
+Tag: trait_track_charioteer_white_xp_loss_mult
 Use areas: character
 
-Tag: archers_damage_add
-Use areas: character
-
-Tag: scheme_power_against_best_friend_add
-Use areas: character
-
-Tag: mossi_opinion
-Use areas: character
-
-Tag: epidemic_travel_danger
-Use areas: character， province，以及 county
-
-Tag: east_bantu_opinion
-Use areas: character
-
-Tag: stationed_elephant_cavalry_pursuit_mult
-Use areas: province
-
-Tag: negative_inactive_inheritance_chance
-Use areas: character
-
-Tag: stationed_pikemen_damage_add
-Use areas: province
-
-Tag: positive_inactive_inheritance_chance
-Use areas: character
-
-Tag: taiga_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: wolof_opinion
-Use areas: character
-
-Tag: different_faith_county_opinion_mult
-Use areas: character
-
-Tag: courtly_opinion
-Use areas: character
-
-Tag: spouse_opinion
-Use areas: character
-
-Tag: farmlands_attrition_mult
-Use areas: character
-
-Tag: mercenary_government_levy_contribution_add
-Use areas: character
-
-Tag: archer_cavalry_max_size_add
-Use areas: character
-
-Tag: sabianism_opinion
-Use areas: character
-
-Tag: steppe_attrition_mult
-Use areas: character
-
-Tag: coastal_sea_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: butr_opinion
-Use areas: character
-
-Tag: german_opinion
-Use areas: character
-
-Tag: world_innovation_camels_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: trait_track_lifestyle_physician_xp_gain_mult
-Use areas: character
-
-Tag: domain_tax_mult_even_if_baron
-Use areas: character
-
-Tag: heavy_infantry_damage_mult
-Use areas: character
-
-Tag: sumpa_opinion
-Use areas: character
-
-Tag: uriankhai_opinion
-Use areas: character
-
-Tag: breton_opinion
-Use areas: character
-
-Tag: floodplains_tax_mult
-Use areas: character， province，以及 county
-
-Tag: stationed_heavy_infantry_pursuit_add
-Use areas: province
-
-Tag: stationed_archer_cavalry_screen_add
-Use areas: province
-
-Tag: archers_screen_mult
-Use areas: character
-
-Tag: scheme_power_against_antiquarian_add
-Use areas: character
-
-Tag: laktan_opinion
-Use areas: character
-
-Tag: glory_hound_levy_contribution_add
-Use areas: character
-
-Tag: glory_hound_levy_contribution_mult
-Use areas: character
-
-Tag: mountains_max_combat_roll
-Use areas: character
-
-Tag: strife_opinion_loss_mult
-Use areas: character
-
-Tag: hills_min_combat_roll
-Use areas: character
-
-Tag: men_at_arms_limit
-Use areas: character
-
-Tag: glory_hound_ai_vengefulness
-Use areas: character
-
-Tag: glory_hound_ai_compassion
+Tag: laamp_base_0011_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
 Tag: heavy_cavalry_toughness_mult
 Use areas: character
 
-Tag: drylands_cancel_negative_supply
+Tag: epidemic_travel_danger
+Use areas: character, province, and county
+
+Tag: stationed_heavy_cavalry_toughness_mult
+Use areas: province
+
+Tag: zhangzhung_opinion
+Use areas: character
+
+Tag: church_holding_build_speed
+Use areas: character, province, and county
+
+Tag: knight_errant_xp_gain_mult
+Use areas: character
+
+Tag: murder_scheme_phase_duration_add
+Use areas: character
+
+Tag: desert_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: negative_inactive_inheritance_chance
+Use areas: character
+
+Tag: republic_government_levy_contribution_mult
+Use areas: character
+
+Tag: positive_inactive_inheritance_chance
+Use areas: character
+
+Tag: heavy_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: different_faith_county_opinion_mult
+Use areas: character
+
+Tag: floodplains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: shatuo_opinion
+Use areas: character
+
+Tag: charioteer_red_xp_degradation_mult
+Use areas: character
+
+Tag: spouse_opinion
+Use areas: character
+
+Tag: courtly_ai_greed
+Use areas: character
+
+Tag: tocharian_opinion
+Use areas: character
+
+Tag: max_teach_governor_schemes_add
+Use areas: character
+
+Tag: church_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_lifestyle_mystic_xp_loss_mult
+Use areas: character
+
+Tag: courtly_tax_contribution_add
+Use areas: character
+
+Tag: yazidi_opinion
+Use areas: character
+
+Tag: trait_track_knight_errant_xp_degradation_mult
+Use areas: character
+
+Tag: stationed_heavy_infantry_damage_add
+Use areas: province
+
+Tag: domain_tax_mult_even_if_baron
+Use areas: character
+
+Tag: skirmishers_max_size_add
+Use areas: character
+
+Tag: stationed_skirmishers_pursuit_add
+Use areas: province
+
+Tag: uyghur_opinion
+Use areas: character
+
+Tag: bon_opinion
+Use areas: character
+
+Tag: oasis_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: max_laamp_base_0041_contract_scheme_schemes_add
+Use areas: character
+
+Tag: stationed_skirmishers_damage_add
+Use areas: province
+
+Tag: drylands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: samoyed_opinion
+Use areas: character
+
+Tag: holy_order_government_opinion_same_faith
+Use areas: character
+
+Tag: zealot_same_culture_opinion
+Use areas: character
+
+Tag: knight_errant_xp_loss_mult
+Use areas: character
+
+Tag: strife_opinion_loss_mult
+Use areas: character
+
+Tag: theravada_opinion
+Use areas: character
+
+Tag: glory_hound_ai_sociability
+Use areas: character
+
+Tag: west_african_orisha_pagan_opinion
+Use areas: character
+
+Tag: floodplains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: men_at_arms_limit
+Use areas: character
+
+Tag: drylands_development_growth_factor
+Use areas: character, province, and county
+
+Tag: clan_government_tax_contribution_add
+Use areas: character
+
+Tag: max_laamp_base_3041_contract_scheme_schemes_add
 Use areas: character
 
 Tag: monthly_war_income_add
 Use areas: character
 
-Tag: max_fabricate_hook_schemes_add
+Tag: parochial_levy_contribution_mult
 Use areas: character
 
-Tag: macedonian_opinion
+Tag: norwegian_opinion
 Use areas: character
 
-Tag: minority_ai_sociability
+Tag: drylands_advantage
 Use areas: character
 
-Tag: digambara_opinion
+Tag: stationed_heavy_infantry_screen_mult
+Use areas: province
+
+Tag: cornish_opinion
 Use areas: character
 
 Tag: monthly_county_control_growth_at_war_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
 Tag: tolerance_advantage_mod
 Use areas: character
 
-Tag: trait_track_pilgrim_xp_loss_mult
-Use areas: character
-
-Tag: hunnic_opinion
-Use areas: character
-
-Tag: stationed_heavy_cavalry_screen_mult
+Tag: stationed_heavy_infantry_pursuit_mult
 Use areas: province
 
-Tag: max_sway_schemes_add
+Tag: max_laamp_base_4031_contract_scheme_schemes_add
 Use areas: character
 
-Tag: heavy_cavalry_screen_mult
+Tag: coastal_sea_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: sabianism_opinion
 Use areas: character
+
+Tag: laamp_base_4001_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: songhai_opinion
+Use areas: character
+
+Tag: stationed_siege_weapon_damage_add
+Use areas: province
 
 Tag: development_growth
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: stationed_light_cavalry_screen_add
-Use areas: province
+Tag: laamp_base_3011_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
 
-Tag: hills_tax_mult
-Use areas: character， province，以及 county
+Tag: parochial_ai_energy
+Use areas: character
+
+Tag: max_dispute_border_schemes_add
+Use areas: character
 
 Tag: diplomacy_per_stress_level
 Use areas: character
 
-Tag: monthly_piety_gain_per_knight_mult
+Tag: ewe_opinion
+Use areas: character
+
+Tag: coastal_sea_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: trait_track_pilgrim_xp_loss_mult
 Use areas: character
 
 Tag: maa_pursuit_add
 Use areas: character
 
-Tag: desert_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: farmlands_construction_piety_cost
+Use areas: character, province, and county
 
-Tag: stationed_siege_weapon_damage_add
-Use areas: province
+Tag: monthly_piety_gain_per_knight_mult
+Use areas: character
 
-Tag: parochial_ai_vengefulness
+Tag: minority_ai_greed
+Use areas: character
+
+Tag: iconoclast_opinion
+Use areas: character
+
+Tag: siege_weapon_max_size_add
+Use areas: character
+
+Tag: max_sway_schemes_add
 Use areas: character
 
 Tag: monthly_county_control_growth_factor
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: skirmishers_max_size_add
+Tag: coastal_sea_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: max_laamp_base_4041_contract_scheme_schemes_add
 Use areas: character
 
-Tag: desert_travel_danger
-Use areas: character， province，以及 county
+Tag: forest_travel_danger
+Use areas: character, province, and county
+
+Tag: barons_and_minor_landholders_opinion
+Use areas: character
+
+Tag: jungle_levy_size
+Use areas: character, province, and county
 
 Tag: years_of_fertility
 Use areas: character
 
-Tag: oasis_travel_danger
-Use areas: character， province，以及 county
-
-Tag: parochial_ai_rationality
+Tag: martial_lifestyle_xp_gain_mult
 Use areas: character
 
-Tag: siberian_religion_opinion
+Tag: landless_adventurer_government_opinion_same_faith
 Use areas: character
 
-Tag: stationed_skirmishers_screen_add
+Tag: plains_supply_limit
+Use areas: character, province, and county
+
+Tag: diplomacy_per_influence_level
+Use areas: character
+
+Tag: trait_track_poacher_xp_degradation_mult
+Use areas: character
+
+Tag: domicile_monthly_influence_add
+Use areas: character
+
+Tag: dispute_border_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: russian_opinion
+Use areas: character
+
+Tag: stationed_archer_cavalry_screen_mult
 Use areas: province
 
-Tag: stationed_skirmishers_pursuit_add
+Tag: laamp_base_6031_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: stationed_elephant_cavalry_siege_value_mult
 Use areas: province
+
+Tag: world_steppe_development_growth_factor
+Use areas: character, province, and county
 
 Tag: realm_priest_opinion
 Use areas: character
 
-Tag: sway_scheme_power_add
+Tag: gallowsbait_xp_degradation_mult
 Use areas: character
-
-Tag: trait_track_danger_xp_degradation_mult
-Use areas: character
-
-Tag: plains_min_combat_roll
-Use areas: character
-
-Tag: jungle_construction_prestige_cost
-Use areas: character， province，以及 county
 
 Tag: supply_capacity_mult
 Use areas: character
@@ -4338,170 +4992,227 @@ Use areas: character
 Tag: opinion_of_vassal
 Use areas: character
 
-Tag: minority_ai_boldness
+Tag: han_opinion
 Use areas: character
+
+Tag: farmlands_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: plains_tax_mult
+Use areas: character, province, and county
 
 Tag: monthly_court_grandeur_change_add
 Use areas: character
 
-Tag: theocracy_government_vassal_opinion
+Tag: barons_and_minor_landholders_ai_sociability
 Use areas: character
-
-Tag: desert_mountains_levy_size
-Use areas: character， province，以及 county
 
 Tag: child_except_player_heir_opinion
 Use areas: character
 
-Tag: desert_mountains_development_growth
-Use areas: character， province，以及 county
+Tag: barons_and_minor_landholders_tax_contribution_mult
+Use areas: character
+
+Tag: taiga_construction_gold_cost
+Use areas: character, province, and county
 
 Tag: no_disembark_penalty
 Use areas: character
 
-Tag: zealot_ai_boldness
+Tag: hills_cancel_negative_supply
 Use areas: character
 
-Tag: stationed_skirmishers_damage_mult
+Tag: coastal_sea_attrition_mult
+Use areas: character
+
+Tag: druze_opinion
+Use areas: character
+
+Tag: laamp_base_6021_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: hindustani_opinion
+Use areas: character
+
+Tag: light_cavalry_siege_value_mult
+Use areas: character
+
+Tag: stationed_heavy_cavalry_damage_add
 Use areas: province
-
-Tag: castle_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: yazidi_religion_opinion
-Use areas: character
-
-Tag: radhanite_opinion
-Use areas: character
-
-Tag: scheme_power_against_bully_add
-Use areas: character
-
-Tag: mazdayasna_opinion
-Use areas: character
-
-Tag: pikemen_screen_mult
-Use areas: character
-
-Tag: somali_opinion
-Use areas: character
 
 Tag: stress_loss_mult
 Use areas: character
 
-Tag: levy_maintenance
-Use areas: character
+Tag: stationed_archer_cavalry_toughness_add
+Use areas: province
 
-Tag: scheme_power_against_rival_mult
+Tag: levy_maintenance
 Use areas: character
 
 Tag: opinion_of_male_rulers
 Use areas: character
 
-Tag: sardinian_opinion
+Tag: light_cavalry_pursuit_mult
 Use areas: character
 
-Tag: wetlands_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: clan_government_levy_contribution_mult
+Tag: raid_estate_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: stationed_camel_cavalry_pursuit_add
-Use areas: province
+Tag: trait_track_charioteer_green_xp_loss_mult
+Use areas: character
+
+Tag: independent_primary_attacker_advantage_add
+Use areas: character
+
+Tag: desert_development_growth
+Use areas: character, province, and county
+
+Tag: najdat_opinion
+Use areas: character
+
+Tag: kimek_opinion
+Use areas: character
+
+Tag: charioteer_white_xp_gain_mult
+Use areas: character
+
+Tag: laamp_prison_break_scheme_scheme_phase_duration_add
+Use areas: character
 
 Tag: positive_random_genetic_chance
 Use areas: character
 
 Tag: monthly_county_control_decline_at_war_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: coastal_sea_development_growth_factor
-Use areas: character， province，以及 county
+Tag: church_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: steppe_travel_danger
+Use areas: character, province, and county
+
+Tag: wetlands_development_growth_factor
+Use areas: character, province, and county
 
 Tag: domain_tax_mult
 Use areas: character
 
-Tag: stationed_elephant_cavalry_screen_mult
-Use areas: province
-
-Tag: pikemen_screen_add
+Tag: ongud_opinion
 Use areas: character
 
-Tag: adoptionist_opinion
+Tag: albanian_opinion
+Use areas: character
+
+Tag: trait_track_knight_errant_xp_gain_mult
+Use areas: character
+
+Tag: west_african_bidu_pagan_opinion
+Use areas: character
+
+Tag: courtly_different_culture_opinion
 Use areas: character
 
 Tag: attraction_opinion
 Use areas: character
 
 Tag: hostile_raid_time
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: lithuanian_opinion
+Tag: subsume_province_scheme_phase_duration_add
 Use areas: character
 
-Tag: mercenary_government_opinion_same_faith
+Tag: pecheneg_opinion
 Use areas: character
 
-Tag: stationed_archers_screen_add
-Use areas: province
-
-Tag: farmlands_supply_limit
-Use areas: character， province，以及 county
-
-Tag: trait_track_lifestyle_blademaster_xp_gain_mult
+Tag: laamp_base_1011_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: city_holding_build_gold_cost
-Use areas: character， province，以及 county
-
-Tag: yemeni_opinion
+Tag: glory_hound_tax_contribution_mult
 Use areas: character
 
-Tag: archer_cavalry_screen_mult
+Tag: tuyuhun_opinion
+Use areas: character
+
+Tag: rrmeaism_opinion
 Use areas: character
 
 Tag: ignore_opinion_of_different_faith
 Use areas: character
 
-Tag: scheme_power_against_potential_lover_add
+Tag: desert_mountains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: trait_track_falconer_xp_degradation_mult
+Use areas: character
+
+Tag: tribal_government_vassal_opinion
+Use areas: character
+
+Tag: clan_government_levy_contribution_mult
+Use areas: character
+
+Tag: bavlim_opinion
 Use areas: character
 
 Tag: ai_vengefulness
 Use areas: character
 
+Tag: trait_track_violet_poet_xp_degradation_mult
+Use areas: character
+
+Tag: desert_mountains_min_combat_roll
+Use areas: character
+
 Tag: men_at_arms_cap
 Use areas: character
 
-Tag: courtly_tax_contribution_add
+Tag: drylands_min_combat_roll
+Use areas: character
+
+Tag: bozo_opinion
 Use areas: character
 
 Tag: vassal_levy_contribution_mult
 Use areas: character
 
-Tag: floodplains_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: courtly_same_faith_opinion
+Tag: damage_legitimacy_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: courtly_different_faith_opinion
+Tag: carantanian_opinion
 Use areas: character
 
-Tag: stationed_archer_cavalry_damage_add
+Tag: floodplains_min_combat_roll
+Use areas: character
+
+Tag: desert_mountains_cancel_negative_supply
+Use areas: character
+
+Tag: drylands_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: buddhism_religion_opinion
+Use areas: character
+
+Tag: zoroastrianism_religion_opinion
+Use areas: character
+
+Tag: laamp_base_1041_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: glory_hound_same_culture_opinion
+Use areas: character
+
+Tag: floodplains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: mari_opinion
+Use areas: character
+
+Tag: prussian_opinion
+Use areas: character
+
+Tag: stationed_camel_cavalry_siege_value_mult
 Use areas: province
-
-Tag: stationed_archers_siege_value_mult
-Use areas: province
-
-Tag: shaivism_opinion
-Use areas: character
-
-Tag: farmlands_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: edo_opinion
-Use areas: character
 
 Tag: no_water_crossing_penalty
 Use areas: character
@@ -4509,89 +5220,104 @@ Use areas: character
 Tag: max_personal_schemes_add
 Use areas: character
 
-Tag: heavy_infantry_screen_mult
+Tag: max_fabricate_hook_schemes_add
 Use areas: character
 
-Tag: rf_abrahamic_opinion
+Tag: old_saxon_opinion
 Use areas: character
 
-Tag: heavy_cavalry_toughness_add
+Tag: laamp_base_3031_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: drylands_development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: light_cavalry_recruitment_cost_mult
+Tag: elephant_cavalry_damage_mult
 Use areas: character
 
-Tag: floodplains_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: laamp_base_2041_contract_scheme_scheme_phase_duration_add
+Use areas: character
 
-Tag: mountains_travel_danger
-Use areas: character， province，以及 county
+Tag: old_bon_opinion
+Use areas: character
+
+Tag: coastal_sea_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: minority_same_faith_opinion
+Use areas: character
+
+Tag: administrative_government_levy_contribution_mult
+Use areas: character
 
 Tag: supply_limit_mult
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: steal_back_artifact_scheme_resistance_add
+Tag: coastal_sea_tax_mult
+Use areas: character, province, and county
+
+Tag: mercenary_government_levy_contribution_add
 Use areas: character
 
-Tag: glory_hound_different_culture_opinion
+Tag: administrative_government_opinion_same_faith
 Use areas: character
 
-Tag: glory_hound_same_faith_opinion
+Tag: holy_order_government_tax_contribution_mult
 Use areas: character
 
-Tag: mountains_supply_limit
-Use areas: character， province，以及 county
-
-Tag: stationed_light_cavalry_toughness_add
-Use areas: province
-
-Tag: assamese_opinion
+Tag: trait_track_marauder_xp_gain_mult
 Use areas: character
 
-Tag: glory_hound_ai_energy
+Tag: zealot_ai_zeal
 Use areas: character
 
-Tag: glory_hound_ai_honor
+Tag: bavarian_opinion
 Use areas: character
 
-Tag: personal_scheme_resistance_add
+Tag: laamp_base_3001_contract_scheme_scheme_phase_duration_add
 Use areas: character
+
+Tag: coastal_sea_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: archers_damage_add
+Use areas: character
+
+Tag: jungle_construction_gold_cost
+Use areas: character, province, and county
 
 Tag: enemy_personal_scheme_success_chance_add
 Use areas: character
 
-Tag: heavy_cavalry_max_size_mult
-Use areas: character
+Tag: stationed_elephant_cavalry_toughness_add
+Use areas: province
 
-Tag: sindhi_opinion
-Use areas: character
-
-Tag: siege_weapon_pursuit_add
+Tag: archers_screen_add
 Use areas: character
 
 Tag: stationed_maa_pursuit_mult
 Use areas: province
 
-Tag: najdat_opinion
+Tag: elephant_cavalry_maintenance_mult
 Use areas: character
 
 Tag: levy_reinforcement_rate_same_faith
 Use areas: character
 
-Tag: skirmishers_siege_value_mult
+Tag: max_laamp_base_5031_contract_scheme_schemes_add
 Use areas: character
 
-Tag: trait_track_bow_xp_degradation_mult
+Tag: archer_cavalry_toughness_add
 Use areas: character
 
-Tag: barons_and_minor_landholders_levy_contribution_mult
+Tag: stationed_siege_weapon_screen_add
+Use areas: province
+
+Tag: nupe_opinion
 Use areas: character
 
-Tag: desert_mountains_development_growth_factor
-Use areas: character， province，以及 county
+Tag: barons_and_minor_landholders_levy_contribution_add
+Use areas: character
+
+Tag: knight_effectiveness_per_stewardship
+Use areas: character
 
 Tag: monthly_court_grandeur_change_mult
 Use areas: character
@@ -4599,19 +5325,28 @@ Use areas: character
 Tag: learning
 Use areas: character
 
-Tag: sway_scheme_power_mult
+Tag: plains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: farmlands_development_growth
+Use areas: character, province, and county
+
+Tag: barons_and_minor_landholders_ai_compassion
 Use areas: character
 
-Tag: desert_mountains_tax_mult
-Use areas: character， province，以及 county
-
-Tag: jungle_levy_size
-Use areas: character， province，以及 county
-
-Tag: langobard_opinion
+Tag: trait_track_danger_xp_gain_mult
 Use areas: character
 
-Tag: zealot_levy_contribution_mult
+Tag: krishnaism_opinion
+Use areas: character
+
+Tag: scheme_success_chance_growth
+Use areas: scheme
+
+Tag: provisions_capacity_add
+Use areas: character  and terrain
+
+Tag: light_cavalry_maintenance_mult
 Use areas: character
 
 Tag: holy_order_hire_cost_add
@@ -4620,236 +5355,290 @@ Use areas: character
 Tag: mercenary_hire_cost_mult
 Use areas: character
 
-Tag: skirmishers_siege_value_add
+Tag: laamp_base_4041_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: learning_lifestyle_xp_gain_mult
+Tag: norman_opinion
 Use areas: character
 
-Tag: sicilian_opinion
+Tag: light_cavalry_screen_add
 Use areas: character
 
 Tag: hard_casualty_winter
 Use areas: province
 
-Tag: pagan_opinion
+Tag: barons_and_minor_landholders_different_faith_opinion
 Use areas: character
 
-Tag: desert_mountains_cancel_negative_supply
-Use areas: character
-
-Tag: camel_cavalry_screen_add
-Use areas: character
-
-Tag: oasis_attrition_mult
+Tag: protect_minority_vassal_contract_martial_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
 Tag: stress_loss_per_prestige_level
 Use areas: character
 
-Tag: forest_tax_mult
-Use areas: character， province，以及 county
+Tag: castle_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: mountains_travel_danger
+Use areas: character, province, and county
+
+Tag: charioteer_green_xp_gain_mult
+Use areas: character
+
+Tag: mountains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: haymanot_opinion
+Use areas: character
+
+Tag: zayidi_opinion
+Use areas: character
 
 Tag: siege_morale_loss
 Use areas: character
 
-Tag: martial_scheme_power
+Tag: mountains_tax_mult
+Use areas: character, province, and county
+
+Tag: martial_scheme_phase_duration
 Use areas: character
 
-Tag: intrigue_scheme_power
+Tag: steppe_advantage
 Use areas: character
 
-Tag: wetlands_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: max_claim_throne_schemes_add
+Tag: intrigue_scheme_phase_duration
 Use areas: character
 
-Tag: minority_ai_greed
+Tag: aragonese_opinion
 Use areas: character
 
-Tag: stewardship_scheme_resistance
+Tag: max_challenge_status_schemes_add
 Use areas: character
 
-Tag: camel_cavalry_toughness_mult
-Use areas: character
-
-Tag: epidemic_resistance
-Use areas: character， province，以及 county
-
-Tag: taiga_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: camel_cavalry_recruitment_cost_mult
-Use areas: character
-
-Tag: mercenary_government_vassal_opinion
-Use areas: character
-
-Tag: fertility
-Use areas: character
-
-Tag: negate_stewardship_penalty_add
-Use areas: character
-
-Tag: vajrayana_opinion
-Use areas: character
-
-Tag: coastal_sea_max_combat_roll
-Use areas: character
-
-Tag: scheme_power_against_intrigue_student_mult
-Use areas: character
-
-Tag: farmlands_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: steppe_min_combat_roll
-Use areas: character
-
-Tag: court_grandeur_baseline_add
-Use areas: character
-
-Tag: stationed_pikemen_screen_mult
-Use areas: province
-
-Tag: ai_rationality
-Use areas: character
-
-Tag: cowed_vassal_levy_contribution_mult
-Use areas: character
-
-Tag: archer_cavalry_toughness_mult
-Use areas: character
-
-Tag: intimidated_vassal_levy_contribution_mult
-Use areas: character
-
-Tag: archers_siege_value_add
-Use areas: character
-
-Tag: archers_max_size_add
-Use areas: character
-
-Tag: chuvash_opinion
+Tag: lifestyle_reveler_xp_loss_mult
 Use areas: character
 
 Tag: rf_eastern_opinion
 Use areas: character
 
-Tag: heavy_infantry_damage_add
+Tag: governor_xp_loss_mult
+Use areas: character
+
+Tag: stewardship_scheme_resistance
+Use areas: character
+
+Tag: protect_minority_vassal_contract_diplomacy_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: ibadi_opinion
+Use areas: character
+
+Tag: epidemic_resistance
+Use areas: character, province, and county
+
+Tag: protect_minority_vassal_contract_intrigue_scheme_enemy_scheme_phase_duration_add
+Use areas: character
+
+Tag: max_subsume_province_schemes_add
+Use areas: character
+
+Tag: fertility
+Use areas: character
+
+Tag: assyrian_opinion
+Use areas: character
+
+Tag: negate_stewardship_penalty_add
+Use areas: character
+
+Tag: wetlands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: trait_track_charioteer_white_xp_gain_mult
+Use areas: character
+
+Tag: lifestyle_hunter_xp_gain_mult
+Use areas: character
+
+Tag: courtly_ai_sociability
+Use areas: character
+
+Tag: violet_poet_xp_loss_mult
+Use areas: character
+
+Tag: kochinim_opinion
+Use areas: character
+
+Tag: court_grandeur_baseline_add
+Use areas: character
+
+Tag: sogdian_opinion
+Use areas: character
+
+Tag: desert_mountains_advantage
+Use areas: character
+
+Tag: ai_rationality
+Use areas: character
+
+Tag: clan_government_vassal_opinion
+Use areas: character
+
+Tag: trait_track_charioteer_red_xp_gain_mult
+Use areas: character
+
+Tag: desert_travel_danger
+Use areas: character, province, and county
+
+Tag: taoism_religion_opinion
+Use areas: character
+
+Tag: floodplains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: desert_mountains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: cowed_vassal_levy_contribution_mult
+Use areas: character
+
+Tag: feudal_government_opinion
+Use areas: character
+
+Tag: intimidated_vassal_levy_contribution_mult
+Use areas: character
+
+Tag: max_laamp_base_0011_contract_scheme_schemes_add
+Use areas: character
+
+Tag: laamp_base_0001_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: desert_mountains_max_combat_roll
+Use areas: character
+
+Tag: stationed_skirmishers_pursuit_mult
+Use areas: province
+
+Tag: turkmen_opinion
+Use areas: character
+
+Tag: guan_opinion
 Use areas: character
 
 Tag: army_maintenance_mult
 Use areas: character
 
-Tag: adamites_opinion
-Use areas: character
+Tag: stationed_skirmishers_damage_mult
+Use areas: province
 
-Tag: city_holding_holding_build_speed
-Use areas: character， province，以及 county
-
-Tag: kirghiz_opinion
-Use areas: character
-
-Tag: vlach_opinion
+Tag: camel_cavalry_max_size_mult
 Use areas: character
 
 Tag: vassal_opinion
 Use areas: character
 
-Tag: max_learn_language_schemes_add
+Tag: muroma_opinion
 Use areas: character
 
-Tag: scheme_power_against_court_physician_mult
+Tag: christianity_religion_opinion
 Use areas: character
 
-Tag: lifestyle_hunter_xp_degradation_mult
+Tag: scheme_phase_duration_against_student_add
 Use areas: character
 
-Tag: steppe_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: stationed_archers_siege_value_add
-Use areas: province
-
-Tag: siege_weapon_damage_add
+Tag: enemy_contract_scheme_success_chance_growth_add
 Use areas: character
 
-Tag: mountains_development_growth
-Use areas: character， province，以及 county
-
-Tag: hills_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: parochial_different_culture_opinion
+Tag: zun_pagan_opinion
 Use areas: character
 
-Tag: glory_hound_ai_rationality
+Tag: laamp_base_1041_contract_scheme_scheme_phase_duration_add
+Use areas: character
+
+Tag: holy_order_government_vassal_opinion
+Use areas: character
+
+Tag: max_steal_back_artifact_schemes_add
+Use areas: character
+
+Tag: zealot_different_culture_opinion
+Use areas: character
+
+Tag: parochial_tax_contribution_mult
+Use areas: character
+
+Tag: clan_government_opinion_same_faith
+Use areas: character
+
+Tag: mossi_opinion
+Use areas: character
+
+Tag: administrative_government_vassal_opinion
+Use areas: character
+
+Tag: holy_order_government_levy_contribution_mult
 Use areas: character
 
 Tag: additional_fort_level
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: heavy_cavalry_siege_value_add
-Use areas: character
-
-Tag: glory_hound_opinion
-Use areas: character
+Tag: desert_mountains_travel_danger
+Use areas: character, province, and county
 
 Tag: hostile_county_attrition
 Use areas: character
 
-Tag: mountains_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: zealot_ai_boldness
+Use areas: character
 
-Tag: stationed_light_cavalry_damage_mult
-Use areas: province
+Tag: max_laamp_base_3001_contract_scheme_schemes_add
+Use areas: character
+
+Tag: baltic_religion_opinion
+Use areas: character
 
 Tag: enemy_hostile_scheme_success_chance_add
 Use areas: character
 
-Tag: floodplains_supply_limit_mult
-Use areas: character， province，以及 county
-
-Tag: visigothic_opinion
+Tag: trait_track_scarred_xp_degradation_mult
 Use areas: character
 
-Tag: trojan_opinion
-Use areas: character
+Tag: stationed_pikemen_screen_mult
+Use areas: province
+
+Tag: stationed_heavy_infantry_screen_add
+Use areas: province
+
+Tag: drylands_development_growth
+Use areas: character, province, and county
 
 Tag: vassal_tax_contribution_add
 Use areas: character
 
 Tag: development_growth_factor
-Use areas: character， province，以及 county
-
-Tag: quranist_opinion
-Use areas: character
-
-Tag: drylands_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: bobo_opinion
-Use areas: character
+Use areas: character, province, and county
 
 Tag: learning_per_piety_level
 Use areas: character
 
-Tag: trait_track_foot_xp_degradation_mult
+Tag: max_overthrow_regent_schemes_add
 Use areas: character
 
-Tag: catalan_opinion
+Tag: camel_cavalry_pursuit_add
 Use areas: character
 
-Tag: jungle_construction_piety_cost
-Use areas: character， province，以及 county
+Tag: stationed_pikemen_pursuit_mult
+Use areas: province
 
-Tag: polabian_opinion
+Tag: edo_opinion
 Use areas: character
 
-Tag: mountains_cancel_negative_supply
+Tag: trait_track_thief_xp_loss_mult
 Use areas: character
+
+Tag: stationed_camel_cavalry_pursuit_mult
+Use areas: province
 
 Tag: character_capital_county_monthly_development_growth_add
 Use areas: character
@@ -4857,50 +5646,77 @@ Use areas: character
 Tag: stationed_maa_screen_mult
 Use areas: province
 
-Tag: barons_and_minor_landholders_tax_contribution_add
-Use areas: character
-
-Tag: stationed_light_cavalry_pursuit_mult
-Use areas: province
-
-Tag: barons_and_minor_landholders_ai_vengefulness
+Tag: laamp_base_3011_contract_scheme_scheme_phase_duration_add
 Use areas: character
 
 Tag: men_at_arms_maintenance_per_dread_mult
 Use areas: character
 
+Tag: forest_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: monthly_piety_gain_per_court_position_mult
+Use areas: character
+
 Tag: maa_siege_value_mult
 Use areas: character
 
-Tag: ewe_opinion
+Tag: stationed_siege_weapon_siege_value_mult
+Use areas: province
+
+Tag: elephant_cavalry_max_size_mult
+Use areas: character
+
+Tag: trait_track_pilgrim_xp_gain_mult
+Use areas: character
+
+Tag: domicile_monthly_piety_add
 Use areas: character
 
 Tag: monthly_county_control_growth_add
-Use areas: character， province，以及 county
+Use areas: character, province, and county
 
-Tag: zealot_ai_greed
+Tag: adamites_opinion
 Use areas: character
 
-Tag: zealot_ai_rationality
+Tag: forest_development_growth_factor
+Use areas: character, province, and county
+
+Tag: befriend_scheme_phase_duration_add
 Use areas: character
 
-Tag: forest_development_growth
-Use areas: character， province，以及 county
-
-Tag: skirmishers_recruitment_cost_mult
+Tag: laamp_base_6011_contract_scheme_enemy_scheme_phase_duration_add
 Use areas: character
 
-Tag: desert_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: barons_and_minor_landholders_ai_honor
+Tag: siege_weapon_pursuit_mult
 Use areas: character
 
-Tag: plains_holding_construction_gold_cost
-Use areas: character， province，以及 county
+Tag: landless_adventurer_government_vassal_opinion
+Use areas: character
 
-Tag: stationed_heavy_cavalry_toughness_mult
-Use areas: province
+Tag: owned_political_scheme_success_chance_add
+Use areas: character
+
+Tag: minority_ai_energy
+Use areas: character
+
+Tag: farmlands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: kanuri_opinion
+Use areas: character
+
+Tag: monthly_intrigue_lifestyle_xp_gain_add
+Use areas: character
+
+Tag: max_political_schemes_add
+Use areas: character
+
+Tag: daju_opinion
+Use areas: character
+
+Tag: laamp_base_4011_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
 
 Tag: faith_conversion_piety_cost_mult
 Use areas: character
@@ -4908,105 +5724,105 @@ Use areas: character
 Tag: same_heritage_county_advantage_add
 Use areas: character
 
-Tag: camel_cavalry_siege_value_mult
+Tag: hills_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: ghulat_opinion
 Use areas: character
 
-Tag: north_african_religion_opinion
+Tag: archer_cavalry_damage_add
 Use areas: character
 
-Tag: desert_max_combat_roll
+Tag: minority_tax_contribution_mult
 Use areas: character
 
-Tag: jungle_holding_construction_piety_cost
-Use areas: character， province，以及 county
-
-Tag: saka_opinion
+Tag: dutch_opinion
 Use areas: character
 
-Tag: feudal_government_opinion_same_faith
-Use areas: character
+Tag: stationed_archers_siege_value_add
+Use areas: province
 
 Tag: liege_opinion
 Use areas: character
 
-Tag: minority_ai_energy
+Tag: mountains_min_combat_roll
 Use areas: character
 
-Tag: minority_ai_honor
+Tag: archer_cavalry_siege_value_add
 Use areas: character
 
-Tag: convert_to_witchcraft_scheme_power_add
+Tag: kalikula_shaktism_opinion
 Use areas: character
 
-Tag: camel_cavalry_toughness_add
+Tag: protect_minority_vassal_contract_diplomacy_scheme_scheme_phase_duration_add
 Use areas: character
+
+Tag: mountains_provisions_use_mult
+Use areas: character, province, and county
+
+Tag: taiga_holding_construction_gold_cost
+Use areas: character, province, and county
 
 Tag: winter_movement_speed
 Use areas: character
 
-Tag: forest_supply_limit_mult
-Use areas: character， province，以及 county
+Tag: wetlands_holding_construction_prestige_cost
+Use areas: character, province, and county
 
-Tag: plains_tax_mult
-Use areas: character， province，以及 county
+Tag: protect_minority_vassal_contract_learning_scheme_scheme_phase_duration_add
+Use areas: character
 
-Tag: forest_holding_construction_prestige_cost
-Use areas: character， province，以及 county
-
-Tag: sea_tax_mult
-Use areas: character， province，以及 county
-
-Tag: stationed_camel_cavalry_damage_mult
-Use areas: province
-
-Tag: stationed_skirmishers_toughness_add
-Use areas: province
+Tag: laamp_base_6021_contract_scheme_enemy_scheme_phase_duration_add
+Use areas: character
 
 Tag: negate_martial_penalty_add
 Use areas: character
 
-Tag: feudal_government_tax_contribution_mult
+Tag: croatian_opinion
 Use areas: character
 
-Tag: zun_pagan_opinion
+Tag: lifestyle_blademaster_xp_loss_mult
 Use areas: character
 
-Tag: stationed_pikemen_siege_value_add
+Tag: stationed_light_cavalry_siege_value_add
 Use areas: province
 
-Tag: scheme_power_against_rival_add
+Tag: saka_opinion
 Use areas: character
 
-Tag: desert_mountains_travel_danger
-Use areas: character， province，以及 county
+Tag: city_holding_build_gold_cost
+Use areas: character, province, and county
 
-Tag: waaqism_religion_opinion
+Tag: trait_track_charioteer_blue_xp_loss_mult
 Use areas: character
 
-Tag: jurchen_opinion
+Tag: galician_opinion
 Use areas: character
 
-Tag: khurramism_opinion
+Tag: mountains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: charioteer_green_xp_loss_mult
 Use areas: character
 
-Tag: max_overthrow_regent_schemes_add
-Use areas: character
-
-Tag: republic_government_tax_contribution_mult
-Use areas: character
-
-Tag: scheme_power_against_mentor_mult
-Use areas: character
+Tag: desert_holding_construction_prestige_cost
+Use areas: character, province, and county
 
 Tag: character_travel_speed_mult
 Use areas: character
 
-Tag: steppe_holding_construction_gold_cost
-Use areas: character， province，以及 county
-
-Tag: clan_government_levy_contribution_add
+Tag: gujarati_opinion
 Use areas: character
 
-Tag: coastal_sea_holding_construction_prestige_cost
-Use areas: character， province，以及 county
+Tag: raid_estate_scheme_phase_duration_add
+Use areas: character
+
+Tag: courtly_different_faith_opinion
+Use areas: character
+
+Tag: turkish_opinion
+Use areas: character
+
+Tag: desert_holding_construction_gold_cost
+Use areas: character, province, and county
 

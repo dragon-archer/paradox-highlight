@@ -825,6 +825,42 @@ Supported Targets: character
 
 --------------------
 
+change_maa_regiment_size - Change size of MaA regiment by the specified value.
+Extra troops are deleted, by default new troops will have to reinforce,
+unless reinforce = yes is used
+scope:regiment = {
+	change_maa_regiment_size = scope:change_by
+
+	change_maa_regiment_size = {
+		size = 5
+		reinforce = yes
+	}
+}
+Supported Scopes: regiment
+
+--------------------
+
+change_maa_troops_count - Change current troops count of MaA regiment. It can't exceed max troops count
+scope:regiment = { change_maa_troops_count = value } 
+Supported Scopes: regiment
+
+--------------------
+
+destroy_maa_regiment - Destroy MaA regiment
+Doesn't work on regiments that belong to mercenary companies and holy orders
+scope:regiment = {
+	destroy_maa_regiment = yes
+}
+Supported Scopes: regiment
+
+--------------------
+
+transfer_title_maa - Transfet title MaA regiment to another title
+Supported Scopes: regiment
+Supported Targets: landed_title
+
+--------------------
+
 every_opposite_trait - Iterate through all opposite traits of the scoped trait
 every_opposite_trait = { limit = { <triggers> } <effects> }
 Supported Scopes: trait
@@ -1000,7 +1036,7 @@ Supported Scopes: dynasty_house
 
 --------------------
 
-set_house_head - Set house head for the house. Usage:
+set_house_head - Set house head for the house. Also transfers noble family title. Usage:
 set_house_head = <character>
 Supported Scopes: dynasty_house
 Supported Targets: character
@@ -1024,6 +1060,23 @@ set_house_name_from_house - Sets dynasty house name from another dynasty house's
 set_house_name_from_house = house
 Supported Scopes: dynasty_house
 Supported Targets: dynasty_house
+
+--------------------
+
+complete_task_contract - complete_task_contract = task_contract_reward 
+Supported Scopes: task_contract
+
+--------------------
+
+invalidate_contract - Invalidate contract
+invalidate_contract = yes/no
+Supported Scopes: task_contract
+
+--------------------
+
+set_task_contract_target - set_task_task_contract_target = CHARACTER_SCOPE 
+Supported Scopes: task_contract
+Supported Targets: character
 
 --------------------
 
@@ -1159,10 +1212,79 @@ Supported Scopes: army
 
 --------------------
 
+add_supply - Adds the designated supply to the army's supply. Cannot exceed the 
+army's max supply capacity.
+scope:army = { add_supply = 20 }
+Supported Scopes: army
+
+--------------------
+
 assign_commander - Assign a commander for the scoped army
 set_commander = scope:a_character
 Supported Scopes: army
 Supported Targets: character
+
+--------------------
+
+clear_supply - Clears the designated army's supply.
+scope:army = { clear_supply = yes }
+Supported Scopes: army
+
+--------------------
+
+deplete_army_by_percentage - Reduce current army size by the giver percentage
+Value on the right side determines what portions of soldiers shall perish
+scope:army = { deplete_army_by_percentage = 0.2 }
+Supported Scopes: army
+
+--------------------
+
+every_army_maa_regiment - Iterate through all MaA regiments in the army
+scope:army = {
+	any_army_maa_regiment = {
+		include_hired = yes # should it include merc and holy order regiments (yes by default)
+	}
+}
+every_army_maa_regiment = { limit = { <triggers> } <effects> }
+Supported Scopes: army
+Supported Targets: regiment
+
+--------------------
+
+ordered_army_maa_regiment - Iterate through all MaA regiments in the army
+scope:army = {
+	any_army_maa_regiment = {
+		include_hired = yes # should it include merc and holy order regiments (yes by default)
+	}
+}
+ordered_army_maa_regiment = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: army
+Supported Targets: regiment
+
+--------------------
+
+random_army_maa_regiment - Iterate through all MaA regiments in the army
+scope:army = {
+	any_army_maa_regiment = {
+		include_hired = yes # should it include merc and holy order regiments (yes by default)
+	}
+}
+random_army_maa_regiment = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: army
+Supported Targets: regiment
+
+--------------------
+
+refill_supply - Refills the designated army's supply to its max capacity.
+scope:army = { refull_supply = yes }
+Supported Scopes: army
 
 --------------------
 
@@ -1176,6 +1298,13 @@ set_army_location - Teleports the army to the given location. Cannot be done whi
 set_army_location = scope:province
 Supported Scopes: army
 Supported Targets: province
+
+--------------------
+
+subtract_supply - Subtracts the designated supply to the army's supply. Cannot exceed the 
+army's max supply capacity.
+scope:army = { subtract_supply = 20 }
+Supported Scopes: army
 
 --------------------
 
@@ -2329,7 +2458,9 @@ Supported Scopes: none
 --------------------
 
 add_to_list - Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain
-add_to_list = <string> NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
+add_to_list = <name_of_list>
+add_to_list = { name = <name_of_list> value = <script_value> }
+NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
 Supported Scopes: none
 
 --------------------
@@ -2344,7 +2475,9 @@ Supported Scopes: none
 --------------------
 
 add_to_temporary_list - Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect
-add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent
+add_to_temporary_list = <name_of_list>
+add_to_temporary_list = { name = <name_of_list> value = <script_value> }
+NOTE, if adding a temporary target to a permanent list, the list will stay permanent
 Supported Scopes: none
 
 --------------------
@@ -2395,15 +2528,23 @@ Supported Scopes: none
 --------------------
 
 change_title_holder -  = {
-holder = 'Character that should get the title'
-change = 'previously created title_and_vassal_change', adds a title change, will not transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government.
+holder = Character that should get the title
+change = 'previously created title_and_vassal_change', adds a title change, will not transfer vassals
+take_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a county
+government_base = character # Optional, if the character getting the title was unlanded, their new government
+                            # will be based on the government of government_base.
+                            # If no government_base is specified, the government will be based on holder's government.
 Supported Scopes: none
 
 --------------------
 
-change_title_holder_include_vassals -  = {
+change_title_holder_include_vassals -  = {\n"
 holder = 'Character that should get the title'
-change = 'previously created title_and_vassal_change', adds a title change, will transfer vassalstake_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a countygovernment_base = character # Optional, if the character getting the title was unlanded, their new government will be based on the government of government_base. If no government_base is specified, the government will be based on holder's government.
+change = 'previously created title_and_vassal_change', adds a title change, will transfer vassals
+take_baronies = yes # Optional; if set, will cause baronies to be taken (rather than vassalized) as well if this title is a county
+government_base = character # Optional, if the character getting the title was unlanded, their new government
+                            # will be based on the government of government_base.
+                            # If no government_base is specified, the government will be based on holder's government.
 Supported Scopes: none
 
 --------------------
@@ -2497,6 +2638,20 @@ Supported Scopes: none
 
 --------------------
 
+create_adventurer_title - Create a title for a landless adventurer.
+
+usage:
+create_adventurer_title = \"
+	name = key/dynamic description
+	holder = <character> (intended holder of the new title)
+	save_scope_as = <name>
+	prefix = key/dynamic description (optional; name used if not specified)
+	adjective = key/dynamic description (optional; name used if not specified)
+}
+Supported Scopes: none
+
+--------------------
+
 create_betrothal - Betroth the scope character to the target character, create_betrothal = target (at least one of the characters need to not be adult)
 Supported Scopes: none
 Supported Targets: character
@@ -2538,6 +2693,8 @@ random_culture = { norse = { some triggers } norwegian = { some triggers }. Rand
 random_culture_in_group = culture group name OR a culture scope (there's no group scope)
 dynasty_house = dynasty house name OR a dynasty house scope
 dynasty = generate/inherit/none - What to do if dynasty_house is not specified. generate by default.
+ethnicity = culture/mother/father/parents/<ethnicity> - How to select ethnicity, culture by default.
+ethnicities = { <key> = { some_triggers } } - Pick randomly from these ethnicities instead.
 martial/diplomacy/intrigue...  =  will get random unless specified
 after_creation = { some effects } run after character is created. Scope starts off in the character, with the scope it was created in as PREV, and the same top scope and saved targets etc.
 Supported Scopes: none
@@ -2548,7 +2705,7 @@ create_dynamic_title - Creates a dynamic title
 The title will be saved to scope:new_titleusage:
 create_dynamic_title = {
 	tier = <tier>
-	name = key/dynamic description	adjective = key/dynamic description (optional; name used if not specified)}
+	name = key/dynamic description	adj = key/dynamic description (optional; name used if not specified)}
 Supported Scopes: none
 
 --------------------
@@ -2745,6 +2902,13 @@ Supported Targets: landed_title
 
 --------------------
 
+every_casus_belli_type - Iterate through every casus_belli_type in the database
+every_casus_belli_type = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: casus_belli_type
+
+--------------------
+
 every_character_with_royal_court - Iterate through all characters with a royal court
 every_character_with_royal_court = { limit = { <triggers> } <effects> }
 Supported Scopes: none
@@ -2808,6 +2972,13 @@ Supported Targets: doctrine
 
 --------------------
 
+every_domicile - Iterate through all domiciles
+every_domicile = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: domicile
+
+--------------------
+
 every_duchy - Iterate through all duchies in the game
 every_duchy = { limit = { <triggers> } <effects> }
 Supported Scopes: none
@@ -2857,6 +3028,13 @@ Supported Targets: holding_type
 
 --------------------
 
+every_important_location - Iterate through all counties that are important for at least some title
+every_important_location = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: landed_title
+
+--------------------
+
 every_in_global_list - Iterate through all items in global list. list = name or variable = name
 every_in_global_list = { limit = { <triggers> } <effects> }
 Supported Scopes: none
@@ -2893,6 +3071,13 @@ every_inspired_character - Iterate through all characters with an inspirations i
 every_inspired_character = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: character
+
+--------------------
+
+every_interested_title - Iterate through all titles that are interested in any county
+every_interested_title = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: landed_title
 
 --------------------
 
@@ -2977,6 +3162,20 @@ every_special_building_province - Iterate through all provinces with a special b
 every_special_building_province = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: province
+
+--------------------
+
+every_task_contract - Gets all available and accepted task contracts.
+every_task_contract = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: task_contract
+
+--------------------
+
+every_task_contract_type - Iterate through every task_contract_type in the database
+every_task_contract_type = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: task_contract_type
 
 --------------------
 
@@ -3137,6 +3336,20 @@ Supported Targets: landed_title
 
 --------------------
 
+ordered_casus_belli_type - Iterate through every casus_belli_type in the database
+ordered_casus_belli_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: casus_belli_type
+
+--------------------
+
 ordered_character_with_royal_court - Iterate through all characters with a royal court
 ordered_character_with_royal_court = {
 limit = { <triggers> }
@@ -3263,6 +3476,20 @@ Supported Targets: doctrine
 
 --------------------
 
+ordered_domicile - Iterate through all domiciles
+ordered_domicile = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: domicile
+
+--------------------
+
 ordered_duchy - Iterate through all duchies in the game
 ordered_duchy = {
 limit = { <triggers> }
@@ -3361,6 +3588,20 @@ Supported Targets: holding_type
 
 --------------------
 
+ordered_important_location - Iterate through all counties that are important for at least some title
+ordered_important_location = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: landed_title
+
+--------------------
+
 ordered_in_global_list - Iterate through all items in global list. list = name or variable = name
 ordered_in_global_list = {
 limit = { <triggers> }
@@ -3439,6 +3680,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: none
 Supported Targets: character
+
+--------------------
+
+ordered_interested_title - Iterate through all titles that are interested in any county
+ordered_interested_title = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: landed_title
 
 --------------------
 
@@ -3610,6 +3865,34 @@ Supported Targets: province
 
 --------------------
 
+ordered_task_contract - Gets all available and accepted task contracts.
+ordered_task_contract = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: task_contract
+
+--------------------
+
+ordered_task_contract_type - Iterate through every task_contract_type in the database
+ordered_task_contract_type = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: task_contract_type
+
+--------------------
+
 ordered_trait - Iterate through every trait in the database
 ordered_trait = {
 limit = { <triggers> }
@@ -3708,6 +3991,13 @@ Supported Targets: landed_title
 
 --------------------
 
+random_casus_belli_type - Iterate through every casus_belli_type in the database
+random_casus_belli_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: casus_belli_type
+
+--------------------
+
 random_character_with_royal_court - Iterate through all characters with a royal court
 random_character_with_royal_court = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
@@ -3771,6 +4061,13 @@ Supported Targets: doctrine
 
 --------------------
 
+random_domicile - Iterate through all domiciles
+random_domicile = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: domicile
+
+--------------------
+
 random_duchy - Iterate through all duchies in the game
 random_duchy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
@@ -3820,6 +4117,13 @@ Supported Targets: holding_type
 
 --------------------
 
+random_important_location - Iterate through all counties that are important for at least some title
+random_important_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: landed_title
+
+--------------------
+
 random_in_global_list - Iterate through all items in global list. list = name or variable = name
 random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
@@ -3856,6 +4160,13 @@ random_inspired_character - Iterate through all characters with an inspirations 
 random_inspired_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: character
+
+--------------------
+
+random_interested_title - Iterate through all titles that are interested in any county
+random_interested_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: landed_title
 
 --------------------
 
@@ -3953,6 +4264,20 @@ random_special_building_province - Iterate through all provinces with a special 
 random_special_building_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
 Supported Targets: province
+
+--------------------
+
+random_task_contract - Gets all available and accepted task contracts.
+random_task_contract = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: task_contract
+
+--------------------
+
+random_task_contract_type - Iterate through every task_contract_type in the database
+random_task_contract_type = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: task_contract_type
 
 --------------------
 
@@ -4201,30 +4526,46 @@ Supported Scopes: none
 
 --------------------
 
-setup_claim_cb -  = { attacker = scope:attacker 
- defender = scope:defender 
- claimant = scope:claimant 
-  change = scope:change victory = yes/no 
- take_occupied = yes/no } , this effect will add a scope:cb_prestige_factor with a value based on what's being taken
-civil_war = yes # Will vassalize people based on their capital location rather than being fully contained. Won't steal land from people not vassalized
+setup_claim_cb - This effect will add a scope:cb_prestige_factor with a value based on what's being taken
+Won't steal land from people not vassalized
+
+setup_claim_cb = {
+	attacker = scope:attacker
+	defender = scope:defender
+	claimant = scope:claimant
+	change = scope:change
+	victory = yes/no
+	take_occupied = yes/no
+
+	# Will vassalize people based on their capital location rather than being fully contained.
+	civil_war = yes
+}
 Supported Scopes: none
 
 --------------------
 
-setup_de_jure_cb -  = { attacker = scope:attacker 
-defender = scope:defender 
-change = scope:change
-victory = yes/no
-title = some title - Optional; will make it target a specific dejure title rather than *everything* that is dejure the attacker's
-}, this effect will add a scope:cb_prestige_factor with a value based on what's being taken
+setup_de_jure_cb - This effect will add a scope:cb_prestige_factor with a value based on what's being taken
+setup_de_jure_cb = {
+	attacker = scope:attacker
+	defender = scope:defender
+	change = scope:change
+	victory = yes/no
+
+	# Optional; will make it target a specific dejure title rather than *everything* that is dejure the attacker's
+	title = scope:title
+}
 Supported Scopes: none
 
 --------------------
 
-setup_invasion_cb -  = { attacker = scope:attacker 
- defender = scope:defender 
-  change = scope:change victory = yes/no 
- take_occupied = yes/no } , this effect will add a scope:cb_prestige_factor with a value based on what's being taken
+setup_invasion_cb - This effect will add a scope:cb_prestige_factor with a value based on what's being taken
+setup_invasion_cb = {
+	attacker = scope:attacker
+	defender = scope:defender
+	change = scope:change
+	victory = yes/no
+	take_occupied = yes/no
+}
 Supported Scopes: none
 
 --------------------
@@ -4390,6 +4731,13 @@ Supported Targets: province
 
 --------------------
 
+every_province_domicile - Iterate through all domiciles of scoped province
+every_province_domicile = { limit = { <triggers> } <effects> }
+Supported Scopes: province
+Supported Targets: domicile
+
+--------------------
+
 every_province_epidemic - Gets epidemics affecting the scoped province
 every_province_epidemic = { limit = { <triggers> } <effects> }
 Supported Scopes: province
@@ -4451,6 +4799,20 @@ Supported Targets: province
 
 --------------------
 
+ordered_province_domicile - Iterate through all domiciles of scoped province
+ordered_province_domicile = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: province
+Supported Targets: domicile
+
+--------------------
+
 ordered_province_epidemic - Gets epidemics affecting the scoped province
 ordered_province_epidemic = {
 limit = { <triggers> }
@@ -4497,6 +4859,13 @@ random_neighboring_province - Iterate through all neighboring provinces of a pro
 random_neighboring_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: province
 Supported Targets: province
+
+--------------------
+
+random_province_domicile - Iterate through all domiciles of scoped province
+random_province_domicile = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: province
+Supported Targets: domicile
 
 --------------------
 
@@ -4880,6 +5249,16 @@ Supported Scopes: legend
 
 --------------------
 
+add_agent_slot - Add an agent slot of the specific type to the scoped scheme
+Supported Scopes: scheme
+
+--------------------
+
+add_scheme_breach - Adds the specified amount of breaches the scoped scheme.
+Supported Scopes: scheme
+
+--------------------
+
 add_scheme_modifier - adds the specified scheme modifier, add_scheme_modifier = { type = X days = Y } (days are optional, the modifier will expire in Y days if specified)
 Supported Scopes: scheme
 
@@ -4890,15 +5269,27 @@ Supported Scopes: scheme
 
 --------------------
 
+change_opportunities - Change schemes available opportunities with the given amount.
+Supported Scopes: scheme
+
+--------------------
+
 end_scheme - Ends a specific scheme and removes it without any other effect
 Supported Scopes: scheme
 
 --------------------
 
-every_scheme_agent - Iterate through all agents in the scheme
-every_scheme_agent = { limit = { <triggers> } <effects> }
+every_scheme_agent_character - Iterate through all characters in agent slots in the scheme
+every_scheme_agent_character = { limit = { <triggers> } <effects> }
 Supported Scopes: scheme
 Supported Targets: character
+
+--------------------
+
+every_scheme_agent_slot - Iterate through all agent slots in the scheme
+every_scheme_agent_slot = { limit = { <triggers> } <effects> }
+Supported Scopes: scheme
+Supported Targets: agent_slot
 
 --------------------
 
@@ -4913,8 +5304,13 @@ Supported Targets: character
 
 --------------------
 
-ordered_scheme_agent - Iterate through all agents in the scheme
-ordered_scheme_agent = {
+invalidate_scheme - Ends a specific scheme and removes it. Also runs on_invalidate effects for the scheme and possible contract.
+Supported Scopes: scheme
+
+--------------------
+
+ordered_scheme_agent_character - Iterate through all characters in agent slots in the scheme
+ordered_scheme_agent_character = {
 limit = { <triggers> }
 order_by = script_value
 position = int
@@ -4927,14 +5323,46 @@ Supported Targets: character
 
 --------------------
 
-random_scheme_agent - Iterate through all agents in the scheme
-random_scheme_agent = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+ordered_scheme_agent_slot - Iterate through all agent slots in the scheme
+ordered_scheme_agent_slot = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: scheme
+Supported Targets: agent_slot
+
+--------------------
+
+random_scheme_agent_character - Iterate through all characters in agent slots in the scheme
+random_scheme_agent_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: scheme
 Supported Targets: character
 
 --------------------
 
+random_scheme_agent_slot - Iterate through all agent slots in the scheme
+random_scheme_agent_slot = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: scheme
+Supported Targets: agent_slot
+
+--------------------
+
+remove_agent_slot - Remove the target agent slot from the scoped scheme
+Supported Scopes: scheme
+
+--------------------
+
 remove_scheme_modifier - removes the specified scheme modifier
+Supported Scopes: scheme
+
+--------------------
+
+reset_scheme_progress - Resets the scheme's accumulated success chance growth, opportunities, and current phase progress.
+reset_scheme_progress = yes
 Supported Scopes: scheme
 
 --------------------
@@ -4975,6 +5403,12 @@ Supported Targets: activity
 
 --------------------
 
+accept_task_contract - accept_task_contract = TASK_CONTRACT_SCOPE 
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 add_amenity_level - add_amenity_level = { type = food value = 2 }
 Increases the amenity type by the given value for the scoped character
 Supported Scopes: character
@@ -4995,6 +5429,13 @@ add_character_modifier = name
 add_character_modifier = { modifier = name days/weeks/months/years = int }
 You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: character
+
+--------------------
+
+add_contact - Add the target character to the scoped character's list of contacts 
+add_contact = CHARACTER_SCOPE
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 
@@ -5242,9 +5683,8 @@ Supported Targets: activity
 
 --------------------
 
-add_to_scheme - Adds a character as an agent to the scheme
+add_to_agent_slot - Adds a character to a specific agent slot
 Supported Scopes: character
-Supported Targets: scheme
 
 --------------------
 
@@ -5316,6 +5756,34 @@ Supported Scopes: character
 adopt - Set scoped character as parent ot the targetscope:new_parent = { adopt = scope:offspring }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+ai_attempt_to_host_activity - Force the AI to re-evaluate the given activity type and see if they want to host it. This overrides the ai_check_interval and activity cooldown.
+ai_attempt_to_host_activity = activity_type
+Supported Scopes: character
+Supported Targets: activity_type
+
+--------------------
+
+ai_start_best_war - Starts the 'best' AI scored war possible, from the list of filtered possible wars available to the AI character.
+ai_start_best_war  = {
+	# Optional list of CBs that the war must have	cb = { <valid_casus_belli_type1> <valid_casus_belli_type2> }
+   # If the cb target data from the AI should be recalculated. Otherwise uses current calculated data. (only use if needed!)   recalculate_cb_targets = no
+   # Filter possible wars, called with scopes:
+   # root - Current AI character
+   # scope:target_character - CB Target Character
+   # scope:target_title - CB (first) Target Title
+   # scope:target_titles - Target Titles list
+   # scope:claimant - Character that is Claimant for CB (if present)
+   # scope:casus_belli_type - CB type
+   # scope:has_hostage - Boolean if target_character has a hostage for current AI character
+   # scope:score - AI score for CB
+	is_valid = { ... }
+   # Effect called when war was successfully started (scopes are similar to is_valid)	on_success = { ... }
+	# Effect called when no war was found or successfully started	on_failure = { ... }
+}
+Supported Scopes: character
 
 --------------------
 
@@ -5429,7 +5897,27 @@ Supported Scopes: character
 
 --------------------
 
-change_government - changes the government of a character
+change_government - changes the government type of a ruler
+Supported Scopes: character
+
+--------------------
+
+change_influence - changes influence of a character
+Supported Scopes: character
+
+--------------------
+
+change_influence_experience - changes influence experience of a character
+Supported Scopes: character
+
+--------------------
+
+change_influence_level - changes the influence level of a character
+Supported Scopes: character
+
+--------------------
+
+change_influence_no_experience - changes influence (without experience) of a character
 Supported Scopes: character
 
 --------------------
@@ -5458,6 +5946,12 @@ Supported Scopes: character
 --------------------
 
 change_trait_rank - Changes the trait rank = { trait = trait_group rank = change max = maximum new rank }
+Supported Scopes: character
+
+--------------------
+
+clear_designated_heir - Remove any currently set designated heir of a character.
+clear_designated_heir = yes
 Supported Scopes: character
 
 --------------------
@@ -5664,11 +6158,44 @@ Supported Scopes: character
 
 --------------------
 
+create_maa_regiment - Create MaA regiment for a ruler.
+If title is set, MaA will be created as title troops
+
+scope:ruler = {
+	create_maa_regiment = light_footmen
+
+	create_maa_regiment = {
+		type = light_footmen          # mutually exclusive with type_of
+		type_of = scope:maa_regiment  # mutually exclusive with type. Take MaA type from the scoped regiment
+		check_can_recruit = no
+		title = scope:title
+		size = 5
+	}
+}
+Supported Scopes: character
+
+--------------------
+
 create_story - creates and initializes a story cycle with the current character as owner
 create_story = story_type
 create_story = {
 	type = story_type
 	save_scope_as/save_temporary_scope_as = scope_name # optional way to get a reference to the new story}
+Supported Scopes: character
+
+--------------------
+
+create_task_contract - create_task_contract = { 
+ #Mandatory parameters  
+ task_contract_type = TYPE_NAME 
+ task_task_contract_tier = VALUE 
+ location = PROVINCE_SCOPE 
+ #Optional parameters 
+ task_contract_employer = CHARACTER_SCOPE 
+ destination = PROVINCE_SCOPE 
+ target = CHARACTER_SCOPE 
+ save_scope_as = new_task_contract # optional 
+} 
 Supported Scopes: character
 
 --------------------
@@ -5775,6 +6302,20 @@ Supported Targets: army
 
 --------------------
 
+every_available_task_contract - Iterate through all task contracts of location of root province
+every_available_task_contract = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
+every_character_active_contract - Gets all accepted task contracts of the root character
+every_character_active_contract = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 every_character_artifact - Iterate through all artifacts in a given characters inventory
 every_character_artifact = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -5793,6 +6334,13 @@ every_character_struggle - Iterate through all struggles that character is invol
 every_character_struggle = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: struggle
+
+--------------------
+
+every_character_task_contract - Gets all task contracts of the scoped character
+every_character_task_contract = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
 
 --------------------
 
@@ -5910,6 +6458,13 @@ Supported Targets: character
 
 every_consort - Iterate through all consorts (concubines and spouses)
 every_consort = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+every_contact - Iterate through all contact characters of the root character
+every_contact = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: character
 
@@ -6048,15 +6603,8 @@ Supported Targets: character
 
 --------------------
 
-every_heir_title - Iterate through all landed titles character is heir to
+every_heir_title - Iterate through all titles the scoped character is heir to
 every_heir_title = { limit = { <triggers> } <effects> }
-Supported Scopes: character
-Supported Targets: landed_title
-
---------------------
-
-every_heir_to_title - Iterate through all titles the scoped character is heir to
-every_heir_to_title = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: landed_title
 
@@ -6139,6 +6687,13 @@ Supported Targets: character
 
 --------------------
 
+every_maa_regiment - Iterate through all MaA regiments
+every_maa_regiment = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: regiment
+
+--------------------
+
 every_martial_councillor - Iterate through all martial-based councillors
 every_martial_councillor = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -6192,6 +6747,13 @@ every_neighboring_top_liege_realm_owner - A realm with a different top liege nei
 every_neighboring_top_liege_realm_owner = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+every_noble_family - Iterate through all noble family titles in the realm of scoped character
+every_noble_family = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -6277,6 +6839,13 @@ every_potential_marriage_option - Iterate through all potential selectable marri
 every_potential_marriage_option = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+every_powerful_family - Iterate through all directly owned provinces
+every_powerful_family = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: dynasty_house
 
 --------------------
 
@@ -6475,6 +7044,23 @@ Supported Targets: landed_title
 
 --------------------
 
+every_succession_appointment_invested_candidate - Iterate through all candidates supported by the scoped investor character for any title
+It may contain people outside of investor's top realm or no longer valid for appointment
+every_succession_appointment_invested_candidate = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+every_succession_appointment_invested_title - Iterate through all titles that has candidates supported by the scoped investor
+It may contain titles outside of investor's top realm, and so invalid for appointment,
+and candidates may be already dead
+every_succession_appointment_invested_title = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 every_targeting_faction - Iterate through all factions targeting the scope character
 every_targeting_faction = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -6623,9 +7209,9 @@ Supported Targets: scheme
 
 --------------------
 
-force_add_to_scheme - Adds a character as an agent to the scheme and forces them to stay
+force_add_to_agent_slot - Adds a character as an agent to a scheme agent slot and forces them to stay
 {
-    scheme = target_Scheme
+    agent_slot = target_Slot
     days/months/years = duration
 }
 Supported Scopes: character
@@ -6635,6 +7221,20 @@ Supported Scopes: character
 force_character_skill_recalculation - Forces a character's skills to be recalculated immediately, bypassing the wait for the daily tick.
 NOTE: Only use this when *absolutely* necessary, as it will impact performance negatively if misused
    Usage: force_character_skill_recalculation = yes/no
+Supported Scopes: character
+
+--------------------
+
+force_step_down_landed_titles - Make ruler step down - less harsh than abdicate or depose.
+If ruler has any title that allows them to remain landless playable, then pass
+all landed titles to heirs - counties and any higher tier title with dejure land.
+Keep all titular titles.
+
+If no such title exists, then it works identical to depose
+
+scope:ruler = {
+	force_step_down_landed_titles = yes
+}
 Supported Scopes: character
 
 --------------------
@@ -6652,6 +7252,17 @@ Supported Targets: landed_title
 --------------------
 
 give_nickname - Give a nickname to this character
+Supported Scopes: character
+
+--------------------
+
+give_noble_family_title -  Give a noble family title to the <root> character.
+
+usage:
+give_noble_family_title = {
+	name = key/dynamic description
+	save_scope_as = <name>
+}
 Supported Scopes: character
 
 --------------------
@@ -6941,6 +7552,34 @@ Supported Targets: army
 
 --------------------
 
+ordered_available_task_contract - Iterate through all task contracts of location of root province
+ordered_available_task_contract = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
+ordered_character_active_contract - Gets all accepted task contracts of the root character
+ordered_character_active_contract = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 ordered_character_artifact - Iterate through all artifacts in a given characters inventory
 ordered_character_artifact = {
 limit = { <triggers> }
@@ -6980,6 +7619,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: struggle
+
+--------------------
+
+ordered_character_task_contract - Gets all task contracts of the scoped character
+ordered_character_task_contract = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: task_contract
 
 --------------------
 
@@ -7209,6 +7862,20 @@ Supported Targets: character
 
 ordered_consort - Iterate through all consorts (concubines and spouses)
 ordered_consort = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+ordered_contact - Iterate through all contact characters of the root character
+ordered_contact = {
 limit = { <triggers> }
 order_by = script_value
 position = int
@@ -7487,22 +8154,8 @@ Supported Targets: character
 
 --------------------
 
-ordered_heir_title - Iterate through all landed titles character is heir to
+ordered_heir_title - Iterate through all titles the scoped character is heir to
 ordered_heir_title = {
-limit = { <triggers> }
-order_by = script_value
-position = int
-min = int
-max = script_value
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
-<effects> }
-Supported Scopes: character
-Supported Targets: landed_title
-
---------------------
-
-ordered_heir_to_title - Iterate through all titles the scoped character is heir to
-ordered_heir_to_title = {
 limit = { <triggers> }
 order_by = script_value
 position = int
@@ -7669,6 +8322,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_maa_regiment - Iterate through all MaA regiments
+ordered_maa_regiment = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: regiment
+
+--------------------
+
 ordered_martial_councillor - Iterate through all martial-based councillors
 ordered_martial_councillor = {
 limit = { <triggers> }
@@ -7778,6 +8445,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+ordered_noble_family - Iterate through all noble family titles in the realm of scoped character
+ordered_noble_family = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -7947,6 +8628,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+ordered_powerful_family - Iterate through all directly owned provinces
+ordered_powerful_family = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: dynasty_house
 
 --------------------
 
@@ -8334,6 +9029,37 @@ Supported Targets: landed_title
 
 --------------------
 
+ordered_succession_appointment_invested_candidate - Iterate through all candidates supported by the scoped investor character for any title
+It may contain people outside of investor's top realm or no longer valid for appointment
+ordered_succession_appointment_invested_candidate = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+ordered_succession_appointment_invested_title - Iterate through all titles that has candidates supported by the scoped investor
+It may contain titles outside of investor's top realm, and so invalid for appointment,
+and candidates may be already dead
+ordered_succession_appointment_invested_title = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 ordered_targeting_faction - Iterate through all factions targeting the scope character
 ordered_targeting_faction = {
 limit = { <triggers> }
@@ -8622,6 +9348,16 @@ Supported Scopes: character
 
 --------------------
 
+populate_task_contracts_for_area - Populate area around location with task contracts up to specified amount
+populate_task_contracts_for_area = {
+	location = scope:province
+	amount = { value = 5 }
+	group = { rescue assasination gardening }
+}
+Supported Scopes: character
+
+--------------------
+
 random_acclaimed_knight - Iterate through all acclaimed knights employed by a given character
 random_acclaimed_knight = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -8678,6 +9414,20 @@ Supported Targets: army
 
 --------------------
 
+random_available_task_contract - Iterate through all task contracts of location of root province
+random_available_task_contract = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
+random_character_active_contract - Gets all accepted task contracts of the root character
+random_character_active_contract = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 random_character_artifact - Iterate through all artifacts in a given characters inventory
 random_character_artifact = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -8696,6 +9446,13 @@ random_character_struggle - Iterate through all struggles that character is invo
 random_character_struggle = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: struggle
+
+--------------------
+
+random_character_task_contract - Gets all task contracts of the scoped character
+random_character_task_contract = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: task_contract
 
 --------------------
 
@@ -8813,6 +9570,13 @@ Supported Targets: character
 
 random_consort - Iterate through all consorts (concubines and spouses)
 random_consort = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+random_contact - Iterate through all contact characters of the root character
+random_contact = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: character
 
@@ -8951,15 +9715,8 @@ Supported Targets: character
 
 --------------------
 
-random_heir_title - Iterate through all landed titles character is heir to
+random_heir_title - Iterate through all titles the scoped character is heir to
 random_heir_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-Supported Scopes: character
-Supported Targets: landed_title
-
---------------------
-
-random_heir_to_title - Iterate through all titles the scoped character is heir to
-random_heir_to_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: landed_title
 
@@ -9042,6 +9799,13 @@ Supported Targets: character
 
 --------------------
 
+random_maa_regiment - Iterate through all MaA regiments
+random_maa_regiment = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: regiment
+
+--------------------
+
 random_martial_councillor - Iterate through all martial-based councillors
 random_martial_councillor = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -9095,6 +9859,13 @@ random_neighboring_top_liege_realm_owner - A realm with a different top liege ne
 random_neighboring_top_liege_realm_owner = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+random_noble_family - Iterate through all noble family titles in the realm of scoped character
+random_noble_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -9180,6 +9951,13 @@ random_potential_marriage_option - Iterate through all potential selectable marr
 random_potential_marriage_option = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+random_powerful_family - Iterate through all directly owned provinces
+random_powerful_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: dynasty_house
 
 --------------------
 
@@ -9378,6 +10156,23 @@ Supported Targets: landed_title
 
 --------------------
 
+random_succession_appointment_invested_candidate - Iterate through all candidates supported by the scoped investor character for any title
+It may contain people outside of investor's top realm or no longer valid for appointment
+random_succession_appointment_invested_candidate = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+random_succession_appointment_invested_title - Iterate through all titles that has candidates supported by the scoped investor
+It may contain titles outside of investor's top realm, and so invalid for appointment,
+and candidates may be already dead
+random_succession_appointment_invested_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 random_targeting_faction - Iterate through all factions targeting the scope character
 random_targeting_faction = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -9560,6 +10355,12 @@ Supported Targets: character
 
 --------------------
 
+remove_dead_character_variable - remove_dead_character_variable = <name>
+Remove a variable from a dead character.
+Supported Scopes: character
+
+--------------------
+
 remove_decision_cooldown - Remove the cooldown on taking a decision for the scoped character
 remove_decision_cooldown = decision_name
 Supported Scopes: character
@@ -9664,12 +10465,30 @@ Supported Targets: character
 
 --------------------
 
+remove_relation_event_recurrer - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+remove_relation_favorite_child - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 remove_relation_flag - Removed a flag from an existing relation flag = flag_name (declared in scripted_relation) target = other_character relation = scripted_relation
 Supported Scopes: character
 
 --------------------
 
 remove_relation_friend - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+remove_relation_grudge - Removes scripted relationship
 Supported Scopes: character
 Supported Targets: character
 
@@ -9718,6 +10537,12 @@ Supported Targets: character
 --------------------
 
 remove_relation_oaf - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+remove_relation_old_flame - Removes scripted relationship
 Supported Scopes: character
 Supported Targets: character
 
@@ -9879,6 +10704,8 @@ Supported Scopes: character
 revoke_court_position - Revokes target position from scoped character.
 
 court_position = court position type - court position type to revoke from scoped character's court
+recipient = character - optional - target current holder of position to revoke
+holder = character - optional - same as recipient
 Supported Scopes: character
 
 --------------------
@@ -9898,6 +10725,25 @@ For the message text and tooltip, $EFFECT$ contains the text description of the 
 And $DESC$ contains the text from the desc field.
 send_interface_message = {
 	type = message_type # default: send_interface_message
+	title = LOCALIZATION # optional, otherwise takes it from the message type
+	desc = LOCALIZATION # optional, otherwise takes it from the message type
+	tooltip = LOCALIZATION # optional, otherwise takes it from the message type
+	left_icon = scope:recipient # optional, character, artifact, or title
+	right_icon = scope:the_title # optional, character, artifact, or title
+		
+	# optional effects...
+	add_dread = 5
+	scope:someone = { add_gold = 5 }
+}
+Supported Scopes: character
+
+--------------------
+
+send_interface_popup - Sends a message to the player playing the character in the scope and then executes any effects inside.
+For the message text and tooltip, $EFFECT$ contains the text description of the effects in the past tense.
+And $DESC$ contains the text from the desc field.
+send_interface_popup = {
+	type = message_type # default: send_interface_popup
 	title = LOCALIZATION # optional, otherwise takes it from the message type
 	desc = LOCALIZATION # optional, otherwise takes it from the message type
 	tooltip = LOCALIZATION # optional, otherwise takes it from the message type
@@ -10038,7 +10884,8 @@ Supported Scopes: character
 
 --------------------
 
-set_designated_heir - Sets the given character as designated heir
+set_designated_heir - Sets one the given direct child character as designated heir.
+set_designated_heir = my_character_scope
 Supported Scopes: character
 Supported Targets: character
 
@@ -10072,6 +10919,11 @@ Supported Scopes: character
 set_employer - Add the scope character to the target character's court
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+set_ethnicity - Set the ethnicity for this character, if it is of a different portrait group and they have DNA it will be randomized
+Supported Scopes: character
 
 --------------------
 
@@ -10232,7 +11084,22 @@ Supported Scopes: character
 
 --------------------
 
+set_relation_event_recurrer - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
+set_relation_favorite_child - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
 set_relation_friend - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
+set_relation_grudge - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
 Supported Scopes: character
 
 --------------------
@@ -10273,6 +11140,11 @@ Supported Scopes: character
 --------------------
 
 set_relation_oaf - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
+set_relation_old_flame - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
 Supported Scopes: character
 
 --------------------
@@ -10417,7 +11289,13 @@ Supported Scopes: character
 
 --------------------
 
-start_scheme - starts a scheme  = { type = X target = Y }
+start_scheme - starts a scheme  = { type = X
+contract = (Optional) CONTRACTtarget_character = CHARACTER
+target_title = TITLE
+target_culture = CULTURE
+target_faith = FAITH
+targets_nothing = yes/no (default no) }
+Only one target can be specified (or 0 if target_nothing = yes)
 Supported Scopes: character
 
 --------------------
@@ -10427,7 +11305,7 @@ start_travel_plan = {
    destination = PROVINCE (repeatable)
    travel_leader = CHARACTER (optional)
    companion = CHARACTER (optional & repeatable)
-   players_use_planner = YES/NO (default yes)
+   travel_with_domicile = YES/NO (default no)    players_use_planner = YES/NO (default yes)
    return_trip = YES/NO (default yes, adds a destination at the end of the travel plan to return to the starting location)
    on_arrival_event = EVENT (triggered on non-home destinations determined by on_arrival_destinations. Root is travel plan owner.)
    on_arrival_on_action = ON_ACTION (triggered on non-home destinations determined by on_arrival_destinations. Root is travel plan owner.)
@@ -10553,6 +11431,16 @@ Supported Scopes: landed_title
 
 --------------------
 
+change_appointment_investment - Increase appointment score of a character for a title
+change_appointment_investment = {
+	target = scope:target_character
+	investor = scope:investor_character # Optional, the character who made this investment
+	value = <script_value>
+}
+Supported Scopes: landed_title
+
+--------------------
+
 change_county_control - Changes the county control of a title. If the title has higher tier than county, the effect will propagate down to all counties below it.
 Supported Scopes: landed_title
 
@@ -10618,6 +11506,13 @@ every_controlled_faith - Iterate through all faiths headed by a title
 every_controlled_faith = { limit = { <triggers> } <effects> }
 Supported Scopes: landed_title
 Supported Targets: faith
+
+--------------------
+
+every_controlled_title_maa_regiment - Iterate through controlled title regiments
+every_controlled_title_maa_regiment = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -10691,6 +11586,13 @@ Supported Targets: character
 
 --------------------
 
+every_important_location_for_title - Iterate through all counties that are important for the scoped title
+every_important_location_for_title = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 every_in_de_facto_hierarchy - Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal
 This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is
 ..._de_jure_vassal_and_below = { continue = { conditions } }
@@ -10716,6 +11618,13 @@ Supported Targets: landed_title
 
 --------------------
 
+every_owned_title_maa_regiment - Iterate through owned title MaA regiments
+every_owned_title_maa_regiment = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 every_past_holder - Iterate through all past owners of a title from earliest to latest
 every_past_holder = { limit = { <triggers> } <effects> }
 Supported Scopes: landed_title
@@ -10725,6 +11634,22 @@ Supported Targets: character
 
 every_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
 every_past_holder_reversed = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: character
+
+--------------------
+
+every_succession_appointment_investors - Iterate through all investors of target candidate within the scoped title. Optionally specify a value to filter by investment amount
+scope:landed_title = {
+	any/every/ordered/random_succession_appointment_investors = {
+		candidate = scope:character
+		value > {			# Optional compare value to
+			value = 100		# only have characters that
+			add = 10		# have invested this much.
+		}
+	}
+}
+every_succession_appointment_investors = { limit = { <triggers> } <effects> }
 Supported Scopes: landed_title
 Supported Targets: character
 
@@ -10744,10 +11669,24 @@ Supported Targets: character
 
 --------------------
 
+every_title_interested_in_location - Iterate through titles that consider scoped county an important location
+every_title_interested_in_location = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 every_title_joined_faction - Iterate through all factions joined the scope landed title
 every_title_joined_faction = { limit = { <triggers> } <effects> }
 Supported Scopes: landed_title
 Supported Targets: faction
+
+--------------------
+
+every_title_maa_regiment - Iterate through title all MaA regiments
+every_title_maa_regiment = { limit = { <triggers> } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -10856,6 +11795,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: landed_title
 Supported Targets: faith
+
+--------------------
+
+ordered_controlled_title_maa_regiment - Iterate through controlled title regiments
+ordered_controlled_title_maa_regiment = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -10999,6 +11952,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_important_location_for_title - Iterate through all counties that are important for the scoped title
+ordered_important_location_for_title = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 ordered_in_de_facto_hierarchy - Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal
 This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is
 ..._de_jure_vassal_and_below = { continue = { conditions } }
@@ -11045,6 +12012,20 @@ Supported Targets: landed_title
 
 --------------------
 
+ordered_owned_title_maa_regiment - Iterate through owned title MaA regiments
+ordered_owned_title_maa_regiment = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 ordered_past_holder - Iterate through all past owners of a title from earliest to latest
 ordered_past_holder = {
 limit = { <triggers> }
@@ -11061,6 +12042,29 @@ Supported Targets: character
 
 ordered_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
 ordered_past_holder_reversed = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: character
+
+--------------------
+
+ordered_succession_appointment_investors - Iterate through all investors of target candidate within the scoped title. Optionally specify a value to filter by investment amount
+scope:landed_title = {
+	any/every/ordered/random_succession_appointment_investors = {
+		candidate = scope:character
+		value > {			# Optional compare value to
+			value = 100		# only have characters that
+			add = 10		# have invested this much.
+		}
+	}
+}
+ordered_succession_appointment_investors = {
 limit = { <triggers> }
 order_by = script_value
 position = int
@@ -11101,6 +12105,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_title_interested_in_location - Iterate through titles that consider scoped county an important location
+ordered_title_interested_in_location = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 ordered_title_joined_faction - Iterate through all factions joined the scope landed title
 ordered_title_joined_faction = {
 limit = { <triggers> }
@@ -11112,6 +12130,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: landed_title
 Supported Targets: faction
+
+--------------------
+
+ordered_title_maa_regiment - Iterate through title all MaA regiments
+ordered_title_maa_regiment = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -11251,6 +12283,13 @@ Supported Targets: faith
 
 --------------------
 
+random_controlled_title_maa_regiment - Iterate through controlled title regiments
+random_controlled_title_maa_regiment = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 random_county_province - Iterate through all provinces in a county
 random_county_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed_title
@@ -11321,6 +12360,13 @@ Supported Targets: character
 
 --------------------
 
+random_important_location_for_title - Iterate through all counties that are important for the scoped title
+random_important_location_for_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 random_in_de_facto_hierarchy - Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal
 This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is
 ..._de_jure_vassal_and_below = { continue = { conditions } }
@@ -11346,6 +12392,13 @@ Supported Targets: landed_title
 
 --------------------
 
+random_owned_title_maa_regiment - Iterate through owned title MaA regiments
+random_owned_title_maa_regiment = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 random_past_holder - Iterate through all past owners of a title from earliest to latest
 random_past_holder = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed_title
@@ -11355,6 +12408,22 @@ Supported Targets: character
 
 random_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
 random_past_holder_reversed = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: character
+
+--------------------
+
+random_succession_appointment_investors - Iterate through all investors of target candidate within the scoped title. Optionally specify a value to filter by investment amount
+scope:landed_title = {
+	any/every/ordered/random_succession_appointment_investors = {
+		candidate = scope:character
+		value > {			# Optional compare value to
+			value = 100		# only have characters that
+			add = 10		# have invested this much.
+		}
+	}
+}
+random_succession_appointment_investors = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed_title
 Supported Targets: character
 
@@ -11374,10 +12443,24 @@ Supported Targets: character
 
 --------------------
 
+random_title_interested_in_location - Iterate through titles that consider scoped county an important location
+random_title_interested_in_location = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 random_title_joined_faction - Iterate through all factions joined the scope landed title
 random_title_joined_faction = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed_title
 Supported Targets: faction
+
+--------------------
+
+random_title_maa_regiment - Iterate through title all MaA regiments
+random_title_maa_regiment = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -11446,6 +12529,23 @@ Supported Scopes: landed_title
 remove_county_modifier - Remove a modifier from a county
 remove_county_modifier = name
 Supported Scopes: landed_title
+
+--------------------
+
+remove_important_location - Scoped county is no longer important for anyone
+scope:county = {
+	remove_important_location = yes
+}
+Supported Scopes: landed_title
+
+--------------------
+
+remove_title_from_important_location - Scoped county is no longer important for the target title
+scope:county = {
+	remove_title_from_important_location = scope:title
+}
+Supported Scopes: landed_title
+Supported Targets: landed_title
 
 --------------------
 
@@ -11545,6 +12645,32 @@ Supported Scopes: landed_title
 
 --------------------
 
+set_important_location - Scoped county is set as important for the target title
+scope:county = {
+	set_important_location = {
+		title = scope:higher_tier_title
+		enter_realm_event = event_name
+		enter_realm_on_action = onaction_name
+		leave_realm_event = event_name
+		leave_realm_on_action = onaction_name
+	}
+}
+
+Events and onactions are fired with this scope:
+root - title top liege
+scope:county - important location
+scope:title - higher tier title that is interested in the county
+
+In enter realm:
+scope:changed_top_liege - former top liege of the important location
+
+In leave realm:
+scope:changed_top_liege - new top liege of the important location
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 set_landless_title - Sets if the title is landless (can be held by rulers with no land)
 set_landless_title = yes
 Supported Scopes: landed_title
@@ -11554,6 +12680,18 @@ Supported Scopes: landed_title
 set_no_automatic_claims - Sets if the title should disallow automatic claims (meaning claims will only be added by script, and by pressed claims being inherited).
 set_no_automatic_claims = yes
 Supported Scopes: landed_title
+
+--------------------
+
+set_noble_family_title - Change if the scoped title is for a noble family, allowing landless playable. Title must be at least a duchy
+Supported Scopes: landed_title
+
+--------------------
+
+set_state_faith - Set the State Faith of a Title whose holder has the state_faith government rule
+<landed_title> = { set_state_faith = <faith> }
+Supported Scopes: landed_title
+Supported Targets: faith
 
 --------------------
 
@@ -11583,6 +12721,18 @@ Supported Targets: faction
 title_leave_faction - the title in the scope leaves the assigned faction
 Supported Scopes: landed_title
 Supported Targets: faction
+
+--------------------
+
+transfer_owned_maa_control - Transfers control of the scoped title's owned MaA to the target title
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
+transfer_title_maa_ownership - Transfers ownership of the scoped title's owned MaA to the target title
+Supported Scopes: landed_title
+Supported Targets: landed_title
 
 --------------------
 
@@ -11751,6 +12901,61 @@ Supported Targets: character
 random_side_knight - Iterate through all knights
 random_side_knight = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: combat_side
+Supported Targets: character
+
+--------------------
+
+add_domicile_building - Add building to scoped domicile, ignores cost and construction time
+domicile = { add_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+change_provisions - Adds (or removes) provisions to a scoped domicile
+Supported Scopes: domicile
+
+--------------------
+
+construct_domicile_building - Construct building to scoped domicile, ignores cost but uses construction time
+domicile = { construct_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+lower_domicile_building - Downgrade building to previous from scoped domicile or destroy it if at lowest
+domicile = { lower_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+lower_domicile_building_no_refund - Downgrade building to previous from scoped domicile or destroy it if at lowest, without refunding
+domicile = { lower_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+move_domicile - Moves domicile to target location
+domicile = { move_domicile = location }
+Supported Scopes: domicile
+Supported Targets: province
+
+--------------------
+
+remove_domicile_building - Remove building from scoped domicile
+domicile = { remove_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+remove_domicile_building_no_refund - Remove building from scoped domicile without refunding it
+domicile = { remove_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+set_domicile_owner - Changes domicile owner to target character
+domicile = { set_domicile_owner = character }
+Supported Scopes: domicile
 Supported Targets: character
 
 --------------------

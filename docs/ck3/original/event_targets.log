@@ -63,6 +63,36 @@ Output Scopes: character
 
 --------------------
 
+regiment_controller - Get the character who currently controls the regiment
+Input Scopes: regiment
+Output Scopes: character
+
+--------------------
+
+regiment_controlling_title - Get title regiment's owning title
+Input Scopes: regiment
+Output Scopes: landed_title
+
+--------------------
+
+regiment_owner - Get regiment's owner
+Input Scopes: regiment
+Output Scopes: character
+
+--------------------
+
+regiment_owning_title - Get title regiment's owning title
+Input Scopes: regiment
+Output Scopes: landed_title
+
+--------------------
+
+regiment_station - Get regiment's station province
+Input Scopes: regiment
+Output Scopes: province
+
+--------------------
+
 vassal_contract_type - Get the type of a given activity
 Input Scopes: vassal_contract_obligation_level
 Output Scopes: vassal_contract
@@ -89,6 +119,42 @@ Output Scopes: character
 
 last_house_head - Get last house head of scoped house
 Input Scopes: dynasty_house
+Output Scopes: character
+
+--------------------
+
+scheme - Get the scheme scheme associated with the task contract (if there is one).
+Input Scopes: task_contract
+Output Scopes: scheme
+
+--------------------
+
+task_contract_destination - Get the task contract destination, null if unused.
+Input Scopes: task_contract
+Output Scopes: province
+
+--------------------
+
+task_contract_employer - Get the task contract employer.
+Input Scopes: task_contract
+Output Scopes: character
+
+--------------------
+
+task_contract_location - Get the task contract location.
+Input Scopes: task_contract
+Output Scopes: province
+
+--------------------
+
+task_contract_taker - Get the task contract taker, null until taken.
+Input Scopes: task_contract
+Output Scopes: character
+
+--------------------
+
+task_contract_target - Get the task contract target, null if unused.
+Input Scopes: task_contract
 Output Scopes: character
 
 --------------------
@@ -126,6 +192,12 @@ Output Scopes: character
 army_owner - Get owner of scoped army
 Input Scopes: army
 Output Scopes: character
+
+--------------------
+
+involved_combat_side - Get combat side that army is involved in
+Input Scopes: army
+Output Scopes: combat_side
 
 --------------------
 
@@ -204,6 +276,12 @@ Output Scopes: landed_title
 location - Get province of scoped army, character or combat
 Input Scopes: character, combat, army
 Output Scopes: province
+
+--------------------
+
+slot_character - Get the character of scoped agent slot
+Input Scopes: agent_slot
+Output Scopes: character
 
 --------------------
 
@@ -357,6 +435,13 @@ array_define - Reference the value of a numeric value in an array define: array_
 Requires Data: yes
 Global Link: yes
 Output Scopes: value
+
+--------------------
+
+casus_belli_type - Get the casus_belli_type with the specified key
+Requires Data: yes
+Global Link: yes
+Output Scopes: casus_belli_type
 
 --------------------
 
@@ -567,6 +652,13 @@ Output Scopes: struggle
 
 --------------------
 
+task_contract_type - Get the task_contract_type with the specified key
+Requires Data: yes
+Global Link: yes
+Output Scopes: task_contract_type
+
+--------------------
+
 this - The current scope
 
 --------------------
@@ -742,9 +834,33 @@ Output Scopes: character
 
 --------------------
 
-scheme_target - Get target character of scoped scheme
+scheme_target_character - Get target character of scoped scheme. Null if the target type is not a character.
 Input Scopes: scheme
 Output Scopes: character
+
+--------------------
+
+scheme_target_culture - Get target culture of scoped scheme. Null if the target type is not a culture.
+Input Scopes: scheme
+Output Scopes: culture
+
+--------------------
+
+scheme_target_faith - Get target faith of scoped scheme. Null if the target type is not a faith.
+Input Scopes: scheme
+Output Scopes: faith
+
+--------------------
+
+scheme_target_title - Get target title of scoped scheme. Null if the target type is not a title.
+Input Scopes: scheme
+Output Scopes: landed_title
+
+--------------------
+
+task_contract - Get the task contract associated to the scheme (if any).
+Input Scopes: scheme
+Output Scopes: task_contract
 
 --------------------
 
@@ -761,6 +877,13 @@ Output Scopes: accolade
 --------------------
 
 aptitude - The aptitude of the provided court position type for the scoped character.
+Requires Data: yes
+Input Scopes: character
+Output Scopes: value
+
+--------------------
+
+aptitude_score - Raw aptitude score of the provided court position type for the scoped character.
 Requires Data: yes
 Input Scopes: character
 Output Scopes: value
@@ -853,6 +976,12 @@ Output Scopes: travel_plan
 
 --------------------
 
+dead_var - Reference a previous set dead character variable via its name eg: dead_var:mortal_enemy
+Requires Data: yes
+Input Scopes: character
+
+--------------------
+
 default_location - Get the province which the 'default' location a character should be at when not traveling. (considers imprisonment and other things.)
 Input Scopes: character
 Output Scopes: province
@@ -880,6 +1009,12 @@ Output Scopes: character
 diarchy_successor - Get the next character in the diarchy line of successon
 Input Scopes: character
 Output Scopes: character
+
+--------------------
+
+domicile - Get the domicile of the scoped character. Returns empty scope if no domicile.
+Input Scopes: character
+Output Scopes: domicile
 
 --------------------
 
@@ -1159,6 +1294,12 @@ Output Scopes: character
 
 --------------------
 
+state_faith - Get the state faith of a scoped title
+Input Scopes: landed_title
+Output Scopes: faith
+
+--------------------
+
 title_capital_county - Get preferred capital county of scoped title
 Input Scopes: landed_title
 Output Scopes: landed_title
@@ -1263,6 +1404,18 @@ Output Scopes: character
 
 side_primary_participant - Get primary participant of scoped combat side
 Input Scopes: combat_side
+Output Scopes: character
+
+--------------------
+
+domicile_location - Get current location of the scoped domicile
+Input Scopes: domicile
+Output Scopes: province
+
+--------------------
+
+owner - Get the owner of scoped domicile.
+Input Scopes: domicile
 Output Scopes: character
 
 --------------------
@@ -1376,7 +1529,6 @@ lessee
 ruler
 decision_type
 value
-real_value
 great_holy_war
 name_character_target
 base
@@ -1421,6 +1573,7 @@ conquest
 conquest_holy_war
 conquest_claim
 conquest_populist
+appointment
 inheritance
 abdication
 destroyed
@@ -1550,3 +1703,25 @@ num_legends
 creator
 protagonist
 can_afford_current_level
+agent_slot
+contract_type
+contract
+employer
+target_title
+casus_belli_type
+has_hostages
+player_heir
+interesting_destiny_character
+hard_difficulty_destiny_character
+favorite_destiny_character
+previous_player_character
+previous_player_heir
+predecessor
+heir
+top_liege
+changed_top_liege
+stepped_down
+appointment_succession
+main_destiny_types
+random_destiny_types
+destiny_type_flag

@@ -67,6 +67,12 @@ Supported Scopes: dynasty
 
 --------------------
 
+ep3_administrative_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
 erudition_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: dynasty
@@ -624,6 +630,85 @@ Supported Scopes: character_memory
 
 --------------------
 
+can_upgrade_maa - Can target MaA regiment be upgraded
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_event_maa_regiment - Is target MaA regiment part of event troops
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_hired_maa_regiment - Was target MaA regiment hired from merc or holy order
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_maa_in_combat - Is target MaA regiment engaged in combat
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_maa_type - Check MaA type of a regiment
+scope:regiment = { is_maa_type = light_footmen }
+Traits: class CMenAtArmsTypeDatabase key
+Supported Scopes: regiment
+
+--------------------
+
+is_personal_maa_regiment - Is target MaA regiment personal
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_raised - Is target MaA regiment raised
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_regular_maa_regiment - Is target MaA regiment just a normal one recruited by a ruler
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_title_maa_regiment - Is target MaA regiment belongs to a title
+Traits: yes/no 
+Supported Scopes: regiment
+
+--------------------
+
+is_unit_type - Check base MaA type of a regiment
+scope:regiment = { is_unit_type = skirmishers }
+Supported Scopes: regiment
+
+--------------------
+
+maa_current_troops_count - Get current number of soldiers in MaA regiment
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: regiment
+
+--------------------
+
+maa_max_troops_count - Get max number of soldiers in MaA regiment
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: regiment
+
+--------------------
+
+maa_size - Get regiment size - number of subregiments in it
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: regiment
+
+--------------------
+
 obligation_level_score - The score in favour of the vassal for the scoped vassal contract obligation level
 obligation_level_score > 2
 Traits: <, <=, =, !=, >, >=
@@ -728,9 +813,78 @@ Supported Scopes: dynasty_house
 
 --------------------
 
+house_land_share_in_realm - Calculate share of counties held in the target liege's realm by the house.
+Only rulers of liege's government type counts
+
+scope:house = {
+	house_land_share_in_realm = {
+		target = scope:liege
+		value > 0.5
+	}
+}
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty_house
+
+--------------------
+
+house_power - Compare house power: scope:house = { house_power >= value }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty_house
+
+--------------------
+
 house_unity_value - does the dynasty house have the required house unity value?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: dynasty_house
+
+--------------------
+
+is_dominant_family - Is the given house considered dominant: scope:house = { is_dominant_family = yes }
+Traits: yes/no 
+Supported Scopes: dynasty_house
+
+--------------------
+
+is_powerful_family - Is the given house considered powerful: scope:house = { is_powerful_family = yes }
+Traits: yes/no 
+Supported Scopes: dynasty_house
+
+--------------------
+
+has_task_contract_group - Has task contract of the group
+scope:character = { has_task_contract_group = group }
+Supported Scopes: task_contract
+
+--------------------
+
+has_task_contract_type - has task contract with type 
+scope:task_contract = { has_task_contract_type = type_name }
+Supported Scopes: task_contract
+
+--------------------
+
+is_criminal - Is the contract type of criminal nature?
+Traits: yes/no 
+Supported Scopes: task_contract
+
+--------------------
+
+is_valid_to_keep - Is contract valid to keep?
+Traits: yes/no 
+Supported Scopes: task_contract
+
+--------------------
+
+task_contract_tier - Tier value for task contract
+scope:task_contract = { task_contract_tier = num }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: task_contract
+
+--------------------
+
+time_since_contract_taken - Days since the task contract was accepted.
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: task_contract
 
 --------------------
 
@@ -827,6 +981,18 @@ Supported Scopes: religion
 
 --------------------
 
+any_army_maa_regiment - Iterate through all MaA regiments in the army
+scope:army = {
+	any_army_maa_regiment = {
+		include_hired = yes # should it include merc and holy order regiments (yes by default)
+	}
+}
+any_army_maa_regiment = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: army
+Supported Targets: regiment
+
+--------------------
+
 army_is_moving - is this army moving?
 Traits: yes/no 
 Supported Scopes: army
@@ -840,6 +1006,12 @@ Supported Scopes: army
 --------------------
 
 army_size - what size is this army?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: army
+
+--------------------
+
+army_supply - Can we disband this army?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: army
 
@@ -1022,6 +1194,13 @@ Supported Scopes: travel_plan
 --------------------
 
 is_paused - Is this travel plan paused?
+Traits: yes/no 
+Supported Scopes: travel_plan
+
+--------------------
+
+is_travel_with_domicile - Is character travelling with a domicile?
+<travel_plan> = { is_travel_with_domicile = yes }
 Traits: yes/no 
 Supported Scopes: travel_plan
 
@@ -1295,6 +1474,31 @@ Supported Scopes: struggle
 
 phase_has_catalyst - Is any of the future phases affected by the given catalyst?phase_has_catalyst = catalyst_key
 Supported Scopes: struggle
+
+--------------------
+
+agent_slot_contribution - The contribution value given by the scoped filled agent slot.
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: agent_slot
+
+--------------------
+
+agent_slot_has_contribution_type - Does the agent slot have provide the given type of contribution?
+Supported types: 'secrecy', 'success_chance', 'success_chance_growth', 'success_chance_max' and 'speed'
+agent_slot_has_contribution_type = <type>
+Supported Scopes: agent_slot
+
+--------------------
+
+is_agent_slot_type - Does the Agent Slot have the given type?
+is_agent_slot_type = key
+Supported Scopes: agent_slot
+
+--------------------
+
+is_filled - Is this agent slot filled?
+Traits: yes/no 
+Supported Scopes: agent_slot
 
 --------------------
 
@@ -1631,6 +1835,13 @@ Supported Targets: landed_title
 
 --------------------
 
+any_casus_belli_type - Iterate through every casus_belli_type in the database
+any_casus_belli_type = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: casus_belli_type
+
+--------------------
+
 any_character_with_royal_court - Iterate through all characters with a royal court
 any_character_with_royal_court = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
@@ -1694,6 +1905,13 @@ Supported Targets: doctrine
 
 --------------------
 
+any_domicile - Iterate through all domiciles
+any_domicile = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: domicile
+
+--------------------
+
 any_duchy - Iterate through all duchies in the game
 any_duchy = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
@@ -1748,6 +1966,13 @@ Supported Targets: holding_type
 
 --------------------
 
+any_important_location - Iterate through all counties that are important for at least some title
+any_important_location = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: landed_title
+
+--------------------
+
 any_in_global_list - Iterate through all items in global list. list = name or variable = name
 any_in_global_list = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
@@ -1784,6 +2009,13 @@ any_inspired_character - Iterate through all characters with an inspirations in 
 any_inspired_character = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
 Supported Targets: character
+
+--------------------
+
+any_interested_title - Iterate through all titles that are interested in any county
+any_interested_title = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: landed_title
 
 --------------------
 
@@ -1868,6 +2100,20 @@ any_special_building_province - Iterate through all provinces with a special bui
 any_special_building_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
 Supported Targets: province
+
+--------------------
+
+any_task_contract - Gets all available and accepted task contracts.
+any_task_contract = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: task_contract
+
+--------------------
+
+any_task_contract_type - Iterate through every task_contract_type in the database
+any_task_contract_type = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: task_contract_type
 
 --------------------
 
@@ -2036,13 +2282,13 @@ Supported Scopes: none
 --------------------
 
 has_dlc - Does the host have this DLC
-Traits: Valid DLCs: The Northern Lords， Garments of the Holy Roman Empire， The Fate of Iberia， Tours and Tournaments， The Royal Court， Elegance of the Empire， Legacy of Persia， North African Attire， Fashion of the Abbasid Court， Friends and Foes， Wards and Wardens， Couture of the Capets，以及 Legends of the Dead
+Traits: Valid DLCs: The Fate of Iberia， Tours and Tournaments， Elegance of the Empire， North African Attire， Roads to Power， Couture of the Capets， Legends of the Dead， The Northern Lords， Garments of the Holy Roman Empire， The Royal Court， Legacy of Persia， Fashion of the Abbasid Court， Friends and Foes，以及 Wards and Wardens
 Supported Scopes: none
 
 --------------------
 
 has_dlc_feature - Does the host have DLC that enables this particular feature
-Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts， the_fate_of_iberia， friends_and_foes， tours_and_tournaments， advanced_activities， accolades， legacy_of_persia， elegance_of_the_empire， wards_and_wardens， legends_of_the_dead， legends， north_african_attire，以及 couture_of_the_capets
+Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts， the_fate_of_iberia， friends_and_foes， tours_and_tournaments， advanced_activities， accolades， legacy_of_persia， elegance_of_the_empire， wards_and_wardens， legends_of_the_dead， legends， north_african_attire， couture_of_the_capets， landless_playable， admin_gov， roads_to_power，以及 court_room_view
 Supported Scopes: none
 
 --------------------
@@ -2482,6 +2728,13 @@ any_neighboring_province - Iterate through all neighboring provinces of a provin
 any_neighboring_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: province
 Supported Targets: province
+
+--------------------
+
+any_province_domicile - Iterate through all domiciles of scoped province
+any_province_domicile = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: province
+Supported Targets: domicile
 
 --------------------
 
@@ -3011,10 +3264,17 @@ Supported Scopes: legend
 
 --------------------
 
-any_scheme_agent - Iterate through all agents in the scheme
-any_scheme_agent = { <count=num/all> / <percent=fixed_point> <triggers> }
+any_scheme_agent_character - Iterate through all characters in agent slots in the scheme
+any_scheme_agent_character = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: scheme
 Supported Targets: character
+
+--------------------
+
+any_scheme_agent_slot - Iterate through all agent slots in the scheme
+any_scheme_agent_slot = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: scheme
+Supported Targets: agent_slot
 
 --------------------
 
@@ -3036,7 +3296,28 @@ Supported Scopes: scheme
 
 --------------------
 
+is_scheme_category - Does the scheme have the given category?
+Supported categories: 'hostile', 'contract', and 'personal'.
+is_scheme_category = <category>
+Supported Scopes: scheme
+
+--------------------
+
 is_scheme_exposed - Is the scheme exposed?
+Traits: yes/no 
+Supported Scopes: scheme
+
+--------------------
+
+is_scheme_target_type - Does the scheme have a target of the given type?
+Supported types: character, title, faith, culture
+is_scheme_target_type = <type>
+Supported Scopes: scheme
+
+--------------------
+
+is_type_basic - Is the scoped scheme's type a basic type?
+is_type_basic = bool
 Traits: yes/no 
 Supported Scopes: scheme
 
@@ -3045,6 +3326,30 @@ Supported Scopes: scheme
 is_type_secret - Is the scoped scheme's type a secret type?
 is_type_secret = bool
 Traits: yes/no 
+Supported Scopes: scheme
+
+--------------------
+
+max_scheme_success_chance - Max Scheme Success Chance
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: scheme
+
+--------------------
+
+maximum_scheme_breaches - The maximum number of breaches the scheme can have
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: scheme
+
+--------------------
+
+scheme_agent_charges - The number of the scheme's currently available agent charges
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: scheme
+
+--------------------
+
+scheme_breaches - The number of breaches the scheme currently has
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: scheme
 
 --------------------
@@ -3061,49 +3366,25 @@ Supported Scopes: scheme
 
 --------------------
 
-scheme_monthly_progress - Monthly scheme progress in % (i.e. 50 equals 50%)
-Traits: <, <=, =, !=, >, >=
-Supported Scopes: scheme
-
---------------------
-
-scheme_number_of_agents - The number of agents in a scheme
-Traits: <, <=, =, !=, >, >=
-Supported Scopes: scheme
-
---------------------
-
 scheme_number_of_exposed_agents - The number of exposed agents in a scheme
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: scheme
 
 --------------------
 
-scheme_power - Scheme power
+scheme_number_of_filled_agent_slots - The number of agents in a scheme
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: scheme
 
 --------------------
 
-scheme_power_resistance_difference - Scheme power minus scheme resistance difference
-Traits: <, <=, =, !=, >, >=
-Supported Scopes: scheme
-
---------------------
-
-scheme_power_resistance_ratio - Scheme power/resistance ratio, the ratio is set to +/-10000 if resistance is zero and power is positive/negative (0 if both power and resistance are 0)
+scheme_phase_duration - Scheme phase duration
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: scheme
 
 --------------------
 
 scheme_progress - Scheme progress (0 - 10 (defined))
-Traits: <, <=, =, !=, >, >=
-Supported Scopes: scheme
-
---------------------
-
-scheme_resistance - Scheme resistance
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: scheme
 
@@ -3302,6 +3583,20 @@ Supported Targets: army
 
 --------------------
 
+any_available_task_contract - Iterate through all task contracts of location of root province
+any_available_task_contract = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
+any_character_active_contract - Gets all accepted task contracts of the root character
+any_character_active_contract = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 any_character_artifact - Iterate through all artifacts in a given characters inventory
 any_character_artifact = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
@@ -3320,6 +3615,13 @@ any_character_struggle - Iterate through all struggles that character is involve
 any_character_struggle = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: struggle
+
+--------------------
+
+any_character_task_contract - Gets all task contracts of the scoped character
+any_character_task_contract = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: task_contract
 
 --------------------
 
@@ -3437,6 +3739,13 @@ Supported Targets: character
 
 any_consort - Iterate through all consorts (concubines and spouses)
 any_consort = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+any_contact - Iterate through all contact characters of the root character
+any_contact = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: character
 
@@ -3575,15 +3884,8 @@ Supported Targets: character
 
 --------------------
 
-any_heir_title - Iterate through all landed titles character is heir to
+any_heir_title - Iterate through all titles the scoped character is heir to
 any_heir_title = { <count=num/all> / <percent=fixed_point> <triggers> }
-Supported Scopes: character
-Supported Targets: landed_title
-
---------------------
-
-any_heir_to_title - Iterate through all titles the scoped character is heir to
-any_heir_to_title = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: landed_title
 
@@ -3666,6 +3968,13 @@ Supported Targets: character
 
 --------------------
 
+any_maa_regiment - Iterate through all MaA regiments
+any_maa_regiment = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: regiment
+
+--------------------
+
 any_martial_councillor - Iterate through all martial-based councillors
 any_martial_councillor = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
@@ -3719,6 +4028,13 @@ any_neighboring_top_liege_realm_owner - A realm with a different top liege neigh
 any_neighboring_top_liege_realm_owner = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+any_noble_family - Iterate through all noble family titles in the realm of scoped character
+any_noble_family = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -3804,6 +4120,13 @@ any_potential_marriage_option - Iterate through all potential selectable marriag
 any_potential_marriage_option = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+any_powerful_family - Iterate through all directly owned provinces
+any_powerful_family = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: dynasty_house
 
 --------------------
 
@@ -4002,6 +4325,23 @@ Supported Targets: landed_title
 
 --------------------
 
+any_succession_appointment_invested_candidate - Iterate through all candidates supported by the scoped investor character for any title
+It may contain people outside of investor's top realm or no longer valid for appointment
+any_succession_appointment_invested_candidate = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+any_succession_appointment_invested_title - Iterate through all titles that has candidates supported by the scoped investor
+It may contain titles outside of investor's top realm, and so invalid for appointment,
+and candidates may be already dead
+any_succession_appointment_invested_title = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 any_targeting_faction - Iterate through all factions targeting the scope character
 any_targeting_faction = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
@@ -4121,6 +4461,29 @@ Supported Targets: character
 
 --------------------
 
+appointment_candidate_accumulated_score - Charater's accumulated score for appointment for the target title.
+Only investment count, and not character personality.
+appointment_candidate_accumulated_score = {
+    title = scope:title
+    value >= scope:fixed_point
+}
+"appointment_candidate_accumulated_score(scope:title)" >= value
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+appointment_candidate_score - Charater's total score for appointment for the target title
+appointment_candidate_score = {
+    title = scope:title
+    value >= scope:fixed_point
+}
+"appointment_candidate_score(scope:title)" >= value
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 aptitude - What is the scoped character's aptitude in the target court position type? aptitude = { court_position = court_position_type value >= 1 }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -4147,6 +4510,14 @@ Supported Scopes: character
 
 --------------------
 
+can_accept_task_contract - Check character against task contract requirement triggers?
+scope:actor = { can_accept_task_contract = SCOPE_TASK_CONTRACT }
+Traits: task_contract scope
+Supported Scopes: character
+Supported Targets: task_contract
+
+--------------------
+
 can_add_hook - will trying to hook the target character override the current hook? (if no current hook, always returns true)
 can_add_hook = {
 target = <character>
@@ -4154,6 +4525,14 @@ type = <hook type>
 days/months/year = whatever (optional; will use the duration from the type if not provided)
 }
 Supported Scopes: character
+
+--------------------
+
+can_appoint_for_title - Can character be appointed for the target title.
+Appointment is only allowed for duchies and above, and if it's top tier title for the holder
+Traits: landed_title scope
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -4225,6 +4604,19 @@ Supported Scopes: character
 
 --------------------
 
+can_create_maa - Can target character create MaA of specified type
+Traits: class CMenAtArmsTypeDatabase key
+Supported Scopes: character
+
+--------------------
+
+can_create_task_contract - scope:owner = { can_create_task_contact = { type_name = <key> employer = <character> } 
+can_create_task_contact = <key> 
+Can create task contract with <key> type and employer(optional) 
+Supported Scopes: character
+
+--------------------
+
 can_declare_war - Can the scoped character declare war on the defender with the specified casus bellis on the defender character for the target titles with an optional claimant. can_declare_war = { defender = X casus_belli = Y target_titles = { Z } claimant = A }
 Supported Scopes: character
 
@@ -4254,7 +4646,7 @@ Supported Scopes: character
 
 --------------------
 
-can_employ_court_position_type - can the scoped character employ the target court position type?
+can_employ_court_position_type - Can the scoped character employ the target court position type and is the position vacant?
 Supported Scopes: character
 
 --------------------
@@ -4788,6 +5180,28 @@ Supported Scopes: character
 
 --------------------
 
+has_appointment_invested_character - Has scoped investor supported appointment of target character in the same realm.
+Ignores if candidate has a valid reason to be appointed
+scope:investor = {
+	has_appointment_investment_in_character = scope:candidate
+}
+Traits: character scope
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+has_appointment_invested_title - Has scoped investor supported appointment for target title in the same realm.
+Returns true even for dead candidates, for the sake of efficiency.
+scope:investor = {
+	has_appointment_investment_in_title = scope:title
+}
+Traits: landed_title scope
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 has_artifact_claim - Does the scoped character have a personal or house claim on the target artifact
 Traits: artifact scope
 Supported Scopes: character
@@ -4835,7 +5249,7 @@ Supported Scopes: character
 
 --------------------
 
-has_claim_on - does the character have a claim on the target title?
+has_claim_on - does the character have an explicit claim on the target title?
 Traits: landed_title scope
 Supported Scopes: character
 Supported Targets: landed_title
@@ -4851,6 +5265,20 @@ Supported Scopes: character
 
 has_completed_inspiration - has_completed_inspiration = bool
 Checks if the scoped character has ever completed an inspiration
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+has_contact - Check if laamp has character as employer?
+scope:actor = { has_contact = SCOPE_CHARACTER }
+Traits: character scope
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+has_council - Does character have a council?
 Traits: yes/no 
 Supported Scopes: character
 
@@ -4935,6 +5363,34 @@ Supported Scopes: character
 
 has_divorce_reason - Does the character have the divorce reason towards the target?
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_domicile - Does scoped character have a domicile?
+scope:character = { has_domicile = yes }
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+has_domicile_temperament_high - Does scoped character have domicile temperament high?
+scope:character = { has_temperament_high = yes }
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+has_domicile_temperament_low - Does scoped character have domicile temperament low?
+scope:character = { has_temperament_low = yes }
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+has_domicile_temperament_neutral - Does scoped character have domicile temperament neutral?
+scope:character = { has_temperament_neutral = yes }
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -5040,6 +5496,13 @@ Supported Scopes: character
 --------------------
 
 has_inactive_trait - Does the character have this trait or a trait of this trait group amongst their inactive traits?
+Supported Scopes: character
+
+--------------------
+
+has_legitimacy - Does the scoped character uses legitimacy
+has_legitimacy = yes
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -5203,12 +5666,30 @@ Supported Scopes: character
 
 --------------------
 
+has_relation_event_recurrer - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_relation_favorite_child - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
 has_relation_flag - Does the scope character have a specific flag on a relation with the target character? target = , relation = , flag = 
 Supported Scopes: character
 
 --------------------
 
 has_relation_friend - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_relation_grudge - Checks for a scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -5257,6 +5738,12 @@ Supported Scopes: character
 --------------------
 
 has_relation_oaf - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_relation_old_flame - Checks for a scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -5427,6 +5914,13 @@ Supported Scopes: character
 
 --------------------
 
+has_scheme_countermeasure_parameter - Does the given ruler, or the liege of the given courtier, have a countermeasure with the given parameter?
+Can only check for boolean parameters.
+has_scheme_countermeasure_parameter = parameter_key
+Supported Scopes: character
+
+--------------------
+
 has_secret_relation_activity_recurrer - Checks for a secret scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
@@ -5463,7 +5957,25 @@ Supported Scopes: character
 
 --------------------
 
+has_secret_relation_event_recurrer - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_secret_relation_favorite_child - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
 has_secret_relation_friend - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_secret_relation_grudge - Checks for a secret scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -5512,6 +6024,12 @@ Supported Scopes: character
 --------------------
 
 has_secret_relation_oaf - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_secret_relation_old_flame - Checks for a secret scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -5626,7 +6144,7 @@ Supported Scopes: character
 
 --------------------
 
-has_strong_claim_on - does the character have a Pressed Claim on the target title?
+has_strong_claim_on - does the character have an explicit Pressed Claim on the target title?
 Traits: landed_title scope
 Supported Scopes: character
 Supported Targets: landed_title
@@ -5640,10 +6158,25 @@ Supported Targets: character
 
 --------------------
 
+has_strong_implicit_claim_on - does the character have an implicit Pressed Claim on the target title
+Traits: landed_title scope
+Supported Scopes: character
+Supported Targets: landed_title
+
+--------------------
+
 has_strong_usable_hook - does the character have a strong hook on the target that is not on cooldown, has_strong_usable_hook = <character>
 Traits: character scope
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+has_succession_appointment_investors - Does the scope the scoped character have any investors for their appointment towards the target title?
+scope:character = { has_succession_appointment_investors = scope:title }
+Traits: landed_title scope
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -5710,7 +6243,7 @@ Supported Targets: character
 
 --------------------
 
-has_weak_claim_on - does the character have an Unpressed Claim on the target title?
+has_weak_claim_on - does the character have an explicit Unpressed Claim on the target title?
 Traits: landed_title scope
 Supported Scopes: character
 Supported Targets: landed_title
@@ -5721,6 +6254,13 @@ has_weak_hook - does the character have a weak hook on the target. A strong hook
 Traits: character scope
 Supported Scopes: character
 Supported Targets: character
+
+--------------------
+
+has_weak_implicit_claim_on - does the character have an implicit Unpressed Claim on the target title
+Traits: landed_title scope
+Supported Scopes: character
+Supported Targets: landed_title
 
 --------------------
 
@@ -5737,6 +6277,11 @@ Supported Scopes: character
 --------------------
 
 highest_skill - Is the skill the highest skill (excluding Prowess) of the character? True even when there are multiple skills with the same highest value.
+Supported Scopes: character
+
+--------------------
+
+highest_skill_including_prowess - Is the skill the highest skill (including Prowess) of the character? True even when there are multiple skills with the same highest value.
 Supported Scopes: character
 
 --------------------
@@ -5766,6 +6311,18 @@ Supported Scopes: character
 
 in_diplomatic_range - Is the scope character and the target character within each others diplomatic range?
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+influence - does the character have the required influence?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+influence_level - does the character have the required influence level?
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
 --------------------
@@ -6067,6 +6624,14 @@ Supported Scopes: character
 
 --------------------
 
+is_contact_of - Check if character is employer of laamp
+scope:actor = { is_contact_of = SCOPE_CHARACTER }
+Traits: character scope
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 is_council_task_valid - Check if the task of the scope councillor is valid { task_type = council_position_type_key target = for_targeted_tasks }
 Supported Scopes: character
 
@@ -6158,6 +6723,12 @@ Supported Scopes: character
 
 is_extended_family_of - Is the character a extended family [cousins, uncles, aunts, nephews, nieces] of the target character?
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+is_favorite_child - is the character your favorite child?
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -6636,10 +7207,24 @@ Supported Scopes: character
 
 --------------------
 
-is_valid_as_agent_in_scheme - Is the scope character suitable as an agent for the target scheme?
+is_valid_as_agent_in_any_slot - Is the scope character suitable as an agent for any slot in target scheme?
 Traits: scheme scope
 Supported Scopes: character
 Supported Targets: scheme
+
+--------------------
+
+is_valid_as_agent_in_slot - Is the scope character suitable as an agent for the target agent slot?
+Traits: agent_slot scope
+Supported Scopes: character
+
+--------------------
+
+is_valid_designated_heir - Is the target character a valid potential designated heir of the scoped character?
+(can they inherit one or more of the titles the scoped character holds?)
+is_valid_designated_heir = scope:target_character
+Traits: character target 
+Supported Scopes: character
 
 --------------------
 
@@ -6662,6 +7247,11 @@ is_valid_successor_for_accolade = accolade
 Traits: accolade scope
 Supported Scopes: character
 Supported Targets: accolade
+
+--------------------
+
+is_valid_to_hire_court_position_type - Does the scoped character fulfill the requirements for being employed as the targeted court position type?
+Supported Scopes: character
 
 --------------------
 
@@ -6693,7 +7283,7 @@ Supported Scopes: character
 
 --------------------
 
-join_scheme_chance - Check if the change of the scope character is between the given range (being min and max exclusive)
+join_scheme_chance - Check if the chance of the scope character is between the given range (being min and max exclusive)
 join_scheme_chance = { 
     scheme = scheme_target #An ongoing scheme
     max = 0
@@ -6793,6 +7383,18 @@ Supported Scopes: character
 --------------------
 
 long_term_gold_maximum - How big is the 'long term' budget is supposed to get?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+maa_regiments_count - Current number of personal MaA regiments
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+maa_regiments_max_count - Max number of personal MaA regiment
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7067,7 +7669,25 @@ Supported Scopes: character
 
 --------------------
 
+num_of_relation_event_recurrer - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_of_relation_favorite_child - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 num_of_relation_friend - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_of_relation_grudge - Compares the number of scripted relations a character has of the type
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7116,6 +7736,12 @@ Supported Scopes: character
 --------------------
 
 num_of_relation_oaf - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_of_relation_old_flame - Compares the number of scripted relations a character has of the type
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7211,6 +7837,13 @@ Supported Scopes: character
 
 --------------------
 
+num_offered_task_contracts - Count of active task contract offered
+scope:actor = { num_offered_task_contracts > 0 }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 num_personal_legend_seeds - How many personal legend seeds are available to this character?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -7219,6 +7852,20 @@ Supported Scopes: character
 
 num_sinful_traits - Does the scoped character have this number of virtous traits?
 num_virtous_traits > 5 ORnum_virtous_traits = { value > 5 faith = scope:faith }, to base it on what a specific faith considers virtuous
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_taken_task_contracts - Amount of taken task contracts for character (accepted & not yet completed)
+scope:actor = { num_taken_task_contracts > 0 }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_task_contracts - Amount of tas contracts for character
+scope:actor = { num_task_contracts > 0 }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7381,6 +8028,12 @@ Supported Scopes: character
 
 --------------------
 
+number_title_maa_regiments_of_type - Does the scope character have value amount of MaA of the type for their controlled title troops?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 opinion - is the character's opinion of the target greater or equal than the value? opinion = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -7460,6 +8113,22 @@ Supported Scopes: character
 --------------------
 
 prestige_level - does the character have the required prestige level?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+provision_cost_to_domicile - What is the provision cost between the domicile owner and the domicile's current location."
+In order to calculate the cost we will operate in three stages: 
+1. Check if the from and to provinces are direct neighbours. 
+2. Check any travel plan the domicile owner might have and see if the from and 
+   to are part of the travel plan. This will require domicile's location to be 
+   the first entry in the travel plan. 
+3. Do a pathfind between the domicile and domicile owner's current location, 
+   using that path for the cost.
+scope:character = {
+	provision_cost_to_domicile > 100
+}
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7602,6 +8271,25 @@ Supported Targets: activity_type
 
 --------------------
 
+static_group_filter - Check if this character 'matches' a group, with a certain match percentage.
+A match value can range from 0.0 to 1.0. (0% to 100%)
+A static group filter means: this character will always get the same result against the same group. (there is no 'random' involved beyond the name of the group)
+On average (across all characters), an 0.1 match means you would get 'yes' for 10% of the characters to match this group, and it would always be the same characters for the same group.
+
+static_group_filter = {
+    group = <a_group_id>
+    match = 0.1
+}
+
+Instead of a group id, you can supply a scope, and it will use that scope's value as the group 'id'.
+static_group_filter = {
+    scope = <any_scope>
+    match = 0.1
+}
+Supported Scopes: character
+
+--------------------
+
 stewardship - does the character have the required stewardship skill level?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -7664,6 +8352,19 @@ Supported Scopes: character
 --------------------
 
 sub_realm_size - Is the scoped character's sub-realm this big (# of counties)?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+succession_appointment_score_invested - How much has the scoped character invested in the target title towards the target candidate? 
+scope:character = { 
+	succession_appointment_score_invested = {
+		title = scope:title 
+		candidate = scope:character
+		value < 0
+	}
+}
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7863,6 +8564,17 @@ Supported Scopes: character
 
 --------------------
 
+would_be_valid_for_court_position - can the scoped character be employed as court position by the employer?
+scope:character = {
+	would_be_valid_for_court_position = {
+		employer = scope:employer
+		court_position = court_physician_court_position
+	}
+}
+Supported Scopes: character
+
+--------------------
+
 year_of_birth - Get character year_of_birth: scope:character = { year_of_birth > 1096 }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -7973,6 +8685,13 @@ Supported Targets: faith
 
 --------------------
 
+any_controlled_title_maa_regiment - Iterate through controlled title regiments
+any_controlled_title_maa_regiment = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 any_county_province - Iterate through all provinces in a county
 any_county_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed_title
@@ -8043,6 +8762,13 @@ Supported Targets: character
 
 --------------------
 
+any_important_location_for_title - Iterate through all counties that are important for the scoped title
+any_important_location_for_title = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 any_in_de_facto_hierarchy - Iterate through the title itself, all de facto vassals, and below. The continue trigger specifies whether to recursively iterate through the vassal's vassal
 This is unrelated to the limit; if the limit is met it is added to the list, but its vassals will get checked even if the limit isn't met as long as the 'continue' trigger is
 ..._de_jure_vassal_and_below = { continue = { conditions } }
@@ -8068,6 +8794,13 @@ Supported Targets: landed_title
 
 --------------------
 
+any_owned_title_maa_regiment - Iterate through owned title MaA regiments
+any_owned_title_maa_regiment = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: regiment
+
+--------------------
+
 any_past_holder - Iterate through all past owners of a title from earliest to latest
 any_past_holder = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed_title
@@ -8077,6 +8810,22 @@ Supported Targets: character
 
 any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
 any_past_holder_reversed = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: character
+
+--------------------
+
+any_succession_appointment_investors - Iterate through all investors of target candidate within the scoped title. Optionally specify a value to filter by investment amount
+scope:landed_title = {
+	any/every/ordered/random_succession_appointment_investors = {
+		candidate = scope:character
+		value > {			# Optional compare value to
+			value = 100		# only have characters that
+			add = 10		# have invested this much.
+		}
+	}
+}
+any_succession_appointment_investors = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed_title
 Supported Targets: character
 
@@ -8096,10 +8845,24 @@ Supported Targets: character
 
 --------------------
 
+any_title_interested_in_location - Iterate through titles that consider scoped county an important location
+any_title_interested_in_location = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 any_title_joined_faction - Iterate through all factions joined the scope landed title
 any_title_joined_faction = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed_title
 Supported Targets: faction
+
+--------------------
+
+any_title_maa_regiment - Iterate through title all MaA regiments
+any_title_maa_regiment = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed_title
+Supported Targets: regiment
 
 --------------------
 
@@ -8161,6 +8924,12 @@ Supported Targets: landed_title
 
 can_be_leased_out - Can the scoped title be leased out?
 Traits: yes/no 
+Supported Scopes: landed_title
+
+--------------------
+
+can_create_title_maa - Can create MaA of specified type for the scoped title
+Traits: class CMenAtArmsTypeDatabase key
 Supported Scopes: landed_title
 
 --------------------
@@ -8238,7 +9007,7 @@ Supported Scopes: landed_title
 
 --------------------
 
-has_character_nominiated - Has the target character nominated a successor for the scoped title
+has_character_nominiated - Has the target character nominated a successor for the scoped elective title
 Traits: character target 
 Supported Scopes: landed_title
 
@@ -8376,6 +9145,14 @@ Supported Targets: faith
 
 --------------------
 
+is_important_location - Is the scoped county important for target title?
+scope:county = { is_important_location = scope:title }
+Traits: landed_title scope
+Supported Scopes: landed_title
+Supported Targets: landed_title
+
+--------------------
+
 is_landless_type_title - Is this title considered a landless type title?
 Traits: yes/no 
 Supported Scopes: landed_title
@@ -8399,6 +9176,12 @@ is_neighbor_to_realm = character
 Traits: character scope
 Supported Scopes: landed_title
 Supported Targets: character
+
+--------------------
+
+is_noble_family_title - Is this title used by noble family to allow landless playable
+Traits: yes/no 
+Supported Scopes: landed_title
 
 --------------------
 
@@ -8468,11 +9251,12 @@ Supported Scopes: landed_title
 --------------------
 
 place_in_line_of_succession - what place in line of succession does the character hold?
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: landed_title
 
 --------------------
 
-recent_history - Does the scope title have a history entry of the specified type in recent history?
+recent_history - Does the scoped title have a history entry of the specified type in recent history?
 recent_history = { type = X days/months/years = Y }
 The type can be omitted, all history types are considered then
 Possible types:
@@ -8494,6 +9278,9 @@ Possible types:
 	returned
 	faction_demand
 	swear_fealty
+	stepped_down
+	appointment
+	appointment_succession
 Supported Scopes: landed_title
 
 --------------------
@@ -8751,6 +9538,94 @@ Supported Scopes: combat_side
 troops_ratio - Side's troops/opposide side's troops.ntroops_ratio < 0.5
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: combat_side
+
+--------------------
+
+external_domicile_building_slots - Total amount of external building slots for scoped domicile
+scope:domicile = { external_domicile_building_slots == 5 }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
+
+--------------------
+
+free_external_domicile_building_slots - Amount of free external building slots for scoped domicile
+scope:domicile = { free_external_domicile_building_slots < 1 }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
+
+--------------------
+
+has_domicile_building - Does scoped domicile have building of specified type?
+scope:domicile = { has_domicile_building = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+has_domicile_building_or_higher - Does scoped domicile have building or one of its upgrades?
+scope:domicile = { has_domicile_building_or_higher = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+has_domicile_construction - Is the scoped domicile currently constructing the specified building?
+scope:domicile = { has_domicile_construction = domicile building key }
+Supported Scopes: domicile
+
+--------------------
+
+has_domicile_parameter - Does scoped domicile have parameter in one or more of its buildings?
+scope:domicile = { has_domicile_parameter = parameter_name }
+Supported Scopes: domicile
+
+--------------------
+
+has_ongoing_domicile_construction - Does the scoped domicile have an ongoing construction?)
+scope:domicile = {
+	has_ongoing_construction = yes/no
+}
+Traits: yes/no 
+Supported Scopes: domicile
+
+--------------------
+
+is_domicile_type - Is the scoped domicile of domicile type?
+scope:domicile = { is_domicile_type = domicile_type_key }
+Supported Scopes: domicile
+
+--------------------
+
+max_provisions - does the scoped domicile have the required max provisions?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
+
+--------------------
+
+num_domicile_buildings - Amount of buildings constructed for scoped domicile
+scope:domicile = { num_domicile_buildings > 0 }
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
+
+--------------------
+
+provision_cost_to_owner - Is the provision cost from the domicile's current location to it's owner.
+In order to calculate the cost we will operate in three stages: 
+1. Check if the from and to provinces are direct neighbours. 
+2. Check any travel plan the domicile owner might have and see if the from and 
+   to are part of the travel plan. This will require domicile's location to be 
+   the first entry in the travel plan. 
+3. Do a pathfind between the domicile and domicile owner's current location, 
+   using that path for the cost.
+scope:domicile = {
+	provision_cost_to_owner < 100
+}
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
+
+--------------------
+
+provisions - does the scoped domicile have the required provisions?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: domicile
 
 --------------------
 
