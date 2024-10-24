@@ -1,5 +1,11 @@
 # Paradox Highlight Changelog
 
+## Version 1.7.1, 2024-10-24
+
+## Enhancement
+
+- Update `Crusader Kings III` to version 1.13.2 (Basileus)
+
 ## Version 1.7.0, 2024-10-19
 
 ### Enhancements
