@@ -2,3 +2,6 @@
 docs/**
 temp/**
 .gitignore
+*.md
+!CHANGELOG.md
+!README.md
