@@ -66,7 +66,7 @@
 			"patterns": [
 				{ "include": "#macro" },
 				{
-					"match": "\\b(block|blockoverride|scripted_trigger|scripted_effect|template|type|types)\\b",
+					"match": "\\b(?:block|blockoverride|scripted_trigger|scripted_effect|template|type|types)\\b",
 					"name": "storage.type.paradox"
 				},
 				{
@@ -164,16 +164,16 @@
 				},
 				{
 					"comment": "LHS boolean operators",
-					"match": "(?i)\\b(or|and|not|nor|nand)\\b",
+					"match": "(?i)\\b(?:or|and|not|nor|nand)\\b",
 					"name": "markup.bold keyword.operator.logical.paradox"
 				},
 				{
 					"comment": "Other LHS operators",
-					"match": "\\b(limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch|alternative_limit|continue|filter)\\b",
+					"match": "\\b(?:limit|if|else|else_if|trigger_if|trigger_else|trigger_else_if|while|switch|alternative_limit|continue|filter)\\b",
 					"name": "markup.bold keyword.control.flow.paradox"
 				},
 				{
-					"match": "\\b(add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as|save_temporary_value_as)\\b",
+					"match": "\\b(?:add_to_temporary_list|assert_if|assert_read|custom_description|custom_tooltip|debug_log|save_temporary_opinion_value_as|save_temporary_scope_as|save_temporary_scope_value_as|save_temporary_value_as)\\b",
 					"name": "markup.bold variable.language.multi.paradox"
 				},
 				{ "include": "#parameters-lhs" },
@@ -188,7 +188,7 @@
 			"contentName": "meta.id.paradox.rhs.non-comparable.non-prefixed",
 			"patterns": [
 				{
-					"match": "\\b(yes|no)\\b",
+					"match": "\\b(?:yes|no)\\b",
 					"name": "markup.bold constant.language.paradox"
 				},
 				{ "include": "#parameters-rhs" },
@@ -212,7 +212,7 @@
 			"name": "markup.bold support.constant.parameter.lhs.paradox"
 		},
 		"parameters-lhs-comparable": {
-			"match": "\\b(value|count|percent|amount)\\b",
+			"match": "\\b(?:value|count|percent|amount)\\b",
 			"name": "markup.bold support.constant.parameter.lhs.paradox"
 		},
 		"parameters-rhs": {
@@ -220,7 +220,7 @@
 			"name": "markup.bold support.constant.parameter.rhs.paradox"
 		},
 		"parameters-rhs-comparable": {
-			"match": "\\b(strongly_approve|approve|neutral|disapporve|strongly_disapprove)\\b",
+			"match": "\\b(?:strongly_approve|approve|neutral|disapporve|strongly_disapprove)\\b",
 			"name": "markup.bold support.constant.parameter.rhs.paradox.ck3"
 		},
 		"prefix-scopes": {
@@ -287,7 +287,7 @@
 		},
 		"scope": {
 			"comment": "Original relative scope change",
-			"match": "(?i)\\b(root|from|prev|this)\\b",
+			"match": "(?i)\\b(?:root|from|prev|this)\\b",
 			"name": "markup.bold support.type.scope.paradox"
 		},
 		"script_constants": {
