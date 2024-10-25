@@ -14,16 +14,10 @@
 				{ "include": "#event_targets" }
 			]
 		},
-		"L:meta.scope.paradox": {
+		"L:meta.scope.paradox, L:meta.id.paradox.rhs.non-comparable.non-prefixed": {
 			"patterns": [
 				{ "include": "#event_targets" },
 				{ "include": "#scopes" }
-			]
-		},
-		"L:meta.id.paradox.rhs.non-comparable.non-prefixed": {
-			"patterns": [
-				{ "include": "#scopes" },
-				{ "include": "#modifiers" }
 			]
 		}
 	},
