@@ -9,6 +9,7 @@ action
 activity
 activity_guests
 activity_host
+actor_artifacts
 actor_de_jure_titles
 actor_domain_titles
 actor_domain_titles_including_leases

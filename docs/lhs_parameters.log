@@ -6,6 +6,7 @@ accept_text
 accessory
 accolade_categories
 accolade_parameters
+action
 activate_production_methods
 active_out_of_context
 active_update_frequency
@@ -18,6 +19,7 @@ actual_size
 add
 add_claim_on_loss
 add_commander_trait
+add_entry
 add_infamy_for_starting_initiator_wargoals
 add_interest_group
 add_matrilineal_spouse
@@ -35,6 +37,9 @@ affected_by_development
 affected_by_regime_change
 after
 after_creation
+age
+age_multiplier
+agendas
 agent_join_chance
 agent_join_threshold
 agent_leave_threshold
@@ -43,9 +48,11 @@ aggression
 agitator_modifier
 agitator_usage
 agitator_weight
+ahead_of_time
 ai
 ai_accept
 ai_accept_negotiation
+ai_acceptance
 ai_acceptance_max
 ai_can_target_all_titles
 ai_chance
@@ -94,6 +101,10 @@ ai_will_do
 ai_will_select_province
 alert_group
 alert_icon
+alert_icon_gfx
+alert_icon_index
+alert_index
+alert_tooltip
 alias
 align
 all
@@ -105,12 +116,14 @@ allow_discriminated
 allow_hostages
 allow_in_gold_provinces
 allow_negotiated_peace
+allow_normal_conversion
 allow_only_owner_religion
 allow_outside
 allow_overlord_canton
 allow_zero_guest_invites
 allowed_against_character
 allowed_against_character_display_regardless
+allowed_domicile_types
 allowed_for_character
 allowed_for_character_display_regardless
 allowed_in_hired_troops
@@ -173,6 +186,7 @@ automatic_seat_in_parliament
 autonomy_level
 autoresize
 autoresizescrollarea
+available
 available_for_interest_group
 average
 background
@@ -184,6 +198,8 @@ barony_valid
 base
 base_employer_modifier
 base_enactment_days
+base_influence
+base_monthly_growth
 base_secrecy
 base_success_chance
 base_xp_gain
@@ -191,15 +207,19 @@ bastard
 battle_modifier
 battle_participation_mult
 become_subject_value
+benefits
 birth
 birth_date
 blend_mode
 blend_modes
 blend_range
+block_cultural_union
 blocked_by_diplomatic_status
 blockoverride
 body_part
+bonus
 bonus_manufactory
+bonus_modifier
 boolean
 both_parent_has_trait_inherit_chance
 boy
@@ -308,6 +328,7 @@ cannot_switch_owner
 capital
 capital_province
 capped_by_resources
+capped_by_special_force_limit
 capped_resources
 cash_reserves_max
 catalyst
@@ -317,6 +338,7 @@ categories
 category
 category_cooldown
 category_cooldown_against_recipient
+cause
 cede_state_trigger
 ceiling
 center_portrait
@@ -396,6 +418,9 @@ comparison_law
 compatibility
 complete
 completed
+condition
+conditional
+conditional_modifier
 conditions
 config
 confirm_text
@@ -413,12 +438,14 @@ convoy_contribution
 convoy_cost_multiplier
 cooldown
 cooldown_against_recipient
+cooldown_years
 corresponding
 cost
 cost_gold
 cost_multiplier
 cost_piety
 cost_prestige
+cost_type
 council
 council_owner_modifier
 councillor_modifier
@@ -428,6 +455,9 @@ counties
 country
 country_formation
 country_modifier
+country_modifier_angry
+country_modifier_happy
+country_modifier_neutral
 country_modifiers
 country_of_origin
 country_trigger
@@ -473,13 +503,19 @@ current_value
 curve
 custom
 custom_ai_explanation
+custom_attributes
 custom_button
+custom_desc
 custom_employee_modifier_description
 custom_employer_modifier_description
 custom_faith_icons
+custom_icon
+custom_name
 custom_other_loc
+custom_text_box
 daily_effect
 damage
+data
 datacontext
 datamodel
 datamodel_reuse_widgets
@@ -522,6 +558,7 @@ defender_ticking_warscore
 defender_ticking_warscore_delay
 defender_wargoal_percentage
 defenders
+defined_text
 defines
 definite_form
 definition
@@ -660,13 +697,17 @@ execute_rebel_acceptance_command
 exempt_from_service
 expand
 expandable
+expects_institution
 experience
 expiration_days
 extra_icon
 extra_picture
 extra_shortcut
+factions
 factor
 fail
+fail_if
+failing_effect
 faith_effects
 faith_modifier
 faiths
@@ -729,6 +770,7 @@ fontcolor
 fontsize
 fontsize_min
 fonttintcolor
+force_limit_percentage
 force_notification
 force_pause_game
 forced_duration
@@ -739,6 +781,7 @@ formation_modifier
 fortification
 founding_date
 frame
+frame_variable
 framesize
 freeze_scheme_when_traveling
 freeze_scheme_when_traveling_target
@@ -757,6 +800,7 @@ gender_law
 gene
 general_modifier
 generated_content
+generic
 genes
 genetic
 genetic_constraint_all
@@ -776,6 +820,7 @@ good
 goods_stances
 goto
 government
+government_abilities
 government_specific
 governments
 gradient_border_settings
@@ -807,18 +852,23 @@ hair
 happened
 harsh_treatment
 has_consort_regency
+has_country_shield
 has_dynamic_texture
 has_economy
 has_events
 has_fog_of_war
+has_harem
 has_institution
+has_janissaries
 has_junior_participant
 has_max_level
 has_military
+has_pashas
 has_politics
 has_reform
 has_valid_target
 has_valid_target_showing_failures_only
+have_had_reform
 hbox
 head
 header_info
@@ -850,6 +900,7 @@ historical_council
 historical_idea_groups
 historical_score
 historical_units
+history
 history_id
 history_loc_override
 holder
@@ -920,6 +971,9 @@ infamy_affects_maintenance
 infamy_aggressor_scaling
 infamy_target_scaling
 influence
+influence_from_dev_modifier
+influence_modifier
+influence_scaled_conditional_modifier
 influencing_fort
 infrastructure_usage_per_level
 inherit
@@ -934,12 +988,14 @@ input_action
 insert
 instance
 instances
+instant
 instant_switch
 institution
 institution_modifier
 institution_scores
 integer_range
 intents
+interactions
 interest_group_leader_usage
 interest_group_modifier
 interest_group_trigger
@@ -958,6 +1014,7 @@ intermediary_breakdown_no
 intermediary_breakdown_yes
 intermediary_notification_text
 intersectionmask
+intersectionmask_texture
 invalid
 invalid_for_government
 investment_scores
@@ -973,6 +1030,7 @@ is_about_to_auto_break
 is_admiral
 is_agitator
 is_alliance
+is_allowed
 is_allowed_claim_title
 is_always_usable
 is_available_on_create
@@ -991,6 +1049,7 @@ is_dangerous
 is_decaying
 is_default
 is_desert
+is_discounted
 is_enabled
 is_exclusive
 is_foreign_investment_rights
@@ -1009,7 +1068,9 @@ is_loading_tip
 is_location_valid
 is_main_tag_only
 is_major_formation
+is_male
 is_military
+is_mtth_scaled_to_size
 is_named_from_capital
 is_pagan
 is_playable
@@ -1049,6 +1110,7 @@ key
 knight_army_modifier
 knight_modifier
 label
+land_ownership_modifier
 land_usage
 landless
 landless_attacker_needs_armies
@@ -1076,6 +1138,7 @@ lease_liege
 left_icon
 left_portrait
 legacy
+legacy_equivalent
 lens
 level
 level_cost_2
@@ -1098,10 +1161,13 @@ limited_to_frontier_colonization
 list
 literacy_target
 local
+localisation_key
 localization
 localization_key
 localization_values
+location
 locator
+lock_level_when_selected
 log
 log_loc_errors
 loop
@@ -1116,9 +1182,12 @@ lower_right_portrait
 lower_strata_pops
 loyalties_gain
 loyalty
+loyalty_modifier
+loyalty_scaled_conditional_modifier
 loyalty_score
 maa_upgrade
 macro
+maintain_dynasty
 major
 make_obsolete
 male
@@ -1141,6 +1210,7 @@ map_object
 map_painting_mode
 map_painting_mode_alternate
 map_painting_mode_secondary
+map_setup
 mapmode
 margin
 margin_bottom
@@ -1157,6 +1227,7 @@ mat_grf_name_chance
 mat_grm_name_chance
 materials
 max
+max_age
 max_ai_diplo_distance_to_title
 max_approval
 max_attacker_score_from_battles
@@ -1202,6 +1273,7 @@ message
 middle_strata_pops
 military_type
 min
+min_age
 min_approval
 min_contribution_label
 min_hiring_rate
@@ -1258,6 +1330,7 @@ name
 name_list
 name_lists
 names
+nation_designer_trigger
 natural
 natural_death_trigger
 naval
@@ -1284,6 +1357,7 @@ normal
 notification
 notification_text
 notification_type
+notify_trigger
 noun
 nr_of_tiles
 num_decimals
@@ -1307,6 +1381,7 @@ on_action
 on_actions
 on_activate
 on_activate_while_mobilized
+on_activation
 on_active_state_pulse
 on_agent_join
 on_agent_leave
@@ -1333,6 +1408,7 @@ on_created_soundeffect
 on_creation
 on_deactivate
 on_deactivate_while_mobilized
+on_deactivation
 on_declaration
 on_decline
 on_decline_summary
@@ -1393,11 +1469,14 @@ on_start
 on_start_task
 on_start_task_county
 on_start_task_court
+on_state_edict_enacted
+on_state_edict_revoked
 on_tax_collector_fired
 on_tax_collector_hired
 on_timeout
 on_travel_end_effect
 on_travel_state_pulse
+on_trigger
 on_trigger_fail
 on_used
 on_vassal_assigned
@@ -1445,6 +1524,7 @@ overlord_must_be_higher_rank
 overlord_must_be_same_country_type
 override_background
 override_centerpiece_mesh
+override_country_name
 override_icon
 override_sound
 override_transition
@@ -1545,6 +1625,7 @@ power_per_agent_skill_point
 power_per_skill_point
 power_threshold
 power_type
+powers
 pre_answer_maybe_breakdown_key
 pre_answer_maybe_key
 pre_answer_no_breakdown_key
@@ -1552,6 +1633,7 @@ pre_answer_no_key
 pre_answer_yes_breakdown_key
 pre_answer_yes_key
 pre_auto_accept
+pre_effect
 preferred_religions
 preferred_terrain
 prefix
@@ -1561,6 +1643,7 @@ prestige_average_threshold
 prestige_factor
 prestige_opinion_override
 prestige_relative_threshold
+previous_building
 primary
 primary_building
 primary_cultures
@@ -1574,6 +1657,7 @@ principle
 prioritized_mood
 priority
 prison
+privileges
 pro_interest_groups
 production_method
 production_method_groups
@@ -1596,11 +1680,13 @@ province_culture_modifier
 province_description
 province_dynasty_modifier
 province_filter
+province_independence_weight
 province_modifier
 province_modifiers
 province_score
 province_terrain_modifier
 provinces
+provinces_to_highlight
 pseudo_localization_enabled
 public_knowledge
 pulse_actions
@@ -1611,6 +1697,7 @@ qualifications_growth_desc
 random_creation
 random_creation_weight
 random_events
+random_nation_chance
 random_on_actions
 random_traits
 random_traits_list
@@ -1646,6 +1733,7 @@ religious_acceptance_rule
 religious_conflicts
 remove_default_outfit
 remove_existing_councillor
+removed_effect
 render_under_water
 renown
 reorder_on_mouse
@@ -1656,10 +1744,12 @@ replacement_if_valid
 replacement_modifiers
 replaces_company
 reply_item_key
+require_acceptance
 required_construction
 required_county_holdings
 required_features
 required_input_goods
+required_missions
 required_months_in_court
 required_num_states
 required_states_fraction
@@ -1677,6 +1767,7 @@ reserved_female_names
 reserved_male_names
 reserves
 reset
+reset_on_new_ruler
 residence_points_per_level
 resistance_per_skill_point
 resizable
@@ -1684,6 +1775,7 @@ resizeparent
 resource
 rest
 restart_on_finish
+restore_country_name
 restrictparent_min
 reverse_pact
 revoke_cost
@@ -1754,6 +1846,7 @@ selectable_in_lens
 selectedindex
 selection_count
 selection_tooltip
+selection_weight
 send_name
 send_option
 send_options_exclusive
@@ -1827,6 +1920,7 @@ special_character_title
 special_guest
 special_interaction
 special_selection
+special_unit_category
 specular
 sprite
 spriteborder
@@ -1904,9 +1998,11 @@ targeted_titles
 tariff_modifier_export_priority
 tariff_modifier_import_priority
 tariff_modifier_no_priority
+task_completed_effect
 task_current_value
 task_max_value
 task_progress
+task_requirements
 task_type
 tax
 tax_contribution_postfix
@@ -2077,6 +2173,7 @@ valid_character
 valid_country_types
 valid_county
 valid_for_country
+valid_for_nation_designer
 valid_for_subject
 valid_holdings
 valid_overlord_country_types
@@ -2091,6 +2188,7 @@ valid_to_start
 valid_to_start_display_regardless
 value
 variable
+variable_name
 vassal_contract
 vassal_contracts
 vassal_modifier
@@ -2153,6 +2251,7 @@ window_file
 window_name
 winter_bonus
 winter_severity_bias
+with
 women_can_have_consorts
 women_can_have_multiple_spouses
 wood
