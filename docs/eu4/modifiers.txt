@@ -1,6 +1,7 @@
 accept_vassalization_reasons
 add_tribal_land_cost
 adm_advisor_cost
+adm_tech_cost_modifier
 administrative_efficiency
 admiral_cost
 admiral_skill_gain_modifier
@@ -24,6 +25,7 @@ allowed_caravel_fraction
 allowed_galleass_fraction
 allowed_galleon_fraction
 allowed_geobukseon_fraction
+allowed_idea_groups
 allowed_mamluks_fraction
 allowed_man_of_war_fraction
 allowed_marine_fraction
@@ -77,6 +79,7 @@ block_slave_raid
 blockade_efficiency
 blockade_force_required
 blockade_impact_on_siege_in_fleet_modifier
+blood_gain_modifier
 brahmins_hindu_influence_modifier
 brahmins_hindu_loyalty_modifier
 brahmins_muslim_influence_modifier
@@ -87,6 +90,7 @@ brahmins_privilege_slots
 build_cost
 build_time
 building_budget_multiplier
+bureaucrats_influence
 burghers_influence_modifier
 burghers_loyalty_modifier
 burghers_privilege_slots
@@ -161,6 +165,7 @@ dhimmi_loyalty_modifier
 dhimmi_privilege_slots
 different_religion_war_multiplier
 dip_advisor_cost
+dip_tech_cost_modifier
 diplomatic_annexation_cost
 diplomatic_reputation
 diplomatic_upkeep
@@ -180,6 +185,7 @@ enemy_strength_multiplier
 enforce_religion_cost
 engagement_cost
 engagement_cost_modifier
+enuchs_influence
 envoy_travel_time
 establish_order_cost
 estate_interaction_cooldown_modifier
@@ -187,8 +193,10 @@ eunuchs_influence_modifier
 eunuchs_loyalty_modifier
 eunuchs_privilege_slots
 expand_administration_cost
+expand_infrastructure_cost
 expand_infrastructure_cost_modifier
 expel_minorities_cost
+expire_message_type
 exploration_mission_range_in_fleet_modifier
 extra_manpower_at_religious_war
 fabricate_claims_cost
@@ -213,8 +221,10 @@ free_maintenance_on_expl_conq
 free_mil_policy
 free_navy_leader_pool
 free_policy
+galley_cannons
 galley_cost
 galley_hull_size_modifier
+galley_hullsize
 galley_number_of_cannons_modifier
 galley_power
 garrison_damage
@@ -281,6 +291,7 @@ has_galleon
 has_geobukseon
 has_mamluks
 has_man_of_war
+has_marines
 has_musketeer
 has_qizilbash
 has_samurai
@@ -288,7 +299,9 @@ has_streltsy
 has_tercio
 has_voc_indiamen
 heathen_ally_acceptance
+heavy_ship_cannons
 heavy_ship_cost
+heavy_ship_hull_size
 heavy_ship_hull_size_modifier
 heavy_ship_number_of_cannons_modifier
 heavy_ship_power
@@ -324,6 +337,11 @@ institution_growth
 institution_spread_from_true_faith
 interest
 inti_reforms_passed
+is_banner_modifier
+is_cossack_modifier
+is_marine_modifier
+is_scholar_modifier
+is_streltsy_modifier
 jains_influence_modifier
 jains_loyalty_modifier
 jains_privilege_slots
@@ -352,7 +370,9 @@ legitimacy
 legitimate_subject_elector
 liberty_desire
 liberty_desire_from_subject_development
+light_ship_cannons
 light_ship_cost
+light_ship_hull_size
 light_ship_hull_size_modifier
 light_ship_number_of_cannons_modifier
 light_ship_power
@@ -432,6 +452,7 @@ local_warscore_cost_modifier
 local_years_of_nationalism
 loot_amount
 loyalty_change_on_revoked
+maneuver_value
 manpower_against_imperial_enemies
 manpower_in_accepted_culture_provinces
 manpower_in_culture_group_provinces
@@ -463,10 +484,16 @@ max_hostile_attrition
 max_possible_parliament_seats
 max_revolutionary_zeal
 max_terms
+may_agitate_for_liberty
+may_build_flagships
 may_build_supply_depot
 MAY_conditional_loyalty
+may_corrupt_officials
+may_drill
 may_establish_frontier
 may_explore
+may_fabricate_claims
+may_infiltrate_administration
 may_not_convert_territories
 may_not_reduce_inflation
 may_perform_slave_raid
@@ -474,6 +501,11 @@ may_perform_slave_raid_on_same_religion
 may_recruit_female_generals
 may_refill_garrison
 may_return_manpower_on_disband
+may_sabotage_recruitment
+may_slander_merchants
+may_sow_discontent
+may_steal_maps
+may_study_technology
 maya_reforms_passed
 merc_independent_from_trade_range
 merc_leader_army_tradition
@@ -486,6 +518,7 @@ merchants
 meritocracy
 migration_cost
 mil_advisor_cost
+mil_tech_cost_modifier
 military_tactics
 min_autonomy
 min_autonomy_in_territories
@@ -499,7 +532,13 @@ monarch_military_power
 monarch_power_tribute
 monthly_arabic_trade_influence_power
 monthly_asha_vahishta
+monthly_authority_power
+monthly_blood
 monthly_church_power
+monthly_council_consensus
+monthly_cultural_unity
+monthly_divine_authority
+monthly_egyptian_westernization
 monthly_favor_modifier
 monthly_federation_favor_growth
 monthly_fervor_increase
@@ -508,9 +547,14 @@ monthly_heir_claim_increase
 monthly_heir_claim_increase_modifier
 monthly_karma
 monthly_karma_accelerator
+monthly_militarized_society
+monthly_ottoman_decadence
 monthly_persian_influence
 monthly_piety
 monthly_piety_accelerator
+monthly_prussian_militarized_society_1
+monthly_prussian_militarized_society_2
+monthly_prussian_militarized_society_3
 monthly_reform_progress
 monthly_reform_progress_building
 monthly_reform_progress_modifier
@@ -524,12 +568,16 @@ move_capital_cost_modifier
 movement_speed
 movement_speed_in_fleet_modifier
 movement_speed_onto_off_boat_modifier
+mr_aristocrats_influence
+mr_guilds_influence
+mr_traders_influence
 nation_designer_cost
 national_focus_years
 native_assimilation
 native_uprising_chance
 naval_attrition
 naval_attrition_in_fleet_modifier
+naval_engagement_width
 naval_forcelimit
 naval_forcelimit_modifier
 naval_maintenance_flagship_modifier
@@ -590,6 +638,7 @@ possible_dip_policy
 possible_mil_policy
 possible_policy
 power_projection_from_insults
+pr_smugglers_influence
 prestige
 prestige_decay
 prestige_from_battles_in_fleet_modifier
@@ -600,6 +649,7 @@ privateer_efficiency
 privateering_efficiency_in_fleet_modifier
 production_efficiency
 promote_culture_cost
+pronoia_amount_check_influence
 province_trade_power_modifier
 province_trade_power_value
 province_warscore_cost
@@ -625,6 +675,7 @@ reduced_liberty_desire
 reduced_liberty_desire_on_other_continent
 reduced_liberty_desire_on_same_continent
 reduced_native_attacks
+reduced_naval_attrition
 reduced_stab_impacts
 reduced_trade_penalty_on_non_main_tradenode
 reelection_cost
@@ -642,6 +693,7 @@ relation_with_other_culture
 relation_with_same_culture
 relation_with_same_culture_group
 relation_with_same_religion
+religion_sub_modifier
 religious_unity
 republican_tradition
 reserves_organisation
@@ -650,6 +702,8 @@ reverse_relation_with_heretic_religion
 reverse_relation_with_same_religion
 rival_border_fort_maintenance
 rival_change_cost
+rr_girondists_influence
+rr_jacobins_influence
 sailor_maintenance_modifer
 sailors_recovery_speed
 same_culture_advisor_cost
@@ -665,9 +719,11 @@ shock_damage
 shock_damage_received
 siege_ability
 siege_blockade_progress
+soyurghals_amount_check_influence
 special_unit_cost_modifier
 special_unit_forcelimit
 special_unit_manpower_cost_modifier
+sprite_level
 spy_action_cost_modifier
 spy_offence
 stability_cost_modifier
@@ -681,6 +737,7 @@ supply_limit
 supply_limit_modifier
 tax_income
 technology_cost
+temples_influence
 territories_governing_cost
 tolerance_heathen
 tolerance_heretic
@@ -700,8 +757,10 @@ trade_value
 trade_value_modifier
 transfer_trade_power_reasons
 transport_attrition
+transport_cannons
 transport_cost
 transport_hull_size_modifier
+transport_hullsize
 transport_number_of_cannons_modifier
 transport_power
 treasure_fleet_income
