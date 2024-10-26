@@ -1,8 +1,23 @@
 # Paradox Highlight Changelog
 
+## Version 1.7.2, 2024-10-26
+
+### Bugfix
+
+- Fix RHS event targets in `Europa Universalis IV`
+
+### Enhancements
+
+- Add more `Europa Universalis IV` builtin commands
+- Add more `Europa Universalis IV` and `Crusdaer Kings III` parameters
+
+### New Feature
+
+- Enable formatting for `Europa Universalis IV`
+
 ## Version 1.7.1, 2024-10-24
 
-## Enhancement
+### Enhancement
 
 - Update `Crusader Kings III` to version 1.13.2 (Basileus)
 
