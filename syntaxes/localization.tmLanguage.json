@@ -84,7 +84,7 @@
 			]
 		},
 		"quote": {
-			"match": "(\\$)([\\w|=%+-]+)(\\$)",
+			"match": "(\\$)([\\w|=%.+-]+)(\\$)",
 			"name": "markup.italic variable.other.paradox.loc",
 			"captures": {
 				"1": { "name": "punctuation.definition.variable.begin.paradox.loc" },
