@@ -100,12 +100,14 @@ function activate(context) {
 	// Register the document formatting provider
 	vscode.languages.registerDocumentFormattingEditProvider('ck3', documentFormatter);
 	vscode.languages.registerDocumentFormattingEditProvider('eu4', documentFormatter);
+	vscode.languages.registerDocumentFormattingEditProvider('hoi4', documentFormatter);
 	vscode.languages.registerDocumentFormattingEditProvider('vic3', documentFormatter);
 	vscode.languages.registerDocumentFormattingEditProvider('paradox', documentFormatter);
 
 	// Register the document range formatting provider
 	vscode.languages.registerDocumentRangeFormattingEditProvider('ck3', rangeFormatter);
 	vscode.languages.registerDocumentRangeFormattingEditProvider('eu4', rangeFormatter);
+	vscode.languages.registerDocumentRangeFormattingEditProvider('hoi4', rangeFormatter);
 	vscode.languages.registerDocumentRangeFormattingEditProvider('vic3', rangeFormatter);
 	vscode.languages.registerDocumentRangeFormattingEditProvider('paradox', rangeFormatter);
 
