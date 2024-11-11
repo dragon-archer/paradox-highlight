@@ -1,5 +1,21 @@
 # Paradox Highlight Changelog
 
+## Version 1.8.0, 2024-11-11
+
+### Bugfix
+
+- Allow dots inside quotes in `localization`
+
+### Enhancements
+
+- Add more `Europa Universalis IV` builtin commands
+- Add more `Europa Universalis IV` and `Hearts of Iron IV` parameters
+
+### New Features
+
+- Add support for `Hearts of Iron IV`
+- Enable formatting for `Hearts of Iron IV`
+
 ## Version 1.7.2, 2024-10-26
 
 ### Bugfix
