@@ -339,6 +339,7 @@ interest
 inti_reforms_passed
 is_banner_modifier
 is_cossack_modifier
+is_galleass_modifier
 is_marine_modifier
 is_scholar_modifier
 is_streltsy_modifier
@@ -502,6 +503,7 @@ may_recruit_female_generals
 may_refill_garrison
 may_return_manpower_on_disband
 may_sabotage_recruitment
+may_sabotage_reputation
 may_slander_merchants
 may_sow_discontent
 may_steal_maps
@@ -616,6 +618,7 @@ number_of_cannons_modifier
 other_ai_help_us_multiplier
 other_ai_peace_term_bonus
 other_ai_war_chance_multiplier
+ottoman_decadence_gain_modifier
 overextension_impact_modifier
 overlord_naval_forcelimit
 overlord_naval_forcelimit_modifier
@@ -780,6 +783,7 @@ vassal_naval_forcelimit_bonus
 vassal_sailors_bonus
 wants_avoid_debase
 wants_avoid_loans
+wants_betray_allies
 wants_colonies
 wants_condottieri
 wants_ecumenical_council

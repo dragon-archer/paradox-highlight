@@ -4,6 +4,7 @@ active_imperial_incident
 active_major_mission
 active_minor_mission
 adm
+ADM
 adm_power
 adm_tech
 advisor
@@ -44,6 +45,7 @@ allows_female_emperor
 always
 any_active_trade_node
 any_ally
+any_army
 any_capital_province
 any_center_of_trade
 any_claimed_province
@@ -59,6 +61,7 @@ any_known_country
 any_local_enemy
 any_neighbor_country
 any_neighbor_province
+any_other_great_power
 any_owned_province
 any_privateering_country
 any_province
@@ -117,8 +120,12 @@ colonial_region_for_scope_province
 colony_claim
 colonysize
 consort_adm
+consort_ADM
+consort_culture
 consort_dip
+consort_DIP
 consort_mil
+consort_MIL
 construction_progress
 continent
 controlled_by
@@ -129,6 +136,7 @@ corruption
 cot_value
 country_or_non_sovereign_subject_holds
 country_or_vassal_holds
+crown_land_share
 culture
 culture_group
 culture_group_claim
@@ -145,8 +153,10 @@ defensive_war_with
 devastation
 development
 development_discounting_tribal
+development_in_provinces
 devotion
 dip
+DIP
 dip_power
 dip_tech
 diplomatic_reputation
@@ -158,6 +168,7 @@ dynasty
 empire_of_china_has_active_decree
 empire_of_china_num_reforms_passed
 employed_advisor
+end_game_tags_blocked
 estate_influence
 estate_led_regency_influence
 estate_led_regency_loyalty
@@ -165,6 +176,7 @@ estate_loyalty
 estate_territory
 exclude_from_progress
 exists
+expelling_minorities
 faction_in_power
 faction_influence
 federation_size
@@ -176,6 +188,7 @@ galley_fraction
 galleys_in_province
 garrison
 general_with_name
+general_with_steam_name
 gives_fleet_basing_rights_to
 gives_military_access_to
 gold_income_percentage
@@ -193,10 +206,12 @@ harmony
 has_active_debate
 has_active_fervor
 has_active_policy
+has_active_triggered_province_modifier
 has_administrative_efficiency_value
 has_advisor
 has_advisor_type_in_pool
 has_any_country_in_region_discovered_capital_region_of
+has_any_disaster
 has_assimilated_culture
 has_assimilated_culture_group
 has_been_eclipsed_by
@@ -268,6 +283,7 @@ has_merchant
 has_mission
 has_missionary
 has_most_province_trade_power
+has_naval_doctrine
 has_new_dynasty
 has_not_spawned_rebels
 has_opinion
@@ -288,9 +304,11 @@ has_province_flag
 has_province_modifier
 has_rebel_faction
 has_reform
+has_reform_on_level
 has_reformed_religion
 has_regency
 has_removed_fow
+has_revolution_in_province
 has_ruler
 has_ruler_flag
 has_ruler_leader_from
@@ -318,10 +336,13 @@ has_winter
 heavy_ship_fraction
 heavy_ships_in_province
 heir_adm
+heir_ADM
 heir_age
 heir_claim
 heir_dip
+heir_DIP
 heir_mil
+heir_MIL
 heir_nationality
 hidden_trigger
 highest_value_trade_node
@@ -392,7 +413,10 @@ is_in_coalition
 is_in_coalition_war
 is_in_deficit
 is_in_extended_regency
+is_in_large_debt
 is_in_league_war
+is_in_trade_league_with
+is_in_war
 is_institution_enabled
 is_island
 is_league_enemy
@@ -420,9 +444,11 @@ is_playing_custom_nation
 is_possible_march
 is_possible_vassal
 is_previous_papal_controller
+is_primitive
 is_prosperous
 is_protectorate
 is_random_new_world
+is_rebel_type
 is_reformation_center
 is_religion_enabled
 is_religion_grant_colonial_claim
@@ -430,6 +456,7 @@ is_religion_reformed
 is_revolution_target
 is_revolutionary
 is_rival
+is_ruler_commanding_unit
 is_sea
 is_state
 is_state_core
@@ -476,12 +503,17 @@ max_manpower
 max_manpower_greater_than
 max_vassal
 mercantilism
+mercenary_company
 mil
+MIL
 mil_power
 mil_tech
 military_strength
 mission_completed
+monthly_adm
+monthly_dip
 monthly_income
+monthly_mil
 months_of_ruling
 months_since_defection
 months_since_last_owner_change
@@ -522,6 +554,7 @@ num_of_continents
 num_of_diplomatic_relations
 num_of_diplomats
 num_of_electors
+num_of_estate_agendas_completed
 num_of_estate_privileges
 num_of_explorers
 num_of_free_diplomatic_relations
@@ -544,6 +577,7 @@ num_of_powerful_estates
 num_of_protectorates
 num_of_provinces_in_states
 num_of_provinces_in_territories
+num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with
 num_of_provinces_owned_or_owned_by_subjects_with
 num_of_qizilbash
 num_of_rebel_armies
@@ -590,6 +624,7 @@ owns_or_vassal_of
 papacy_active
 papal_influence
 patriarch_authority
+percentage_backing_issue
 personal_union
 personality
 piety
@@ -632,6 +667,7 @@ revolt_percentage
 revolution_target_exists
 ruler_age
 ruler_culture
+ruler_has_personality
 ruler_is_foreigner
 sailors_percentage
 same_continent
@@ -642,6 +678,7 @@ secondary_religion
 secondary_religion_group
 select_navy
 senior_union_with
+share_of_starting_income
 sieged_by
 stability
 start_date
@@ -662,6 +699,7 @@ tolerance_to_this
 total_base_tax
 total_development
 total_number_of_cardinals
+total_own_and_non_tributary_subject_development
 trade_company_region
 trade_company_size
 trade_efficiency
