@@ -70,6 +70,24 @@
 				}
 			},
 			{
+				"id": "hoi4",
+				"aliases": [
+					"Hearts of Iron IV"
+				],
+				"extensions": [
+					".txt",
+					".gui"
+				],
+				"configuration": "./language-configuration.json",
+				"filenamePatterns": [
+					"**/{Hearts of Iron IV,HOI,HOI4,394360}/**/*.{txt,gui}"
+				],
+				"icon": {
+					"light": "./icons/hoi4.png",
+					"dark": "./icons/hoi4.png"
+				}
+			},
+			{
 				"id": "vic3",
 				"aliases": [
 					"Victoria 3"
@@ -115,6 +133,11 @@
 				"language": "eu4",
 				"scopeName": "source.paradox.eu4",
 				"path": "./syntaxes/eu4.tmLanguage.json"
+			},
+			{
+				"language": "hoi4",
+				"scopeName": "source.paradox.hoi4",
+				"path": "./syntaxes/hoi4.tmLanguage.json"
 			},
 			{
 				"language": "vic3",
