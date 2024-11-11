@@ -41,8 +41,8 @@
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
 - Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
 - Corresponding theme based on `Default Dark Modern` to improve preference
-- Full support for `Crusader Kings III`, `Victoria 3` and `Europa Universalis IV`
-- Basic support for older Paradox Games with `Clausewitz` engine (e.g. `Crusader Kings II` and `Heart of Iron IV`)
+- Full support for `Crusader Kings III`, `Victoria 3`, `Europa Universalis IV` and `Heart of Iron IV`
+- Basic support for older Paradox Games with `Clausewitz` engine (e.g. `Crusader Kings II` and `Stellaris`)
 
 ## Usage
 
