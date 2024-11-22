@@ -291,7 +291,9 @@ can_create
 can_create_on_partition
 can_deactivate
 can_destroy
+can_embrace
 can_enact
+can_end
 can_equip
 can_fire
 can_get_government
@@ -322,8 +324,10 @@ can_sponsor
 can_start
 can_start_own_diplomatic_plays
 can_start_showing_failures_only
+can_stop
 can_target_with_transfer_wargoal
 can_title_have
+can_upgrade_trigger
 can_use_obligations
 can_use_slaves
 canal
@@ -427,6 +431,7 @@ comparison_law
 compatibility
 complete
 completed
+completed_by
 condition
 conditional
 conditional_modifier
@@ -611,6 +616,7 @@ disallow_random_traits
 disallowed_modifiers
 disallowing_laws
 disallowing_religions
+disaster
 discontent_progress
 discount
 discover_innovation
@@ -627,6 +633,7 @@ dlc_feature
 dlc_tradition
 dna
 dna_modifiers
+do_not_integrate
 dockable_button
 doctrine
 doctrine_background_icon
@@ -664,12 +671,14 @@ education
 education_access
 effect
 effect_desc
+effect_duration
 effect_group
 effectname
 election_type
 elector_vote_strength
 electors
 elide
+embracement_speed
 enable
 enable_air_connection
 enable_switch_sides
@@ -680,6 +689,7 @@ end
 end_date
 end_interaction
 endangle
+ended_by_country_breaking_to_rebels
 ending_decisions
 enemy_ally_province
 enemy_capital_province
@@ -799,6 +809,7 @@ founding_date
 frame
 frame_variable
 framesize
+free
 freeze_scheme_when_traveling
 freeze_scheme_when_traveling_target
 friend
@@ -883,6 +894,7 @@ has_military
 has_pashas
 has_politics
 has_reform
+has_term_election
 has_valid_target
 has_valid_target_showing_failures_only
 have_had_reform
@@ -917,6 +929,8 @@ historical
 historical_council
 historical_idea_groups
 historical_score
+historical_start_date
+historical_start_province
 historical_units
 history
 history_id
@@ -992,6 +1006,7 @@ influence
 influence_from_dev_modifier
 influence_modifier
 influence_scaled_conditional_modifier
+influence_scaled_modifier
 influencing_fort
 infrastructure_usage_per_level
 inherit
@@ -1068,6 +1083,7 @@ is_decaying
 is_default
 is_desert
 is_discounted
+is_eligible_for_hre_emperor
 is_enabled
 is_exclusive
 is_foreign_investment_rights
@@ -1323,6 +1339,8 @@ mirror_war_goal
 mode
 modifier
 modifier_by_land_ownership
+modifier_overlord
+modifier_subject
 modifiers
 modifiers_while_active
 modify_texture
@@ -1461,6 +1479,7 @@ on_finish_task_court
 on_fired_from_position
 on_get_position
 on_government_type_change
+on_granted
 on_host_death
 on_intermediary_accept
 on_intermediary_decline
@@ -1536,6 +1555,7 @@ option
 optional_features
 options
 options_heading
+orangists
 order
 order_by
 order_of_succession
@@ -1730,6 +1750,7 @@ pursuit
 qualification_score
 qualifications
 qualifications_growth_desc
+queen
 random_creation
 random_creation_weight
 random_events
@@ -1812,7 +1833,6 @@ resizeparent
 resource
 rest
 restart_on_finish
-restore_country_name
 restrictparent_min
 reverse_pact
 revoke_cost
@@ -1830,6 +1850,7 @@ rotation
 round
 round_to
 royal_court
+royal_marriage
 ruler_allow
 ruler_child
 ruler_designer_cost
@@ -1848,6 +1869,7 @@ save_progress_in_gamestate
 saved_scopes
 scale
 scale_curve
+scale_estate_influence
 scale_fuzziness_curve
 scaled_modifier
 scaling_employer_modifiers
@@ -1973,11 +1995,13 @@ stacking
 stance
 start
 start_automatically
+start_chance
 start_date
 start_murders
 start_phase
 start_quality_of_life
 start_sound
+start_territory_to_estates
 startangle
 starts_enabled
 state
@@ -1987,6 +2011,8 @@ state_type
 state_value
 stateregion_max_level
 states
+states_general_mechanic
+statists
 statue
 status_desc
 steam_id
@@ -2109,6 +2135,7 @@ torso
 toughness
 track
 tracks
+trade_company_efficiency
 tradeable
 traded_quantity
 tradition
@@ -2199,6 +2226,7 @@ use_for_scheme_power
 use_for_scheme_resistance
 use_goals
 use_lifestyle
+use_monarch_as_leader
 use_obligation_chance
 use_overlord_map_color
 use_overlord_prefix
