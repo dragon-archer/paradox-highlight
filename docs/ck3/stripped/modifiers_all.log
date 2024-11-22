@@ -123,6 +123,8 @@ befriend_enemy_scheme_phase_duration_add
 befriend_scheme_phase_duration_add
 beja_opinion
 bengali_opinion
+black_sea_coast_region_development_growth
+black_sea_coast_region_development_growth_factor
 bobo_opinion
 bodpa_opinion
 bogomilist_opinion
@@ -1133,6 +1135,8 @@ monthly_prestige_gain_per_legitimacy_level_mult
 monthly_stewardship_lifestyle_xp_gain_add
 monthly_stewardship_lifestyle_xp_gain_mult
 monthly_tyranny
+monthly_wanderer_lifestyle_xp_gain_add
+monthly_wanderer_lifestyle_xp_gain_mult
 monthly_war_income_add
 monthly_war_income_mult
 mordvin_opinion
@@ -1865,6 +1869,8 @@ volhynian_opinion
 waaqism_pagan_opinion
 waaqism_religion_opinion
 waldensian_opinion
+wanderer_lifestyle_xp_gain_add
+wanderer_lifestyle_xp_gain_mult
 welayta_opinion
 welsh_opinion
 west_african_bidu_pagan_opinion

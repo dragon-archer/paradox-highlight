@@ -5748,6 +5748,16 @@ Supported Targets: character
 
 --------------------
 
+add_wanderer_lifestyle_perk_points - Adds lifestyle per points to the given character
+Supported Scopes: character
+
+--------------------
+
+add_wanderer_lifestyle_xp - Adds lifestyle XP to the given character
+Supported Scopes: character
+
+--------------------
+
 add_war_chest_gold - Add gold to 'war chest' AI budget category, respecting maximums, overflow goes into Short Term budget. (gold will be created out of nowhere)character, add_war_chest_gold = X
 Supported Scopes: character
 
@@ -10886,6 +10896,13 @@ Supported Scopes: character
 
 set_designated_heir - Sets one the given direct child character as designated heir.
 set_designated_heir = my_character_scope
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+set_designated_heir_unsafe - Sets the given character as designated heir. This is unsafe if the designated heirs loop. Ensure that there is no loop of heirs when using this. This is purely for mod supports and designers should never use this.
+set_designated_heir_unsafe = my_character_scope
 Supported Scopes: character
 Supported Targets: character
 

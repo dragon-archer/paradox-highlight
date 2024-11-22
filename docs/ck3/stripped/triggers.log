@@ -1165,7 +1165,6 @@ memory_age_years
 memory_creation_date
 memory_end_date
 mercenary_company_expiration_days
-missing_unique_ancestors
 monthly_character_balance
 monthly_character_expenses
 monthly_character_income
@@ -1282,6 +1281,7 @@ outbreak_intensity
 outbreak_start_date
 owns_a_story
 owns_story_of_type
+parent_relatedness
 patrilinear_betrothal
 patrilinear_marriage
 percent_enemies_killed
@@ -1293,6 +1293,7 @@ perks_in_learning_lifestyle
 perks_in_martial_lifestyle
 perks_in_stewardship_lifestyle
 perks_in_tree
+perks_in_wanderer_lifestyle
 phase_has_catalyst
 piety
 piety_level
@@ -1429,6 +1430,10 @@ vassal_count
 vassal_limit
 vassal_limit_available
 vassal_limit_percentage
+wanderer_lifestyle_perk_points
+wanderer_lifestyle_perks
+wanderer_lifestyle_unlockable_perks
+wanderer_lifestyle_xp
 war_chest_gold
 war_chest_gold_maximum
 war_contribution

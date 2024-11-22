@@ -126,6 +126,8 @@ add_tyranny
 add_unity_value
 add_unpressed_claim
 add_visiting_courtier
+add_wanderer_lifestyle_perk_points
+add_wanderer_lifestyle_xp
 add_war_chest_gold
 adopt
 ai_attempt_to_host_activity
@@ -1410,6 +1412,7 @@ set_default_education
 set_definitive_form
 set_delete_on_destroy
 set_designated_heir
+set_designated_heir_unsafe
 set_designated_winner
 set_destroy_if_invalid_heir
 set_destroy_on_gain_same_tier

@@ -2282,13 +2282,13 @@ Supported Scopes: none
 --------------------
 
 has_dlc - Does the host have this DLC
-Traits: Valid DLCs: The Fate of Iberia， Tours and Tournaments， Elegance of the Empire， North African Attire， Roads to Power， Couture of the Capets， Legends of the Dead， The Northern Lords， Garments of the Holy Roman Empire， The Royal Court， Legacy of Persia， Fashion of the Abbasid Court， Friends and Foes，以及 Wards and Wardens
+Traits: Valid DLCs: The Fate of Iberia, Tours and Tournaments, Elegance of the Empire, North African Attire, Roads to Power, Couture of the Capets, Legends of the Dead, The Northern Lords, Garments of the Holy Roman Empire, The Royal Court, Legacy of Persia, Wandering Nobles, Fashion of the Abbasid Court, Friends and Foes, and Wards and Wardens
 Supported Scopes: none
 
 --------------------
 
 has_dlc_feature - Does the host have DLC that enables this particular feature
-Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts， the_fate_of_iberia， friends_and_foes， tours_and_tournaments， advanced_activities， accolades， legacy_of_persia， elegance_of_the_empire， wards_and_wardens， legends_of_the_dead， legends， north_african_attire， couture_of_the_capets， landless_playable， admin_gov， roads_to_power，以及 court_room_view
+Traits: Valid Features: garments_of_the_hre, fashion_of_the_abbasid_court, the_northern_lords, hybridize_culture, diverge_culture, royal_court, reform_culture, court_artifacts, the_fate_of_iberia, friends_and_foes, tours_and_tournaments, advanced_activities, accolades, legacy_of_persia, elegance_of_the_empire, wards_and_wardens, legends_of_the_dead, legends, north_african_attire, couture_of_the_capets, landless_playable, admin_gov, roads_to_power, court_room_view, and wandering_nobles
 Supported Scopes: none
 
 --------------------
@@ -2592,6 +2592,12 @@ Supported Scopes: none
 --------------------
 
 perks_in_stewardship_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+perks_in_wanderer_lifestyle - How many perks does this lifestyle have?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: none
 
@@ -7499,14 +7505,6 @@ Supported Scopes: character
 
 --------------------
 
-missing_unique_ancestors - The amount of missing unique ancestors from the characters real father and mother
-Traverses the family tree for NDefines::NChildbirth::INBREEDING_ANCESTOR_GENERATIONS amount of generations. By default this means that we're traversing 62 ancestors and report the amount of duplicates we find.
-calc_missing_unique_ancestors > 10
-Traits: <, <=, =, !=, >, >=
-Supported Scopes: character
-
---------------------
-
 monthly_character_balance - Is the scoped character's monthly balance this big?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -8051,6 +8049,14 @@ Supported Scopes: character
 
 --------------------
 
+parent_relatedness - The percentage of shared DNA between the character's parents.
+Traverses the family tree for NDefines::NChildbirth::INBREEDING_ANCESTOR_GENERATIONS amount of generations to find common ancestors. By default this means that we're traversing 4 generations (62 ancestors) and report the relatedness between the two parents. (See https://relatednesscalculator.nolanlawson.com/ for some examples).
+`relatedness > 0.25` where 0.0 means not related at all and 1.0 means identical twins
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 patrilinear_betrothal - Is this character's betrothal patrilinear? False if there's no betrothal.
 Traits: yes/no 
 Supported Scopes: character
@@ -8541,6 +8547,30 @@ Supported Scopes: character
 --------------------
 
 vassal_limit_percentage - Is the scoped character's vassal count this big in comparison to their limit?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+wanderer_lifestyle_perk_points - How many perk points available does the character have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+wanderer_lifestyle_perks - How many perks from this lifestyle does the character have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+wanderer_lifestyle_unlockable_perks - How many perks from this lifestyle can the character currently unlock? This checks that they have the parent perks, and that the can_be_picked is met. It doesn't check perk points
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+wanderer_lifestyle_xp - How many perk points available does the character have?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
