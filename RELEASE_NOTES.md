@@ -1,24 +1,17 @@
-v1.8.0, 2024-11-11
-
-## Bugfix
-
-- Allow dots inside quotes in `localization`
+v1.8.1, 2024-11-22
 
 ## Enhancements
 
+- Update `Crusader Kings III` to version 1.14.1 (Traverse)
+- Update `Victoria 3` to version 1.8.1 (Masala Chai)
 - Add more `Europa Universalis IV` builtin commands
-- Add more `Europa Universalis IV` and `Hearts of Iron IV` parameters
-
-## New Features
-
-- Add support for `Hearts of Iron IV`
-- Enable formatting for `Hearts of Iron IV`
+- Add more `Europa Universalis IV` parameters
 
 ## Compatible game version
 
-- Crusader Kings III 1.13.2 (Basileus)
-- Victoria 3 1.7.6 (Kahwah)
+- Crusader Kings III 1.14.1 (Traverse)
+- Victoria 3 1.8.1 (Masala Chai)
 - Europa Universalis IV 1.37.5 (Inca)
 - Heart of Iron IV 1.14.10 (Bolivar)
 
-**Full Changelog**: https://github.com/dragon-archer/paradox-highlight/compare/v1.7.2...v1.8.0
+**Full Changelog**: https://github.com/dragon-archer/paradox-highlight/compare/v1.8.0...v1.8.1

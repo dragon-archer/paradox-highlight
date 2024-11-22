@@ -2,7 +2,7 @@
 	"name": "paradox-highlight",
 	"displayName": "Paradox Highlight",
 	"description": "Syntax highlight for Paradox Script Languages",
-	"version": "1.8.0",
+	"version": "1.8.1",
 	"publisher": "dragon-archer",
 	"icon": "icons/paradox.png",
 	"readme": "README.md",
@@ -19,7 +19,10 @@
 	],
 	"keywords": [
 		"paradox",
-		"crusader kings"
+		"crusader kings",
+		"europa universalis",
+		"hearts of iron",
+		"victoria"
 	],
 	"bugs": {
 		"url": "https://github.com/dragon-archer/paradox-highlight/issues"

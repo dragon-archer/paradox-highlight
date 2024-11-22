@@ -1,5 +1,14 @@
 # Paradox Highlight Changelog
 
+## Version 1.8.1, 2024-11-22
+
+### Enhancements
+
+- Update `Crusader Kings III` to version 1.14.1 (Traverse)
+- Update `Victoria 3` to version 1.8.1 (Masala Chai)
+- Add more `Europa Universalis IV` builtin commands
+- Add more `Europa Universalis IV` parameters
+
 ## Version 1.8.0, 2024-11-11
 
 ### Bugfix
