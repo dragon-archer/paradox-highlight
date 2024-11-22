@@ -24,6 +24,7 @@
 @g
 @get_ruler_for
 @global_var
+@harvest_condition_type
 @i
 @identity
 @ideology
@@ -46,6 +47,7 @@
 @mg
 @mobilization_option
 @modifier
+@movement_type
 @nf
 @num_alliances_and_defensive_pacts_with_allies
 @num_alliances_and_defensive_pacts_with_rivals
@@ -112,7 +114,6 @@ defender_side
 defender_warleader
 defense
 demoralized
-desired_law
 diplomatic_play
 expenses
 exporter
@@ -159,6 +160,7 @@ military_expenses_share
 mobilization
 momentum
 morale
+most_desired_law
 naval_controller_hq
 naval_hq
 naval_invasion_attacker

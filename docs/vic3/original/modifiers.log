@@ -194,10 +194,6 @@ character_interception_add:
   Mask: character
   Name: 海军将领拦截概率
   Description: 海军将领的舰队每四分之一天拦截舰队的概率
-character_morale_cap_add:
-  Mask: character
-  Name: 士气上限
-  Description: 对单位最高士气的增益或惩罚。
 character_popularity_add:
   Mask: character
   Name: 人气
@@ -206,6 +202,38 @@ character_supply_route_cost_mult:
   Mask: character
   Name: 补给线花费
   Description: 补给军队需要多少商船
+country_acceptance_culture_base_add:
+  Mask: country
+  Name: 来自文化的接纳度
+  Description: 人群文化与国家主流文化没有任何相同特质时拥有的接纳度基准值
+country_acceptance_primary_culture_add:
+  Mask: country
+  Name: 来自主流文化的接纳度
+  Description: 人群文化为国家主流文化时拥有的接纳度
+country_acceptance_religion_base_add:
+  Mask: country
+  Name: 来自宗教的接纳度
+  Description: 人群宗教与国家国教没有任何相同特质时拥有的接纳度基准值
+country_acceptance_shared_cultural_trait_add:
+  Mask: country
+  Name: 来自文化特质的接纳度
+  Description: 人群文化与国家任意主流文化的文化特质相同时拥有的接纳度
+country_acceptance_shared_heritage_and_cultural_trait_add:
+  Mask: country
+  Name: 来自传承和文化特质的接纳度
+  Description: 人群文化与国家任意主流文化传承和文化特质相同时拥有的接纳度
+country_acceptance_shared_heritage_trait_add:
+  Mask: country
+  Name: 来自传承特质的接纳度
+  Description: 人群文化与国家任意主流文化传承特质相同时拥有的接纳度
+country_acceptance_shared_religious_trait_add:
+  Mask: country
+  Name: 来自宗教特质的接纳度
+  Description: 人群宗教与国家国教宗教特质相同时拥有的接纳度
+country_acceptance_state_religion_add:
+  Mask: country
+  Name: 来自国教的接纳度
+  Description: 人群宗教为国家国教时拥有的接纳度
 country_agitator_slots_add:
   Mask: country
   Name: 潜在鼓动者
@@ -226,10 +254,18 @@ country_allow_multiple_alliances_bool:
   Mask: country
   Name: 允许多个同盟
   Description: 该国是否允许缔结多个同盟外交条约
+country_allow_national_collectivization_bool:
+  Mask: country
+  Name: 允许国有集体化
+  Description: 允许我们的国有建筑改为工人所有
 country_allow_trade_routes_without_interest_bool:
   Mask: country
   Name: 允许无利益建立贸易路线
   Description: 允许一个国家不需要在接收端存在利益即可建立贸易路线
+country_assimilation_delta_threshold_add:
+  Mask: country
+  Name: 文化同化阈值
+  Description: 对该国家同化阈值的增益或惩罚
 country_authority_add:
   Mask: country
   Name: aut!权威力
@@ -242,14 +278,14 @@ country_authority_per_subject_add:
   Mask: country
   Name: aut!权威力/附属
   Description: 每个附属国给予的aut!权威力数额
+country_bolster_attraction_mult:
+  Mask: country
+  Name: 扶植对政治运动吸引力的影响
+  Description: 受到扶植时政治运动对人群吸引力的变化
 country_bolster_cost_mult:
   Mask: country
   Name: 扶植花费
-  Description: 提高或降低扶植利益集团的花费。
-country_bolster_ig_attraction_mult:
-  Mask: country
-  Name: 扶植对利益集团吸引力的影响
-  Description: 由扶植造成的，利益集团对人群吸引的增益或惩罚
+  Description: 提高或降低扶植政治运动的花费。
 country_bureaucracy_add:
   Mask: country
   Name: bur!行政力
@@ -286,6 +322,10 @@ country_company_construction_efficiency_bonus_add:
   Mask: country
   Name: 公司建造增益
   Description: 公司对相关建筑每周建造力进度的增益或惩罚
+country_company_pay_to_establish_bool:
+  Mask: country
+  Name: 通过购买成立公司
+  Description: 通过购买私有等级而非国有等级成立公司
 country_company_throughput_bonus_add:
   Mask: country
   Name: 公司吞吐量增益
@@ -302,6 +342,10 @@ country_consumption_tax_cost_mult:
   Mask: country
   Name: 消费税花费
   Description: 对实施消费税的权威力花费的增益或惩罚
+country_conversion_delta_threshold_add:
+  Mask: country
+  Name: 宗教皈依阈值
+  Description: 对该国家皈依阈值的增益或惩罚
 country_convoy_contribution_to_market_owner_add:
   Mask: country
   Name: 对市场所有者的convoys!商船贡献
@@ -324,8 +368,8 @@ country_diplomatic_play_maneuvers_add:
   Description: 对该国在外交博弈中可以使用的博弈行动力的增益或惩罚
 country_disable_investment_pool_bool:
   Mask: country
-  Name: 禁用投资池
-  Description: 不允许所有形式的再投资，也不允许使用投资池
+  Name: 禁用投资池（公司除外）
+  Description: 不允许所有形式的再投资，也不允许使用投资池（公司除外）
 country_disable_nationalization_bool:
   Mask: country
   Name: 禁用国有化
@@ -346,14 +390,10 @@ country_disallow_agitator_invites_bool:
   Mask: country
   Name: 不允许邀请被流放者
   Description: 该国不允许邀请被流放者
-country_disallow_discriminated_migration_bool:
+country_economic_dependence_on_overlord_add:
   Mask: country
-  Name: 受歧视人群不允许移民
-  Description: 该国不允许受歧视人群迁移
-country_disallow_migration_bool:
-  Mask: country
-  Name: 所有人群被禁止移民
-  Description: 该国不允许任何人群迁移
+  Name: 对宗主国的经济依赖
+  Description: 提高或降低对宗主国的经济依赖
 country_expedition_events_explorer_mult:
   Mask: country
   Name: 探险机会
@@ -362,14 +402,14 @@ country_expenses_add:
   Mask: country
   Name: 政府支出
   Description: 政府支出的加算增益或惩罚。
-country_force_collectivization_bool:
-  Mask: country
-  Name: 强制集体化
-  Description: 强制所有可用建筑改为工人所有
 country_force_privatization_bool:
   Mask: country
   Name: 强制私有化
   Description: 强制所有可用建筑可以私有化
+country_foreign_collectivization_bool:
+  Mask: country
+  Name: 外国集体化
+  Description: 允许我们在外国拥有的建筑改为工人所有
 country_free_trade_routes_add:
   Mask: country
   Name: 免费贸易路线
@@ -404,7 +444,7 @@ country_higher_diplomatic_acceptance_same_religion_bool:
   Description: 拥有相同国家宗教的国家会更愿意接受外交提议
 country_higher_leverage_from_economic_dependence_bool:
   Mask: country
-  Name: 提高来自经济依赖的影响
+  Name: 提高经济依赖产生的影响
   Description: 提高从经济依赖中获得的影响。
 country_ignores_landing_craft_penalty_bool:
   Mask: country
@@ -557,7 +597,7 @@ country_loyalists_from_legitimacy_mult:
 country_mass_migration_attraction_mult:
   Mask: country
   Name: 大规模移民吸引力
-  Description: 对国家被选为大规模移民目标的概率的增益或惩罚。
+  Description: 对国家被选为大规模移民目标的概率的增益或惩罚
 country_max_companies_add:
   Mask: country
   Name: 公司上限
@@ -574,6 +614,10 @@ country_max_weekly_construction_progress_add:
   Mask: country
   Name: 每周最大建造进度
   Description: 每周可以投入到项目的最大construction!建造力
+country_migration_restrictiveness_add:
+  Mask: country
+  Name: 移民限制
+  Description: 一项限定是否允许移民的接纳度阈值。接纳度低于该阈值的人群将被禁止通过国际移民进入。
 country_military_goods_cost_mult:
   Mask: country
   Name: 军用商品花费
@@ -598,6 +642,10 @@ country_nationalization_cost_non_members_mult:
   Mask: country
   Name: 国有化花费
   Description: 提高或降低国有化你的国家集团外国家拥有的建筑的花费
+country_non_state_religion_wages_mult:
+  Mask: country
+  Name: 非国教人群的工资
+  Description: 未信仰国教的人群的工资提高或降低
 country_opposition_ig_approval_add:
   Mask: country
   Name: 在野利益集团支持度
@@ -657,11 +705,11 @@ country_reduced_liberty_desire_same_religion_bool:
 country_resource_depletion_chance_mult:
   Mask: country
   Name: 资源耗尽几率
-  Description: 
+  Description: 提高资源潜力耗尽的概率
 country_resource_discovery_chance_mult:
   Mask: country
   Name: 资源发现几率
-  Description: 
+  Description: 提高发现隐藏资源潜力的概率
 country_revolution_clock_time_add:
   Mask: country
   Name: 革命时钟时间
@@ -686,6 +734,10 @@ country_secession_progress_mult:
   Mask: country
   Name: 分离进展速度
   Description: 对分离时钟在12点敲响时获得多少进度的增益或惩罚
+country_state_religion_wages_mult:
+  Mask: country
+  Name: 国教人群的工资
+  Description: 信奉国教的人群的工资提高或降低
 country_subject_income_transfer_heathen_mult:
   Mask: country
   Name: 异教附属国收入转移
@@ -694,14 +746,14 @@ country_subject_income_transfer_mult:
   Mask: country
   Name: 附属国收入转移
   Description: 对附属国必须支付宗主国的金钱数量的提高或降低
+country_suppression_attraction_mult:
+  Mask: country
+  Name: 打压对政治运动吸引力的影响
+  Description: 受到打压时政治运动对人群吸引力的变化
 country_suppression_cost_mult:
   Mask: country
   Name: 打压花费
-  Description: 提高或降低打压利益集团的花费。
-country_suppression_ig_attraction_mult:
-  Mask: country
-  Name: 打压对利益集团吸引力的影响
-  Description: 由打压造成的，利益集团对人群吸引的增益或惩罚
+  Description: 提高或降低打压政治运动的花费。
 country_tax_income_add:
   Mask: country
   Name: 赋税收入
@@ -874,34 +926,26 @@ military_formation_organization_gain_mult:
 -10% 防御
 -100% 士气恢复
 -50% 康复率
-political_movement_enact_support_mult:
+political_movement_character_attraction_mult:
   Mask: political_movement
-  Name: 立法运动支持度
-  Description: 对立法运动政治运动支持度的增益或惩罚
-political_movement_preserve_support_mult:
+  Name: political_movement_character_attraction_mult
+  Description: political_movement_character_attraction_mult_desc
+political_movement_pop_attraction_mult:
   Mask: political_movement
-  Name: 护法运动支持度
-  Description: 对护法运动政治运动支持度的增益或惩罚
+  Name: 政治运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
 political_movement_radicalism_add:
   Mask: political_movement
-  Name: 政治运动激进度
-  Description: 对政治运动激进度的增益或惩罚
-political_movement_radicalism_mult:
+  Name: 政治运动活跃度
+  Description: 对运动活跃度的增益或惩罚
+political_movement_radicalism_from_enactment_approval_mult:
   Mask: political_movement
-  Name: 政治运动激进度
-  Description: 对政治运动激进度的增益或惩罚
-political_movement_restore_support_mult:
+  Name: 制定支持的法律降低的政治运动活跃度
+  Description: 提高或降低制定政治运动支持的法律对运动活跃度的影响
+political_movement_radicalism_from_enactment_disapproval_mult:
   Mask: political_movement
-  Name: 复法运动支持度
-  Description: 对复法运动政治运动支持度的增益或惩罚
-political_movement_support_add:
-  Mask: political_movement
-  Name: 政治运动支持度
-  Description: 对政治运动支持度的增益或惩罚
-political_movement_support_mult:
-  Mask: political_movement
-  Name: 政治运动支持度
-  Description: 对政治运动支持度的增益或惩罚
+  Name: 制定反对的法律提高的政治运动活跃度
+  Description: 提高或降低制定政治运动反对的法律对运动活跃度的影响
 power_bloc_allow_foreign_investment_lower_rank_bool:
   Mask: power_bloc
   Name: 对国际地位较低的国家集团成员的外国投资权
@@ -978,10 +1022,6 @@ power_bloc_trade_route_cost_mult:
   Mask: power_bloc
   Name: 与其他国家集团成员的贸易路线bur!行政力花费
   Description: 与其他国家集团成员的贸易路线bur!行政力花费
-state_accepted_birth_rate_mult:
-  Mask: state
-  Name: 已接纳人群的出生率
-  Description: 每年有多少不受歧视人群的婴儿出生
 state_assimilation_mult:
   Mask: state
   Name: 同化
@@ -994,7 +1034,7 @@ state_bureaucracy_population_base_cost_factor_mult:
   Mask: state
   Name: 人口bur!行政力花费乘数
   Description: 已整合人口产生的基础行政花费的增加或减少
-state_colony_growth_creation_mult:
+state_colony_growth_creation_factor:
   Mask: state
   Name: 殖民地增长产生
   Description: 对来自已整合地区人群的殖民地增长的增益或惩罚。
@@ -1054,6 +1094,10 @@ state_expected_sol_mult:
   Mask: state
   Name: 最低预期生活水平
   Description: 人群期望的最低生活水平的提高或降低
+state_food_security_add:
+  Mask: state
+  Name: 粮食安全
+  Description: 对一个地区所有人群的粮食安全的增益或惩罚
 state_infrastructure_add:
   Mask: state
   Name: 基础设施
@@ -1078,27 +1122,27 @@ state_infrastructure_mult:
   Mask: state
   Name: 基础设施
   Description: 对地区基础设施的增益或惩罚
-state_loyalists_from_sol_change_accepted_culture_mult:
+state_lower_strata_expected_sol_add:
   Mask: state
-  Name: 已接纳文化生活水平提高产生的效忠派
-  Description: 对于生活水平提高后有多少已接纳文化人群会变为效忠派的增益或惩罚
-state_loyalists_from_sol_change_accepted_religion_mult:
+  Name: 下等阶层的最低预期生活水平
+  Description: 下等阶层人群期望享有的最低生活水平的增减变化
+state_lower_strata_standard_of_living_add:
   Mask: state
-  Name: 已接纳宗教生活水平提升产生的效忠派
-  Description: 对于生活水平提升后有多少已接纳宗教人群会变为效忠派的增益或惩罚
-state_loyalists_from_sol_change_mult:
+  Name: 下等阶层的生活水平
+  Description: 来源于财富之外的额外生活水平
+state_loyalists_from_political_movements_mult:
   Mask: state
-  Name: 生活水平提高产生的效忠派
-  Description: 对于生活水平提高后有多少人群会变为效忠派的增益或惩罚
+  Name: 来自政治运动的效忠派
+  Description: 对于制定法律让政治运动满意后有多少人群会成为效忠派的增益或惩罚
 state_market_access_price_impact:
   Mask: state
   Name: 市场接入度的价格影响
   Description: 提高或降低市场接入度对商品本地价格的最大影响
-state_middle_expected_sol:
+state_middle_strata_expected_sol_add:
   Mask: state
-  Name: 中等阶层最低生活水平期望
-  Description: 中等阶层人群期望的最低生活水平的提高或降低
-state_middle_standard_of_living_add:
+  Name: 中等阶层的最低预期生活水平
+  Description: 中等阶层人群期望享有的最低生活水平的增减变化
+state_middle_strata_standard_of_living_add:
   Mask: state
   Name: 中等阶层的生活水平
   Description: 来源于财富之外的额外生活水平
@@ -1122,10 +1166,6 @@ state_migration_quota_mult:
   Mask: state
   Name: 移民限额
   Description: 对移民自或移民至一个地区的人数的增益或惩罚
-state_minimum_wealth_add:
-  Mask: state
-  Name: 最小财富
-  Description: 人群财富不能通过正常手段降到该等级以下
 state_mortality_mult:
   Mask: state
   Name: 死亡率
@@ -1146,10 +1186,6 @@ state_non_homeland_mortality_mult:
   Mask: state
   Name: 非本土地区的死亡率
   Description: 提高或降低非主流文化本土地区内人群的死亡率。
-state_political_strength_from_discrimination_mult:
-  Mask: state
-  Name: 来自歧视的政治力量
-  Description: 对人群来自歧视的政治力量的增益或惩罚
 state_political_strength_from_wealth_mult:
   Mask: state
   Name: 来自财富的政治力量
@@ -1166,14 +1202,6 @@ state_pollution_reduction_health_mult:
   Mask: state
   Name: 污染效果减免
   Description: 提高或降低污染影响对你的人口健康的效果
-state_poor_expected_sol:
-  Mask: state
-  Name: 下等阶层最低生活水平期望
-  Description: 下等阶层人群期望的最低生活水平的提高或降低
-state_poor_standard_of_living_add:
-  Mask: state
-  Name: 下等阶层的生活水平
-  Description: 来源于财富之外的额外生活水平
 state_pop_pol_str_add:
   Mask: state
   Name: 普遍人群政治力量
@@ -1186,30 +1214,14 @@ state_pop_qualifications_mult:
   Mask: state
   Name: 资质
   Description: 对资质的增益或惩罚
-state_radicals_from_discrimination_mult:
+state_radicals_and_loyalists_from_sol_change_mult:
   Mask: state
-  Name: 歧视带来的激进派
-  Description: 对于受歧视人群变为激进派的速率的增益或惩罚
-state_radicals_from_sol_change_accepted_culture_mult:
+  Name: 生活水平变化产生的激进派和效忠派
+  Description: 对于生活水平改变后有多少人群会变为激进派或效忠派的增益或惩罚
+state_radicals_from_political_movements_mult:
   Mask: state
-  Name: 已接纳文化生活水平降低带来的激进派
-  Description: 对于生活水平降低后有多少已接纳文化人群会变为激进派的增益或惩罚
-state_radicals_from_sol_change_accepted_religion_mult:
-  Mask: state
-  Name: 已接纳宗教生活水平降低产生的激进派
-  Description: 对于生活水平降低后有多少已接纳宗教人群会变为激进派的增益或惩罚
-state_radicals_from_sol_change_mult:
-  Mask: state
-  Name: 生活水平降低带来的激进派
-  Description: 对于生活水平降低后有多少人群会变为激进派的增益或惩罚
-state_rich_expected_sol:
-  Mask: state
-  Name: 上等阶层最低生活水平期望
-  Description: 上等阶层人群期望的最低生活水平的提高或降低
-state_rich_standard_of_living_add:
-  Mask: state
-  Name: 上等阶层的生活水平
-  Description: 来源于财富之外的额外生活水平
+  Name: 来自政治运动的激进派
+  Description: 对于高运动活跃度的政治运动会使多少人群成为激进派的增益或惩罚
 state_slave_import_mult:
   Mask: state
   Name: 奴隶进口
@@ -1242,6 +1254,14 @@ state_unincorporated_starting_wages_mult:
   Mask: state
   Name: 未整合地区的最低工资
   Description: 未整合地区的人群获得的初始工资的相对差值。
+state_upper_strata_expected_sol_add:
+  Mask: state
+  Name: 上等阶层的最低预期生活水平
+  Description: 上等阶层人群期望享有的最低生活水平的增减变化
+state_upper_strata_standard_of_living_add:
+  Mask: state
+  Name: 上等阶层的生活水平
+  Description: 来源于财富之外的额外生活水平
 state_urbanization_per_level_add:
   Mask: state
   Name: 城镇化/城镇中心
@@ -1289,7 +1309,7 @@ tax_dividends_add:
 tax_heathen_add:
   Mask: tax
   Name: 宗教税
-  Description: 每年来源于信奉受歧视宗教人群的不信者税金额
+  Description: 每年来源于信奉低接纳度宗教的人群的不信者税金额
 tax_income_add:
   Mask: tax
   Name: 所得税率
@@ -1604,6 +1624,10 @@ building_group_bg_agriculture_farmers_mortality_mult:
   Mask: building
   Name: 农业的farmers!农民死亡率
   Description: 对农业的farmers!农民死亡率的增益或惩罚
+building_group_bg_agriculture_infrastructure_usage_mult:
+  Mask: building
+  Name: 农业建筑基础设施使用量
+  Description: 对农业建筑基础设施使用量的增益或惩罚
 building_group_bg_agriculture_laborers_mortality_mult:
   Mask: building
   Name: 农业的laborers!劳工死亡率
@@ -1624,6 +1648,10 @@ building_group_bg_agriculture_throughput_add:
   Mask: building
   Name: 农业吞吐量
   Description: 对农业投入和产出的增益或惩罚
+building_group_bg_arts_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的艺术建筑建筑的最低等级
+  Description: 工人所有的艺术建筑建筑的最低数值。
 building_group_bg_coal_mining_employee_mult:
   Mask: building
   Name: 煤矿就业者
@@ -1652,6 +1680,14 @@ building_group_bg_construction_laborers_mortality_mult:
   Mask: building
   Name: 建造laborers!劳工的死亡率
   Description: 对建造laborers!劳工的死亡率的增益或惩罚
+building_group_bg_extraction_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的开采业建筑等级下限
+  Description: 工人所有的开采业建筑最低数值。
+building_group_bg_extraction_throughput_add:
+  Mask: building
+  Name: 开采业吞吐量
+  Description: 对开采业投入和产出的增益或惩罚
 building_group_bg_fishing_employee_mult:
   Mask: building
   Name: 渔业就业者
@@ -1852,6 +1888,10 @@ building_group_bg_logging_unincorporated_throughput_add:
   Mask: building
   Name: 未整合地区的林业吞吐量
   Description: 对未整合地区林业吞吐量的增益或惩罚
+building_group_bg_manufacturing_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的制造业建筑等级下限
+  Description: 工人所有的制造业建筑最低数值。
 building_group_bg_manufacturing_employee_mult:
   Mask: building
   Name: 制造业就业者
@@ -1904,6 +1944,10 @@ building_group_bg_military_throughput_add:
   Mask: building
   Name: 军事建筑吞吐量
   Description: 对军事建筑吞吐量的增益或惩罚
+building_group_bg_mining_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的矿井建筑等级下限
+  Description: 工人所有的矿井建筑最低数值。
 building_group_bg_mining_employee_mult:
   Mask: building
   Name: 矿井就业者
@@ -1988,6 +2032,10 @@ building_group_bg_oil_extraction_throughput_add:
   Mask: building
   Name: 石油精炼厂吞吐量
   Description: 对石油精炼厂投入和产出的增益或惩罚
+building_group_bg_plantations_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的种植园建筑等级下限
+  Description: 工人所有的种植园建筑最低数值。
 building_group_bg_plantations_employee_mult:
   Mask: building
   Name: 种植园就业者
@@ -1996,6 +2044,10 @@ building_group_bg_plantations_farmers_mortality_mult:
   Mask: building
   Name: 种植园的farmers!农民死亡率
   Description: 对种植园的farmers!农民死亡率的增益或惩罚
+building_group_bg_plantations_infrastructure_usage_mult:
+  Mask: building
+  Name: 种植园基础设施使用量
+  Description: 对种植园基础设施使用量的增益或惩罚
 building_group_bg_plantations_laborers_mortality_mult:
   Mask: building
   Name: 种植园的laborers!劳工死亡率
@@ -2020,6 +2072,14 @@ building_group_bg_plantations_unincorporated_throughput_add:
   Mask: building
   Name: 未整合地区的种植园吞吐量
   Description: 对未整合地区种植园吞吐量的增益或惩罚
+building_group_bg_power_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的发电厂建筑等级下限
+  Description: 工人所有的发电厂建筑最低数值。
+building_group_bg_private_infrastructure_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的私有基础设施建筑的最低等级
+  Description: 工人所有的私有基础设施建筑的最低数值。
 building_group_bg_ranching_allowed_collectivization_add:
   Mask: building
   Name: 工人所有的牧场建筑等级下限
@@ -2028,6 +2088,10 @@ building_group_bg_ranching_farmers_mortality_mult:
   Mask: building
   Name: 牧场的farmers!农民死亡率
   Description: 对牧场的farmers!农民死亡率的增益或惩罚
+building_group_bg_ranching_infrastructure_usage_mult:
+  Mask: building
+  Name: 牧场基础设施使用量
+  Description: 对牧场基础设施使用量的增益或惩罚
 building_group_bg_ranching_laborers_mortality_mult:
   Mask: building
   Name: 牧场的laborers!劳工死亡率
@@ -2092,6 +2156,14 @@ building_group_bg_silk_plantations_throughput_add:
   Mask: building
   Name: 丝绸种植园吞吐量
   Description: 对丝绸种植园的投入和产出的增益或惩罚
+building_group_bg_subsistence_agriculture_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的自给农业建筑的最低等级
+  Description: 工人所有的自给农业建筑的最低数值。
+building_group_bg_subsistence_ranching_allowed_collectivization_add:
+  Mask: building
+  Name: 工人所有的自给牧场建筑的最低等级
+  Description: 工人所有的自给牧场建筑的最低数值。
 building_group_bg_sugar_plantations_throughput_add:
   Mask: building
   Name: 糖料作物种植园吞吐量
@@ -2112,6 +2184,10 @@ building_group_bg_sulfur_mining_tax_mult:
   Mask: building
   Name: 硫矿税收
   Description: 对硫矿税收的增益或惩罚
+building_group_bg_tea_plantations_throughput_add:
+  Mask: building
+  Name: 茶叶种植园吞吐量
+  Description: 对茶叶种植园的投入和产出的增益或惩罚
 building_group_bg_tobacco_plantations_throughput_add:
   Mask: building
   Name: 烟草种植园吞吐量
@@ -2292,6 +2368,66 @@ country_academics_voting_power_add:
   Mask: country
   Name: academics!学者选票产生的政治力量
   Description: 对选举时academics!学者选票提供的政治力量的提高或降低
+country_allow_assimilation_cultural_erasure_bool:
+  Mask: country
+  Name: 允许文化抹除地位同化
+  Description: 文化抹除地位的人群会随时间被同化
+country_allow_assimilation_full_acceptance_bool:
+  Mask: country
+  Name: 允许完全接纳地位同化
+  Description: 完全接纳地位的人群会随时间被同化
+country_allow_assimilation_open_prejudice_bool:
+  Mask: country
+  Name: 允许公开歧视地位同化
+  Description: 公开歧视地位的人群会随时间被同化
+country_allow_assimilation_second_rate_citizen_bool:
+  Mask: country
+  Name: 允许二等公民地位同化
+  Description: 二等公民地位的人群会随时间被同化
+country_allow_assimilation_violent_hostility_bool:
+  Mask: country
+  Name: 允许暴力对抗地位同化
+  Description: 暴力对抗地位的人群会随时间被同化
+country_allow_conversion_cultural_erasure_bool:
+  Mask: country
+  Name: 允许文化抹除地位皈依
+  Description: 文化抹除地位的人群会随时间皈依更被接纳的宗教
+country_allow_conversion_full_acceptance_bool:
+  Mask: country
+  Name: 允许完全接纳地位皈依
+  Description: 完全接纳地位的人群会随时间皈依更被接纳的宗教
+country_allow_conversion_open_prejudice_bool:
+  Mask: country
+  Name: 允许公开歧视地位皈依
+  Description: 公开歧视地位的人群会随时间皈依更被接纳的宗教
+country_allow_conversion_second_rate_citizen_bool:
+  Mask: country
+  Name: 允许二等公民地位皈依
+  Description: 二等公民地位的人群会随时间皈依更被接纳的宗教
+country_allow_conversion_violent_hostility_bool:
+  Mask: country
+  Name: 允许暴力对抗地位皈依
+  Description: 暴力对抗地位的人群会随时间皈依更被接纳的宗教
+country_allow_voting_cultural_erasure_bool:
+  Mask: country
+  Name: 给予文化抹除地位投票权
+  Description: 文化抹除地位的人群可以参加选举
+country_allow_voting_full_acceptance_bool:
+  Mask: country
+  Name: 给予完全接纳地位投票权
+  Description: 完全接纳地位的人群可以参加选举
+country_allow_voting_open_prejudice_bool:
+  Mask: country
+  Name: 给予公开歧视地位投票权
+  Description: 公开歧视地位的人群可以参加选举
+country_allow_voting_second_rate_citizen_bool:
+  Mask: country
+  Name: 给予二等公民地位投票权
+  Description: 二等公民地位的人群可以参加选举
+country_allow_voting_violent_hostility_bool:
+  Mask: country
+  Name: 给予暴力对抗地位投票权
+  Description: 暴力对抗地位的人群可以参加选举
 country_aristocrats_pol_str_mult:
   Mask: country
   Name: aristocrats!贵族政治力量
@@ -2300,6 +2436,38 @@ country_aristocrats_voting_power_add:
   Mask: country
   Name: aristocrats!贵族选票产生的政治力量
   Description: 对选举时aristocrats!贵族选票提供的政治力量的提高或降低
+country_assimilation_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位同化
+  Description: 对文化抹除地位同化的增益或惩罚
+country_assimilation_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位同化
+  Description: 对完全接纳地位同化的增益或惩罚
+country_assimilation_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位同化
+  Description: 对公开歧视地位同化的增益或惩罚
+country_assimilation_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位同化
+  Description: 对二等公民地位同化的增益或惩罚
+country_assimilation_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位同化
+  Description: 对暴力对抗地位同化的增益或惩罚
+country_brahmins_acceptance_min_add:
+  Mask: country
+  Name: 婆罗门社会阶级的最低接纳度
+  Description: 婆罗门社会阶级人群的接纳度不会低于该数值
+country_brahmins_qualification_growth_other_class_mult:
+  Mask: country
+  Name: 婆罗门对婆罗门社会阶级外的资质增长
+  Description: 百分比提高或降低婆罗门对其他社会阶级职业的资质增长
+country_brahmins_qualification_growth_same_class_mult:
+  Mask: country
+  Name: 婆罗门社会阶级内的资质增长
+  Description: 百分比提高或降低婆罗门社会阶级对婆罗门社会阶级内其他职业的资质增长
 country_bureaucrats_pol_str_mult:
   Mask: country
   Name: bureaucrats!官僚政治力量
@@ -2308,6 +2476,10 @@ country_bureaucrats_voting_power_add:
   Mask: country
   Name: bureaucrats!官僚选票产生的政治力量
   Description: 对选举时bureaucrats!官僚选票提供的政治力量的提高或降低
+country_can_impose_same_lawgroup_army_model_in_power_bloc_bool:
+  Mask: country
+  Name: 对集团成员强制施行相同的军队类型法律
+  Description: 允许对其他集团成员强制施行与自己相同的军队类型法律
 country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool:
   Mask: country
   Name: 对集团成员强制施行相同的教会与国家法律
@@ -2352,6 +2524,62 @@ country_clerks_voting_power_add:
   Mask: country
   Name: clerks!职员选票产生的政治力量
   Description: 对选举时clerks!职员选票提供的政治力量的提高或降低
+country_dalit_acceptance_max_add:
+  Mask: country
+  Name: 达利特社会阶级的最高接纳度
+  Description: 达利特社会阶级人群的接纳度不会高于该数值
+country_dalit_cultural_acceptance_add:
+  Mask: country
+  Name: 达利特社会阶级的文化接纳度
+  Description: 对达利特社会阶级文化接纳度的加算增益或惩罚
+country_dalit_cultural_acceptance_mult:
+  Mask: country
+  Name: 达利特社会阶级的文化接纳度
+  Description: 对达利特社会阶级文化接纳度的百分比增益或惩罚
+country_dalit_education_access_add:
+  Mask: country
+  Name: 达利特社会阶级的受教育机会
+  Description: 对达利特社会阶级受教育机会的加算增益或惩罚
+country_dalit_education_access_mult:
+  Mask: country
+  Name: 达利特社会阶级的受教育机会
+  Description: 对达利特社会阶级受教育机会的百分比增益或惩罚
+country_dalit_qualification_growth_add:
+  Mask: country
+  Name: 达利特社会阶级的资质增长
+  Description: 对达利特社会阶级资质增长的加算增益或惩罚
+country_dalit_qualification_growth_mult:
+  Mask: country
+  Name: 达利特社会阶级的资质增长
+  Description: 对达利特社会阶级资质增长的百分比增益或惩罚
+country_dalit_qualification_growth_other_class_mult:
+  Mask: country
+  Name: 达利特对达利特社会阶级外的资质增长
+  Description: 百分比提高或降低达利特对其他社会阶级职业的资质增长
+country_dalit_qualification_growth_same_class_mult:
+  Mask: country
+  Name: 达利特社会阶级内的资质增长
+  Description: 百分比提高或降低达利特社会阶级对达利特社会阶级内其他职业的资质增长
+country_disallow_government_work_cultural_erasure_bool:
+  Mask: country
+  Name: 禁止文化抹除地位在政府建筑中工作
+  Description: 禁止文化抹除地位的人群在政府建筑的劳动力队伍中工作
+country_disallow_government_work_full_acceptance_bool:
+  Mask: country
+  Name: 禁止完全接纳地位在政府建筑中工作
+  Description: 禁止完全接纳地位的人群在政府建筑的劳动力队伍中工作
+country_disallow_government_work_open_prejudice_bool:
+  Mask: country
+  Name: 禁止公开歧视地位在政府建筑中工作
+  Description: 禁止公开歧视地位的人群在政府建筑的劳动力队伍中工作
+country_disallow_government_work_second_rate_citizen_bool:
+  Mask: country
+  Name: 禁止二等公民地位在政府建筑中工作
+  Description: 禁止二等公民地位的人群在政府建筑的劳动力队伍中工作
+country_disallow_government_work_violent_hostility_bool:
+  Mask: country
+  Name: 禁止暴力对抗地位在政府建筑中工作
+  Description: 禁止暴力对抗地位的人群在政府建筑的劳动力队伍中工作
 country_disallow_law_no_colonial_affairs_bool:
   Mask: country
   Name: 禁止无殖民事务
@@ -2364,6 +2592,26 @@ country_disallow_law_no_schools_bool:
   Mask: country
   Name: 禁止无学校
   Description: 禁止施行无学校
+country_disallow_military_work_cultural_erasure_bool:
+  Mask: country
+  Name: 禁止文化抹除地位在军事建筑中工作
+  Description: 禁止文化抹除地位的人群在陆军与海军的劳动力队伍中工作
+country_disallow_military_work_full_acceptance_bool:
+  Mask: country
+  Name: 禁止完全接纳地位在军事建筑中工作
+  Description: 禁止完全接纳地位的人群在陆军与海军的劳动力队伍中工作
+country_disallow_military_work_open_prejudice_bool:
+  Mask: country
+  Name: 禁止公开歧视地位在军事建筑中工作
+  Description: 禁止公开歧视地位的人群在陆军与海军的劳动力队伍中工作
+country_disallow_military_work_second_rate_citizen_bool:
+  Mask: country
+  Name: 禁止二等公民地位在军事建筑中工作
+  Description: 禁止二等公民地位的人群在陆军与海军的劳动力队伍中工作
+country_disallow_military_work_violent_hostility_bool:
+  Mask: country
+  Name: 禁止暴力对抗地位在军事建筑中工作
+  Description: 禁止暴力对抗地位的人群在陆军与海军的劳动力队伍中工作
 country_enactment_success_chance_law_public_schools_add:
   Mask: country
   Name: 公立学校的立法成功概率
@@ -2404,6 +2652,10 @@ country_institution_cost_institution_colonial_affairs_mult:
   Mask: country
   Name: 殖民事务机构bur!行政力花费
   Description: 殖民事务机构投入所需的bur!行政力花费的增加或减少
+country_institution_cost_institution_health_system_mult:
+  Mask: country
+  Name: 卫生系统的bur!行政力花费
+  Description: 卫生系统机构投入所需的bur!行政力花费的增加或减少
 country_institution_cost_institution_police_mult:
   Mask: country
   Name: 执法机构bur!行政力花费
@@ -2411,7 +2663,7 @@ country_institution_cost_institution_police_mult:
 country_institution_cost_institution_schools_mult:
   Mask: country
   Name: 教育bur!行政力花费
-  Description: country_institution_cost_institution_schools_mult_desc
+  Description: 教育机构投入所需的bur!行政力花费的增加或减少
 country_institution_health_system_max_investment_add:
   Mask: country
   Name: 最大卫生系统机构投入等级
@@ -2452,6 +2704,46 @@ country_institution_workplace_safety_max_investment_add:
   Mask: country
   Name: 最大工作场所安全部门机构投入等级
   Description: 对工作场所安全部门机构的最大投入等级的增益或惩罚
+country_kshatriyas_acceptance_max_add:
+  Mask: country
+  Name: 刹帝利社会阶级的最高接纳度
+  Description: 刹帝利社会阶级人群的接纳度不会高于该数值
+country_kshatriyas_acceptance_min_add:
+  Mask: country
+  Name: 刹帝利社会阶级的最低接纳度
+  Description: 刹帝利社会阶级人群的接纳度不会低于该数值
+country_kshatriyas_cultural_acceptance_add:
+  Mask: country
+  Name: 刹帝利社会阶级的文化接纳度
+  Description: 对刹帝利社会阶级文化接纳度的加算增益或惩罚
+country_kshatriyas_cultural_acceptance_mult:
+  Mask: country
+  Name: 刹帝利社会阶级的文化接纳度
+  Description: 对刹帝利社会阶级文化接纳度的百分比增益或惩罚
+country_kshatriyas_education_access_add:
+  Mask: country
+  Name: 刹帝利社会阶级的受教育机会
+  Description: 对刹帝利社会阶级受教育机会的加算增益或惩罚
+country_kshatriyas_education_access_mult:
+  Mask: country
+  Name: 刹帝利社会阶级的受教育机会
+  Description: 对刹帝利社会阶级受教育机会的百分比增益或惩罚
+country_kshatriyas_qualification_growth_add:
+  Mask: country
+  Name: 刹帝利社会阶级的资质增长
+  Description: 对刹帝利社会阶级资质增长的加算增益或惩罚
+country_kshatriyas_qualification_growth_mult:
+  Mask: country
+  Name: 刹帝利社会阶级的资质增长
+  Description: 对刹帝利社会阶级资质增长的百分比增益或惩罚
+country_kshatriyas_qualification_growth_other_class_mult:
+  Mask: country
+  Name: 刹帝利对刹帝利社会阶级外的资质增长
+  Description: 百分比提高或降低刹帝利对其他社会阶级职业的资质增长
+country_kshatriyas_qualification_growth_same_class_mult:
+  Mask: country
+  Name: 刹帝利社会阶级内的资质增长
+  Description: 百分比提高或降低刹帝利社会阶级对刹帝利社会阶级内其他职业的资质增长
 country_laborers_pol_str_mult:
   Mask: country
   Name: laborers!劳工政治力量
@@ -2460,6 +2752,26 @@ country_laborers_voting_power_add:
   Mask: country
   Name: laborers!劳工选票产生的政治力量
   Description: 对选举时laborers!劳工选票提供的政治力量的提高或降低
+country_loyalism_increases_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+country_loyalism_increases_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+country_loyalism_increases_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+country_loyalism_increases_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+country_loyalism_increases_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
 country_machinists_pol_str_mult:
   Mask: country
   Name: machinists!技工政治力量
@@ -2492,6 +2804,26 @@ country_peasants_voting_power_add:
   Mask: country
   Name: peasants!自给农选票产生的政治力量
   Description: 对选举时peasants!自给农选票提供的政治力量的提高或降低
+country_political_strength_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位的政治力量
+  Description: 对该地位的人群政治力量的增益或惩罚
+country_political_strength_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位的政治力量
+  Description: 对该地位的人群政治力量的增益或惩罚
+country_political_strength_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位的政治力量
+  Description: 对该地位的人群政治力量的增益或惩罚
+country_political_strength_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位的政治力量
+  Description: 对该地位的人群政治力量的增益或惩罚
+country_political_strength_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位的政治力量
+  Description: 对该地位的人群政治力量的增益或惩罚
 country_production_tech_research_speed_mult:
   Mask: country
   Name: 生产科技研究速度
@@ -2500,10 +2832,86 @@ country_production_tech_spread_mult:
   Mask: country
   Name: 生产类科技扩散速度
   Description: 生产类科技从其他国家扩散到我国的速度 
+country_qualification_growth_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位的每月资质提高
+  Description: 对文化抹除地位的每月资质提高的增益或惩罚
+country_qualification_growth_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位的资质提高
+  Description: 对完全接纳地位的每月资质提高的增益或惩罚
+country_qualification_growth_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位的每月资质提高
+  Description: 对公开歧视地位的每月资质提高的增益或惩罚
+country_qualification_growth_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位的每月资质提高
+  Description: 对二等公民地位的每月资质提高的增益或惩罚
+country_qualification_growth_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位的资质提高
+  Description: 对暴力对抗地位的每月资质提高的增益或惩罚
+country_radicalism_increases_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+country_radicalism_increases_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+country_radicalism_increases_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+country_radicalism_increases_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+country_radicalism_increases_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
 country_shopkeepers_voting_power_add:
   Mask: country
   Name: shopkeepers!店主选票产生的政治力量
   Description: 对选举时shopkeepers!店主选票提供的政治力量的提高或降低
+country_shudras_acceptance_max_add:
+  Mask: country
+  Name: 首陀罗社会阶级的最高接纳度
+  Description: 首陀罗社会阶级人群的接纳度不会高于该数值
+country_shudras_cultural_acceptance_add:
+  Mask: country
+  Name: 首陀罗社会阶级的文化接纳度
+  Description: 对首陀罗社会阶级文化接纳度的加算增益或惩罚
+country_shudras_cultural_acceptance_mult:
+  Mask: country
+  Name: 首陀罗社会阶级的文化接纳度
+  Description: 对首陀罗社会阶级文化接纳度的百分比增益或惩罚
+country_shudras_education_access_add:
+  Mask: country
+  Name: 首陀罗社会阶级的受教育机会
+  Description: 对首陀罗社会阶级受教育机会的加算增益或惩罚
+country_shudras_education_access_mult:
+  Mask: country
+  Name: 首陀罗社会阶级的受教育机会
+  Description: 对首陀罗社会阶级受教育机会的百分比增益或惩罚
+country_shudras_qualification_growth_add:
+  Mask: country
+  Name: 首陀罗社会阶级的资质增长
+  Description: 对首陀罗社会阶级资质增长的加算增益或惩罚
+country_shudras_qualification_growth_mult:
+  Mask: country
+  Name: 首陀罗社会阶级的资质增长
+  Description: 对首陀罗社会阶级资质增长的百分比增益或惩罚
+country_shudras_qualification_growth_other_class_mult:
+  Mask: country
+  Name: 首陀罗对首陀罗社会阶级外的资质增长
+  Description: 百分比提高或降低首陀罗对其他社会阶级职业的资质增长
+country_shudras_qualification_growth_same_class_mult:
+  Mask: country
+  Name: 首陀罗社会阶级内的资质增长
+  Description: 百分比提高或降低首陀罗社会阶级对首陀罗社会阶级内其他职业的资质增长
 country_slaves_voting_power_add:
   Mask: country
   Name: slaves!奴隶选票产生的政治力量
@@ -2516,10 +2924,114 @@ country_society_tech_spread_mult:
   Mask: country
   Name: 社会类科技扩散速度
   Description: 社会类科技从其他国家扩散到我国的速度
+country_soldiers_pol_str_mult:
+  Mask: country
+  Name: soldiers!军人政治力量
+  Description: 对soldiers!军人政治力量的增益或惩罚
 country_soldiers_voting_power_add:
   Mask: country
   Name: soldiers!军人选票产生的政治力量
   Description: 对选举时soldiers!军人选票提供的政治力量的提高或降低
+country_standard_of_living_cultural_erasure_add:
+  Mask: country
+  Name: 文化抹除地位的生活水平
+  Description: 文化抹除地位的附加生活水平
+country_standard_of_living_full_acceptance_add:
+  Mask: country
+  Name: 完全接纳地位的生活水平
+  Description: 完全接纳地位的附加生活水平财富
+country_standard_of_living_open_prejudice_add:
+  Mask: country
+  Name: 公开歧视地位的生活水平
+  Description: 公开歧视地位的附加生活水平
+country_standard_of_living_second_rate_citizen_add:
+  Mask: country
+  Name: 二等公民地位的生活水平
+  Description: 二等公民地位的附加生活水平
+country_standard_of_living_violent_hostility_add:
+  Mask: country
+  Name: 暴力对抗地位的生活水平
+  Description: 暴力对抗地位的附加生活水平
+country_vaishyas_acceptance_max_add:
+  Mask: country
+  Name: 吠舍社会阶级的最高接纳度
+  Description: 吠舍社会阶级人群的接纳度不会高于该数值
+country_vaishyas_acceptance_min_add:
+  Mask: country
+  Name: 吠舍社会阶级的最低接纳度
+  Description: 吠舍社会阶级人群的接纳度不会低于该数值
+country_vaishyas_cultural_acceptance_add:
+  Mask: country
+  Name: 吠舍社会阶级的文化接纳度
+  Description: 对吠舍社会阶级文化接纳度的加算增益或惩罚
+country_vaishyas_cultural_acceptance_mult:
+  Mask: country
+  Name: 吠舍社会阶级的文化接纳度
+  Description: 对吠舍社会阶级文化接纳度的百分比增益或惩罚
+country_vaishyas_education_access_add:
+  Mask: country
+  Name: 吠舍社会阶级的受教育机会
+  Description: 对吠舍社会阶级受教育机会的加算增益或惩罚
+country_vaishyas_education_access_mult:
+  Mask: country
+  Name: 吠舍社会阶级的受教育机会
+  Description: 对吠舍社会阶级受教育机会的百分比增益或惩罚
+country_vaishyas_qualification_growth_add:
+  Mask: country
+  Name: 吠舍社会阶级的资质增长
+  Description: 对吠舍社会阶级资质增长的加算增益或惩罚
+country_vaishyas_qualification_growth_mult:
+  Mask: country
+  Name: 吠舍社会阶级的资质增长
+  Description: 对吠舍社会阶级资质增长的百分比增益或惩罚
+country_vaishyas_qualification_growth_other_class_mult:
+  Mask: country
+  Name: 吠舍对吠舍社会阶级外的资质增长
+  Description: 百分比提高或降低吠舍对其他社会阶级职业的资质增长
+country_vaishyas_qualification_growth_same_class_mult:
+  Mask: country
+  Name: 吠舍社会阶级内的资质增长
+  Description: 百分比提高或降低吠舍社会阶级对吠舍社会阶级内其他职业的资质增长
+country_voting_power_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位投票的政治力量贡献
+  Description: 对文化抹除地位的人群一张vote计多少政治力量的增益或惩罚
+country_voting_power_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位投票的政治力量贡献
+  Description: 对完全接纳地位的人群一张vote计多少政治力量的增益或惩罚
+country_voting_power_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位投票的政治力量贡献
+  Description: 对公开歧视地位的人群一张vote计多少政治力量的增益或惩罚
+country_voting_power_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位投票的政治力量贡献
+  Description: 对二等公民地位的人群一张vote计多少政治力量的增益或惩罚
+country_voting_power_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位投票的政治力量贡献
+  Description: 对暴力对抗地位的人群一张vote计多少政治力量的增益或惩罚
+country_wage_cultural_erasure_mult:
+  Mask: country
+  Name: 文化抹除地位的工资
+  Description: 对文化抹除地位的工资的增益或惩罚。既影响他们的当前工资也影响他们的目标工资
+country_wage_full_acceptance_mult:
+  Mask: country
+  Name: 完全接纳地位的工资
+  Description: 对完全接纳地位的工资的增益或惩罚。既影响他们的当前工资也影响他们的目标工资
+country_wage_open_prejudice_mult:
+  Mask: country
+  Name: 公开歧视地位的工资
+  Description: 对公开歧视地位的工资的增益或惩罚。既影响他们的当前工资也影响他们的目标工资
+country_wage_second_rate_citizen_mult:
+  Mask: country
+  Name: 二等公民地位的工资
+  Description: 对二等公民地位的工资的增益或惩罚。既影响他们的当前工资也影响他们的目标工资
+country_wage_violent_hostility_mult:
+  Mask: country
+  Name: 暴力对抗地位的工资
+  Description: 对暴力对抗地位的工资的增益或惩罚。既影响他们的当前工资也影响他们的目标工资
 goods_input_aeroplanes_add:
   Mask: goods
   Name: aeroplanes!飞机投入
@@ -3316,6 +3828,10 @@ state_baganda_standard_of_living_add:
   Mask: state
   Name: 巴干达人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_bageli_standard_of_living_add:
+  Mask: state
+  Name: 巴哥里人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_baguirmi_standard_of_living_add:
   Mask: state
   Name: 巴吉尔米人[concept_sol]修正
@@ -3428,6 +3944,10 @@ state_bulgarian_standard_of_living_add:
   Mask: state
   Name: 保加利亚人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_bundeli_standard_of_living_add:
+  Mask: state
+  Name: 本德尔人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_burmese_standard_of_living_add:
   Mask: state
   Name: 缅甸人[concept_sol]修正
@@ -3488,6 +4008,10 @@ state_chewa_standard_of_living_add:
   Mask: state
   Name: 切瓦人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_chhattisgarhi_standard_of_living_add:
+  Mask: state
+  Name: 切蒂斯格尔人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_chilean_standard_of_living_add:
   Mask: state
   Name: 智利人[concept_sol]修正
@@ -3547,6 +4071,10 @@ state_danish_standard_of_living_add:
 state_dayak_standard_of_living_add:
   Mask: state
   Name: 达雅人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
+state_deccani_standard_of_living_add:
+  Mask: state
+  Name: 德干人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_dinka_standard_of_living_add:
   Mask: state
@@ -3652,6 +4180,10 @@ state_georgian_standard_of_living_add:
   Mask: state
   Name: 格鲁吉亚人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_gondi_standard_of_living_add:
+  Mask: state
+  Name: 贡德人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_greek_standard_of_living_add:
   Mask: state
   Name: 希腊人[concept_sol]修正
@@ -3680,6 +4212,70 @@ state_haratin_standard_of_living_add:
   Mask: state
   Name: 哈拉廷人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_harvest_condition_disease_outbreak_duration_mult:
+  Mask: state
+  Name: disease_outbreak!疫病爆发收获状况持续时间
+  Description: 提高或降低疫病爆发的持续时间
+state_harvest_condition_disease_outbreak_impact_mult:
+  Mask: state
+  Name: disease_outbreak!疫病爆发收获状况影响
+  Description: 提高或降低疫病爆发的影响
+state_harvest_condition_drought_duration_mult:
+  Mask: state
+  Name: drought!干旱收获状况持续时间
+  Description: 提高或降低干旱的持续时间
+state_harvest_condition_drought_impact_mult:
+  Mask: state
+  Name: drought!干旱收获状况影响
+  Description: 提高或降低干旱的影响
+state_harvest_condition_extreme_winds_duration_mult:
+  Mask: state
+  Name: extreme_winds!强风收获状况持续时间
+  Description: 提高或降低强风的持续时间
+state_harvest_condition_extreme_winds_impact_mult:
+  Mask: state
+  Name: extreme_winds!强风收获状况影响
+  Description: 提高或降低强风的影响
+state_harvest_condition_flood_duration_mult:
+  Mask: state
+  Name: flood!洪水收获状况持续时间
+  Description: 提高或降低洪水的持续时间
+state_harvest_condition_flood_impact_mult:
+  Mask: state
+  Name: flood!洪水收获状况影响
+  Description: 提高或降低洪水的影响
+state_harvest_condition_hailstorm_duration_mult:
+  Mask: state
+  Name: state_harvest_condition_hailstorm_duration_mult
+  Description: state_harvest_condition_hailstorm_duration_mult_desc
+state_harvest_condition_hailstorm_impact_mult:
+  Mask: state
+  Name: state_harvest_condition_hailstorm_impact_mult
+  Description: state_harvest_condition_hailstorm_impact_mult_desc
+state_harvest_condition_heatwave_duration_mult:
+  Mask: state
+  Name: heatwave!热浪收获状况持续时间
+  Description: 提高或降低热浪的持续时间
+state_harvest_condition_heatwave_impact_mult:
+  Mask: state
+  Name: heatwave!热浪收获状况影响
+  Description: 提高或降低热浪的影响
+state_harvest_condition_torrential_rains_duration_mult:
+  Mask: state
+  Name: state_harvest_condition_torrential_rains_duration_mult
+  Description: state_harvest_condition_torrential_rains_duration_mult_desc
+state_harvest_condition_torrential_rains_impact_mult:
+  Mask: state
+  Name: state_harvest_condition_torrential_rains_impact_mult
+  Description: state_harvest_condition_torrential_rains_impact_mult_desc
+state_harvest_condition_wildfire_duration_mult:
+  Mask: state
+  Name: wildfire!野火收获状况持续时间
+  Description: 提高或降低野火的持续时间
+state_harvest_condition_wildfire_impact_mult:
+  Mask: state
+  Name: wildfire!野火收获状况影响
+  Description: 提高或降低野火的影响
 state_hausa_standard_of_living_add:
   Mask: state
   Name: 豪萨人[concept_sol]修正
@@ -3700,6 +4296,10 @@ state_hindu_standard_of_living_add:
   Mask: state
   Name: 印度教[concept_sol]修正
   Description: 对特定宗教[concept_sol]的增益或惩罚
+state_hindustani_standard_of_living_add:
+  Mask: state
+  Name: 印度斯坦人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_hokan_standard_of_living_add:
   Mask: state
   Name: 霍坎人[concept_sol]修正
@@ -3755,10 +4355,6 @@ state_kachin_standard_of_living_add:
 state_kalmyk_standard_of_living_add:
   Mask: state
   Name: 卡尔梅克人[concept_sol]修正
-  Description: 对特定文化[concept_sol]的增益或惩罚
-state_kanauji_standard_of_living_add:
-  Mask: state
-  Name: 卡瑙杰人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_kannada_standard_of_living_add:
   Mask: state
@@ -3852,6 +4448,26 @@ state_lomwe_standard_of_living_add:
   Mask: state
   Name: 隆韦人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_loyalism_increases_cultural_erasure_mult:
+  Mask: state
+  Name: 文化抹除地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+state_loyalism_increases_full_acceptance_mult:
+  Mask: state
+  Name: 完全接纳地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+state_loyalism_increases_open_prejudice_mult:
+  Mask: state
+  Name: 公开歧视地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+state_loyalism_increases_second_rate_citizen_mult:
+  Mask: state
+  Name: 二等公民地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
+state_loyalism_increases_violent_hostility_mult:
+  Mask: state
+  Name: 暴力对抗地位的忠诚度提高
+  Description: 对该地位的人群忠诚度提高的增益或惩罚
 state_luba_standard_of_living_add:
   Mask: state
   Name: 卢巴人[concept_sol]修正
@@ -3867,6 +4483,10 @@ state_luo_standard_of_living_add:
 state_luri_standard_of_living_add:
   Mask: state
   Name: 卢尔人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
+state_lushai_standard_of_living_add:
+  Mask: state
+  Name: 卢赛人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_maasai_standard_of_living_add:
   Mask: state
@@ -4012,6 +4632,10 @@ state_muskogean_standard_of_living_add:
   Mask: state
   Name: 穆斯科基人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_naga_standard_of_living_add:
+  Mask: state
+  Name: 纳加人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_nahua_standard_of_living_add:
   Mask: state
   Name: 纳瓦人[concept_sol]修正
@@ -4074,7 +4698,7 @@ state_occitan_standard_of_living_add:
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_oodham_standard_of_living_add:
   Mask: state
-  Name: 奥欧桑人[concept_sol]修正
+  Name: 奥哈姆人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_oriental_orthodox_standard_of_living_add:
   Mask: state
@@ -4096,6 +4720,10 @@ state_ovimbundu_standard_of_living_add:
   Mask: state
   Name: 奥文本杜人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_pahari_standard_of_living_add:
+  Mask: state
+  Name: 帕哈里人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_paiute_standard_of_living_add:
   Mask: state
   Name: 派尤特人[concept_sol]修正
@@ -4116,10 +4744,18 @@ state_patagonian_standard_of_living_add:
   Mask: state
   Name: 巴塔哥尼亚人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_pathan_standard_of_living_add:
+  Mask: state
+  Name: 帕坦人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
 state_paulista_standard_of_living_add:
   Mask: state
   Name: 保利斯塔人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_peasants_consumption_multiplier_add:
+  Mask: state
+  Name: peasants!自给农的商品消费
+  Description: 对peasants!自给农商品消费的增益或惩罚
 state_peasants_education_access_add:
   Mask: state
   Name: peasants!自给农受教育机会
@@ -4156,146 +4792,222 @@ state_polynesian_standard_of_living_add:
   Mask: state
   Name: 波利尼西亚人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
-state_pop_support_law_autocracy_mult:
+state_pop_support_movement_anarchist_add:
   Mask: state
-  Name: 独裁制人群支持
-  Description: 影响人群支持独裁制法律的比例。
-state_pop_support_law_censorship_mult:
+  Name: 无政府主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_anarchist_mult:
   Mask: state
-  Name: 出版物审查人群支持
-  Description: 影响人群支持出版物审查法律的比例。
-state_pop_support_law_census_voting_add:
+  Name: 无政府主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_anti_slavery_add:
   Mask: state
-  Name: 资格性选举制人群支持
-  Description: 影响人群支持资格性选举制法律的比例。
-state_pop_support_law_closed_borders_mult:
+  Name: 废奴运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_anti_slavery_mult:
   Mask: state
-  Name: 关闭边境人群支持
-  Description: 影响人群支持关闭边境法律的比例。
-state_pop_support_law_command_economy_add:
+  Name: 废奴运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_bonapartist_add:
   Mask: state
-  Name: 计划经济人群支持
-  Description: 影响人群支持计划经济法律的比例。
-state_pop_support_law_council_republic_add:
+  Name: 波拿巴派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_bonapartist_mult:
   Mask: state
-  Name: 委员会共和制人群支持
-  Description: 影响人群支持委员会共和制法律的比例。
-state_pop_support_law_council_republic_mult:
+  Name: 波拿巴派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_communist_add:
   Mask: state
-  Name: 委员会共和制人群支持
-  Description: 影响人群支持委员会共和制法律的比例。
-state_pop_support_law_dedicated_police_add:
+  Name: 共产主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_communist_mult:
   Mask: state
-  Name: 专职警察部队人群支持
-  Description: 影响人群支持专职警察部队法律的比例。
-state_pop_support_law_graduated_taxation_add:
+  Name: 共产主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_corporatist_add:
   Mask: state
-  Name: 累进税制人群支持
-  Description: 影响人群支持累进税制法律的比例。
-state_pop_support_law_industry_banned_add:
+  Name: 法团主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_corporatist_mult:
   Mask: state
-  Name: 禁止工业人群支持
-  Description: 影响人群支持禁止工业法律的比率。
-state_pop_support_law_local_police_mult:
+  Name: 法团主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_cultural_majority_add:
   Mask: state
-  Name: 地方警察部队人群支持
-  Description: 影响人群支持地方警察部队法律的比例。
-state_pop_support_law_migration_controls_mult:
+  Name: 文化多数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_cultural_majority_mult:
   Mask: state
-  Name: 移民控制人群支持
-  Description: 影响人群支持移民控制法律的比例。
-state_pop_support_law_militarized_police_add:
+  Name: 文化多数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_cultural_minority_add:
   Mask: state
-  Name: 军事化警察部队人群支持
-  Description: 影响人群支持军事化警察部队法律的比例。
-state_pop_support_law_militarized_police_mult:
+  Name: 文化少数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_cultural_minority_mult:
   Mask: state
-  Name: 军事化警察部队人群支持
-  Description: 影响人群支持军事化警察部队法律的比例。
-state_pop_support_law_monarchy_mult:
+  Name: 文化少数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_fascist_add:
   Mask: state
-  Name: 君主制人群支持
-  Description: 影响人群支持君主制法律的比例。
-state_pop_support_law_national_guard_mult:
+  Name: 法西斯主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_fascist_mult:
   Mask: state
-  Name: 国民警卫队人群支持
-  Description: 影响人群支持国民警卫队法律的比例。
-state_pop_support_law_national_supremacy_add:
+  Name: 法西斯主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_feminist_add:
   Mask: state
-  Name: 民族至上人群支持
-  Description: 影响人群支持民族至上法律的比例。
-state_pop_support_law_national_supremacy_mult:
+  Name: 女权主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_feminist_mult:
   Mask: state
-  Name: 民族至上人群支持
-  Description: 影响人群支持民族至上法律的比例。
-state_pop_support_law_no_colonial_affairs_add:
+  Name: 女权主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_india_pan_national_add:
   Mask: state
-  Name: 无殖民事务人群支持
-  Description: 影响人群支持无殖民事务法律的比例。
-state_pop_support_law_no_migration_controls_mult:
+  Name: 印度民族运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_india_pan_national_mult:
   Mask: state
-  Name: 无移民控制人群支持
-  Description: 影响人群支持无移民控制法律的比例。
-state_pop_support_law_oligarchy_mult:
+  Name: 印度民族运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_labor_add:
   Mask: state
-  Name: 寡头制人群支持
-  Description: 影响人群支持寡头制法律的比例。
-state_pop_support_law_parliamentary_republic_add:
+  Name: 劳工运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_labor_mult:
   Mask: state
-  Name: 议会共和制人群支持
-  Description: 影响人群支持议会共和制法律的比例。
-state_pop_support_law_presidential_republic_add:
+  Name: 劳工运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_land_reform_add:
   Mask: state
-  Name: 总统共和制人群支持
-  Description: 影响人群支持总统共和制法律的比例。
-state_pop_support_law_proportional_taxation_add:
+  Name: 农民运动对人群的吸引力
+  Description: state_pop_support_movement_land_reform_add_desc
+state_pop_support_movement_land_reform_mult:
   Mask: state
-  Name: 比例税制人群支持
-  Description: 影响人群支持比例税制法律的比例。
-state_pop_support_law_protected_speech_mult:
+  Name: 农民运动对人群的吸引力
+  Description: state_pop_support_movement_land_reform_mult_desc
+state_pop_support_movement_legitimist_add:
   Mask: state
-  Name: 言论保护人群支持
-  Description: 影响人群支持言论保护法律的比例。
-state_pop_support_law_racial_segregation_add:
+  Name: 正统派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_legitimist_mult:
   Mask: state
-  Name: 种族隔离人群支持
-  Description: 影响人群支持种族隔离法律的比例。
-state_pop_support_law_right_of_assembly_mult:
+  Name: 正统派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_liberal_add:
   Mask: state
-  Name: 集会权人群支持
-  Description: 影响人群支持集会权法律的比例。
-state_pop_support_law_secret_police_mult:
+  Name: 自由主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_liberal_mult:
   Mask: state
-  Name: 秘密警察人群支持
-  Description: 影响人群支持秘密警察法律的比例。
-state_pop_support_law_slave_trade_mult:
+  Name: 自由主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_modernizer_add:
   Mask: state
-  Name: 奴隶贸易人群支持
-  Description: 影响人群支持奴隶贸易法律的比例。
-state_pop_support_law_slavery_banned_add:
+  Name: 现代化运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_modernizer_mult:
   Mask: state
-  Name: 禁止蓄奴人群支持
-  Description: 影响人群支持禁止蓄奴法律的比例。
-state_pop_support_law_universal_suffrage_add:
+  Name: 现代化运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_nihilist_add:
   Mask: state
-  Name: 普选制人群支持
-  Description: 影响人群支持普选制法律的比例。
-state_pop_support_law_universal_suffrage_mult:
+  Name: 虚无主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_nihilist_mult:
   Mask: state
-  Name: 普选制人群支持
-  Description: 影响人群支持普选制法律的比例。
-state_pop_support_law_wage_subsidies_add:
+  Name: 虚无主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_orleanist_add:
   Mask: state
-  Name: 工资补贴人群支持
-  Description: 影响人群支持工资补贴法律的比例。
-state_pop_support_law_womens_suffrage_add:
+  Name: 奥尔良派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_orleanist_mult:
   Mask: state
-  Name: 妇女选举权人群支持
-  Description: 影响人群支持妇女选举权法律的比例。
-state_pop_support_law_womens_suffrage_mult:
+  Name: 奥尔良派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_positivist_add:
   Mask: state
-  Name: 妇女选举权人群支持
-  Description: 影响人群支持妇女选举权法律的比例。
+  Name: 实证主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_positivist_mult:
+  Mask: state
+  Name: 实证主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_pro_slavery_add:
+  Mask: state
+  Name: 拥奴运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_pro_slavery_mult:
+  Mask: state
+  Name: 拥奴运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_radical_add:
+  Mask: state
+  Name: 激进主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_radical_mult:
+  Mask: state
+  Name: 激进主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_reactionary_add:
+  Mask: state
+  Name: 反动主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_reactionary_mult:
+  Mask: state
+  Name: 反动主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_religious_majority_add:
+  Mask: state
+  Name: 宗教多数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_religious_majority_mult:
+  Mask: state
+  Name: 宗教多数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_religious_minority_add:
+  Mask: state
+  Name: 宗教少数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_religious_minority_mult:
+  Mask: state
+  Name: 宗教少数派运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_royalist_absolutist_add:
+  Mask: state
+  Name: 专制运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_royalist_absolutist_mult:
+  Mask: state
+  Name: 专制运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_royalist_constitutional_add:
+  Mask: state
+  Name: 保皇运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_royalist_constitutional_mult:
+  Mask: state
+  Name: 保皇运动人群吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_socialist_add:
+  Mask: state
+  Name: 社会主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_socialist_mult:
+  Mask: state
+  Name: 社会主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_utilitarian_add:
+  Mask: state
+  Name: 功利主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
+state_pop_support_movement_utilitarian_mult:
+  Mask: state
+  Name: 功利主义运动对人群的吸引力
+  Description: 提高或降低政治运动对人群的吸引力。
 state_portuguese_standard_of_living_add:
   Mask: state
   Name: 葡萄牙人[concept_sol]修正
@@ -4312,6 +5024,26 @@ state_quechua_standard_of_living_add:
   Mask: state
   Name: 克丘亚人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
+state_radicalism_increases_cultural_erasure_mult:
+  Mask: state
+  Name: 文化抹除地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+state_radicalism_increases_full_acceptance_mult:
+  Mask: state
+  Name: 完全接纳地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+state_radicalism_increases_open_prejudice_mult:
+  Mask: state
+  Name: 公开歧视地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+state_radicalism_increases_second_rate_citizen_mult:
+  Mask: state
+  Name: 二等公民地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
+state_radicalism_increases_violent_hostility_mult:
+  Mask: state
+  Name: 暴力对抗地位的激进度提高
+  Description: 对该地位的人群激进度提高的增益或惩罚
 state_rajput_standard_of_living_add:
   Mask: state
   Name: 拉杰普特人[concept_sol]修正
@@ -4487,6 +5219,10 @@ state_swahili_standard_of_living_add:
 state_swedish_standard_of_living_add:
   Mask: state
   Name: 瑞典人[concept_sol]修正
+  Description: 对特定文化[concept_sol]的增益或惩罚
+state_szekely_standard_of_living_add:
+  Mask: state
+  Name: 塞凯伊人[concept_sol]修正
   Description: 对特定文化[concept_sol]的增益或惩罚
 state_tajik_standard_of_living_add:
   Mask: state
@@ -4848,6 +5584,8 @@ building_clerks_shares_mult:
   Mask: building
 building_coffee_plantation_throughput_add:
   Mask: building
+building_company_headquarter_throughput_add:
+  Mask: building
 building_conscription_center_throughput_add:
   Mask: building
 building_cristo_redentor_throughput_add:
@@ -4957,8 +5695,6 @@ building_group_bg_agriculture_farmers_fertility_mult:
 building_group_bg_agriculture_farmers_standard_of_living_add:
   Mask: building
 building_group_bg_agriculture_fertility_mult:
-  Mask: building
-building_group_bg_agriculture_infrastructure_usage_mult:
   Mask: building
 building_group_bg_agriculture_laborers_fertility_mult:
   Mask: building
@@ -5946,6 +6682,112 @@ building_group_bg_coffee_plantations_tax_mult:
   Mask: building
 building_group_bg_coffee_plantations_unincorporated_throughput_add:
   Mask: building
+building_group_bg_company_headquarter_academics_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_academics_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_academics_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_aristocrats_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_aristocrats_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_aristocrats_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_bureaucrats_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_bureaucrats_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_bureaucrats_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_capitalists_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_capitalists_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_capitalists_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_clergymen_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_clergymen_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_clergymen_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_clerks_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_clerks_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_clerks_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_employee_mult:
+  Mask: building
+building_group_bg_company_headquarter_engineers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_engineers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_engineers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_farmers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_farmers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_farmers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_infrastructure_usage_mult:
+  Mask: building
+building_group_bg_company_headquarter_laborers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_laborers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_laborers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_machinists_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_machinists_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_machinists_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_officers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_officers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_officers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_peasants_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_peasants_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_peasants_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_shopkeepers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_shopkeepers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_shopkeepers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_slaves_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_slaves_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_slaves_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_soldiers_fertility_mult:
+  Mask: building
+building_group_bg_company_headquarter_soldiers_mortality_mult:
+  Mask: building
+building_group_bg_company_headquarter_soldiers_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_standard_of_living_add:
+  Mask: building
+building_group_bg_company_headquarter_tax_mult:
+  Mask: building
+building_group_bg_company_headquarter_throughput_add:
+  Mask: building
+building_group_bg_company_headquarter_unincorporated_throughput_add:
+  Mask: building
 building_group_bg_conscription_academics_fertility_mult:
   Mask: building
 building_group_bg_conscription_academics_mortality_mult:
@@ -6365,6 +7207,110 @@ building_group_bg_dye_plantations_tax_mult:
 building_group_bg_dye_plantations_throughput_add:
   Mask: building
 building_group_bg_dye_plantations_unincorporated_throughput_add:
+  Mask: building
+building_group_bg_extraction_academics_fertility_mult:
+  Mask: building
+building_group_bg_extraction_academics_mortality_mult:
+  Mask: building
+building_group_bg_extraction_academics_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_aristocrats_fertility_mult:
+  Mask: building
+building_group_bg_extraction_aristocrats_mortality_mult:
+  Mask: building
+building_group_bg_extraction_aristocrats_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_bureaucrats_fertility_mult:
+  Mask: building
+building_group_bg_extraction_bureaucrats_mortality_mult:
+  Mask: building
+building_group_bg_extraction_bureaucrats_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_capitalists_fertility_mult:
+  Mask: building
+building_group_bg_extraction_capitalists_mortality_mult:
+  Mask: building
+building_group_bg_extraction_capitalists_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_clergymen_fertility_mult:
+  Mask: building
+building_group_bg_extraction_clergymen_mortality_mult:
+  Mask: building
+building_group_bg_extraction_clergymen_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_clerks_fertility_mult:
+  Mask: building
+building_group_bg_extraction_clerks_mortality_mult:
+  Mask: building
+building_group_bg_extraction_clerks_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_employee_mult:
+  Mask: building
+building_group_bg_extraction_engineers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_engineers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_engineers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_farmers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_farmers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_farmers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_fertility_mult:
+  Mask: building
+building_group_bg_extraction_infrastructure_usage_mult:
+  Mask: building
+building_group_bg_extraction_laborers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_laborers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_laborers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_machinists_fertility_mult:
+  Mask: building
+building_group_bg_extraction_machinists_mortality_mult:
+  Mask: building
+building_group_bg_extraction_machinists_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_mortality_mult:
+  Mask: building
+building_group_bg_extraction_officers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_officers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_officers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_peasants_fertility_mult:
+  Mask: building
+building_group_bg_extraction_peasants_mortality_mult:
+  Mask: building
+building_group_bg_extraction_peasants_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_shopkeepers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_shopkeepers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_shopkeepers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_slaves_fertility_mult:
+  Mask: building
+building_group_bg_extraction_slaves_mortality_mult:
+  Mask: building
+building_group_bg_extraction_slaves_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_soldiers_fertility_mult:
+  Mask: building
+building_group_bg_extraction_soldiers_mortality_mult:
+  Mask: building
+building_group_bg_extraction_soldiers_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_standard_of_living_add:
+  Mask: building
+building_group_bg_extraction_tax_mult:
+  Mask: building
+building_group_bg_extraction_unincorporated_throughput_add:
   Mask: building
 building_group_bg_financial_districts_academics_fertility_mult:
   Mask: building
@@ -9002,8 +9948,6 @@ building_group_bg_plantations_farmers_standard_of_living_add:
   Mask: building
 building_group_bg_plantations_fertility_mult:
   Mask: building
-building_group_bg_plantations_infrastructure_usage_mult:
-  Mask: building
 building_group_bg_plantations_laborers_fertility_mult:
   Mask: building
 building_group_bg_plantations_laborers_standard_of_living_add:
@@ -9411,8 +10355,6 @@ building_group_bg_ranching_farmers_fertility_mult:
 building_group_bg_ranching_farmers_standard_of_living_add:
   Mask: building
 building_group_bg_ranching_fertility_mult:
-  Mask: building
-building_group_bg_ranching_infrastructure_usage_mult:
   Mask: building
 building_group_bg_ranching_laborers_fertility_mult:
   Mask: building
@@ -10692,8 +11634,6 @@ building_group_bg_tea_plantations_standard_of_living_add:
   Mask: building
 building_group_bg_tea_plantations_tax_mult:
   Mask: building
-building_group_bg_tea_plantations_throughput_add:
-  Mask: building
 building_group_bg_tea_plantations_unincorporated_throughput_add:
   Mask: building
 building_group_bg_technology_academics_fertility_mult:
@@ -11424,6 +12364,8 @@ building_group_bg_wheat_farms_unincorporated_throughput_add:
   Mask: building
 building_hagia_sophia_throughput_add:
   Mask: building
+building_halloween_castledracula_throughput_add:
+  Mask: building
 building_khaju_bridge_throughput_add:
   Mask: building
 building_laborers_fertility_mult:
@@ -11524,11 +12466,15 @@ building_tobacco_plantation_throughput_add:
   Mask: building
 building_vatican_city_throughput_add:
   Mask: building
+building_victoria_terminus_throughput_add:
+  Mask: building
 building_wat_arun_throughput_add:
   Mask: building
 building_white_house_throughput_add:
   Mask: building
 country_clerks_pol_str_mult:
+  Mask: country
+country_enactment_success_chance_law_affirmative_action_add:
   Mask: country
 country_enactment_success_chance_law_agrarianism_add:
   Mask: country
@@ -11566,6 +12512,8 @@ country_enactment_success_chance_law_consumption_based_taxation_add:
   Mask: country
 country_enactment_success_chance_law_cooperative_ownership_add:
   Mask: country
+country_enactment_success_chance_law_corporate_state_add:
+  Mask: country
 country_enactment_success_chance_law_council_republic_add:
   Mask: country
 country_enactment_success_chance_law_cultural_exclusion_add:
@@ -11580,6 +12528,8 @@ country_enactment_success_chance_law_elected_bureaucrats_add:
   Mask: country
 country_enactment_success_chance_law_ethnostate_add:
   Mask: country
+country_enactment_success_chance_law_extraction_economy_add:
+  Mask: country
 country_enactment_success_chance_law_free_trade_add:
   Mask: country
 country_enactment_success_chance_law_freedom_of_conscience_add:
@@ -11591,6 +12541,12 @@ country_enactment_success_chance_law_graduated_taxation_add:
 country_enactment_success_chance_law_guaranteed_liberties_add:
   Mask: country
 country_enactment_success_chance_law_hereditary_bureaucrats_add:
+  Mask: country
+country_enactment_success_chance_law_hindu_caste_codified_add:
+  Mask: country
+country_enactment_success_chance_law_hindu_caste_enforced_add:
+  Mask: country
+country_enactment_success_chance_law_hindu_caste_not_enforced_add:
   Mask: country
 country_enactment_success_chance_law_homesteading_add:
   Mask: country
@@ -11725,8 +12681,6 @@ country_enactment_success_chance_law_worker_protections_add:
 country_shopkeepers_pol_str_mult:
   Mask: country
 country_slaves_pol_str_mult:
-  Mask: country
-country_soldiers_pol_str_mult:
   Mask: country
 goods_input_aeroplanes_mult:
   Mask: goods
@@ -12126,327 +13080,13 @@ state_peasants_investment_pool_contribution_add:
   Mask: state
 state_peasants_investment_pool_efficiency_mult:
   Mask: state
-state_pop_support_law_agrarianism_add:
+state_pop_support_movement_hindu_nationalist_add:
   Mask: state
-state_pop_support_law_agrarianism_mult:
+state_pop_support_movement_hindu_nationalist_mult:
   Mask: state
-state_pop_support_law_anarchy_add:
+state_pop_support_movement_muslim_nationalist_add:
   Mask: state
-state_pop_support_law_anarchy_mult:
-  Mask: state
-state_pop_support_law_appointed_bureaucrats_add:
-  Mask: state
-state_pop_support_law_appointed_bureaucrats_mult:
-  Mask: state
-state_pop_support_law_autocracy_add:
-  Mask: state
-state_pop_support_law_censorship_add:
-  Mask: state
-state_pop_support_law_census_voting_mult:
-  Mask: state
-state_pop_support_law_charitable_health_system_add:
-  Mask: state
-state_pop_support_law_charitable_health_system_mult:
-  Mask: state
-state_pop_support_law_chiefdom_add:
-  Mask: state
-state_pop_support_law_chiefdom_mult:
-  Mask: state
-state_pop_support_law_child_labor_allowed_add:
-  Mask: state
-state_pop_support_law_child_labor_allowed_mult:
-  Mask: state
-state_pop_support_law_closed_borders_add:
-  Mask: state
-state_pop_support_law_collectivized_agriculture_add:
-  Mask: state
-state_pop_support_law_collectivized_agriculture_mult:
-  Mask: state
-state_pop_support_law_colonial_exploitation_add:
-  Mask: state
-state_pop_support_law_colonial_exploitation_mult:
-  Mask: state
-state_pop_support_law_colonial_resettlement_add:
-  Mask: state
-state_pop_support_law_colonial_resettlement_mult:
-  Mask: state
-state_pop_support_law_command_economy_mult:
-  Mask: state
-state_pop_support_law_commercialized_agriculture_add:
-  Mask: state
-state_pop_support_law_commercialized_agriculture_mult:
-  Mask: state
-state_pop_support_law_compulsory_primary_school_add:
-  Mask: state
-state_pop_support_law_compulsory_primary_school_mult:
-  Mask: state
-state_pop_support_law_consumption_based_taxation_add:
-  Mask: state
-state_pop_support_law_consumption_based_taxation_mult:
-  Mask: state
-state_pop_support_law_cooperative_ownership_add:
-  Mask: state
-state_pop_support_law_cooperative_ownership_mult:
-  Mask: state
-state_pop_support_law_cultural_exclusion_add:
-  Mask: state
-state_pop_support_law_cultural_exclusion_mult:
-  Mask: state
-state_pop_support_law_debt_slavery_add:
-  Mask: state
-state_pop_support_law_debt_slavery_mult:
-  Mask: state
-state_pop_support_law_dedicated_police_mult:
-  Mask: state
-state_pop_support_law_elder_council_add:
-  Mask: state
-state_pop_support_law_elder_council_mult:
-  Mask: state
-state_pop_support_law_elected_bureaucrats_add:
-  Mask: state
-state_pop_support_law_elected_bureaucrats_mult:
-  Mask: state
-state_pop_support_law_ethnostate_add:
-  Mask: state
-state_pop_support_law_ethnostate_mult:
-  Mask: state
-state_pop_support_law_free_trade_add:
-  Mask: state
-state_pop_support_law_free_trade_mult:
-  Mask: state
-state_pop_support_law_freedom_of_conscience_add:
-  Mask: state
-state_pop_support_law_freedom_of_conscience_mult:
-  Mask: state
-state_pop_support_law_frontier_colonization_add:
-  Mask: state
-state_pop_support_law_frontier_colonization_mult:
-  Mask: state
-state_pop_support_law_graduated_taxation_mult:
-  Mask: state
-state_pop_support_law_guaranteed_liberties_add:
-  Mask: state
-state_pop_support_law_guaranteed_liberties_mult:
-  Mask: state
-state_pop_support_law_hereditary_bureaucrats_add:
-  Mask: state
-state_pop_support_law_hereditary_bureaucrats_mult:
-  Mask: state
-state_pop_support_law_homesteading_add:
-  Mask: state
-state_pop_support_law_homesteading_mult:
-  Mask: state
-state_pop_support_law_industry_banned_mult:
-  Mask: state
-state_pop_support_law_interventionism_add:
-  Mask: state
-state_pop_support_law_interventionism_mult:
-  Mask: state
-state_pop_support_law_isolationism_add:
-  Mask: state
-state_pop_support_law_isolationism_mult:
-  Mask: state
-state_pop_support_law_laissez_faire_add:
-  Mask: state
-state_pop_support_law_laissez_faire_mult:
-  Mask: state
-state_pop_support_law_land_based_taxation_add:
-  Mask: state
-state_pop_support_law_land_based_taxation_mult:
-  Mask: state
-state_pop_support_law_landed_voting_add:
-  Mask: state
-state_pop_support_law_landed_voting_mult:
-  Mask: state
-state_pop_support_law_legacy_slavery_add:
-  Mask: state
-state_pop_support_law_legacy_slavery_mult:
-  Mask: state
-state_pop_support_law_local_police_add:
-  Mask: state
-state_pop_support_law_mass_conscription_add:
-  Mask: state
-state_pop_support_law_mass_conscription_mult:
-  Mask: state
-state_pop_support_law_mercantilism_add:
-  Mask: state
-state_pop_support_law_mercantilism_mult:
-  Mask: state
-state_pop_support_law_migration_controls_add:
-  Mask: state
-state_pop_support_law_monarchy_add:
-  Mask: state
-state_pop_support_law_multicultural_add:
-  Mask: state
-state_pop_support_law_multicultural_mult:
-  Mask: state
-state_pop_support_law_national_guard_add:
-  Mask: state
-state_pop_support_law_national_militia_add:
-  Mask: state
-state_pop_support_law_national_militia_mult:
-  Mask: state
-state_pop_support_law_no_colonial_affairs_mult:
-  Mask: state
-state_pop_support_law_no_health_system_add:
-  Mask: state
-state_pop_support_law_no_health_system_mult:
-  Mask: state
-state_pop_support_law_no_home_affairs_add:
-  Mask: state
-state_pop_support_law_no_home_affairs_mult:
-  Mask: state
-state_pop_support_law_no_migration_controls_add:
-  Mask: state
-state_pop_support_law_no_police_add:
-  Mask: state
-state_pop_support_law_no_police_mult:
-  Mask: state
-state_pop_support_law_no_schools_add:
-  Mask: state
-state_pop_support_law_no_schools_mult:
-  Mask: state
-state_pop_support_law_no_social_security_add:
-  Mask: state
-state_pop_support_law_no_social_security_mult:
-  Mask: state
-state_pop_support_law_no_womens_rights_add:
-  Mask: state
-state_pop_support_law_no_womens_rights_mult:
-  Mask: state
-state_pop_support_law_no_workers_rights_add:
-  Mask: state
-state_pop_support_law_no_workers_rights_mult:
-  Mask: state
-state_pop_support_law_old_age_pension_add:
-  Mask: state
-state_pop_support_law_old_age_pension_mult:
-  Mask: state
-state_pop_support_law_oligarchy_add:
-  Mask: state
-state_pop_support_law_outlawed_dissent_add:
-  Mask: state
-state_pop_support_law_outlawed_dissent_mult:
-  Mask: state
-state_pop_support_law_parliamentary_republic_mult:
-  Mask: state
-state_pop_support_law_peasant_levies_add:
-  Mask: state
-state_pop_support_law_peasant_levies_mult:
-  Mask: state
-state_pop_support_law_per_capita_based_taxation_add:
-  Mask: state
-state_pop_support_law_per_capita_based_taxation_mult:
-  Mask: state
-state_pop_support_law_poor_laws_add:
-  Mask: state
-state_pop_support_law_poor_laws_mult:
-  Mask: state
-state_pop_support_law_presidential_republic_mult:
-  Mask: state
-state_pop_support_law_private_health_insurance_add:
-  Mask: state
-state_pop_support_law_private_health_insurance_mult:
-  Mask: state
-state_pop_support_law_private_schools_add:
-  Mask: state
-state_pop_support_law_private_schools_mult:
-  Mask: state
-state_pop_support_law_professional_army_add:
-  Mask: state
-state_pop_support_law_professional_army_mult:
-  Mask: state
-state_pop_support_law_proportional_taxation_mult:
-  Mask: state
-state_pop_support_law_protected_speech_add:
-  Mask: state
-state_pop_support_law_protectionism_add:
-  Mask: state
-state_pop_support_law_protectionism_mult:
-  Mask: state
-state_pop_support_law_public_health_insurance_add:
-  Mask: state
-state_pop_support_law_public_health_insurance_mult:
-  Mask: state
-state_pop_support_law_public_schools_add:
-  Mask: state
-state_pop_support_law_public_schools_mult:
-  Mask: state
-state_pop_support_law_racial_segregation_mult:
-  Mask: state
-state_pop_support_law_regulatory_bodies_add:
-  Mask: state
-state_pop_support_law_regulatory_bodies_mult:
-  Mask: state
-state_pop_support_law_religious_schools_add:
-  Mask: state
-state_pop_support_law_religious_schools_mult:
-  Mask: state
-state_pop_support_law_restricted_child_labor_add:
-  Mask: state
-state_pop_support_law_restricted_child_labor_mult:
-  Mask: state
-state_pop_support_law_right_of_assembly_add:
-  Mask: state
-state_pop_support_law_secret_police_add:
-  Mask: state
-state_pop_support_law_serfdom_add:
-  Mask: state
-state_pop_support_law_serfdom_mult:
-  Mask: state
-state_pop_support_law_single_party_state_add:
-  Mask: state
-state_pop_support_law_single_party_state_mult:
-  Mask: state
-state_pop_support_law_slave_trade_add:
-  Mask: state
-state_pop_support_law_slavery_banned_mult:
-  Mask: state
-state_pop_support_law_state_atheism_add:
-  Mask: state
-state_pop_support_law_state_atheism_mult:
-  Mask: state
-state_pop_support_law_state_religion_add:
-  Mask: state
-state_pop_support_law_state_religion_mult:
-  Mask: state
-state_pop_support_law_technocracy_add:
-  Mask: state
-state_pop_support_law_technocracy_mult:
-  Mask: state
-state_pop_support_law_tenant_farmers_add:
-  Mask: state
-state_pop_support_law_tenant_farmers_mult:
-  Mask: state
-state_pop_support_law_theocracy_add:
-  Mask: state
-state_pop_support_law_theocracy_mult:
-  Mask: state
-state_pop_support_law_total_separation_add:
-  Mask: state
-state_pop_support_law_total_separation_mult:
-  Mask: state
-state_pop_support_law_traditionalism_add:
-  Mask: state
-state_pop_support_law_traditionalism_mult:
-  Mask: state
-state_pop_support_law_wage_subsidies_mult:
-  Mask: state
-state_pop_support_law_wealth_voting_add:
-  Mask: state
-state_pop_support_law_wealth_voting_mult:
-  Mask: state
-state_pop_support_law_women_in_the_workplace_add:
-  Mask: state
-state_pop_support_law_women_in_the_workplace_mult:
-  Mask: state
-state_pop_support_law_women_own_property_add:
-  Mask: state
-state_pop_support_law_women_own_property_mult:
-  Mask: state
-state_pop_support_law_worker_protections_add:
-  Mask: state
-state_pop_support_law_worker_protections_mult:
+state_pop_support_movement_muslim_nationalist_mult:
   Mask: state
 state_shopkeepers_dependent_wage_mult:
   Mask: state
