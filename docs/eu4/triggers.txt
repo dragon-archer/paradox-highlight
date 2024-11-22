@@ -56,6 +56,7 @@ any_country
 any_elector
 any_empty_neighbor_province
 any_enemy_country
+any_friendly_coast_border_province
 any_heretic_province
 any_known_country
 any_local_enemy
@@ -210,6 +211,7 @@ has_active_triggered_province_modifier
 has_administrative_efficiency_value
 has_advisor
 has_advisor_type_in_pool
+has_age_ability
 has_any_country_in_region_discovered_capital_region_of
 has_any_disaster
 has_assimilated_culture
@@ -262,10 +264,12 @@ has_global_flag
 has_global_modifier_value
 has_government_attribute
 has_government_mechanic
+has_government_power
 has_great_project
 has_guaranteed
 has_harsh_treatment
 has_heir
+has_heir_flag
 has_heir_leader_from
 has_hostile_reformation_center
 has_hre_emperor_modifier
@@ -313,6 +317,7 @@ has_ruler
 has_ruler_flag
 has_ruler_leader_from
 has_ruler_modifier
+has_saved_event_target
 has_saved_global_event_target
 has_scutage
 has_seat_in_parliament
@@ -371,6 +376,7 @@ inflation
 innovativeness
 invasion_nation
 ironman
+is_absolutism_active
 is_advisor_employed
 is_any_heresy_enabled
 is_at_war
@@ -419,6 +425,7 @@ is_in_trade_league_with
 is_in_war
 is_institution_enabled
 is_island
+is_lacking_institutions
 is_league_enemy
 is_league_friend
 is_league_leader
@@ -434,6 +441,7 @@ is_native_tribe
 is_neighbor_of
 is_nomad
 is_orangists_in_power
+is_origin_of_consort
 is_overseas
 is_overseas_subject
 is_owned_by_trade_company
@@ -470,6 +478,7 @@ is_territory
 is_threat
 is_trade_league_leader
 is_tribal
+is_tutorial_active
 is_variable_equal
 is_vassal
 is_wasteland
@@ -532,6 +541,7 @@ navy_balance
 navy_size
 navy_size_percentage
 navy_tradition
+neighbors_tech_discount
 normal_or_historical_nations
 normal_province_values
 num_free_building_slots
@@ -569,6 +579,7 @@ num_of_mercenaries
 num_of_merchants
 num_of_missionaries
 num_of_owned_and_controlled_institutions
+num_of_owned_areas
 num_of_owned_provinces_with
 num_of_pashas
 num_of_ports
@@ -665,6 +676,7 @@ reverse_has_opinion
 reverse_has_opinion_modifier
 revolt_percentage
 revolution_target_exists
+revolutionary_zeal
 ruler_age
 ruler_culture
 ruler_has_personality
@@ -721,6 +733,7 @@ treasury
 tribal_land_of
 triggers is_trade_league_leader
 truce_with
+trust
 unit_has_leader
 unit_in_battle
 unit_in_siege

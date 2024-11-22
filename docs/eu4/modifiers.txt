@@ -340,9 +340,12 @@ inti_reforms_passed
 is_banner_modifier
 is_cossack_modifier
 is_galleass_modifier
+is_man_of_war_modifier
 is_marine_modifier
 is_scholar_modifier
 is_streltsy_modifier
+is_tercio_modifier
+is_voc_indiamen_modifier
 jains_influence_modifier
 jains_loyalty_modifier
 jains_privilege_slots
