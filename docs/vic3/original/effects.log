@@ -82,6 +82,16 @@ add_company = company_type:key
 **Supported Scopes**: country  
 **Supported Targets**: company_type  
 
+## add_company_monopoly
+Adds a monopoly to a company scope: add_company_monopoly = bt:building_textile_mills
+**Supported Scopes**: company  
+**Supported Targets**: building_type  
+
+## add_country_monopoly
+Adds a monopoly to a country scope: add_country_monopoly = bt:building_textile_mills
+**Supported Scopes**: country  
+**Supported Targets**: building_type  
+
 ## add_cultural_community
 Adds a cultural community for the target culture in the scoped state.  
  scope:some_state = { add_cultural_community = cu:zulu }
@@ -145,6 +155,11 @@ Adds an amount of experience to a commander
 add_experience = 0.2
 **Supported Scopes**: character  
 
+## add_exports
+Adds a multiplier of exports to the state for the scoped state goods  
+add_exports = 3
+**Supported Scopes**: state_goods  
+
 ## add_homeland
 Adds scoped state region as Homeland for target culture  
  add_homeland = cu:culture
@@ -164,6 +179,11 @@ py:py_key = {
 **Supported Scopes**: party  
 **Supported Targets**: interest_group  
 
+## add_imports
+Adds a multiplier of imports to the state for the scoped state goods  
+add_imports = 3
+**Supported Scopes**: state_goods  
+
 ## add_initiator_backers
 Add a tag/scope country to the initiator side of a diplomatic play  
 add_initiator_backers = { list of scopes/tags }
@@ -177,7 +197,7 @@ add_investment_pool = 50
 ## add_journal_entry
 Adds a journal entry to a scoped country's journal, with optional saved scope target  
 add_journal_entry = { type = <key> target = <scope> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## add_law_progress
 Adds x% progress to the current checkpoint of the law being passed (range is [0, 1], 0.1 means 10 percentage points)  
@@ -233,7 +253,7 @@ add_radicals_in_state = {
 
 ## add_modifier
 Adds a timed modifier effect to object in scope
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
+**Supported Scopes**: country, building, character, institution, interest_group, journal_entry, political_movement, power_bloc, state  
 
 ## add_momentum
 Adds momentum to a Party during a campaign perioddd_momentum = value
@@ -248,6 +268,12 @@ add_morale = -0.2
 Adds the specified amount of Organization to the Military Formation in scope  
 add_organization = -10
 **Supported Scopes**: military_formation  
+
+## add_owned_country
+Sets the scoped company as a founding company for the target country  
+set_founding_company = country:key
+**Supported Scopes**: company  
+**Supported Targets**: country  
 
 ## add_pollution
 Increase/decrease pollution level in a scoped state region  
@@ -278,7 +304,7 @@ add_principle = test_principle_group_A_1
 ## add_progress
 Adds progress to a journal entry progressbar  
 add_progress = {value = -5name = example_progress_bar_name}
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## add_radicals
 Adds radicals to pops in the scoped country. All parameters except value are optional.  
@@ -352,35 +378,42 @@ add_technology_researched = technology
 **Supported Scopes**: country  
 
 ## add_to_global_variable_list
-Adds the event target to a variable list  
-add_to_variable_list = { name = X target = Y }  
+Adds the event target to a variable list for the given duration  
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }  
 Where X is the name of the variable  
-Where Y is an event target
-**Supported Scopes**: none/all  
+Where Y is an event target  
+An optional days where Z is the number of days or script value
+**Supported Scopes**: none  
 
 ## add_to_list
 Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain  
-add_to_list = <string> NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
-**Supported Scopes**: none/all  
+add_to_list = <name_of_list>  
+add_to_list = { name = <name_of_list> value = <script_value> }  
+NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
+**Supported Scopes**: none  
 
 ## add_to_local_variable_list
-Adds the event target to a variable list  
-add_to_variable_list = { name = X target = Y }  
+Adds the event target to a variable list for the given duration  
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }  
 Where X is the name of the variable  
-Where Y is an event target
-**Supported Scopes**: none/all  
+Where Y is an event target  
+An optional days where Z is the number of days or script value
+**Supported Scopes**: none  
 
 ## add_to_temporary_list
 Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect  
-add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent
-**Supported Scopes**: none/all  
+add_to_temporary_list = <name_of_list>  
+add_to_temporary_list = { name = <name_of_list> value = <script_value> }  
+NOTE, if adding a temporary target to a permanent list, the list will stay permanent
+**Supported Scopes**: none  
 
 ## add_to_variable_list
-Adds the event target to a variable list  
-add_to_variable_list = { name = X target = Y }  
+Adds the event target to a variable list for the given duration  
+add_to_variable_list = { name = X target = Y days/weeks/months/years = Z }  
 Where X is the name of the variable  
-Where Y is an event target
-**Supported Scopes**: none/all  
+Where Y is an event target  
+An optional days where Z is the number of days or script value
+**Supported Scopes**: none  
 
 ## add_trait
 Add a trait to a Character  
@@ -428,12 +461,12 @@ annex_with_incorporation = scope
 ## assert_if
 Conditionally cause an assert during run time  
 assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## assert_read
 Conditionally cause an assert during read time  
 assert_read = X, where X is yes or the string to be printed in the assert
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## call_election
 Sets the next election date for country in N months  
@@ -450,7 +483,13 @@ cancel_enactment = yes
 ## cancel_imposition
 Cancels imposition of the law (not law type) in scope  
 scope:country.imposed_law = { cancel_imposition = yes }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+
+## cede_treaty_port
+Cedes a treaty port in scope state to target country  
+cede_treaty_port = scope/country
+**Supported Scopes**: state  
+**Supported Targets**: country  
 
 ## change_appeasement
 Change appeasement of scope political lobby  
@@ -478,7 +517,7 @@ change_variable = { name = X operation = Y }
 Where X is the name of the numeric variable to modify  
 Where the valid operations are add, subtract, multiply, divide, modulo, min and max  
 Where Y is a fixed point value, script value or event target of a value type
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## change_infamy
 Change infamy of scope country  
@@ -499,7 +538,7 @@ change_variable = { name = X operation = Y }
 Where X is the name of the numeric variable to modify  
 Where the valid operations are add, subtract, multiply, divide, modulo, min and max  
 Where Y is a fixed point value, script value or event target of a value type
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## change_pop_culture
 Changes the culture of the scoped pop to a specified culture by a specified percentage  
@@ -548,28 +587,28 @@ change_variable = { name = X operation = Y }
 Where X is the name of the numeric variable to modify  
 Where the valid operations are add, subtract, multiply, divide, modulo, min and max  
 Where Y is a fixed point value, script value or event target of a value type
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clamp_global_variable
 Clamps a variable the specified max and min  
 clamp_variable = { name = X max = Y min = Z }  
 Where X is the name of the variable  
 Where Y and Z are script values
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clamp_local_variable
 Clamps a variable the specified max and min  
 clamp_variable = { name = X max = Y min = Z }  
 Where X is the name of the variable  
 Where Y and Z are script values
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clamp_variable
 Clamps a variable the specified max and min  
 clamp_variable = { name = X max = Y min = Z }  
 Where X is the name of the variable  
 Where Y and Z are script values
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clear_debt
 Clear country loans = bool
@@ -582,17 +621,17 @@ Clears the current law enactment modifier of scope country.
 ## clear_global_variable_list
 Empties the list  
 clear_variable_list = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clear_local_variable_list
 Empties the list  
 clear_variable_list = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clear_saved_scope
 Clears a saved scope from the top scope  
 save_scope_as = cool_scope -> clear_saved_scope = cool_scope
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## clear_scaled_debt
 Clears an amount of debt equal to the defined multiplier on target's max credit  
@@ -602,7 +641,7 @@ clear_scaled_debt = value
 ## clear_variable_list
 Empties the list  
 clear_variable_list = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## complete_objective_subgoal
 Completes an objective subgoal  
@@ -690,7 +729,7 @@ create_country = {
 						# both states and provinces can be supplied at the same time  
 	on_created = effect	# optional effect that will be run with the newly created country in scope  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## create_diplomatic_catalyst
 Creates a new diplomatic catalyst  
@@ -742,7 +781,7 @@ create_dynamic_country = {
  tertiary_unit_color = rgb 		# optional, will try to inherit unit color from origin if not specified  
  on_created = effect	# optional effect that will be run with the newly created country in scope  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## create_incident
 Creates a diplomatic incident that generates infamy, with target country as the victim  
@@ -819,16 +858,60 @@ create_power_bloc = {
 creates a state in a state region
 **Supported Scopes**: state_region  
 
-## create_trade_route
-Creates a new Trade Route  
-trade_route = {  
-	goods = x  
-	level = x  
-	import = yes/no  
-	origin = state_region  
-	target = state_region  
+## create_treaty
+Creates a treaty between countries  
+create_treaty = {  
+	name = <loc key>					# (default: empty) if specified, this treaty's name will be determined by the localization of the specified key  
+	first_country = <country>			# (default: none) must _not_ be specified if the created treaty is an amendment  
+	second_country = <country>			# (default: none) must _not_ be specified if the created treaty is an amendment  
+	amends = <treaty>					# (default: none) if specified, the created treaty will be an amendment to the specified treaty  
+  
+	is_draft = yes | no					# (default: yes) must be yes if this treaty is an amendement to an existing treaty  
+	entered_into_force_on = <date>		# (default: none) means "today" if not specified (for non-drafts). Must _not_ be specified for drafts. Cannot be in the future  
+	binding_period = {					# (default: 0) must be a nonnegative number, fractional parts will be ignored (truncation)  
+		days = <nonnegative number>  
+		| weeks = <nonnegative number>  
+		| months = <nonnegative number>  
+		| years = <nonnegative number>  
+	}  
+  
+	articles_to_create = {				# (default: empty) non-amendments must have at least one article to create  
+		{  
+			article = <key>				# (default: empty) the type of article (determined by script)  
+			source_country = <country>	# (default: none) directed articles _must_ specify this value, mutual articles _must not_ specify this value  
+			target_country = <country>	# (default: none) directed articles _must_ specify this value, mutual articles _must not_ specify this value  
+  
+			inputs = {					# (default: empty) list of inputs values as required by the article  
+				{  
+					quantity = <positive number>  
+					| goods = <goods>  
+					| state = <state>  
+					| strategic_region = <strategic region>  
+					| company = <company>  
+					| building_type = <building_type>  
+					| law_type = <law_type>  
+					| country = <country>  
+				}  
+  
+				{ ... }					# one input per required input of the corresponding article type  
+			}  
+		}  
+  
+		# some examples of valid articles  
+		{ article = alliance }			# mutual, no inputs  
+		{  
+			article = goods_transfer	# directed  
+			source_country = c:FRA		# because directed  
+			target_country = c:GBR 		# because directed  
+  
+			inputs = {  
+				{ quantity = 250 }		# because goods_transfer has required_inputs = { quantity goods }  
+				{ goods = g:coal }		# because goods_transfer has required_inputs = { quantity goods }  
+			}  
+		}  
+	}  
 }
-**Supported Scopes**: country  
+**Supported Scopes**: none  
 
 ## create_unidirectional_truce
 Create a unidirectional truce for one country towards another  
@@ -847,7 +930,7 @@ custom_description = {
 	value = <optional script value>  
 	... effects ...  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## custom_description_no_bullet
 Wraps effects that get a custom description instead of the auto-generated one. Also ensures no bullet point appears  
@@ -858,17 +941,17 @@ custom_description_no_bullet = {
 	value = <optional script value>  
 	... effects ...  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## custom_label
 just a tooltip, the scope as object (for grouping, localization).  
 custom_label = key; alternatively custom_label = { text = key subject = scope (optional) <hidden effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## custom_tooltip
 just a tooltip, the scope as subject (for grouping, localization).  
 custom_tooltip = key; alternatively custom_tooltip = { text = key subject = scope (optional) <hidden effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## deactivate_building
 Deactivate a building in a state  
@@ -887,13 +970,13 @@ deactivate_parties = yes
 
 ## debug_log
 Log a string to the debug log when this effect executes, debug_log = message, the message can be a localization string with ROOT, SCOPE and PREV available
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## debug_log_scopes
 Log the current scope to the debug log when this effect executes  
 debug_log_scopes = yes # log full scope info  
 debug_log_scopes = no  # log only current scope
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## decrease_autonomy
 Change a country's subject type to a less autonomus one  
@@ -925,13 +1008,13 @@ scope:larry = { disinherit_character = yes }
 Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met  
 if = { limit = { <triggers> } <effects> }  
 else = { <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## else_if
 Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met, and its own limit is met  
 if = { limit = { <triggers> } <effects> }  
 else_if = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## end_play
 End a diplomatic play  
@@ -944,6 +1027,10 @@ end_truce = country_scope
 }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## error_log
+Log a string to the error log when this effect executes, error_log = message, the message can be a localization string with ROOT, SCOPE and PREV available
+**Supported Scopes**: none  
 
 ## every_active_law
 Iterate through all active laws in a country  
@@ -960,19 +1047,19 @@ every_active_party = { limit = { <triggers> } <effects> }
 ## every_character
 Iterate through all characters globally  
 every_character = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## every_character_in_exile_pool
 Iterate through characters in the exile pool  
 every_character_in_exile_pool = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## every_character_in_void
 Iterate through characters in the void  
 every_character_in_void = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## every_civil_war
@@ -1009,7 +1096,13 @@ every_company = { limit = { <triggers> } <effects> }
 ## every_country
 Iterate through all countries globally  
 every_country = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+**Supported Targets**: country  
+
+## every_decentralized_country
+Iterate through all countries that are decentralized  
+every_decentralized_country = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
 **Supported Targets**: country  
 
 ## every_diplomatic_catalyst
@@ -1021,7 +1114,7 @@ every_diplomatic_catalyst = { limit = { <triggers> } <effects> }
 ## every_diplomatic_play
 Iterate through all diplomatic plays globally  
 every_diplomatic_play = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: diplomatic_play  
 
 ## every_diplomatically_relevant_country
@@ -1057,7 +1150,7 @@ every_harvest_condition = { limit = { <triggers> } <effects> }
 ## every_in_global_list
 Iterate through all items in global list. list = name or variable = name  
 every_in_global_list = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## every_in_hierarchy
 Any country in current hierarchy, including current  
@@ -1068,12 +1161,12 @@ every_in_hierarchy = { limit = { <triggers> } <effects> }
 ## every_in_list
 Iterate through all items in list. list = name or variable = name  
 every_in_list = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## every_in_local_list
 Iterate through all items in local list. list = name or variable = name  
 every_in_local_list = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## every_influenced_interest_group
 Iterate through all interest groups influenced by a political movement  
@@ -1102,7 +1195,7 @@ every_lobby_member = { limit = { <triggers> } <effects> }
 ## every_market
 Iterate through all markets globally  
 every_market = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: market  
 
 ## every_market_goods
@@ -1163,7 +1256,7 @@ every_potential_party = { limit = { <triggers> } <effects> }
 ## every_power_bloc
 Iterate through all power blocs  
 every_power_bloc = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: power_bloc  
 
 ## every_power_bloc_member
@@ -1213,6 +1306,18 @@ Iterate through all allies to a: country
 every_scope_ally = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## every_scope_article
+Iterate through articles of the scoped treaty  
+every_scope_article = { limit = { <triggers> } <effects> }
+**Supported Scopes**: treaty  
+**Supported Targets**: treaty_article  
+
+## every_scope_article_option
+Iterate through article_options of the scoped treaty or treaty_options  
+every_scope_article_option = { limit = { <triggers> } <effects> }
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: treaty_article_options  
 
 ## every_scope_building
 Iterate through all buildings in a: state, country  
@@ -1292,6 +1397,12 @@ every_scope_pop = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country, culture, interest_group, state  
 **Supported Targets**: pop  
 
+## every_scope_regional_hqs
+Iterate through regional HQs of the scoped company  
+every_scope_regional_hqs = { limit = { <triggers> } <effects> }
+**Supported Scopes**: company  
+**Supported Targets**: building  
+
 ## every_scope_state
 Iterate through all states including provinces from a: country, state_region, theater, or front  
 every_scope_state = { limit = { <triggers> } <effects> }
@@ -1309,6 +1420,12 @@ Iterate through all theaters in a: country
 every_scope_theater = { limit = { <triggers> } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: theater  
+
+## every_scope_treaty
+Iterate through in force treaties binding the scoped country  
+every_scope_treaty = { limit = { <triggers> } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: treaty  
 
 ## every_scope_violate_sovereignty_interested_parties
 Iterate through all countries that would be interested if country in scope has their sovereignty violated  
@@ -1337,13 +1454,13 @@ every_sea_node_adjacent_state = { limit = { <triggers> } <effects> }
 ## every_state
 Iterate through all states globally  
 every_state = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state  
 
 ## every_state_region
 Iterate through all state regions  
 every_state_region = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state_region  
 
 ## every_strategic_objective
@@ -1370,11 +1487,11 @@ every_supporting_character = { limit = { <triggers> } <effects> }
 **Supported Scopes**: political_movement  
 **Supported Targets**: character  
 
-## every_trade_route
-Iterate through all trade routes in a: market, country, marketgoods  
-every_trade_route = { limit = { <triggers> } <effects> }
-**Supported Scopes**: country, market, market_goods  
-**Supported Targets**: trade_route  
+## every_treaty
+Iterate through treaties (both in force and drafts)  
+every_treaty = { limit = { <triggers> } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: treaty  
 
 ## every_valid_mass_migration_culture
 Lists for cultures in the scoped country that are valid for mass migration  
@@ -1421,12 +1538,12 @@ fully_mobilize_army = yes
 ## hidden_effect
 Enclosed effects are not shown in tooltips  
 hidden_effect = { <more effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## if
 Executes enclosed effects if limit criteria are met  
 if = { limit = { <triggers> } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## increase_autonomy
 Change a country's subject type to a more autonomus one  
@@ -1510,13 +1627,6 @@ All parameters except percent are optional. Pop type and strata cannot be used a
 }
 **Supported Scopes**: state  
 
-## lock_trade_route
-Lock a trade route for a set amount of time, preventing it from being cancelled manually  
-lock_trade_route = {  
-	years = 5  
-}
-**Supported Scopes**: trade_route  
-
 ## make_independent
 Makes a country independent.  
 make_independent = bool
@@ -1583,7 +1693,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## ordered_character_in_exile_pool
@@ -1596,7 +1706,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## ordered_character_in_void
@@ -1609,7 +1719,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## ordered_civil_war
@@ -1688,7 +1798,20 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+**Supported Targets**: country  
+
+## ordered_decentralized_country
+Iterate through all countries that are decentralized  
+ordered_decentralized_country = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: none  
 **Supported Targets**: country  
 
 ## ordered_diplomatic_catalyst
@@ -1714,7 +1837,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: diplomatic_play  
 
 ## ordered_diplomatically_relevant_country
@@ -1792,7 +1915,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## ordered_in_hierarchy
 Any country in current hierarchy, including current  
@@ -1817,7 +1940,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## ordered_in_local_list
 Iterate through all items in local list. list = name or variable = name  
@@ -1829,7 +1952,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## ordered_influenced_interest_group
 Iterate through all interest groups influenced by a political movement  
@@ -1893,7 +2016,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: market  
 
 ## ordered_market_goods
@@ -2024,7 +2147,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: power_bloc  
 
 ## ordered_power_bloc_member
@@ -2130,6 +2253,32 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## ordered_scope_article
+Iterate through articles of the scoped treaty  
+ordered_scope_article = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: treaty  
+**Supported Targets**: treaty_article  
+
+## ordered_scope_article_option
+Iterate through article_options of the scoped treaty or treaty_options  
+ordered_scope_article_option = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: treaty_article_options  
 
 ## ordered_scope_building
 Iterate through all buildings in a: state, country  
@@ -2300,6 +2449,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: country, culture, interest_group, state  
 **Supported Targets**: pop  
 
+## ordered_scope_regional_hqs
+Iterate through regional HQs of the scoped company  
+ordered_scope_regional_hqs = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: company  
+**Supported Targets**: building  
+
 ## ordered_scope_state
 Iterate through all states including provinces from a: country, state_region, theater, or front  
 ordered_scope_state = {  
@@ -2338,6 +2500,19 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: theater  
+
+## ordered_scope_treaty
+Iterate through in force treaties binding the scoped country  
+ordered_scope_treaty = {  
+limit = { <triggers> }  
+order_by = script_value  
+position = int  
+min = int  
+max = script_value  
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
+<effects> }
+**Supported Scopes**: country  
+**Supported Targets**: treaty  
 
 ## ordered_scope_violate_sovereignty_interested_parties
 Iterate through all countries that would be interested if country in scope has their sovereignty violated  
@@ -2401,7 +2576,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state  
 
 ## ordered_state_region
@@ -2414,7 +2589,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state_region  
 
 ## ordered_strategic_objective
@@ -2469,9 +2644,9 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Scopes**: political_movement  
 **Supported Targets**: character  
 
-## ordered_trade_route
-Iterate through all trade routes in a: market, country, marketgoods  
-ordered_trade_route = {  
+## ordered_treaty
+Iterate through treaties (both in force and drafts)  
+ordered_treaty = {  
 limit = { <triggers> }  
 order_by = script_value  
 position = int  
@@ -2479,8 +2654,8 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: country, market, market_goods  
-**Supported Targets**: trade_route  
+**Supported Scopes**: none  
+**Supported Targets**: treaty  
 
 ## ordered_valid_mass_migration_culture
 Lists for cultures in the scoped country that are valid for mass migration  
@@ -2519,13 +2694,21 @@ play_as = <scope>
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## post_audio_event
+Runs an audio even on a "persistent" audio object   
+post_audio_event = {  
+ persistent_object = [object_name] # For example music_manager  
+	event = [audio_event] # For example start_debug_music  
+}
+**Supported Scopes**: none  
+
 ## post_notification
 Posts notification
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## post_proposal
 Posts proposal
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random
 run an effect depending on a random chance, do nothing otherwise.  
@@ -2534,7 +2717,7 @@ random = {
     modifier = { ... } # optional MTTH-style modifier for the chance  
     effects...         # effects to run if the random roll succeeds  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random_active_law
 Iterate through all active laws in a country  
@@ -2551,19 +2734,19 @@ random_active_party = { limit = { <triggers> } (optional) weight = { mtth } <eff
 ## random_character
 Iterate through all characters globally  
 random_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## random_character_in_exile_pool
 Iterate through characters in the exile pool  
 random_character_in_exile_pool = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## random_character_in_void
 Iterate through characters in the void  
 random_character_in_void = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## random_civil_war
@@ -2600,7 +2783,13 @@ random_company = { limit = { <triggers> } (optional) weight = { mtth } <effects>
 ## random_country
 Iterate through all countries globally  
 random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+**Supported Targets**: country  
+
+## random_decentralized_country
+Iterate through all countries that are decentralized  
+random_decentralized_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
 **Supported Targets**: country  
 
 ## random_diplomatic_catalyst
@@ -2612,7 +2801,7 @@ random_diplomatic_catalyst = { limit = { <triggers> } (optional) weight = { mtth
 ## random_diplomatic_play
 Iterate through all diplomatic plays globally  
 random_diplomatic_play = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: diplomatic_play  
 
 ## random_diplomatically_relevant_country
@@ -2648,7 +2837,7 @@ random_harvest_condition = { limit = { <triggers> } (optional) weight = { mtth }
 ## random_in_global_list
 Iterate through all items in global list. list = name or variable = name  
 random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random_in_hierarchy
 Any country in current hierarchy, including current  
@@ -2659,12 +2848,12 @@ random_in_hierarchy = { limit = { <triggers> } (optional) weight = { mtth } <eff
 ## random_in_list
 Iterate through all items in list. list = name or variable = name  
 random_in_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random_in_local_list
 Iterate through all items in local list. list = name or variable = name  
 random_in_local_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random_influenced_interest_group
 Iterate through all interest groups influenced by a political movement  
@@ -2685,11 +2874,55 @@ random_law = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Targets**: law  
 
 ## random_list
-a random list effect  
-random_list = { X1 = { trigger = { enables/disable this effect} modifier = Y1 effect1 } X2 = { trigger = { enables/disable this effect} modifier = Y2 effect2 } ... }  
-Selects one effect from the list and fires it. The effects are weighted by numbers X1, X2... (the higher the number, the higher the chance of the effect being picked).  
-The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH constructs)
-**Supported Scopes**: none/all  
+Selects one effect from a weighted random list and executes it.  
+  
+random_list = {  
+  10 = {  
+	trigger = { enable / disable this effect }  
+	modifier = {  
+		if = {  
+			limit = { is_foo }  
+			add = 10  
+		}  
+  
+		# Note: can have multiple conditions in the same `modifier` block to  
+		# have different scenarios affect the chances differently  
+		if = {  
+			limit = { is_bar }  
+			add = 20  
+		}  
+	}  
+  
+	# Warning: do _not_ add multilpe `modifier` blocks, since only the last one  
+	# is taken into consideration. Instead, use multiple `if` conditions inside  
+	# only one `modifier` block (one for each effect, that is)  
+  
+	<effect_1>  
+  }  
+  30 = {  
+	# trigger is optional, leaving it out means this effect is enabled  
+	# modifier is also optional, it means that the base weight (30) is final  
+  
+	# Note: totally fine to have a `modifier` block here. It's important to only  
+	# have one `modifier` block per effect, not one in total.  
+  
+	<effect_2>  
+  }  
+}  
+  
+The effects are weighted by their relative weights (10 and 30 in the example).  
+E.g. in this example the first effect has a base 25% chance of being picked,  
+while the second effect has a 75% base chance. The chance is given by the  
+formula `Wn / Wt` where `Wn` is the weight of a specific event while `Wt` is the  
+sum of all the weights. So the chances in the example are, respectively,  
+10 / 40 (25%) and 30 / 40 (75%).  
+  
+The weight of an effect can be modified by a `modifier` block. In the example,  
+if the scoped object satisfies the `is_foo` trigger, its relative weight  
+increases by 10. So in that situation, the relative weights would be 20 and 30  
+rather than 10 and 30, meaning the chances would be 40% and 60% rather than  
+25% and 75%.
+**Supported Scopes**: none  
 
 ## random_lobby_member
 Iterate through all interest group members of a lobby  
@@ -2702,12 +2935,12 @@ Log the current scope to the random log when this effect executes.
 Only use temprorarily for debugging purposes as it can introduce localized strings into the random log.  
 random_log_scopes = yes # log full scope info  
 random_log_scopes = no  # log only current scope
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## random_market
 Iterate through all markets globally  
 random_market = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: market  
 
 ## random_market_goods
@@ -2768,7 +3001,7 @@ random_potential_party = { limit = { <triggers> } (optional) weight = { mtth } <
 ## random_power_bloc
 Iterate through all power blocs  
 random_power_bloc = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: power_bloc  
 
 ## random_power_bloc_member
@@ -2818,6 +3051,18 @@ Iterate through all allies to a: country
 random_scope_ally = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## random_scope_article
+Iterate through articles of the scoped treaty  
+random_scope_article = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: treaty  
+**Supported Targets**: treaty_article  
+
+## random_scope_article_option
+Iterate through article_options of the scoped treaty or treaty_options  
+random_scope_article_option = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: treaty_article_options  
 
 ## random_scope_building
 Iterate through all buildings in a: state, country  
@@ -2897,6 +3142,12 @@ random_scope_pop = { limit = { <triggers> } (optional) weight = { mtth } <effect
 **Supported Scopes**: country, culture, interest_group, state  
 **Supported Targets**: pop  
 
+## random_scope_regional_hqs
+Iterate through regional HQs of the scoped company  
+random_scope_regional_hqs = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: company  
+**Supported Targets**: building  
+
 ## random_scope_state
 Iterate through all states including provinces from a: country, state_region, theater, or front  
 random_scope_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
@@ -2914,6 +3165,12 @@ Iterate through all theaters in a: country
 random_scope_theater = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 **Supported Scopes**: country  
 **Supported Targets**: theater  
+
+## random_scope_treaty
+Iterate through in force treaties binding the scoped country  
+random_scope_treaty = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: country  
+**Supported Targets**: treaty  
 
 ## random_scope_violate_sovereignty_interested_parties
 Iterate through all countries that would be interested if country in scope has their sovereignty violated  
@@ -2942,13 +3199,13 @@ random_sea_node_adjacent_state = { limit = { <triggers> } (optional) weight = { 
 ## random_state
 Iterate through all states globally  
 random_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state  
 
 ## random_state_region
 Iterate through all state regions  
 random_state_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state_region  
 
 ## random_strategic_objective
@@ -2975,11 +3232,11 @@ random_supporting_character = { limit = { <triggers> } (optional) weight = { mtt
 **Supported Scopes**: political_movement  
 **Supported Targets**: character  
 
-## random_trade_route
-Iterate through all trade routes in a: market, country, marketgoods  
-random_trade_route = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: country, market, market_goods  
-**Supported Targets**: trade_route  
+## random_treaty
+Iterate through treaties (both in force and drafts)  
+random_treaty = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+**Supported Scopes**: none  
+**Supported Targets**: treaty  
 
 ## random_valid_mass_migration_culture
 Lists for cultures in the scoped country that are valid for mass migration  
@@ -3064,14 +3321,19 @@ remove_diplomatic_pact = {
 Removes an enactment-related timed modifier effect to object in scope
 **Supported Scopes**: country  
 
+## remove_exports
+Removes a multiplier of exports to the state for the scoped state goods  
+remove_exports = 3
+**Supported Scopes**: state_goods  
+
 ## remove_from_list
 Removes the current scope from a named list remove_from_list = <string>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_global_variable
 Removes a variable  
 remove_variable = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_homeland
 Removes scoped state region as Homeland for target culture  
@@ -3092,6 +3354,11 @@ py:py_key = {
 **Supported Scopes**: party  
 **Supported Targets**: interest_group  
 
+## remove_imports
+Removes a multiplier of imports to the state for the scoped state goods  
+remove_imports = 3
+**Supported Scopes**: state_goods  
+
 ## remove_initiator_backers
 Remove a tag/scope country from the initiator side of a diplomatic play  
 remove_initiator_backers = { list of scopes/tags }
@@ -3102,21 +3369,21 @@ Removes the target from a variable list
 remove_list_variable = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_list_local_variable
 Removes the target from a variable list  
 remove_list_variable = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_list_variable
 Removes the target from a variable list  
 remove_list_variable = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_lobby_member
 Removes an interest group as a member of scope political lobby  
@@ -3127,11 +3394,22 @@ remove_lobby_member = scope:interest_group
 ## remove_local_variable
 Removes a variable  
 remove_variable = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_modifier
 Removes a timed modifier effect to object in scope
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
+**Supported Scopes**: country, building, character, institution, interest_group, journal_entry, political_movement, power_bloc, state  
+
+## remove_monopoly
+removes a monopoly in a country scope for a specific building: remove_monopoly = bt:building_textile_mills
+**Supported Scopes**: country  
+**Supported Targets**: building_type  
+
+## remove_owned_country
+Removes the scoped company's ownership of the target country  
+remove_owned_country = country:key
+**Supported Scopes**: company  
+**Supported Targets**: country  
 
 ## remove_primary_culture
 Removes a culture from the primary cultures of a country  
@@ -3177,7 +3455,7 @@ remove_trait = trait
 ## remove_variable
 Removes a variable  
 remove_variable = variable_name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## remove_war_goal
 Removes a war goal from a DP.  
@@ -3206,41 +3484,41 @@ Rounds a variable to the nearest specified value
 round_variable = { name = X nearest = Y }  
 Where X is the name of the variable  
 Where Y is a script value
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## round_local_variable
 Rounds a variable to the nearest specified value  
 round_variable = { name = X nearest = Y }  
 Where X is the name of the variable  
 Where Y is a script value
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## round_variable
 Rounds a variable to the nearest specified value  
 round_variable = { name = X nearest = Y }  
 Where X is the name of the variable  
 Where Y is a script value
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## save_scope_as
 Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain  
 save_scope_as = <string>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## save_scope_value_as
 Saves a numerical or bool value as an arbitrarily-named target to be referenced later in the (unbroken) event chain  
 save_scope_value_as = { name = <string> value = x }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## save_temporary_scope_as
 Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect  
 save_temporary_scope_as = <string>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## save_temporary_scope_value_as
 Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect  
 save_temporary_scope_value_as = { name = <string> value = x }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## seize_investment_pool
 Seize investment pool for the treasury and transfer all private construction queue elements to the government queue = bool
@@ -3260,7 +3538,7 @@ set_available_for_autonomous_investment = building type scope
 ## set_bar_progress
 Sets progress for a journal entry scripted progressbar  
 set_bar_progress = {value = -5name = example_progress_bar_name}
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## set_bolstering
 Starts/stops bolstering the political movement in scope  
@@ -3275,7 +3553,7 @@ Where X is a state region
 
 ## set_character_as_ruler
 Set scoped character as ruler in their country.  
-scope:larry = { set_character_as_ruler = yes }
+scope:larry = { set_character_as_ruler = yes }CAUTION: Do not use this effect with chartered companies, as the character's country will be affected
 **Supported Scopes**: character  
 
 ## set_character_busy_and_immortal
@@ -3323,6 +3601,16 @@ set_diplomats_expelled = scope:target_country
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## set_export_tariff_level
+Sets export tariff level for a good in scoped country  
+set_export_tariff_level = { goods = g:iron level = max_tariffs }
+**Supported Scopes**: country  
+
+## set_exports
+Sets a multiplier of exports to the state for the scoped state goods  
+set_exports = 3
+**Supported Scopes**: state_goods  
+
 ## set_global_variable
 Sets a variable  
 set_variable = { name = X value = Y days = Z }  
@@ -3331,7 +3619,7 @@ Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value  
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope  
 Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## set_government_wage_level
 Sets the government wage level of scoped country  
@@ -3386,10 +3674,26 @@ Makes a country immune to revolutions or removes such immunity.
 set_immune_to_revolutions = yes/no
 **Supported Scopes**: country  
 
+## set_import_tariff_level
+Sets import tariff level for a good in scoped country  
+set_import_tariff_level = { goods = g:iron level = max_tariffs }
+**Supported Scopes**: country  
+
+## set_imports
+Sets a multiplier of imports to the state for the scoped state goods  
+set_imports = 3
+**Supported Scopes**: state_goods  
+
 ## set_institution_investment_level
 Sets the investment level for an institution  
 set_institution_investment_level = { institution = <key> level = x }
 **Supported Scopes**: country  
+
+## set_interest_group
+Sets the interest group of the character  
+set_interest_group = ruler.interest_group
+**Supported Scopes**: character  
+**Supported Targets**: interest_group  
 
 ## set_interest_group_name
 Renames interest group to the specified loc key  
@@ -3409,7 +3713,7 @@ Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value  
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope  
 Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## set_market_capital
 Set market capital in a country scope  
@@ -3543,25 +3847,7 @@ set_suppression = yes/no
 ## set_target_technology
 Sets a (new) target technology scope for a journal entry  
 set_target_technology = <scope>
-**Supported Scopes**: journalentry  
-
-## set_tariffs_export_priority
-Sets Export Prioritized tariffs for a good in scoped country  
-set_tariffs_export_priority = <scope/key>
-**Supported Scopes**: country  
-**Supported Targets**: goods  
-
-## set_tariffs_import_priority
-Sets Import Prioritized tariffs for a good in scoped country  
-set_tariffs_import_priority = <scope/key>
-**Supported Scopes**: country  
-**Supported Targets**: goods  
-
-## set_tariffs_no_priority
-Sets tariffs to have no import/export priority for a good in scoped country  
-set_tariffs_no_priority = <scope/key>
-**Supported Scopes**: country  
-**Supported Targets**: goods  
+**Supported Scopes**: journal_entry  
 
 ## set_tax_level
 Sets the overall tax level of scoped country  
@@ -3584,7 +3870,7 @@ Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value  
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope  
 Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## set_war
 Set a diplomatic play to be a war  
@@ -3594,28 +3880,28 @@ set_war = bool
 ## show_as_tooltip
 Enclosed effects are only shown in tooltips (but are not actually executed)  
 show_as_tooltip = { <more effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## sort_global_variable_list
 Sorts a variable list  
 sort_variable_list = { name = X order = Y }  
 Where X is the name of the variable  
 Where Y is some math script to determine sort order
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## sort_local_variable_list
 Sorts a variable list  
 sort_variable_list = { name = X order = Y }  
 Where X is the name of the variable  
 Where Y is some math script to determine sort order
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## sort_variable_list
 Sorts a variable list  
 sort_variable_list = { name = X order = Y }  
 Where X is the name of the variable  
 Where Y is some math script to determine sort order
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## start_building_construction
 Start constructing a building in a scoped state as a government construction  
@@ -3645,7 +3931,7 @@ start_research_random_technology = yes
 
 ## start_tutorial_lesson
 Starts the tutorial lesson with the given key. Does nothing if the tutorial is not running, the lesson is completed (or already running), or the lesson cannot be triggered (e.g. trigger fails)
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## switch
 Switch on a trigger for the evaluation of another trigger with an optional fallback trigger.  
@@ -3655,7 +3941,7 @@ switch = {
 	case_2 = { <effects> }  
 	case_n = { <effects> }  
 	fallback = { <effects> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## take_on_scaled_debt
 Transfers an amount of debt equal to the defined multiplier on target's max credit  
@@ -3688,7 +3974,7 @@ Triggers an event for the current scope
 trigger_event = X  
 trigger_event = { id = X days/weeks/months/years = Y }  
 Where X is an event ID and Y is an integer to delay the event by
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## try_form_government_with
  Tries to form a new govt with provided IGs, If not possible with legitimacy provided will try and add as many IGs into the govt as possible  
@@ -3730,5 +4016,14 @@ Repeats enclosed effects while limit criteria are met or until set iteration cou
 while = { limit = { <triggers> } <effects> }  
  while = { count = 3 <effects> }  
 Default max of 1000.
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+
+## withdraw
+Withdraws a country from a treaty  
+scope:treaty = {  
+	withdraw = {  
+		country = <country>	# must be valid and must be bound by the treaty  
+	}  
+}  
+**Supported Scopes**: treaty  
 

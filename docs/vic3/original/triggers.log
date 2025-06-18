@@ -2,19 +2,19 @@
 ## active_lens
 Checks if the specified lens is open  
 active_lens = lens
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## active_lens_option
 Checks if the specified lens option is activated  
 active_lens_option = lens_option_key
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## add_to_temporary_list
 Saves a temporary target for use during the trigger execution  
 This is used to build lists in triggers.  
 If used within an any-trigger, placement within the trigger is quite important. The game will iterate through every instance of the any-trigger until it finds a single instance that fulfills the requirements, and then it will stop.  
 In order to add every instance of a scope that fulfills certain conditions, use "count = all" while also placing this "effect" at the very end of the any-trigger (so that every condition is evaluated for every iteration).
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## additional_war_exhaustion
 Compares the additional war exhaustion the scoped country has accumulated from scripted events in the target diplomatic play  
@@ -39,7 +39,7 @@ Reads gamestate for all scopes.
 
 ## all_false
 true if all children are false (equivalent to NOR)
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## always
 checks if the assigned yes/no value is true  
@@ -47,11 +47,11 @@ always = yes # always succeeds
 always = no  # always fails  
 always = scope:a_boolean_value # evaluated at runtime  
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## and
 all inside trigger must be true
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## any_active_law
 Iterate through all active laws in a country  
@@ -70,19 +70,19 @@ Reads nothing for all scopes.
 ## any_character
 Iterate through all characters globally  
 any_character = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## any_character_in_exile_pool
 Iterate through characters in the exile pool  
 any_character_in_exile_pool = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## any_character_in_void
 Iterate through characters in the void  
 any_character_in_void = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: character  
 
 ## any_civil_war
@@ -124,7 +124,13 @@ Reads nothing for all scopes.
 ## any_country
 Iterate through all countries globally  
 any_country = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+**Supported Targets**: country  
+
+## any_decentralized_country
+Iterate through all countries that are decentralized  
+any_decentralized_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+**Supported Scopes**: none  
 **Supported Targets**: country  
 
 ## any_diplomatic_catalyst
@@ -137,7 +143,7 @@ Reads nothing for all scopes.
 ## any_diplomatic_play
 Iterate through all diplomatic plays globally  
 any_diplomatic_play = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: diplomatic_play  
 
 ## any_diplomatically_relevant_country
@@ -170,7 +176,7 @@ Reads nothing for all scopes.
 
 ## any_false
 true if any child is false (equivalent to NAND)
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## any_harvest_condition
 Iterate through all harvest conditions affecting a state, state region, strategic region, or country  
@@ -182,7 +188,7 @@ Reads nothing for all scopes.
 ## any_in_global_list
 Iterate through all items in global list. list = name or variable = name  
 any_in_global_list = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## any_in_hierarchy
 Any country in current hierarchy, including current  
@@ -194,12 +200,12 @@ Reads nothing for all scopes.
 ## any_in_list
 Iterate through all items in list. list = name or variable = name  
 any_in_list = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## any_in_local_list
 Iterate through all items in local list. list = name or variable = name  
 any_in_local_list = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## any_influenced_interest_group
 Iterate through all interest groups influenced by a political movement  
@@ -232,7 +238,7 @@ Reads nothing for all scopes.
 ## any_market
 Iterate through all markets globally  
 any_market = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: market  
 
 ## any_market_goods
@@ -302,7 +308,7 @@ Reads nothing for all scopes.
 ## any_power_bloc
 Iterate through all power blocs  
 any_power_bloc = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: power_bloc  
 
 ## any_power_bloc_member
@@ -360,6 +366,20 @@ any_scope_ally = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
+
+## any_scope_article
+Iterate through articles of the scoped treaty  
+any_scope_article = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: treaty  
+**Supported Targets**: treaty_article  
+
+## any_scope_article_option
+Iterate through article_options of the scoped treaty or treaty_options  
+any_scope_article_option = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: treaty_article_options  
 
 ## any_scope_building
 Iterate through all buildings in a: state, country  
@@ -452,6 +472,13 @@ Reads nothing for all scopes.
 **Supported Scopes**: country, culture, interest_group, state  
 **Supported Targets**: pop  
 
+## any_scope_regional_hqs
+Iterate through regional HQs of the scoped company  
+any_scope_regional_hqs = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: company  
+**Supported Targets**: building  
+
 ## any_scope_state
 Iterate through all states including provinces from a: country, state_region, theater, or front  
 any_scope_state = { <count=num/all> / <percent=fixed_point> <triggers> }
@@ -472,6 +499,13 @@ any_scope_theater = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: theater  
+
+## any_scope_treaty
+Iterate through in force treaties binding the scoped country  
+any_scope_treaty = { <count=num/all> / <percent=fixed_point> <triggers> }
+Reads nothing for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: treaty  
 
 ## any_scope_violate_sovereignty_interested_parties
 Iterate through all countries that would be interested if country in scope has their sovereignty violated  
@@ -504,13 +538,13 @@ Reads nothing for all scopes.
 ## any_state
 Iterate through all states globally  
 any_state = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state  
 
 ## any_state_region
 Iterate through all state regions  
 any_state_region = { <count=num/all> / <percent=fixed_point> <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 **Supported Targets**: state_region  
 
 ## any_strategic_objective
@@ -541,12 +575,11 @@ Reads nothing for all scopes.
 **Supported Scopes**: political_movement  
 **Supported Targets**: character  
 
-## any_trade_route
-Iterate through all trade routes in a: market, country, marketgoods  
-any_trade_route = { <count=num/all> / <percent=fixed_point> <triggers> }
-Reads nothing for all scopes.
-**Supported Scopes**: country, market, market_goods  
-**Supported Targets**: trade_route  
+## any_treaty
+Iterate through treaties (both in force and drafts)  
+any_treaty = { <count=num/all> / <percent=fixed_point> <triggers> }
+**Supported Scopes**: none  
+**Supported Targets**: treaty  
 
 ## any_valid_mass_migration_culture
 Lists for cultures in the scoped country that are valid for mass migration  
@@ -610,15 +643,21 @@ Reads gamestate for all scopes.
 ## assert_if
 Conditionally cause an assert during run time  
 assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## assert_read
 Conditionally cause an assert during read time  
 assert_read = X, where X is yes or the string to be printed in the assert
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## authority
 Compares the available authority of the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## authority_usage
+Compares the consumed authority of the scoped country
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -670,6 +709,26 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## binds
+Checks if the scoped treaty or treaty_options binds the given country  
+scope:some_treaty = {  
+	if = { limit = {  
+		binds = c:FRA  
+		binds = c:BEL  
+	}}  
+}
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: country  
+
+## blockade_level
+Compare to state's blockade level  
+blockade_level > 0.1
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## building_has_goods_shortage
 Check if building has a shortage of any of its inputs  
 building_has_goods_shortage = yes/no
@@ -683,10 +742,16 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## bureaucracy_usage
+Compares the consumed bureaucracy of the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## calc_true_if
 Returns true if the specified number of sub-triggers return true  
 calc_true_if = { amount = 2 <trigger> <trigger> <trigger> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## can_activate_production_method
 Checks if the building of a particular type in scoped state is able to active the specified production method  
@@ -742,28 +807,66 @@ can_create_diplomatic_pact = { target = <country scope> type = <action type key>
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## can_create_treaty
+Checks if a treaty between countries can be created  
+can_create_treaty = {  
+	first_country = <country>			# (default: none) must _not_ be specified if the created treaty is an amendment  
+	second_country = <country>			# (default: none) must _not_ be specified if the created treaty is an amendment  
+	amends = <treaty>					# (default: none) if specified, the created treaty will be an amendment to the specified treaty  
+  
+	is_draft = yes | no					# (default: yes) must be yes if this treaty is an amendement to an existing treaty  
+	entered_into_force_on = <date>		# (default: none) means "today" if not specified (for non-drafts). Must _not_ be specified for drafts. Cannot be in the future  
+	binding_period = {					# (default: 0) must be a nonnegative number, fractional parts will be ignored (truncation)  
+		days = <nonnegative number>  
+		| weeks = <nonnegative number>  
+		| months = <nonnegative number>  
+		| years = <nonnegative number>  
+	}  
+  
+	articles_to_create = {				# (default: empty) non-amendments must have at least one article to create  
+		{  
+			article = <key>				# (default: empty) the type of article (determined by script)  
+			source_country = <country>	# (default: none) directed articles _must_ specify this value, mutual articles _must not_ specify this value  
+			target_country = <country>	# (default: none) directed articles _must_ specify this value, mutual articles _must not_ specify this value  
+  
+			inputs = {					# (default: empty) list of inputs values as required by the article  
+				{  
+					quantity = <positive number>  
+					| good = <good>  
+					| state = <state>  
+					| strategic_region = <strategic region>  
+					| company = <company> # TODO: or company type?  
+					| building = <building> # TODO: or building type?  
+					| law = <law> # TODO: or law type?  
+					| country = <country>  
+				}  
+  
+				{ ... }					# one input per required input of the corresponding article type  
+			}  
+		}  
+  
+		# some examples of valid articles  
+		{ article = alliance }			# mutual, no inputs  
+		{  
+			article = resource_transfer # directed  
+			source_country = c:FRA		# because directed  
+			target_country = c:GBR 		# because directed  
+  
+			inputs = {  
+				{ quantity = 250 }		# because resource_transfer has required_inputs = { quantity good }  
+				{ good = g:coal }		# because resource_transfer has required_inputs = { quantity good }  
+			}  
+		}  
+	}  
+}  
+**Supported Scopes**: none  
+
 ## can_decrease_autonomy
 Check if a subject country is able to become a less autonomous subject type  
 can_increase_autonomy = yes
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
-
-## can_establish_any_export_route
-Check if a country can establish any export routes  
-can_establish_any_export_route = <goods key/scope>  
-Traits: goods scope
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-**Supported Targets**: goods  
-
-## can_establish_any_import_route
-Check if a country can establish any import routes  
-can_establish_any_import_route = <goods key/scope>  
-Traits: goods scope
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-**Supported Targets**: goods  
 
 ## can_establish_company
 Check if the country can establish a new company
@@ -834,6 +937,12 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## can_potentially_produce_prestige_goods
+Checks if scope company can potentially produce target prestige good type  
+can_potentially_produce_prestige_good = pg:prestige_good_generic_clothes
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
 ## can_queue_building_levels
 Checks if the building's owner could queue the provided number of additional levels without hitting a level or resource potential cap  
 can_queue_building_levels = number
@@ -855,7 +964,7 @@ Reads gamestate for all scopes.
 ## can_start_tutorial_lesson
 Can the specified tutorial lesson be started?  
 can_start_tutorial_lesson = reactive_advice_succession
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## can_take_on_scaled_debt
 Checks if scoped country can take on a certain amount of scaled debt from another country  
@@ -905,7 +1014,7 @@ Reads gamestate for all scopes.
 ## check_area
 Compares areas of object to another object
 Reads gamestate for all scopes.
-**Supported Scopes**: country, province, state, state_region, strategic_region, theater  
+**Supported Scopes**: country, market, province, state, state_region, strategic_region, theater  
 
 ## civil_war_progress
 Compare progress of civil war  
@@ -927,6 +1036,62 @@ commander_rank > 2
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## company_employed_levels
+Check the number of employed building levels of the scoped company  
+company_employed_levels > 1.5
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_global_productivity_comparison
+Check the average global productivity of buildings matching this company's buildings, scaled by owned levels for each type  
+company_global_productivity_comparison > 1.0
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_has_building_type_monopoly
+Check if the scoped company has a monopoly of the specified building type  
+company_has_building_type_monopoly = bt:building_food_industry
+Traits: building_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+**Supported Targets**: building_type  
+
+## company_has_monopoly
+Check if the scoped company has any monopoly  
+ company_has_monopoly = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_is_prosperous
+Check if a company is considered to be prosperous
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_owned_levels
+Check the number of owned building levels of the scoped company  
+company_owned_levels > 1.5
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_productivity
+Check the productivity of the scoped company  
+company_productivity > 1.0
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
+## company_prosperity
+Check the prosperity of a company   
+company_prosperity > 0
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
 
 ## construction_queue_duration
 Compares the maximum of all the very roughly approximated weeks remaining to finish the constructions in any queue: construction_queue_duration < 52
@@ -1046,6 +1211,20 @@ Checks the sum of building levels for a building type in a country
  target = bt:building_barracks  
  value  >= 100
 Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## country_has_building_type_monopoly
+Check if the scoped country has a monopoly of the specified building type  
+country_has_building_type_monopoly = bt:building_food_industry
+Traits: building_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: building_type  
+
+## country_has_country_monopoly
+Check if the scoped country has any country monopolies
+Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
@@ -1211,7 +1390,7 @@ Reads gamestate for all scopes.
 ## current_tooltip_depth
 Returns the number of tooltips currently open on screen
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## custom_description
 Wraps triggers that get a custom description instead of the auto-generated one  
@@ -1222,7 +1401,7 @@ custom_description = {
 	value = <optional script value>  
 	... triggers ...  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## custom_tooltip
 Replaces the tooltips for the enclosed triggers with a custom text  
@@ -1231,25 +1410,25 @@ custom_tooltip = {
 	subject = <scope> (optional)  
 	<trigger>  
 }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## day_value
 Day value
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## daynight_value
 DayNight value
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## debug_log
 Log whether the parent trigger succeeded or failed
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## debug_log_details
 Log whether the parent trigger succeeded or failed. Log which children succeeded or failed
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## dependents
 Compares the dependents size of the scoped pop  
@@ -1368,7 +1547,7 @@ Reads gamestate for all scopes.
 ## exists
 Checks whether the specified scope target exists (check for not being the null object)  
 exists = from.owner.var:cool_var.mother
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## expanding_institution
 Checks if the institution is expanding  
@@ -1382,6 +1561,19 @@ experience_level > 1
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## export_advantage
+Compare to state goods export advantage  
+export_advantage >= 100
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
+
+## export_tariff_level
+Checks if state goods has a particular export tariff level set  
+export_tariff_level = max_tariffs
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
 
 ## food_security
 Checks if a pop has a certain amount of food security  
@@ -1444,7 +1636,7 @@ Reads gamestate for all scopes.
 Compare to current game date  
 current_game_date = 1837.1.1
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## gdp_ownership_ratio
 Compares the ratio of GDP the specified country owns in the scoped country  
@@ -1471,14 +1663,14 @@ Reads gamestate for all scopes.
 Compares the global population  
 global_population > 2000000000
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## global_variable_list_size
 Checks the size of a variable list  
 variable_list_size = { name = X target >= Y }  
 Where X is the name of the variable  
 Where Y is a script value or number
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## gold_reserves
 Does the country have the required gold reserves  
@@ -1496,7 +1688,7 @@ Reads gamestate for all scopes.
 
 ## goods_production_rank
 Compare to a country's production leaderboard rank of a good  
-leading_producer_of = { target = g:coal value < 10 }
+"goods_production_rank(g:luxury_clothes)" < 10
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -1535,6 +1727,11 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: harvest_condition  
 
+## has_account_item
+Does the player have the item in the account  
+has_account_item = <key>
+**Supported Scopes**: none  
+
 ## has_active_building
 True if a state has an active building type  
 has_active_building = building
@@ -1554,6 +1751,13 @@ has_active_production_method = key
 Reads gamestate for all scopes.
 **Supported Scopes**: building  
 
+## has_any_law_commitment
+Checks if a country has a commitment to enact any law  
+has_any_law_commitment = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## has_any_secessionists_broken_out
 Check if the country has secessionists broken out
 Traits: yes/no 
@@ -1565,6 +1769,26 @@ Check if the country has any secessionists growing
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## has_any_subventions_on
+Check if the scoped country has any level of subventions on a goods  
+scope:country = {  
+	has_any_subventions_on = g:grain  
+}  
+Traits: goods scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: goods  
+
+## has_any_tariffs_on
+Check if the scoped country has any level of tariffs on a goods  
+scope:country = {  
+	has_any_tariffs_on = g:grain  
+}  
+Traits: goods scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: goods  
 
 ## has_assimilating_pops
 Check if a state has any pops currently in the process of assimilating.
@@ -1630,7 +1854,7 @@ Reads gamestate for all scopes.
 ## has_company
 Checks if a company of the specified type exists in scope country  
 has_company = company_type:company_rheinmetall
-Traits: company_type scope
+Traits: class CCompanyTypeDatabase key
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: company_type  
@@ -1668,7 +1892,7 @@ Reads gamestate for all scopes.
 
 ## has_cosmetic_dlc
 Does the client have this cosmetic DLC
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_cultural_community
 Checks if a culture has a cultural community in the scoped state.  
@@ -1750,7 +1974,7 @@ Reads gamestate for all scopes.
 
 ## has_dlc_feature
 Does the host have DLC that enables this particular feature
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_employee_slots_filled
 Checks whether the amount of employees of a certain poptype are above or below a given percentage of the total amount the building can currently hire. I.e. if a building is at 80% (given as 0.8) of its current hiring capacity for Shopkeepers, for example.  
@@ -1758,14 +1982,6 @@ has_employee_slots_filled = { pop_type = X percent = Y }
 Where X is a pop type and Y is a fixed point
 Reads gamestate for all scopes.
 **Supported Scopes**: building  
-
-## has_export_priority_tariffs
-Checks if scoped country has Import Prioritized tariffs for a good  
-has_export_priority_tariffs = <key/scope>
-Traits: goods scope
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-**Supported Targets**: goods  
 
 ## has_failed_hires
 Checks if a building failed to hire someone last week  
@@ -1791,17 +2007,17 @@ Reads gamestate for all scopes.
 ## has_game_rule
 Is the given game rule setting enabled?  
 has_game_rule = faster_conversion
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_game_started
 True if game has started  
 has_game_started = bool
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_gameplay_dlc
 Does the host have this gameplay DLC
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_global_highest_gdp
 Checks if the scoped country has the highest GDP  
@@ -1820,12 +2036,12 @@ Reads gamestate for all scopes.
 ## has_global_variable
 Checks whether the current scope has the specified variable set  
 has_variable = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_global_variable_list
 Checks whether the current scope has the specified variable list set  
 has_variable_list = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_government_clout
 Does the country's government have the necessary total Clout
@@ -1877,14 +2093,6 @@ Check if scoped character or interest group has ideology
 Reads gamestate for all scopes.
 **Supported Scopes**: character, interest_group, political_movement  
 
-## has_import_priority_tariffs
-Checks if scoped country has Import Prioritized tariffs for a good  
-has_import_priority_tariffs = <key/scope>
-Traits: goods scope
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-**Supported Targets**: goods  
-
 ## has_inactive_journal_entry
 Check if the country has at least one inactive journal entry of the specified type  
 has_inactive_journal_entry = key
@@ -1928,6 +2136,13 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: law_type  
 
+## has_law_commitment
+Checks if a country has a commitment to enact a certain law
+Traits: law_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: law_type  
+
 ## has_law_imposition_rights
 Checks if the scoped country has the necessary permits to demand another country enacts a certain law  
 has_law_imposition_rights = { target_country = scope:target_country type = law_type:law_serfdom }
@@ -1937,32 +2152,22 @@ Reads gamestate for all scopes.
 ## has_local_variable
 Checks whether the current scope has the specified variable set  
 has_variable = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_local_variable_list
 Checks whether the current scope has the specified variable list set  
 has_variable_list = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_map_interaction
 Checks if the map interaction type is active  
 has_map_interaction = key
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_map_interaction_diplomatic_action
 Checks if our current map interaction is a specific diplomatic action  
 has_map_interaction_diplomatic_action = <key>
-**Supported Scopes**: none/all  
-
-## has_map_interaction_export_goods
-Checks if the specified lens option is to export the specified goods  
-has_selected_export_option_for_goods = <scope>
-**Supported Scopes**: none/all  
-
-## has_map_interaction_import_goods
-Checks if the specified lens option is to import the specified goods  
-has_selected_import_option_for_goods = <scope>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_military_formation
 Checks if character has a Military Formation  
@@ -1991,15 +2196,7 @@ Check if a supported scope has a certain timed modifier
 Supported scopes: Country, Character, State, Building, InterestGroup, PoliticalMovement, Institution, Front  
 has_modifier = <key>
 Reads gamestate for all scopes.
-**Supported Scopes**: country, building, character, institution, interest_group, journalentry, political_movement, power_bloc, state  
-
-## has_no_priority_tariffs
-Checks if scoped country has Unprioritized tariffs for a good  
-has_no_priority_tariffs = <key/scope>
-Traits: goods scope
-Reads gamestate for all scopes.
-**Supported Scopes**: country  
-**Supported Targets**: goods  
+**Supported Scopes**: country, building, character, institution, interest_group, journal_entry, political_movement, power_bloc, state  
 
 ## has_objective
 Checks if the scoped country has a certain objective type  
@@ -2079,8 +2276,15 @@ Reads gamestate for all scopes.
 ## has_potential_resource
 Checks if the specificed building group is allowed in the scoped state. Used to check if a state can potentially produce a resource  
 has_potential_resource = bg_rubber_plantations
+Traits: class CBuildingGroupDatabase key
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
+
+## has_potential_supply
+Check if the market goods or state goods has a potential supply, either though local production or theoretical import
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods, state_goods  
 
 ## has_potential_to_form_country
 Check if the target country could ever be able to form a nation  
@@ -2115,7 +2319,7 @@ Reads gamestate for all scopes.
 True if the end date (NDefines::NGame::END_DATE) has been reached  
 has_reached_end_date = yes
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_religion
 Checks characters religion  
@@ -2259,13 +2463,13 @@ has_trait = trait
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
-## has_treaty_port_in_country
-Checks if the scoped country has a treaty port in target country  
-c:POR = { has_treaty_port_in_country = c:CHI }
-Traits: country scope
+## has_treaty_port_in_market
+Checks if the scoped country has a treaty port in target market  
+c:POR = { has_treaty_port_in_market = c:CHI.market }
+Traits: market scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
-**Supported Targets**: country  
+**Supported Targets**: market  
 
 ## has_truce_with
 Check if a country has a truce with a different target country  
@@ -2275,10 +2479,18 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## has_type
+Checks if the scoped object has the type identified by the given string  
+scope:some_object = {  
+	has_type = defensive_pact  
+}
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article, treaty_article_options  
+
 ## has_unification_candidate
 Check if there is at least one unification candidate for country tag  
 has_country_unification_candidate = GER
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_unit_type
 Checks if a Combat Unit is of the specified type  
@@ -2291,12 +2503,12 @@ Reads gamestate for all scopes.
 ## has_variable
 Checks whether the current scope has the specified variable set  
 has_variable = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_variable_list
 Checks whether the current scope has the specified variable list set  
 has_variable_list = name
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## has_war_exhaustion
 Checks the war exhaustion of the target country in the scoped war  
@@ -2333,9 +2545,9 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
 ## hidden_trigger
-AndTrigger that doesn't generate tooltips for contents within  
-hidden_trigger = {}
-**Supported Scopes**: none/all  
+Enclosed triggers are not shown in tooltips  
+hidden_trigger = { <more triggers> }
+**Supported Scopes**: none  
 
 ## highest_secession_progress
 Compares the highest secession progress of any secession movement in a given country  
@@ -2375,6 +2587,19 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
 
+## import_advantage
+Compare to state goods import advantage  
+import_advantage >= 100
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
+
+## import_tariff_level
+Checks if state goods has a particular import tariff level set  
+import_tariff_level = max_tariffs
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
+
 ## in_default
 Check if the country is currently in default
 Traits: yes/no 
@@ -2408,9 +2633,22 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## influence_usage
+Compares the consumed influence of the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## infrastructure
 Compares the infrastructure value of a given state  
 infrastructure > 10
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state, state_region  
+
+## infrastructure_delta
+Compares the infrastructure balance of a given state  
+infrastructure_delta > 0
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state, state_region  
@@ -2478,13 +2716,6 @@ investment_pool_net_income > 1000
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
-
-## is_active
-Checks if a naval invasion is currently active (started or ongoing)  
-is_active = bool
-Traits: yes/no 
-Reads gamestate for all scopes.
-**Supported Scopes**: naval_invasion  
 
 ## is_adjacent_to_country
 Checks if country in scope is adjacent to a target country  
@@ -2557,6 +2788,13 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: political_movement  
 
+## is_blockaded_by
+Checks if a state is blockaded by a country
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+**Supported Targets**: country  
+
 ## is_buildable
 Check if a building is buildable = yes (default)  
 is_buildable = yes/no
@@ -2579,7 +2817,7 @@ Reads gamestate for all scopes.
 ## is_building_type_expanded
 Checks if the CProductionMethodsPanelEntry for a particular CBuildingType is expanded  
 is_building_type_expanded = <scope/key>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_busy
 Check if character is busy  
@@ -2613,6 +2851,14 @@ is_coastal = yes/no
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
+
+## is_company_type
+Checks if scoped company is of the specified type  
+is_company_type = company_type:company_rheinmetall
+Traits: class CCompanyTypeDatabase key
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+**Supported Targets**: company_type  
 
 ## is_considered_adjacent_due_to_wargoals
 Checks if the scoped country is considered adjacent to the target country by virtue of the scoped country having wargoals that are adjacent to the target country in a committed diplomatic play  
@@ -2767,6 +3013,17 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: law_type  
 
+## is_enforced
+Checks if the scoped treaty is enforced on either party  
+scope:some_treaty = {  
+	if = { limit = {  
+		is_enforced = yes  
+	}}  
+}
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty  
+
 ## is_expanding_institution
 Are you expanding an institution  
 is_expanding_institution = <yes>/<no>
@@ -2802,6 +3059,16 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## is_fulfilled_by
+Check if the scoped treaty is fulfilled by the given country  
+scope:treaty = {  
+	is_fulfilled_by = c:FRA  
+}  
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty  
+**Supported Targets**: country  
+
 ## is_fully_mobilized
 Checks if the Military Formation is fully mobilized  
 is_fully_mobilized = bool
@@ -2813,19 +3080,19 @@ Reads gamestate for all scopes.
 Checks if the game is paused  
 is_game_paused = yes/no
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_gamestate_tutorial_active
 Is the gamestate tutorial active? See save_progress_in_gamestate in tutorial_lesson_chains documentation.
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_goal_complete
 Check if the journal entry's goal has been met  
 is_goal_complete = yes/no
 Traits: yes/no 
 Reads gamestate for all scopes.
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## is_government_funded
 Check if a building is is_government_funded  
@@ -2921,7 +3188,7 @@ Reads gamestate for all scopes.
 
 ## is_in_list
 Checks if a target in in a list
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_in_mild_starvation
 Check if the pop is in mild starvation  
@@ -3015,6 +3282,13 @@ is_interest_group_type = x
 Reads gamestate for all scopes.
 **Supported Scopes**: character, interest_group  
 
+## is_invasion_stalled
+Checks if the invasion is stalled due to wrong commander orders  
+is_invasion_stalled = bool
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: invasion  
+
 ## is_isolated_from_market
 Check if a state is isolated from its market
 Traits: yes/no 
@@ -3044,7 +3318,7 @@ Reads gamestate for all scopes.
 ## is_lens_open
 Checks if a certain lens is open, specified as a lens key. Specify an optional named tab to check if this tab is open.  
 is_lens_open = { lens = lens_key tab_name = tab_key }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_local_player
 True if country scope is a player  
@@ -3141,18 +3415,11 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
-## is_naval_invasion_stalled_due_to_orders
-Checks if a naval invasion is stalled due to wrong admiral orders  
-is_naval_invasion_stalled = bool
-Traits: yes/no 
-Reads gamestate for all scopes.
-**Supported Scopes**: naval_invasion  
-
 ## is_objective_completed
 Is the objective completed for the country in scope?  
 is_objective_completed = yes
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_on_front
 Checks if a character or military formation has been assigned to a Front and has arrived there  
@@ -3172,7 +3439,7 @@ Reads gamestate for all scopes.
 ## is_panel_open
 Checks if a certain infopanel is open, specified as an event target (target) or as a string (panel_name). Specify an optional named tab (tab_name) to check if this tab is open.  
 is_panel_open = { target = <scope> OR panel_name = panel_name tab_name = tab_name }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_party
 Checks if the target party is same as scoped party. Will only work on exact same party object, meaning you can't compare across countries.  
@@ -3216,7 +3483,15 @@ Reads gamestate for all scopes.
 ## is_popup_open
 Checks if the specified popup panel is open  
 is_popup_open = popup
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+
+## is_potential_treaty_port
+Checks if the scoped state has the potential to become a treaty port for target country  
+is_potential_treaty_port = c:FRA
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+**Supported Targets**: country  
 
 ## is_power_bloc_leader
 Checks if the country is a leader of a Power Bloc  
@@ -3240,6 +3515,13 @@ Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
 
+## is_producing_prestige_goods
+Checks if scope company is producing prstige goods  
+is_producing_prestige_goods = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: company  
+
 ## is_production_method_active
 Checks if the building of a particular type in scoped state has the specified production method active  
 is_production_method_active = { building_type = <key> production_method = <key> }
@@ -3251,7 +3533,7 @@ Check if the journal entry is progressing
 is_progressing = yes/no
 Traits: yes/no 
 Reads gamestate for all scopes.
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## is_province_land
 Check if the province is on land
@@ -3265,6 +3547,17 @@ is_reasonable_law_for_petition = yes
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: law  
+
+## is_renegotiation
+Checks if the scoped treaty is amending an existing treaty  
+scope:some_treaty = {  
+	if = { limit = {  
+		is_renegotiation = yes  
+	}}  
+}
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_options, treaty  
 
 ## is_researching_technology
 Check if the country is actively researching a tech  
@@ -3287,7 +3580,7 @@ Reads gamestate for all scopes.
 ## is_rightclick_menu_open
 Checks if the specified rightclick menu is open  
 is_rightclick_menu_open = <menu_key>
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_ruler
 Checks if character is a ruler/head of state of a country  
@@ -3336,7 +3629,7 @@ Reads gamestate for all scopes.
 ## is_set
 Checks whether the specified scope target has been set (includes being the null object)  
 is_set = from.owner.var:cool_var.mother
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_slave_state
 Check if a state employs or has the potential to employ slaves.
@@ -3426,21 +3719,21 @@ Checks if a target is in a variable list
 is_target_in_variable_list = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_target_in_local_variable_list
 Checks if a target is in a variable list  
 is_target_in_variable_list = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_target_in_variable_list
 Checks if a target is in a variable list  
 is_target_in_variable_list = { name = X target = Y }  
 Where X is the name of the variable  
 Where Y is an event target
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_target_of_wargoal
 Checks if state is target of any wargoal in wars involving a specific country  
@@ -3459,21 +3752,7 @@ Reads gamestate for all scopes.
 ## is_template_used
 Checks if character template has already been used  
 is_template_used = template_key
-**Supported Scopes**: none/all  
-
-## is_trade_route_active
-Checks if the scoped trade route is active  
-is_trade_route_active = yes/no
-Traits: yes/no 
-Reads gamestate for all scopes.
-**Supported Scopes**: trade_route  
-
-## is_trade_route_productive
-Checks if the scoped trade route is productive  
-is_trade_route_productive = yes/no
-Traits: yes/no 
-Reads gamestate for all scopes.
-**Supported Scopes**: trade_route  
+**Supported Scopes**: none  
 
 ## is_tradeable
 Check if a goods or market goods is tradeable  
@@ -3492,25 +3771,25 @@ Reads gamestate for all scopes.
 ## is_tutorial_active
 Is the tutorial active?
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_tutorial_lesson_active
 Is this the current tutorial lesson?  
 is_tutorial_lesson_active = reactive_advice_succession
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_tutorial_lesson_chain_completed
 Has the tutorial lesson chain with the specified key been finished?
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_tutorial_lesson_completed
 has the tutorial lesson with the specified name been finished?
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_tutorial_lesson_step_completed
 Has the tutorial lesson step been finished?  
 is_tutorial_lesson_step_completed = lesson_key:step_key
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## is_under_colonization
 Check if state is under colonization  
@@ -3569,6 +3848,13 @@ Reads gamestate for all scopes.
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## is_world_market_hub
+Check if state is a world market hub  
+is_world_market_hub = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## isolated_states
 Compare number of Isolated States
 Traits: <, <=, =, !=, >, >=
@@ -3580,7 +3866,7 @@ Return the age of the journal entry (since activation) in days
 journal_entry_age > 720
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## law_approved_by
 Checks whether the scoped law is approved by an interest group  
@@ -3592,6 +3878,13 @@ Reads gamestate for all scopes.
 Compares the stance of the scoped character, movement or interest group has about enactment of the specified law compared to the current active law in the same group
 Reads gamestate for all scopes.
 **Supported Scopes**: character, interest_group, political_movement  
+
+## law_is_available
+Checks if a law is available for its country, considering its current situation. Like can_be_enacted, but ignores government support  
+law_is_available = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: law  
 
 ## law_progressiveness_difference
 Compares the progressiveness of the scoped law type to the target law type, higher value means greater difference  
@@ -3653,13 +3946,20 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## liberty_desire_weekly_progress_from_support_independence
+Compare trigger for the weekly Liberty Desire progress value from the scoped country having their independence supported.  
+liberty_desire_weekly_progress_from_support_independence > 0
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## list_size
 Checks the size of a list  
 list_size = { name = X value >= Y }  
 Where X is the name of the list  
 Where Y is a script value
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## literacy_rate
 Checks if a pop, state or country has a certain amount of literacy  
@@ -3686,7 +3986,7 @@ Checks the size of a variable list
 variable_list_size = { name = X target >= Y }  
 Where X is the name of the variable  
 Where Y is a script value or number
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## loyalist_fraction
 Compares loyalist fraction in pops in state or country, all parameters except value are optional  
@@ -3708,6 +4008,27 @@ market_access > 0.8
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
+
+## market_consumption_share
+Compare fraction of scope market consumption coming from target country  
+market_consumption_share = { target = <country scope> goods = key (optional), value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## market_exports
+Compare total units of exports from scope to target market (if set) or world market in general (if no market specified)  
+market_exports = { target = market scope (optional), goods = key (optional), value >= 100 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## market_exports_reliance
+Compare fraction of buy orders in scope market that are due to exports to target market (if set) or world market in general (if no market specified)  
+market_exports_reliance = { target = market scope (optional), goods = key (optional), value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
 
 ## market_goods_buy_orders
 Checks if market goods has the specified number of buy orders  
@@ -3741,6 +4062,14 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: market_goods  
 
+## market_goods_export_share
+Checks if market goods exports are the specified fraction of world market exports  
+market_goods_export_share < X  
+Where X = fixed point
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
 ## market_goods_exports
 Checks if market goods has the specified number of exports  
 market_goods_exports < X  
@@ -3753,6 +4082,14 @@ Reads gamestate for all scopes.
 Check if market goods has a shortage in the market  
 market_goods_has_goods_shortage = yes/no
 Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_goods_import_share
+Checks if market goods imports are the specified fraction of world market imports  
+market_goods_import_share < X  
+Where X = fixed point
+Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: market_goods  
 
@@ -3802,6 +4139,20 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: market  
 
+## market_imports
+Compare total units of imports from target to scope market  
+market_imports = { target = market scope (optional), goods = key (optional), value >= 100 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## market_imports_reliance
+Compare fraction of buy orders in scope market that are due to imports from target market (if set) or world market in general (if no market specified)  
+market_imports_reliance = { target = market scope (optional), goods = key (optional), value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
 ## market_number_goods_shortages
 Check how many shortages a market has on any of its building inputs  
 market_number_goods_shortages >= 2
@@ -3823,6 +4174,99 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: market  
 
+## market_prestige_goods_buy_orders
+Compare the buy orders of a specific prestige good type in the market  
+market_prestige_goods_buy_orders = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_consumption
+Compare the consumption value of a specific prestige good type in the market  
+market_prestige_goods_consumption = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_delta
+Compare the delta (sell orders - buy orders) of a specific prestige good type in the market  
+market_prestige_goods_delta = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_export_share
+Compare the world market expore share of a specific prestige good type in the market  
+market_prestige_goods_export_share = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_exports
+Compare the export value of a specific prestige good type in the market  
+market_prestige_goods_exports = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_import_share
+Compare the world market export share of a specific prestige good type in the market  
+market_prestige_goods_import_share = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_imports
+Compare the import value of a specific prestige good type in the market  
+market_prestige_goods_imports = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_production
+Compare the production value of a specific prestige good type in the market  
+market_prestige_goods_production = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_prestige_goods_sell_orders
+Compare the sell orders of a specific prestige good type in the market  
+market_prestige_goods_sell_orders = { type = <prestige_good_type> value >= <amount> }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market_goods  
+
+## market_production_share
+Compare fraction of scope market production coming from target country  
+market_production_share = { target = <country scope> goods = key (optional), value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## market_trade
+Compare total units of goods traded between scope market and target market (if set) or world market in general (if no market specified)  
+market_trade = { target = market scope (optional), goods = key (optional), value >= 100 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## market_trade_reliance
+Compare fraction of buy and sell orders in scope market that are due to trade with target market (if set) or world market in general (if no market specified)  
+market_trade_reliance = { target = market scope (optional), goods = key (optional), value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+
+## max_contraventions
+Check the maximum contraventions for the article type of the scoped article or article_options  
+scope:treaty_article = {  
+	max_contraventions >= 1  
+}  
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article, treaty_article_options  
+
 ## max_law_enactment_setbacks
 Compares to the max number of law enactment setbacks a country can suffer before the law fails
 Traits: <, <=, =, !=, >, >=
@@ -3843,13 +4287,6 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
-## max_organization
-Compares the effective maximum Organization of the Military Formation in scope  
-max_organization < define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MAX
-Traits: <, <=, =, !=, >, >=
-Reads gamestate for all scopes.
-**Supported Scopes**: military_formation  
-
 ## military_wage_level
 Compares the military wage level of scoped country  
 military_wage_level = <level>
@@ -3868,7 +4305,7 @@ Reads gamestate for all scopes.
 Compare to current game date month (Jan: 0, Dec: 11)  
 month > 10
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## most_powerful_strata
 Compares an interest groups most powerful strata
@@ -3881,9 +4318,16 @@ most_prominent_revolting_interest_group = ig_landowners
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
 
+## movement_pressure
+Compares the pressure of the scoped movement on the target IG  
+movement_pressure( ig:intelligentsia ) > 0.1
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: political_movement  
+
 ## nand
 a negated AND trigger
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## nationalization_cost
 Compares the total cost of nationalizing all buildings in scope country owned by the government or pops of target country  
@@ -3924,15 +4368,15 @@ Reads gamestate for all scopes.
 ## night_value
 Night value
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## nor
 a negated OR trigger
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## not
 negates content of trigger
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## num_casualties
 Checks the number of total casualties in the scoped war  
@@ -3947,6 +4391,18 @@ num_companies > 0
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## num_contraventions
+Check if the scoped article has the given number of contravention from the given country  
+scope:treaty_article = {  
+	num_contraventions = {  
+		target = c:FRA  
+		value > 0  
+	}  
+}  
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article  
 
 ## num_country_casualties
 Checks the number of casualties for the target country in the scoped war  
@@ -3996,6 +4452,27 @@ num_diplomatic_pacts = { type = <key> value < 10 }
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## num_front_casualties
+Checks the number of casualties for the target country in the scoped front  
+num_front_casualties = { target = country value < 5000 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: front  
+
+## num_front_dead
+Checks the number of dead for the target country in the scoped front  
+num_front_dead = { target = country value < 5000 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: front  
+
+## num_front_wounded
+Checks the number of wounded for the target country in the scoped front  
+num_front_wounded = { target = country value < 5000 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: front  
 
 ## num_investments_of_type
 Checks the number of buildings levels of a given type the scoped country has outside their own country.  
@@ -4083,11 +4560,18 @@ Reads gamestate for all scopes.
 
 ## or
 at least one entry inside trigger must be true
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## organization
 Compares the Organization of the Military Formation in scope  
 organization <= define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MIN
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: military_formation  
+
+## organization_target
+Compares the target Organization of the Military Formation in scope  
+organization_target < define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MAX
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: military_formation  
@@ -4517,6 +5001,24 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
+## primary_cultures_percent_country
+Checks that a country's population has a certain percentage of the country's primary cultures  
+scope:example_country = {  
+  primary_cultures_percent_country >= 0.2  
+}
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## primary_cultures_percent_state
+Checks that a state's population has a certain percentage of the country's primary cultures  
+scope:example_state = {  
+  primary_cultures_percent_state >= 0.2  
+}
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## private_ownership_fraction
 Compares the fraction of this building's levels that are privately owned  
  private_ownership_fraction > 0.5
@@ -4574,7 +5076,39 @@ Reads gamestate for all scopes.
 Compare to current real date month (Jan: 1, Dec: 12)  
 real_month > 10
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
+
+## relative_authority
+Compares the relative production to usage of bureaucracy for the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## relative_bureaucracy
+Compares relative production to usage of bureaucracy for the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## relative_export_advantage
+Compare to state goods relative export advantage  
+relative_export_advantage > 0.1
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
+
+## relative_import_advantage
+Compare to state goodsrelative  import advantage  
+relative_import_advantage > 0.1
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state_goods  
+
+## relative_influence
+Compares relative production to usage of influence for the scoped country
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## relative_infrastructure
 Compares the infrastructure to infrastructure usage of a state  
@@ -4626,12 +5160,12 @@ Reads gamestate for all scopes.
 
 ## save_temporary_scope_as
 Saves a temporary target for use during the trigger execution
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## save_temporary_scope_value_as
 Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect  
 save_temporary_scope_value_as = { name = <string> value = x }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## scaled_debt
 Compare value to a country's debt relative to debt ceiling  
@@ -4652,7 +5186,7 @@ Determines the progress of a scripted progress bar
 scripted_bar_progress = { name = progress_bar_tag value > 0.4 }
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
-**Supported Scopes**: journalentry  
+**Supported Scopes**: journal_entry  
 
 ## self_ownership_fraction
 Compares the fraction of this building's levels that are owned by the building itself  
@@ -4719,7 +5253,7 @@ Reads gamestate for all scopes.
 can nudity be shown?  
 should_show_nudity = yes/no
 Traits: yes/no 
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## shrinking_institution
 Checks if the institution is shrinking  
@@ -4761,6 +5295,13 @@ Checks how accepted a pop of the target culture is in the scoped state
  state_cultural_acceptance = {  
  target = cu:french   
  value  >= 50
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
+## state_exports
+Compare total units of exports from scope to target state (if set) or world state in general (if no state specified)  
+state_exports = { target = state scope (optional), goods = key (optional), value >= 100 }
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
@@ -4844,6 +5385,13 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
 
+## state_imports
+Compare total units of imports from target to scope state  
+state_imports = { target = state scope (optional), goods = key (optional), value >= 100 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## state_is_eligible_as_mass_migration_target
 Check if state can receive a mass migration at all.  
 any_state = { limit = { state_is_eligible_as_mass_migration_target = yes } }
@@ -4863,6 +5411,13 @@ Checks how accepted a pop of the given religion is in the the scoped state
  state_religious_acceptance = {  
  target = re:catholic   
  value  >= 50
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
+## state_trade
+Compare total units of goods traded between scope state and target state (if set) or world state in general (if no state specified)  
+state_trade = { target = state scope (optional), goods = key (optional), value >= 100 }
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
@@ -4903,7 +5458,7 @@ switch = {
 	case_2 = { <triggers> }  
 	case_n = { <triggers> }  
 	fallback = { <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## taking_loans
 Check if the country is currently running a weekly deficit and taking loans to compensate
@@ -5039,13 +5594,6 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: power_bloc  
 
-## trade_route_needs_convoys_to_grow
-Checks if the scoped trade route needs more convoys to be able to grow  
-trade_route_needs_convoys_to_grow = yes/no
-Traits: yes/no 
-Reads gamestate for all scopes.
-**Supported Scopes**: trade_route  
-
 ## trait_value
 Compares the character's total trait value  
 trait_value < experience_level
@@ -5053,20 +5601,32 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
+## transfer_money_gross_income
+Does the country have this amount of gross income (income before expenses) from money transfer treaties	ransfer_money_gross_income > 1000
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## transfer_money_net_income
+Does the country have this amount of net income (income after expenses) from money transfer treaties	ransfer_money_net_income > 1000
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
 ## trigger_else
 Evaluates the triggers if the display_triggers of preceding 'trigger_if' or 'trigger_else_if' is not mettrigger_if = { limit = { <display_triggers> } <triggers> }  
  trigger_else = { <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## trigger_else_if
 Evaluates the enclosed triggers if the display_triggers of the preceding `trigger_if` or `trigger_else_if` is not met and its own display_trigger of the limit is mettrigger_if = { limit = { <display_triggers> } <triggers> }  
 trigger_else_if = { limit = { <display_triggers> } <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## trigger_if
 Evaluates the triggers if the display_triggers of the limit are met  
 trigger_if = { limit = { <display_triggers> } <triggers> }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## turmoil
 Compares the turmoil in a given state, i.e. the fraction of Radicals  
@@ -5074,6 +5634,14 @@ turmoil > 0.2
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
+
+## unit_formation_has_commander
+Checks if ther formation of the scoped combat unit has the provided character as one of its commanders  
+unit_formation_has_commander = <character>
+Traits: character scope
+Reads gamestate for all scopes.
+**Supported Scopes**: new_combat_unit  
+**Supported Targets**: character  
 
 ## used_principle_slots
 Compare a power bloc's used principle slot count  
@@ -5090,7 +5658,7 @@ Checks the size of a variable list
 variable_list_size = { name = X target >= Y }  
 Where X is the name of the variable  
 Where Y is a script value or number
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## war_exhaustion_from_acceptance_of_dead
 Determines the war exhaustion a country gets from their degree of cultural acceptance of manpower killed in the war, regardless of what side they were on  
@@ -5155,7 +5723,7 @@ Reads gamestate for all scopes.
 ## weighted_calc_true_if
 Returns true if the sum of weights of fulfilled sub-triggers amount to the specified sum  
 weighted_calc_true_if = { amount = 10 5 = { <trigger> } 15 = { <trigger> } 7 = { <trigger> } }
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## workforce
 Compares the workforce size of the scoped pop  
@@ -5163,6 +5731,37 @@ workforce >= 1000
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: pop  
+
+## world_market_access
+Checks the world market access of the scoped state  
+Worldmarket_access > 0.8
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
+## world_market_delta
+Checks if goods has the specified number of exports minus imports in the world market  
+world_market_delta < X  
+Where X = fixed point
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: goods  
+
+## world_market_exports
+Checks if goods has the specified number of exports in the world market  
+world_market_exports < X  
+Where X = fixed point
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: goods  
+
+## world_market_imports
+Checks if goods has the specified number of imports in the world market  
+world_market_imports < X  
+Where X = fixed point
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: goods  
 
 ## would_accept_diplomatic_action
 Checks if a country would accept a diplomatic action proposed by another country  
@@ -5175,7 +5774,7 @@ Reads gamestate for all scopes.
 Compares the current year of the game  
 year > 1850
 Traits: <, <=, =, !=, >, >=
-**Supported Scopes**: none/all  
+**Supported Scopes**: none  
 
 ## years_of_service
 Compares the commander's years of service  

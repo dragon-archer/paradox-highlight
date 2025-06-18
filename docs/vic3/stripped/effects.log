@@ -14,6 +14,8 @@ add_cohesion_number
 add_cohesion_percent
 add_commander_rank
 add_company
+add_company_monopoly
+add_country_monopoly
 add_cultural_community
 add_cultural_community_in_state
 add_cultural_obsession
@@ -27,9 +29,11 @@ add_enactment_setback
 add_era_researched
 add_escalation
 add_experience
+add_exports
 add_homeland
 add_ideology
 add_ig_to_party
+add_imports
 add_initiator_backers
 add_investment_pool
 add_journal_entry
@@ -43,6 +47,7 @@ add_modifier
 add_momentum
 add_morale
 add_organization
+add_owned_country
 add_pollution
 add_pop_wealth
 add_primary_culture
@@ -73,6 +78,7 @@ annex_with_incorporation
 call_election
 cancel_enactment
 cancel_imposition
+cede_treaty_port
 change_appeasement
 change_character_culture
 change_character_religion
@@ -117,7 +123,7 @@ create_political_movement
 create_pop
 create_power_bloc
 create_state
-create_trade_route
+create_treaty
 create_unidirectional_truce
 custom_description_no_bullet
 custom_label
@@ -132,6 +138,7 @@ disband_political_lobby
 disinherit_character
 end_play
 end_truce
+error_log
 every_active_law
 every_active_party
 every_character
@@ -143,6 +150,7 @@ every_cobelligerent_in_war
 every_combat_unit
 every_company
 every_country
+every_decentralized_country
 every_diplomatic_catalyst
 every_diplomatic_play
 every_diplomatically_relevant_country
@@ -177,6 +185,8 @@ every_rival_country
 every_rivaling_country
 every_scope_admiral
 every_scope_ally
+every_scope_article
+every_scope_article_option
 every_scope_building
 every_scope_character
 every_scope_country
@@ -190,9 +200,11 @@ every_scope_interest_marker
 every_scope_play_involved
 every_scope_politician
 every_scope_pop
+every_scope_regional_hqs
 every_scope_state
 every_scope_target_ally
 every_scope_theater
+every_scope_treaty
 every_scope_violate_sovereignty_interested_parties
 every_scope_violate_sovereignty_wars
 every_scope_war
@@ -203,7 +215,7 @@ every_strategic_objective
 every_subject_of_subject
 every_subject_or_below
 every_supporting_character
-every_trade_route
+every_treaty
 every_valid_mass_migration_culture
 every_war_participant
 exile_character
@@ -222,7 +234,6 @@ kill_population
 kill_population_in_state
 kill_population_percent
 kill_population_percent_in_state
-lock_trade_route
 make_independent
 mobilize_army
 move_partial_pop
@@ -238,6 +249,7 @@ ordered_cobelligerent_in_war
 ordered_combat_unit
 ordered_company
 ordered_country
+ordered_decentralized_country
 ordered_diplomatic_catalyst
 ordered_diplomatic_play
 ordered_diplomatically_relevant_country
@@ -272,6 +284,8 @@ ordered_rival_country
 ordered_rivaling_country
 ordered_scope_admiral
 ordered_scope_ally
+ordered_scope_article
+ordered_scope_article_option
 ordered_scope_building
 ordered_scope_character
 ordered_scope_country
@@ -285,9 +299,11 @@ ordered_scope_interest_marker
 ordered_scope_play_involved
 ordered_scope_politician
 ordered_scope_pop
+ordered_scope_regional_hqs
 ordered_scope_state
 ordered_scope_target_ally
 ordered_scope_theater
+ordered_scope_treaty
 ordered_scope_violate_sovereignty_interested_parties
 ordered_scope_violate_sovereignty_wars
 ordered_scope_war
@@ -298,11 +314,12 @@ ordered_strategic_objective
 ordered_subject_of_subject
 ordered_subject_or_below
 ordered_supporting_character
-ordered_trade_route
+ordered_treaty
 ordered_valid_mass_migration_culture
 ordered_war_participant
 place_character_in_void
 play_as
+post_audio_event
 post_notification
 post_proposal
 random
@@ -317,6 +334,7 @@ random_cobelligerent_in_war
 random_combat_unit
 random_company
 random_country
+random_decentralized_country
 random_diplomatic_catalyst
 random_diplomatic_play
 random_diplomatically_relevant_country
@@ -353,6 +371,8 @@ random_rival_country
 random_rivaling_country
 random_scope_admiral
 random_scope_ally
+random_scope_article
+random_scope_article_option
 random_scope_building
 random_scope_character
 random_scope_country
@@ -366,9 +386,11 @@ random_scope_interest_marker
 random_scope_play_involved
 random_scope_politician
 random_scope_pop
+random_scope_regional_hqs
 random_scope_state
 random_scope_target_ally
 random_scope_theater
+random_scope_treaty
 random_scope_violate_sovereignty_interested_parties
 random_scope_violate_sovereignty_wars
 random_scope_war
@@ -379,7 +401,7 @@ random_strategic_objective
 random_subject_of_subject
 random_subject_or_below
 random_supporting_character
-random_trade_route
+random_treaty
 random_valid_mass_migration_culture
 random_war_participant
 recalculate_pop_ig_support
@@ -395,11 +417,13 @@ remove_company
 remove_cultural_obsession
 remove_diplomatic_pact
 remove_enactment_modifier
+remove_exports
 remove_from_list
 remove_global_variable
 remove_homeland
 remove_ideology
 remove_ig_from_party
+remove_imports
 remove_initiator_backers
 remove_list_global_variable
 remove_list_local_variable
@@ -407,6 +431,8 @@ remove_list_variable
 remove_lobby_member
 remove_local_variable
 remove_modifier
+remove_monopoly
+remove_owned_country
 remove_primary_culture
 remove_principle
 remove_ruling_interest_group
@@ -440,6 +466,8 @@ set_core_ideology
 set_country_type
 set_devastation
 set_diplomats_expelled
+set_export_tariff_level
+set_exports
 set_global_variable
 set_government_wage_level
 set_heir
@@ -450,7 +478,10 @@ set_hub_names
 set_ideology
 set_ig_trait
 set_immune_to_revolutions
+set_import_tariff_level
+set_imports
 set_institution_investment_level
+set_interest_group
 set_interest_group_name
 set_key
 set_local_variable
@@ -477,9 +508,6 @@ set_strategy
 set_subsidized
 set_suppression
 set_target_technology
-set_tariffs_export_priority
-set_tariffs_import_priority
-set_tariffs_no_priority
 set_tax_level
 set_tension
 set_variable
@@ -505,3 +533,4 @@ unset_only_legal_party
 update_party_support
 validate_subsidies
 violate_sovereignty_join
+withdraw
