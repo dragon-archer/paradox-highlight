@@ -1,5 +1,11 @@
 # Paradox Highlight Changelog
 
+## Version 1.8.2, 2025-06-19
+
+### Enhancements
+
+- Update `Victoria 3` to version 1.9.0 (Lady Grey)
+
 ## Version 1.8.1, 2024-11-22
 
 ### Enhancements
