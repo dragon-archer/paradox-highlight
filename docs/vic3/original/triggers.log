@@ -399,7 +399,7 @@ Reads nothing for all scopes.
 Iterate through all countries with a presence in the supported scope (currently: market, strategic region)  
 any_scope_country = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
-**Supported Scopes**: market, strategic_region  
+**Supported Scopes**: market, state_region, strategic_region  
 **Supported Targets**: country  
 
 ## any_scope_culture
@@ -445,10 +445,10 @@ Reads nothing for all scopes.
 **Supported Targets**: country  
 
 ## any_scope_interest_marker
-Iterate through all interest markers in a: country, strategic region  
+Iterate through all interest markers in a: country, strategic region, state region  
 any_scope_interest_marker = { <count=num/all> / <percent=fixed_point> <triggers> }
 Reads nothing for all scopes.
-**Supported Scopes**: country, strategic_region  
+**Supported Scopes**: country, state_region, strategic_region  
 **Supported Targets**: interest_marker  
 
 ## any_scope_play_involved
@@ -1135,6 +1135,13 @@ contains_capital_of = country scope/tag
 Reads gamestate for all scopes.
 **Supported Scopes**: state_region  
 
+## controls_treaty_port_province
+Checks if the scoped state controls the treaty port province in the state region  
+controls_treaty_port_province = yes/no
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## could_support_political_movement
 Check if a character could potentially support a political movement  
 could_support_political_movement = <scope>  
@@ -1188,6 +1195,13 @@ Traits: culture scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country_definition  
 **Supported Targets**: culture  
+
+## country_fervor_primary_culture
+Compares with the hightest fervor of a country's primary cultures   
+country_fervor_primary_culture> 0.2
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
 
 ## country_has_building_group_levels
 Checks the sum of building levels for a building group in a country  
@@ -1329,9 +1343,29 @@ Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
 
+## culture_current_fervor
+Compares the current fervor for a given culture, culture_current_fervor > 0.2
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+
 ## culture_has_community_in_state
 Checks if the scoped culture has a cultural community in a state.  
 culture_has_community_in_state = <state>
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+
+## culture_has_national_awakening
+Checks if the scoped culture has an active national awakening  
+culture_has_national_awakening = yes / no
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+
+## culture_national_awakening_occurred
+Checks if the scoped culture has ever had a national awakening started  
+culture_national_awakening_occurred = yes / no
+Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 
@@ -1362,6 +1396,12 @@ Reads gamestate for all scopes.
 ## culture_secession_progress
 Checks the culture's progress percentage towards secession in a country. 0 if no secession movement is active for the culture.  
 culture_secession_progress = { target = scope:example_country value > 0.5 }
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+
+## culture_target_fervor
+Compares the target fervor for a given culture, culture_target_fervor > 0.2
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
@@ -1607,7 +1647,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: military_formation  
 
 ## fraction_of_levels_owned_by_country
-Compares the fraction of total levels of a building a country owns  
+Compares the fraction of total levels of a building a country or investors in that country owns  
  fraction_of_levels_owned_by_country = {  
  target = c:GBR  
  value  > 0.5
@@ -1648,6 +1688,13 @@ Reads gamestate for all scopes.
 ## gdp_per_capita_ranking
 Compares a Country's GDP per Capita Ranking (position)  
 gdp_per_capita_ranking > 42
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+
+## gdp_ranking
+Compares a Country's GDP Ranking (position)  
+gdp_ranking > 42
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -1972,6 +2019,12 @@ has_trait = trait
 Reads gamestate for all scopes.
 **Supported Scopes**: culture, religion  
 
+## has_discrimination_trait_group
+Checks if scoped culture or religion has the given discrimination trait group  
+has_discrimination_trait_group = trait_group
+Reads gamestate for all scopes.
+**Supported Scopes**: culture, religion  
+
 ## has_dlc_feature
 Does the host have DLC that enables this particular feature
 **Supported Scopes**: none  
@@ -2130,7 +2183,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: province  
 
 ## has_law
-Checks if a country has a certain Law active
+Checks if a country has a certain law active
 Traits: law_type scope
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
@@ -2148,6 +2201,13 @@ Checks if the scoped country has the necessary permits to demand another country
 has_law_imposition_rights = { target_country = scope:target_country type = law_type:law_serfdom }
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## has_law_or_variant
+Checks if a country has a certain law or one its variant laws active
+Traits: law_type scope
+Reads gamestate for all scopes.
+**Supported Scopes**: country  
+**Supported Targets**: law_type  
 
 ## has_local_variable
 Checks whether the current scope has the specified variable set  
@@ -2279,6 +2339,7 @@ has_potential_resource = bg_rubber_plantations
 Traits: class CBuildingGroupDatabase key
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
+**Supported Targets**: building_group  
 
 ## has_potential_supply
 Check if the market goods or state goods has a potential supply, either though local production or theoretical import
@@ -2725,6 +2786,14 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 **Supported Targets**: country  
 
+## is_adjacent_to_market
+Checks if market in scope is adjacent to a target market  
+is_adjacent_to_market = <scope>
+Traits: market scope
+Reads gamestate for all scopes.
+**Supported Scopes**: market  
+**Supported Targets**: market  
+
 ## is_adjacent_to_state
 Checks if country in scope is adjacent to a target state  
 is_adjacent_to_state = <scope>
@@ -2906,6 +2975,16 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
 
+## is_desired_by
+Check if the scoped article or article_options has positive inherent acceptance with the target country  
+scope:treaty_article = {  
+	is_desired_by = c:FRA  
+}  
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article, treaty_article_options  
+**Supported Targets**: country  
+
 ## is_diplomatic_action_type
 Checks diplomatic pact is of a certain action type  
 is_diplomatic_action_type = diplomatic action type
@@ -3024,6 +3103,29 @@ Traits: yes/no
 Reads gamestate for all scopes.
 **Supported Scopes**: treaty  
 
+## is_equal_exchange_for
+Checks if the scoped treaty is considered an equal exchange by target country,  
+scope:some_treaty = {  
+	if = { limit = {  
+		is_equal_exchange_for = c:FRA  
+	}}  
+}
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_options, treaty  
+**Supported Targets**: country  
+
+## is_exchanging_obligations
+Checks if the scoped treaty is exchanging any obligations,  
+scope:some_treaty = {  
+	if = { limit = {  
+		 is_exchanging_obligations= yes  
+	}}  
+}
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_options, treaty  
+
 ## is_expanding_institution
 Are you expanding an institution  
 is_expanding_institution = <yes>/<no>
@@ -3087,6 +3189,16 @@ Is the gamestate tutorial active? See save_progress_in_gamestate in tutorial_les
 Traits: yes/no 
 **Supported Scopes**: none  
 
+## is_giftable_to
+Check if the scoped article or article_options is giftable to target country  
+scope:treaty_article = {  
+	is_giftable_to = c:FRA  
+}  
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article, treaty_article_options  
+**Supported Targets**: country  
+
 ## is_goal_complete
 Check if the journal entry's goal has been met  
 is_goal_complete = yes/no
@@ -3114,6 +3226,14 @@ is_historical = yes/no
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## is_holder_of_wargoal_in_war
+Checks if the specified country is the holder of any wargoal in the scoped war  
+is_holder_of_wargoal_in_war = <country>
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: war  
+**Supported Targets**: country  
 
 ## is_home_country_for
 Checks if a country is the home country for target country
@@ -3743,6 +3863,14 @@ Reads gamestate for all scopes.
 **Supported Scopes**: state  
 **Supported Targets**: country  
 
+## is_target_of_wargoal_in_war
+Checks if the specified country is the target of any wargoal in the scoped war  
+is_target_of_wargoal_in_war = <country>
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: war  
+**Supported Targets**: country  
+
 ## is_taxing_goods
 Check if a country is taxing a good  
 has_embargo = <goods key/scope>  
@@ -3754,12 +3882,24 @@ Checks if character template has already been used
 is_template_used = template_key
 **Supported Scopes**: none  
 
+## is_theme_selected
+Does the player have the theme selected in settings  
+is_theme_selected = <key>
+**Supported Scopes**: none  
+
 ## is_tradeable
 Check if a goods or market goods is tradeable  
 is_tradeable = yes/no
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: goods, market_goods  
+
+## is_treaty_article_in_danger
+Checks if treaty article is in danger of breaking  
+is_treaty_article_in_danger = yes
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: treaty_article  
 
 ## is_treaty_port
 Checks if the scoped state is a treaty port  
@@ -3914,7 +4054,7 @@ Reads gamestate for all scopes.
 **Supported Scopes**: country  
 
 ## levels_owned_by_country
-Compares how many levels a country owns in a building  
+Compares how many levels a country or investors in that country own in a building  
  levels_owned_by_country = {  
  target = c:GBR  
  value  >= 1
@@ -4318,6 +4458,18 @@ most_prominent_revolting_interest_group = ig_landowners
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
 
+## movement_can_cause_obstinance
+Check if the political movement can generate obstinance in states
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: political_movement  
+
+## movement_is_causing_obstinance
+Check if the political movement is causing obstinance in any state
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: political_movement  
+
 ## movement_pressure
 Compares the pressure of the scoped movement on the target IG  
 movement_pressure( ig:intelligentsia ) > 0.1
@@ -4495,6 +4647,13 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country, interest_group  
 
+## num_potential_resources
+Checks the amount of the specified building group allowed in the state. Will return an error if used on building groups that are not level capped  
+num_potential_resources(bg_rubber_plantations) > 0
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
 ## num_power_bloc_members
 Compare the number of members in a power bloc against a value  
 num_power_bloc_members >= 2
@@ -4550,6 +4709,13 @@ umber_of_possible_decisions > 0
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: country  
+
+## obstinance
+Compares state obstinance  
+obstinance > 0.5
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
 
 ## occupancy
 Evaluates a building's current occupancy  
@@ -5195,12 +5361,36 @@ Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: building  
 
-## shares_heritage_and_other_trait_with_any_primary_culture
-Checks if culture shares any trait marked as 'heritage' and other 'non-heritage' trait with any of a country's primary cultures  
-shares_heritage_and_other_trait_with_any_primary_culture = <country>
+## shares_heritage_trait_group_with_any_primary_culture
+Checks if culture shares any trait group marked as 'heritage' with any of a country's primary cultures  
+shares_heritage_trait_group_with_any_primary_culture = <country>
 Traits: country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
+**Supported Targets**: country  
+
+## shares_heritage_trait_group_with_culture
+Checks if culture shares any trait group marked as 'heritage' with another culture  
+shares_heritage_trait_group_with_culture = <culture>
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
+
+## shares_heritage_trait_group_with_religion
+Checks if the religion shares any heritage trait group with another religion  
+shares_heritage_trait_with_religion = <religion>
+Traits: religion scope
+Reads gamestate for all scopes.
+**Supported Scopes**: religion  
+**Supported Targets**: religion  
+
+## shares_heritage_trait_group_with_state_religion
+Checks if the religion shares any heritage trait group with a country's state religion  
+shares_heritage_trait_group_with_state_religion = <country>
+Traits: country scope
+Reads gamestate for all scopes.
+**Supported Scopes**: religion  
 **Supported Targets**: country  
 
 ## shares_heritage_trait_with_any_primary_culture
@@ -5211,37 +5401,77 @@ Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
 
+## shares_heritage_trait_with_culture
+Checks if culture shares any trait marked as 'heritage' with another culture  
+shares_heritage_trait_with_culture = <culture>
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
+
+## shares_heritage_trait_with_religion
+Checks if the religion shares any heritage trait with another religion  
+shares_heritage_trait_with_religion = <religion>
+Traits: religion scope
+Reads gamestate for all scopes.
+**Supported Scopes**: religion  
+**Supported Targets**: religion  
+
 ## shares_heritage_trait_with_state_religion
-Checks if the religion shares any trait marked as 'religion_group' with a country's religion  
+Checks if the religion shares any heritage trait with a country's religion  
 shares_heritage_trait_with_state_religion = <country>
 Traits: country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: religion  
 **Supported Targets**: country  
 
-## shares_non_heritage_trait_with_any_primary_culture
-Checks if culture shares any trait *other than* one marked as 'heritage' with any of a country's primary cultures  
-shares_non_heritage_trait_with_any_primary_culture = <country>
+## shares_language_trait_group_with_any_primary_culture
+Checks if culture shares any trait group marked as 'language' with any of a country's primary cultures  
+shares_language_trait_group_with_any_primary_culture = <country>
 Traits: country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
 
-## shares_trait_with_any_primary_culture
-Checks if the culture shares any trait with any of a country's primary cultures  
-shares_trait_with_any_primary_culture = <country>
+## shares_language_trait_group_with_culture
+Checks if culture shares any trait group marked as 'language' with another culture  
+shares_language_trait_group_with_culture = <culture>
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
+
+## shares_language_trait_with_any_primary_culture
+Checks if culture shares any trait marked as 'language' with any of a country's primary cultures  
+shares_language_trait_with_any_primary_culture = <country>
 Traits: country scope
 Reads gamestate for all scopes.
 **Supported Scopes**: culture  
 **Supported Targets**: country  
 
-## shares_trait_with_state_religion
-Checks if the religion shares any trait with a country's state religion  
-shares_trait_with_state_religion = <country>
+## shares_language_trait_with_culture
+Checks if culture shares any trait marked as 'language' with another culture  
+shares_language_trait_with_culture = <culture>
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
+
+## shares_tradition_trait_with_any_primary_culture
+Checks if culture shares any trait marked as 'tradition' with any of a country's primary cultures  
+shares_tradition_trait_with_any_primary_culture = <country>
 Traits: country scope
 Reads gamestate for all scopes.
-**Supported Scopes**: religion  
+**Supported Scopes**: culture  
 **Supported Targets**: country  
+
+## shares_tradition_trait_with_culture
+Checks if culture shares any trait marked as 'tradition' with another culture  
+shares_tradition_trait_with_culture = <country>
+Traits: culture scope
+Reads gamestate for all scopes.
+**Supported Scopes**: culture  
+**Supported Targets**: culture  
 
 ## should_set_wargoal
 Check if the country is lacking a primary wargoal in any diplomatic play it is part of
@@ -5381,6 +5611,13 @@ Reads gamestate for all scopes.
 ## state_has_goods_shortage
 Check if state has a shortage on any of its building inputs  
 state_has_goods_shortage = yes/no
+Traits: yes/no 
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
+
+## state_has_national_awakening
+Checks if the scoped state is in a state region with an active national awakening map marker  
+state_has_national_awakening = yes / no
 Traits: yes/no 
 Reads gamestate for all scopes.
 **Supported Scopes**: state  
@@ -5782,4 +6019,13 @@ experience_level > 1
 Traits: <, <=, =, !=, >, >=
 Reads gamestate for all scopes.
 **Supported Scopes**: character  
+
+## years_to_incorporate
+Checks how many years it would take for target country to incorporate scope state  
+years_to_incorporate = {  
+ target = c:FRA   
+ value > 5
+Traits: <, <=, =, !=, >, >=
+Reads gamestate for all scopes.
+**Supported Scopes**: state  
 

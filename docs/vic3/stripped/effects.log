@@ -19,6 +19,7 @@ add_country_monopoly
 add_cultural_community
 add_cultural_community_in_state
 add_cultural_obsession
+add_culture_acceptance_modifier
 add_culture_standard_of_living_modifier
 add_declared_interest
 add_devastation
@@ -30,6 +31,8 @@ add_era_researched
 add_escalation
 add_experience
 add_exports
+add_fervor
+add_fervor_target_modifier
 add_homeland
 add_ideology
 add_ig_to_party
@@ -67,6 +70,7 @@ add_to_global_variable_list
 add_to_list
 add_to_local_variable_list
 add_to_variable_list
+add_tradition_trait
 add_trait
 add_treasury
 add_war_exhaustion
@@ -136,6 +140,7 @@ deploy_to_front
 disband_party
 disband_political_lobby
 disinherit_character
+end_national_awakening
 end_play
 end_truce
 error_log
@@ -218,6 +223,7 @@ every_supporting_character
 every_treaty
 every_valid_mass_migration_culture
 every_war_participant
+execute_event_option
 exile_character
 finish_harvest_condition
 force_resource_depletion
@@ -234,6 +240,9 @@ kill_population
 kill_population_in_state
 kill_population_percent
 kill_population_percent_in_state
+liberate_slaves
+liberate_slaves_in_incorporated_states
+liberate_slaves_in_unincorporated_states
 make_independent
 mobilize_army
 move_partial_pop
@@ -439,6 +448,7 @@ remove_ruling_interest_group
 remove_state_trait
 remove_target_backers
 remove_taxed_goods
+remove_tradition_trait
 remove_trait
 remove_variable
 remove_war_goal
@@ -468,6 +478,7 @@ set_devastation
 set_diplomats_expelled
 set_export_tariff_level
 set_exports
+set_fervor
 set_global_variable
 set_government_wage_level
 set_heir
@@ -519,6 +530,7 @@ sort_variable_list
 start_building_construction
 start_enactment
 start_harvest_condition
+start_national_awakening
 start_privately_funded_building_construction
 start_research_random_technology
 start_tutorial_lesson

@@ -1,5 +1,6 @@
 @active_law
 @ai_army_comparison
+@ai_colonization_value
 @ai_gdp_comparison
 @ai_ideological_opinion
 @ai_navy_comparison
@@ -16,6 +17,7 @@
 @average_defense
 @average_offense
 @b
+@bg
 @bt
 @c
 @catalyst_type
@@ -64,6 +66,9 @@
 @num_pending_events
 @num_shared_rivals
 @num_total_battalions
+@num_units
+@num_units_in_battle
+@num_units_not_in_battle
 @p
 @play_type
 @pop_type
@@ -137,6 +142,7 @@ global_gdp
 goal_value
 goods
 government_size
+group
 heir
 highest_ranked_commander
 home_country
@@ -177,6 +183,8 @@ level_after_queued_constructions
 manpower
 market
 market_capital
+market_export_cap
+market_import_cap
 mass_migration_culture
 migration_pull
 military_expenses
@@ -185,6 +193,7 @@ mobilization
 momentum
 morale
 most_desired_law
+national_awakening_state_region
 naval_controller_hq
 naval_hq
 navy_size
@@ -247,6 +256,7 @@ population_below_expected_sol
 power_bloc
 power_bloc_leader
 power_struggle_contender
+principal
 prosperity
 province
 region
@@ -267,9 +277,14 @@ technology_being_researched
 techs_researched
 theater
 top_overlord
+total_export_value
+total_import_value
+total_trade_value
 trade_center
 training_rate
 treaty
+treaty_exports
+treaty_imports
 type
 war
 weekly_prosperity_change

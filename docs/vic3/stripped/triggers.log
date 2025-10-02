@@ -156,12 +156,14 @@ construction_queue_num_queued_levels
 construction_queue_num_queued_private_levels
 construction_queue_private_duration
 contains_capital_of
+controls_treaty_port_province
 could_support_political_movement
 country_army_unit_type_fraction
 country_average_cultural_acceptance
 country_average_religious_acceptance
 country_can_have_mass_migration_to
 country_definition_has_culture
+country_fervor_primary_culture
 country_has_building_group_levels
 country_has_building_levels
 country_has_building_type_levels
@@ -180,10 +182,14 @@ country_turmoil
 cultural_acceptance_base
 cultural_acceptance_delta
 culture_can_have_mass_migration_to_country
+culture_current_fervor
 culture_has_community_in_state
+culture_has_national_awakening
+culture_national_awakening_occurred
 culture_percent_country
 culture_percent_state
 culture_secession_progress
+culture_target_fervor
 current_cohesion_number
 current_cohesion_percentage
 current_manpower
@@ -222,6 +228,7 @@ free_principle_slots
 game_date
 gdp_ownership_ratio
 gdp_per_capita_ranking
+gdp_ranking
 global_country_ranking
 global_population
 global_variable_list_size
@@ -270,6 +277,7 @@ has_diplomatic_play
 has_diplomatic_relevance
 has_diplomats_expelled
 has_discrimination_trait
+has_discrimination_trait_group
 has_dlc_feature
 has_employee_slots_filled
 has_failed_hires
@@ -299,6 +307,7 @@ has_label
 has_law
 has_law_commitment
 has_law_imposition_rights
+has_law_or_variant
 has_local_variable
 has_local_variable_list
 has_map_interaction
@@ -386,6 +395,7 @@ investment_pool
 investment_pool_gross_income
 investment_pool_net_income
 is_adjacent_to_country
+is_adjacent_to_market
 is_adjacent_to_state
 is_advancing_on_front
 is_ai
@@ -413,6 +423,7 @@ is_consumed_by_military_buildings
 is_country_alive
 is_country_type
 is_defender_in_battle
+is_desired_by
 is_diplomatic_action_type
 is_diplomatic_catalyst_type
 is_diplomatic_pact_in_danger
@@ -429,6 +440,8 @@ is_direct_subject_of
 is_employed
 is_enacting_law
 is_enforced
+is_equal_exchange_for
+is_exchanging_obligations
 is_expanding_institution
 is_female
 is_fleet
@@ -438,10 +451,12 @@ is_fulfilled_by
 is_fully_mobilized
 is_game_paused
 is_gamestate_tutorial_active
+is_giftable_to
 is_goal_complete
 is_government_funded
 is_heir
 is_historical
+is_holder_of_wargoal_in_war
 is_home_country_for
 is_homeland
 is_homeland_of_country_cultures
@@ -533,9 +548,12 @@ is_target_in_global_variable_list
 is_target_in_local_variable_list
 is_target_in_variable_list
 is_target_of_wargoal
+is_target_of_wargoal_in_war
 is_taxing_goods
 is_template_used
+is_theme_selected
 is_tradeable
+is_treaty_article_in_danger
 is_treaty_port
 is_tutorial_active
 is_tutorial_lesson_active
@@ -616,6 +634,8 @@ military_wage_level_value
 month
 most_powerful_strata
 most_prominent_revolting_interest_group
+movement_can_cause_obstinance
+movement_is_causing_obstinance
 movement_pressure
 nationalization_cost
 naval_power_projection
@@ -639,6 +659,7 @@ num_front_wounded
 num_investments_of_type
 num_mobilized_units_in_theater
 num_political_lobbies
+num_potential_resources
 num_power_bloc_members
 num_power_bloc_states
 num_provinces_in_theater
@@ -647,6 +668,7 @@ num_taxed_goods
 num_wounded
 number_of_claims
 number_of_possible_decisions
+obstinance
 occupancy
 organization
 organization_target
@@ -735,12 +757,20 @@ scaled_debt
 scaled_gold_reserves
 scripted_bar_progress
 self_ownership_fraction
-shares_heritage_and_other_trait_with_any_primary_culture
+shares_heritage_trait_group_with_any_primary_culture
+shares_heritage_trait_group_with_culture
+shares_heritage_trait_group_with_religion
+shares_heritage_trait_group_with_state_religion
 shares_heritage_trait_with_any_primary_culture
+shares_heritage_trait_with_culture
+shares_heritage_trait_with_religion
 shares_heritage_trait_with_state_religion
-shares_non_heritage_trait_with_any_primary_culture
-shares_trait_with_any_primary_culture
-shares_trait_with_state_religion
+shares_language_trait_group_with_any_primary_culture
+shares_language_trait_group_with_culture
+shares_language_trait_with_any_primary_culture
+shares_language_trait_with_culture
+shares_tradition_trait_with_any_primary_culture
+shares_tradition_trait_with_culture
 should_set_wargoal
 should_show_nudity
 shrinking_institution
@@ -760,6 +790,7 @@ state_has_building_group_levels
 state_has_building_levels
 state_has_building_type_levels
 state_has_goods_shortage
+state_has_national_awakening
 state_imports
 state_is_eligible_as_mass_migration_target
 state_population
@@ -813,3 +844,4 @@ world_market_imports
 would_accept_diplomatic_action
 year
 years_of_service
+years_to_incorporate

@@ -110,6 +110,10 @@ add_cultural_obsession = X
 Where X is a goods
 **Supported Scopes**: culture  
 
+## add_culture_acceptance_modifier
+Apply a cultural acceptance modifier in the scoped country for the given culture. Other than the required culture argument, this effect has the same syntax as add_modifier.
+**Supported Scopes**: country  
+
 ## add_culture_standard_of_living_modifier
 Apply a standard of living modifier in the scoped state for the given culture. Other than the required culture argument, this effect has the same syntax as add_modifier.
 **Supported Scopes**: state  
@@ -159,6 +163,15 @@ add_experience = 0.2
 Adds a multiplier of exports to the state for the scoped state goods  
 add_exports = 3
 **Supported Scopes**: state_goods  
+
+## add_fervor
+Adds fervor to a scoped culture   
+add_fervor = 2.6
+**Supported Scopes**: culture  
+
+## add_fervor_target_modifier
+Apply a fervor target modifier in the scoped country for the given culture. Other than the required culture argument, this effect has the same syntax as add_modifier.
+**Supported Scopes**: country  
 
 ## add_homeland
 Adds scoped state region as Homeland for target culture  
@@ -414,6 +427,12 @@ Where X is the name of the variable
 Where Y is an event target  
 An optional days where Z is the number of days or script value
 **Supported Scopes**: none  
+
+## add_tradition_trait
+Adds a new tradition trait to the culture in scope  
+add_tradition_trait = X  
+Where X is a tradition trait
+**Supported Scopes**: culture  
 
 ## add_trait
 Add a trait to a Character  
@@ -1016,6 +1035,11 @@ if = { limit = { <triggers> } <effects> }
 else_if = { limit = { <triggers> } <effects> }
 **Supported Scopes**: none  
 
+## end_national_awakening
+Ends a cultural awakening: end_national_awakening = cu:british
+**Supported Scopes**: country  
+**Supported Targets**: culture  
+
 ## end_play
 End a diplomatic play  
 end_play = bool
@@ -1334,7 +1358,7 @@ every_scope_character = { limit = { <triggers> } <effects> }
 ## every_scope_country
 Iterate through all countries with a presence in the supported scope (currently: market, strategic region)  
 every_scope_country = { limit = { <triggers> } <effects> }
-**Supported Scopes**: market, strategic_region  
+**Supported Scopes**: market, state_region, strategic_region  
 **Supported Targets**: country  
 
 ## every_scope_culture
@@ -1374,9 +1398,9 @@ every_scope_initiator_ally = { limit = { <triggers> } <effects> }
 **Supported Targets**: country  
 
 ## every_scope_interest_marker
-Iterate through all interest markers in a: country, strategic region  
+Iterate through all interest markers in a: country, strategic region, state region  
 every_scope_interest_marker = { limit = { <triggers> } <effects> }
-**Supported Scopes**: country, strategic_region  
+**Supported Scopes**: country, state_region, strategic_region  
 **Supported Targets**: interest_marker  
 
 ## every_scope_play_involved
@@ -1505,6 +1529,11 @@ every_war_participant = { limit = { <triggers> } <effects> }
 **Supported Scopes**: war  
 **Supported Targets**: country  
 
+## execute_event_option
+Execute effects of the specified event option in the specified event  
+execute_event_option = { event = events.1 option = 0 }
+**Supported Scopes**: none  
+
 ## exile_character
 Exile a character to the exile pool  
 exile_character = yes
@@ -1626,6 +1655,21 @@ All parameters except percent are optional. Pop type and strata cannot be used a
 	strata = <key>  
 }
 **Supported Scopes**: state  
+
+## liberate_slaves
+Frees all slaves in the country/state  
+liberate_slaves = yes
+**Supported Scopes**: country, state  
+
+## liberate_slaves_in_incorporated_states
+Frees all slaves in the country's incorporated states  
+liberate_slaves_in_incorporated_states = yes
+**Supported Scopes**: country  
+
+## liberate_slaves_in_unincorporated_states
+Frees all slaves in the country's unincorporated states  
+liberate_slaves_in_unincorporated_states = yes
+**Supported Scopes**: country  
 
 ## make_independent
 Makes a country independent.  
@@ -2316,7 +2360,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: market, strategic_region  
+**Supported Scopes**: market, state_region, strategic_region  
 **Supported Targets**: country  
 
 ## ordered_scope_culture
@@ -2398,7 +2442,7 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 **Supported Targets**: country  
 
 ## ordered_scope_interest_marker
-Iterate through all interest markers in a: country, strategic region  
+Iterate through all interest markers in a: country, strategic region, state region  
 ordered_scope_interest_marker = {  
 limit = { <triggers> }  
 order_by = script_value  
@@ -2407,7 +2451,7 @@ min = int
 max = script_value  
 check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max  
 <effects> }
-**Supported Scopes**: country, strategic_region  
+**Supported Scopes**: country, state_region, strategic_region  
 **Supported Targets**: interest_marker  
 
 ## ordered_scope_play_involved
@@ -3079,7 +3123,7 @@ random_scope_character = { limit = { <triggers> } (optional) weight = { mtth } <
 ## random_scope_country
 Iterate through all countries with a presence in the supported scope (currently: market, strategic region)  
 random_scope_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: market, strategic_region  
+**Supported Scopes**: market, state_region, strategic_region  
 **Supported Targets**: country  
 
 ## random_scope_culture
@@ -3119,9 +3163,9 @@ random_scope_initiator_ally = { limit = { <triggers> } (optional) weight = { mtt
 **Supported Targets**: country  
 
 ## random_scope_interest_marker
-Iterate through all interest markers in a: country, strategic region  
+Iterate through all interest markers in a: country, strategic region, state region  
 random_scope_interest_marker = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-**Supported Scopes**: country, strategic_region  
+**Supported Scopes**: country, state_region, strategic_region  
 **Supported Targets**: interest_marker  
 
 ## random_scope_play_involved
@@ -3447,6 +3491,12 @@ remove_taxed_goods = <goods key/scope>
 **Supported Scopes**: country  
 **Supported Targets**: goods  
 
+## remove_tradition_trait
+Removes an existing tradition trait from the culture in scope  
+remove_tradition_trait = X  
+Where X is a tradition trait
+**Supported Scopes**: culture  
+
 ## remove_trait
 Remove a trait from a Character  
 remove_trait = trait
@@ -3610,6 +3660,11 @@ set_export_tariff_level = { goods = g:iron level = max_tariffs }
 Sets a multiplier of exports to the state for the scoped state goods  
 set_exports = 3
 **Supported Scopes**: state_goods  
+
+## set_fervor
+Sets the fervor of a scoped culture   
+set_fervor = 3.0
+**Supported Scopes**: culture  
 
 ## set_global_variable
 Sets a variable  
@@ -3918,6 +3973,15 @@ start_enactment = law_type:law_multicultural
 Start a harvest condition of type (or refresh it if already exists) in the scoped state region  
 start_harvest_condition = <key>
 **Supported Scopes**: state_region  
+
+## start_national_awakening
+Starts a cultural awakening  
+start_national_awakening = {  
+	culture = cu:british					# the culture that will have a national awakening  
+	months = 12								# the number of months the awakening will last for  
+	state_region = s:STATE_HOME_COUNTIES	# optional, if not specified the state region with the highest literacy rate of the culture is used  
+}
+**Supported Scopes**: country  
 
 ## start_privately_funded_building_construction
 Start constructing a building in a scoped state as a private construction  
