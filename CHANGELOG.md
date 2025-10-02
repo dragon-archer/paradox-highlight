@@ -1,5 +1,11 @@
 # Paradox Highlight Changelog
 
+## Version 1.8.3, 2025-10-02
+
+### Enhancements
+
+- Update `Victoria 3` to version 1.10.3 (Kaffee)
+
 ## Version 1.8.2, 2025-06-19
 
 ### Enhancements
