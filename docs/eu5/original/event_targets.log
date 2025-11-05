@@ -1,0 +1,1670 @@
+# Event Target Documentation
+### law_policy
+gets the policy chosen for a particular law in the scope international organization or country - usage law_policy(<law>)
+Requires Data: yes
+Input Scopes: country, international_organization
+Output Scopes: policy
+
+### parliament_issue
+Unknown, add something in code registration
+Input Scopes: country, international_organization
+Output Scopes: parliament_issue
+
+### parliament_seat
+Unknown, add something in code registration
+Input Scopes: country, international_organization
+Output Scopes: location
+
+### parliament_type
+Unknown, add something in code registration
+Input Scopes: country, international_organization
+Output Scopes: parliament_type
+
+### active_resolution
+gets the active resolution of the type specified in the scope international organization or situation - usage active_resolution(<resolution>)
+Requires Data: yes
+Input Scopes: international_organization, situation
+Output Scopes: active_resolution
+
+### cast_vote_in_active_resolution
+gets the cast vote in a resolution, returns nothing if the vote isn't explicit - usage cast_vote_in_resolution(<country>)
+Requires Data: yes
+Input Scopes: active_resolution
+
+### resolution
+Unknown, add something in code registration
+Input Scopes: active_resolution
+Output Scopes: resolution
+
+### resolution_proposer
+Unknown, add something in code registration
+Input Scopes: active_resolution
+Output Scopes: country
+
+### resolution_target
+Links to the named parameter (from the select_triggers) in the scope active resolution
+Requires Data: yes
+Input Scopes: active_resolution
+
+### vote_in_active_resolution
+gets the active resolution of the type specified in the scope active resolution - usage vote_in_resolution(<country>)
+Requires Data: yes
+Input Scopes: active_resolution
+
+### capital
+Unknown, add something in code registration
+Input Scopes: country, dynasty, province, area
+Output Scopes: location
+
+### active_outbreak
+gets the active outbreak for a disease in a location or subunit - usage active_outbreak(<disease>)
+Requires Data: yes
+Input Scopes: location, sub_unit
+Output Scopes: disease_outbreak
+
+### controller
+Unknown, add something in code registration
+Input Scopes: location, sub_unit
+Output Scopes: country
+
+### disaster_type
+Unknown, add something in code registration
+Input Scopes: disaster
+Output Scopes: disaster_type
+
+### leader
+Unknown, add something in code registration
+Input Scopes: unit, exploration
+Output Scopes: character
+
+### num_pop_type_in_province
+The amount of pops of a specific type at Province
+Requires Data: yes
+Input Scopes: province
+Output Scopes: value
+
+### province_capital
+Unknown, add something in code registration
+Input Scopes: province
+Output Scopes: location
+
+### dynasty_head
+Unknown, add something in code registration
+Input Scopes: dynasty
+Output Scopes: character
+
+### dynasty_home
+Unknown, add something in code registration
+Input Scopes: dynasty
+Output Scopes: location
+
+### language
+Unknown, add something in code registration
+Input Scopes: country, sub_unit, character, dynasty, culture, religion, market, dialect
+Output Scopes: language
+
+### continent
+Unknown, add something in code registration
+Input Scopes: location, province, province_definition, area, region, sub_continent
+Output Scopes: continent
+
+### source_province
+Unknown, add something in code registration
+Input Scopes: colonial_charter
+Output Scopes: province
+
+### dominant_dialect
+Unknown, add something in code registration
+Input Scopes: location, country
+Output Scopes: dialect
+
+### dominant_language
+Unknown, add something in code registration
+Input Scopes: location, country
+Output Scopes: language
+
+### owning_unit
+Unknown, add something in code registration
+Input Scopes: sub_unit
+Output Scopes: unit
+
+### sub_unit_category
+Unknown, add something in code registration
+Input Scopes: sub_unit
+Output Scopes: sub_unit_category
+
+### subunit_home
+Unknown, add something in code registration
+Input Scopes: sub_unit
+Output Scopes: location
+
+### estate_type
+Unknown, add something in code registration
+Input Scopes: character, pop, rebels, building, estate_privilege, parliament_issue, estate
+Output Scopes: estate_type
+
+### borrower
+Unknown, add something in code registration
+Input Scopes: loan
+Output Scopes: country
+
+### attacker_leader
+Unknown, add something in code registration
+Input Scopes: war
+Output Scopes: country
+
+### casus_belli
+Unknown, add something in code registration
+Input Scopes: war
+Output Scopes: casus_belli
+
+### defender_leader
+Unknown, add something in code registration
+Input Scopes: war
+Output Scopes: country
+
+### law
+Unknown, add something in code registration
+Input Scopes: policy
+Output Scopes: law
+
+### price
+Unknown, add something in code registration
+Input Scopes: policy
+Output Scopes: price
+
+### modifier
+Scope to the value of the modifier type of specified key belonging to the current object
+Requires Data: yes
+Input Scopes: location, country, unit, character, religion, province, international_organization
+Output Scopes: value, boolean
+
+### building_base_cost_in_gold
+The Building base price in gold
+Input Scopes: building_type
+Output Scopes: value
+
+### sub_continent
+Unknown, add something in code registration
+Input Scopes: location, province, province_definition, area, region
+Output Scopes: sub_continent
+
+### active_mission
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: mission
+
+### autocephalous_patriarchate
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: international_organization
+
+### civil_war
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: war
+
+### civil_war_opponent
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: country
+
+### consort
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### country_color
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: color
+
+### country_rank
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: country_rank
+
+### country_rank_on_date
+Unknown, add something in code registration
+Requires Data: yes
+Input Scopes: country
+Output Scopes: country_rank
+
+### country_stance
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: military_stance
+
+### court_dialect
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: dialect
+
+### court_language
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: language
+
+### current_mission_task
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: mission_task
+
+### dominant_upper_class_culture
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: culture
+
+### estate
+Links to a particular estate. Usage: estate:<estate_type_link> or estate(<estate_type_link>)
+Requires Data: yes
+Input Scopes: country
+Output Scopes: estate
+
+### estate_power
+The power of an estate
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### estate_satisfaction
+The satisfaction of an estate
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### estate_target_satisfaction
+The target satisfaction of an estate
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### estate_tax_base
+The base tax of an estate
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### estate_tax_percentage
+The tax percentage levied on an estate
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### government_type
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: government
+
+### heir
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### known_in_country
+The amount of goods known to a speficic Country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### last_valid_ruler
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### liturgical_dialect
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: dialect
+
+### liturgical_language
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: language
+
+### low_control_best_tax_base
+get the best low control tax base
+Input Scopes: country
+Output Scopes: province
+
+### marriage_union
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: international_organization
+
+### num_estate_privileges
+The amount of privileges an estate has
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### num_location_rank
+Count the amount of owned locations of a specific rank
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### num_pop_type_in_country
+The amount of pops of a specific type in a country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### num_possible_estate_privileges
+The amount of possible privileges an estate can get
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### overlord
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: country
+
+### percentage_pop_type_in_country
+The percentage of pops of a specific type in a country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### previous_ruler
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### produced_in_country
+The amount of goods produced in a speficic Country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### province
+Unknown, add something in code registration
+Requires Data: yes
+Input Scopes: country
+Output Scopes: province
+
+### regency_type
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: regency_type
+
+### regent
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### ruler
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### ruler_or_heir_if_regent
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### ruler_or_regent
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: character
+
+### societal_value
+The value of a societal value of a country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### subject_type
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: subject_type
+
+### succession_law
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: heir_selection
+
+### top_overlord
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: country
+
+### top_overlord_or_this
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: country
+
+### total_effective_building_levels
+The amount of total effective building levels in a speficic Country
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### total_sub_unit_count
+Checks the amount of a subunit-category that a country has (in regiments/ships)
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### total_sub_unit_strength
+Checks the total strength of a subunit-category for a unit
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### total_sub_unit_type_count
+Checks the amount of a subunit-type that a country has (in regiments/ships)
+Requires Data: yes
+Input Scopes: country
+Output Scopes: value
+
+### union
+Unknown, add something in code registration
+Input Scopes: country
+Output Scopes: international_organization
+
+### war_with_country
+Gets the current war of the country scope against the specified target country - usage war_with_country(<country>)
+Requires Data: yes
+Input Scopes: country
+Output Scopes: war
+
+### commander
+Unknown, add something in code registration
+Input Scopes: combat_side
+Output Scopes: country
+
+### commanding_country
+Unknown, add something in code registration
+Input Scopes: combat_side
+Output Scopes: country
+
+### enemy_side
+Unknown, add something in code registration
+Input Scopes: combat_side
+Output Scopes: combat_side
+
+### leading_unit
+Unknown, add something in code registration
+Input Scopes: combat_side
+Output Scopes: unit
+
+### area_exploration
+Links to an exploration in the scope area for the suppled country. Usage: area_exploration:<country> or area_exploration(<country>)
+Requires Data: yes
+Input Scopes: area
+Output Scopes: exploration
+
+### produced_goods
+Unknown, add something in code registration
+Input Scopes: production_method
+Output Scopes: goods
+
+### upgrade_demand
+Unknown, add something in code registration
+Input Scopes: production_method
+Output Scopes: demand
+
+### culture
+Unknown, add something in code registration
+Input Scopes: country, sub_unit, character, dynasty, pop, rebels, mercenary
+Output Scopes: culture
+
+### religion
+Unknown, add something in code registration
+Input Scopes: country, sub_unit, character, dynasty, pop, rebels, mercenary
+Output Scopes: religion
+
+### market_price
+The price a goods has in a market
+Requires Data: yes
+Input Scopes: market
+Output Scopes: value
+
+### most_powerful_merchant
+Unknown, add something in code registration
+Input Scopes: market
+Output Scopes: country
+
+### produced_in_market
+The amount of goods produced in a speficic market
+Requires Data: yes
+Input Scopes: market
+Output Scopes: value
+
+### stockpile_in_market
+The amount of goods stockpiled in a specific market
+Requires Data: yes
+Input Scopes: market
+Output Scopes: value
+
+### target_price
+The target price a goods has in a market
+Requires Data: yes
+Input Scopes: market
+Output Scopes: value
+
+### traded_in_market
+The amount of goods traded in a specific market
+Requires Data: yes
+Input Scopes: market
+Output Scopes: value
+
+### special_status
+Unknown, add something in code registration
+Input Scopes: parliament_issue
+Output Scopes: special_status
+
+### group
+Unknown, add something in code registration
+Input Scopes: religion
+Output Scopes: group
+
+### religious_head
+Unknown, add something in code registration
+Input Scopes: religion
+Output Scopes: country
+
+### owner
+Unknown, add something in code registration
+Input Scopes: location, unit, sub_unit, character, pop, colonial_charter, market, province, rebels, trade, privateer, exploration, mercenary, work_of_art, loan, building, disaster, cabinet, cardinal, estate
+Output Scopes: country
+
+### building
+Unknown, add something in code registration
+Requires Data: yes
+Input Scopes: location
+Output Scopes: building
+
+### cardinal
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: cardinal
+
+### institution_progress
+The progress towards an institution of a location
+Requires Data: yes
+Input Scopes: location
+Output Scopes: value
+
+### last_dynasty_in_location
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: dynasty
+
+### location_rank
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: location_rank
+
+### market
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: market
+
+### num_pop_type
+The amount of pops of a specific type at location
+Requires Data: yes
+Input Scopes: location
+Output Scopes: value
+
+### percentage_pop_type_in_location
+The percentage of pops of a specific type in a location
+Requires Data: yes
+Input Scopes: location
+Output Scopes: value
+
+### previous_owner
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: country
+
+### province
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: province
+
+### raw_material
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: goods
+
+### raw_material_location
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: goods
+
+### sea_zone
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: location
+
+### second_best_market
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: market
+
+### secondary_culture
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: culture
+
+### secondary_otherwise_primary_culture
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: culture
+
+### top_owner
+Unknown, add something in code registration
+Input Scopes: location
+Output Scopes: country
+
+### language_family
+Unknown, add something in code registration
+Input Scopes: language
+Output Scopes: language_family
+
+### dialect
+Unknown, add something in code registration
+Input Scopes: character, dynasty, culture, religion, market
+Output Scopes: dialect
+
+### area
+Unknown, add something in code registration
+Input Scopes: location, province, province_definition, privateer, exploration
+Output Scopes: area
+
+### combat
+Unknown, add something in code registration
+Input Scopes: location, unit, combat_side
+Output Scopes: combat
+
+### siege_defender
+the siege defender country
+Input Scopes: siege
+Output Scopes: country
+
+### siege_main_attacker
+the siege main attacker country
+Input Scopes: siege
+Output Scopes: country
+
+### advance_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: advance_type
+
+### age
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: age
+
+### area
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: area
+
+### array_define
+Reference the value of a numeric value in an array define: array_define:Namespace|Name|Index. Index is 0-based.
+Requires Data: yes
+Global Link: yes
+Output Scopes: value
+
+### artist_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: artist_type
+
+### avatar
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: avatar
+
+### bias_value
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: value
+
+### building_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: building_type
+
+### c
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: country
+
+### cabinet_action
+Cabinet action from database key
+Requires Data: yes
+Output Scopes: cabinet_action
+
+### casus_belli
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: casus_belli
+
+### character
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: character
+
+### character_interaction
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: character_interaction
+
+### child_education
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: child_education
+
+### climate
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: climate
+
+### compare_complex_value
+A comparison trigger that needs a parsable string parameter that will return its value in the context it is used eg: scope:root.number_of(armies)
+Wild Card: yes
+Requires Data: yes
+Output Scopes: value
+
+### compare_date
+A comparison trigger that will return its date in the context it is used eg: root.gold
+Wild Card: yes
+Output Scopes: date
+
+### compare_value
+A comparison trigger that will return its value in the context it is used eg: root.gold
+Wild Card: yes
+Output Scopes: value
+
+### continent
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: continent
+
+### country_interaction
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: country_interaction
+
+### country_rank
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: country_rank
+
+### culture
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: culture
+
+### culture_group
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: culture_group
+
+### default_price
+The default price for a goods
+Requires Data: yes
+Output Scopes: value
+
+### define
+Reference the value of a numeric or color define: define:Namespace|Name
+Requires Data: yes
+Global Link: yes
+Output Scopes: value, color, date
+
+### demand
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: demand
+
+### dialect
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: dialect
+
+### disaster_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: disaster_type
+
+### disease
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: disease
+
+### dynasty
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: dynasty
+
+### employment_system
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: employment_system
+
+### estate_privilege
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: estate_privilege
+
+### estate_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: estate_type
+
+### ethnicity
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: ethnicity
+
+### flag
+Flag literals eg: flag:the_boss
+Requires Data: yes
+Global Link: yes
+Output Scopes: flag
+
+### formable_country
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: formable_country
+
+### generic_action
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: generic_action
+
+### gfx_culture
+Graphical culture from its key in the database.
+Requires Data: yes
+Output Scopes: graphical_culture
+
+### global_var
+Reference a previous set global variable via its name eg: global_var:important_thing
+Requires Data: yes
+Global Link: yes
+
+### god
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: god
+
+### goods
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: goods
+
+### government_reform
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: government_reform
+
+### government_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: government
+
+### hegemony
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: hegemony
+
+### heir_selection
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: heir_selection
+
+### holy_site_definition
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: holy_site_definition
+
+### holy_site_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: holy_site_type
+
+### institution
+Unknown, add something in code registration
+Requires Data: yes
+Global Link: yes
+Output Scopes: institution
+
+### international_organization
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: international_organization
+
+### international_organization_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: international_organization_type
+
+### land_ownership_rule
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: land_ownership_rule
+
+### language
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: language
+
+### language_family
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: language_family
+
+### law
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: law
+
+### levy_setup
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: levy_setup
+
+### local_var
+Reference a previous set local variable via its name eg: local_var:person_of_interest
+Requires Data: yes
+Global Link: yes
+
+### location
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: location
+
+### location_rank
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: location_rank
+
+### max_great_powers
+Unknown, add something in code registration
+Output Scopes: value
+
+### mission
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: mission
+
+### mission_task
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: mission_task
+
+### named_script_value
+A script value that will calculate and returns its value in the context it is used
+Wild Card: yes
+Output Scopes: value, color
+
+### no
+Boolean literal for false values
+Global Link: yes
+Output Scopes: boolean
+
+### parliament_agenda
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: parliament_agenda
+
+### parliament_issue
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: parliament_issue
+
+### parliament_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: parliament_type
+
+### payment
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: payment
+
+### peace_treaty
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: peace_treaty
+
+### policy
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: policy
+
+### pop_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: pop_type
+
+### prev
+The previous scope
+Global Link: yes
+
+### price
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: price
+
+### produced_in_world
+The amount of goods produced in the world
+Requires Data: yes
+Output Scopes: value
+
+### production_method
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: production_method
+
+### province_definition
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: province_definition
+
+### recruitment_method
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: recruitment_method
+
+### regency_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: regency_type
+
+### region
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: region
+
+### relation_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: relation_type
+
+### religion
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religion
+
+### religion_group
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: group
+
+### religious_aspect
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religious_aspect
+
+### religious_faction
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religious_faction
+
+### religious_figure
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religious_figure
+
+### religious_focus
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religious_focus
+
+### religious_school
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: religious_school
+
+### resolution
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: resolution
+
+### resolution_vote
+gets vote that a country is voting for on a particular resolution in an international organization - usage resolution_vote(<country>|<international organization>|<resolution>)
+Requires Data: yes
+
+### revolutionary_target
+Unknown, add something in code registration
+Output Scopes: country
+
+### road_type
+Road type from its key in the database.
+Requires Data: yes
+Output Scopes: road_type
+
+### root
+The head of the current top scope eg: reciever of an event, taker of a decision
+Global Link: yes
+
+### scope
+Reference a previously saved scope via its name eg: scope:target
+Requires Data: yes
+Global Link: yes
+
+### scriptable_hint_definition
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: scriptable_hint_definition
+
+### situation
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: situation
+
+### societal_value_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: societal_value_type
+
+### special_status
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: special_status
+
+### sub_continent
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: sub_continent
+
+### sub_unit_category
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: sub_unit_category
+
+### subject_military_stance
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: military_stance
+
+### subject_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: subject_type
+
+### this
+The current scope
+
+### topography
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: topography
+
+### trait
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: trait
+
+### unit_ability
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: unit_ability
+
+### unit_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: unit_type
+
+### value
+A numeric literal value eg: 1, 5.2, -6
+Wild Card: yes
+Global Link: yes
+Output Scopes: value
+
+### var
+Reference a previous set variable via its name eg: var:mortal_enemy
+Requires Data: yes
+
+### vegetation
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: vegetation
+
+### work_of_art
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: work_of_art
+
+### work_of_art_type
+Unknown, add something in code registration
+Requires Data: yes
+Output Scopes: work_of_art_type
+
+### yes
+Boolean literal for true values
+Global Link: yes
+Output Scopes: boolean
+
+### estate_tax_base
+the tax base of an estate
+Input Scopes: estate
+Output Scopes: value
+
+### religious_school
+Unknown, add something in code registration
+Input Scopes: country, character
+Output Scopes: religious_school
+
+### province_definition
+Unknown, add something in code registration
+Input Scopes: location, colonial_charter, province
+Output Scopes: province_definition
+
+### disease
+Unknown, add something in code registration
+Input Scopes: disease_outbreak
+Output Scopes: disease
+
+### creator
+Unknown, add something in code registration
+Input Scopes: work_of_art
+Output Scopes: character
+
+### work_of_art_type
+Unknown, add something in code registration
+Input Scopes: work_of_art
+Output Scopes: work_of_art_type
+
+### dominant_country
+Unknown, add something in code registration
+Input Scopes: culture
+Output Scopes: country
+
+### gfx_culture
+The graphical culture from a culture scope
+Input Scopes: culture
+Output Scopes: graphical_culture
+
+### original_outbreak
+Unknown, add something in code registration
+Input Scopes: disease
+Output Scopes: disease_outbreak
+
+### cabinet_member
+Unknown, add something in code registration
+Input Scopes: cabinet
+Output Scopes: character
+
+### interaction_target
+Unknown, add something in code registration
+Requires Data: yes
+Input Scopes: cabinet
+
+### holy_site
+Unknown, add something in code registration
+Input Scopes: god, avatar
+Output Scopes: holy_site
+
+### pop_type
+Unknown, add something in code registration
+Input Scopes: pop
+Output Scopes: pop_type
+
+### avatar
+Unknown, add something in code registration
+Input Scopes: holy_site
+Output Scopes: avatar
+
+### dominant_culture
+Unknown, add something in code registration
+Input Scopes: location, country, province
+Output Scopes: culture
+
+### dominant_religion
+Unknown, add something in code registration
+Input Scopes: location, country, province
+Output Scopes: religion
+
+### siege
+Unknown, add something in code registration
+Input Scopes: location, unit
+Output Scopes: siege
+
+### location
+Unknown, add something in code registration
+Input Scopes: character, pop, combat, siege, market, exploration, work_of_art, holy_site, building, cardinal
+Output Scopes: location
+
+### international_organization_target
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: country
+
+### international_organization_type
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: international_organization_type
+
+### land_ownership_rule
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: land_ownership_rule
+
+### last_leader_country
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: country
+
+### leader_at_index
+Scopes to the leader characters of the IO which are defined in leader = {}. In case of countries instead, their ruler, heir or regent (in that order) gets returned instead. Usage: leader_at_index(<int>
+Requires Data: yes
+Input Scopes: international_organization
+Output Scopes: character
+
+### leader_country
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: country
+
+### leadership_election_resolution
+Unknown, add something in code registration
+Input Scopes: international_organization
+Output Scopes: resolution
+
+### birth_location
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: location
+
+### dynasty
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: dynasty
+
+### employer
+Employer of the character
+Input Scopes: character
+Output Scopes: country
+
+### ethnicity
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: ethnicity
+
+### exploration
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: exploration
+
+### father
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: character
+
+### first_spouse
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: character
+
+### mother
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: character
+
+### rule_end_date
+Unknown, add something in code registration
+Requires Data: yes
+Input Scopes: character
+Output Scopes: date
+
+### unit
+Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: unit
+
+### region
+Unknown, add something in code registration
+Input Scopes: location, province, province_definition, area
+Output Scopes: region
+
+### sub_unit_count
+Checks the amount of a subunit-type inside a unit (in regiments)
+Requires Data: yes
+Input Scopes: unit
+Output Scopes: value
+
+### sub_unit_fraction
+Checks the fraction of a subunit-type inside a unit (in regiments)
+Requires Data: yes
+Input Scopes: unit
+Output Scopes: value
+
+### sub_unit_strength
+Checks the strength of a subunit-type inside a unit (in regiments)
+Requires Data: yes
+Input Scopes: unit
+Output Scopes: value
+
+### total_sub_unit_category_in_unit
+Checks the total strength of a subunit-category for a unit
+Requires Data: yes
+Input Scopes: unit
+Output Scopes: value
+
+### total_sub_unit_type_strength
+Checks the total strength of a subunit-type for a country
+Requires Data: yes
+Input Scopes: unit
+Output Scopes: value
+
+### unit_destination
+Unknown, add something in code registration
+Input Scopes: unit
+Output Scopes: location
+
+### unit_location
+Unknown, add something in code registration
+Input Scopes: unit
+Output Scopes: location
+
+### unit_next_location
+Unknown, add something in code registration
+Input Scopes: unit
+Output Scopes: location
+
+### building_type
+Unknown, add something in code registration
+Input Scopes: building
+Output Scopes: building_type
+
+### combat_attacker
+Unknown, add something in code registration
+Input Scopes: combat
+Output Scopes: combat_side
+
+### combat_defender
+Unknown, add something in code registration
+Input Scopes: combat
+Output Scopes: combat_side
+
+### capacity_market
+Unknown, add something in code registration
+Input Scopes: trade
+Output Scopes: market
+
+### from_market
+Unknown, add something in code registration
+Input Scopes: trade
+Output Scopes: market
+
+### to_market
+Unknown, add something in code registration
+Input Scopes: trade
+Output Scopes: market
+
+### traded_goods
+Unknown, add something in code registration
+Input Scopes: trade
+Output Scopes: goods
+
+### cabinet_action
+The cabinet action a character is performing
+Input Scopes: character, cabinet
+Output Scopes: cabinet_action
+
+### god
+Unknown, add something in code registration
+Input Scopes: holy_site, avatar
+Output Scopes: god
+
+### rebel
+Unknown, add something in code registration
+Input Scopes: character, pop
+Output Scopes: rebels
+
+### origin
+Unknown, add something in code registration
+Input Scopes: work_of_art, institution, disease_outbreak, disease
+Output Scopes: location
+
+### customer
+Unknown, add something in code registration
+Input Scopes: mercenary
+Output Scopes: country
+
+### mercenary_home
+Unknown, add something in code registration
+Input Scopes: mercenary
+Output Scopes: location
+
+
+--------------------
+
+Event Targets Saved from Code:
+
+context
+internal
+neighbor
+possible_colonial_charters
+include_dead
+include_any_present
+only_tolerated
+only_accepted
+possible_exploration_areas
+possible_launch_locations
+adjacent_locations
+vacant_adjacent_locations
+adjacent_provinces
+border
+border_or_recipients_capital_area
+provinces_ai_wants_to_give_away
+only_actual_locations
+only_defending_sieges
+only_attacking_sieges
+areas_being_explored
+unassigned_areas_being_explored
+subjects
+include_subjects
+include_subjects_and_buildings
+same_international_organization
+diplomatic_range
+best_explorers
+actor
+recipient
+target
+target_1
+target_2
+target_3
+target_4
+target_5
+owner
+location
+victory
+attacker
+defender
+unit
+former_overlord
+future_overlord
+winner
+loser
+overlord
+subject
+old_ruler
+new_ruler
+first_ruler
+second_ruler
+ruler
+consort
+consorts
+exploration
+war
+target_region
+target_province
+target_country
+target_location
+current_presence
+disease_outbreak
+disease
+proposer
+min_value
+max_value
+distance
+first
+second
+total_votes_available
+total_votes_needed
+highest_vote
+killed_land_units
+killed_navy_units
+lost_land_units
+lost_navy_units
+payers
+payees
+price
+price_modifier
+payer
+payee
+rebel
+world
+character
+locked
+capacity
+goods
+old_goods
+new_goods
+merchant
+from
+to
+building
+building_type
+vote
+cabinet
+subject_type
+old_subject_type
+international_organization
+road_type
+scripted_relation_type
+international_organization_type
+estate
+source
+vote_target
+weather_system
+leaders
+disaster
+situation
+is_active
+country_interaction
+old_capital
+new_capital
+first_leader
+second_leader
+new_union
+target_value
+target_price
+active_resolution
+war_score
+selected_province
+heir_selection
+old_heir_selection
+law
+policy
+builder
+old_religion
