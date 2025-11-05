@@ -65,11 +65,30 @@
 				],
 				"configuration": "./language-configuration.json",
 				"filenamePatterns": [
-					"**/{Europa Universalis IV,EU,EU4,236850}/**/*.{txt,gui}"
+					"**/{Europa Universalis IV,EU4,236850}/**/*.{txt,gui}"
 				],
 				"icon": {
 					"light": "./icons/eu4.png",
 					"dark": "./icons/eu4.png"
+				}
+			},
+			{
+				"id": "eu5",
+				"aliases": [
+					"Europa Universalis V"
+				],
+				"extensions": [
+					".txt",
+					".gui",
+					".info"
+				],
+				"configuration": "./language-configuration.json",
+				"filenamePatterns": [
+					"**/{Europa Universalis V,EU,EU5,3450310}/**/*.{txt,gui,info}"
+				],
+				"icon": {
+					"light": "./icons/eu5.png",
+					"dark": "./icons/eu5.png"
 				}
 			},
 			{
@@ -136,6 +155,11 @@
 				"language": "eu4",
 				"scopeName": "source.paradox.eu4",
 				"path": "./syntaxes/eu4.tmLanguage.json"
+			},
+			{
+				"language": "eu5",
+				"scopeName": "source.paradox.eu5",
+				"path": "./syntaxes/eu5.tmLanguage.json"
 			},
 			{
 				"language": "hoi4",
