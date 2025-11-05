@@ -63,6 +63,7 @@ ai_country_goal_recalculation
 ai_county_target
 ai_create_score
 ai_demand_chance
+ai_desire_to_add
 ai_enact_weight_modifier
 ai_frequency
 ai_goal
@@ -71,6 +72,7 @@ ai_impose_chance
 ai_intermediary_accept
 ai_intermediary_maybe
 ai_join_score
+ai_level
 ai_liege_desire
 ai_max
 ai_max_reply_days
@@ -82,11 +84,13 @@ ai_only_against_neighbors
 ai_peace_desire
 ai_pick_ancestor
 ai_potential
+ai_preference_tags
 ai_primary_priority
 ai_priority
 ai_province_filter
 ai_quality
 ai_recipients
+ai_rgo_expansion_priority
 ai_score
 ai_score_mult
 ai_selection
@@ -207,6 +211,7 @@ base_employer_modifier
 base_enactment_days
 base_influence
 base_monthly_growth
+base_production
 base_secrecy
 base_success_chance
 base_xp_gain
@@ -260,6 +265,8 @@ cadet_dynasty_names
 call_empire_members
 calls
 camera
+can_add_location_trigger
+can_add_trigger
 can_always_hire
 can_be_activity_guest
 can_be_auto_selected
@@ -312,6 +319,7 @@ can_propose_with_states
 can_reassign
 can_recruit
 can_reforge
+can_remove_trigger
 can_research
 can_revolution_inherit
 can_select
@@ -342,6 +350,7 @@ capital_province
 capped_by_resources
 capped_by_special_force_limit
 capped_resources
+captured
 cash_reserves_max
 casus_belli
 catalyst
@@ -528,6 +537,7 @@ custom_faith_icons
 custom_icon
 custom_name
 custom_other_loc
+custom_tags
 custom_text_box
 daily_effect
 damage
@@ -556,6 +566,7 @@ default_building
 default_format
 default_group
 default_lesson_step_delay
+default_market_price
 default_option
 default_rank
 default_start_date
@@ -589,10 +600,13 @@ delayed
 delete_on_destroy
 delete_on_gain_same_tier
 demand
+demand_add
+demand_multiply
 density_curve
 dependent_wage
 depletable_resource
 depleted_type
+depth
 desc
 description
 desired_tax_level
@@ -653,6 +667,7 @@ duchy_capital_county_modifier
 duration
 duration_to_show
 dyn
+dynamic_company_type_names
 dynamic_country_definition
 dynamic_country_name
 dynamic_texture_postfix
@@ -674,6 +689,7 @@ effect_desc
 effect_duration
 effect_group
 effectname
+efficiency
 election_type
 elector_vote_strength
 electors
@@ -725,6 +741,7 @@ expandable
 expects_institution
 experience
 expiration_days
+extension_building_types
 extra_icon
 extra_picture
 extra_shortcut
@@ -796,6 +813,7 @@ fontcolor
 fontsize
 fontsize_min
 fonttintcolor
+for
 force_limit_percentage
 force_notification
 force_pause_game
@@ -902,6 +920,7 @@ hbox
 head
 header_info
 header_pattern
+hegemons_allowed
 height
 heir
 heir_allow
@@ -980,6 +999,7 @@ image
 immediate
 immortal
 impassable
+importance
 imprisonment_by_attacker_give_war_score
 imprisonment_by_defender_give_war_score
 imprisonment_reason
@@ -1150,6 +1170,7 @@ land_usage
 landless
 landless_attacker_needs_armies
 language
+language_power_scale
 last_name
 latest_usage_date
 law
@@ -1201,6 +1222,7 @@ localization
 localization_key
 localization_values
 location
+location_modifier
 locator
 lock_level_when_selected
 log
@@ -1265,6 +1287,7 @@ materials
 max
 max_age
 max_ai_diplo_distance_to_title
+max_ai_privilege_per_estate
 max_approval
 max_attacker_score_from_battles
 max_attacker_score_from_occupation
@@ -1278,6 +1301,7 @@ max_hiring_rate
 max_influence_spending_fraction
 max_level
 max_manpower
+max_price
 max_progressiveness
 max_regressiveness
 max_route_deviation_mult
@@ -1285,6 +1309,7 @@ max_size
 max_sub_regiments
 max_supply_share
 max_tax_level
+max_update_rate
 max_width
 maxcharacters
 maxhorizontalslots
@@ -1303,14 +1328,18 @@ member_modifier
 men_at_arms
 men_can_have_consorts
 men_can_have_multiple_spouses
+mercenaries
 mercenary_fallback
 mercenary_names
 meshes
 message
+method
 middle_strata_pops
+military
 military_type
 min
 min_age
+min_ai_privilege_per_estate
 min_approval
 min_contribution_label
 min_hiring_rate
@@ -1369,6 +1398,7 @@ mutually_exclusive_titles
 my_war_name
 my_war_name_base
 name
+name_key
 name_list
 name_lists
 names
@@ -1426,6 +1456,7 @@ on_activate
 on_activate_while_mobilized
 on_activation
 on_active_state_pulse
+on_added
 on_agent_join
 on_agent_leave
 on_applied_effect
@@ -1503,6 +1534,7 @@ on_post_government_type_change
 on_primary_attacker_death
 on_primary_defender_death
 on_ready
+on_removed
 on_researched
 on_revoke
 on_revoked
@@ -1650,6 +1682,7 @@ pop_type
 pop_weight
 populate_actor_list
 populate_recipient_list
+population
 popup
 popup_name
 popup_on_receive
@@ -1699,6 +1732,7 @@ prestige_factor
 prestige_opinion_override
 prestige_relative_threshold
 previous_building
+price_stability
 primary
 primary_building
 primary_cultures
@@ -1717,6 +1751,7 @@ pro_interest_groups
 production_method
 production_method_groups
 production_methods
+profession_ratio
 progress
 progress_chance
 progress_desc
@@ -1786,6 +1821,8 @@ relation_aliases
 relations_improvement_max
 relations_improvement_min
 relations_progress_per_day
+religion_scale_modifier
+religions
 religious
 religious_acceptance_rule
 religious_conflicts
@@ -1813,6 +1850,7 @@ required_num_states
 required_states_fraction
 required_techs_for_colonization
 requirement_to_maintain
+requires
 requires_approval
 requires_approve
 requires_character
@@ -1821,6 +1859,7 @@ requires_dlc_flag
 requires_interest_marker
 requires_leader
 requires_secret
+research_cost
 reserved_female_names
 reserved_male_names
 reserves
@@ -1926,6 +1965,7 @@ ship_names
 shock
 short_effect_desc
 shortcut
+should_ai_evaluate
 should_auto_break
 should_auto_expand
 should_be_pinned_by_default
@@ -1966,6 +2006,7 @@ skill
 skill_scaled_modifier
 slider
 slot
+sol_change_impact
 sort_order
 sound
 sound_alias
@@ -2148,9 +2189,11 @@ traits
 transfer_behavior
 transfer_of_power
 transferable
+transform
 transition
 transition_state_duration
 translate
+transport_cost
 travel_danger_color
 travel_danger_score
 travel_entourage_selection
@@ -2193,7 +2236,12 @@ unlock_building
 unlock_casus_belli
 unlock_decision
 unlock_law
+unlock_levy
 unlock_maa
+unlock_policy
+unlock_road_type
+unlock_subject_type
+unlocking_company_categories
 unlocking_global_technologies
 unlocking_identity
 unlocking_laws
@@ -2234,6 +2282,7 @@ use_overlord_ruler
 use_scripted_guis
 use_secrecy
 uses_agents
+uses_dynamic_naming
 uses_opinion_of_liege
 uses_plural_naming
 uses_prestige
@@ -2269,6 +2318,7 @@ vbox
 very_high
 very_low
 victory
+victory_card
 video
 video_mask
 view
@@ -2288,6 +2338,7 @@ war_goal
 war_name
 war_name_base
 war_priority
+war_score_from_battles
 war_subsidies
 wargoal_maneuvers_fraction
 wargoal_province
