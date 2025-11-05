@@ -9,3 +9,4 @@
 - Allow LHS constants
 - Improve highlight for `#tooltippable;tooltip:xxx`
 - Identify optional arguments in EU4 scripted effects
+- Allow function-like triggers

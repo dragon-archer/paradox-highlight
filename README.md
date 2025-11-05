@@ -17,7 +17,7 @@
 
 <p align="center">English | <a href="README.zh.md">中文</a></p>
 
-**Syntax highlight** & **formatter** for Paradox Script Languages including `Crusader Kings III`, `Victoria 3`, and `Europa Universalis IV`
+**Syntax highlight** & **formatter** for Paradox Script Languages including `Europa Universalis`, `Victoria 3`, and `Crusader Kings III`
 
 ## Examples
 
@@ -41,7 +41,7 @@
 - All Paradox file types(.txt, .info, .gui, and .yml) are supported
 - Distinguish among `trigger`, `effect`, `modifier`, `property` and more on
 - Corresponding theme based on `Default Dark Modern` to improve preference
-- Full support for `Crusader Kings III`, `Victoria 3`, `Europa Universalis IV` and `Heart of Iron IV`
+- Full support for `Europa Universalis V`, `Victoria 3`, `Crusader Kings III`, `Europa Universalis IV` and `Heart of Iron IV`
 - Basic support for older Paradox Games with `Clausewitz` engine (e.g. `Crusader Kings II` and `Stellaris`)
 
 ## Usage
@@ -64,4 +64,4 @@ See [TODO.md](TODO.md)
 
 This project is published under MIT License
 
-Copyright (C) 2024 dragon-archer
+Copyright (C) 2024-2025 dragon-archer
