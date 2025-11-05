@@ -1,5 +1,20 @@
 # Paradox Highlight Changelog
 
+## Version 1.9.0, 2025-11-05
+
+### Bugfix
+
+- Fix duplicating UUID of `Hearts of Iron IV`
+
+### Enhancement
+
+- Add more `Europa Universalis V` parameters
+
+### New Features
+
+- Add support for `Europa Universalis V`
+- Enable formatting for `Europa Universalis V`
+
 ## Version 1.8.3, 2025-10-02
 
 ### Enhancements
