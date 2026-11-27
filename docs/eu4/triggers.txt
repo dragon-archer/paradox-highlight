@@ -580,6 +580,7 @@ num_of_merchants
 num_of_missionaries
 num_of_owned_and_controlled_institutions
 num_of_owned_areas
+num_of_owned_states_with
 num_of_owned_provinces_with
 num_of_pashas
 num_of_ports
